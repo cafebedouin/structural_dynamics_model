@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "66fe9c2a-8d90-4ffb-8616-7c570d768ec2"
+    "story_uid": "e9339bd0-e6ce-425d-837b-9506437238ef"
   },
   "base_properties": {
     "extractiveness": 0.45,
@@ -14,40 +14,97 @@
     "resistance": 0.2,
     "claimed_type": "tangled_rope",
     "human_readable": "Stratified Disaster Preparedness (Hybrid Reading)",
-    "topic_domain": "disaster_preparedness/institutional_memory/commitment_systems",
+    "topic_domain": "disaster_preparedness/institutional_memory",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "competent_subsystems",
       "public_officials"
     ],
     "victims": [
-      "taxpayers",
-      "frontline_responders"
+      "ritualized_subsystems",
+      "general_public"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "competent_subsystems",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "These are the parts of the preparedness system (e.g., structural engineering inspections, critical infrastructure maintenance) that retain genuine operational competence and deliver real safety benefits. They benefit from funding and public trust, but are constrained by overall budget and political will."
+    },
+    {
+      "name": "ritualized_subsystems",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "These are the parts of the preparedness system (e.g., many evacuation drills, certain bureaucratic reporting) that have become performative. They consume resources and personnel time without significantly enhancing actual readiness. They are identity-locked by professional norms and institutional inertia, making it hard to challenge their own efficacy."
+    },
+    {
+      "name": "public_officials",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Responsible for overseeing and funding preparedness efforts. They benefit from the appearance of readiness and public reassurance, but bear the political cost of actual disaster failures. They enforce both competent and ritualized components, often without distinguishing them."
+    },
+    {
+      "name": "general_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Pays for preparedness through taxes and participates in drills, often with a false sense of security from ritualized components. They are the ultimate victims of preparedness failures, bearing the costs of inadequate real readiness."
+    },
+    {
+      "name": "emergency_management_experts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the effectiveness of preparedness systems, often identifying the stratification between competent and ritualized components. They can propose reforms but lack direct power to implement them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To organize diverse public and private actors to mitigate, prepare for, respond to, and recover from disasters, ensuring a baseline level of societal resilience.",
+    "transfer_function": "Transfers public funds and personnel time into a mix of genuinely effective infrastructure/training and performative activities, from taxpayers and frontline personnel to institutional budgets and public reassurance.",
+    "absent_voices": "Citizens who have experienced actual disaster failures and can distinguish effective from ritualized preparedness would object to the continued funding of performative elements. Their voices are often drowned out by official narratives of 'successful' drills and bureaucratic compliance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the entire preparedness system vanished overnight, the competent subsystems would cease to function, leading to immediate and catastrophic failures in critical infrastructure and response capabilities. The ritualized components would also disappear, but their absence would have less direct impact on actual safety, though public confidence might initially collapse.",
+    "founding_problem": "The need to protect populations and infrastructure from predictable and unpredictable natural and man-made disasters, minimizing loss of life and economic disruption.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The ongoing occurrence of disasters and their impacts, attested by scientific bodies, historical records, and international disaster relief organizations, corroborates the persistent need for preparedness. However, the effectiveness of current systems in addressing this problem is contested by independent experts and disaster-affected communities."
+  },
   "interval": {
-    "start": 1980,
+    "start": 1990,
     "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
+      "time_point": 1990,
       "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1990,
+      "time_point": 1998,
       "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
+      "time_point": 2006,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
+      "time_point": 2014,
       "value": 0.43
     },
     {
@@ -57,22 +114,22 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1980,
+      "time_point": 1990,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
+      "time_point": 1998,
       "value": 0.4
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
+      "time_point": 2006,
       "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
+      "time_point": 2014,
       "value": 0.53
     },
     {
@@ -82,23 +139,23 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.25
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 1990,
-      "value": 0.27
+      "value": 0.2
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.29
+      "time_point": 1998,
+      "value": 0.23
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.3
+      "time_point": 2006,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.28
     },
     {
       "metric": "suppression_requirement",
@@ -107,61 +164,47 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes disaster preparedness as a stratified system where some components (e.g., engineering inspections) maintain genuine competence, while others (e.g., certain evacuation drills) have become ritualized performances. This 'hybrid reading' acknowledges both functional and performative aspects, leading to a mixed classification. The system extracts resources from taxpayers and frontline responders, while providing genuine benefits from competent subsystems and political cover for public officials. The claimed type is Tangled Rope, reflecting the mix of coordination and extraction, with a significant theater ratio indicating the performative elements.",
-    "key_agents": [
-      "competent_subsystems: Beneficiary (institutional/constrained) — maintain genuine readiness.",
-      "ritualized_subsystems: Payer (organizational/identity_locked) — performative, consume resources.",
-      "public_officials: Agenda Setter (institutional/constrained) — oversee system, gain political capital.",
-      "taxpayers: Payer (organized/constrained) — bear financial costs.",
-      "frontline_responders: Payer (moderate/constrained) — directly affected by preparedness quality.",
-      "analytical_observers: Observer (analytical/analytical) — study effectiveness, no direct power."
-    ],
-    "logic_rationale": "The extractiveness (0.45) is moderate, reflecting that while some resources are genuinely used for coordination, a significant portion is diverted to maintaining ritualized components. Suppression (0.30) is low, as resistance to the ritualized aspects is diffuse and often internalized rather than actively suppressed. The theater ratio (0.55) is high, indicating that more than half of the activity is performative rather than functional. Accessibility collapse (0.40) is moderate, as alternatives to the current stratified system exist but are difficult to implement due to institutional inertia. Resistance (0.20) is low, as the diffuse nature of the problem makes organized resistance challenging.",
-    "perspectival_gap": "Public officials and competent subsystems likely perceive the entire system as a necessary Rope or even a Mountain, emphasizing the genuine coordination and natural necessity of preparedness. Taxpayers and frontline responders, especially those affected by failures, would experience it as more extractive, closer to a Snare or Piton, due to the costs of ritualized components and the risks of inadequate readiness. The engine's per-seat classification will capture this divergence.",
-    "directionality_logic": "Competent subsystems are beneficiaries (d=0.0-0.2) as they receive funding and support for their effective work. Public officials are agenda setters and beneficiaries (d=0.1-0.3) due to political gains. Ritualized subsystems are payers (d=0.6-0.8) as they consume resources without proportional output, and their personnel are identity-locked into maintaining the status quo. Taxpayers and frontline responders are payers (d=0.7-0.9) as they bear the costs and risks. Analytical observers are neutral (d=0.5).",
-    "mandatrophy_analysis": "This hybrid reading prevents mislabeling the entire preparedness system as either fully competent (Rope/Mountain) or fully atrophied (Piton/Snare). By acknowledging both functional and ritualized components, it captures the nuanced reality where some parts still serve their mandate while others persist due to inertia or performative value. The moderate D5 risk (drift to Piton) is specifically due to the high theater ratio and the potential for ritualized components to further displace genuine competence.",
-    "kernel_context": "This constraint, 'Stratified Disaster Preparedness (Hybrid Reading)', is one interpretation of the 'preparedness_persistence' kernel. It posits that disaster preparedness is a mix of genuinely competent and ritualized components. This contrasts with the 'competence_reading' (which sees all components as live and effective) and the 'husk_reading' (which sees all components as atrophied performance)."
+    "narrative_context": "This constraint describes the stratified nature of disaster preparedness, where some components (e.g., engineering inspections) maintain genuine competence and deliver real benefits, while others (e.g., certain evacuation drills, bureaucratic reporting) have become ritualized performances. The system as a whole is claimed as a 'Rope' (coordination) by public officials, but its hybrid nature means it functions as a 'Tangled Rope' from the perspective of the general public and ritualized subsystems, with localized extraction and significant theatricality. This is a 'hybrid_reading' of the 'preparedness_persistence' kernel.",
+    "logic_rationale": "The extractiveness (0.45) is moderate, reflecting the mixed nature: real benefits from competent subsystems are offset by resource consumption by ritualized ones. Suppression (0.30) is low, as the system relies more on institutional inertia and public trust than active coercion. Theater ratio (0.55) is high, indicating that more than half of the activity is performative rather than functionally effective. The claimed type is 'tangled_rope' because it genuinely coordinates some functions while extracting from others through the same structure, requiring active enforcement to maintain the ritualized components.",
+    "directionality_logic": "Competent subsystems and public officials are beneficiaries, as they either deliver real value or gain political capital from the appearance of preparedness. Ritualized subsystems are payers, as they consume resources without proportional output, and the general public are victims, bearing the costs of both effective and ineffective components. Emergency management experts are observers, analyzing the system without direct participation in its operation or extraction.",
+    "perspectival_gap": "Public officials and competent subsystems perceive the constraint as a necessary 'Rope' for societal safety, emphasizing its coordination function. However, the general public and emergency management experts, particularly those observing the ritualized components, experience it as a 'Tangled Rope' or even a 'Piton' due to the significant theatricality and misallocation of resources. The engine's per-seat classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'hybrid_reading' of the 'preparedness_persistence' kernel. It posits that disaster preparedness is not uniformly competent or atrophied, but rather a mix of both. Sibling readings include 'competence_reading' (all preparedness is effective) and 'husk_reading' (all preparedness is performative)."
   },
   "omegas": [
     {
-      "id": "competence_vs_ritual_boundary",
-      "question": "What is the precise boundary between genuinely competent and ritualized components within the preparedness system, and how does it shift over time?",
-      "resolution_mechanism": "Longitudinal, independent operational audits and post-disaster performance reviews, comparing actual outcomes to resource allocation and training inputs.",
-      "impact": "A clearer boundary would allow for targeted resource reallocation, potentially reducing extractiveness and theater ratio by defunding ritualized components and strengthening competent ones. This could shift the constraint towards a more effective Rope.",
+      "id": "distinguishing_competent_from_ritualized",
+      "question": "What objective, measurable criteria can reliably distinguish genuinely competent preparedness subsystems from ritualized ones?",
+      "resolution_mechanism": "Post-disaster performance audits, independent operational readiness exercises, and comparative analysis of resource allocation vs. outcome in different preparedness domains.",
+      "impact": "Clearer criteria would allow for targeted resource allocation, reducing extraction from ritualized components and increasing overall system efficiency. This could shift the constraint towards a 'Rope' by reducing its 'Tangled Rope' aspects.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing functional from performative preparedness elements."
+      "description": "Ambiguity in identifying functional vs. performative preparedness components."
     },
     {
-      "id": "mandate_drift_mechanism",
-      "question": "Is the drift towards ritualization primarily driven by resource scarcity, political incentives for 'activity' over 'outcomes', or a loss of institutional memory?",
-      "resolution_mechanism": "Comparative case studies across different jurisdictions and historical periods, analyzing policy changes, budget allocations, and institutional learning processes.",
-      "impact": "Identifying the primary driver would inform intervention strategies: resource injection, accountability reforms, or knowledge management initiatives. This would directly impact the potential for mandatrophy resolution.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Understanding the causes of preparedness ritualization."
-    },
-    {
-      "id": "reading_framing_impact",
-      "question": "Does framing preparedness as 'stratified' (this reading) lead to different policy outcomes compared to framing it as 'fully competent' or 'fully atrophied'?",
-      "resolution_mechanism": "Analysis of policy debates and resource allocation decisions in contexts where different framings are dominant. Compare the observed balance of competence and ritual.",
-      "impact": "If this 'hybrid' framing leads to more nuanced and effective policy interventions, it supports its utility. If it merely provides cover for inaction, its conceptual value is diminished.",
+      "id": "mandate_drift_in_ritualized_subsystems",
+      "question": "Have the original mandates for ritualized preparedness activities (e.g., specific drills) atrophied, or were they always primarily performative?",
+      "resolution_mechanism": "Historical analysis of founding documents and early implementation records for specific preparedness activities, compared with their current operational execution and stated goals.",
+      "impact": "If mandates have atrophied, it strengthens the 'Piton' aspect of these subsystems. If always performative, it suggests a 'Snare' from inception, where the coordination story was always cover for resource capture or political signaling.",
       "confidence": "low",
+      "type_class": "empirical",
+      "description": "Uncertainty about the historical function and current mandate of ritualized preparedness components."
+    },
+    {
+      "id": "framing_of_preparedness_efficacy",
+      "question": "Is the public's perception of preparedness efficacy primarily shaped by actual readiness or by the visible performance of drills and official statements?",
+      "resolution_mechanism": "Public opinion surveys correlated with independent assessments of disaster readiness, and analysis of media framing during and after disaster events.",
+      "impact": "If perception is driven by performance, it reinforces the 'theater_ratio' and the 'Tangled Rope' classification, as the performative aspects serve to maintain public consent for the extractive elements. If driven by actual readiness, it would pressure officials to reduce theatricality.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Impact of the 'hybrid' framing on policy and outcomes."
+      "description": "The role of public perception in sustaining performative preparedness."
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.1
-  },
-  "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one of three readings of the 'preparedness_persistence' kernel, alongside 'competence_reading' and 'husk_reading'. Each reading offers a distinct structural interpretation of disaster preparedness."
+    "coordination_type": "enforcement_mechanism"
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
-    "authority_grounding": "lineage",
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
@@ -175,13 +218,13 @@
     ],
     "axioms": [
       {
-        "atom": "preparedness_is_stratified",
+        "atom": "preparedness_is_heterogeneous",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "ritual_coexists_with_competence",
+        "atom": "functional_and_performative_coexist",
         "role": "secondary",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
@@ -196,14 +239,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

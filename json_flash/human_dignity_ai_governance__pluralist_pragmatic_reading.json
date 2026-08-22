@@ -4,150 +4,228 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "0864608e-2531-4f52-86f0-73a38fa7bb2e"
+    "story_uid": "c7f9c1cb-f4cd-45b1-87e0-bee0f9fd4480"
   },
   "base_properties": {
     "extractiveness": 0.45,
     "suppression": 0.3,
-    "theater_ratio": 0.15,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.2,
     "claimed_type": "rope",
     "human_readable": "Pluralist-Pragmatic AI Governance Framework for Human Dignity",
     "topic_domain": "theological_ethics/technology_governance/political_economy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "diverse_communities",
-      "multi_stakeholder_governance_bodies"
+      "diverse_cultural_communities",
+      "multilateral_governance_bodies"
     ],
     "victims": [
-      "traditions_lacking_geopolitical_power"
+      "geopolitically_marginalized_traditions",
+      "unregulated_ai_developers"
     ]
   },
-  "interval": {
-    "start": 2023,
-    "end": 2043
-  },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine 'pluralist-pragmatic' reading of human dignity in AI governance, or does it implicitly privilege a specific metaphysical foundation?",
-      "resolution_mechanism": "Analysis of the specific 'overlapping consensus' criteria and procedural fairness mechanisms: if they consistently favor one tradition's values, reclassify as a disguised 'magisterial_integralist_reading' or 'secular_humanist_reading'.",
-      "impact": "If a specific metaphysical foundation is implicitly privileged, the constraint's claimed pluralism is theatrical, and its effective extractiveness from other traditions is higher than measured.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity in the true pluralism of the AI governance framework."
+      "name": "diverse_cultural_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from a governance framework that seeks to accommodate their distinct understandings of human dignity, preventing the imposition of a single dominant worldview. Their participation is crucial for legitimacy, but their influence is mediated by the consensus-building process."
     },
     {
-      "id": "lowest_common_denominator_risk",
-      "question": "Does the focus on 'overlapping consensus' lead to a 'lowest common denominator' standard for human dignity that fails to protect vulnerable populations from AI harms?",
-      "resolution_mechanism": "Empirical evaluation of AI systems governed by this framework: if they consistently produce outcomes that violate dignity principles held by significant communities, the framework is insufficient.",
-      "impact": "If standards are too low, the constraint's effective protection of human dignity is weaker, and its extractiveness from vulnerable groups is higher, potentially reclassifying it as a Snare for those groups.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Risk of diluted dignity standards due to pluralist negotiation."
+      "name": "multilateral_governance_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Responsible for facilitating dialogue, negotiating consensus, and drafting international norms for AI governance. They gain legitimacy and influence by successfully bridging diverse perspectives, but are constrained by the need for broad agreement."
     },
     {
-      "id": "geopolitical_power_imbalance",
-      "question": "To what extent does geopolitical power influence the 'negotiated frameworks' and 'overlapping consensus', effectively marginalizing traditions lacking such power?",
-      "resolution_mechanism": "Analysis of participation, agenda-setting, and outcome influence in multi-stakeholder governance bodies: if certain traditions are consistently underrepresented or their concerns dismissed, the 'pluralist' claim is undermined.",
-      "impact": "If geopolitical power imbalances systematically disadvantage certain traditions, the constraint's claimed fairness is theatrical, and its effective extractiveness from those traditions is higher, potentially reclassifying it as a Tangled Rope or Snare for them.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Influence of geopolitical power on consensus formation."
+      "name": "geopolitically_marginalized_traditions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the cost of potentially having their specific, deeply held conceptions of dignity underrepresented or diluted in a lowest-common-denominator consensus. Their lack of geopolitical power limits their ability to shape the 'overlapping consensus' effectively, even if nominally included."
+    },
+    {
+      "name": "unregulated_ai_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Face new regulatory burdens and ethical constraints on their development practices, which they may perceive as hindering innovation. Their ability to 'forum shop' for less restrictive jurisdictions provides some exit, but global consensus aims to close these loopholes."
+    },
+    {
+      "name": "magisterial_integralist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Would advocate for a governance framework rooted in a specific theological doctrine of human dignity, which this pluralist reading explicitly seeks to avoid privileging. They are excluded from setting the foundational terms, though their input on specific ethical issues might be considered."
+    },
+    {
+      "name": "secular_humanist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Would argue for a framework based on universal human rights and democratic deliberation, potentially viewing the accommodation of diverse metaphysical claims as a dilution of clear ethical standards. While their principles are often part of the 'overlapping consensus', their specific foundational claims are not privileged."
+    },
+    {
+      "name": "techno_optimist_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Would resist any framework that imposes significant restrictions on AI development, viewing it as an impediment to progress and human flourishing through technology. Their focus on innovation and augmentation often clashes with dignity-centric ethical constraints."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates diverse cultural and ethical traditions to establish a common, albeit minimal, set of ethical guardrails for AI development and deployment, preventing a 'race to the bottom' in ethical standards and fostering international cooperation.",
+    "transfer_function": "Transfers a degree of autonomy and unconstrained innovation from AI developers to a multi-stakeholder governance process, and transfers the burden of ethical justification from individual traditions to a negotiated, overlapping consensus.",
+    "absent_voices": "Those who insist on a single, metaphysically grounded definition of human dignity (whether theological or purely secular) are structurally marginalized from the foundational negotiation, as the framework explicitly avoids privileging any single metaphysical foundation. Also, traditions lacking geopolitical power may find their voices effectively absent from shaping the consensus.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this framework vanished, the global AI governance landscape would likely fragment, leading to a patchwork of incompatible national regulations, increased ethical dumping, and a 'wild west' scenario for AI development, with significant geopolitical and social repercussions.",
+    "founding_problem": "The proliferation of powerful AI technologies without a globally accepted ethical framework, exacerbated by deep disagreements across cultures and traditions on the very definition of human dignity, leading to a risk of ethical chaos and harm.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International organizations (e.g., UNESCO, UN), academic ethicists, and civil society groups widely corroborate the ongoing and urgent nature of this problem, citing the rapid pace of AI development and the lack of global consensus. This corroboration comes from outside the direct beneficiaries of the framework."
+  },
+  "interval": {
+    "start": 2020,
+    "end": 2040
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2023,
+      "time_point": 2020,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2028,
-      "value": 0.42
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2033,
-      "value": 0.44
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2038,
+      "time_point": 2030,
       "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2043,
+      "time_point": 2035,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2040,
       "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2023,
+      "time_point": 2020,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
       "value": 0.25
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2028,
-      "value": 0.28
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2033,
+      "time_point": 2030,
       "value": 0.3
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2038,
-      "value": 0.3
+      "time_point": 2035,
+      "value": 0.32
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2043,
+      "time_point": 2040,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2023,
+      "time_point": 2020,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2028,
+      "time_point": 2035,
       "value": 0.12
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2033,
-      "value": 0.14
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2038,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2043,
-      "value": 0.15
+      "time_point": 2040,
+      "value": 0.1
     }
   ],
   "commentary": {
-    "kernel_context": "This constraint is the 'pluralist_pragmatic_reading' of the 'human_dignity_ai_governance' kernel. It emphasizes negotiated frameworks and overlapping consensus, contrasting with sibling readings like the 'magisterial_integralist_reading' (theological, Magisterium-led), 'secular_humanist_reading' (rational autonomy, UDHR-led), and 'techno_optimist_reading' (innovation-first, augmentation-focused). This reading seeks to bridge these divides through practical agreement on AI standards."
+    "narrative_context": "This constraint describes a pluralist and pragmatic approach to AI governance, where 'human dignity' is understood as a contested concept requiring negotiated frameworks. It aims for an 'overlapping consensus' on minimum ethical standards for AI, avoiding the imposition of any single metaphysical foundation. This reading is one instantiation of the broader 'human_dignity_ai_governance' kernel, which is deeply contested across theological, secular, and techno-optimist perspectives. The constraint is claimed as a Rope, reflecting its genuine coordination function, but its moderate extractiveness and suppression acknowledge the inherent power dynamics in consensus-building.",
+    "logic_rationale": "The extractiveness (0.45) is moderate, reflecting the balance between achieving broad inclusion and the risk of 'lowest common denominator' standards that may not fully protect all dignity conceptions. Suppression (0.30) is also moderate, as it requires active enforcement of agreed-upon norms but relies on voluntary participation and consensus rather than overt coercion. The theater ratio (0.10) is low, indicating a genuine effort towards functional governance rather than mere performativity. The slight increase in extractiveness and suppression over time reflects the hardening of norms as the framework matures, before a slight dip as it becomes more established and accepted.",
+    "directionality_logic": "Diverse cultural communities and multilateral governance bodies are beneficiaries, gaining a framework for ethical AI and enhanced legitimacy, respectively. Geopolitically marginalized traditions are victims, as their specific dignity claims may be diluted. Unregulated AI developers are also victims, facing new constraints. Advocates for other, more absolutist readings of dignity (magisterial integralist, secular humanist, techno-optimist) are 'excluded' from setting the foundational terms, as this framework explicitly avoids privileging their specific metaphysical claims.",
+    "perspectival_gap": "From the perspective of diverse cultural communities, this framework is a necessary Rope for coordination, ensuring their voices are heard and their dignity respected in a pluralistic world. From the perspective of geopolitically marginalized traditions, it may feel more like a Tangled Rope or even a Snare, as their specific, deeply held dignity claims might be suppressed or diluted by the consensus process, despite nominal inclusion. The engine's per-seat classification will capture this divergence.",
+    "kernel_context": "This constraint is the 'pluralist_pragmatic_reading' of the 'human_dignity_ai_governance' kernel. It stands in contrast to the 'magisterial_integralist_reading' (which grounds dignity in imago Dei and Catholic Social Doctrine), the 'secular_humanist_reading' (grounded in rational autonomy and UDHR), and the 'techno_optimist_reading' (dignity enhanced by technological augmentation). This reading seeks to build consensus without privileging any of these specific metaphysical foundations."
   },
+  "omegas": [
+    {
+      "id": "lowest_common_denominator_risk",
+      "question": "Does the pursuit of 'overlapping consensus' lead to a lowest-common-denominator framework that fails to adequately protect human dignity, especially for vulnerable populations?",
+      "resolution_mechanism": "Empirical analysis of AI harms in jurisdictions adopting such frameworks, specifically tracking disproportionate impacts on marginalized groups, and comparing outcomes with more robust, metaphysically grounded frameworks.",
+      "impact": "If the framework consistently underperforms in protecting vulnerable groups, its extractiveness would be re-evaluated upward, potentially reclassifying it as a Tangled Rope or Snare, as its coordination function would be undermined by its failure to protect its nominal beneficiaries.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Risk that pluralist consensus dilutes dignity protections."
+    },
+    {
+      "id": "power_asymmetry_in_consensus",
+      "question": "To what extent do geopolitical power asymmetries distort the 'overlapping consensus', effectively privileging the dignity conceptions of dominant cultures while marginalizing others?",
+      "resolution_mechanism": "Sociological and political analysis of the negotiation processes, identifying which voices are amplified or suppressed, and tracking the alignment of final consensus points with the interests of powerful vs. marginalized states/cultures.",
+      "impact": "If power asymmetries are found to be highly determinative, the 'pluralist' aspect of the framework would be re-evaluated as performative, increasing the theater_ratio and extractiveness, potentially shifting the classification towards a Snare for marginalized traditions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Impact of power on consensus formation."
+    },
+    {
+      "id": "metaphysical_neutrality_feasibility",
+      "question": "Is it truly possible to construct a robust ethical framework for human dignity in AI governance that is genuinely neutral on metaphysical foundations, or does any framework implicitly privilege certain worldviews?",
+      "resolution_mechanism": "Conceptual analysis of the framework's core principles and their historical/philosophical origins, identifying any implicit biases towards secular, liberal, or other specific traditions, and comparing them against the stated goal of neutrality.",
+      "impact": "If genuine neutrality is found to be impossible, the framework's claim to pluralism would be undermined, potentially increasing its theater_ratio and leading to a re-evaluation of its claimed type, as its stated coordination function would be based on a false premise.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Feasibility of metaphysical neutrality in dignity frameworks."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [
-      "ai_ethics_guidelines",
-      "data_privacy_regulations"
-    ]
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of four readings of the 'human_dignity_ai_governance' kernel, each representing a distinct approach to defining and governing human dignity in the context of AI. This 'pluralist_pragmatic_reading' focuses on negotiated consensus, while others prioritize specific theological, secular, or techno-optimist foundations."
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "distributed",
     "authority_grounding": "distributed",
     "interpretation_layer_present": false,
     "reading_relations": [
@@ -166,19 +244,19 @@
     ],
     "axioms": [
       {
-        "atom": "dignity_as_overlapping_consensus",
+        "atom": "dignity_as_contested_concept",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "procedural_fairness_in_governance",
+        "atom": "overlapping_consensus_as_governance_basis",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "negotiated_multilateral_governance",
+    "reference_frame": "post_metaphysical_pluralism",
     "drift_state": {
       "moment": "contemporary",
       "direction": "stable",
@@ -187,14 +265,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

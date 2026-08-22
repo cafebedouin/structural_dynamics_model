@@ -4,66 +4,102 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "92ae3470-1a80-4549-a187-3c8fcb490165"
+    "story_uid": "2c5776aa-9247-45e8-bace-a7641b248cd7"
   },
   "base_properties": {
     "extractiveness": 0.85,
-    "suppression": 0.95,
-    "theater_ratio": 0.6,
+    "suppression": 0.92,
+    "theater_ratio": 0.4,
     "accessibility_collapse": 0.9,
     "resistance": 0.1,
-    "claimed_type": "mountain",
+    "claimed_type": "snare",
     "human_readable": "Ma'at as Divine Mandate of Pharaoh",
     "topic_domain": "ancient_history/political_philosophy/religious_studies",
     "requires_active_enforcement": true,
-    "emerges_naturally": true,
     "beneficiaries": [
       "pharaoh",
-      "priestly_elite"
+      "royal_court_officials"
     ],
     "victims": [
-      "commoners",
-      "scribal_bureaucracy"
+      "egyptian_commoners",
+      "scribal_class"
+    ],
+    "vindicated_propositions": [
+      "divine_right_of_kings",
+      "cosmic_harmony_doctrine"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "natural_law_vs_constructed_legitimacy",
-      "question": "Is Ma'at, as embodied by Pharaoh, a genuine natural law of cosmic order, or a constructed constraint that benefits identifiable agents (Pharaoh, priestly elite)?",
-      "resolution_mechanism": "Archaeological and textual analysis of pre-dynastic social structures for evidence of Ma'at-like principles independent of royal authority; comparative study of other early state formations.",
-      "impact": "If genuinely natural, its classification as Mountain is robust. If constructed, it reclassifies as a Snare or Tangled Rope, with Pharaoh and the priestly elite as primary beneficiaries of a legitimation narrative.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity between Ma'at as natural law and as a constructed legitimation for royal power."
+      "name": "pharaoh",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The divine ruler, source and embodiment of Ma'at. Benefits from the absolute legitimacy and power derived from this interpretation, which places him beyond reproach and justifies all royal action as inherently aligned with cosmic order. Collects all surplus and labor."
     },
     {
-      "id": "pharaoh_as_source_or_subject",
-      "question": "Does Pharaoh embody Ma'at as its source, or is Pharaoh also subject to Ma'at's principles?",
-      "resolution_mechanism": "Analysis of royal decrees and wisdom literature for instances where Pharaoh is explicitly criticized or held accountable to Ma'at by non-royal sources.",
-      "impact": "If Pharaoh is the source, the constraint is a Mountain from Pharaoh's seat, justifying extraction. If Pharaoh is also subject, it implies a reciprocal obligation, shifting the constraint towards a Tangled Rope or Rope for Pharaoh.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This reading positions Pharaoh as the source of Ma'at, not subject to it, which differs from other readings where Pharaoh has reciprocal obligations."
+      "name": "royal_court_officials",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer the Pharaoh's will and benefit from their proximity to power. Their authority and wealth are directly tied to the Pharaoh's absolute rule and the divine mandate interpretation of Ma'at. They enforce royal decrees and collect taxes/tributes."
     },
     {
-      "id": "sibling_reading_impact_reciprocity",
-      "question": "How would the 'reciprocity_reading' of Ma'at alter the structural relationship between Pharaoh and society?",
-      "resolution_mechanism": "Comparative analysis of textual evidence supporting the 'reciprocity_reading' and its implications for royal accountability.",
-      "impact": "The 'reciprocity_reading' would introduce mutual obligations, shifting the constraint from a Mountain (for Pharaoh) to a Tangled Rope, where Pharaoh's benefits are tied to providing justice and stability to commoners.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of the 'reciprocity_reading' on Pharaoh's accountability."
+      "name": "egyptian_commoners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the full burden of labor, taxation, and conscription, justified as their contribution to maintaining cosmic order through the Pharaoh. They have no recourse against royal decrees, as the Pharaoh cannot, by definition, violate Ma'at. Their lives are entirely subject to the royal will."
     },
     {
-      "id": "sibling_reading_impact_distributed_maintenance",
-      "question": "How would the 'distributed_maintenance_reading' of Ma'at alter the locus of responsibility for cosmic order?",
-      "resolution_mechanism": "Analysis of community-level religious practices and local legal traditions for evidence of distributed responsibility for Ma'at.",
-      "impact": "The 'distributed_maintenance_reading' would decentralize the responsibility for Ma'at, potentially reducing the Pharaoh's unique role as its sole embodiment and diffusing the justification for royal extraction.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of the 'distributed_maintenance_reading' on the locus of responsibility for Ma'at."
+      "name": "scribal_class",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Are responsible for documenting and interpreting Ma'at, but within the strict confines of the divine mandate reading. They benefit from their literacy and administrative roles but are identity-locked into upholding the Pharaoh's absolute authority, even when it leads to hardship for commoners. Any deviation from the official interpretation is suppressed."
+    },
+    {
+      "name": "priestly_caste",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Maintain the religious rituals and narratives that reinforce the Pharaoh's divine status and the cosmic necessity of his rule. They benefit from state patronage and their role as intermediaries between the divine and the earthly realm, which is strengthened by this reading of Ma'at."
+    },
+    {
+      "name": "future_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the historical records and archaeological evidence to reconstruct the functioning of Ma'at and its various interpretations. They are outside the system and can critically assess the claims of divine mandate against the lived realities of ancient Egyptian society."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Establishes a rigid social and political hierarchy, ensuring stability and order by centralizing all authority and legitimacy in the Pharaoh, who is believed to embody cosmic justice.",
+    "transfer_function": "Transfers all surplus wealth, labor, and decision-making power from the common populace to the Pharaoh and his court, justified as necessary for the maintenance of cosmic order (Ma'at).",
+    "absent_voices": "Any dissenting voices or alternative interpretations of Ma'at that would challenge the Pharaoh's absolute authority are suppressed. These would include those advocating for distributed responsibility or reciprocal obligations, who are silenced by the state's enforcement mechanisms.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this interpretation of Ma'at vanished, the entire political and social structure of ancient Egypt would collapse. The Pharaoh's legitimacy would evaporate, leading to widespread unrest, challenges to authority, and a complete reorganization of power and resource distribution. The cosmic justification for the existing order would be gone.",
+    "founding_problem": "To establish and maintain a stable, unified state in ancient Egypt, preventing chaos and ensuring the prosperity of the land through a divinely sanctioned ruler.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Pharaoh and priestly caste attest that the problem of maintaining cosmic order and preventing chaos is perpetually live, requiring constant vigilance and absolute rule. Future historians, from outside the benefiting parties, corroborate that the problem of state stability was indeed central to ancient Egyptian society, but contest whether the divine mandate reading was the only or most effective solution, noting its extractive consequences."
+  },
+  "interval": {
+    "start": 0,
+    "end": 1500
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
@@ -72,12 +108,27 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 100,
+      "time_point": 300,
       "value": 0.8
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 200,
+      "time_point": 600,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 900,
+      "value": 0.87
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1200,
+      "value": 0.86
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
       "value": 0.85
     },
     {
@@ -87,107 +138,160 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 100,
-      "value": 0.88
+      "time_point": 300,
+      "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 200,
-      "value": 0.95
+      "time_point": 600,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 900,
+      "value": 0.93
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1200,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.92
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 600,
       "value": 0.4
     },
     {
       "metric": "theater_ratio",
-      "time_point": 100,
-      "value": 0.5
+      "time_point": 900,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 200,
-      "value": 0.6
+      "time_point": 1200,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.4
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 200
-  },
   "commentary": {
-    "narrative_context": "This constraint describes the 'divine mandate' reading of Ma'at in ancient Egypt, where cosmic order (Ma'at) flows directly from the divine through the Pharaoh to society. In this reading, the Pharaoh embodies Ma'at and, by definition, cannot violate it, positioning the ruler as the source and guarantor of order rather than being subject to its constraints. This interpretation justifies royal authority and extraction as a cosmic necessity, with high suppression of any alternative readings that might impose reciprocal obligations on the Pharaoh.",
+    "narrative_context": "This constraint describes the 'divine mandate' reading of Ma'at in ancient Egypt, where cosmic order flows from the divine through the Pharaoh to society. In this interpretation, the Pharaoh embodies Ma'at and cannot, by definition, violate it, placing him above any constraint. This reading justifies absolute royal power and substantial extraction from the populace, framing it as a cosmic necessity for stability. The constraint is claimed as a Snare due to its high extraction and suppression, despite the official narrative presenting it as a natural, divinely ordained order.",
     "key_agents": [
-      "pharaoh: Primary beneficiary/agenda_setter (institutional/arbitrage) — source of Ma'at, collects extraction",
-      "priestly_elite: Secondary beneficiary (organized/constrained) — interprets and propagates the divine mandate, benefits from its stability",
-      "scribal_bureaucracy: Payer/enforcer (organized/constrained) — administers royal decrees, bears the burden of maintaining the system, but also benefits from its order",
-      "commoners: Primary victims (powerless/trapped) — bear the extraction (labor, taxes) justified by cosmic order, no exit",
-      "analytical_historians: Observer (analytical/analytical) — analyzes textual and archaeological evidence to reconstruct the constraint's operation"
+      "Pharaoh: Primary agenda-setter and beneficiary (institutional/arbitrage)",
+      "Royal Court Officials: Secondary beneficiaries (powerful/constrained)",
+      "Priestly Caste: Institutional beneficiaries (institutional/constrained)",
+      "Egyptian Commoners: Primary targets/payers (powerless/trapped)",
+      "Scribal Class: Payer/beneficiary, identity-locked into upholding the system (moderate/identity_locked)",
+      "Future Historians: Analytical observers (analytical/analytical)"
     ],
-    "logic_rationale": "The extractiveness is high (0.85) because the system justifies substantial resource transfer (labor, taxes) to the Pharaoh and state as necessary for cosmic order. Suppression is extremely high (0.95) as any challenge to Pharaoh's embodiment of Ma'at is a challenge to cosmic order itself, met with severe religious and political penalties. Theater ratio is moderate (0.6) as while some royal actions genuinely maintain order, a significant portion of ritual and propaganda serves to reinforce the divine mandate and justify extraction. The claimed type is 'mountain' because this reading presents Ma'at as an unchangeable, natural cosmic law, with Pharaoh as its irreducible conduit.",
-    "perspectival_gap": "From the Pharaoh's and priestly elite's perspective, this is a Mountain, an unchangeable cosmic truth. From the commoners' perspective, it is a Snare, an extractive system enforced by divine authority. The engine will compute this divergence based on the declared roles and metrics.",
-    "directionality_logic": "Pharaoh is the ultimate beneficiary (d=0.0) as the divine conduit of Ma'at, from whom all order and legitimacy flow, and who collects the system's benefits. The priestly elite are also beneficiaries (d=0.1) as interpreters and enforcers of this divine order. Commoners are clear targets (d=1.0), bearing the costs of the system with no exit. The scribal bureaucracy is a mixed case, acting as enforcers and administrators (d=0.7) but also subject to the Pharaoh's absolute authority.",
-    "mandatrophy_analysis": "This constraint is presented as a timeless cosmic principle, making mandatrophy detection difficult. However, the high theater ratio and increasing suppression over time suggest that the 'naturalness' of the constraint requires increasing active maintenance and suppression of alternative interpretations. If the founding problem (maintaining cosmic order) were demonstrably 'dead' (e.g., if society could function without this specific royal mediation), the constraint would reclassify from a claimed Mountain to a Snare, as its persistence would then rely solely on coercion and extraction, not natural necessity."
+    "logic_rationale": "The extractiveness (0.85) is high because the Pharaoh's divine mandate allows for near-total appropriation of resources and labor without accountability. Suppression (0.92) is severe, as any challenge to the Pharaoh's authority or the divine mandate interpretation of Ma'at is met with state coercion, and alternatives are almost entirely collapsed (accessibility_collapse 0.90). Resistance is low (0.10) due to the overwhelming power and ideological control. The theater ratio (0.40) reflects that while some royal actions genuinely contribute to order (e.g., infrastructure), a significant portion of the 'maintenance of Ma'at' is performative justification for extraction.",
+    "perspectival_gap": "From the Pharaoh's and priestly caste's perspective, this is a Mountain or Rope, a natural and beneficial order. From the commoners' perspective, it is a clear Snare, an extractive system enforced by divine decree. The engine's classification will reflect this divergence based on the structural data.",
+    "directionality_logic": "The Pharaoh and royal court are full beneficiaries (d near 0.0) as they directly control and profit from the system. Commoners are full targets (d near 1.0) with no exit and bearing all costs. The scribal class is identity-locked: they benefit from their position but are also targets of the ideological suppression that prevents them from challenging the system. The priestly caste benefits from reinforcing the divine narrative.",
+    "mandatrophy_analysis": "This constraint is a Snare, not a Mountain, because its persistence depends on active enforcement and suppression of alternatives, not on inherent naturalness. The 'divine mandate' is a constructed justification for extraction, not an unchangeable cosmic law. The high suppression and extractiveness, coupled with identifiable beneficiaries and victims, clearly indicate a Snare, preventing mislabeling it as a natural or purely coordinative constraint."
   },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_legitimacy",
+      "question": "Is the Pharaoh's embodiment of Ma'at a genuine natural law, or a constructed ideological claim that benefits identifiable agents?",
+      "resolution_mechanism": "Comparative historical analysis of other ancient civilizations' legitimacy claims, and archaeological evidence of material conditions for commoners vs. royal court.",
+      "impact": "If a constructed claim, the constraint is a Snare, as authored. If genuinely a natural law (unlikely given the beneficiaries), it would be a Mountain, and the extraction would be reclassified as inherent cost of cosmic order.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between natural law and constructed ideological justification for power."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (state coercion, lack of alternatives) or internalized (belief in divine order, fear of cosmic chaos)?",
+      "resolution_mechanism": "Analysis of historical records for evidence of active rebellion vs. passive acceptance, and the role of religious indoctrination in maintaining compliance.",
+      "impact": "If primarily internalized, the constraint's effective suppression is higher than the structural measure suggests, as commoners carry the suppression with them. If primarily structural, the state's coercive capacity is the dominant factor.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in maintaining the divine mandate."
+    },
+    {
+      "id": "pharaoh_as_source_or_subject",
+      "question": "Is the Pharaoh truly the source of Ma'at, or is he also subject to its principles, even if implicitly?",
+      "resolution_mechanism": "Analysis of wisdom texts and non-royal narratives for evidence of expectations placed on the Pharaoh's conduct, independent of his self-proclaimed divine status.",
+      "impact": "If the Pharaoh is also subject, this reading forecloses the 'divine mandate' and shifts towards the 'reciprocity' or 'distributed maintenance' readings, reducing the claimed type's extractiveness and suppression.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the Pharaoh is above or within the Ma'at system."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.08
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
       "maat_order_principle__reciprocity_reading",
-      "maat_order_principle__distributed_maintenance_reading",
-      "pharaonic_taxation_system",
-      "temple_economy_structure"
+      "maat_order_principle__distributed_maintenance_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'maat_order_principle' kernel. This 'divine_mandate_reading' emphasizes Pharaoh's role as the source of Ma'at, distinct from the 'reciprocity_reading' (Pharaoh subject to Ma'at) and the 'distributed_maintenance_reading' (Ma'at maintained by all society)."
+    "dual_formulation_note": "This constraint is one reading of the 'Ma'at order principle' kernel. Its high extractiveness and suppression contrast sharply with other readings that emphasize distributed responsibility or reciprocal obligations. All readings are linked via affects_constraints."
   },
-  "directionality_overrides": [],
   "cs_structure": {
-    "kernel_codification": "implicit",
+    "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "maat_order_principle__reciprocity_reading",
+        "sibling_id": "reciprocity_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "maat_order_principle__distributed_maintenance_reading",
+        "sibling_id": "distributed_maintenance_reading",
         "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "pharaoh_is_source_of_maat",
+        "atom": "pharaoh_embodies_maat",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "theological"
       },
       {
-        "atom": "royal_action_cannot_violate_maat",
+        "atom": "royal_action_is_maat",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "pharaonic_divine_kingship",
+    "reference_frame": "pharaonic_divine_authority",
     "drift_state": {
-      "moment": "late_period_decline",
-      "direction": "authority_erosion",
+      "moment": "contemporary_historical_analysis",
+      "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

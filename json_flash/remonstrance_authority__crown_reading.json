@@ -4,51 +4,113 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "ca46cbd3-8195-4d0b-a6ea-89f7de306749"
+    "story_uid": "af068f38-33c2-4f08-b9d3-b144f651606d"
   },
   "base_properties": {
     "extractiveness": 0.85,
     "suppression": 0.7,
-    "theater_ratio": 0.2,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.8,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.75,
     "claimed_type": "snare",
     "human_readable": "Remonstrance Right as Illegitimate Minoritarian Veto (Crown Reading)",
     "topic_domain": "constitutional_history/political_economy/legal_authority",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "particularist_privilege_holders",
-      "local_magistrates"
+      "crown_royal_authority",
+      "royal_treasury"
     ],
     "victims": [
-      "royal_fiscal_authority",
-      "national_interest"
+      "parlements_magistrates",
+      "taxpayers_commoners"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "crown_royal_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The sovereign power, seeking to implement fiscal reforms and consolidate authority. Views remonstrances as an illegitimate obstruction to necessary governance and a challenge to royal prerogative. Benefits from the collection of taxes and the unhindered exercise of legislative power."
+    },
+    {
+      "name": "royal_treasury",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The financial arm of the Crown, directly benefiting from the unimpeded collection of taxes and the implementation of fiscal edicts. Suffers when remonstrances delay or prevent revenue generation."
+    },
+    {
+      "name": "parlements_magistrates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Judicial bodies whose traditional right of remonstrance is here viewed as a self-interested veto. They are seen as protecting their own privileges and those of particularist groups, obstructing royal policy. They bear the cost of royal displeasure and potential suppression of their judicial functions."
+    },
+    {
+      "name": "taxpayers_commoners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The general populace, who are the ultimate source of the taxes the Crown seeks to collect. From the Crown's perspective, their welfare is tied to the efficient functioning of the state, which is hampered by magisterial obstruction. They bear the direct cost of taxation, but also the indirect cost of delayed or inefficient governance."
+    },
+    {
+      "name": "royal_councillors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advisors to the Crown who advocate for strong royal authority and efficient administration. They benefit from the Crown's ability to implement policy without obstruction, as their influence and policy objectives are advanced."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aims to coordinate the implementation of royal edicts and fiscal policy across the realm, ensuring uniform application of law and efficient revenue collection for state functions.",
+    "transfer_function": "Transfers legislative and fiscal authority from traditional regional bodies (parlements) to the centralized royal administration, enabling the Crown to collect taxes and implement policies without local obstruction.",
+    "absent_voices": "The broader populace, whose consent is not sought for royal edicts, and whose interests are ostensibly represented by the parlements but are here viewed as secondary to royal prerogative. They would argue for greater accountability and representation in fiscal matters.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Crown's authority to override remonstrances vanished, the parlements would regain significant power to block royal edicts, leading to a highly fragmented and contested legislative landscape. Fiscal policy would become subject to regional vetoes, fundamentally altering the balance of power and state capacity.",
+    "founding_problem": "The Crown faced persistent challenges in consolidating state power and funding its administration and military, often encountering resistance from regional bodies and entrenched privileges that hampered national policy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Royal historians and political theorists of the era attest to the ongoing struggle for centralized authority and fiscal stability. Contemporary accounts from royal administrators and diplomatic correspondence corroborate the view that regional resistance was a significant impediment to effective governance."
+  },
   "interval": {
-    "start": 1600,
+    "start": 1650,
     "end": 1789
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1600,
-      "value": 0.6
-    },
-    {
-      "metric": "base_extractiveness",
       "time_point": 1650,
-      "value": 0.7
+      "value": 0.75
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1700,
-      "value": 0.78
+      "time_point": 1680,
+      "value": 0.8
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1750,
+      "time_point": 1710,
       "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1740,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1770,
+      "value": 0.84
     },
     {
       "metric": "base_extractiveness",
@@ -57,23 +119,28 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1600,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 1650,
-      "value": 0.58
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1700,
+      "time_point": 1680,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1750,
+      "time_point": 1710,
       "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1740,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1770,
+      "value": 0.7
     },
     {
       "metric": "suppression_requirement",
@@ -82,105 +149,113 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1600,
+      "time_point": 1650,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1650,
-      "value": 0.25
+      "time_point": 1680,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1700,
-      "value": 0.22
+      "time_point": 1710,
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1750,
-      "value": 0.21
+      "time_point": 1740,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1770,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
       "time_point": 1789,
-      "value": 0.2
-    }
-  ],
-  "omegas": [
-    {
-      "id": "remonstrance_legitimacy_ambiguity",
-      "question": "Is the remonstrance right a legitimate constitutional check on royal power, or an illegitimate obstruction of national governance?",
-      "resolution_mechanism": "Analysis of historical outcomes: if it consistently protected fundamental rights against genuine tyranny, it leans legitimate; if it consistently protected particularist interests against necessary national reforms, it leans illegitimate.",
-      "impact": "If legitimate, the Crown's extraction is justified as the cost of constitutional balance; if illegitimate, the extraction by local magistrates is a snare on national authority.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity over the constitutional legitimacy of the remonstrance right."
-    },
-    {
-      "id": "kernel_reading_difference",
-      "question": "This constraint is the 'crown_reading' of the 'remonstrance_authority' kernel. How would the classification change under the 'magistrate_reading'?",
-      "resolution_mechanism": "The 'magistrate_reading' would likely classify the constraint as a 'rope' or 'scaffold', with local magistrates as beneficiaries and the Crown as a payer, and significantly lower extractiveness and suppression, reflecting its role as a legitimate check on power.",
-      "impact": "A shift in reading would invert the beneficiary/victim structure and drastically alter the computed classification, highlighting the perspectival nature of constitutional interpretation.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "The classification is highly dependent on the chosen reading of the remonstrance authority kernel."
+      "value": 0.4
     }
   ],
   "commentary": {
-    "narrative_context": "This story analyzes the remonstrance right from the perspective of the Crown and its supporters, who viewed it as an illegitimate minoritarian veto that protected particularist privileges at the expense of national unity and fiscal stability. The constraint is framed as a snare, extracting resources and authority from the central government to benefit local elites and magistrates. This is one reading of the 'remonstrance_authority' kernel, contrasting with a 'magistrate_reading' that would frame it as a legitimate constitutional mechanism.",
-    "key_agents": [
-      "royal_fiscal_authority: Primary target (institutional/constrained) — bears extraction",
-      "particularist_privilege_holders: Primary beneficiary (organized/identity_locked) — benefits from constraint",
-      "local_magistrates: Agenda setter (powerful/constrained) — administers the veto",
-      "national_interest: Victim (analytical/analytical) — abstract concept harmed by fragmentation",
-      "loyalist_parliamentarians: Excluded (organized/constrained) — voices for central authority"
-    ],
-    "logic_rationale": "Extractiveness is high (0.85) because the remonstrance directly diverts significant fiscal resources and administrative power from the Crown. Suppression (0.7) is also high, as the Crown's attempts to bypass or abolish the remonstrance were met with strong, often violent, resistance, requiring active enforcement to maintain the local veto. Theater ratio is low (0.2) because the remonstrance, from this perspective, is a direct and effective tool for obstruction, not a performative one. Resistance is high (0.8) from the Crown's side, reflecting its continuous struggle against the remonstrance.",
-    "perspectival_gap": "From the Crown's perspective, the remonstrance is a snare, actively extracting from its authority. From the local magistrates' perspective (the 'magistrate_reading'), it is a legitimate rope or scaffold, coordinating the defense of ancient liberties. The engine's classification will reflect this divergence based on the declared beneficiary/victim structure and metrics.",
-    "directionality_logic": "The royal_fiscal_authority is a clear target (payer), bearing the costs of blocked edicts and lost revenue. Particularist_privilege_holders and local_magistrates are beneficiaries, gaining local autonomy and fiscal exemptions. The national_interest is an abstract victim, suffering from the fragmentation. Loyalist_parliamentarians are excluded, unable to influence the local veto process.",
-    "mandatrophy_analysis": "The Crown's reading asserts that the original mandate of the remonstrance (protecting against arbitrary royal power) is 'dead' and that the mechanism now serves purely extractive ends for local elites. This prevents mislabeling it as a legitimate coordination mechanism (rope) when its function has atrophied into a tool for particularist obstruction (snare). The 'dead' founding problem status combined with 'world_rearranges' disappearance verdict signals a zombie constraint."
+    "narrative_context": "This constraint story represents the 'Crown Reading' of the remonstrance right in pre-revolutionary France. From this perspective, the right of parlements (magistrates) to remonstrate against royal edicts is not a legitimate constitutional check but an illegitimate minoritarian veto. It is seen as an obstruction to royal authority and fiscal policy, protecting particularist privileges at the expense of national interest. The Crown's efforts to override these remonstrances are framed as necessary acts of governance, not as arbitrary power grabs. The constraint is claimed as a Snare because, from the Crown's view, the remonstrance mechanism itself is a form of extraction, diverting resources and authority from the central state to regional elites.",
+    "logic_rationale": "The high extractiveness (0.85) reflects the Crown's perception that the remonstrance right extracts significant fiscal and political capital by delaying or preventing royal edicts. Suppression (0.70) is also high, as the Crown actively sought to suppress these challenges through 'lits de justice' and other means. The theater ratio (0.40) indicates that while some genuine deliberation might occur, a substantial portion of the remonstrance process is seen as performative resistance designed to assert regional power rather than engage in good-faith coordination. The increasing extractiveness over time reflects the escalating fiscal crises and the Crown's growing frustration with magisterial obstruction.",
+    "directionality_logic": "The Crown and its treasury are beneficiaries, as they seek to consolidate power and revenue, viewing the remonstrance as a cost to be overcome. The parlements' magistrates and, indirectly, the common taxpayers (who bear the burden of delayed or inefficient fiscal policy) are the victims/payers. The Crown's directionality is low (beneficiary), while the magistrates' is high (target), reflecting the Crown's view of them as obstacles to be overcome.",
+    "perspectival_gap": "The Crown's perspective frames the remonstrance right as a Snare, extracting from the state. The magistrates, in their own reading, would likely classify it as a Rope or even a Mountain, a fundamental check on arbitrary power. The engine's computation of per-seat classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'Crown Reading' of the 'remonstrance_authority' kernel. It views the remonstrance right as an illegitimate minoritarian veto. A sibling reading, 'magistrate_reading', would frame the remonstrance right as a fundamental constitutional mechanism preserving ancient liberties against arbitrary innovation."
+  },
+  "omegas": [
+    {
+      "id": "legitimacy_of_remonstrance",
+      "question": "Is the remonstrance right a legitimate constitutional check on royal power, or an illegitimate obstruction of national governance?",
+      "resolution_mechanism": "Analysis of historical outcomes: did remonstrances primarily protect local privileges or genuinely prevent arbitrary rule? Examination of contemporary legal theory regarding the balance of power.",
+      "impact": "If legitimate, the Crown's actions to suppress it would be seen as pure extraction, reclassifying this constraint towards a Snare for the Crown. If illegitimate, the Crown's actions are justified coordination, supporting a Rope or Scaffold classification for the Crown.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the constitutional legitimacy of the remonstrance right itself."
+    },
+    {
+      "id": "fiscal_necessity_vs_royal_prerogative",
+      "question": "To what extent were the Crown's fiscal demands genuinely necessary for national welfare and defense, versus serving to expand royal prerogative and personal enrichment?",
+      "resolution_mechanism": "Detailed historical economic analysis of state finances, military expenditures, and royal household accounts, compared against contemporary European powers.",
+      "impact": "If fiscal necessity was paramount, the Crown's efforts to overcome remonstrances are more justifiable, potentially lowering the perceived extractiveness. If prerogative expansion was dominant, extractiveness is confirmed as high.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The true motivation behind the Crown's fiscal policies."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "magistrate_authority__crown_reading",
+      "taxation_authority__crown_reading"
+    ]
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "extraction",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "remonstrance_authority__magistrate_reading",
-        "relation": "forecloses"
+        "sibling_id": "magistrate_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "royal_sovereignty_is_indivisible",
+        "atom": "royal_prerogative_supreme",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "local_privileges_subordinate_to_national_law",
+        "atom": "national_interest_over_privilege",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "unified_royal_sovereignty",
+    "reference_frame": "absolute_monarchy_fiscal_unity",
     "drift_state": {
-      "moment": "late_ancien_regime",
-      "direction": "practice_drift",
-      "magnitude": "severe",
-      "acknowledged": true
+      "moment": "pre_revolutionary_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

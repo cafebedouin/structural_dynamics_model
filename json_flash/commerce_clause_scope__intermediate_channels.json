@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "21152894-2a87-4e79-a921-90e346ed6498"
+    "story_uid": "dc994ac4-5d49-4987-8d71-21ff3d159c90"
   },
   "base_properties": {
     "extractiveness": 0.45,
@@ -18,31 +18,31 @@
     "requires_active_enforcement": true,
     "beneficiaries": [
       "federal_government",
-      "states_on_local_matters"
+      "state_governments"
     ],
     "victims": [
       "conceptual_coherence_of_commerce_power",
-      "regulated_non_economic_actors"
+      "regulated_entities_with_non_economic_activity"
     ]
   },
   "omegas": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine intermediate reading of the Commerce Clause, or does it functionally collapse into either a broad effects test or a narrow originalist view?",
-      "resolution_mechanism": "Analysis of future Supreme Court decisions: if the limiting principles are consistently applied to invalidate federal economic regulation, it leans narrow; if they are consistently circumvented, it leans broad. If the distinctions hold, the intermediate reading is stable.",
-      "impact": "If it collapses to broad_effects_test, federal power is more extensive, and state autonomy is reduced. If it collapses to narrow_originalist, federal power is severely curtailed, and states gain more autonomy. If stable, the current balance is maintained.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "This constraint is the 'intermediate_channels' reading of the 'commerce_clause_scope' kernel. Sibling readings are 'narrow_originalist' and 'broad_effects_test'."
-    },
-    {
-      "id": "economic_non_economic_distinction_stability",
-      "question": "Is the distinction between 'economic' and 'non-economic' activity a stable and predictable limiting principle, or is it inherently manipulable?",
-      "resolution_mechanism": "Empirical study of lower court application and Supreme Court clarification over time: consistent application suggests stability; inconsistent or outcome-driven application suggests manipulability.",
-      "impact": "If unstable, the limiting principles offer less protection to state autonomy and non-economic local activity, increasing federal power and extractiveness. If stable, the constraint functions as intended, balancing federal and state power.",
+      "id": "economic_vs_non_economic_distinction",
+      "question": "Is the distinction between 'economic' and 'non-economic' activity a stable and predictable limiting principle, or is it subject to judicial manipulation?",
+      "resolution_mechanism": "Analysis of future Supreme Court decisions applying the distinction across diverse factual scenarios; consistency of application across different judicial philosophies.",
+      "impact": "If unstable, the constraint's suppression of federal power is more theatrical than real, increasing effective extraction from states and individuals by allowing federal overreach under a guise of limits. If stable, it genuinely limits federal power.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "The stability of the 'economic' vs 'non-economic' distinction as a limiting principle."
+      "description": "Ambiguity of the economic/non-economic distinction in limiting federal power."
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is the 'intermediate_channels' reading of the 'commerce_clause_scope' kernel. What would a 'broad_effects_test' or 'narrow_originalist' reading change structurally?",
+      "resolution_mechanism": "Comparative legal analysis of judicial outcomes under each reading; legislative responses to shifts in judicial interpretation.",
+      "impact": "A 'broad_effects_test' reading would expand federal power, increasing extractiveness from states and individuals. A 'narrow_originalist' reading would severely restrict federal power, shifting extractiveness to states and potentially creating coordination failures.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative Commerce Clause readings on federal power and state autonomy."
     }
   ],
   "measurements": [
@@ -54,11 +54,16 @@
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.42
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
       "value": 0.45
     },
     {
@@ -69,7 +74,7 @@
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.58
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
@@ -77,48 +82,117 @@
       "value": 0.6
     },
     {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.25
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.22
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
       "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 30
   },
   "commentary": {
-    "narrative_context": "This constraint represents the 'intermediate channels' reading of the Commerce Clause, which defines the scope of federal power to regulate interstate commerce. It acknowledges federal authority over channels, instrumentalities, and activities substantially affecting commerce, but introduces limiting principles to protect state sovereignty and non-economic local activity. This reading attempts to balance federal and state power, but its limiting principles (e.g., the economic/non-economic distinction) are often subject to judicial interpretation and can be seen as manipulable, leading to a contested and somewhat extractive outcome for conceptual coherence.",
+    "narrative_context": "This constraint describes the 'intermediate channels' reading of the Commerce Clause, which defines the scope of federal power over interstate commerce. It acknowledges federal authority over channels, instrumentalities, and activities substantially affecting commerce, but introduces limiting principles for non-economic activity, aggregation, and attenuated causal chains. This reading attempts to balance federal and state power, but its limiting principles are often criticized for their conceptual instability.",
     "key_agents": [
-      "federal_government: Agenda setter (institutional/generational) — benefits from ability to regulate national economic issues.",
-      "states_on_local_matters: Beneficiary (institutional/generational) — benefits from retained authority over non-economic local matters.",
-      "conceptual_coherence_of_commerce_power: Victim (analytical/civilizational) — suffers from the instability and manipulability of the limiting principles.",
-      "regulated_non_economic_actors: Payer (moderate/biographical) — bears the cost of federal regulation when their activities are deemed to affect interstate commerce, even if non-economic."
+      "federal_government: Agenda setter (institutional/analytical) - defines and enforces the scope of its own power.",
+      "state_governments: Beneficiary/Payer (institutional/constrained) - benefits from retained autonomy in certain areas but pays by being subject to federal preemption in others.",
+      "regulated_entities_with_non_economic_activity: Payer (moderate/constrained) - bears the cost of federal regulation if their activity is deemed 'economic' or sufficiently connected to interstate commerce.",
+      "supreme_court: Agenda setter/Observer (institutional/analytical) - adjudicates the boundaries of federal power, shaping the interpretation of the Commerce Clause."
     ],
-    "logic_rationale": "The extractiveness (0.45) is moderate because while federal power is extensive, the limiting principles do impose some checks. Suppression (0.6) is present as federal authority is actively enforced, and states' ability to resist is constrained by judicial review. The theater ratio (0.2) is relatively low, as the principles are genuinely applied, but the conceptual instability of the 'economic/non-economic' distinction introduces some performative aspects in judicial reasoning. Accessibility collapse (0.4) is moderate; while federal power is broad, states retain some areas of exclusive authority. Resistance (0.3) is moderate, as states and regulated entities frequently challenge the application of federal power.",
-    "perspectival_gap": "The federal government perceives this as a necessary and legitimate exercise of power to address national issues, while states and regulated non-economic actors may view it as an overreach that erodes local control. The 'conceptual coherence' victim experiences the constraint as a constant struggle for clear boundaries, which the federal government may dismiss as mere legal complexity.",
-    "directionality_logic": "The federal government is a primary beneficiary (d=0.0-0.1) as it gains broad regulatory authority. States, particularly regarding local non-economic matters, are also beneficiaries (d=0.1-0.2) as the limiting principles protect some of their autonomy. Conceptual coherence is a victim (d=0.9-1.0) due to the inherent tension and manipulability of the limiting principles. Regulated non-economic actors are payers (d=0.7-0.8) as they bear the direct costs of federal regulation.",
-    "mandatrophy_analysis": "This constraint is a Tangled Rope because it genuinely coordinates federal and state powers to address national economic issues while simultaneously extracting from state autonomy and conceptual clarity through its ambiguous limiting principles. The active enforcement of federal regulations, coupled with the ongoing judicial interpretation, prevents it from becoming a Piton. Its coordination function (addressing national economic problems) is still live, but the extraction (from states and conceptual coherence) is a persistent feature, not a temporary support, ruling out Scaffold. It's not a Snare because there is a genuine, albeit imperfect, coordination function.",
-    "kernel_context": "This constraint is the 'intermediate_channels' reading of the 'commerce_clause_scope' kernel. This reading attempts to define federal power over interstate commerce by identifying specific categories (channels, instrumentalities, substantially affecting activities) and applying limiting principles (economic/non-economic distinction, no attenuated causal chains). It stands between the 'narrow_originalist' reading, which would severely restrict federal power to direct trade, and the 'broad_effects_test' reading, which would allow federal regulation of virtually any activity with an aggregate economic impact."
+    "logic_rationale": "The extractiveness (0.45) is moderate because while federal power is extensive, the limiting principles do impose some checks. Suppression (0.6) is significant as federal authority can preempt state law and regulate broad swathes of economic activity. Theater ratio (0.2) reflects that while the limiting principles are real, their application can be inconsistent, leading to a degree of performative adherence rather than strict structural constraint. The claimed type is Tangled Rope because it genuinely coordinates national economic activity (benefiting the federal government) but also extracts from states and individuals through federal preemption and regulation, requiring active enforcement to maintain the balance.",
+    "perspectival_gap": "The federal government views this as a necessary coordination mechanism for a national economy, with appropriate checks on its power. State governments and regulated entities, however, often experience the limiting principles as insufficient or inconsistently applied, leading to federal overreach and extraction. The Supreme Court's role is to mediate these differing perspectives, but its interpretations themselves become part of the constraint.",
+    "directionality_logic": "The federal government is a primary beneficiary, as the constraint grants it broad authority over national economic issues. State governments are both beneficiaries (retaining autonomy over non-economic local matters) and payers (subject to federal preemption). Regulated entities engaging in non-economic activity are payers, as they bear the cost of federal regulation if their activity is deemed to fall within the Commerce Clause's scope. The conceptual coherence of the Commerce Power is a victim, as the limiting principles introduce instability and manipulability.",
+    "mandatrophy_analysis": "This constraint is not mandatrophic; the problem of defining federal power over commerce remains live. The classification as Tangled Rope prevents mislabeling it as a pure Snare (ignoring the coordination function for national markets) or a pure Rope (ignoring the extraction from states and individuals due to federal preemption and the instability of limiting principles). The active enforcement requirement and the presence of both beneficiaries and victims are key to this classification."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "commerce_clause_scope__narrow_originalist",
-      "commerce_clause_scope__broad_effects_test"
+      "commerce_clause_scope__broad_effects_test",
+      "commerce_clause_scope__narrow_originalist"
     ],
-    "dual_formulation_note": "This constraint is one reading of the Commerce Clause scope kernel. Its structural properties and classification are distinct from the 'narrow_originalist' and 'broad_effects_test' readings, which are modeled as separate constraints."
+    "dual_formulation_note": "This constraint is one of three distinct readings of the Commerce Clause scope kernel. Each reading represents a different structural claim about the extent of federal power, with differing extractiveness and suppression profiles. They are linked as a constraint family."
+  },
+  "stakeholders": [
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "As the primary enforcer and beneficiary of the Commerce Clause, the federal government defines and expands its regulatory reach over economic activities. It benefits from the ability to address national economic problems but is constrained by judicial interpretations of its limits."
+    },
+    {
+      "name": "state_governments",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "States benefit from retaining authority over local, non-economic matters (e.g., family law, criminal law, education). However, they are payers when federal regulations preempt state laws or impose unfunded mandates, limiting their autonomy and policy choices."
+    },
+    {
+      "name": "regulated_entities_with_non_economic_activity",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "These entities (e.g., local schools, gun owners, victims of gender-motivated violence) bear the cost of federal regulation if their activities, though non-economic, are deemed to fall under the Commerce Clause due to a jurisdictional element or connection to channels/instrumentalities. Their ability to resist is limited by federal supremacy."
+    },
+    {
+      "name": "supreme_court",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The Supreme Court is the ultimate arbiter of the Commerce Clause's scope. Its interpretations shape the boundaries of federal power, influencing the balance between federal and state authority. It observes the practical effects of its rulings but also actively sets the agenda for federalism."
+    },
+    {
+      "name": "conceptual_coherence_of_commerce_power",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The conceptual coherence of the Commerce Clause's scope suffers from the unstable and manipulable distinctions (e.g., economic vs. non-economic activity, attenuated causal chains) introduced by this reading. This creates legal uncertainty and makes consistent application challenging."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates federal and state regulatory authority by defining the boundaries of federal power over interstate commerce, allowing for national solutions to economic problems while preserving some state autonomy.",
+    "transfer_function": "Transfers regulatory authority and policy-making power from states to the federal government for activities deemed to fall within the Commerce Clause's scope, while reserving other areas for state control.",
+    "absent_voices": "Advocates for a strictly limited federal government (e.g., states' rights proponents, libertarians) would argue that the limiting principles are insufficient and that federal power remains too expansive, encroaching on traditional state prerogatives. They are often marginalized in national policy debates.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the Commerce Clause vanished, the balance of power between federal and state governments would fundamentally shift. Either federal power would become virtually unlimited (reverting to a broad effects test) or severely curtailed (reverting to a narrow originalist view), leading to a complete reorganization of regulatory authority and economic governance.",
+    "founding_problem": "The original problem was to create a national market by preventing states from erecting trade barriers and to allow the federal government to address national economic issues that individual states could not effectively manage.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians and constitutional scholars widely corroborate the founding problem of national economic coordination. The status as 'live' is attested by ongoing debates over federal regulatory authority in areas like environmental protection, healthcare, and technology, where national solutions are often sought for issues with interstate impact. Legal scholars and political scientists outside the federal government confirm the continued relevance of this problem."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -126,45 +200,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "commerce_clause_scope__narrow_originalist",
+        "sibling_id": "broad_effects_test",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "commerce_clause_scope__broad_effects_test",
+        "sibling_id": "narrow_originalist",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "federal_power_limited_by_enumerated_powers",
+        "atom": "federal_power_limited_by_categorical_distinctions",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "states_retain_police_power_over_local_non_economic_activity",
+        "atom": "national_economic_problems_require_federal_solutions",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "instrumental"
       }
     ],
     "reference_frame": "post_new_deal_federalism",
     "drift_state": {
       "moment": "contemporary_judicial_review",
-      "direction": "practice_drift",
+      "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

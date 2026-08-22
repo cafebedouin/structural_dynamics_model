@@ -4,20 +4,19 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "8d337407-0323-49bf-9e89-aab5992e6f2c"
+    "story_uid": "20c9fa1c-d226-4274-a8e9-614f98ccc951"
   },
   "base_properties": {
-    "extractiveness": 0.85,
-    "suppression": 0.7,
-    "theater_ratio": 0.6,
+    "extractiveness": 0.78,
+    "suppression": 0.65,
+    "theater_ratio": 0.85,
     "accessibility_collapse": 0.4,
-    "resistance": 0.5,
+    "resistance": 0.7,
     "claimed_type": "tangled_rope",
     "human_readable": "Marriage Commitment Reversal: Practice-Doctrine Gap",
     "topic_domain": "religious_institutional_history/commitment_systems/political_theology",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "institutional_leadership",
       "institutional_survival"
     ],
     "victims": [
@@ -25,107 +24,174 @@
       "fundamentalist_factions"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint primarily a 'practice-doctrine gap' reading of the marriage commitment reversal kernel, or is it better understood as an 'exogenous override' or 'endogenous reinterpretation'?",
-      "resolution_mechanism": "Analysis of primary source documents (e.g., Woodruff's private journals vs. public declarations, federal court records) to determine the dominant causal factor for the change in practice and the explicit doctrinal justifications offered at the time.",
-      "impact": "If 'exogenous override' is dominant, the constraint's suppression and extractiveness would be higher, reflecting external coercion. If 'endogenous reinterpretation' is dominant, the 'theater_ratio' would be lower, as the doctrinal shift would be more genuine. This 'practice-doctrine gap' reading emphasizes the ambiguity and internal tension.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Distinguishing between different readings of the marriage commitment reversal kernel."
+      "name": "institutional_survival",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The institutional entity itself benefits from the ambiguity, allowing it to navigate federal anti-polygamy laws while preserving core doctrine. This flexibility enabled the continuation of plural marriages in claimed-legal jurisdictions (1890-1904) and avoided disincorporation and asset seizure."
     },
     {
-      "id": "legitimation_dual_track_efficacy",
-      "question": "How effective was the dual-track legitimation (public compliance vs. private continuation) in ensuring institutional survival and managing internal dissent?",
-      "resolution_mechanism": "Quantitative analysis of membership retention, schism rates, and legal challenges during the 1890-1904 period, correlated with the degree of public vs. private adherence to the marriage commitment.",
-      "impact": "If highly effective, it reinforces the 'tangled_rope' classification by demonstrating the functional coordination (institutional survival) achieved through asymmetric extraction (membership clarity sacrificed). If ineffective, it suggests a more 'snare'-like quality, where the extraction failed to deliver its promised coordination.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Assessing the efficacy of the dual-track legitimation strategy."
+      "name": "general_membership",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Experienced bewilderment and a sense of betrayal as public practice diverged from deeply held doctrine without clear explanation. Many were identity-locked by their faith and community, making exit unthinkable despite the cognitive dissonance and personal cost of compliance."
+    },
+    {
+      "name": "fundamentalist_factions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Suffered schism and excommunication for adhering to the original doctrine and practice. They bore the cost of social and religious ostracization, but their organized nature allowed for a constrained exit into new, smaller communities."
+    },
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Applied coercive pressure through legislation (Edmunds-Tucker Act) and legal action, threatening disincorporation and asset seizure. Its actions created the external conditions that forced the institutional leadership to suspend public practice."
+    },
+    {
+      "name": "institutional_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Navigated the external pressure by issuing the Manifesto, publicly suspending plural marriage while preserving the underlying doctrine. They managed the internal and external legitimation challenges, maintaining institutional cohesion at the cost of doctrinal clarity for many members."
     }
   ],
-  "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.7
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.75
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.8
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 14,
-      "value": 0.85
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.68
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 14,
-      "value": 0.7
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.5
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 14,
-      "value": 0.6
-    }
-  ],
+  "six_questions": {
+    "coordination_function": "Allowed the institution to coordinate its public compliance with federal law while internally maintaining a commitment to its core marriage doctrine, thereby preserving its legal existence and assets.",
+    "transfer_function": "Transferred the burden of cognitive dissonance and doctrinal ambiguity onto the general membership, while transferring institutional legitimacy and survival from the federal government back to the religious organization.",
+    "absent_voices": "Those who left the institution due to the doctrinal ambiguity or perceived betrayal, as well as future generations who would inherit a complex and often contradictory historical narrative, were absent from the immediate decision-making process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the practice-doctrine gap vanished overnight (e.g., through a clear, unambiguous doctrinal statement or a full return to prior practice), the institution's historical narrative, current membership understanding, and relationship with fundamentalist offshoots would fundamentally reorganize. It would either fully embrace or fully repudiate its past, with significant consequences for its identity and structure.",
+    "founding_problem": "The institution faced an existential threat from the United States federal government due to its practice of plural marriage, risking disincorporation, asset seizure, and imprisonment of its leaders.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historical records, federal court documents, and contemporary journalistic accounts from outside the benefiting parties (e.g., non-member historians, government archives) corroborate the severe legal and political pressure that constituted the founding problem. The problem of federal persecution is now dead, but the doctrinal ambiguity persists."
+  },
   "interval": {
     "start": 1890,
     "end": 1904
   },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1890,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1894,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1898,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1904,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1890,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1894,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1898,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1904,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1890,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1894,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1898,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1904,
+      "value": 0.85
+    }
+  ],
   "commentary": {
-    "narrative_context": "This constraint describes the period (1890-1904) where a religious institution publicly suspended its marriage commitment practice (Section 132) due to external pressure, while preserving the principle in doctrine and allowing some private continuation. This created a structural ambiguity, enabling institutional survival (coordination) at the cost of membership clarity and internal coherence (extraction). The constraint is a 'practice-doctrine gap' reading of the broader 'marriage commitment reversal' kernel.",
+    "narrative_context": "This constraint describes the period (1890-1904) where a religious institution publicly suspended the practice of plural marriage due to federal pressure, while internally preserving the doctrinal principle (Section 132). This created a significant gap between declared doctrine and observable practice, leading to high extractiveness on the general membership (cognitive dissonance, identity strain) and fundamentalist factions (schism), while benefiting institutional survival through strategic ambiguity. The constraint is claimed as a Tangled Rope by the institution's own framing (coordinating compliance while preserving doctrine), but the metrics reflect its highly extractive and performative nature.",
     "key_agents": [
-      "institutional_leadership: Agenda setter (institutional/constrained) — navigated external pressure and internal dissent.",
-      "general_membership: Payer (moderate/constrained) — experienced confusion and betrayal due to doctrinal ambiguity.",
-      "fundamentalist_factions: Payer (organized/identity_locked) — resisted the change, leading to schism.",
-      "federal_government: Observer (institutional/arbitrage) — exerted external pressure, leading to the public suspension.",
-      "institutional_survival: Beneficiary (analytical/civilizational) — the abstract entity that benefited from the ambiguity."
+      "institutional_survival: Primary beneficiary (institutional/arbitrage)",
+      "general_membership: Primary target (powerless/identity_locked)",
+      "fundamentalist_factions: Secondary target (organized/constrained)",
+      "federal_government: External agenda_setter (institutional/analytical)",
+      "institutional_leadership: Internal agenda_setter (institutional/constrained)"
     ],
-    "logic_rationale": "Extractiveness is high (0.85) because the ambiguity imposed significant costs on the general membership and fundamentalist factions, who faced cognitive dissonance, loss of clarity, or outright schism. Suppression (0.7) was necessary to manage internal dissent and maintain public compliance. The theater ratio (0.6) is high because the public suspension of practice was largely performative, masking continued private adherence and doctrinal preservation. The period 1890-1904 is chosen as the interval because it marks the initial public declaration of suspension (1890) and the subsequent period of ambiguity before more definitive institutional shifts.",
-    "perspectival_gap": "Institutional leadership experienced this as a necessary, if painful, coordination to ensure survival, balancing external threats with internal commitments. For the general membership, it was a source of confusion and betrayal, an extraction of their clear understanding of core doctrine. Fundamentalist factions saw it as a direct violation, leading to their exit. The engine's per-seat classification will reflect these divergent experiences.",
-    "directionality_logic": "Institutional leadership (agenda_setter) is a beneficiary (d near 0.0) as they successfully navigated a crisis and preserved the institution. General membership and fundamentalist factions (payers) are targets (d near 1.0) as they bore the costs of ambiguity and internal conflict. Institutional survival (an abstract beneficiary) is also near 0.0. The federal government is an external actor whose pressure shaped the constraint but was not directly extracted from or subsidized by it in this specific reading.",
-    "mandatrophy_analysis": "This constraint is a 'tangled_rope' because it served a genuine coordination function (institutional survival in the face of federal pressure) but did so through asymmetric extraction (the cost of ambiguity borne by the membership). The classification prevents mislabeling it as a 'snare' by acknowledging the real, if costly, coordination, and prevents mislabeling it as a 'rope' by highlighting the significant, asymmetric extraction. The ambiguity itself was the mechanism of both coordination and extraction.",
-    "kernel_context": "This constraint is the 'practice-doctrine gap' reading of the 'marriage_commitment_reversal' kernel. This kernel describes the institutional response to external pressure regarding its marriage practices. This specific reading focuses on the period where the institution publicly suspended practice while preserving the underlying doctrine, creating a period of structural ambiguity. Sibling readings include 'exogenous_override_reading' (emphasizing external coercion as the sole driver) and 'endogenous_reinterpretation_reading' (emphasizing internal divine revelation as the driver of doctrinal change)."
+    "logic_rationale": "Extractiveness is high because the ambiguity imposed significant costs on members, forcing them to reconcile contradictory realities. Suppression is moderate-high, as dissent was managed through social pressure and, for fundamentalists, excommunication. Theater ratio is very high (0.85) because the public 'suspension' was largely performative, allowing the continuation of plural marriages in claimed-legal jurisdictions while projecting compliance to the federal government. The period 1890-1904 is chosen as the interval because it marks the initial public declaration (Manifesto) and the subsequent period of continued, albeit hidden, practice before a more definitive 'Second Manifesto' was issued.",
+    "perspectival_gap": "From the perspective of institutional leadership, this was a necessary coordination to ensure survival. From the perspective of the general membership, it was a confusing and costly extraction of their clarity and trust. Fundamentalist factions viewed it as a betrayal of core principles, leading to schism. The engine's classification will highlight this divergence.",
+    "directionality_logic": "Institutional survival (an abstract entity, but a clear beneficiary) gains from the flexibility. The general membership and fundamentalist factions bear the costs of ambiguity and enforcement, placing them at the target end. The federal government acts as an external enforcer, shaping the environment for the institutional leadership, who in turn manage the internal constraint.",
+    "mandatrophy_analysis": "The constraint's mandate was to ensure institutional survival in the face of federal persecution. While the immediate threat of disincorporation was mitigated, the persistence of the doctrinal ambiguity beyond the initial crisis (and the continuation of plural marriages in secret) suggests a shift from genuine coordination to a more extractive, performative maintenance of institutional power. The high theater ratio and continued extractiveness on members indicate a Mandatrophy signature, where the original problem (federal persecution) is 'dead' but the solution (ambiguity) persists as a mechanism of control.",
+    "kernel_context": "This constraint is the 'practice_doctrine_gap' reading of the 'marriage_commitment_reversal' kernel. It focuses on the structural ambiguity created when the institution publicly suspended plural marriage (practice) while preserving the underlying doctrinal principle (Section 132). Sibling readings include 'exogenous_override_reading' (emphasizing external coercion without internal doctrinal revision) and 'endogenous_reinterpretation_reading' (focusing on internal divine revelation reinterpreting God's will)."
   },
+  "omegas": [
+    {
+      "id": "doctrinal_integrity_vs_institutional_survival",
+      "question": "Was the preservation of Section 132 in doctrine a genuine commitment to principle, or a strategic maneuver to maintain institutional legitimacy and future options?",
+      "resolution_mechanism": "Analysis of internal communications and private statements from leadership during the period, compared to public declarations. Examination of subsequent doctrinal developments and their consistency with the preserved principle.",
+      "impact": "If a strategic maneuver, the extractiveness on members (cognitive dissonance) is higher, as it was knowingly imposed. If a genuine commitment, the constraint is a more tragic 'tangled rope' of necessity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the true intent behind preserving doctrine."
+    },
+    {
+      "id": "extent_of_secret_practice",
+      "question": "What was the true extent and nature of plural marriages continued in secret during the 1890-1904 period, and how widely was this known within the general membership?",
+      "resolution_mechanism": "Access to sealed historical archives, genealogical records, and personal diaries from the period. Oral histories from descendants of those involved.",
+      "impact": "A higher extent of secret practice, especially if widely known, would increase the measured extractiveness (theater ratio, cognitive dissonance) on the general membership and fundamentalist factions, confirming the performative nature of the public suspension.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Uncertainty about the scale of hidden practice and internal awareness."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (excommunication, social ostracization) or internalized (identity-locked members self-censoring dissent)?",
+      "resolution_mechanism": "Post-exit suppression trajectory of former members: if suppression persists as internalized patterns after leaving the institution, reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making the constraint more insidious.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
@@ -134,28 +200,28 @@
       "marriage_commitment_reversal__exogenous_override_reading",
       "marriage_commitment_reversal__endogenous_reinterpretation_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'marriage_commitment_reversal' kernel. This 'practice-doctrine gap' reading focuses on the period of ambiguity and internal tension, distinct from readings emphasizing external coercion or internal reinterpretation."
+    "dual_formulation_note": "This constraint is one reading of the 'marriage_commitment_reversal' kernel, focusing on the practice-doctrine gap. It is linked to sibling readings that emphasize external coercion or internal reinterpretation."
   },
   "cs_structure": {
-    "kernel_codification": "fixed_text",
+    "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "marriage_commitment_reversal__exogenous_override_reading",
+        "sibling_id": "exogenous_override_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "marriage_commitment_reversal__endogenous_reinterpretation_reading",
+        "sibling_id": "endogenous_reinterpretation_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "doctrinal_integrity_preserved_despite_practice_suspension",
+        "atom": "doctrinal_principle_persists_despite_practice",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "theological"
+        "grounding_type": "conventional"
       },
       {
         "atom": "institutional_survival_justifies_ambiguity",
@@ -164,23 +230,24 @@
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "unambiguous_doctrinal_practice",
+    "reference_frame": "doctrinal_purity_and_public_practice_alignment",
     "drift_state": {
-      "moment": "post_1890_manifesto",
+      "moment": "post_manifesto_era",
       "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": true
+      "magnitude": "severe",
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

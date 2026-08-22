@@ -39,9 +39,14 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +60,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -69,13 +75,18 @@
  *   domain: political_economy/federalism/resource_governance
  *
  * SUMMARY:
- *   This constraint describes the constitutional principle that provinces are
- *   creations of the federal constitution, possessing no inherent
- *   sovereignty, and that any provincial exit from the federation requires
- *   federal consent. This reading asserts federal supremacy in key areas like
- *   national unity, equalization, and climate policy, and views separatist
- *   movements as constitutionally invalid. It is one reading of the broader
- *   'provincial_sovereignty_boundary' kernel.
+ *   This constraint represents the 'constitutional subordination' reading of
+ *   provincial sovereignty within a federal system, where provinces are
+ *   considered creations of the federal constitution with no inherent
+ *   sovereignty. This reading asserts that provincial exit requires federal
+ *   consent and legitimizes federal authority over national policies like
+ *   equalization and climate. It is presented as a 'mountain' due to its
+ *   foundational constitutional nature, but with identifiable beneficiaries
+ *   (federal government, national unity advocates) and victims (separatist
+ *   provincial governments), triggering False Summit Mountain analysis. The
+ *   metrics reflect a low but present extractiveness (federal over provincial
+ *   autonomy) and high suppression (legal barriers to provincial
+ *   self-determination).
  *
  */
 
@@ -84,65 +95,128 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(provincial_sovereignty_boundary__constitutional_subordination, 0.3).
-domain_priors:suppression_score(provincial_sovereignty_boundary__constitutional_subordination, 0.6).
+domain_priors:base_extractiveness(provincial_sovereignty_boundary__constitutional_subordination, 0.25).
+domain_priors:suppression_score(provincial_sovereignty_boundary__constitutional_subordination, 0.7).
 domain_priors:theater_ratio(provincial_sovereignty_boundary__constitutional_subordination, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, extractiveness, 0.3).
-narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, suppression_requirement, 0.6).
+narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, extractiveness, 0.25).
+narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, accessibility_collapse, 0.7).
-narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, resistance, 0.4).
+narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, accessibility_collapse, 0.85).
+narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, resistance, 0.3).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(provincial_sovereignty_boundary__constitutional_subordination, tangled_rope).
+narrative_ontology:constraint_claim(provincial_sovereignty_boundary__constitutional_subordination, mountain).
 narrative_ontology:human_readable(provincial_sovereignty_boundary__constitutional_subordination, "Constitutional Subordination of Provinces").
 narrative_ontology:topic_domain(provincial_sovereignty_boundary__constitutional_subordination, "political_economy/federalism/resource_governance").
 
-domain_priors:requires_active_enforcement(provincial_sovereignty_boundary__constitutional_subordination).
+domain_priors:emerges_naturally(provincial_sovereignty_boundary__constitutional_subordination).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(provincial_sovereignty_boundary__constitutional_subordination, 'eefd0b0c-7675-4448-ac8e-6501f2d9bc05').
-narrative_ontology:cs_kernel_codification('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', fixed_text).
-narrative_ontology:cs_authority_grounding('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', lineage).
-narrative_ontology:cs_interpretation_layer_present('eefd0b0c-7675-4448-ac8e-6501f2d9bc05').
-narrative_ontology:cs_reading_relation('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', provincial_sovereignty_boundary__compact_federalism, forecloses).
-narrative_ontology:cs_reading_relation('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', provincial_sovereignty_boundary__resource_sovereignty_primacy, influences).
-narrative_ontology:cs_axiom('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', foundational, federal_constitution_supreme).
-narrative_ontology:cs_axiom_status(federal_constitution_supreme, holdable).
-narrative_ontology:cs_axiom_grounding('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', federal_constitution_supreme, conventional).
-narrative_ontology:cs_axiom('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', foundational, provinces_derive_power_from_federal_act).
-narrative_ontology:cs_axiom_status(provinces_derive_power_from_federal_act, holdable).
-narrative_ontology:cs_axiom_grounding('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', provinces_derive_power_from_federal_act, conventional).
-narrative_ontology:cs_reference_frame('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', original_confederation_act_intent).
-narrative_ontology:cs_drift_state('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', contemporary, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('eefd0b0c-7675-4448-ac8e-6501f2d9bc05', '').
+narrative_ontology:cs_story_uid(provincial_sovereignty_boundary__constitutional_subordination, 'fc6e5ebb-ee46-447c-b76d-6001ab5e9574').
+narrative_ontology:cs_kernel_codification('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', fixed_text).
+narrative_ontology:cs_authority_grounding('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', lineage).
+narrative_ontology:cs_interpretation_layer_present('fc6e5ebb-ee46-447c-b76d-6001ab5e9574').
+narrative_ontology:cs_reading_relation('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', provincial_sovereignty_boundary__compact_federalism, forecloses).
+narrative_ontology:cs_reading_relation('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', provincial_sovereignty_boundary__resource_sovereignty_primacy, influences).
+narrative_ontology:cs_axiom('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', foundational, federal_paramountcy_is_foundational).
+narrative_ontology:cs_axiom_status(federal_paramountcy_is_foundational, holdable).
+narrative_ontology:cs_axiom_grounding('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', federal_paramountcy_is_foundational, deontological).
+narrative_ontology:cs_axiom('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', foundational, provinces_are_creatures_of_constitution).
+narrative_ontology:cs_axiom_status(provinces_are_creatures_of_constitution, holdable).
+narrative_ontology:cs_axiom_grounding('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', provinces_are_creatures_of_constitution, conventional).
+narrative_ontology:cs_reference_frame('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', constitutional_act_1867_framework).
+narrative_ontology:cs_drift_state('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('fc6e5ebb-ee46-447c-b76d-6001ab5e9574', '').
 narrative_ontology:cs_kernel_id(provincial_sovereignty_boundary__constitutional_subordination, provincial_sovereignty_boundary).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(provincial_sovereignty_boundary__constitutional_subordination, federal_government).
 narrative_ontology:constraint_beneficiary(provincial_sovereignty_boundary__constitutional_subordination, national_unity_advocates).
-narrative_ontology:constraint_victim(provincial_sovereignty_boundary__constitutional_subordination, provincial_governments_seeking_autonomy).
-narrative_ontology:constraint_victim(provincial_sovereignty_boundary__constitutional_subordination, separatist_movements).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(provincial_sovereignty_boundary__constitutional_subordination, provincial_governments_aligned).
+narrative_ontology:constraint_victim(provincial_sovereignty_boundary__constitutional_subordination, provincial_governments_separatist).
+narrative_ontology:constraint_vindicates(provincial_sovereignty_boundary__constitutional_subordination, constitutional_supremacy_doctrine).
+narrative_ontology:constraint_vindicates(provincial_sovereignty_boundary__constitutional_subordination, federal_paramountcy_principle).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Interprets the constitution as establishing federal paramountcy, granting it ultimate authority over provincial actions, especially regarding secession and national policy areas like equalization and climate. Benefits from a stable, unified federation.
+narrative_ontology:constraint_stakeholder(provincial_sovereignty_boundary__constitutional_subordination, federal_government, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Seeks greater autonomy or outright secession, but is legally bound by the federal constitution. Bears the cost of being unable to unilaterally pursue its political agenda, facing federal vetoes and legal challenges. Identity-locked by the political mandate to represent a distinct national group.
+narrative_ontology:constraint_stakeholder(provincial_sovereignty_boundary__constitutional_subordination, provincial_governments_separatist, payer,
+    organized, generational, identity_locked, regional).
+
+% Operates within the federal framework, benefiting from federal transfers (equalization) and the stability of the national system. Accepts federal authority in areas like climate policy, seeing it as legitimate national coordination.
+narrative_ontology:constraint_stakeholder(provincial_sovereignty_boundary__constitutional_subordination, provincial_governments_aligned, beneficiary,
+    organized, biographical, constrained, regional).
+
+% Actively supports the constitutional subordination reading, viewing it as essential for national cohesion and the effective functioning of federal programs. Benefits from the perceived stability and indivisibility of the nation-state.
+narrative_ontology:constraint_stakeholder(provincial_sovereignty_boundary__constitutional_subordination, national_unity_advocates, beneficiary,
+    moderate, generational, mobile, national).
+
+% Analyzes the legal and political implications of federal-provincial relations, particularly in cases of secession attempts. Their analysis is detached from direct participation but influences international perceptions of the constraint's legitimacy.
+narrative_ontology:constraint_stakeholder(provincial_sovereignty_boundary__constitutional_subordination, international_observers, observer,
+    analytical, civilizational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a clear hierarchy of legal authority, ensuring a unified national legal framework and preventing unilateral provincial actions that could destabilize the federation or undermine national policy objectives.
+% TRANSFER_FUNCTION: Legitimizes the flow of authority and resources from provinces to the federal center in key policy areas, and prevents the transfer of territorial control or sovereign powers from the federal state to provinces.
+% ABSENT_VOICES: Indigenous nations, whose inherent sovereignty predates the federal constitution, are often excluded from the framing of provincial-federal relations as a purely internal matter. They would argue for a nation-to-nation relationship that transcends both provincial and federal constitutional claims.
+% DISAPPEARANCE_RATIONALE: If this constitutional principle vanished, the federal system would immediately fragment. Provinces would assert full sovereignty, potentially leading to multiple secessions, a collapse of national equalization programs, and a complete reordering of resource governance and climate policy. The nation-state as currently constituted would cease to exist.
+% FOUNDING_PROBLEM: The problem of creating a unified, stable nation-state from disparate colonial entities, ensuring national cohesion and preventing internal fragmentation while allowing for regional governance.
+% FOUNDING_PROBLEM_CORROBORATION: The federal government and national unity advocates attest the problem is live, citing ongoing separatist movements and the need for national policy coherence. While provincial governments aligned with federalism also acknowledge the need for stability, separatist provincial governments contest the federal framing of the founding problem, arguing for a different historical interpretation of confederation.
+narrative_ontology:disappearance_verdict(provincial_sovereignty_boundary__constitutional_subordination, world_rearranges).
+narrative_ontology:founding_problem_status(provincial_sovereignty_boundary__constitutional_subordination, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(provincial_sovereignty_boundary__constitutional_subordination, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(provincial_sovereignty_boundary__constitutional_subordination, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(provincial_sovereignty_boundary__constitutional_subordination, 'none', 1).
+narrative_ontology:epsilon_provenance(provincial_sovereignty_boundary__constitutional_subordination, 0.25, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(provincial_sovereignty_boundary__constitutional_subordination_tests).
+
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, ExtMetricName, E),
+    domain_priors:suppression_score(provincial_sovereignty_boundary__constitutional_subordination, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(provincial_sovereignty_boundary__constitutional_subordination),
+    narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(provincial_sovereignty_boundary__constitutional_subordination, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
 :- end_tests(provincial_sovereignty_boundary__constitutional_subordination_tests).
 
 /* ==========================================================================
@@ -151,13 +225,13 @@ narrative_ontology:story_seed(provincial_sovereignty_boundary__constitutional_su
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is a Tangled Rope because it provides a genuine coordination function (national unity, consistent federal policy) but also involves asymmetric extraction from provinces seeking greater autonomy. Extractiveness is moderate (0.3) as provinces do retain significant powers, but suppression is higher (0.6) due to the federal government's ultimate constitutional authority and the Supreme Court's role in enforcing this interpretation. The theater ratio is low (0.1), indicating that the constitutional framework is actively and genuinely enforced, not merely performed.
+ *   The low extractiveness (0.25) reflects that while provinces are constrained, the federal system also provides benefits (e.g., equalization payments, national stability). The high suppression (0.7) is due to the legal and political barriers to provincial secession or assertion of absolute sovereignty, which are actively maintained by federal institutions. The theater ratio is low (0.1) as the constitutional principle is genuinely operative, not merely performative. Accessibility collapse is high (0.85) because the constitutional framework severely limits alternatives to federal authority. Resistance is moderate (0.3) reflecting ongoing but largely unsuccessful provincial challenges.
  *
  * PERSPECTIVAL GAP:
- *   From the federal government's perspective, this is a necessary Rope for national governance. From the perspective of autonomy-seeking provinces, it is a Snare that limits their self-determination. The engine's classification will reflect this divergence based on the declared roles and attributes.
+ *   From the federal government's perspective, this is a foundational, unchangeable principle (a mountain). From the perspective of separatist provincial governments, it is a highly extractive snare that suppresses their legitimate aspirations. The engine's classification will highlight this divergence, showing how a claimed mountain operates as a snare for those it governs.
  *
  * DIRECTIONALITY LOGIC:
- *   The federal government and national unity advocates are beneficiaries, as the constraint empowers federal authority and maintains national cohesion. Provincial governments seeking autonomy and separatist movements are victims, as their aspirations for greater sovereignty or independence are directly curtailed by this constitutional reading. The Supreme Court acts as an agenda-setter, interpreting and enforcing the constraint.
+ *   The federal government and national unity advocates are beneficiaries, as this reading solidifies their power and vision for the nation. Separatist provincial governments are payers, as their aspirations for greater autonomy or independence are directly curtailed. Aligned provincial governments are also beneficiaries, as they operate within and benefit from the stable federal framework. International observers are analytical, assessing the system from an external perspective.
  *
  */
 
@@ -166,24 +240,24 @@ narrative_ontology:story_seed(provincial_sovereignty_boundary__constitutional_su
    ========================================================================== */
 
 omega_variable(
-    constitutional_interpretation_stability,
-    'To what extent is the ''constitutional subordination'' reading of provincial sovereignty stable, or is it subject to ongoing reinterpretation by the Supreme Court or political pressure?',
-    'Analysis of future Supreme Court rulings on federal-provincial jurisdiction and the outcomes of major federal-provincial disputes over policy areas like climate or resources.',
-    'If the reading proves unstable and shifts towards greater provincial autonomy, the constraint''s extractiveness and suppression would decrease, potentially reclassifying it towards a Rope or even a Scaffold (if temporary). If it hardens, it moves closer to a Snare.',
+    natural_law_vs_constructed_ambiguity,
+    'Is the constitutional subordination of provinces a genuine natural law of federalism, or a constructed constraint that benefits identifiable agents (the federal center)?',
+    'Comparative analysis of other federal systems and their constitutional evolution, examining whether similar structures emerge universally or are contingent on specific historical and political choices.',
+    'If genuinely natural, its classification as a mountain would be robust. If constructed, the presence of beneficiaries would strongly support reclassification as a tangled_rope or snare, highlighting its extractive nature.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(constitutional_interpretation_stability, empirical, 'Stability of constitutional interpretation regarding provincial sovereignty.').
+narrative_ontology:omega_variable(natural_law_vs_constructed_ambiguity, conceptual, 'Ambiguity between natural constitutional principle and political construct.').
 
 omega_variable(
-    federal_consent_legitimacy,
-    'Is federal consent for provincial exit a legitimate constitutional requirement, or is it a political assertion that could be challenged by a sufficiently strong provincial mandate?',
-    'A hypothetical provincial referendum on secession followed by a federal refusal to negotiate, leading to a constitutional crisis and potential international legal challenges.',
-    'If federal consent is deemed a political assertion rather than an absolute constitutional bar, the ''trapped'' exit option for separatist movements becomes ''constrained'', reducing the constraint''s effective suppression and extractiveness from that seat.',
+    secession_legitimacy_ambiguity,
+    'Does the constitutional requirement for federal consent to provincial exit genuinely reflect a foundational legal principle, or is it a political assertion designed to suppress legitimate self-determination?',
+    'International legal precedent on self-determination, and the outcome of any future referenda or negotiations on secession. If a clear majority in a province votes to secede and international law supports their right, the ''consent'' requirement''s legitimacy would be severely undermined.',
+    'If consent is deemed a political assertion, the suppression metric would be re-evaluated as more coercive, and the constraint''s classification for separatist provinces would shift more strongly towards snare.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(federal_consent_legitimacy, conceptual, 'Legitimacy of federal consent as a barrier to provincial exit.').
+narrative_ontology:omega_variable(secession_legitimacy_ambiguity, preference, 'Ambiguity over the legitimacy of federal veto on secession.').
 
 
 /* ==========================================================================
@@ -199,20 +273,20 @@ narrative_ontology:interval(provincial_sovereignty_boundary__constitutional_subo
 % Theater ratio over time
 narrative_ontology:measurement(prov_tr_t1867, provincial_sovereignty_boundary__constitutional_subordination, theater_ratio, 1867, 0.05).
 narrative_ontology:measurement(prov_tr_t1920, provincial_sovereignty_boundary__constitutional_subordination, theater_ratio, 1920, 0.08).
-narrative_ontology:measurement(prov_tr_t1982, provincial_sovereignty_boundary__constitutional_subordination, theater_ratio, 1982, 0.15).
+narrative_ontology:measurement(prov_tr_t1982, provincial_sovereignty_boundary__constitutional_subordination, theater_ratio, 1982, 0.1).
 narrative_ontology:measurement(prov_tr_t2024, provincial_sovereignty_boundary__constitutional_subordination, theater_ratio, 2024, 0.1).
 
 % Extraction over time
 narrative_ontology:measurement(prov_be_t1867, provincial_sovereignty_boundary__constitutional_subordination, base_extractiveness, 1867, 0.2).
-narrative_ontology:measurement(prov_be_t1920, provincial_sovereignty_boundary__constitutional_subordination, base_extractiveness, 1920, 0.25).
-narrative_ontology:measurement(prov_be_t1982, provincial_sovereignty_boundary__constitutional_subordination, base_extractiveness, 1982, 0.35).
-narrative_ontology:measurement(prov_be_t2024, provincial_sovereignty_boundary__constitutional_subordination, base_extractiveness, 2024, 0.3).
+narrative_ontology:measurement(prov_be_t1920, provincial_sovereignty_boundary__constitutional_subordination, base_extractiveness, 1920, 0.22).
+narrative_ontology:measurement(prov_be_t1982, provincial_sovereignty_boundary__constitutional_subordination, base_extractiveness, 1982, 0.25).
+narrative_ontology:measurement(prov_be_t2024, provincial_sovereignty_boundary__constitutional_subordination, base_extractiveness, 2024, 0.25).
 
 % Suppression requirement over time
-narrative_ontology:measurement(prov_su_t1867, provincial_sovereignty_boundary__constitutional_subordination, suppression_requirement, 1867, 0.4).
-narrative_ontology:measurement(prov_su_t1920, provincial_sovereignty_boundary__constitutional_subordination, suppression_requirement, 1920, 0.5).
+narrative_ontology:measurement(prov_su_t1867, provincial_sovereignty_boundary__constitutional_subordination, suppression_requirement, 1867, 0.6).
+narrative_ontology:measurement(prov_su_t1920, provincial_sovereignty_boundary__constitutional_subordination, suppression_requirement, 1920, 0.65).
 narrative_ontology:measurement(prov_su_t1982, provincial_sovereignty_boundary__constitutional_subordination, suppression_requirement, 1982, 0.7).
-narrative_ontology:measurement(prov_su_t2024, provincial_sovereignty_boundary__constitutional_subordination, suppression_requirement, 2024, 0.6).
+narrative_ontology:measurement(prov_su_t2024, provincial_sovereignty_boundary__constitutional_subordination, suppression_requirement, 2024, 0.7).
 
 
 /* ==========================================================================
@@ -220,11 +294,10 @@ narrative_ontology:measurement(prov_su_t2024, provincial_sovereignty_boundary__c
    ========================================================================== */
 
 narrative_ontology:coordination_type(provincial_sovereignty_boundary__constitutional_subordination, enforcement_mechanism).
-narrative_ontology:affects_constraint(provincial_sovereignty_boundary__constitutional_subordination, federal_equalization_formula).
+narrative_ontology:affects_constraint(provincial_sovereignty_boundary__constitutional_subordination, provincial_sovereignty_boundary__compact_federalism).
+narrative_ontology:affects_constraint(provincial_sovereignty_boundary__constitutional_subordination, provincial_sovereignty_boundary__resource_sovereignty_primacy).
+narrative_ontology:affects_constraint(provincial_sovereignty_boundary__constitutional_subordination, federal_equalization_payments).
 narrative_ontology:affects_constraint(provincial_sovereignty_boundary__constitutional_subordination, national_climate_policy_framework).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'provincial_sovereignty_boundary' kernel. It emphasizes federal supremacy and constitutional subordination of provinces, contrasting with 'compact_federalism' and 'resource_sovereignty_primacy' readings.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

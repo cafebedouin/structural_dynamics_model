@@ -4,102 +4,196 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "a0ce8300-3bc4-4ed6-984b-f2e2098a292a"
+    "story_uid": "67837295-ad08-4788-ba30-625282ee0337"
   },
   "base_properties": {
-    "extractiveness": 0.2,
-    "suppression": 0.4,
+    "extractiveness": 0.15,
+    "suppression": 0.6,
     "theater_ratio": 0.1,
     "accessibility_collapse": 0.8,
     "resistance": 0.3,
     "claimed_type": "mountain",
-    "human_readable": "UNCLOS Strict Geographic Reading of Island Status",
+    "human_readable": "UNCLOS Strict Geographic Definition of Island Sovereignty",
     "topic_domain": "international_law/maritime_governance/geopolitical_strategy",
-    "requires_active_enforcement": false,
+    "requires_active_enforcement": true,
     "emerges_naturally": true,
     "beneficiaries": [
       "naval_powers",
-      "non_claimant_states"
+      "non_claimant_states",
+      "international_shipping"
     ],
     "victims": [
       "expansionist_coastal_states"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "natural_vs_constructed_island_status",
-      "question": "Is the 'natural feature' criterion for island status a genuine natural law, or a constructed legal interpretation that benefits identifiable agents?",
-      "resolution_mechanism": "Analysis of historical negotiations and state practice: if the criterion was primarily a negotiated compromise rather than an attempt to codify a pre-existing physical reality, it leans towards constructed.",
-      "impact": "If constructed, the constraint's classification shifts from Mountain to a form of Rope or Tangled Rope, reflecting its negotiated rather than inherent nature, and the beneficiaries' position becomes more salient.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity between natural law and legal construct for island status."
+      "name": "naval_powers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from clear, limited territorial claims, ensuring freedom of navigation in international waters and minimizing potential for conflict over artificially extended zones. They uphold this reading to maintain global maritime access."
     },
     {
-      "id": "reading_impact_on_maritime_claims",
-      "question": "How would the adoption of the 'expansive_construction_reading' or 'hybrid_effective_control_reading' alter the global distribution of maritime claims and resource access?",
-      "resolution_mechanism": "Geospatial modeling of potential new maritime zones under alternative readings, combined with economic analysis of affected resource access (e.g., fishing grounds, mineral deposits).",
-      "impact": "Alternative readings would significantly expand the maritime claims of states engaged in artificial island construction, leading to increased extraction from shared ocean resources and potentially escalating geopolitical tensions. This reading prevents such expansion.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Impact of alternative island status readings on maritime claims."
+      "name": "non_claimant_states",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from the stability and predictability of maritime boundaries, avoiding arbitrary expansion of territorial claims by other states. They support this reading to protect their own economic and security interests."
+    },
+    {
+      "name": "international_shipping",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Relies on clearly defined international waters for efficient transit. This reading prevents the proliferation of new territorial seas and EEZs that could impede navigation and increase costs."
+    },
+    {
+      "name": "expansionist_coastal_states",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bear the cost of this strict interpretation as it prevents them from extending their maritime claims through artificial island construction. They seek alternative readings to justify their geopolitical ambitions and resource control."
+    },
+    {
+      "name": "international_tribunals",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Interpret and apply UNCLOS provisions, including the definition of an island. Their rulings reinforce or challenge specific readings, shaping the practical application of maritime law."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a clear, universally recognized definition for what constitutes an island capable of generating maritime zones, thereby coordinating expectations and reducing disputes over sovereignty and resource rights.",
+    "transfer_function": "Limits the transfer of potential resource rights and sovereign control over vast maritime areas from the global commons to individual coastal states, by restricting the criteria for generating such claims.",
+    "absent_voices": "States with significant artificial island construction programs, particularly those in contested regions, are present but actively seek to undermine or reinterpret this strict reading. Their 'voice' is one of active contestation rather than absence.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this strict definition vanished, there would be immediate and widespread claims of territorial seas and EEZs around artificial structures, leading to significant international disputes, conflicts over resource exploitation, and disruption of freedom of navigation. The entire framework of maritime law would need to be renegotiated.",
+    "founding_problem": "Before UNCLOS, there was ambiguity and conflicting claims regarding maritime boundaries, leading to disputes over resource exploitation and navigation rights. A clear, universally accepted definition of an island was needed to stabilize international relations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International legal scholars, UN bodies, and the majority of states (especially non-claimant and naval powers) corroborate that the problem of maritime boundary disputes remains live, and the strict definition is crucial for maintaining order. Expansionist states contest its continued relevance in light of technological advancements."
+  },
+  "interval": {
+    "start": 1982,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1982,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.15
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.18
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.2
+      "metric": "suppression_requirement",
+      "time_point": 1982,
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.35
+      "time_point": 1995,
+      "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.38
+      "time_point": 2008,
+      "value": 0.58
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.4
+      "time_point": 2024,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1982,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'strict geographic reading' of UNCLOS Article 121, which dictates that only naturally formed land features above water at high tide qualify as islands capable of generating a territorial sea and Exclusive Economic Zone (EEZ). Artificial constructions, regardless of their size or permanence, are considered installations and do not alter the legal status of maritime zones. This reading is crucial in international law for preventing states from unilaterally expanding their maritime claims through artificial means, particularly in contested areas.",
-    "logic_rationale": "The constraint is claimed as a Mountain because it asserts a fundamental, 'natural' distinction between land features based on their formation and permanence, which is then codified into law. Its extractiveness is low (0.2) as it primarily prevents extraction by others rather than performing it directly. Suppression (0.4) reflects the diplomatic and legal pressure required to uphold this interpretation against states attempting to create artificial islands. Theater ratio is low (0.1) as the distinction is largely functional. Accessibility collapse is high (0.8) because, from this reading's perspective, there are no legitimate alternatives to natural formation for island status. Resistance (0.3) comes from states that challenge this interpretation.",
-    "perspectival_gap": "Naval powers and non-claimant states experience this as a Mountain, as it preserves freedom of navigation and prevents unilateral enclosure of the high seas. Expansionist coastal states, however, experience it as a Snare, as it actively suppresses their ability to extend sovereignty through artificial means. The engine's per-seat classification will capture this divergence.",
-    "directionality_logic": "Naval powers and non-claimant states are beneficiaries (d near 0.0) as this reading maintains a stable, predictable maritime order and preserves access to international waters. Expansionist coastal states are victims (d near 1.0) as their efforts to create new maritime zones are directly thwarted. The UNCLOS framework itself, as an international legal regime, acts as an agenda-setter, codifying and enforcing this distinction.",
-    "mandatrophy_analysis": "This constraint prevents mandatrophy by ensuring that the legal definition of an island remains tied to a stable, natural criterion, rather than allowing it to drift into a justification for artificial expansion. If the 'natural feature' criterion were to atrophy, the constraint would cease to be a Mountain and would likely become a Snare for the international community, as states would engage in a race to construct features to claim territory, leading to increased extraction from shared resources.",
-    "kernel_context": "This constraint is the 'strict_geographic_reading' of the 'unclos_maritime_sovereignty' kernel. It asserts that only naturally formed features above water at high tide qualify as islands for generating maritime zones. This contrasts with the 'expansive_construction_reading' which suggests artificial construction can generate de facto territorial waters, and the 'hybrid_effective_control_reading' which allows for limited zones around artificial features that might mature into claims."
+    "narrative_context": "This constraint represents the strict geographic reading of UNCLOS Article 121(3), which dictates that only naturally formed features above water at high tide qualify as islands generating territorial sea and EEZ. Artificial construction does not alter legal status. This reading is foundational to maintaining freedom of navigation and limiting unilateral expansion of maritime claims, particularly in contested regions. It is a 'mountain' in the sense that it is presented as an unchangeable principle of international law, though its application is actively contested by states seeking to expand their maritime zones through artificial means.",
+    "logic_rationale": "The extractiveness is low (0.15) because this reading primarily prevents extraction by limiting claims, rather than actively extracting. Suppression is moderate (0.6) as it requires ongoing diplomatic and legal pressure to prevent states from asserting claims based on artificial features. Theater ratio is low (0.1) because the principle is genuinely applied, though some states engage in performative construction. Accessibility collapse is high (0.8) as the legal alternatives for generating maritime zones are severely limited by this definition. Resistance is moderate (0.3) from states that wish to expand their claims.",
+    "directionality_logic": "Naval powers, non-claimant states, and international shipping are beneficiaries as this reading preserves their access to international waters and prevents arbitrary expansion of claims. Expansionist coastal states are victims as their ability to extend sovereignty through artificial means is curtailed. International tribunals act as agenda-setters, interpreting and enforcing this reading.",
+    "perspectival_gap": "From the perspective of naval powers and non-claimant states, this is a clear, stable rule essential for global order. From the perspective of expansionist coastal states, it is an unfair restriction on their sovereign rights and development potential, designed to maintain the status quo power balance. The engine will compute different classifications for these seats based on their declared structural positions.",
+    "kernel_context": "This constraint is the 'strict_geographic_reading' of the 'unclos_maritime_sovereignty' kernel. It asserts that only natural features generate full maritime zones. Sibling readings include the 'expansive_construction_reading' (artificial construction generates de facto zones) and the 'hybrid_effective_control_reading' (artificial features can mature into claims through prolonged control)."
   },
+  "omegas": [
+    {
+      "id": "natural_vs_artificial_ambiguity",
+      "question": "Is the distinction between 'naturally formed' and 'artificial construction' sufficiently clear and robust to prevent future legal challenges, especially with advancing engineering capabilities?",
+      "resolution_mechanism": "International legal precedent from future cases involving novel construction techniques, or a new UNCLOS amendment clarifying the definition.",
+      "impact": "If the distinction becomes blurred, the constraint's suppressive force could weaken, leading to increased extractiveness as states exploit ambiguities. This could shift the classification towards a Tangled Rope or Snare for the international community.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the core definitional criterion of the constraint."
+    },
+    {
+      "id": "enforcement_capacity_drift",
+      "question": "Will the international community's capacity and willingness to enforce this strict reading against powerful, expansionist states remain sufficient over time?",
+      "resolution_mechanism": "Observation of future international tribunal rulings, diplomatic responses to new claims, and naval freedom of navigation operations.",
+      "impact": "If enforcement capacity erodes, the constraint's effective suppression will decrease, allowing expansionist states to de facto establish claims, shifting the constraint towards a Snare for the international community and a Rope for the expansionist states.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The persistence of the constraint depends on active enforcement against powerful actors."
+    },
+    {
+      "id": "false_summit_naturalness",
+      "question": "Is this constraint a genuine natural law (a 'mountain' of geography and international consensus), or a constructed constraint that benefits identifiable agents (naval powers, non-claimant states) by limiting others' claims?",
+      "resolution_mechanism": "Analysis of historical negotiations and state practice: if the 'naturalness' was primarily a rhetorical device to secure specific geopolitical outcomes, it leans towards constructed.",
+      "impact": "If primarily constructed, the 'mountain' claim is a false summit, and the constraint would reclassify to a Tangled Rope or Snare, reflecting the underlying power dynamics and extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between natural law and constructed benefit for specific actors."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
       "unclos_maritime_sovereignty__expansive_construction_reading",
-      "unclos_maritime_sovereignty__hybrid_effective_control_reading",
-      "freedom_of_navigation_doctrine",
-      "exclusive_economic_zone_regime"
+      "unclos_maritime_sovereignty__hybrid_effective_control_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the UNCLOS maritime sovereignty kernel, specifically concerning island status. Its strict interpretation directly influences the viability and legitimacy of claims made under alternative, more expansive readings."
+    "dual_formulation_note": "This constraint is one of three readings of the UNCLOS maritime sovereignty kernel. This 'strict_geographic_reading' emphasizes natural features, influencing and coexisting with other readings that allow for more expansive claims based on artificial construction or effective control."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -107,45 +201,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "unclos_maritime_sovereignty__expansive_construction_reading",
-        "relation": "forecloses"
+        "sibling_id": "expansive_construction_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "unclos_maritime_sovereignty__hybrid_effective_control_reading",
-        "relation": "forecloses"
+        "sibling_id": "hybrid_effective_control_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "natural_formation_is_prerequisite_for_sovereignty",
+        "atom": "natural_formation_is_sole_basis_for_sovereignty",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "artificial_structures_are_installations_not_territory",
-        "role": "foundational",
+        "atom": "artificial_structures_are_installations_not_islands",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
     "reference_frame": "unclos_original_intent_1982",
     "drift_state": {
-      "moment": "contemporary_artificial_island_era",
-      "direction": "practice_drift",
+      "moment": "contemporary_geopolitical_contest",
+      "direction": "repudiation_pressure",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

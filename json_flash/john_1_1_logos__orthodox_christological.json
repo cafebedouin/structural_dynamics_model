@@ -4,16 +4,16 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "6f49e0d7-8286-4b06-ba7b-a16f32471f54"
+    "story_uid": "00e54a8a-5aff-4e65-904f-579857cca630"
   },
   "base_properties": {
     "extractiveness": 0.65,
-    "suppression": 0.75,
+    "suppression": 0.78,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.8,
+    "accessibility_collapse": 0.7,
     "resistance": 0.4,
     "claimed_type": "tangled_rope",
-    "human_readable": "Orthodox Christological Doctrine of the Logos (John 1:1)",
+    "human_readable": "Orthodox Christological Interpretation of John 1:1-14",
     "topic_domain": "theology/biblical_hermeneutics/christology",
     "requires_active_enforcement": true,
     "beneficiaries": [
@@ -25,35 +25,96 @@
       "subordinationist_theologians"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "orthodox_clergy",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "As interpreters and enforcers of Trinitarian doctrine, they define and uphold the orthodox understanding of Logos, deriving their authority and the sacramental validity of their churches from this interpretation. Their careers and spiritual authority are deeply intertwined with this theological framework."
+    },
+    {
+      "name": "trinitarian_churches",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from a unified theological identity, a clear basis for sacramental practice, and a defined boundary against perceived heresy. This interpretation provides the foundation for their creeds, liturgies, and claims of apostolic succession."
+    },
+    {
+      "name": "non_trinitarian_groups",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are excluded from mainstream Christian communion, often anathematized, and face social and theological marginalization. Their interpretations are deemed heretical, limiting their access to theological discourse and institutional recognition within broader Christianity."
+    },
+    {
+      "name": "subordinationist_theologians",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face academic and ecclesiastical censure for their views. While they may publish and teach, their work is often dismissed or actively opposed by orthodox institutions, impacting their career progression and influence within theological circles."
+    },
+    {
+      "name": "lay_adherents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Receive a clear, consistent theological framework that provides meaning, community, and a path to salvation. Their spiritual identity is often deeply tied to this orthodox understanding, making alternative interpretations difficult to accept."
+    },
+    {
+      "name": "biblical_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the text of John 1:1-14 and its historical interpretations, often engaging with the theological implications without necessarily endorsing or enforcing a particular dogmatic position. They can identify textual ambiguities or historical developments that challenge or support the orthodox reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared, authoritative understanding of Christ's divine nature and role, coordinating theological discourse, liturgical practice, and the boundaries of Christian identity across diverse communities.",
+    "transfer_function": "Transfers theological authority and legitimacy to Trinitarian institutions and clergy, while transferring exclusion and marginalization to non-Trinitarian groups and dissenting theologians.",
+    "absent_voices": "Early Christian groups with non-Trinitarian Christologies (e.g., Ebionites, Adoptionists, some Gnostic sects) and contemporary Unitarian or Arian-leaning communities are excluded. They would argue for alternative interpretations of John 1:1-14 that do not necessitate ontological co-equality or a hypostatic Trinity, challenging the historical development and enforcement of orthodoxy.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this orthodox interpretation vanished, the theological foundations of most major Christian denominations would collapse. Sacramental theology, Christology, and soteriology would require radical redefinition, leading to widespread doctrinal fragmentation and a complete reorganization of Christian institutional structures.",
+    "founding_problem": "The early Christian church faced diverse interpretations of Jesus's nature and relationship to God, leading to doctrinal disputes and the need to define a coherent, authoritative Christology to maintain unity and identity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Church councils (e.g., Nicaea, Chalcedon) and patristic writings attest to the historical problem of Christological diversity. Contemporary theological debates and the continued existence of non-Trinitarian movements corroborate that the problem of defining Christ's nature remains live, requiring ongoing defense of the orthodox position by Trinitarian institutions."
+  },
   "interval": {
-    "start": 325,
+    "start": 0,
     "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 325,
+      "time_point": 0,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 451,
+      "time_point": 325,
       "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1054,
-      "value": 0.62
+      "time_point": 451,
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1517,
-      "value": 0.63
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1965,
-      "value": 0.64
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
@@ -62,57 +123,47 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 325,
-      "value": 0.65
+      "time_point": 0,
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 451,
+      "time_point": 325,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1054,
-      "value": 0.72
+      "time_point": 451,
+      "value": 0.78
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1517,
-      "value": 0.73
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1965,
-      "value": 0.74
+      "value": 0.78
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.75
+      "value": 0.78
     },
     {
       "metric": "theater_ratio",
-      "time_point": 325,
+      "time_point": 0,
       "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 451,
+      "time_point": 325,
       "value": 0.08
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1054,
-      "value": 0.09
+      "time_point": 451,
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
       "time_point": 1517,
-      "value": 0.09
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1965,
       "value": 0.1
     },
     {
@@ -122,52 +173,49 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint defines the orthodox Christological understanding of the Logos from John 1:1, asserting its ontological divinity, preexistence, and identity with the second person of the Trinity, culminating in the incarnation (John 1:14). This reading is foundational for Trinitarian Christianity, establishing strict boundaries for what constitutes 'orthodox' belief and practice. It functions as a Tangled Rope, providing theological coordination for adherents while actively extracting from and suppressing alternative interpretations.",
-    "logic_rationale": "Extractiveness is high (0.65) due to the significant costs imposed on those who deviate from this doctrine (excommunication, marginalization). Suppression is also high (0.75) because the constraint is actively enforced through ecclesiastical authority, theological education, and social pressure, with limited exit options for those whose identity is tied to the tradition. The theater ratio is low (0.10) as the doctrine's enforcement is largely genuine and functional in maintaining theological coherence, not merely performative. Accessibility collapse is high (0.80) because within the orthodox framework, alternative Christologies are largely foreclosed as viable options.",
-    "directionality_logic": "Orthodox clergy and Trinitarian churches are clear beneficiaries, as the doctrine underpins their authority and identity. Non-Trinitarian groups and subordinationist theologians are victims, bearing the costs of exclusion and suppression. Lay adherents are beneficiaries, gaining a coherent theological framework, but also bear indirect costs by being constrained within this specific interpretive tradition. Biblical scholars outside orthodoxy act as observers, analyzing the dynamics without being subject to the same enforcement.",
-    "perspectival_gap": "From the perspective of orthodox clergy, this doctrine is a necessary Rope, coordinating essential truths and preserving the integrity of the faith. From the perspective of non-Trinitarian groups, it is a Snare, coercively enforcing a specific interpretation to maintain institutional power and exclude dissent. The engine's classification as Tangled Rope reflects this hybrid nature.",
-    "kernel_context": "This constraint instantiates the 'orthodox_christological' reading of the 'john_1_1_logos' kernel. This reading asserts the full divinity and preexistence of the Logos as the second person of the Trinity, incarnate in Jesus. Sibling readings include 'subordinationist' (Logos as a created or subordinate divine agent) and 'non_incarnational_monotheist' (Logos as divine wisdom or speech, not a distinct hypostasis)."
+    "narrative_context": "This constraint represents the orthodox Christological interpretation of John 1:1-14, asserting the ontological divinity, preexistence, and Trinitarian identity of the Logos, and its incarnation as God becoming flesh. This reading is foundational for most mainstream Christian denominations, defining the boundaries of acceptable belief and practice. It functions as a Tangled Rope because it coordinates a shared theological understanding while simultaneously extracting from and suppressing alternative Christologies.",
+    "logic_rationale": "Extractiveness is high (0.65) due to the significant costs imposed on those who deviate from this interpretation, including exclusion from communion, academic marginalization, and anathematization. Suppression is very high (0.78) because the institutional power of Trinitarian churches actively enforces this interpretation, suppressing alternative readings through doctrinal pronouncements, historical persecution, and ongoing theological gatekeeping. Theater ratio is low (0.1) as the constraint's primary function remains genuinely theological and identity-defining, with minimal performative maintenance. The measurements track the hardening of this interpretation, particularly around the Councils of Nicaea (325 CE) and Chalcedon (451 CE), which formalized and enforced the orthodox position.",
+    "directionality_logic": "Orthodox clergy and Trinitarian churches are clear beneficiaries and agenda-setters, as their authority and institutional identity are derived from this interpretation. Non-Trinitarian groups and subordinationist theologians are direct victims, bearing the costs of exclusion and suppression. Lay adherents are beneficiaries of a coherent theological system but also bear indirect costs through the suppression of alternative spiritual paths. Biblical scholars act as observers, analyzing the text and its interpretations without necessarily being subject to the same enforcement mechanisms.",
+    "perspectival_gap": "From the perspective of orthodox clergy, this interpretation is a necessary Rope, coordinating fundamental truths of faith. From the perspective of non-Trinitarian groups, it is a Snare, coercively enforced to maintain institutional power and exclude dissenting voices. The engine's classification will reflect this divergence based on the structural positions of the stakeholders."
   },
   "omegas": [
     {
       "id": "historical_contingency_vs_divine_truth",
-      "question": "To what extent is the 'orthodox_christological' reading a historically contingent theological construct, versus a direct articulation of immutable divine truth?",
-      "resolution_mechanism": "Comparative historical-critical analysis of early Christian texts and theological development, assessing the influence of philosophical categories (e.g., Hellenistic metaphysics) on doctrinal formulation.",
-      "impact": "If highly contingent, the constraint's 'naturalness' claim (implied by its theological authority) weakens, potentially reclassifying it closer to a Snare. If immutable, its Mountain-like aspects (unchangeable truth) are reinforced, though its enforcement remains extractive.",
+      "question": "To what extent is the orthodox Christological interpretation a historically contingent theological development, versus a direct articulation of immutable divine truth?",
+      "resolution_mechanism": "Comparative historical-theological analysis of early Christian texts and councils, alongside philosophical inquiry into the nature of theological truth claims.",
+      "impact": "If highly contingent, the constraint's 'naturalness' (emerges_naturally) would be challenged, potentially reclassifying it as a more constructed and extractive constraint. If immutable, its claim to Mountain-like authority would be strengthened.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Ambiguity between historical development and timeless truth in the Logos doctrine."
+      "description": "Ambiguity between historical development and divine revelation in Christological doctrine."
     },
     {
-      "id": "suppression_internalized_vs_structural",
-      "question": "For lay adherents, is the suppression of alternative Christologies primarily structural (ecclesiastical authority, social pressure) or internalized (self-censorship, identity fusion with orthodoxy)?",
-      "resolution_mechanism": "Sociological studies of ex-adherents' post-exit theological trajectories: if suppression persists after leaving the orthodox institution, it indicates internalized mechanisms.",
-      "impact": "If internalized, the effective suppression for identity-locked adherents is higher than the structural measure suggests, as they carry the constraint's boundaries with them even in the absence of direct external enforcement.",
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression primarily structural (institutional exclusion, anathematization) or internalized (identity-locked adherence to orthodox belief)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if individuals who leave orthodox traditions continue to self-censor or experience internal conflict regarding alternative Christologies, it suggests internalized suppression. If they freely adopt new beliefs without internal friction, it points to purely structural suppression.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as individuals carry the suppression with them even after leaving the formal institutional structure. This would amplify the perceived extractiveness for those identity-locked within the system.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism for theological dissent."
+      "description": "Structural vs. internalized suppression mechanism in theological adherence."
     },
     {
-      "id": "soteriological_exclusivity_justification",
-      "question": "Is the exclusivist soteriology (salvation only through this Christological understanding) a necessary consequence of the Logos doctrine, or an additional, separable constraint imposed by the agenda-setters?",
-      "resolution_mechanism": "Theological analysis of the logical entailments of the Logos doctrine itself, independent of ecclesiastical pronouncements. Examination of historical instances where the Logos doctrine was held without strict soteriological exclusivity.",
-      "impact": "If separable, the 'exclusivist soteriology' component could be modeled as a distinct, more extractive constraint linked to this one, increasing the overall perceived extraction from non-Trinitarian groups.",
-      "confidence": "low",
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine reading of the John 1:1-14 kernel, or has it become a distinct, self-referential theological system that merely uses the text as a proof-text?",
+      "resolution_mechanism": "Textual analysis comparing the semantic range of 'Logos' in the Johannine corpus with the full dogmatic content of orthodox Christology. If the dogmatic claims significantly exceed or diverge from the textual basis, it suggests a shift.",
+      "impact": "If it has become self-referential, the constraint's authority grounding might shift from 'lineage' to 'extraction' (from the text itself), as the system extracts legitimacy from the text while imposing its own interpretive framework. This would increase its computed extractiveness.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether soteriological exclusivity is inherent to the Logos doctrine or an added layer of extraction."
+      "description": "Whether the reading remains text-grounded or has become a self-referential system."
     }
   ],
   "boltzmann": {
-    "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.08
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "nicene_creed_authority",
       "sacramental_validity_doctrine",
-      "soteriological_exclusivity_doctrine"
+      "trinitarian_creedal_statements"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'john_1_1_logos' kernel. Other readings (subordinationist, non_incarnational_monotheist) are modeled as separate constraints due to their distinct structural properties and ε values."
+    "dual_formulation_note": "This constraint is one reading of the 'john_1_1_logos' kernel, alongside subordinationist and non_incarnational_monotheist readings. Each reading instantiates a distinct constraint with its own structural properties."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -175,45 +223,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "john_1_1_logos__subordinationist",
+        "sibling_id": "subordinationist",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "john_1_1_logos__non_incarnational_monotheist",
+        "sibling_id": "non_incarnational_monotheist",
         "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "logos_coeternal_consubstantial_with_father",
+        "atom": "logos_ontologically_divine",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "incarnation_is_god_becoming_flesh",
+        "atom": "logos_coeternal_consubstantial",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "nicene_chalcedonian_orthodoxy",
+    "reference_frame": "apostolic_tradition_divine_logos",
     "drift_state": {
-      "moment": "contemporary_pluralistic_theology",
-      "direction": "authority_erosion",
+      "moment": "contemporary_theological_pluralism",
+      "direction": "repudiation_pressure",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

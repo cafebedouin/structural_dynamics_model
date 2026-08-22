@@ -4,194 +4,273 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c36def86-a5e1-4dcd-83d8-17c536b4040e"
+    "story_uid": "d488bee7-629e-4509-86f3-bb4d4508c8c4"
   },
   "base_properties": {
-    "extractiveness": 0.3,
-    "suppression": 0.4,
+    "extractiveness": 0.65,
+    "suppression": 0.7,
     "theater_ratio": 0.85,
-    "accessibility_collapse": 0.2,
-    "resistance": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.2,
     "claimed_type": "piton",
-    "human_readable": "Preparedness Drills as Memorial Ritual (Husk Reading)",
+    "human_readable": "Preparedness Transmission (Husk Reading): Ritualized Drills and Inspections",
     "topic_domain": "disaster_risk_management/institutional_memory/civil_defense",
     "requires_active_enforcement": true,
-    "beneficiaries": [],
+    "beneficiaries": [
+      "civil_defense_bureaucracy",
+      "local_emergency_managers"
+    ],
     "victims": [
-      "future_disaster_victims",
-      "taxpayers"
+      "frontline_responders",
+      "vulnerable_communities"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "civil_defense_bureaucracy",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Administers and mandates the drills and inspections, ensuring formal compliance with protocols. Benefits from the appearance of preparedness and continued funding, even as the operational efficacy declines. Its identity is fused with maintaining the 'preparedness' facade."
+    },
+    {
+      "name": "local_emergency_managers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Implement the mandated drills and inspections, often with limited resources. They benefit from clear directives and the ability to demonstrate compliance to higher authorities, avoiding scrutiny, even if they privately recognize the drills' limitations. Their careers depend on maintaining the status quo."
+    },
+    {
+      "name": "frontline_responders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Participate in drills that often feel performative and do not adequately prepare them for novel or complex disaster scenarios. They bear the cost of wasted time and the psychological burden of knowing their training is insufficient, but cannot opt out due to professional obligations."
+    },
+    {
+      "name": "vulnerable_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are the ultimate victims of hollowed-out preparedness. They rely on the civil defense system for safety and evacuation, but receive inadequate protection when actual disasters exceed the scope of ritualized drills. They have no direct influence over the design or efficacy of preparedness protocols."
+    },
+    {
+      "name": "disaster_risk_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Observe and analyze the gap between formal preparedness activities and actual adaptive capacity. They identify the ritualistic nature of drills and the decline in operational knowledge, often publishing reports that are ignored by the bureaucracy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the formal schedule and execution of disaster preparedness drills and inspections across various agencies and jurisdictions, ensuring a baseline level of activity and reporting.",
+    "transfer_function": "Transfers resources (time, budget, personnel) into the performance of ritualized drills and inspections, generating reports and compliance metrics that flow upwards to the civil defense bureaucracy, while transferring a false sense of security to vulnerable communities.",
+    "absent_voices": "Independent disaster preparedness experts and community advocates who would demand adaptive, scenario-based training and transparent assessments of actual operational readiness, rather than mere compliance with outdated protocols. Their voices are often dismissed as 'alarmist' or 'unrealistic' by the entrenched bureaucracy.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mandate for these ritualized drills and inspections vanished, the civil defense bureaucracy would lose its primary justification for funding and its institutional identity. Local emergency managers would face a vacuum of directives, and the illusion of preparedness would collapse, forcing a reckoning with actual capabilities and potentially leading to a more adaptive, but initially chaotic, reorganization of disaster response.",
+    "founding_problem": "The need to systematically prepare for and respond to natural and man-made disasters, ensuring public safety through coordinated action and regularly validated capabilities.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The civil defense bureaucracy claims the problem is live, citing ongoing threats. Disaster risk analysts and frontline responders attest that while the *threat* is live, the *founding problem of effective preparedness* is no longer being solved by the current ritualized approach; independent post-disaster reviews and academic studies corroborate the hollowing out of operational knowledge."
+  },
   "interval": {
-    "start": 1980,
+    "start": 1990,
     "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.2
-    },
-    {
-      "metric": "base_extractiveness",
       "time_point": 1990,
-      "value": 0.25
+      "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.28
+      "time_point": 1998,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.29
+      "time_point": 2006,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.63
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.3
+      "value": 0.65
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 1980,
+      "metric": "suppression_requirement",
+      "time_point": 1990,
       "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.7
     },
     {
       "metric": "theater_ratio",
       "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
       "value": 0.6
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
+      "time_point": 2014,
       "value": 0.75
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
+      "time_point": 2020,
       "value": 0.82
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
       "value": 0.85
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.3
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1990,
-      "value": 0.35
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.38
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.39
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.4
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the continued performance of disaster preparedness drills and inspections, where the primary function of transmitting operational knowledge has atrophied, and the activities persist largely as a memorial ritual. Organizational memory of the *form* of preparedness remains, but the adaptive capacity and genuine operational knowledge required for novel scenarios have hollowed out. This is the 'husk reading' of the 'preparedness_transmission' kernel.",
-    "key_agents": [
-      "civil_defense_agencies: Agenda setter (institutional/identity_locked) — administers the rituals",
-      "local_emergency_responders: Payer (organized/constrained) — performs the rituals, recognizes hollowness",
-      "taxpayers: Payer (powerless/trapped) — funds the rituals",
-      "future_disaster_victims: Victim (powerless/trapped) — bears the cost of failed preparedness",
-      "institutional_historians: Observer (analytical/analytical) — analyzes the decay"
-    ],
-    "logic_rationale": "The constraint is classified as a Piton because its primary function (transmitting operational knowledge) has atrophied, but the activities persist due to institutional inertia and the performative maintenance of an illusion of readiness. Extractiveness is low (0.3) because no single party captures significant rents, but resources are wasted. Suppression is moderate (0.4) as agencies enforce compliance with ritualistic procedures. Theater ratio is very high (0.85) reflecting the dominance of performative over functional activity. Accessibility collapse is low (0.2) because the problem is not a lack of alternatives, but a failure to adopt them due to inertia. Resistance is low (0.1) because the diffuse costs and identity-locked nature of the agenda-setters prevent concentrated opposition.",
-    "perspectival_gap": "Civil defense agencies (agenda_setter) perceive these activities as essential for maintaining order and a baseline of readiness, even if symbolic. Local emergency responders (payer) experience the drills as a bureaucratic burden that diverts resources from genuine, adaptive training. Taxpayers and future victims bear the costs of this divergence without direct influence.",
-    "directionality_logic": "Civil defense agencies are identity-locked beneficiaries of the constraint's persistence, as their institutional existence is tied to these rituals (d near 0.0). Local responders and taxpayers are payers, bearing the costs of time and resources for diminishing returns (d near 1.0). Future disaster victims are the ultimate targets, paying with their safety and lives when the system fails (d at 1.0).",
-    "mandatrophy_analysis": "The constraint exhibits clear mandatrophy: its original mandate (transmitting operational knowledge for disaster preparedness) has largely outlived its function in its current form. The classification as Piton correctly identifies this as a degraded constraint persisting through inertia and theatrical maintenance, rather than a functional coordination mechanism or a purely extractive snare. The high theater_ratio is a key indicator of this mandatrophy.",
-    "kernel_context": "This constraint is the 'husk_reading' of the 'preparedness_transmission' kernel. This reading posits that disaster preparedness drills and inspections have become largely ritualistic, with operational knowledge having hollowed out. Sibling readings include 'competence_reading' (drills as live exercised knowledge) and 'hybrid_reading' (stratified competence, e.g., engineering high, civilian coordination low)."
+    "narrative_context": "This constraint describes the continued performance of disaster preparedness drills and inspections, where the primary function of building operational knowledge has atrophied, and the activities persist largely as a memorial ritual. Organizational memory of past disasters drives the *form* of preparedness, but the *content* has hollowed out, leading to high compliance with protocols but low adaptive capacity for novel scenarios. This is the 'husk reading' of the preparedness_transmission kernel.",
+    "logic_rationale": "The high theater_ratio (0.85) reflects that the majority of activity is performative compliance rather than genuine capability building. Extractiveness (0.65) is substantial, as resources are diverted to maintaining the ritual, and the cost of false security is borne by vulnerable communities. Suppression (0.70) is high because the civil defense bureaucracy actively resists external critiques and maintains its authority through formal adherence to protocols, suppressing alternative, more adaptive approaches. The claimed type is 'piton' because the primary function has atrophied, but the constraint persists due to institutional inertia and the concentrated benefits of maintaining the facade for the bureaucracy, while diffuse costs are borne by many.",
+    "directionality_logic": "The civil_defense_bureaucracy and local_emergency_managers are beneficiaries, gaining legitimacy and avoiding scrutiny by maintaining the ritual, even if they recognize its limitations. Frontline_responders and vulnerable_communities are payers, bearing the costs of ineffective preparedness and false security. Disaster_risk_analysts are observers, providing critical analysis that is often ignored.",
+    "perspectival_gap": "The civil defense bureaucracy perceives the drills as essential for maintaining order and demonstrating accountability, even if the actual operational knowledge is low. Frontline responders and vulnerable communities experience the same drills as a frustrating, potentially dangerous charade. The engine's classification will highlight this divergence between the claimed 'rope' (coordination) and the computed 'piton' (atrophied function with extraction).",
+    "mandatrophy_analysis": "The constraint exhibits clear mandatrophy: the original mandate to ensure effective disaster preparedness has been superseded by a mandate to perform the *ritual* of preparedness. The classification as a piton prevents mislabeling this as a functional rope or even a tangled rope, by highlighting the high theater ratio and the hollowing out of operational knowledge. The persistence is due to institutional inertia and the benefits of maintaining the facade, not genuine coordination.",
+    "kernel_context": "This constraint is the 'husk_reading' of the 'preparedness_transmission' kernel. It describes a situation where disaster preparedness activities have become ritualized, with organizational memory persisting but operational knowledge having hollowed out. This contrasts with the 'competence_reading' (drills as live exercised knowledge) and the 'hybrid_reading' (stratified competence, high in engineering, low in civilian coordination)."
   },
   "omegas": [
     {
-      "id": "operational_knowledge_decay_measurement",
-      "question": "How precisely can the decay of operational knowledge be measured, distinct from compliance with procedural forms?",
-      "resolution_mechanism": "Independent, adaptive stress-testing scenarios that deviate from pre-scripted drills, coupled with expert assessment of real-time decision-making and improvisation capacity.",
-      "impact": "A robust measurement would provide empirical grounding for the 'husk reading' and quantify the gap between ritual and readiness, potentially shifting the constraint towards a Snare if the performative aspect is found to actively suppress genuine preparedness.",
-      "confidence": "medium",
+      "id": "ritual_vs_competence_ambiguity",
+      "question": "Is the continued performance of drills and inspections primarily a ritualistic act of organizational memory, or does it still contribute meaningfully to operational competence?",
+      "resolution_mechanism": "Independent, unannounced, scenario-based drills with novel elements, assessed by external experts against adaptive capacity metrics, rather than compliance with pre-specified checklists.",
+      "impact": "If found to be purely ritualistic, the theater_ratio would be confirmed as very high, solidifying the piton classification. If some operational competence is retained, the theater_ratio might be lower, suggesting a more complex, possibly tangled_rope, dynamic.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Quantifying the gap between ritualistic compliance and actual operational knowledge."
+      "description": "Distinguishing performative compliance from genuine capability building."
     },
     {
-      "id": "identity_lock_strength",
-      "question": "To what extent are civil defense agencies genuinely identity-locked into these rituals, versus simply benefiting from the status quo?",
-      "resolution_mechanism": "Analysis of institutional responses to external pressure for reform: strong resistance to change, even when beneficial, would indicate deep identity-lock; flexible adaptation would suggest a more instrumental attachment.",
-      "impact": "If identity-lock is weaker, the constraint might be more amenable to reform, potentially shifting towards a Scaffold if a genuine transition plan could be implemented. If stronger, the Piton classification is reinforced, highlighting the difficulty of change.",
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of alternative preparedness approaches structural (lack of funding, bureaucratic inertia) or internalized (belief in the efficacy of existing rituals, fear of challenging authority)?",
+      "resolution_mechanism": "Pilot programs for alternative, adaptive preparedness models in select jurisdictions: if resistance persists even with funding and top-level endorsement, internalized suppression is higher.",
+      "impact": "If internalized, the effective suppression is higher than the structural measure suggests, as agents carry the resistance to change with them. If purely structural, removing barriers would lead to rapid adoption of alternatives.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Assessing the depth of institutional identity fusion with preparedness rituals."
+      "description": "Structural vs. internalized suppression mechanism for adaptive preparedness."
     },
     {
-      "id": "husk_vs_competence_framing",
-      "question": "Is the 'husk reading' a more accurate framing of preparedness transmission than the 'competence reading' or 'hybrid reading'?",
-      "resolution_mechanism": "Comparative analysis of disaster outcomes in regions with different preparedness approaches, combined with expert elicitation on the actual state of operational readiness versus formal compliance.",
-      "impact": "If the 'competence reading' is found to be more accurate, this constraint would be reclassified as a Rope or even Mountain. If the 'hybrid reading' is more accurate, this constraint would be one component of a larger, more complex system, requiring decomposition.",
+      "id": "framing_underdetermination_preparedness",
+      "question": "Is this constraint best framed as a 'husk reading' (ritualized performance) or as a 'competence reading' (live exercised knowledge)?",
+      "resolution_mechanism": "The 'husk reading' is chosen based on the observed high compliance with protocol form and low adaptive capacity under novel flood scenarios, as well as inspection routines detecting only pre-specified failure modes. The 'competence reading' would require evidence of continuous re-validation of capability through practice and successful adaptation to unforeseen challenges.",
+      "impact": "If the 'competence reading' were adopted, the extractiveness and theater_ratio would be significantly lower, and the constraint would likely classify as a rope, reflecting genuine coordination and capability building.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Framing ambiguity between ritualistic performance and genuine competence in preparedness."
+      "description": "Alternative framings of preparedness transmission as ritual vs. competence."
     }
   ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_transmission__competence_reading",
+      "preparedness_transmission__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'preparedness_transmission' kernel. Its high extractiveness and theater_ratio (husk reading) contrast with the lower extraction of the 'competence_reading' and the stratified nature of the 'hybrid_reading'."
+  },
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "preparedness_transmission__competence_reading",
+        "sibling_id": "competence_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "preparedness_transmission__hybrid_reading",
+        "sibling_id": "hybrid_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "ritual_maintains_memory_not_competence",
+        "atom": "formal_compliance_equals_preparedness",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "adaptive_capacity_has_decayed",
+        "atom": "past_solutions_suffice_for_future_threats",
         "role": "secondary",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "formal_compliance_as_readiness",
+    "reference_frame": "post_cold_war_standardized_response",
     "drift_state": {
-      "moment": "contemporary_complex_disaster_era",
+      "moment": "contemporary_climate_change_era",
       "direction": "practice_drift",
-      "magnitude": "severe",
+      "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

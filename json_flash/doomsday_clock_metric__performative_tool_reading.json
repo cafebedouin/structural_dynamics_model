@@ -4,26 +4,94 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "17bc641b-b3e0-4ab3-9774-c43f7b55c94a"
+    "story_uid": "4175b4c8-e826-4d3a-9b91-66a592dd84b0"
   },
   "base_properties": {
     "extractiveness": 0.65,
-    "suppression": 0.4,
-    "theater_ratio": 0.75,
-    "accessibility_collapse": 0.2,
-    "resistance": 0.3,
+    "suppression": 0.2,
+    "theater_ratio": 0.8,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.4,
     "claimed_type": "tangled_rope",
     "human_readable": "Doomsday Clock as Performative Policy Tool",
-    "topic_domain": "science_communication/normative_epistemology/risk_governance",
+    "topic_domain": "science_communication/risk_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "policy_activists",
-      "risk_advocacy_organizations"
+      "policy_advocates",
+      "public_mobilization_campaigns"
     ],
     "victims": [
-      "epistemic_credibility_of_science",
-      "public_trust_in_expert_assessments"
+      "epistemic_credibility",
+      "scientific_community"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "bulletin_of_atomic_scientists",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The organization that sets and publicizes the Doomsday Clock. From this reading, they strategically adjust the clock to maximize public attention and policy impact, prioritizing mobilization over strict empirical fidelity. They benefit from the attention and influence this generates."
+    },
+    {
+      "name": "policy_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Groups and individuals who use the Doomsday Clock's pronouncements to bolster their arguments for specific policy interventions (e.g., nuclear disarmament, climate action). They benefit from the heightened sense of urgency and public attention the clock generates."
+    },
+    {
+      "name": "public_mobilization_campaigns",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Leverage the clock's symbolic power to rally public support and participation in collective action initiatives. They gain momentum and visibility from the clock's dramatic pronouncements."
+    },
+    {
+      "name": "epistemic_credibility",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The general trustworthiness and reliability of scientific pronouncements, particularly on long-term risks. This is 'paid' through a gradual erosion of public trust when the clock's strategic adjustments are perceived as manipulative rather than objective."
+    },
+    {
+      "name": "scientific_community",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individual scientists and research institutions who rely on public trust and perceived objectivity. They bear the cost of diminished credibility when the clock's strategic use blurs the lines between scientific assessment and advocacy, potentially undermining broader scientific authority."
+    },
+    {
+      "name": "general_public",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Receives simplified, urgent messages about existential risks, which can spur engagement but also lead to alarm fatigue or cynicism if the messaging is perceived as overly strategic. They pay in terms of potential misinformed risk perception or eroded trust in expert warnings."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates public attention and political will around existential threats by providing a simple, dramatic metric that signals urgency and the need for collective action.",
+    "transfer_function": "Transfers public attention and political capital towards specific policy agendas, from a general, diffuse concern about future risks.",
+    "absent_voices": "Strict empiricists and methodologists who would argue for a more transparent, less manipulable metric, but whose concerns are often sidelined in favor of maximizing impact.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Doomsday Clock vanished, a significant tool for mobilizing public and political attention on existential risks would be lost. While other mechanisms exist, the clock's unique symbolic power and media penetration would leave a void, requiring new strategies for risk communication and advocacy.",
+    "founding_problem": "The problem of communicating the urgency of nuclear proliferation and other global catastrophic risks to a broad public and policymakers in a way that compels action.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Bulletin of Atomic Scientists attests the problem is live, citing ongoing nuclear threats and climate change. Policy advocates and public mobilization campaigns corroborate this, as they continue to rely on such tools to gain traction for their causes. The scientific community, while critical of the method, generally agrees on the existence of the underlying risks."
   },
   "interval": {
     "start": 1947,
@@ -38,16 +106,21 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1960,
-      "value": 0.5
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1980,
-      "value": 0.6
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
       "value": 0.62
     },
     {
@@ -77,69 +150,79 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
+      "time_point": 2010,
       "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.8
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1947,
-      "value": 0.2
+      "value": 0.1
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1960,
-      "value": 0.25
+      "value": 0.12
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1980,
-      "value": 0.3
+      "value": 0.15
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2000,
-      "value": 0.35
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.18
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.4
+      "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint story models the Doomsday Clock as a performative tool, where its setting is strategically chosen to maximize policy impact and mobilize collective action, rather than solely reflecting an objective risk assessment. The Bulletin of the Atomic Scientists, as the agenda-setter, uses the Clock to drive advocacy, benefiting policy activists and risk advocacy organizations. The cost is borne by the epistemic credibility of science and public trust in expert assessments, which are victims of this strategic manipulation. The constraint is claimed as a Tangled Rope because it serves a genuine coordination function (mobilizing action) but does so through an extractive mechanism (sacrificing epistemic rigor for impact).",
-    "key_agents": [
-      "bulletin_of_atomic_scientists: Agenda-setter (institutional/constrained) — administers the Clock, balances scientific input with communication strategy.",
-      "policy_activists: Beneficiary (organized/mobile) — leverage the Clock for advocacy and mobilization.",
-      "risk_advocacy_organizations: Beneficiary (organized/mobile) — use the Clock to validate warnings and secure resources.",
-      "epistemic_credibility_of_science: Victim (analytical/identity_locked) — suffers erosion when the Clock's setting is perceived as non-objective.",
-      "public_trust_in_expert_assessments: Victim (powerless/constrained) — diminishes with perceived political motivation of the Clock.",
-      "scientific_community: Payer (institutional/constrained) — bears diffuse costs of reduced public trust in science.",
-      "skeptical_public: Excluded (powerless/mobile) — dismisses warnings due to perceived bias, not part of the setting process."
-    ],
-    "logic_rationale": "The extractiveness (0.65) reflects the cost to epistemic credibility and public trust, which is 'extracted' to achieve policy impact. Suppression (0.4) is moderate; while there's no direct coercion, the narrative power of the Clock can suppress alternative, more nuanced risk assessments. Theater ratio (0.75) is high because the performative aspect (dramatic pronouncements, symbolic 'minutes to midnight') often outweighs the transparent, objective reporting of scientific data. Accessibility collapse (0.2) is low as alternative risk assessment frameworks exist, but the Clock's prominence can overshadow them. Resistance (0.3) is also low, primarily from academic critics rather than organized opposition.",
-    "perspectival_gap": "The Bulletin of the Atomic Scientists (agenda-setter) experiences this as a necessary, if imperfect, tool for global coordination and impact. Policy activists and advocacy organizations (beneficiaries) see it as a highly effective instrument. However, the scientific community and the abstract 'epistemic credibility of science' (victims/payers) experience it as a drain on their long-term standing, even if individual scientists support its goals. The engine should compute a beneficial classification for the agenda-setter and activists, but an extractive one for the victims.",
-    "directionality_logic": "The Bulletin, policy activists, and advocacy organizations are beneficiaries (low d) because the Clock's strategic use directly serves their goals of influence and mobilization. Epistemic credibility and public trust are victims (high d) because their value is diminished by the strategic, non-objective framing. The scientific community is a payer (moderate d) due to the diffuse costs of potential reputational damage. The skeptical public is excluded, bearing costs without direct engagement.",
-    "mandatrophy_analysis": "This classification prevents mislabeling the Clock as a pure 'Rope' (genuine coordination) by highlighting the asymmetric extraction of epistemic credibility. It also avoids mislabeling it as a pure 'Snare' by acknowledging the genuine, albeit strategically achieved, coordination function of raising awareness and mobilizing action. The 'Tangled Rope' classification captures the hybrid nature where a legitimate coordination problem is addressed through a mechanism that also extracts a cost from other values."
+    "narrative_context": "This constraint describes the Doomsday Clock as a performative tool, where its setting is strategically chosen to maximize policy impact and mobilize collective action, rather than strictly reflecting an objective risk assessment. The Bulletin of Atomic Scientists, as the agenda-setter, benefits from the influence and attention generated, while the epistemic credibility of scientific communication and the broader scientific community bear the cost of this strategic manipulation. The claimed type is 'tangled_rope' because it still serves a coordination function (mobilizing action) but does so through an extractive mechanism (sacrificing epistemic rigor for impact).",
+    "logic_rationale": "Extractiveness is high (0.65) because the strategic manipulation of the clock's setting extracts from epistemic credibility to benefit policy advocacy. Suppression is low (0.20) because there's no direct coercion, but rather a subtle pressure to conform to the narrative of urgency. Theater ratio is very high (0.80) as the primary function becomes the performance of urgency and impact, with the underlying 'measurement' aspect becoming largely theatrical. The increasing theater ratio over time reflects a growing emphasis on strategic communication over strict empirical reporting.",
+    "directionality_logic": "The Bulletin of Atomic Scientists, policy advocates, and public mobilization campaigns are beneficiaries, as they gain influence and momentum from the clock's strategic use. Epistemic credibility and the scientific community are victims, as their long-term trustworthiness is eroded. The general public is both a beneficiary (receiving urgent warnings) and a payer (potentially misinformed or becoming cynical).",
+    "perspectival_gap": "From the perspective of policy advocates, the clock is a highly effective 'rope' for coordinating action on critical issues. From the perspective of the scientific community, it operates more like a 'snare' that compromises scientific integrity for political ends. The engine's classification will capture this divergence based on the declared roles and metrics.",
+    "kernel_context": "This constraint is the 'performative_tool_reading' of the 'doomsday_clock_metric' kernel. It views the clock primarily as a strategic communication device. Sibling readings include the 'objective_index_reading' (which sees the clock as a neutral empirical measure) and the 'hybrid_legitimacy_reading' (which acknowledges an irreducible entanglement of science and values)."
   },
   "omegas": [
     {
-      "id": "epistemic_cost_quantification",
-      "question": "How can the erosion of epistemic credibility and public trust be quantitatively measured to assess the true cost of the Clock's performative function?",
-      "resolution_mechanism": "Longitudinal studies on public perception of science, expert surveys on trust in risk communication, and analysis of media framing of scientific consensus versus advocacy.",
-      "impact": "If the epistemic cost is found to be severe, it would strengthen the 'Snare' aspect of the constraint, suggesting the extraction outweighs the coordination benefit. If minimal, it would push towards a 'Rope' classification.",
+      "id": "impact_vs_credibility_tradeoff",
+      "question": "What is the optimal balance between maximizing policy impact and maintaining epistemic credibility in communicating existential risks?",
+      "resolution_mechanism": "Empirical studies on the long-term effects of strategic communication on public trust and policy outcomes, combined with normative deliberation on the ethical boundaries of scientific advocacy.",
+      "impact": "If a high impact can be achieved without significant credibility loss, the extractiveness of this constraint would decrease. If the tradeoff is severe, it reinforces the 'tangled_rope' classification.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Quantifying the long-term damage to scientific credibility from strategic communication."
+      "type_class": "preference",
+      "description": "The inherent tension between strategic communication and scientific integrity."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "Is the Doomsday Clock primarily an objective index, a performative tool, or an irreducible entanglement of both scientific judgment and normative stakes?",
-      "resolution_mechanism": "Analysis of the Bulletin's internal decision-making documents, public statements, and the reception of the Clock by different stakeholder groups (scientific, policy, public). This story instantiates the 'performative_tool_reading'.",
-      "impact": "If resolved towards 'objective_index_reading', the constraint would be reclassified closer to a 'Mountain' or 'Rope' with lower extractiveness. If resolved towards 'hybrid_legitimacy_reading', it would remain a 'Tangled Rope' but with a different justification for its hybridity.",
+      "id": "alternative_mobilization_mechanisms",
+      "question": "Are there alternative, less epistemically extractive mechanisms for mobilizing collective action on existential risks?",
+      "resolution_mechanism": "Development and evaluation of new science communication models that prioritize transparency and empirical rigor while still achieving policy impact.",
+      "impact": "The existence of viable alternatives would reduce the perceived necessity of this constraint's strategic manipulation, potentially reclassifying it towards a 'snare' if the coordination function is found to be separable from the extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Availability of less extractive methods for risk communication."
+    },
+    {
+      "id": "framing_underdetermination_doomsday_clock",
+      "question": "Is the Doomsday Clock primarily an objective index, a performative tool, or an irreducible hybrid of both?",
+      "resolution_mechanism": "Conceptual analysis and expert consensus on the nature of 'boundary objects' in science communication, combined with empirical studies of how different audiences interpret the clock.",
+      "impact": "If resolved towards the 'objective_index_reading', this constraint would be reclassified as a 'mountain' or 'rope' with significantly lower extractiveness. If resolved towards the 'hybrid_legitimacy_reading', it would acknowledge the entanglement but potentially reduce the 'theater_ratio' of this specific reading.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "This constraint is one reading of the 'doomsday_clock_metric' kernel. This reading emphasizes strategic impact over pure objectivity. Sibling readings ('objective_index_reading', 'hybrid_legitimacy_reading') would shift the balance of coordination vs. extraction and the perceived legitimacy of the Clock's operation."
+      "description": "Ambiguity in the fundamental nature and purpose of the Doomsday Clock."
     }
   ],
   "boltzmann": {
@@ -147,40 +230,40 @@
   },
   "network": {
     "affects_constraints": [
-      "doomsday_clock_metric__objective_index_reading",
-      "doomsday_clock_metric__hybrid_legitimacy_reading"
+      "global_nuclear_disarmament_treaties",
+      "climate_change_mitigation_policies"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'doomsday_clock_metric' kernel. This 'performative_tool_reading' emphasizes strategic communication for policy impact, contrasting with the 'objective_index_reading' (focus on empirical indicators) and the 'hybrid_legitimacy_reading' (focus on irreducible entanglement of science and values). Each reading has a distinct epsilon and stakeholder structure."
+    "dual_formulation_note": "This constraint is one of three readings of the 'doomsday_clock_metric' kernel, each representing a distinct structural claim about its operation and purpose. This 'performative_tool_reading' focuses on its strategic use for mobilization, distinct from an 'objective_index_reading' or a 'hybrid_legitimacy_reading'."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "lineage",
+    "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "doomsday_clock_metric__objective_index_reading",
+        "sibling_id": "objective_index_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "doomsday_clock_metric__hybrid_legitimacy_reading",
+        "sibling_id": "hybrid_legitimacy_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "policy_impact_trumps_pure_objectivity",
+        "atom": "policy_impact_maximization_is_primary",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       },
       {
-        "atom": "symbolic_action_mobilizes_collective_will",
+        "atom": "epistemic_rigor_is_subordinate_to_action",
         "role": "secondary",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "strategic_communication_for_impact",
+    "reference_frame": "strategic_communication_framework",
     "drift_state": {
       "moment": "contemporary",
       "direction": "stable",
@@ -189,14 +272,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

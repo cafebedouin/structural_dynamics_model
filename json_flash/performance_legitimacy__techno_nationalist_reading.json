@@ -4,176 +4,307 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "2b6b76cc-1190-4021-95d6-473cfc06199f"
+    "story_uid": "a15cc708-8f25-4d8c-a584-3fae33760b16"
   },
   "base_properties": {
-    "extractiveness": 0.7,
-    "suppression": 0.85,
+    "extractiveness": 0.85,
+    "suppression": 0.9,
     "theater_ratio": 0.2,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.6,
-    "claimed_type": "tangled_rope",
+    "accessibility_collapse": 0.75,
+    "resistance": 0.4,
+    "claimed_type": "snare",
     "human_readable": "Techno-Nationalist Performance Legitimacy",
     "topic_domain": "political_economy/development_planning/state_capitalism",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "national_champion_tech_firms",
-      "defense_industrial_complex",
+      "defense_adjacent_tech_sectors",
+      "national_champions",
       "state_planning_agencies"
     ],
     "victims": [
-      "market_driven_allocation",
       "consumer_sectors",
-      "foreign_tech_firms"
+      "market_driven_allocation",
+      "private_enterprises_outside_strategic_sectors",
+      "citizens_bearing_opportunity_costs"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine expression of national interest, or a cover for rent-seeking by specific industrial sectors?",
-      "resolution_mechanism": "Independent audits of directed investment efficacy and comparative analysis with market-driven outcomes in similar sectors.",
-      "impact": "If rent-seeking, the constraint's extractiveness is higher and its coordination function is weaker, pushing classification towards Snare. If genuine national interest, the Tangled Rope classification holds.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity between national interest and sectoral rent-seeking within the techno-nationalist reading."
+      "name": "state_planning_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "These agencies define strategic industries, allocate massive state investment, and implement policies to achieve technological self-sufficiency. Their legitimacy and power are directly tied to the success of this techno-nationalist agenda."
     },
     {
-      "id": "sibling_reading_impact_livelihood_security",
-      "question": "How would a 'livelihood_security_reading' of performance legitimacy alter the structural priorities of this techno-nationalist constraint?",
-      "resolution_mechanism": "Analysis of policy shifts in response to public demand for social welfare vs. strategic industry investment.",
-      "impact": "A stronger livelihood_security_reading would likely reduce directed investment in strategic industries, reallocating resources to social programs, thereby reducing extraction from market-driven allocation and consumer sectors.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of livelihood_security_reading on techno-nationalist priorities."
+      "name": "defense_adjacent_tech_sectors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive substantial state funding, subsidies, and preferential policies. They are shielded from market competition and benefit from guaranteed demand for their products, often with less pressure for immediate commercial viability."
     },
     {
-      "id": "sibling_reading_impact_quantitative_growth",
-      "question": "What is the tension between the techno-nationalist reading's focus on strategic industries and a 'quantitative_growth_reading' prioritizing overall GDP expansion?",
-      "resolution_mechanism": "Economic modeling comparing growth rates under strategic industry focus versus broad-based market liberalization.",
-      "impact": "A dominant quantitative_growth_reading would likely shift investment away from less efficient strategic sectors towards high-growth consumer or export-oriented industries, potentially reducing suppression of market signals.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Tension between techno-nationalist and quantitative_growth readings."
+      "name": "national_champions",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Large state-backed or state-aligned enterprises in strategic sectors that are designated to lead global competition. They benefit from state support, market protection, and diplomatic backing, but are also subject to state directives."
     },
     {
-      "id": "sibling_reading_impact_qualitative_development",
-      "question": "How does the 'qualitative_development_reading' (innovation, sustainability) interact with the techno-nationalist drive for strategic industry leadership?",
-      "resolution_mechanism": "Policy analysis of environmental regulations and innovation incentives in strategic sectors versus broader economic transformation.",
-      "impact": "A stronger qualitative_development_reading might impose stricter environmental or efficiency standards on strategic industries, potentially increasing costs for national champions but aligning long-term goals. It could also shift focus from raw technological leadership to sustainable innovation.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Interaction between techno-nationalist and qualitative_development readings."
+      "name": "consumer_sectors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the opportunity costs of massive state investment in strategic industries, often through reduced public spending in other areas, higher prices for domestically produced strategic goods, or less innovation in non-strategic consumer-facing industries."
+    },
+    {
+      "name": "market_driven_allocation",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The principle of allocating resources based on market signals and efficiency is systematically overridden by state directives and industrial policy. This leads to misallocation of capital and talent from a purely economic efficiency perspective."
+    },
+    {
+      "name": "private_enterprises_outside_strategic_sectors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face competition for talent and capital from state-backed strategic industries, often without the same subsidies or market protections. Their growth is secondary to the national strategic goals."
+    },
+    {
+      "name": "citizens_bearing_opportunity_costs",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Citizens are expected to support the national project of technological leadership, often through accepting lower living standards, reduced consumer choice, or delayed social welfare improvements in favor of strategic investments. Their identity is fused with the national project."
+    },
+    {
+      "name": "international_competitors",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Foreign companies and nations that would otherwise compete in strategic industries are excluded or disadvantaged by protectionist policies, subsidies, and export controls. They are the target of the techno-nationalist strategy."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates national resources (capital, talent, policy) towards a singular, long-term goal of technological self-sufficiency and global leadership in strategic sectors, overcoming market fragmentation and short-term profit motives.",
+    "transfer_function": "Directs massive state capital, talent, and policy support from the broader economy (consumer sectors, market-driven allocation) to specific strategic industries and national champions, in exchange for projected national security and great-power status.",
+    "absent_voices": "Advocates for pure market-driven allocation, consumer welfare groups, and non-strategic private enterprises would argue for a more balanced economic development model. They are marginalized by the overarching national strategic imperative.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this techno-nationalist legitimacy constraint vanished, state-directed investment would cease, strategic industries would face market competition, and resources would reallocate towards consumer demand and efficiency. The national security and great-power status narrative would lose its central economic justification, leading to a fundamental reorganization of the political economy.",
+    "founding_problem": "The perceived vulnerability to external technological dependencies, the desire for national security autonomy, and the ambition to achieve great-power status through industrial and technological might.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "State media and official pronouncements consistently attest to the live status of external threats and the necessity of technological self-sufficiency. Independent geopolitical analysts and defense strategists from outside the direct beneficiaries also corroborate the existence of these vulnerabilities and strategic competition, though they may dispute the efficacy or costs of the techno-nationalist approach."
+  },
+  "interval": {
+    "start": 2000,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.5
+      "time_point": 2000,
+      "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.58
+      "time_point": 2005,
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.65
+      "time_point": 2010,
+      "value": 0.75
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 2015,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
+      "time_point": 2005,
       "value": 0.75
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 2010,
       "value": 0.8
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
+      "time_point": 2015,
       "value": 0.85
     },
     {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.9
+    },
+    {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 2000,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 2005,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 2015,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
+      "time_point": 2020,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 15
-  },
   "commentary": {
-    "narrative_context": "This constraint describes a techno-nationalist reading of performance legitimacy, where a state's right to rule is justified by its ability to achieve technological self-sufficiency and global leadership in strategic industries. This involves massive directed investment, export controls, and prioritizing supply chain resilience, often at the expense of market-driven allocation and consumer sectors. It is one reading of the broader 'performance_legitimacy' kernel, which also includes quantitative growth, qualitative development, and livelihood security readings.",
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates national resources towards strategic goals (e.g., securing critical supply chains, fostering innovation in key sectors) while simultaneously extracting from other sectors (e.g., diverting capital from consumer industries, suppressing market signals) and requiring active enforcement to maintain. Extractiveness is high due to the non-market allocation of resources and the costs imposed on suppressed sectors. Suppression is very high as market mechanisms and foreign competition are actively curtailed. Theater ratio is low, as the stated goals of national security and great-power status are genuinely pursued, even if the methods are inefficient or extractive.",
-    "perspectival_gap": "State planning agencies and national champion tech firms experience this as a necessary coordination mechanism for national survival and prosperity, justifying the costs. Market-driven allocation and consumer sectors, however, experience it as a highly extractive and suppressive force, diverting resources and limiting their growth. Foreign tech firms are simply excluded, seeing it as protectionism.",
-    "directionality_logic": "National champion tech firms and the defense industrial complex are primary beneficiaries (d near 0.0) as they receive massive directed investment and protection. State planning agencies are agenda-setters and beneficiaries, as their power and mandate are amplified (d near 0.1). Market-driven allocation and consumer sectors are victims (d near 1.0) as resources are diverted from them and their growth is suppressed. Foreign tech firms are also victims, as they are actively excluded (d near 1.0).",
-    "kernel_context": "This constraint is the 'techno_nationalist_reading' of the 'performance_legitimacy' kernel. This reading prioritizes technological self-sufficiency and global leadership in strategic industries. Sibling readings include 'quantitative_growth_reading' (focus on GDP growth), 'qualitative_development_reading' (focus on innovation, sustainability, efficiency), and 'livelihood_security_reading' (focus on tangible improvements in daily life like employment, healthcare, education)."
+    "narrative_context": "This constraint represents the 'techno-nationalist' reading of performance legitimacy, where a state's right to rule is primarily justified by its ability to achieve technological self-sufficiency and global leadership in strategic industries. This involves massive state-directed investment, protectionist policies, and the prioritization of national champions, often at the expense of market efficiency and consumer welfare. It is one reading of the broader 'performance_legitimacy' kernel.",
+    "key_agents": [
+      "state_planning_agencies: Agenda setter (institutional/identity_locked)",
+      "defense_adjacent_tech_sectors: Beneficiary (organized/mobile)",
+      "national_champions: Beneficiary (powerful/constrained)",
+      "consumer_sectors: Payer (moderate/immediate)",
+      "market_driven_allocation: Payer (powerless/trapped)",
+      "private_enterprises_outside_strategic_sectors: Payer (moderate/constrained)",
+      "citizens_bearing_opportunity_costs: Payer (powerless/identity_locked)",
+      "international_competitors: Excluded (institutional/analytical)"
+    ],
+    "logic_rationale": "Extractiveness is very high (0.85) because resources are forcibly diverted from market-driven allocation and consumer sectors to strategic industries, creating significant opportunity costs and inefficiencies. Suppression is also very high (0.90) due to the state's extensive control over capital, talent, and market access, actively suppressing alternative economic models or resistance to strategic directives. Theater ratio is low (0.20) because the commitment to technological leadership is genuine and actively pursued, not merely performative, though some projects may be more symbolic than effective. Accessibility collapse is high (0.75) as market-based alternatives are systematically dismantled or marginalized. Resistance is moderate (0.40) as the national security narrative provides strong ideological cover, but economic inefficiencies and consumer dissatisfaction can generate diffuse, low-level resistance.",
+    "perspectival_gap": "From the perspective of state planning agencies and strategic industries, this is a necessary 'rope' for national survival and prosperity. From the perspective of consumer sectors and market-driven allocation, it operates as a 'snare' that extracts resources and suppresses alternatives for the benefit of a select few, justified by a national narrative. The engine's classification will highlight this divergence.",
+    "directionality_logic": "State planning agencies, defense-adjacent tech sectors, and national champions are clear beneficiaries, receiving direct and indirect state support. Consumer sectors, market-driven allocation, non-strategic private enterprises, and citizens bearing opportunity costs are the primary targets, bearing the costs of resource diversion and suppressed alternatives. The 'identity_locked' exit option for citizens reflects the strong ideological fusion with the national project, making exit from the system's demands unthinkable.",
+    "mandatrophy_analysis": "This constraint is a snare, not a rope, because its coordination function (directing national resources) is inextricably linked with asymmetric extraction (from market-driven sectors to strategic ones) and relies heavily on suppression of alternatives. The national security mandate is live, preventing mandatrophy, but the mechanism of achieving it is highly extractive. The classification prevents mislabeling state-directed extraction as mere coordination for national interest.",
+    "kernel_context": "This constraint is the 'techno_nationalist_reading' of the 'performance_legitimacy' kernel. This kernel describes how a state justifies its rule. Sibling readings include 'quantitative_growth_reading' (legitimacy from GDP growth), 'qualitative_development_reading' (legitimacy from innovation and sustainability), and 'livelihood_security_reading' (legitimacy from improving daily life). This reading prioritizes strategic industry dominance above all else."
   },
+  "omegas": [
+    {
+      "id": "efficacy_of_directed_investment",
+      "question": "Is massive state-directed investment in strategic industries actually the most effective path to technological self-sufficiency and global leadership, or would market-driven approaches yield better long-term results?",
+      "resolution_mechanism": "Comparative economic studies of nations employing different industrial policies over multi-decade periods, assessing innovation rates, market competitiveness, and technological breakthroughs.",
+      "impact": "If market-driven approaches prove more effective, the justification for the high extraction and suppression would weaken, potentially reclassifying the constraint towards a pure snare or piton if the 'performance' aspect is not met.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the means (state direction) effectively achieve the stated ends (technological leadership)."
+    },
+    {
+      "id": "national_security_vs_economic_efficiency",
+      "question": "What is the optimal balance between national security imperatives (requiring strategic industry control) and economic efficiency (requiring market allocation), and is the current techno-nationalist reading over-prioritizing security at excessive economic cost?",
+      "resolution_mechanism": "Policy debates incorporating diverse expert opinions (defense, economics, social welfare) and public discourse, leading to a re-evaluation of national priorities and resource allocation.",
+      "impact": "A shift in the perceived optimal balance could lead to a reduction in state intervention, lowering extraction and suppression, potentially moving the constraint towards a tangled rope or even a rope if coordination benefits become more symmetric.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The trade-off between national security and economic efficiency."
+    },
+    {
+      "id": "identity_lock_legitimacy",
+      "question": "To what extent is the 'identity_locked' exit option for citizens a genuine expression of national unity and shared purpose, versus an internalized suppression mechanism resulting from state propaganda and lack of alternatives?",
+      "resolution_mechanism": "Longitudinal studies of public opinion, independent media analysis, and the observed behavior of citizens when presented with genuine, low-cost alternatives or opportunities for dissent.",
+      "impact": "If internalized suppression is dominant, the effective suppression of the constraint is higher than structural measures suggest, and the legitimacy claim is weaker, pushing the classification more firmly towards a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for citizen identity lock."
+    },
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Is the 'techno_nationalist_reading' the most appropriate framing for this constraint, or would a 'quantitative_growth_reading' or 'livelihood_security_reading' better capture the underlying dynamics and stakeholder experiences?",
+      "resolution_mechanism": "Analysis of policy documents, public discourse, and resource allocation patterns to identify which performance metric (technological leadership, GDP growth, or citizen welfare) consistently receives primary emphasis and resource commitment.",
+      "impact": "If an alternative reading is adopted, the constraint's classification, beneficiaries, and victims would shift significantly to reflect the priorities of that reading (e.g., a quantitative_growth_reading might show different beneficiaries and a lower extractiveness if growth is genuinely broad-based).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Alternative framings of the performance_legitimacy kernel."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is the 'techno_nationalist_reading' of the 'performance_legitimacy' kernel. It focuses on technological self-sufficiency and strategic industry leadership as the primary justification for state authority, distinct from other readings that emphasize economic growth or citizen welfare."
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
-    "authority_grounding": "lineage",
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "performance_legitimacy__quantitative_growth_reading",
+        "sibling_id": "quantitative_growth_reading",
         "relation": "influences"
       },
       {
-        "sibling_id": "performance_legitimacy__qualitative_development_reading",
+        "sibling_id": "qualitative_development_reading",
         "relation": "influences"
       },
       {
-        "sibling_id": "performance_legitimacy__livelihood_security_reading",
+        "sibling_id": "livelihood_security_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "technological_sovereignty_is_national_security",
+        "atom": "technological_sovereignty_is_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_directed_industrial_policy_is_optimal",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
-      },
-      {
-        "atom": "state_directed_investment_for_strategic_industries",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "national_security_imperative",
+    "reference_frame": "strategic_autonomy_framework",
     "drift_state": {
       "moment": "contemporary",
       "direction": "stable",
@@ -182,14 +313,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

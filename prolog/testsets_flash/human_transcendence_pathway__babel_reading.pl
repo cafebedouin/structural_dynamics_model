@@ -39,13 +39,16 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -54,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -64,21 +68,28 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: human_transcendence_pathway__babel_reading
- *   human_readable: Babel Reading: Collective Human Power for Self-Sufficiency
+ *   human_readable: Babel Reading: Collective Human Power Without Transcendent Authority
  *   domain: political_theology/technology_ethics
  *
  * SUMMARY:
- *   This constraint represents the 'Babel reading' of the
- *   human_transcendence_pathway kernel. It describes a scenario where
- *   collective human power, channeled through unified technological and
- *   linguistic systems, aims to achieve stability and self-sufficiency
- *   without reference to transcendent authority. This reading emphasizes the
- *   coercive homogenization of diverse cultures and languages, leading to
- *   concentrated power for the architects of this system and the suppression
- *   of individual and cultural autonomy. The constraint is claimed as a snare
- *   due to its high extraction and suppression, with the coordination story
- *   serving as a cover for coercive homogenization.
+ *   This constraint, the 'Babel Reading' of the human_transcendence_pathway
+ *   kernel, describes a system where collective human power, expressed
+ *   through unified technological and linguistic systems, seeks to achieve
+ *   stability and self-sufficiency by rejecting transcendent authority. It is
+ *   characterized by the coercive homogenization of diverse cultures and
+ *   languages, leading to high extraction from those whose identities are
+ *   suppressed, and high suppression to maintain the artificial unity. The
+ *   narrative is drawn from the biblical account of the Tower of Babel,
+ *   interpreted as a cautionary tale against human hubris and the dangers of
+ *   enforced uniformity.
  *
+ * KEY AGENTS:
+ *   - architects_of_the_tower: Primary agenda-setter (institutional/arbitrage) — benefits from concentrated power.
+ *   - centralized_power_structures: Primary beneficiary (institutional/arbitrage) — consolidates authority.
+ *   - diverse_linguistic_groups: Primary target/payer (powerless/identity_locked) — bears the cost of homogenization.
+ *   - local_cultural_identities: Primary target/payer (powerless/identity_locked) — suffers erosion of distinctiveness.
+ *   - dissenting_voices: Secondary target/payer (moderate/constrained) — faces active suppression.
+ *   - transcendent_authority_advocates: Excluded (organized/identity_locked) — systematically silenced.
  */
 
 /* ==========================================================================
@@ -101,45 +112,88 @@ narrative_ontology:constraint_metric(human_transcendence_pathway__babel_reading,
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(human_transcendence_pathway__babel_reading, snare).
-narrative_ontology:human_readable(human_transcendence_pathway__babel_reading, "Babel Reading: Collective Human Power for Self-Sufficiency").
+narrative_ontology:human_readable(human_transcendence_pathway__babel_reading, "Babel Reading: Collective Human Power Without Transcendent Authority").
 narrative_ontology:topic_domain(human_transcendence_pathway__babel_reading, "political_theology/technology_ethics").
 
 domain_priors:requires_active_enforcement(human_transcendence_pathway__babel_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(human_transcendence_pathway__babel_reading, '01b45969-75e7-42e6-9a02-4fc3ab36bd51').
-narrative_ontology:cs_kernel_codification('01b45969-75e7-42e6-9a02-4fc3ab36bd51', implicit).
-narrative_ontology:cs_authority_grounding('01b45969-75e7-42e6-9a02-4fc3ab36bd51', extraction).
-narrative_ontology:cs_interpretation_layer_present('01b45969-75e7-42e6-9a02-4fc3ab36bd51').
-narrative_ontology:cs_reading_relation('01b45969-75e7-42e6-9a02-4fc3ab36bd51', human_transcendence_pathway__technocratic_vs_incarnational_reading, coexists_with).
-narrative_ontology:cs_reading_relation('01b45969-75e7-42e6-9a02-4fc3ab36bd51', human_transcendence_pathway__jerusalem_reading, forecloses).
-narrative_ontology:cs_axiom('01b45969-75e7-42e6-9a02-4fc3ab36bd51', foundational, human_self_sufficiency_is_ultimate_goal).
-narrative_ontology:cs_axiom_status(human_self_sufficiency_is_ultimate_goal, holdable).
-narrative_ontology:cs_axiom_grounding('01b45969-75e7-42e6-9a02-4fc3ab36bd51', human_self_sufficiency_is_ultimate_goal, instrumental).
-narrative_ontology:cs_axiom('01b45969-75e7-42e6-9a02-4fc3ab36bd51', foundational, diversity_is_a_source_of_instability).
-narrative_ontology:cs_axiom_status(diversity_is_a_source_of_instability, holdable).
-narrative_ontology:cs_axiom_grounding('01b45969-75e7-42e6-9a02-4fc3ab36bd51', diversity_is_a_source_of_instability, empirically_contingent).
-narrative_ontology:cs_reference_frame('01b45969-75e7-42e6-9a02-4fc3ab36bd51', unified_human_project).
-narrative_ontology:cs_drift_state('01b45969-75e7-42e6-9a02-4fc3ab36bd51', contemporary_globalization_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('01b45969-75e7-42e6-9a02-4fc3ab36bd51', '').
+narrative_ontology:cs_story_uid(human_transcendence_pathway__babel_reading, 'fd1342aa-26c8-461e-933e-550dd93c5f6a').
+narrative_ontology:cs_kernel_codification('fd1342aa-26c8-461e-933e-550dd93c5f6a', implicit).
+narrative_ontology:cs_authority_grounding('fd1342aa-26c8-461e-933e-550dd93c5f6a', extraction).
+narrative_ontology:cs_reading_relation('fd1342aa-26c8-461e-933e-550dd93c5f6a', human_transcendence_pathway__technocratic_vs_incarnational_reading, coexists_with).
+narrative_ontology:cs_reading_relation('fd1342aa-26c8-461e-933e-550dd93c5f6a', human_transcendence_pathway__jerusalem_reading, forecloses).
+narrative_ontology:cs_axiom('fd1342aa-26c8-461e-933e-550dd93c5f6a', foundational, human_self_sufficiency_is_ultimate_good).
+narrative_ontology:cs_axiom_status(human_self_sufficiency_is_ultimate_good, holdable).
+narrative_ontology:cs_axiom_grounding('fd1342aa-26c8-461e-933e-550dd93c5f6a', human_self_sufficiency_is_ultimate_good, instrumental).
+narrative_ontology:cs_axiom('fd1342aa-26c8-461e-933e-550dd93c5f6a', foundational, diversity_is_a_source_of_chaos).
+narrative_ontology:cs_axiom_status(diversity_is_a_source_of_chaos, holdable).
+narrative_ontology:cs_axiom_grounding('fd1342aa-26c8-461e-933e-550dd93c5f6a', diversity_is_a_source_of_chaos, empirically_contingent).
+narrative_ontology:cs_reference_frame('fd1342aa-26c8-461e-933e-550dd93c5f6a', unified_human_dominion).
+narrative_ontology:cs_drift_state('fd1342aa-26c8-461e-933e-550dd93c5f6a', contemporary_pluralistic_era, gap(repudiation_pressure, substantial, false)).
+narrative_ontology:cs_created_at('fd1342aa-26c8-461e-933e-550dd93c5f6a', '').
 narrative_ontology:cs_kernel_id(human_transcendence_pathway__babel_reading, human_transcendence_pathway).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(human_transcendence_pathway__babel_reading, architects_of_the_tower).
-narrative_ontology:constraint_beneficiary(human_transcendence_pathway__babel_reading, centralized_authority).
+narrative_ontology:constraint_beneficiary(human_transcendence_pathway__babel_reading, centralized_power_structures).
 narrative_ontology:constraint_victim(human_transcendence_pathway__babel_reading, diverse_linguistic_groups).
-narrative_ontology:constraint_victim(human_transcendence_pathway__babel_reading, local_cultures).
-narrative_ontology:constraint_victim(human_transcendence_pathway__babel_reading, individual_autonomy).
+narrative_ontology:constraint_victim(human_transcendence_pathway__babel_reading, local_cultural_identities).
+narrative_ontology:constraint_victim(human_transcendence_pathway__babel_reading, dissenting_voices).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These are the planners and enforcers of the unified system, believing that collective human effort and technological prowess can achieve ultimate stability and self-sufficiency. They benefit from the concentration of power and control, and from the elimination of perceived 'disruptive' diversity.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__babel_reading, architects_of_the_tower, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% These structures are the institutional beneficiaries of the Babel project, consolidating authority and resources under the guise of unity and progress. They gain stability and control by suppressing alternative forms of organization and expression.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__babel_reading, centralized_power_structures, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% These groups are the primary victims, forced to abandon their unique languages and cultural practices in favor of a single, imposed standard. Their identity is eroded, and their ability to communicate and organize independently is suppressed.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__babel_reading, diverse_linguistic_groups, payer,
+    powerless, generational, identity_locked, local).
+
+% These identities are targeted for homogenization, as the unified system seeks to erase local distinctiveness in pursuit of a universal, human-made order. Their traditions, narratives, and ways of life are systematically dismantled.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__babel_reading, local_cultural_identities, payer,
+    powerless, generational, identity_locked, local).
+
+% Individuals or small groups who question the necessity or morality of the unified system. They face active suppression, marginalization, and the threat of being cut off from the benefits of the 'unified' society if they do not conform.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__babel_reading, dissenting_voices, payer,
+    moderate, biographical, constrained, regional).
+
+% Those who believe in a higher, non-human source of meaning and order. Their perspectives are systematically excluded from the discourse, as the Babel project explicitly rejects any reference to transcendent authority, framing it as an obstacle to human self-realization.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__babel_reading, transcendent_authority_advocates, excluded,
+    organized, civilizational, identity_locked, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Aims to coordinate human effort and technological development towards a singular, unified vision of progress and stability, eliminating the 'chaos' of diversity and independent thought.
+% TRANSFER_FUNCTION: Transfers autonomy, cultural diversity, and individual expression from diverse populations to a centralized power structure, in exchange for a promise of collective security and self-sufficiency.
+% ABSENT_VOICES: Advocates for transcendent authority, diverse cultural and linguistic groups, and those who value pluralism over enforced uniformity are systematically silenced or marginalized. They would argue for the inherent value of diversity and the dangers of unchecked human hubris.
+% DISAPPEARANCE_RATIONALE: If this constraint vanished, the enforced uniformity would collapse, leading to a resurgence of diverse languages, cultures, and independent forms of social organization. The centralized power structures would lose their basis for control, and the global system would fragment into a more pluralistic, albeit potentially less 'stable' (from the architects' perspective), arrangement.
+% FOUNDING_PROBLEM: The problem of human vulnerability, perceived chaos from diversity, and the desire for ultimate control and security through human ingenuity alone, without reliance on external or divine forces.
+% FOUNDING_PROBLEM_CORROBORATION: The architects of the tower and their beneficiaries attest that the problem of human vulnerability and the need for unified control is ever-present. However, dissenting voices and excluded groups argue that the 'problem' is a pretext for power consolidation, and that genuine security lies in diversity and humility, not enforced uniformity. No corroboration from outside the benefiting parties supports the 'live' status of the problem as framed by the architects.
+narrative_ontology:disappearance_verdict(human_transcendence_pathway__babel_reading, world_rearranges).
+narrative_ontology:founding_problem_status(human_transcendence_pathway__babel_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(human_transcendence_pathway__babel_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(human_transcendence_pathway__babel_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(human_transcendence_pathway__babel_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(human_transcendence_pathway__babel_reading, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -159,16 +213,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.85) is high because the system demands the surrender of cultural and linguistic diversity, which is a profound cost for the victims. Suppression (0.90) is also very high, as the system actively eradicates alternatives and enforces uniformity through technological and social means. The theater ratio (0.10) is low, indicating that the system is genuinely functional in its goal of homogenization, with little performative maintenance; its coercive nature is direct. Accessibility collapse (0.75) is substantial, as alternatives are systematically dismantled. Resistance (0.60) is present but often fragmented and suppressed, leading to a high cost for those who resist.
+ *   The high extractiveness (0.85) reflects the immense cost borne by diverse populations in terms of lost cultural heritage, linguistic diversity, and individual autonomy. Suppression (0.90) is extremely high because the entire project relies on actively crushing any form of dissent or alternative expression to maintain its artificial unity. The theater ratio is low (0.10) because the constraint is overtly coercive; there is little pretense of genuine coordination or voluntary participation. The coordination function (unified human effort) is a cover for the underlying extraction and suppression. Accessibility collapse is high (0.75) as alternatives are systematically eliminated, and resistance is moderate (0.60) but constantly suppressed.
  *
  * PERSPECTIVAL GAP:
- *   The architects of the tower perceive this as a necessary coordination mechanism for human progress and stability, a 'rope' that solves the problem of disunity. The diverse linguistic groups and local cultures, however, experience it as a 'snare' that extracts their identity and autonomy for the benefit of a centralized power. The engine's classification will highlight this divergence.
+ *   From the perspective of the 'architects of the tower' and centralized power structures, this constraint is a necessary 'rope' for human progress and stability, solving the problem of fragmentation and vulnerability. From the perspective of diverse linguistic and cultural groups, it is a 'snare' that actively extracts their identity and autonomy through coercive homogenization. The engine's classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   The 'architects of the tower' and 'centralized authority' are clear beneficiaries (d near 0.0), as they gain power, control, and resources from the unified system. 'Diverse linguistic groups' and 'local cultures' are primary victims (d near 1.0), bearing the costs of cultural erasure and loss of autonomy. 'Individual autonomy' is an abstract victim, representing the systemic cost to human freedom. 'Prophets and critics' are excluded, their alternative perspectives suppressed.
+ *   The architects and centralized power structures are clear beneficiaries (d near 0.0) as they gain immense power and control. Diverse linguistic groups, local cultural identities, and dissenting voices are clear targets (d near 1.0) as they bear the full cost of homogenization and suppression. Transcendent authority advocates are excluded, their very existence challenging the premise of the constraint.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint's mandate is to achieve stability and self-sufficiency. However, the 'babel_reading' suggests that this mandate is pursued through coercive means, transforming a potential 'rope' (genuine coordination for stability) into a 'snare' (extraction through homogenization). The persistence of the constraint is driven by the concentrated benefits to the architects and centralized authority, rather than a genuine, shared need for this specific, uniform solution. The founding problem is contested, indicating a potential for mandatrophy where the original coordination function has been superseded by extractive practices.
+ *   This constraint is a snare from its inception, not a degraded rope. Its mandate to achieve human self-sufficiency without transcendent authority is inherently extractive, as it requires the suppression of diversity and the concentration of power. There is no 'mandate atrophy' in the sense of a function decaying; rather, the function itself is the extraction. The classification prevents mislabeling this as a coordination mechanism that merely went wrong; it was designed for coercive homogenization.
  */
 
 /* ==========================================================================
@@ -176,41 +230,41 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    natural_unity_vs_coerced_uniformity,
-    'Is the unity achieved by this system a natural outcome of human cooperation, or is it a coerced uniformity imposed by a powerful few?',
-    'Analysis of historical and sociological data on the emergence of large-scale human systems, distinguishing between voluntary convergence and enforced standardization. Examination of the degree of active suppression required to maintain the ''unity''.',
-    'If coerced, the constraint is firmly a snare, with its coordination claims serving as cover. If genuinely natural, the extractiveness and suppression metrics would be lower, potentially reclassifying it as a tangled rope or even a rope.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(natural_unity_vs_coerced_uniformity, conceptual, 'Distinguishing between genuine coordination and coercive homogenization.').
-
-omega_variable(
-    transcendent_reference_necessity,
-    'Is the exclusion of transcendent authority a necessary condition for human self-sufficiency, or does it lead to an impoverished and ultimately unstable form of human power?',
-    'Philosophical and theological analysis of the limits of human reason and power, and empirical observation of societies that have attempted to build self-sufficient systems without transcendent reference.',
-    'If transcendent reference is necessary for genuine human flourishing, then this constraint''s foundational premise is flawed, and its long-term stability is compromised, increasing its inherent fragility and potential for collapse.',
+    babel_vs_genuine_unity,
+    'Is the unity achieved by this constraint a genuine coordination for human flourishing, or a coercive uniformity that serves concentrated power?',
+    'Observe the long-term outcomes: if the system collapses due to internal contradictions and loss of meaning (as in the biblical narrative), it suggests coercive uniformity. If it leads to sustainable, diverse flourishing, it suggests genuine coordination.',
+    'If coercive, the classification as ''snare'' is reinforced. If genuine, it would challenge the high extractiveness and suppression metrics, potentially reclassifying towards ''tangled_rope'' or ''rope''.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(transcendent_reference_necessity, preference, 'The role of transcendent authority in human systems.').
+narrative_ontology:omega_variable(babel_vs_genuine_unity, conceptual, 'Distinguishing coercive uniformity from authentic unity.').
 
 omega_variable(
-    babel_vs_jerusalem_divergence,
-    'Does the ''babel_reading'' fundamentally foreclose the ''jerusalem_reading'' (authentic community through participatory labor and divine blessing), or can elements of both coexist in a complex reality?',
-    'Conceptual analysis of the core tenets of each reading and their logical compatibility within a single framework. Examination of historical instances where attempts at unified power have either suppressed or integrated diversity.',
-    'If ''babel_reading'' forecloses ''jerusalem_reading'', it highlights an irreconcilable conflict in foundational approaches to human community. If they can coexist, it suggests a more nuanced understanding of human power and its potential for both unity and diversity.',
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression structural (external barriers) or internalized (cognitive patterns that persist after barrier removal)?',
+    'Post-exit suppression trajectory: if suppression persists after the extractive mechanism is removed (e.g., if diverse groups, once freed, still struggle to reclaim their languages due to internalized norms), reclassify as partially internalized.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making true liberation more difficult.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism.').
+
+omega_variable(
+    kernel_reading_babel_identity,
+    'This constraint is the ''Babel Reading'' of the ''human_transcendence_pathway'' kernel. What would change if a sibling reading, like the ''Jerusalem Reading'' (authentic community through participatory labor under divine blessing), were adopted?',
+    'A shift in the foundational axioms and authority grounding, moving from human self-sufficiency to divine blessing, and from enforced uniformity to integrated plurality.',
+    'The entire structural profile would invert: extractiveness and suppression would drop dramatically, beneficiaries and victims would shift, and the claimed type would likely become ''rope'' or ''scaffold''.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(babel_vs_jerusalem_divergence, conceptual, 'Logical compatibility of Babel and Jerusalem readings.').
+narrative_ontology:omega_variable(kernel_reading_babel_identity, conceptual, 'Impact of adopting the ''Jerusalem Reading'' sibling.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(human_transcendence_pathway__babel_reading, 0, 50).
+narrative_ontology:interval(human_transcendence_pathway__babel_reading, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
@@ -218,27 +272,27 @@ narrative_ontology:interval(human_transcendence_pathway__babel_reading, 0, 50).
 
 % Theater ratio over time
 narrative_ontology:measurement(huma_tr_t0, human_transcendence_pathway__babel_reading, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(huma_tr_t10, human_transcendence_pathway__babel_reading, theater_ratio, 10, 0.18).
-narrative_ontology:measurement(huma_tr_t20, human_transcendence_pathway__babel_reading, theater_ratio, 20, 0.15).
-narrative_ontology:measurement(huma_tr_t30, human_transcendence_pathway__babel_reading, theater_ratio, 30, 0.12).
-narrative_ontology:measurement(huma_tr_t40, human_transcendence_pathway__babel_reading, theater_ratio, 40, 0.1).
-narrative_ontology:measurement(huma_tr_t50, human_transcendence_pathway__babel_reading, theater_ratio, 50, 0.1).
+narrative_ontology:measurement(huma_tr_t20, human_transcendence_pathway__babel_reading, theater_ratio, 20, 0.18).
+narrative_ontology:measurement(huma_tr_t40, human_transcendence_pathway__babel_reading, theater_ratio, 40, 0.15).
+narrative_ontology:measurement(huma_tr_t60, human_transcendence_pathway__babel_reading, theater_ratio, 60, 0.12).
+narrative_ontology:measurement(huma_tr_t80, human_transcendence_pathway__babel_reading, theater_ratio, 80, 0.11).
+narrative_ontology:measurement(huma_tr_t100, human_transcendence_pathway__babel_reading, theater_ratio, 100, 0.1).
 
 % Extraction over time
 narrative_ontology:measurement(huma_be_t0, human_transcendence_pathway__babel_reading, base_extractiveness, 0, 0.7).
-narrative_ontology:measurement(huma_be_t10, human_transcendence_pathway__babel_reading, base_extractiveness, 10, 0.75).
-narrative_ontology:measurement(huma_be_t20, human_transcendence_pathway__babel_reading, base_extractiveness, 20, 0.8).
-narrative_ontology:measurement(huma_be_t30, human_transcendence_pathway__babel_reading, base_extractiveness, 30, 0.83).
-narrative_ontology:measurement(huma_be_t40, human_transcendence_pathway__babel_reading, base_extractiveness, 40, 0.85).
-narrative_ontology:measurement(huma_be_t50, human_transcendence_pathway__babel_reading, base_extractiveness, 50, 0.85).
+narrative_ontology:measurement(huma_be_t20, human_transcendence_pathway__babel_reading, base_extractiveness, 20, 0.75).
+narrative_ontology:measurement(huma_be_t40, human_transcendence_pathway__babel_reading, base_extractiveness, 40, 0.8).
+narrative_ontology:measurement(huma_be_t60, human_transcendence_pathway__babel_reading, base_extractiveness, 60, 0.83).
+narrative_ontology:measurement(huma_be_t80, human_transcendence_pathway__babel_reading, base_extractiveness, 80, 0.84).
+narrative_ontology:measurement(huma_be_t100, human_transcendence_pathway__babel_reading, base_extractiveness, 100, 0.85).
 
 % Suppression requirement over time
 narrative_ontology:measurement(huma_su_t0, human_transcendence_pathway__babel_reading, suppression_requirement, 0, 0.75).
-narrative_ontology:measurement(huma_su_t10, human_transcendence_pathway__babel_reading, suppression_requirement, 10, 0.8).
-narrative_ontology:measurement(huma_su_t20, human_transcendence_pathway__babel_reading, suppression_requirement, 20, 0.85).
-narrative_ontology:measurement(huma_su_t30, human_transcendence_pathway__babel_reading, suppression_requirement, 30, 0.88).
-narrative_ontology:measurement(huma_su_t40, human_transcendence_pathway__babel_reading, suppression_requirement, 40, 0.9).
-narrative_ontology:measurement(huma_su_t50, human_transcendence_pathway__babel_reading, suppression_requirement, 50, 0.9).
+narrative_ontology:measurement(huma_su_t20, human_transcendence_pathway__babel_reading, suppression_requirement, 20, 0.8).
+narrative_ontology:measurement(huma_su_t40, human_transcendence_pathway__babel_reading, suppression_requirement, 40, 0.85).
+narrative_ontology:measurement(huma_su_t60, human_transcendence_pathway__babel_reading, suppression_requirement, 60, 0.88).
+narrative_ontology:measurement(huma_su_t80, human_transcendence_pathway__babel_reading, suppression_requirement, 80, 0.89).
+narrative_ontology:measurement(huma_su_t100, human_transcendence_pathway__babel_reading, suppression_requirement, 100, 0.9).
 
 
 /* ==========================================================================
@@ -246,9 +300,11 @@ narrative_ontology:measurement(huma_su_t50, human_transcendence_pathway__babel_r
    ========================================================================== */
 
 narrative_ontology:coordination_type(human_transcendence_pathway__babel_reading, enforcement_mechanism).
+narrative_ontology:affects_constraint(human_transcendence_pathway__babel_reading, human_transcendence_pathway__technocratic_vs_incarnational_reading).
+narrative_ontology:affects_constraint(human_transcendence_pathway__babel_reading, human_transcendence_pathway__jerusalem_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'human_transcendence_pathway' kernel, focusing on the dangers of collective human power seeking self-sufficiency without transcendent reference. It is linked to other readings of the same kernel, such as 'human_transcendence_pathway__jerusalem_reading' and 'human_transcendence_pathway__technocratic_vs_incarnational_reading', which offer alternative perspectives on human flourishing and the role of technology and authority.
+% This constraint is one of three readings of the 'human_transcendence_pathway' kernel. This 'Babel Reading' emphasizes human hubris and coercive uniformity, contrasting with the 'Jerusalem Reading' (authentic community) and the 'Technocratic vs. Incarnational Reading' (technological vs. divine transcendence).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

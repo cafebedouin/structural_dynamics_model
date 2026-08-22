@@ -2,194 +2,262 @@
   "header": {
     "constraint_id": "competence_exercise_validity__real_catastrophe_only",
     "version": "1.0",
-    "generated_date": "2024-07-30",
+    "generated_date": "2024-07-29",
     "status": "ACTIVE",
-    "story_uid": "dd65ee4c-2ac6-4d72-b106-233cfe6efe53"
+    "story_uid": "4ef039ba-e591-4b1d-9619-c7c750824388"
   },
   "base_properties": {
-    "extractiveness": 0.6,
+    "extractiveness": 0.65,
     "suppression": 0.7,
     "theater_ratio": 0.4,
-    "accessibility_collapse": 0.3,
-    "resistance": 0.5,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
     "claimed_type": "snare",
-    "human_readable": "Competence Exercise Validity: Real Catastrophe Only",
-    "topic_domain": "safety_engineering/organizational_learning/competence_retention",
-    "requires_active_enforcement": true,
+    "human_readable": "Competence Exercise Validity: Real Catastrophe Only Reading",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": false,
     "beneficiaries": [
-      "organizational_leadership",
-      "safety_consultants_profiting_from_complexity"
+      "incumbent_safety_regulators",
+      "organizational_leadership"
     ],
     "victims": [
       "frontline_operators",
-      "organizational_learning_initiatives",
-      "public_safety"
+      "organizational_learning_specialists"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine reflection of competence dynamics, or a rationalization for avoiding costly, effective training?",
-      "resolution_mechanism": "Empirical studies on the correlation between simulation fidelity/frequency and real-world catastrophic event outcomes, controlling for other safety factors.",
-      "impact": "If a rationalization, the constraint's extractiveness is higher, as it diverts resources from effective training to less effective, cheaper alternatives, while maintaining a facade of competence. This would shift the classification towards a Snare.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "This constraint is the 'real_catastrophe_only' reading of the 'competence_exercise_validity' kernel. It posits that only actual catastrophic events truly test and validate competence, rendering simulations insufficient. Sibling readings ('simulation_as_proxy', 'continuous_refresh_hybrid') offer alternative views on competence validation."
+      "name": "incumbent_safety_regulators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from a perceived stable safety record, which this reading attributes to luck or redundancy rather than proven competence. They are incentivized to maintain the status quo, as acknowledging the lack of true competence exercise would require costly reforms."
     },
     {
-      "id": "suppression_mechanism_ambiguity",
-      "question": "Is the measured suppression structural (lack of resources for better training) or internalized (belief that simulations are inherently inferior)?",
-      "resolution_mechanism": "Post-implementation analysis of new training budgets: if better training is still resisted despite funding, reclassify as partially internalized.",
-      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the belief system itself prevents effective competence development.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism in organizational learning."
+      "name": "organizational_leadership",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Benefits from the appearance of competence and a lack of incidents, avoiding the cost and disruption of rigorous, real-world competence testing. They may genuinely believe simulations are sufficient, or find it convenient to do so."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Bear the direct risk of untested competence in real-world scenarios. Their professional identity is tied to operational safety, yet they are denied the means to truly exercise and validate their skills outside of actual emergencies. Their feedback on simulation inadequacy is often dismissed."
+    },
+    {
+      "name": "organizational_learning_specialists",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for more robust and realistic competence exercise, including advanced simulations and real-world drills. They bear the cost of seeing their recommendations for deeper learning and validation dismissed, leading to a degradation of organizational resilience."
+    },
+    {
+      "name": "public_safety_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Would demand proof of competence beyond simulation, but are often excluded from the technical discussions or lack the specific expertise to challenge the prevailing view effectively. They bear the diffuse risk of systemic failure."
     }
   ],
+  "six_questions": {
+    "coordination_function": "This reading implicitly coordinates organizational behavior around a minimal standard of competence validation, primarily through simulation, maintaining a facade of readiness without the true exercise of skills.",
+    "transfer_function": "Transfers the burden of untested competence and latent risk from organizational leadership and regulators to frontline operators and the public, while transferring resources away from robust training and validation programs.",
+    "absent_voices": "Frontline operators and independent safety experts who have experienced near-misses or actual catastrophes would argue vehemently for more rigorous, real-world competence exercise, but their warnings are often siloed or dismissed as anecdotal.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint (the belief that only real catastrophe truly exercises competence) vanished, organizations would be forced to invest heavily in advanced, realistic training and validation methods, fundamentally altering safety protocols, resource allocation, and the perceived value of simulation. The entire safety engineering paradigm would shift.",
+    "founding_problem": "The problem of validating complex operational competence in high-stakes environments without incurring the costs and risks of real-world failures.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem is attested as live by organizational learning specialists and public safety advocates, who point to ongoing incidents and near-misses as evidence that current competence validation methods are insufficient. Incumbent regulators and leadership, however, often claim the problem is adequately managed by existing simulation protocols."
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1990,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 1998,
       "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2006,
       "value": 0.6
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.5
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.63
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1990,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.7
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 1990,
       "value": 0.25
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 1998,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
+      "time_point": 2006,
       "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2014,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.4
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint reflects the belief within some safety-critical organizations that true competence can only be validated and exercised during actual catastrophic events, rendering simulations or drills as insufficient substitutes. This perspective often leads to underinvestment in robust simulation environments and continuous training, leaving competence untested and potentially atrophied until a real crisis occurs. The safety record, in this view, is a product of luck or system redundancy rather than proven, actively maintained competence.",
-    "logic_rationale": "The extractiveness (0.6) stems from the cost of unexercised competence, leading to higher risks and potential for greater losses during actual events. Suppression (0.7) is high because this belief system actively discourages and devalues alternative, more proactive methods of competence development, often due to the perceived high cost or complexity of realistic simulations. The theater ratio (0.4) indicates that while some training occurs, it often serves to maintain a facade of preparedness rather than genuinely building and testing competence. Accessibility collapse (0.3) is low because alternative training methods exist, but are actively suppressed. Resistance (0.5) is moderate, as some within the organization (e.g., frontline operators) push for better training, but their efforts are often overridden.",
-    "perspectival_gap": "Organizational leadership and certain safety consultants may perceive this constraint as a 'mountain' or 'rope' – an unavoidable truth about human competence or a necessary cost-saving measure. Frontline operators and public safety advocates, however, experience it as a 'snare' – a dangerous and extractive belief system that puts lives at risk by deferring true competence validation to actual disasters.",
-    "directionality_logic": "Organizational leadership benefits by avoiding the high costs of comprehensive simulation and continuous training, shifting the burden of competence validation to 'real' events (low d). Safety consultants who profit from the complexity of post-catastrophe analysis or 'expert' advice also benefit (low d). Frontline operators and public safety are victims, bearing the direct risks and consequences of unexercised competence (high d). Organizational learning initiatives are victims as their efforts to implement proactive training are undermined (high d).",
-    "mandatrophy_analysis": "This constraint prevents mislabeling a dangerous organizational belief as a 'natural law' of competence. By classifying it as a Snare, the framework highlights the active extraction of safety and the suppression of effective learning, rather than accepting it as an inevitable reality. The belief system itself acts as a barrier to addressing the founding problem of ensuring competence.",
-    "kernel_context": "This constraint is the 'real_catastrophe_only' reading of the 'competence_exercise_validity' kernel. It posits that only actual catastrophic events truly test and validate competence, rendering simulations insufficient. Sibling readings include 'simulation_as_proxy' (simulation counts as valid exercise) and 'continuous_refresh_hybrid' (simulation is necessary but not sufficient, requiring continuous drill cycles)."
+    "narrative_context": "This constraint represents the reading that only actual catastrophic events truly validate competence in high-stakes domains, rendering simulations insufficient. This perspective, often implicit, leads to a system where competence is not truly exercised or proven until a real failure occurs. The safety record, therefore, reflects luck or system redundancy rather than adequately tested human capability. This reading masks the decay of actual competence and creates a 'snare' for those operating within such systems, as they are exposed to unacknowledged risks.",
+    "key_agents": [
+      "incumbent_safety_regulators: Primary beneficiary (institutional/constrained) — maintain status quo.",
+      "organizational_leadership: Primary beneficiary (powerful/constrained) — avoids costly validation.",
+      "frontline_operators: Primary target (moderate/identity_locked) — bear direct risk of untested competence.",
+      "organizational_learning_specialists: Secondary target (organized/constrained) — recommendations for robust validation are dismissed.",
+      "public_safety_advocates: Excluded voice (organized/mobile) — demand proof beyond simulation."
+    ],
+    "logic_rationale": "The extractiveness (0.65) stems from the deferred cost of true competence validation, which is borne by operators and the public in the form of latent risk. Suppression (0.7) arises from the institutional inertia and the difficulty of challenging a 'safety record' that appears stable, even if it's due to luck. The theater ratio (0.4) reflects the performative aspect of simulations that are presented as adequate competence exercise, even when they are known to be insufficient. The metrics show a gradual increase in extractiveness and suppression over time, as the gap between perceived and actual competence widens.",
+    "perspectival_gap": "Organizational leadership and regulators perceive the system as stable and competent, benefiting from the lack of incidents. Frontline operators and learning specialists, however, experience the system as one that fails to adequately prepare them for real challenges, leaving them vulnerable. The engine's classification will highlight this divergence.",
+    "directionality_logic": "Incumbent safety regulators and organizational leadership are beneficiaries, as they avoid the costs of rigorous validation and maintain a favorable public image. Frontline operators and organizational learning specialists are payers, bearing the risks and the frustration of inadequate preparation. Public safety advocates are excluded, their concerns often marginalized.",
+    "mandatrophy_analysis": "This constraint is a snare because it extracts safety and preparedness from operators and the public under the guise of 'competence validation' via simulation. The coordination story (simulations provide some training) is cover for the extraction of resources and the deferral of risk. The classification prevents mislabeling this as a 'rope' (genuine coordination) by highlighting the high extractiveness and suppression, and the identifiable victims."
   },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_threshold",
+      "question": "At what level of fidelity and complexity do simulations become a valid substitute for real-world competence exercise?",
+      "resolution_mechanism": "Empirical studies correlating simulation performance with real-world incident response, and expert consensus on minimum fidelity requirements for specific operational contexts.",
+      "impact": "If a high fidelity threshold is established and current simulations fall short, it would expose the current system's inadequacy, increasing extractiveness and suppression metrics. If current simulations are found to be sufficient, it would challenge this reading's core premise.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The point at which simulation adequately substitutes for real-world experience."
+    },
+    {
+      "id": "risk_tolerance_vs_competence_validation",
+      "question": "Is the implicit acceptance of untested competence a reflection of an unacknowledged high-risk tolerance, or a genuine belief in the efficacy of current validation methods?",
+      "resolution_mechanism": "Analysis of organizational decision-making under uncertainty, and explicit surveys of leadership's risk appetite versus their stated confidence in competence validation.",
+      "impact": "If it's unacknowledged risk tolerance, the constraint's extractiveness is higher, as it's a deliberate deferral of safety costs. If it's genuine belief, the problem is epistemic, and the solution lies in better evidence, not just increased pressure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing between risk tolerance and epistemic error in competence validation."
+    },
+    {
+      "id": "kernel_reading_difference",
+      "question": "This constraint is one reading of the 'competence_exercise_validity' kernel. How would the classification change if a sibling reading, such as 'simulation_as_proxy' or 'continuous_refresh_hybrid', were adopted?",
+      "resolution_mechanism": "Comparative analysis of the structural implications of each reading on resource allocation, risk distribution, and perceived competence.",
+      "impact": "Adopting 'simulation_as_proxy' would likely lower extractiveness and suppression, reclassifying towards a 'rope' or 'tangled_rope' by legitimizing current practices. Adopting 'continuous_refresh_hybrid' would likely increase immediate costs but reduce long-term risk, potentially shifting towards a 'scaffold' for transition to a more robust system.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative kernel readings on constraint classification."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "identity_coordination"
   },
   "network": {
-    "affects_constraints": [
-      "organizational_risk_tolerance",
-      "safety_budget_allocation"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the 'competence_exercise_validity' kernel, which also includes 'simulation_as_proxy' and 'continuous_refresh_hybrid'. Each reading represents a distinct structural claim about how competence is validated and maintained."
-  },
-  "cs_structure": {
-    "kernel_codification": "implicit",
-    "authority_grounding": "practice",
-    "interpretation_layer_present": true,
-    "reading_relations": [
-      {
-        "sibling_id": "simulation_as_proxy",
-        "relation": "forecloses"
-      },
-      {
-        "sibling_id": "continuous_refresh_hybrid",
-        "relation": "forecloses"
-      }
-    ],
-    "axioms": [
-      {
-        "atom": "competence_is_event_driven",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "simulation_is_inherently_insufficient",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      }
-    ],
-    "reference_frame": "catastrophe_as_ultimate_test",
-    "drift_state": {
-      "moment": "contemporary_safety_science_era",
-      "direction": "axiom_overriding",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    "affects_constraints": []
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "continuous_refresh_hybrid",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_is_insufficient_for_true_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "real_catastrophe_is_the_ultimate_test",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "untested_competence_latent_risk",
+    "drift_state": {
+      "moment": "contemporary_safety_engineering_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
   }
 }

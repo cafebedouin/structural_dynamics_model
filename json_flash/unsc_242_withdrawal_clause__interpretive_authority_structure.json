@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "e196cdc9-43c2-4310-bb60-3b74f32bae01"
+    "story_uid": "6db04d99-fccb-4f7c-a0a2-14ea57506644"
   },
   "base_properties": {
     "extractiveness": 0.85,
@@ -18,12 +18,79 @@
     "requires_active_enforcement": true,
     "beneficiaries": [
       "occupying_state",
-      "veto_powers"
+      "states_with_veto_power"
     ],
     "victims": [
-      "parties_seeking_legal_closure",
-      "international_legal_system"
+      "international_court_of_justice",
+      "drafting_states",
+      "states_seeking_legal_closure"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "occupying_state",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Benefits from the interpretive ambiguity, allowing it to maintain control over occupied territories by claiming customary practice as the legitimate interpretive authority. Its non-cooperation capacity prevents definitive resolution."
+    },
+    {
+      "name": "international_court_of_justice",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Claims judicial interpretation as the legitimate authority but is unable to enforce a definitive ruling due to the political nature of the dispute and the non-compliance of powerful states. Its authority is undermined by the ongoing contest."
+    },
+    {
+      "name": "drafting_states",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Claim authorial intent as the legitimate interpretive authority, but their collective will is fragmented and lacks the enforcement power to impose a single reading. Their efforts to clarify the resolution are frustrated by the meta-dispute."
+    },
+    {
+      "name": "states_with_veto_power",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Exercise their Security Council veto power to prevent resolutions that would definitively settle the interpretive dispute, thereby preserving the ambiguity that benefits their geopolitical interests or allies. They are the ultimate arbiters of the meta-dispute."
+    },
+    {
+      "name": "states_seeking_legal_closure",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are victims of the perpetual interpretive ambiguity, as it prevents the establishment of clear legal boundaries and perpetuates conflict. They lack the power to force a resolution and are trapped by the ongoing meta-dispute."
+    },
+    {
+      "name": "international_legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the various claims to interpretive authority and the implications of the ongoing dispute for international law. They can highlight the structural nature of the snare but lack direct power to resolve it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The constraint nominally coordinates the interpretation of a critical UN Security Council resolution, aiming to provide a framework for peace in the Middle East.",
+    "transfer_function": "Transfers the power to define the scope of withdrawal from a clear, universally accepted legal interpretation to a contested, politically driven process, benefiting those who can leverage ambiguity.",
+    "absent_voices": "The populations of occupied territories, whose future is directly determined by the interpretation of the withdrawal clause, are largely absent from the high-level interpretive authority dispute. They would advocate for a clear, maximal withdrawal interpretation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the interpretive authority structure vanished, a definitive interpretation of UNSC 242 would likely emerge, either through judicial consensus or a new, unambiguous resolution. This would fundamentally alter the legal and political landscape of the Israeli-Palestinian conflict, forcing a resolution to the territorial dispute.",
+    "founding_problem": "The original problem was to establish a framework for peace in the Middle East following the 1967 Six-Day War, requiring withdrawal from occupied territories in exchange for secure and recognized boundaries.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem remains live, as attested by ongoing international diplomatic efforts, UN resolutions, and the continued conflict in the region. International legal scholars and human rights organizations corroborate that the core issues of peace and secure boundaries are unresolved due to the interpretive deadlock."
   },
   "interval": {
     "start": 1967,
@@ -33,22 +100,22 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1967,
-      "value": 0.6
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1980,
       "value": 0.7
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
       "time_point": 1995,
-      "value": 0.78
+      "value": 0.8
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2010,
-      "value": 0.82
+      "value": 0.83
     },
     {
       "metric": "base_extractiveness",
@@ -58,22 +125,22 @@
     {
       "metric": "suppression_requirement",
       "time_point": 1967,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1980,
       "value": 0.6
     },
     {
       "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
       "time_point": 1995,
-      "value": 0.68
+      "value": 0.7
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2010,
-      "value": 0.72
+      "value": 0.73
     },
     {
       "metric": "suppression_requirement",
@@ -88,17 +155,17 @@
     {
       "metric": "theater_ratio",
       "time_point": 1980,
-      "value": 0.28
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
       "time_point": 1995,
-      "value": 0.35
+      "value": 0.3
     },
     {
       "metric": "theater_ratio",
       "time_point": 2010,
-      "value": 0.38
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
@@ -107,31 +174,30 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the contested authority structure for interpreting the withdrawal clause of UNSC Resolution 242. The International Court of Justice, drafting states, and the occupying state each claim primary interpretive authority, leading to a meta-dispute that prevents definitive resolution of the underlying textual ambiguity. This meta-dispute itself functions as a snare, allowing parties with political leverage to benefit from the perpetuated ambiguity.",
-    "logic_rationale": "The extractiveness is high (0.85) because the interpretive ambiguity allows the occupying state to retain territory and veto powers to maintain strategic flexibility, at the expense of parties seeking legal closure. Suppression (0.75) is high because the various claims to authority actively suppress any single, definitive interpretation from taking hold, effectively trapping those seeking resolution. The theater ratio (0.4) reflects that while there are genuine legal arguments, a significant portion of the 'interpretive' activity serves to maintain the ambiguity rather than resolve it.",
-    "perspectival_gap": "The occupying state and veto powers experience this as a beneficial flexibility, allowing them to pursue their interests within a legally ambiguous framework. Parties seeking legal closure and the international legal system experience it as a profound failure of international law, leading to ongoing costs and erosion of legitimacy. The engine's per-seat classification will reflect this divergence.",
-    "directionality_logic": "The occupying state and veto powers are beneficiaries (d near 0.0) as they gain from the lack of definitive interpretation. Parties seeking legal closure and the international legal system are victims (d near 1.0) as they bear the costs of unresolved disputes and undermined legal authority. The ICJ and drafting states, while claiming authority, are constrained in their ability to enforce it, placing them closer to the middle, but still subject to the snare's dynamics.",
-    "mandatrophy_analysis": "The constraint's original mandate was to provide a clear mechanism for treaty interpretation. However, it has atrophied into a mechanism for perpetuating ambiguity, serving the interests of powerful actors. The high extractiveness and suppression, coupled with the 'dead' founding problem status, indicate a snare where the coordination function (resolving ambiguity) has been subverted by extraction (benefiting from ambiguity).",
-    "kernel_context": "This constraint, 'interpretive_authority_structure', is one reading of the 'unsc_242_withdrawal_clause' kernel. It focuses on the meta-dispute over who holds the legitimate authority to interpret the clause. Sibling readings, 'maximal_withdrawal_reading' and 'partial_withdrawal_reading', focus on the substantive interpretations themselves, which are enabled by the ambiguity this constraint describes."
+    "narrative_context": "This constraint describes the meta-dispute over the legitimate authority to interpret the withdrawal clause of UNSC Resolution 242. The resolution calls for 'withdrawal of Israeli armed forces from territories occupied in the recent conflict,' but the absence of a definite article before 'territories' in the English text (present in the French) created an ambiguity. This constraint focuses on the structural snare created by the contested interpretive authority itself: the International Court of Justice claims judicial interpretation, drafting states claim authorial intent, and the occupying state claims customary practice. This meta-dispute prevents definitive legal closure, allowing powerful actors to benefit from the ambiguity.",
+    "logic_rationale": "The extractiveness is high (0.85) because the interpretive ambiguity allows the occupying state to maintain control over territories without clear legal accountability, effectively extracting sovereignty and resources. Suppression is high (0.75) because the veto power of certain states and the non-cooperation of the occupying state actively suppress any definitive, binding interpretation. The theater ratio is moderate (0.40) as diplomatic efforts and legal arguments continue, creating the appearance of progress while the core interpretive deadlock persists. The claimed type is 'snare' because the coordination story (resolving the conflict through legal interpretation) is cover for the extraction enabled by the unresolved authority dispute.",
+    "directionality_logic": "The occupying state and states with veto power are beneficiaries, as the interpretive ambiguity allows them to maintain their positions or protect allies without legal consequence. The ICJ, drafting states, and states seeking legal closure are victims, as their efforts to achieve a definitive, legally binding interpretation are frustrated by the contested authority. The meta-dispute itself is the mechanism of extraction.",
+    "perspectival_gap": "From the perspective of the occupying state and its allies, the interpretive authority structure is a legitimate contest of legal principles, allowing for a flexible, pragmatic approach to a complex geopolitical issue. From the perspective of the ICJ and states seeking legal closure, it is a structural failure of international law, enabling ongoing occupation and undermining the rule of law.",
+    "kernel_context": "This constraint, 'interpretive_authority_structure,' is one reading of the 'unsc_242_withdrawal_clause' kernel. It focuses on the meta-dispute over who holds the legitimate authority to interpret the resolution's ambiguous text. Sibling readings include 'maximal_withdrawal_reading' (withdrawal from all territories, based on French text and Charter) and 'partial_withdrawal_reading' (discretionary withdrawal, based on English text and secure boundaries principle). This reading highlights how the contest over authority itself creates a snare, perpetuating the substantive ambiguity."
   },
   "omegas": [
     {
       "id": "legitimacy_of_interpretive_claims",
-      "question": "Which claim to interpretive authority (ICJ, drafting states, customary practice) holds the greatest legitimacy under international law, independent of political power?",
-      "resolution_mechanism": "A universally accepted, non-politicized advisory opinion from a body like the International Law Commission, or a new, unambiguous UN Security Council resolution that explicitly defines interpretive hierarchy.",
-      "impact": "If one claim is definitively established as legitimate, the snare would weaken as the ambiguity it thrives on would be reduced, potentially leading to a clearer legal obligation for withdrawal.",
+      "question": "Which claim to interpretive authority (judicial, authorial intent, customary practice) holds the greatest legitimacy in international law, independent of political power?",
+      "resolution_mechanism": "A definitive advisory opinion from a universally recognized, politically unconstrained international legal body, or a new, unambiguous UN Security Council resolution that explicitly defines the interpretive hierarchy.",
+      "impact": "If one claim is definitively established as superior, the interpretive ambiguity would collapse, forcing a resolution to the withdrawal clause and reclassifying the constraint away from a snare.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "The underlying legitimacy of competing claims to interpretive authority."
+      "description": "The underlying legitimacy of competing interpretive authority claims."
     },
     {
-      "id": "political_vs_legal_capture",
-      "question": "To what extent is the interpretive authority structure captured by political interests (e.g., veto powers) versus being a genuine, albeit complex, legal dispute?",
-      "resolution_mechanism": "Analysis of voting records, diplomatic cables, and state practice to quantify instances where political interests demonstrably override legal arguments in interpretive debates.",
-      "impact": "If political capture is dominant, the constraint is more clearly a snare, as its 'legal' function is merely a cover for power dynamics. If it's a genuine legal dispute, it might lean more towards a tangled rope with high coordination costs.",
+      "id": "political_will_for_resolution",
+      "question": "To what extent is the persistence of the interpretive authority dispute driven by genuine legal disagreement versus the political will of powerful states to maintain ambiguity?",
+      "resolution_mechanism": "Analysis of diplomatic archives and internal state communications to identify instances where legal arguments were strategically deployed to mask political objectives, or a shift in geopolitical alignments that removes the incentive for ambiguity.",
+      "impact": "If primarily political, the constraint is a pure snare, with legal arguments serving as theater. If genuine legal disagreement, the constraint might be a tangled rope, with a real coordination problem exacerbated by legal complexity.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The degree of political capture in the interpretive authority structure."
+      "description": "The balance between legal and political drivers of interpretive ambiguity."
     }
   ],
   "boltzmann": {
@@ -142,25 +208,19 @@
       "unsc_242_withdrawal_clause__maximal_withdrawal_reading",
       "unsc_242_withdrawal_clause__partial_withdrawal_reading"
     ],
-    "dual_formulation_note": "This constraint describes the meta-dispute over interpretive authority for UNSC Resolution 242's withdrawal clause. It enables the persistence of the 'maximal_withdrawal_reading' and 'partial_withdrawal_reading' by preventing a definitive resolution between them."
+    "dual_formulation_note": "This constraint describes the meta-dispute over interpretive authority for UNSC Resolution 242's withdrawal clause, which structurally influences the viability and contestation of the 'maximal_withdrawal_reading' and 'partial_withdrawal_reading' sibling constraints. The ambiguity of authority prevents either substantive reading from achieving definitive legal status."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "distributed",
-    "reference_frame": "un_charter_interpretive_principles",
-    "drift_state": {
-      "moment": "contemporary_geopolitical_era",
-      "direction": "authority_erosion",
-      "magnitude": "severe",
-      "acknowledged": true
-    },
+    "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "unsc_242_withdrawal_clause__maximal_withdrawal_reading",
+        "sibling_id": "maximal_withdrawal_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "unsc_242_withdrawal_clause__partial_withdrawal_reading",
+        "sibling_id": "partial_withdrawal_reading",
         "relation": "coexists_with"
       }
     ],
@@ -170,18 +230,32 @@
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
+      },
+      {
+        "atom": "ambiguity_serves_political_ends",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
       }
-    ]
+    ],
+    "reference_frame": "unresolved_interpretive_pluralism",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

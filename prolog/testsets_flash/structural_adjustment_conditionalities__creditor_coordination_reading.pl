@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -69,17 +73,17 @@
  *   domain: international_political_economy/development_finance/institutional_economics
  *
  * SUMMARY:
- *   This constraint models structural adjustment conditionalities from the
- *   perspective of international creditors and financial institutions,
- *   viewing them as necessary coordination mechanisms to ensure fiscal
- *   sustainability and maintain market confidence in debtor nations. It is
- *   one reading of the 'structural_adjustment_conditionalities' kernel,
- *   focusing on the coordination problem solved and the benefits to the
- *   international financial system and future taxpayers, with 'inefficient
- *   state sectors' as the primary victims of necessary reforms. The claimed
- *   type is 'rope' because, from this perspective, the benefits of
- *   coordination outweigh the extraction, which is seen as a necessary cost
- *   of adjustment.
+ *   This constraint story analyzes structural adjustment conditionalities
+ *   from the perspective of international creditors, viewing them as
+ *   essential coordination mechanisms. In this reading, conditionalities
+ *   solve a genuine collective action problem in international finance by
+ *   ensuring fiscal sustainability and maintaining market confidence,
+ *   benefiting both creditors and future taxpayers in debtor states. The
+ *   'victims' are identified as inefficient state sectors that are reformed
+ *   or dismantled for the greater good of economic stability. This reading
+ *   acknowledges some extraction (0.2) and suppression (0.4) as necessary
+ *   costs of coordination, but frames them as proportionate to the benefits
+ *   of a stable global financial system.
  *
  */
 
@@ -88,12 +92,12 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(structural_adjustment_conditionalities__creditor_coordination_reading, 0.25).
+domain_priors:base_extractiveness(structural_adjustment_conditionalities__creditor_coordination_reading, 0.2).
 domain_priors:suppression_score(structural_adjustment_conditionalities__creditor_coordination_reading, 0.4).
 domain_priors:theater_ratio(structural_adjustment_conditionalities__creditor_coordination_reading, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(structural_adjustment_conditionalities__creditor_coordination_reading, extractiveness, 0.25).
+narrative_ontology:constraint_metric(structural_adjustment_conditionalities__creditor_coordination_reading, extractiveness, 0.2).
 narrative_ontology:constraint_metric(structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 0.4).
 narrative_ontology:constraint_metric(structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 0.1).
 
@@ -109,38 +113,81 @@ narrative_ontology:topic_domain(structural_adjustment_conditionalities__creditor
 domain_priors:requires_active_enforcement(structural_adjustment_conditionalities__creditor_coordination_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(structural_adjustment_conditionalities__creditor_coordination_reading, '05670b19-3801-4d04-98de-9f1c1623cbeb').
-narrative_ontology:cs_kernel_codification('05670b19-3801-4d04-98de-9f1c1623cbeb', formalized).
-narrative_ontology:cs_authority_grounding('05670b19-3801-4d04-98de-9f1c1623cbeb', expertise).
-narrative_ontology:cs_interpretation_layer_present('05670b19-3801-4d04-98de-9f1c1623cbeb').
-narrative_ontology:cs_reading_relation('05670b19-3801-4d04-98de-9f1c1623cbeb', structural_adjustment_conditionalities__debtor_extraction_reading, coexists_with).
-narrative_ontology:cs_reading_relation('05670b19-3801-4d04-98de-9f1c1623cbeb', structural_adjustment_conditionalities__hybrid_selectivity_reading, coexists_with).
-narrative_ontology:cs_axiom('05670b19-3801-4d04-98de-9f1c1623cbeb', foundational, fiscal_discipline_is_foundational_for_growth).
-narrative_ontology:cs_axiom_status(fiscal_discipline_is_foundational_for_growth, holdable).
-narrative_ontology:cs_axiom_grounding('05670b19-3801-4d04-98de-9f1c1623cbeb', fiscal_discipline_is_foundational_for_growth, empirically_contingent).
-narrative_ontology:cs_axiom('05670b19-3801-4d04-98de-9f1c1623cbeb', foundational, market_confidence_is_a_prerequisite_for_investment).
-narrative_ontology:cs_axiom_status(market_confidence_is_a_prerequisite_for_investment, holdable).
-narrative_ontology:cs_axiom_grounding('05670b19-3801-4d04-98de-9f1c1623cbeb', market_confidence_is_a_prerequisite_for_investment, empirically_contingent).
-narrative_ontology:cs_reference_frame('05670b19-3801-4d04-98de-9f1c1623cbeb', post_bretton_woods_consensus).
-narrative_ontology:cs_drift_state('05670b19-3801-4d04-98de-9f1c1623cbeb', contemporary_global_south_critiques, gap(authority_erosion, substantial, true)).
-narrative_ontology:cs_created_at('05670b19-3801-4d04-98de-9f1c1623cbeb', '').
+narrative_ontology:cs_story_uid(structural_adjustment_conditionalities__creditor_coordination_reading, 'b0d2db17-4863-4441-853b-feeb49914b0a').
+narrative_ontology:cs_kernel_codification('b0d2db17-4863-4441-853b-feeb49914b0a', formalized).
+narrative_ontology:cs_authority_grounding('b0d2db17-4863-4441-853b-feeb49914b0a', lineage).
+narrative_ontology:cs_interpretation_layer_present('b0d2db17-4863-4441-853b-feeb49914b0a').
+narrative_ontology:cs_reading_relation('b0d2db17-4863-4441-853b-feeb49914b0a', structural_adjustment_conditionalities__debtor_extraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b0d2db17-4863-4441-853b-feeb49914b0a', structural_adjustment_conditionalities__hybrid_selectivity_reading, coexists_with).
+narrative_ontology:cs_axiom('b0d2db17-4863-4441-853b-feeb49914b0a', foundational, fiscal_sustainability_is_paramount).
+narrative_ontology:cs_axiom_status(fiscal_sustainability_is_paramount, holdable).
+narrative_ontology:cs_axiom_grounding('b0d2db17-4863-4441-853b-feeb49914b0a', fiscal_sustainability_is_paramount, instrumental).
+narrative_ontology:cs_axiom('b0d2db17-4863-4441-853b-feeb49914b0a', foundational, market_liberalization_drives_growth).
+narrative_ontology:cs_axiom_status(market_liberalization_drives_growth, holdable).
+narrative_ontology:cs_axiom_grounding('b0d2db17-4863-4441-853b-feeb49914b0a', market_liberalization_drives_growth, empirically_contingent).
+narrative_ontology:cs_reference_frame('b0d2db17-4863-4441-853b-feeb49914b0a', washington_consensus_framework).
+narrative_ontology:cs_drift_state('b0d2db17-4863-4441-853b-feeb49914b0a', contemporary_post_crisis_era, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_created_at('b0d2db17-4863-4441-853b-feeb49914b0a', '').
 narrative_ontology:cs_kernel_id(structural_adjustment_conditionalities__creditor_coordination_reading, structural_adjustment_conditionalities).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(structural_adjustment_conditionalities__creditor_coordination_reading, international_financial_institutions).
-narrative_ontology:constraint_beneficiary(structural_adjustment_conditionalities__creditor_coordination_reading, private_creditors).
-narrative_ontology:constraint_beneficiary(structural_adjustment_conditionalities__creditor_coordination_reading, future_taxpayers_debtor_nations).
-narrative_ontology:constraint_victim(structural_adjustment_conditionalities__creditor_coordination_reading, inefficient_state_sectors_debtor_nations).
+narrative_ontology:constraint_beneficiary(structural_adjustment_conditionalities__creditor_coordination_reading, international_creditors).
+narrative_ontology:constraint_beneficiary(structural_adjustment_conditionalities__creditor_coordination_reading, future_taxpayers_in_debtor_states).
+narrative_ontology:constraint_beneficiary(structural_adjustment_conditionalities__creditor_coordination_reading, global_financial_markets).
+narrative_ontology:constraint_victim(structural_adjustment_conditionalities__creditor_coordination_reading, inefficient_state_sectors_in_debtor_states).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(structural_adjustment_conditionalities__creditor_coordination_reading, debtor_state_governments).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Provide loans to debtor states, conditional on policy reforms. They benefit from the increased likelihood of repayment and the stability of the international financial system. They set the terms of conditionalities to ensure fiscal discipline and market-oriented reforms.
+narrative_ontology:constraint_stakeholder(structural_adjustment_conditionalities__creditor_coordination_reading, international_creditors, agenda_setter,
+    institutional, generational, mobile, global).
+
+% Receive loans but must implement often unpopular policy reforms, such as privatization, deregulation, and austerity measures. They bear the political cost of these reforms but gain access to crucial financing.
+narrative_ontology:constraint_stakeholder(structural_adjustment_conditionalities__creditor_coordination_reading, debtor_state_governments, payer,
+    moderate, biographical, constrained, national).
+
+% Are targeted for reform or dismantling under conditionalities, leading to job losses, reduced subsidies, and loss of political influence. They bear the direct costs of structural adjustment.
+narrative_ontology:constraint_stakeholder(structural_adjustment_conditionalities__creditor_coordination_reading, inefficient_state_sectors_in_debtor_states, payer,
+    powerless, immediate, trapped, local).
+
+% Benefit from improved fiscal health, reduced national debt, and a more stable economy in the long run, theoretically leading to lower taxes and better public services. Their benefit is diffuse and delayed.
+narrative_ontology:constraint_stakeholder(structural_adjustment_conditionalities__creditor_coordination_reading, future_taxpayers_in_debtor_states, beneficiary,
+    powerless, generational, identity_locked, national).
+
+% Benefit from the perceived stability and predictability that conditionalities bring to international lending, reducing systemic risk and encouraging capital flows. They are a diffuse beneficiary of the coordination.
+narrative_ontology:constraint_stakeholder(structural_adjustment_conditionalities__creditor_coordination_reading, global_financial_markets, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: To coordinate lending and borrowing behavior between international creditors and debtor states, ensuring that loans are used to promote fiscal sustainability and market confidence, thereby preventing moral hazard and ensuring repayment.
+% TRANSFER_FUNCTION: Transfers financial capital from international creditors to debtor states, in exchange for policy commitments (conditionalities) that transfer control over economic policy decisions from debtor states to a framework aligned with creditor interests.
+% ABSENT_VOICES: Labor unions, civil society organizations, and marginalized communities in debtor states, who often bear the brunt of austerity measures and privatization, would argue for alternative development models that prioritize social welfare over market liberalization.
+% DISAPPEARANCE_RATIONALE: If conditionalities vanished, international lending to developing countries would likely become more volatile and less predictable, potentially leading to increased defaults, reduced market confidence, and a breakdown in the current system of development finance. Debtor states would lose a key source of financing, but also regain full policy autonomy.
+% FOUNDING_PROBLEM: The problem of moral hazard in international lending: debtor states might undertake unsustainable fiscal policies, expecting bailouts, and creditors might lend recklessly, expecting to be repaid regardless of debtor performance. This led to cycles of debt crises and instability.
+% FOUNDING_PROBLEM_CORROBORATION: International financial institutions (IMF, World Bank) and major creditor nations consistently attest that the problem of moral hazard and the need for fiscal discipline remain live. Independent economic analyses, while critical of specific conditionalities, generally acknowledge the underlying coordination problem in international finance.
+narrative_ontology:disappearance_verdict(structural_adjustment_conditionalities__creditor_coordination_reading, world_rearranges).
+narrative_ontology:founding_problem_status(structural_adjustment_conditionalities__creditor_coordination_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(structural_adjustment_conditionalities__creditor_coordination_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(structural_adjustment_conditionalities__creditor_coordination_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(structural_adjustment_conditionalities__creditor_coordination_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(structural_adjustment_conditionalities__creditor_coordination_reading, 0.2, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -155,13 +202,13 @@ narrative_ontology:story_seed(structural_adjustment_conditionalities__creditor_c
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.25) because the primary function is seen as coordination and risk reduction, with extraction being a byproduct of necessary reforms rather than an end in itself. Suppression is moderate (0.4) as debtor nations have limited alternatives to international financing, but the enforcement is primarily policy-based rather than overtly coercive. Theater ratio is low (0.1) as the conditionalities are genuinely intended to achieve fiscal stability and market confidence, with minimal performative elements from this perspective. The metrics reflect the view that conditionalities are a functional, albeit sometimes difficult, tool for global financial stability.
+ *   The low extractiveness (0.2) reflects the view that conditionalities primarily serve a coordination function, with any extraction being a necessary cost of ensuring fiscal discipline and market confidence. Suppression (0.4) is present as active enforcement is required to ensure compliance, but it's not seen as excessive given the stakes of international financial stability. The low theater ratio (0.1) indicates that the stated purpose of conditionalities (fiscal sustainability) is largely aligned with their actual operation in this reading. Accessibility collapse (0.6) is moderate, as debtor states have some, albeit constrained, alternatives, and resistance (0.3) is present but not overwhelming.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of debtor nations and affected populations (as in the 'debtor_extraction_reading' sibling), the same conditionalities would compute as highly extractive and suppressive. This reading emphasizes the systemic benefits and the 'tough love' aspect of necessary reforms, leading to a 'rope' classification, while other readings would highlight the asymmetric power dynamics and social costs, leading to 'snare' or 'tangled_rope' classifications. The divergence is rooted in whether the 'adjustment' is seen as a shared burden for collective good or an imposed cost for creditor benefit.
+ *   From the creditor coordination perspective, the constraint is a Rope, solving a critical coordination problem. However, from the perspective of debtor states or affected populations, the same conditionalities might be experienced as a Snare or Tangled Rope due to perceived coercion and asymmetric extraction. The engine's per-seat classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   International financial institutions and private creditors are beneficiaries (d near 0.0) as they gain from reduced risk and a stable lending environment. Debtor nation governments are payers (d near 0.7) as they bear the political and social costs of implementing reforms. Inefficient state sectors are victims (d near 1.0) as they are directly dismantled. Future taxpayers are beneficiaries (d near 0.1) as they are expected to benefit from long-term stability. International capital markets are beneficiaries (d near 0.0) due to systemic risk reduction.
+ *   International creditors and global financial markets are clear beneficiaries, as conditionalities reduce their risk and stabilize the system. Future taxpayers in debtor states are also beneficiaries, as they inherit a more fiscally sound economy. Debtor state governments are payers, bearing the political costs of implementing reforms. Inefficient state sectors are direct victims, as they are targeted for restructuring. The directionality for creditors is low (beneficiary), for debtor governments and state sectors it is high (target), and for future taxpayers and global markets it is low (beneficiary).
  *
  */
 
@@ -170,34 +217,34 @@ narrative_ontology:story_seed(structural_adjustment_conditionalities__creditor_c
    ========================================================================== */
 
 omega_variable(
-    true_cost_of_adjustment,
-    'What is the true social and economic cost of implementing conditionalities in debtor nations, and how does it compare to the benefits of financial stability?',
-    'Comprehensive, independent ex-post evaluations of structural adjustment programs, including social impact assessments and counterfactual analyses of alternative development paths.',
-    'If the social costs significantly outweigh the long-term benefits, it would challenge the ''rope'' classification and push towards a ''tangled_rope'' or ''snare'' by revealing higher effective extraction and victimhood.',
+    genuine_coordination_vs_power_imposition,
+    'To what extent do conditionalities genuinely solve a coordination problem versus imposing the will of powerful creditors on weaker debtors?',
+    'Analysis of counterfactual scenarios where debtor states successfully implement reforms without conditionalities, or where conditionalities are negotiated under more symmetric power conditions.',
+    'If primarily power imposition, the extractiveness and suppression metrics would be re-evaluated upwards, potentially reclassifying the constraint as a Tangled Rope or Snare. If genuine coordination, the Rope classification is reinforced.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(true_cost_of_adjustment, empirical, 'Assessing the net impact of conditionalities on debtor nations beyond fiscal metrics.').
+narrative_ontology:omega_variable(genuine_coordination_vs_power_imposition, conceptual, 'Ambiguity between coordination and power dynamics.').
 
 omega_variable(
-    alternative_coordination_mechanisms,
-    'Are there alternative, less extractive mechanisms for achieving international financial coordination and fiscal sustainability that would not require such extensive conditionalities?',
-    'Comparative analysis of different international financial architectures and development aid models, including those emphasizing debt relief, grants, or non-conditional budget support.',
-    'The existence of viable, less extractive alternatives would weaken the ''rope'' classification by demonstrating that the current level of extraction and suppression is not structurally necessary for coordination, potentially reclassifying it as a ''tangled_rope'' or ''snare''.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(alternative_coordination_mechanisms, conceptual, 'Exploring the necessity of conditionalities for international financial coordination.').
-
-omega_variable(
-    naturalness_of_market_confidence,
-    'To what extent is ''market confidence'' a natural, objective phenomenon, and to what extent is it a constructed social fact influenced by creditor preferences and power dynamics?',
-    'Sociological and political economy studies analyzing the formation and manipulation of ''market sentiment'' and ''investor confidence'' in the context of international finance.',
-    'If market confidence is largely a social construct reflecting creditor power, the ''naturalness'' of conditionalities as a response to ''market needs'' would be undermined, increasing the perceived extractiveness and suppression.',
+    long_term_benefits_vs_short_term_costs,
+    'Are the long-term benefits of conditionalities (fiscal sustainability, market confidence) consistently realized and do they outweigh the short-term social and economic costs borne by debtor populations?',
+    'Longitudinal empirical studies comparing economic and social development outcomes in states that underwent structural adjustment versus those that did not, controlling for other factors.',
+    'If long-term benefits are not consistently realized or do not outweigh costs, the ''future_taxpayers_in_debtor_states'' might shift from beneficiary to payer, increasing overall extractiveness and challenging the Rope classification.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(naturalness_of_market_confidence, conceptual, 'Examining the constructed nature of ''market confidence'' as a driver for conditionalities.').
+narrative_ontology:omega_variable(long_term_benefits_vs_short_term_costs, empirical, 'Uncertainty about the net long-term impact of conditionalities.').
+
+omega_variable(
+    selectivity_of_enforcement,
+    'Is the enforcement of conditionalities applied universally based on economic principles, or is it selectively applied based on geopolitical interests, as suggested by the ''hybrid_selectivity_reading''?',
+    'Comparative analysis of conditionalities applied to geopolitically strategic versus non-strategic debtor states with similar economic profiles.',
+    'If enforcement is found to be highly selective, it would undermine the claim of universal coordination and suggest a more extractive or politically motivated function, pushing the classification towards Tangled Rope or Snare.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(selectivity_of_enforcement, empirical, 'Whether conditionalities are applied consistently or selectively.').
 
 
 /* ==========================================================================
@@ -211,24 +258,24 @@ narrative_ontology:interval(structural_adjustment_conditionalities__creditor_coo
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(stru_tr_t1980, structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 1980, 0.08).
-narrative_ontology:measurement(stru_tr_t1990, structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 1990, 0.1).
-narrative_ontology:measurement(stru_tr_t2000, structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 2000, 0.09).
-narrative_ontology:measurement(stru_tr_t2010, structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 2010, 0.11).
+narrative_ontology:measurement(stru_tr_t1980, structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 1980, 0.05).
+narrative_ontology:measurement(stru_tr_t1990, structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 1990, 0.08).
+narrative_ontology:measurement(stru_tr_t2000, structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 2000, 0.1).
+narrative_ontology:measurement(stru_tr_t2010, structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 2010, 0.12).
 narrative_ontology:measurement(stru_tr_t2020, structural_adjustment_conditionalities__creditor_coordination_reading, theater_ratio, 2020, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(stru_be_t1980, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 1980, 0.2).
-narrative_ontology:measurement(stru_be_t1990, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 1990, 0.25).
-narrative_ontology:measurement(stru_be_t2000, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 2000, 0.23).
-narrative_ontology:measurement(stru_be_t2010, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 2010, 0.26).
-narrative_ontology:measurement(stru_be_t2020, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 2020, 0.25).
+narrative_ontology:measurement(stru_be_t1980, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 1980, 0.15).
+narrative_ontology:measurement(stru_be_t1990, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 1990, 0.18).
+narrative_ontology:measurement(stru_be_t2000, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 2000, 0.2).
+narrative_ontology:measurement(stru_be_t2010, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 2010, 0.21).
+narrative_ontology:measurement(stru_be_t2020, structural_adjustment_conditionalities__creditor_coordination_reading, base_extractiveness, 2020, 0.2).
 
 % Suppression requirement over time
-narrative_ontology:measurement(stru_su_t1980, structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 1980, 0.35).
-narrative_ontology:measurement(stru_su_t1990, structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 1990, 0.4).
-narrative_ontology:measurement(stru_su_t2000, structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 2000, 0.38).
-narrative_ontology:measurement(stru_su_t2010, structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 2010, 0.42).
+narrative_ontology:measurement(stru_su_t1980, structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 1980, 0.3).
+narrative_ontology:measurement(stru_su_t1990, structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 1990, 0.35).
+narrative_ontology:measurement(stru_su_t2000, structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 2000, 0.4).
+narrative_ontology:measurement(stru_su_t2010, structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 2010, 0.38).
 narrative_ontology:measurement(stru_su_t2020, structural_adjustment_conditionalities__creditor_coordination_reading, suppression_requirement, 2020, 0.4).
 
 
@@ -237,11 +284,8 @@ narrative_ontology:measurement(stru_su_t2020, structural_adjustment_conditionali
    ========================================================================== */
 
 narrative_ontology:coordination_type(structural_adjustment_conditionalities__creditor_coordination_reading, resource_allocation).
-narrative_ontology:affects_constraint(structural_adjustment_conditionalities__creditor_coordination_reading, debtor_extraction_reading).
-narrative_ontology:affects_constraint(structural_adjustment_conditionalities__creditor_coordination_reading, hybrid_selectivity_reading).
-
-% DUAL FORMULATION NOTE:
-% This constraint is the 'creditor_coordination_reading' of the 'structural_adjustment_conditionalities' kernel. It focuses on the coordination function and benefits to the international financial system. Sibling readings ('debtor_extraction_reading', 'hybrid_selectivity_reading') offer alternative perspectives on the same underlying policy instrument, emphasizing extraction or selective application.
+narrative_ontology:affects_constraint(structural_adjustment_conditionalities__creditor_coordination_reading, international_debt_management_regime).
+narrative_ontology:affects_constraint(structural_adjustment_conditionalities__creditor_coordination_reading, global_capital_flow_regulation).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

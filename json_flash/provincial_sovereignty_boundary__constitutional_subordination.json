@@ -4,26 +4,83 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "eefd0b0c-7675-4448-ac8e-6501f2d9bc05"
+    "story_uid": "fc6e5ebb-ee46-447c-b76d-6001ab5e9574"
   },
   "base_properties": {
-    "extractiveness": 0.3,
-    "suppression": 0.6,
+    "extractiveness": 0.25,
+    "suppression": 0.7,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.4,
-    "claimed_type": "tangled_rope",
+    "accessibility_collapse": 0.85,
+    "resistance": 0.3,
+    "claimed_type": "mountain",
     "human_readable": "Constitutional Subordination of Provinces",
     "topic_domain": "political_economy/federalism/resource_governance",
-    "requires_active_enforcement": true,
+    "emerges_naturally": true,
     "beneficiaries": [
       "federal_government",
       "national_unity_advocates"
     ],
-    "victims": [
-      "provincial_governments_seeking_autonomy",
-      "separatist_movements"
+    "vindicated_propositions": [
+      "constitutional_supremacy_doctrine",
+      "federal_paramountcy_principle"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets the constitution as establishing federal paramountcy, granting it ultimate authority over provincial actions, especially regarding secession and national policy areas like equalization and climate. Benefits from a stable, unified federation."
+    },
+    {
+      "name": "provincial_governments_separatist",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Seeks greater autonomy or outright secession, but is legally bound by the federal constitution. Bears the cost of being unable to unilaterally pursue its political agenda, facing federal vetoes and legal challenges. Identity-locked by the political mandate to represent a distinct national group."
+    },
+    {
+      "name": "provincial_governments_aligned",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Operates within the federal framework, benefiting from federal transfers (equalization) and the stability of the national system. Accepts federal authority in areas like climate policy, seeing it as legitimate national coordination."
+    },
+    {
+      "name": "national_unity_advocates",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Actively supports the constitutional subordination reading, viewing it as essential for national cohesion and the effective functioning of federal programs. Benefits from the perceived stability and indivisibility of the nation-state."
+    },
+    {
+      "name": "international_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyzes the legal and political implications of federal-provincial relations, particularly in cases of secession attempts. Their analysis is detached from direct participation but influences international perceptions of the constraint's legitimacy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear hierarchy of legal authority, ensuring a unified national legal framework and preventing unilateral provincial actions that could destabilize the federation or undermine national policy objectives.",
+    "transfer_function": "Legitimizes the flow of authority and resources from provinces to the federal center in key policy areas, and prevents the transfer of territorial control or sovereign powers from the federal state to provinces.",
+    "absent_voices": "Indigenous nations, whose inherent sovereignty predates the federal constitution, are often excluded from the framing of provincial-federal relations as a purely internal matter. They would argue for a nation-to-nation relationship that transcends both provincial and federal constitutional claims.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constitutional principle vanished, the federal system would immediately fragment. Provinces would assert full sovereignty, potentially leading to multiple secessions, a collapse of national equalization programs, and a complete reordering of resource governance and climate policy. The nation-state as currently constituted would cease to exist.",
+    "founding_problem": "The problem of creating a unified, stable nation-state from disparate colonial entities, ensuring national cohesion and preventing internal fragmentation while allowing for regional governance.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The federal government and national unity advocates attest the problem is live, citing ongoing separatist movements and the need for national policy coherence. While provincial governments aligned with federalism also acknowledge the need for stability, separatist provincial governments contest the federal framing of the founding problem, arguing for a different historical interpretation of confederation."
   },
   "interval": {
     "start": 1867,
@@ -38,27 +95,27 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1920,
-      "value": 0.25
+      "value": 0.22
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1982,
-      "value": 0.35
+      "value": 0.25
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.3
+      "value": 0.25
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1867,
-      "value": 0.4
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1920,
-      "value": 0.5
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
@@ -68,7 +125,7 @@
     {
       "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.6
+      "value": 0.7
     },
     {
       "metric": "theater_ratio",
@@ -83,7 +140,7 @@
     {
       "metric": "theater_ratio",
       "time_point": 1982,
-      "value": 0.15
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
@@ -92,30 +149,30 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the constitutional principle that provinces are creations of the federal constitution, possessing no inherent sovereignty, and that any provincial exit from the federation requires federal consent. This reading asserts federal supremacy in key areas like national unity, equalization, and climate policy, and views separatist movements as constitutionally invalid. It is one reading of the broader 'provincial_sovereignty_boundary' kernel.",
-    "logic_rationale": "The constraint is a Tangled Rope because it provides a genuine coordination function (national unity, consistent federal policy) but also involves asymmetric extraction from provinces seeking greater autonomy. Extractiveness is moderate (0.3) as provinces do retain significant powers, but suppression is higher (0.6) due to the federal government's ultimate constitutional authority and the Supreme Court's role in enforcing this interpretation. The theater ratio is low (0.1), indicating that the constitutional framework is actively and genuinely enforced, not merely performed.",
-    "directionality_logic": "The federal government and national unity advocates are beneficiaries, as the constraint empowers federal authority and maintains national cohesion. Provincial governments seeking autonomy and separatist movements are victims, as their aspirations for greater sovereignty or independence are directly curtailed by this constitutional reading. The Supreme Court acts as an agenda-setter, interpreting and enforcing the constraint.",
-    "perspectival_gap": "From the federal government's perspective, this is a necessary Rope for national governance. From the perspective of autonomy-seeking provinces, it is a Snare that limits their self-determination. The engine's classification will reflect this divergence based on the declared roles and attributes.",
-    "kernel_context": "This constraint instantiates the 'constitutional_subordination' reading of the 'provincial_sovereignty_boundary' kernel. This reading asserts that provinces are creatures of the federal constitution, lacking inherent sovereignty, and that any exit requires federal consent. Sibling readings include 'compact_federalism' (confederation as a compact among sovereigns) and 'resource_sovereignty_primacy' (resource control as absolute territorial sovereignty)."
+    "narrative_context": "This constraint represents the 'constitutional subordination' reading of provincial sovereignty within a federal system, where provinces are considered creations of the federal constitution with no inherent sovereignty. This reading asserts that provincial exit requires federal consent and legitimizes federal authority over national policies like equalization and climate. It is presented as a 'mountain' due to its foundational constitutional nature, but with identifiable beneficiaries (federal government, national unity advocates) and victims (separatist provincial governments), triggering False Summit Mountain analysis. The metrics reflect a low but present extractiveness (federal over provincial autonomy) and high suppression (legal barriers to provincial self-determination).",
+    "logic_rationale": "The low extractiveness (0.25) reflects that while provinces are constrained, the federal system also provides benefits (e.g., equalization payments, national stability). The high suppression (0.7) is due to the legal and political barriers to provincial secession or assertion of absolute sovereignty, which are actively maintained by federal institutions. The theater ratio is low (0.1) as the constitutional principle is genuinely operative, not merely performative. Accessibility collapse is high (0.85) because the constitutional framework severely limits alternatives to federal authority. Resistance is moderate (0.3) reflecting ongoing but largely unsuccessful provincial challenges.",
+    "directionality_logic": "The federal government and national unity advocates are beneficiaries, as this reading solidifies their power and vision for the nation. Separatist provincial governments are payers, as their aspirations for greater autonomy or independence are directly curtailed. Aligned provincial governments are also beneficiaries, as they operate within and benefit from the stable federal framework. International observers are analytical, assessing the system from an external perspective.",
+    "perspectival_gap": "From the federal government's perspective, this is a foundational, unchangeable principle (a mountain). From the perspective of separatist provincial governments, it is a highly extractive snare that suppresses their legitimate aspirations. The engine's classification will highlight this divergence, showing how a claimed mountain operates as a snare for those it governs.",
+    "kernel_context": "This constraint is the 'constitutional subordination' reading of the 'provincial_sovereignty_boundary' kernel. It asserts federal paramountcy and a federal veto over provincial exit. Sibling readings include 'compact_federalism' (provinces as sovereign parties to a compact) and 'resource_sovereignty_primacy' (resource control as absolute territorial sovereignty)."
   },
   "omegas": [
     {
-      "id": "constitutional_interpretation_stability",
-      "question": "To what extent is the 'constitutional subordination' reading of provincial sovereignty stable, or is it subject to ongoing reinterpretation by the Supreme Court or political pressure?",
-      "resolution_mechanism": "Analysis of future Supreme Court rulings on federal-provincial jurisdiction and the outcomes of major federal-provincial disputes over policy areas like climate or resources.",
-      "impact": "If the reading proves unstable and shifts towards greater provincial autonomy, the constraint's extractiveness and suppression would decrease, potentially reclassifying it towards a Rope or even a Scaffold (if temporary). If it hardens, it moves closer to a Snare.",
+      "id": "natural_law_vs_constructed_ambiguity",
+      "question": "Is the constitutional subordination of provinces a genuine natural law of federalism, or a constructed constraint that benefits identifiable agents (the federal center)?",
+      "resolution_mechanism": "Comparative analysis of other federal systems and their constitutional evolution, examining whether similar structures emerge universally or are contingent on specific historical and political choices.",
+      "impact": "If genuinely natural, its classification as a mountain would be robust. If constructed, the presence of beneficiaries would strongly support reclassification as a tangled_rope or snare, highlighting its extractive nature.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Stability of constitutional interpretation regarding provincial sovereignty."
+      "type_class": "conceptual",
+      "description": "Ambiguity between natural constitutional principle and political construct."
     },
     {
-      "id": "federal_consent_legitimacy",
-      "question": "Is federal consent for provincial exit a legitimate constitutional requirement, or is it a political assertion that could be challenged by a sufficiently strong provincial mandate?",
-      "resolution_mechanism": "A hypothetical provincial referendum on secession followed by a federal refusal to negotiate, leading to a constitutional crisis and potential international legal challenges.",
-      "impact": "If federal consent is deemed a political assertion rather than an absolute constitutional bar, the 'trapped' exit option for separatist movements becomes 'constrained', reducing the constraint's effective suppression and extractiveness from that seat.",
+      "id": "secession_legitimacy_ambiguity",
+      "question": "Does the constitutional requirement for federal consent to provincial exit genuinely reflect a foundational legal principle, or is it a political assertion designed to suppress legitimate self-determination?",
+      "resolution_mechanism": "International legal precedent on self-determination, and the outcome of any future referenda or negotiations on secession. If a clear majority in a province votes to secede and international law supports their right, the 'consent' requirement's legitimacy would be severely undermined.",
+      "impact": "If consent is deemed a political assertion, the suppression metric would be re-evaluated as more coercive, and the constraint's classification for separatist provinces would shift more strongly towards snare.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Legitimacy of federal consent as a barrier to provincial exit."
+      "type_class": "preference",
+      "description": "Ambiguity over the legitimacy of federal veto on secession."
     }
   ],
   "boltzmann": {
@@ -123,10 +180,11 @@
   },
   "network": {
     "affects_constraints": [
-      "federal_equalization_formula",
+      "provincial_sovereignty_boundary__compact_federalism",
+      "provincial_sovereignty_boundary__resource_sovereignty_primacy",
+      "federal_equalization_payments",
       "national_climate_policy_framework"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the 'provincial_sovereignty_boundary' kernel. It emphasizes federal supremacy and constitutional subordination of provinces, contrasting with 'compact_federalism' and 'resource_sovereignty_primacy' readings."
+    ]
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -134,29 +192,29 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "provincial_sovereignty_boundary__compact_federalism",
+        "sibling_id": "compact_federalism",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "provincial_sovereignty_boundary__resource_sovereignty_primacy",
+        "sibling_id": "resource_sovereignty_primacy",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "federal_constitution_supreme",
+        "atom": "federal_paramountcy_is_foundational",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       },
       {
-        "atom": "provinces_derive_power_from_federal_act",
+        "atom": "provinces_are_creatures_of_constitution",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "original_confederation_act_intent",
+    "reference_frame": "constitutional_act_1867_framework",
     "drift_state": {
       "moment": "contemporary",
       "direction": "stable",
@@ -165,14 +223,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

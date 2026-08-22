@@ -40,8 +40,10 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,27 +69,19 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: preparedness_persistence__hybrid_reading
  *   human_readable: Stratified Disaster Preparedness (Hybrid Reading)
- *   domain: disaster_preparedness/institutional_memory/commitment_systems
+ *   domain: disaster_preparedness/institutional_memory
  *
  * SUMMARY:
- *   This constraint describes disaster preparedness as a stratified system
+ *   This constraint describes the stratified nature of disaster preparedness,
  *   where some components (e.g., engineering inspections) maintain genuine
- *   competence, while others (e.g., certain evacuation drills) have become
- *   ritualized performances. This 'hybrid reading' acknowledges both
- *   functional and performative aspects, leading to a mixed classification.
- *   The system extracts resources from taxpayers and frontline responders,
- *   while providing genuine benefits from competent subsystems and political
- *   cover for public officials. The claimed type is Tangled Rope, reflecting
- *   the mix of coordination and extraction, with a significant theater ratio
- *   indicating the performative elements.
+ *   competence and deliver real benefits, while others (e.g., certain
+ *   evacuation drills, bureaucratic reporting) have become ritualized
+ *   performances. The system as a whole is claimed as a 'Rope' (coordination)
+ *   by public officials, but its hybrid nature means it functions as a
+ *   'Tangled Rope' from the perspective of the general public and ritualized
+ *   subsystems, with localized extraction and significant theatricality. This
+ *   is a 'hybrid_reading' of the 'preparedness_persistence' kernel.
  *
- * KEY AGENTS:
- *   - competent_subsystems: Beneficiary (institutional/constrained) — maintain genuine readiness.
- *   - ritualized_subsystems: Payer (organizational/identity_locked) — performative, consume resources.
- *   - public_officials: Agenda Setter (institutional/constrained) — oversee system, gain political capital.
- *   - taxpayers: Payer (organized/constrained) — bear financial costs.
- *   - frontline_responders: Payer (moderate/constrained) — directly affected by preparedness quality.
- *   - analytical_observers: Observer (analytical/analytical) — study effectiveness, no direct power.
  */
 
 /* ==========================================================================
@@ -110,43 +105,83 @@ narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, r
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(preparedness_persistence__hybrid_reading, tangled_rope).
 narrative_ontology:human_readable(preparedness_persistence__hybrid_reading, "Stratified Disaster Preparedness (Hybrid Reading)").
-narrative_ontology:topic_domain(preparedness_persistence__hybrid_reading, "disaster_preparedness/institutional_memory/commitment_systems").
+narrative_ontology:topic_domain(preparedness_persistence__hybrid_reading, "disaster_preparedness/institutional_memory").
 
 domain_priors:requires_active_enforcement(preparedness_persistence__hybrid_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(preparedness_persistence__hybrid_reading, '66fe9c2a-8d90-4ffb-8616-7c570d768ec2').
-narrative_ontology:cs_kernel_codification('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', formalized).
-narrative_ontology:cs_authority_grounding('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', lineage).
-narrative_ontology:cs_interpretation_layer_present('66fe9c2a-8d90-4ffb-8616-7c570d768ec2').
-narrative_ontology:cs_reading_relation('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', preparedness_persistence__competence_reading, coexists_with).
-narrative_ontology:cs_reading_relation('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', preparedness_persistence__husk_reading, coexists_with).
-narrative_ontology:cs_axiom('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', foundational, preparedness_is_stratified).
-narrative_ontology:cs_axiom_status(preparedness_is_stratified, holdable).
-narrative_ontology:cs_axiom_grounding('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', preparedness_is_stratified, empirically_contingent).
-narrative_ontology:cs_axiom('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', secondary, ritual_coexists_with_competence).
-narrative_ontology:cs_axiom_status(ritual_coexists_with_competence, holdable).
-narrative_ontology:cs_axiom_grounding('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', ritual_coexists_with_competence, empirically_contingent).
-narrative_ontology:cs_reference_frame('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', mixed_operational_and_symbolic_readiness).
-narrative_ontology:cs_drift_state('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', contemporary, gap(stable, minor, false)).
-narrative_ontology:cs_created_at('66fe9c2a-8d90-4ffb-8616-7c570d768ec2', '').
+narrative_ontology:cs_story_uid(preparedness_persistence__hybrid_reading, 'e9339bd0-e6ce-425d-837b-9506437238ef').
+narrative_ontology:cs_kernel_codification('e9339bd0-e6ce-425d-837b-9506437238ef', distributed).
+narrative_ontology:cs_authority_grounding('e9339bd0-e6ce-425d-837b-9506437238ef', practice).
+narrative_ontology:cs_interpretation_layer_present('e9339bd0-e6ce-425d-837b-9506437238ef').
+narrative_ontology:cs_reading_relation('e9339bd0-e6ce-425d-837b-9506437238ef', preparedness_persistence__competence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e9339bd0-e6ce-425d-837b-9506437238ef', preparedness_persistence__husk_reading, coexists_with).
+narrative_ontology:cs_axiom('e9339bd0-e6ce-425d-837b-9506437238ef', foundational, preparedness_is_heterogeneous).
+narrative_ontology:cs_axiom_status(preparedness_is_heterogeneous, holdable).
+narrative_ontology:cs_axiom_grounding('e9339bd0-e6ce-425d-837b-9506437238ef', preparedness_is_heterogeneous, empirically_contingent).
+narrative_ontology:cs_axiom('e9339bd0-e6ce-425d-837b-9506437238ef', secondary, functional_and_performative_coexist).
+narrative_ontology:cs_axiom_status(functional_and_performative_coexist, holdable).
+narrative_ontology:cs_axiom_grounding('e9339bd0-e6ce-425d-837b-9506437238ef', functional_and_performative_coexist, empirically_contingent).
+narrative_ontology:cs_reference_frame('e9339bd0-e6ce-425d-837b-9506437238ef', mixed_operational_and_symbolic_readiness).
+narrative_ontology:cs_drift_state('e9339bd0-e6ce-425d-837b-9506437238ef', contemporary, gap(stable, minor, false)).
+narrative_ontology:cs_created_at('e9339bd0-e6ce-425d-837b-9506437238ef', '').
 narrative_ontology:cs_kernel_id(preparedness_persistence__hybrid_reading, preparedness_persistence).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(preparedness_persistence__hybrid_reading, competent_subsystems).
 narrative_ontology:constraint_beneficiary(preparedness_persistence__hybrid_reading, public_officials).
-narrative_ontology:constraint_victim(preparedness_persistence__hybrid_reading, taxpayers).
-narrative_ontology:constraint_victim(preparedness_persistence__hybrid_reading, frontline_responders).
+narrative_ontology:constraint_victim(preparedness_persistence__hybrid_reading, ritualized_subsystems).
+narrative_ontology:constraint_victim(preparedness_persistence__hybrid_reading, general_public).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These are the parts of the preparedness system (e.g., structural engineering inspections, critical infrastructure maintenance) that retain genuine operational competence and deliver real safety benefits. They benefit from funding and public trust, but are constrained by overall budget and political will.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, competent_subsystems, beneficiary,
+    institutional, biographical, constrained, local).
+
+% These are the parts of the preparedness system (e.g., many evacuation drills, certain bureaucratic reporting) that have become performative. They consume resources and personnel time without significantly enhancing actual readiness. They are identity-locked by professional norms and institutional inertia, making it hard to challenge their own efficacy.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, ritualized_subsystems, payer,
+    moderate, biographical, identity_locked, local).
+
+% Responsible for overseeing and funding preparedness efforts. They benefit from the appearance of readiness and public reassurance, but bear the political cost of actual disaster failures. They enforce both competent and ritualized components, often without distinguishing them.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, public_officials, agenda_setter,
+    institutional, immediate, constrained, regional).
+
+% Pays for preparedness through taxes and participates in drills, often with a false sense of security from ritualized components. They are the ultimate victims of preparedness failures, bearing the costs of inadequate real readiness.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, general_public, payer,
+    powerless, immediate, trapped, local).
+
+% Analyze the effectiveness of preparedness systems, often identifying the stratification between competent and ritualized components. They can propose reforms but lack direct power to implement them.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, emergency_management_experts, observer,
+    analytical, generational, analytical, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: To organize diverse public and private actors to mitigate, prepare for, respond to, and recover from disasters, ensuring a baseline level of societal resilience.
+% TRANSFER_FUNCTION: Transfers public funds and personnel time into a mix of genuinely effective infrastructure/training and performative activities, from taxpayers and frontline personnel to institutional budgets and public reassurance.
+% ABSENT_VOICES: Citizens who have experienced actual disaster failures and can distinguish effective from ritualized preparedness would object to the continued funding of performative elements. Their voices are often drowned out by official narratives of 'successful' drills and bureaucratic compliance.
+% DISAPPEARANCE_RATIONALE: If the entire preparedness system vanished overnight, the competent subsystems would cease to function, leading to immediate and catastrophic failures in critical infrastructure and response capabilities. The ritualized components would also disappear, but their absence would have less direct impact on actual safety, though public confidence might initially collapse.
+% FOUNDING_PROBLEM: The need to protect populations and infrastructure from predictable and unpredictable natural and man-made disasters, minimizing loss of life and economic disruption.
+% FOUNDING_PROBLEM_CORROBORATION: The ongoing occurrence of disasters and their impacts, attested by scientific bodies, historical records, and international disaster relief organizations, corroborates the persistent need for preparedness. However, the effectiveness of current systems in addressing this problem is contested by independent experts and disaster-affected communities.
+narrative_ontology:disappearance_verdict(preparedness_persistence__hybrid_reading, world_rearranges).
+narrative_ontology:founding_problem_status(preparedness_persistence__hybrid_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(preparedness_persistence__hybrid_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(preparedness_persistence__hybrid_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(preparedness_persistence__hybrid_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(preparedness_persistence__hybrid_reading, 0.45, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -161,16 +196,14 @@ narrative_ontology:story_seed(preparedness_persistence__hybrid_reading, 'none', 
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.45) is moderate, reflecting that while some resources are genuinely used for coordination, a significant portion is diverted to maintaining ritualized components. Suppression (0.30) is low, as resistance to the ritualized aspects is diffuse and often internalized rather than actively suppressed. The theater ratio (0.55) is high, indicating that more than half of the activity is performative rather than functional. Accessibility collapse (0.40) is moderate, as alternatives to the current stratified system exist but are difficult to implement due to institutional inertia. Resistance (0.20) is low, as the diffuse nature of the problem makes organized resistance challenging.
+ *   The extractiveness (0.45) is moderate, reflecting the mixed nature: real benefits from competent subsystems are offset by resource consumption by ritualized ones. Suppression (0.30) is low, as the system relies more on institutional inertia and public trust than active coercion. Theater ratio (0.55) is high, indicating that more than half of the activity is performative rather than functionally effective. The claimed type is 'tangled_rope' because it genuinely coordinates some functions while extracting from others through the same structure, requiring active enforcement to maintain the ritualized components.
  *
  * PERSPECTIVAL GAP:
- *   Public officials and competent subsystems likely perceive the entire system as a necessary Rope or even a Mountain, emphasizing the genuine coordination and natural necessity of preparedness. Taxpayers and frontline responders, especially those affected by failures, would experience it as more extractive, closer to a Snare or Piton, due to the costs of ritualized components and the risks of inadequate readiness. The engine's per-seat classification will capture this divergence.
+ *   Public officials and competent subsystems perceive the constraint as a necessary 'Rope' for societal safety, emphasizing its coordination function. However, the general public and emergency management experts, particularly those observing the ritualized components, experience it as a 'Tangled Rope' or even a 'Piton' due to the significant theatricality and misallocation of resources. The engine's per-seat classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Competent subsystems are beneficiaries (d=0.0-0.2) as they receive funding and support for their effective work. Public officials are agenda setters and beneficiaries (d=0.1-0.3) due to political gains. Ritualized subsystems are payers (d=0.6-0.8) as they consume resources without proportional output, and their personnel are identity-locked into maintaining the status quo. Taxpayers and frontline responders are payers (d=0.7-0.9) as they bear the costs and risks. Analytical observers are neutral (d=0.5).
+ *   Competent subsystems and public officials are beneficiaries, as they either deliver real value or gain political capital from the appearance of preparedness. Ritualized subsystems are payers, as they consume resources without proportional output, and the general public are victims, bearing the costs of both effective and ineffective components. Emergency management experts are observers, analyzing the system without direct participation in its operation or extraction.
  *
- * MANDATROPHY ANALYSIS:
- *   This hybrid reading prevents mislabeling the entire preparedness system as either fully competent (Rope/Mountain) or fully atrophied (Piton/Snare). By acknowledging both functional and ritualized components, it captures the nuanced reality where some parts still serve their mandate while others persist due to inertia or performative value. The moderate D5 risk (drift to Piton) is specifically due to the high theater ratio and the potential for ritualized components to further displace genuine competence.
  */
 
 /* ==========================================================================
@@ -178,65 +211,65 @@ narrative_ontology:story_seed(preparedness_persistence__hybrid_reading, 'none', 
    ========================================================================== */
 
 omega_variable(
-    competence_vs_ritual_boundary,
-    'What is the precise boundary between genuinely competent and ritualized components within the preparedness system, and how does it shift over time?',
-    'Longitudinal, independent operational audits and post-disaster performance reviews, comparing actual outcomes to resource allocation and training inputs.',
-    'A clearer boundary would allow for targeted resource reallocation, potentially reducing extractiveness and theater ratio by defunding ritualized components and strengthening competent ones. This could shift the constraint towards a more effective Rope.',
+    distinguishing_competent_from_ritualized,
+    'What objective, measurable criteria can reliably distinguish genuinely competent preparedness subsystems from ritualized ones?',
+    'Post-disaster performance audits, independent operational readiness exercises, and comparative analysis of resource allocation vs. outcome in different preparedness domains.',
+    'Clearer criteria would allow for targeted resource allocation, reducing extraction from ritualized components and increasing overall system efficiency. This could shift the constraint towards a ''Rope'' by reducing its ''Tangled Rope'' aspects.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(competence_vs_ritual_boundary, empirical, 'Distinguishing functional from performative preparedness elements.').
+narrative_ontology:omega_variable(distinguishing_competent_from_ritualized, empirical, 'Ambiguity in identifying functional vs. performative preparedness components.').
 
 omega_variable(
-    mandate_drift_mechanism,
-    'Is the drift towards ritualization primarily driven by resource scarcity, political incentives for ''activity'' over ''outcomes'', or a loss of institutional memory?',
-    'Comparative case studies across different jurisdictions and historical periods, analyzing policy changes, budget allocations, and institutional learning processes.',
-    'Identifying the primary driver would inform intervention strategies: resource injection, accountability reforms, or knowledge management initiatives. This would directly impact the potential for mandatrophy resolution.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(mandate_drift_mechanism, empirical, 'Understanding the causes of preparedness ritualization.').
-
-omega_variable(
-    reading_framing_impact,
-    'Does framing preparedness as ''stratified'' (this reading) lead to different policy outcomes compared to framing it as ''fully competent'' or ''fully atrophied''?',
-    'Analysis of policy debates and resource allocation decisions in contexts where different framings are dominant. Compare the observed balance of competence and ritual.',
-    'If this ''hybrid'' framing leads to more nuanced and effective policy interventions, it supports its utility. If it merely provides cover for inaction, its conceptual value is diminished.',
+    mandate_drift_in_ritualized_subsystems,
+    'Have the original mandates for ritualized preparedness activities (e.g., specific drills) atrophied, or were they always primarily performative?',
+    'Historical analysis of founding documents and early implementation records for specific preparedness activities, compared with their current operational execution and stated goals.',
+    'If mandates have atrophied, it strengthens the ''Piton'' aspect of these subsystems. If always performative, it suggests a ''Snare'' from inception, where the coordination story was always cover for resource capture or political signaling.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(reading_framing_impact, conceptual, 'Impact of the ''hybrid'' framing on policy and outcomes.').
+narrative_ontology:omega_variable(mandate_drift_in_ritualized_subsystems, empirical, 'Uncertainty about the historical function and current mandate of ritualized preparedness components.').
+
+omega_variable(
+    framing_of_preparedness_efficacy,
+    'Is the public''s perception of preparedness efficacy primarily shaped by actual readiness or by the visible performance of drills and official statements?',
+    'Public opinion surveys correlated with independent assessments of disaster readiness, and analysis of media framing during and after disaster events.',
+    'If perception is driven by performance, it reinforces the ''theater_ratio'' and the ''Tangled Rope'' classification, as the performative aspects serve to maintain public consent for the extractive elements. If driven by actual readiness, it would pressure officials to reduce theatricality.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(framing_of_preparedness_efficacy, conceptual, 'The role of public perception in sustaining performative preparedness.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(preparedness_persistence__hybrid_reading, 1980, 2024).
+narrative_ontology:interval(preparedness_persistence__hybrid_reading, 1990, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(prep_tr_t1980, preparedness_persistence__hybrid_reading, theater_ratio, 1980, 0.3).
-narrative_ontology:measurement(prep_tr_t1990, preparedness_persistence__hybrid_reading, theater_ratio, 1990, 0.4).
-narrative_ontology:measurement(prep_tr_t2000, preparedness_persistence__hybrid_reading, theater_ratio, 2000, 0.5).
-narrative_ontology:measurement(prep_tr_t2010, preparedness_persistence__hybrid_reading, theater_ratio, 2010, 0.53).
+narrative_ontology:measurement(prep_tr_t1990, preparedness_persistence__hybrid_reading, theater_ratio, 1990, 0.3).
+narrative_ontology:measurement(prep_tr_t1998, preparedness_persistence__hybrid_reading, theater_ratio, 1998, 0.4).
+narrative_ontology:measurement(prep_tr_t2006, preparedness_persistence__hybrid_reading, theater_ratio, 2006, 0.5).
+narrative_ontology:measurement(prep_tr_t2014, preparedness_persistence__hybrid_reading, theater_ratio, 2014, 0.53).
 narrative_ontology:measurement(prep_tr_t2024, preparedness_persistence__hybrid_reading, theater_ratio, 2024, 0.55).
 
 % Extraction over time
-narrative_ontology:measurement(prep_be_t1980, preparedness_persistence__hybrid_reading, base_extractiveness, 1980, 0.3).
-narrative_ontology:measurement(prep_be_t1990, preparedness_persistence__hybrid_reading, base_extractiveness, 1990, 0.35).
-narrative_ontology:measurement(prep_be_t2000, preparedness_persistence__hybrid_reading, base_extractiveness, 2000, 0.4).
-narrative_ontology:measurement(prep_be_t2010, preparedness_persistence__hybrid_reading, base_extractiveness, 2010, 0.43).
+narrative_ontology:measurement(prep_be_t1990, preparedness_persistence__hybrid_reading, base_extractiveness, 1990, 0.3).
+narrative_ontology:measurement(prep_be_t1998, preparedness_persistence__hybrid_reading, base_extractiveness, 1998, 0.35).
+narrative_ontology:measurement(prep_be_t2006, preparedness_persistence__hybrid_reading, base_extractiveness, 2006, 0.4).
+narrative_ontology:measurement(prep_be_t2014, preparedness_persistence__hybrid_reading, base_extractiveness, 2014, 0.43).
 narrative_ontology:measurement(prep_be_t2024, preparedness_persistence__hybrid_reading, base_extractiveness, 2024, 0.45).
 
 % Suppression requirement over time
-narrative_ontology:measurement(prep_su_t1980, preparedness_persistence__hybrid_reading, suppression_requirement, 1980, 0.25).
-narrative_ontology:measurement(prep_su_t1990, preparedness_persistence__hybrid_reading, suppression_requirement, 1990, 0.27).
-narrative_ontology:measurement(prep_su_t2000, preparedness_persistence__hybrid_reading, suppression_requirement, 2000, 0.29).
-narrative_ontology:measurement(prep_su_t2010, preparedness_persistence__hybrid_reading, suppression_requirement, 2010, 0.3).
+narrative_ontology:measurement(prep_su_t1990, preparedness_persistence__hybrid_reading, suppression_requirement, 1990, 0.2).
+narrative_ontology:measurement(prep_su_t1998, preparedness_persistence__hybrid_reading, suppression_requirement, 1998, 0.23).
+narrative_ontology:measurement(prep_su_t2006, preparedness_persistence__hybrid_reading, suppression_requirement, 2006, 0.26).
+narrative_ontology:measurement(prep_su_t2014, preparedness_persistence__hybrid_reading, suppression_requirement, 2014, 0.28).
 narrative_ontology:measurement(prep_su_t2024, preparedness_persistence__hybrid_reading, suppression_requirement, 2024, 0.3).
 
 
@@ -245,10 +278,6 @@ narrative_ontology:measurement(prep_su_t2024, preparedness_persistence__hybrid_r
    ========================================================================== */
 
 narrative_ontology:coordination_type(preparedness_persistence__hybrid_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(preparedness_persistence__hybrid_reading, 0.1).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'preparedness_persistence' kernel, alongside 'competence_reading' and 'husk_reading'. Each reading offers a distinct structural interpretation of disaster preparedness.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

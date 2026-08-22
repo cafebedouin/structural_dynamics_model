@@ -42,6 +42,10 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,20 +75,23 @@
  *
  * SUMMARY:
  *   This constraint describes the period (1890-1904) where a religious
- *   institution publicly suspended its marriage commitment practice (Section
- *   132) due to external pressure, while preserving the principle in doctrine
- *   and allowing some private continuation. This created a structural
- *   ambiguity, enabling institutional survival (coordination) at the cost of
- *   membership clarity and internal coherence (extraction). The constraint is
- *   a 'practice-doctrine gap' reading of the broader 'marriage commitment
- *   reversal' kernel.
+ *   institution publicly suspended the practice of plural marriage due to
+ *   federal pressure, while internally preserving the doctrinal principle
+ *   (Section 132). This created a significant gap between declared doctrine
+ *   and observable practice, leading to high extractiveness on the general
+ *   membership (cognitive dissonance, identity strain) and fundamentalist
+ *   factions (schism), while benefiting institutional survival through
+ *   strategic ambiguity. The constraint is claimed as a Tangled Rope by the
+ *   institution's own framing (coordinating compliance while preserving
+ *   doctrine), but the metrics reflect its highly extractive and performative
+ *   nature.
  *
  * KEY AGENTS:
- *   - institutional_leadership: Agenda setter (institutional/constrained) — navigated external pressure and internal dissent.
- *   - general_membership: Payer (moderate/constrained) — experienced confusion and betrayal due to doctrinal ambiguity.
- *   - fundamentalist_factions: Payer (organized/identity_locked) — resisted the change, leading to schism.
- *   - federal_government: Observer (institutional/arbitrage) — exerted external pressure, leading to the public suspension.
- *   - institutional_survival: Beneficiary (analytical/civilizational) — the abstract entity that benefited from the ambiguity.
+ *   - institutional_survival: Primary beneficiary (institutional/arbitrage)
+ *   - general_membership: Primary target (powerless/identity_locked)
+ *   - fundamentalist_factions: Secondary target (organized/constrained)
+ *   - federal_government: External agenda_setter (institutional/analytical)
+ *   - institutional_leadership: Internal agenda_setter (institutional/constrained)
  */
 
 /* ==========================================================================
@@ -91,18 +99,18 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(marriage_commitment_reversal__practice_doctrine_gap, 0.85).
-domain_priors:suppression_score(marriage_commitment_reversal__practice_doctrine_gap, 0.7).
-domain_priors:theater_ratio(marriage_commitment_reversal__practice_doctrine_gap, 0.6).
+domain_priors:base_extractiveness(marriage_commitment_reversal__practice_doctrine_gap, 0.78).
+domain_priors:suppression_score(marriage_commitment_reversal__practice_doctrine_gap, 0.65).
+domain_priors:theater_ratio(marriage_commitment_reversal__practice_doctrine_gap, 0.85).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(marriage_commitment_reversal__practice_doctrine_gap, extractiveness, 0.85).
-narrative_ontology:constraint_metric(marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 0.7).
-narrative_ontology:constraint_metric(marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 0.6).
+narrative_ontology:constraint_metric(marriage_commitment_reversal__practice_doctrine_gap, extractiveness, 0.78).
+narrative_ontology:constraint_metric(marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 0.85).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(marriage_commitment_reversal__practice_doctrine_gap, accessibility_collapse, 0.4).
-narrative_ontology:constraint_metric(marriage_commitment_reversal__practice_doctrine_gap, resistance, 0.5).
+narrative_ontology:constraint_metric(marriage_commitment_reversal__practice_doctrine_gap, resistance, 0.7).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(marriage_commitment_reversal__practice_doctrine_gap, tangled_rope).
@@ -112,38 +120,78 @@ narrative_ontology:topic_domain(marriage_commitment_reversal__practice_doctrine_
 domain_priors:requires_active_enforcement(marriage_commitment_reversal__practice_doctrine_gap).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(marriage_commitment_reversal__practice_doctrine_gap, '8d337407-0323-49bf-9e89-aab5992e6f2c').
-narrative_ontology:cs_kernel_codification('8d337407-0323-49bf-9e89-aab5992e6f2c', fixed_text).
-narrative_ontology:cs_authority_grounding('8d337407-0323-49bf-9e89-aab5992e6f2c', lineage).
-narrative_ontology:cs_interpretation_layer_present('8d337407-0323-49bf-9e89-aab5992e6f2c').
-narrative_ontology:cs_reading_relation('8d337407-0323-49bf-9e89-aab5992e6f2c', marriage_commitment_reversal__exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation('8d337407-0323-49bf-9e89-aab5992e6f2c', marriage_commitment_reversal__endogenous_reinterpretation_reading, coexists_with).
-narrative_ontology:cs_axiom('8d337407-0323-49bf-9e89-aab5992e6f2c', foundational, doctrinal_integrity_preserved_despite_practice_suspension).
-narrative_ontology:cs_axiom_status(doctrinal_integrity_preserved_despite_practice_suspension, holdable).
-narrative_ontology:cs_axiom_grounding('8d337407-0323-49bf-9e89-aab5992e6f2c', doctrinal_integrity_preserved_despite_practice_suspension, theological).
-narrative_ontology:cs_axiom('8d337407-0323-49bf-9e89-aab5992e6f2c', secondary, institutional_survival_justifies_ambiguity).
+narrative_ontology:cs_story_uid(marriage_commitment_reversal__practice_doctrine_gap, '20c9fa1c-d226-4274-a8e9-614f98ccc951').
+narrative_ontology:cs_kernel_codification('20c9fa1c-d226-4274-a8e9-614f98ccc951', formalized).
+narrative_ontology:cs_authority_grounding('20c9fa1c-d226-4274-a8e9-614f98ccc951', lineage).
+narrative_ontology:cs_interpretation_layer_present('20c9fa1c-d226-4274-a8e9-614f98ccc951').
+narrative_ontology:cs_reading_relation('20c9fa1c-d226-4274-a8e9-614f98ccc951', marriage_commitment_reversal__exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('20c9fa1c-d226-4274-a8e9-614f98ccc951', marriage_commitment_reversal__endogenous_reinterpretation_reading, coexists_with).
+narrative_ontology:cs_axiom('20c9fa1c-d226-4274-a8e9-614f98ccc951', foundational, doctrinal_principle_persists_despite_practice).
+narrative_ontology:cs_axiom_status(doctrinal_principle_persists_despite_practice, holdable).
+narrative_ontology:cs_axiom_grounding('20c9fa1c-d226-4274-a8e9-614f98ccc951', doctrinal_principle_persists_despite_practice, conventional).
+narrative_ontology:cs_axiom('20c9fa1c-d226-4274-a8e9-614f98ccc951', secondary, institutional_survival_justifies_ambiguity).
 narrative_ontology:cs_axiom_status(institutional_survival_justifies_ambiguity, holdable).
-narrative_ontology:cs_axiom_grounding('8d337407-0323-49bf-9e89-aab5992e6f2c', institutional_survival_justifies_ambiguity, instrumental).
-narrative_ontology:cs_reference_frame('8d337407-0323-49bf-9e89-aab5992e6f2c', unambiguous_doctrinal_practice).
-narrative_ontology:cs_drift_state('8d337407-0323-49bf-9e89-aab5992e6f2c', post_1890_manifesto, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('8d337407-0323-49bf-9e89-aab5992e6f2c', '').
+narrative_ontology:cs_axiom_grounding('20c9fa1c-d226-4274-a8e9-614f98ccc951', institutional_survival_justifies_ambiguity, instrumental).
+narrative_ontology:cs_reference_frame('20c9fa1c-d226-4274-a8e9-614f98ccc951', doctrinal_purity_and_public_practice_alignment).
+narrative_ontology:cs_drift_state('20c9fa1c-d226-4274-a8e9-614f98ccc951', post_manifesto_era, gap(practice_drift, severe, false)).
+narrative_ontology:cs_created_at('20c9fa1c-d226-4274-a8e9-614f98ccc951', '').
 narrative_ontology:cs_kernel_id(marriage_commitment_reversal__practice_doctrine_gap, marriage_commitment_reversal).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(marriage_commitment_reversal__practice_doctrine_gap, institutional_leadership).
 narrative_ontology:constraint_beneficiary(marriage_commitment_reversal__practice_doctrine_gap, institutional_survival).
 narrative_ontology:constraint_victim(marriage_commitment_reversal__practice_doctrine_gap, general_membership).
 narrative_ontology:constraint_victim(marriage_commitment_reversal__practice_doctrine_gap, fundamentalist_factions).
 
 /* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The institutional entity itself benefits from the ambiguity, allowing it to navigate federal anti-polygamy laws while preserving core doctrine. This flexibility enabled the continuation of plural marriages in claimed-legal jurisdictions (1890-1904) and avoided disincorporation and asset seizure.
+narrative_ontology:constraint_stakeholder(marriage_commitment_reversal__practice_doctrine_gap, institutional_survival, beneficiary,
+    institutional, generational, arbitrage, national).
+narrative_ontology:stakeholder_non_agent(marriage_commitment_reversal__practice_doctrine_gap, institutional_survival).
+
+% Experienced bewilderment and a sense of betrayal as public practice diverged from deeply held doctrine without clear explanation. Many were identity-locked by their faith and community, making exit unthinkable despite the cognitive dissonance and personal cost of compliance.
+narrative_ontology:constraint_stakeholder(marriage_commitment_reversal__practice_doctrine_gap, general_membership, payer,
+    powerless, biographical, identity_locked, local).
+
+% Suffered schism and excommunication for adhering to the original doctrine and practice. They bore the cost of social and religious ostracization, but their organized nature allowed for a constrained exit into new, smaller communities.
+narrative_ontology:constraint_stakeholder(marriage_commitment_reversal__practice_doctrine_gap, fundamentalist_factions, payer,
+    organized, generational, constrained, regional).
+
+% Applied coercive pressure through legislation (Edmunds-Tucker Act) and legal action, threatening disincorporation and asset seizure. Its actions created the external conditions that forced the institutional leadership to suspend public practice.
+narrative_ontology:constraint_stakeholder(marriage_commitment_reversal__practice_doctrine_gap, federal_government, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Navigated the external pressure by issuing the Manifesto, publicly suspending plural marriage while preserving the underlying doctrine. They managed the internal and external legitimation challenges, maintaining institutional cohesion at the cost of doctrinal clarity for many members.
+narrative_ontology:constraint_stakeholder(marriage_commitment_reversal__practice_doctrine_gap, institutional_leadership, agenda_setter,
+    institutional, biographical, constrained, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Allowed the institution to coordinate its public compliance with federal law while internally maintaining a commitment to its core marriage doctrine, thereby preserving its legal existence and assets.
+% TRANSFER_FUNCTION: Transferred the burden of cognitive dissonance and doctrinal ambiguity onto the general membership, while transferring institutional legitimacy and survival from the federal government back to the religious organization.
+% ABSENT_VOICES: Those who left the institution due to the doctrinal ambiguity or perceived betrayal, as well as future generations who would inherit a complex and often contradictory historical narrative, were absent from the immediate decision-making process.
+% DISAPPEARANCE_RATIONALE: If the practice-doctrine gap vanished overnight (e.g., through a clear, unambiguous doctrinal statement or a full return to prior practice), the institution's historical narrative, current membership understanding, and relationship with fundamentalist offshoots would fundamentally reorganize. It would either fully embrace or fully repudiate its past, with significant consequences for its identity and structure.
+% FOUNDING_PROBLEM: The institution faced an existential threat from the United States federal government due to its practice of plural marriage, risking disincorporation, asset seizure, and imprisonment of its leaders.
+% FOUNDING_PROBLEM_CORROBORATION: Historical records, federal court documents, and contemporary journalistic accounts from outside the benefiting parties (e.g., non-member historians, government archives) corroborate the severe legal and political pressure that constituted the founding problem. The problem of federal persecution is now dead, but the doctrinal ambiguity persists.
+narrative_ontology:disappearance_verdict(marriage_commitment_reversal__practice_doctrine_gap, world_rearranges).
+narrative_ontology:founding_problem_status(marriage_commitment_reversal__practice_doctrine_gap, dead).
+
+/* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(marriage_commitment_reversal__practice_doctrine_gap, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(marriage_commitment_reversal__practice_doctrine_gap, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(marriage_commitment_reversal__practice_doctrine_gap, 'none', 1).
+narrative_ontology:epsilon_provenance(marriage_commitment_reversal__practice_doctrine_gap, 0.78, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,16 +211,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.85) because the ambiguity imposed significant costs on the general membership and fundamentalist factions, who faced cognitive dissonance, loss of clarity, or outright schism. Suppression (0.7) was necessary to manage internal dissent and maintain public compliance. The theater ratio (0.6) is high because the public suspension of practice was largely performative, masking continued private adherence and doctrinal preservation. The period 1890-1904 is chosen as the interval because it marks the initial public declaration of suspension (1890) and the subsequent period of ambiguity before more definitive institutional shifts.
+ *   Extractiveness is high because the ambiguity imposed significant costs on members, forcing them to reconcile contradictory realities. Suppression is moderate-high, as dissent was managed through social pressure and, for fundamentalists, excommunication. Theater ratio is very high (0.85) because the public 'suspension' was largely performative, allowing the continuation of plural marriages in claimed-legal jurisdictions while projecting compliance to the federal government. The period 1890-1904 is chosen as the interval because it marks the initial public declaration (Manifesto) and the subsequent period of continued, albeit hidden, practice before a more definitive 'Second Manifesto' was issued.
  *
  * PERSPECTIVAL GAP:
- *   Institutional leadership experienced this as a necessary, if painful, coordination to ensure survival, balancing external threats with internal commitments. For the general membership, it was a source of confusion and betrayal, an extraction of their clear understanding of core doctrine. Fundamentalist factions saw it as a direct violation, leading to their exit. The engine's per-seat classification will reflect these divergent experiences.
+ *   From the perspective of institutional leadership, this was a necessary coordination to ensure survival. From the perspective of the general membership, it was a confusing and costly extraction of their clarity and trust. Fundamentalist factions viewed it as a betrayal of core principles, leading to schism. The engine's classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Institutional leadership (agenda_setter) is a beneficiary (d near 0.0) as they successfully navigated a crisis and preserved the institution. General membership and fundamentalist factions (payers) are targets (d near 1.0) as they bore the costs of ambiguity and internal conflict. Institutional survival (an abstract beneficiary) is also near 0.0. The federal government is an external actor whose pressure shaped the constraint but was not directly extracted from or subsidized by it in this specific reading.
+ *   Institutional survival (an abstract entity, but a clear beneficiary) gains from the flexibility. The general membership and fundamentalist factions bear the costs of ambiguity and enforcement, placing them at the target end. The federal government acts as an external enforcer, shaping the environment for the institutional leadership, who in turn manage the internal constraint.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint is a 'tangled_rope' because it served a genuine coordination function (institutional survival in the face of federal pressure) but did so through asymmetric extraction (the cost of ambiguity borne by the membership). The classification prevents mislabeling it as a 'snare' by acknowledging the real, if costly, coordination, and prevents mislabeling it as a 'rope' by highlighting the significant, asymmetric extraction. The ambiguity itself was the mechanism of both coordination and extraction.
+ *   The constraint's mandate was to ensure institutional survival in the face of federal persecution. While the immediate threat of disincorporation was mitigated, the persistence of the doctrinal ambiguity beyond the initial crisis (and the continuation of plural marriages in secret) suggests a shift from genuine coordination to a more extractive, performative maintenance of institutional power. The high theater ratio and continued extractiveness on members indicate a Mandatrophy signature, where the original problem (federal persecution) is 'dead' but the solution (ambiguity) persists as a mechanism of control.
  */
 
 /* ==========================================================================
@@ -180,24 +228,34 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint primarily a ''practice-doctrine gap'' reading of the marriage commitment reversal kernel, or is it better understood as an ''exogenous override'' or ''endogenous reinterpretation''?',
-    'Analysis of primary source documents (e.g., Woodruff''s private journals vs. public declarations, federal court records) to determine the dominant causal factor for the change in practice and the explicit doctrinal justifications offered at the time.',
-    'If ''exogenous override'' is dominant, the constraint''s suppression and extractiveness would be higher, reflecting external coercion. If ''endogenous reinterpretation'' is dominant, the ''theater_ratio'' would be lower, as the doctrinal shift would be more genuine. This ''practice-doctrine gap'' reading emphasizes the ambiguity and internal tension.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Distinguishing between different readings of the marriage commitment reversal kernel.').
-
-omega_variable(
-    legitimation_dual_track_efficacy,
-    'How effective was the dual-track legitimation (public compliance vs. private continuation) in ensuring institutional survival and managing internal dissent?',
-    'Quantitative analysis of membership retention, schism rates, and legal challenges during the 1890-1904 period, correlated with the degree of public vs. private adherence to the marriage commitment.',
-    'If highly effective, it reinforces the ''tangled_rope'' classification by demonstrating the functional coordination (institutional survival) achieved through asymmetric extraction (membership clarity sacrificed). If ineffective, it suggests a more ''snare''-like quality, where the extraction failed to deliver its promised coordination.',
+    doctrinal_integrity_vs_institutional_survival,
+    'Was the preservation of Section 132 in doctrine a genuine commitment to principle, or a strategic maneuver to maintain institutional legitimacy and future options?',
+    'Analysis of internal communications and private statements from leadership during the period, compared to public declarations. Examination of subsequent doctrinal developments and their consistency with the preserved principle.',
+    'If a strategic maneuver, the extractiveness on members (cognitive dissonance) is higher, as it was knowingly imposed. If a genuine commitment, the constraint is a more tragic ''tangled rope'' of necessity.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(legitimation_dual_track_efficacy, empirical, 'Assessing the efficacy of the dual-track legitimation strategy.').
+narrative_ontology:omega_variable(doctrinal_integrity_vs_institutional_survival, conceptual, 'Ambiguity regarding the true intent behind preserving doctrine.').
+
+omega_variable(
+    extent_of_secret_practice,
+    'What was the true extent and nature of plural marriages continued in secret during the 1890-1904 period, and how widely was this known within the general membership?',
+    'Access to sealed historical archives, genealogical records, and personal diaries from the period. Oral histories from descendants of those involved.',
+    'A higher extent of secret practice, especially if widely known, would increase the measured extractiveness (theater ratio, cognitive dissonance) on the general membership and fundamentalist factions, confirming the performative nature of the public suspension.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(extent_of_secret_practice, empirical, 'Uncertainty about the scale of hidden practice and internal awareness.').
+
+omega_variable(
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression structural (excommunication, social ostracization) or internalized (identity-locked members self-censoring dissent)?',
+    'Post-exit suppression trajectory of former members: if suppression persists as internalized patterns after leaving the institution, reclassify as partially internalized.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making the constraint more insidious.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism.').
 
 
 /* ==========================================================================
@@ -211,22 +269,22 @@ narrative_ontology:interval(marriage_commitment_reversal__practice_doctrine_gap,
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(marr_tr_t0, marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 0, 0.4).
-narrative_ontology:measurement(marr_tr_t5, marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 5, 0.5).
-narrative_ontology:measurement(marr_tr_t10, marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 10, 0.55).
-narrative_ontology:measurement(marr_tr_t14, marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 14, 0.6).
+narrative_ontology:measurement(marr_tr_t1890, marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 1890, 0.7).
+narrative_ontology:measurement(marr_tr_t1894, marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 1894, 0.78).
+narrative_ontology:measurement(marr_tr_t1898, marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 1898, 0.82).
+narrative_ontology:measurement(marr_tr_t1904, marriage_commitment_reversal__practice_doctrine_gap, theater_ratio, 1904, 0.85).
 
 % Extraction over time
-narrative_ontology:measurement(marr_be_t0, marriage_commitment_reversal__practice_doctrine_gap, base_extractiveness, 0, 0.7).
-narrative_ontology:measurement(marr_be_t5, marriage_commitment_reversal__practice_doctrine_gap, base_extractiveness, 5, 0.75).
-narrative_ontology:measurement(marr_be_t10, marriage_commitment_reversal__practice_doctrine_gap, base_extractiveness, 10, 0.8).
-narrative_ontology:measurement(marr_be_t14, marriage_commitment_reversal__practice_doctrine_gap, base_extractiveness, 14, 0.85).
+narrative_ontology:measurement(marr_be_t1890, marriage_commitment_reversal__practice_doctrine_gap, base_extractiveness, 1890, 0.6).
+narrative_ontology:measurement(marr_be_t1894, marriage_commitment_reversal__practice_doctrine_gap, base_extractiveness, 1894, 0.68).
+narrative_ontology:measurement(marr_be_t1898, marriage_commitment_reversal__practice_doctrine_gap, base_extractiveness, 1898, 0.73).
+narrative_ontology:measurement(marr_be_t1904, marriage_commitment_reversal__practice_doctrine_gap, base_extractiveness, 1904, 0.78).
 
 % Suppression requirement over time
-narrative_ontology:measurement(marr_su_t0, marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(marr_su_t5, marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 5, 0.65).
-narrative_ontology:measurement(marr_su_t10, marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 10, 0.68).
-narrative_ontology:measurement(marr_su_t14, marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 14, 0.7).
+narrative_ontology:measurement(marr_su_t1890, marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 1890, 0.5).
+narrative_ontology:measurement(marr_su_t1894, marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 1894, 0.58).
+narrative_ontology:measurement(marr_su_t1898, marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 1898, 0.62).
+narrative_ontology:measurement(marr_su_t1904, marriage_commitment_reversal__practice_doctrine_gap, suppression_requirement, 1904, 0.65).
 
 
 /* ==========================================================================
@@ -238,7 +296,7 @@ narrative_ontology:affects_constraint(marriage_commitment_reversal__practice_doc
 narrative_ontology:affects_constraint(marriage_commitment_reversal__practice_doctrine_gap, marriage_commitment_reversal__endogenous_reinterpretation_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'marriage_commitment_reversal' kernel. This 'practice-doctrine gap' reading focuses on the period of ambiguity and internal tension, distinct from readings emphasizing external coercion or internal reinterpretation.
+% This constraint is one reading of the 'marriage_commitment_reversal' kernel, focusing on the practice-doctrine gap. It is linked to sibling readings that emphasize external coercion or internal reinterpretation.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

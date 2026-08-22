@@ -4,10 +4,10 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "05670b19-3801-4d04-98de-9f1c1623cbeb"
+    "story_uid": "b0d2db17-4863-4441-853b-feeb49914b0a"
   },
   "base_properties": {
-    "extractiveness": 0.25,
+    "extractiveness": 0.2,
     "suppression": 0.4,
     "theater_ratio": 0.1,
     "accessibility_collapse": 0.6,
@@ -17,13 +17,70 @@
     "topic_domain": "international_political_economy/development_finance/institutional_economics",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "international_financial_institutions",
-      "private_creditors",
-      "future_taxpayers_debtor_nations"
+      "international_creditors",
+      "future_taxpayers_in_debtor_states",
+      "global_financial_markets"
     ],
     "victims": [
-      "inefficient_state_sectors_debtor_nations"
+      "inefficient_state_sectors_in_debtor_states"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "international_creditors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Provide loans to debtor states, conditional on policy reforms. They benefit from the increased likelihood of repayment and the stability of the international financial system. They set the terms of conditionalities to ensure fiscal discipline and market-oriented reforms."
+    },
+    {
+      "name": "debtor_state_governments",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive loans but must implement often unpopular policy reforms, such as privatization, deregulation, and austerity measures. They bear the political cost of these reforms but gain access to crucial financing."
+    },
+    {
+      "name": "inefficient_state_sectors_in_debtor_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are targeted for reform or dismantling under conditionalities, leading to job losses, reduced subsidies, and loss of political influence. They bear the direct costs of structural adjustment."
+    },
+    {
+      "name": "future_taxpayers_in_debtor_states",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Benefit from improved fiscal health, reduced national debt, and a more stable economy in the long run, theoretically leading to lower taxes and better public services. Their benefit is diffuse and delayed."
+    },
+    {
+      "name": "global_financial_markets",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from the perceived stability and predictability that conditionalities bring to international lending, reducing systemic risk and encouraging capital flows. They are a diffuse beneficiary of the coordination."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To coordinate lending and borrowing behavior between international creditors and debtor states, ensuring that loans are used to promote fiscal sustainability and market confidence, thereby preventing moral hazard and ensuring repayment.",
+    "transfer_function": "Transfers financial capital from international creditors to debtor states, in exchange for policy commitments (conditionalities) that transfer control over economic policy decisions from debtor states to a framework aligned with creditor interests.",
+    "absent_voices": "Labor unions, civil society organizations, and marginalized communities in debtor states, who often bear the brunt of austerity measures and privatization, would argue for alternative development models that prioritize social welfare over market liberalization.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If conditionalities vanished, international lending to developing countries would likely become more volatile and less predictable, potentially leading to increased defaults, reduced market confidence, and a breakdown in the current system of development finance. Debtor states would lose a key source of financing, but also regain full policy autonomy.",
+    "founding_problem": "The problem of moral hazard in international lending: debtor states might undertake unsustainable fiscal policies, expecting bailouts, and creditors might lend recklessly, expecting to be repaid regardless of debtor performance. This led to cycles of debt crises and instability.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International financial institutions (IMF, World Bank) and major creditor nations consistently attest that the problem of moral hazard and the need for fiscal discipline remain live. Independent economic analyses, while critical of specific conditionalities, generally acknowledge the underlying coordination problem in international finance."
   },
   "interval": {
     "start": 1980,
@@ -33,47 +90,47 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1980,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
       "value": 0.2
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.25
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.23
-    },
-    {
-      "metric": "base_extractiveness",
       "time_point": 2010,
-      "value": 0.26
+      "value": 0.21
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2020,
-      "value": 0.25
+      "value": 0.2
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1980,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
       "value": 0.35
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1990,
+      "time_point": 2000,
       "value": 0.4
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.38
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 2010,
-      "value": 0.42
+      "value": 0.38
     },
     {
       "metric": "suppression_requirement",
@@ -83,22 +140,22 @@
     {
       "metric": "theater_ratio",
       "time_point": 1980,
-      "value": 0.08
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
       "time_point": 1990,
-      "value": 0.1
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.09
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
       "time_point": 2010,
-      "value": 0.11
+      "value": 0.12
     },
     {
       "metric": "theater_ratio",
@@ -107,39 +164,39 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint models structural adjustment conditionalities from the perspective of international creditors and financial institutions, viewing them as necessary coordination mechanisms to ensure fiscal sustainability and maintain market confidence in debtor nations. It is one reading of the 'structural_adjustment_conditionalities' kernel, focusing on the coordination problem solved and the benefits to the international financial system and future taxpayers, with 'inefficient state sectors' as the primary victims of necessary reforms. The claimed type is 'rope' because, from this perspective, the benefits of coordination outweigh the extraction, which is seen as a necessary cost of adjustment.",
-    "logic_rationale": "Extractiveness is low (0.25) because the primary function is seen as coordination and risk reduction, with extraction being a byproduct of necessary reforms rather than an end in itself. Suppression is moderate (0.4) as debtor nations have limited alternatives to international financing, but the enforcement is primarily policy-based rather than overtly coercive. Theater ratio is low (0.1) as the conditionalities are genuinely intended to achieve fiscal stability and market confidence, with minimal performative elements from this perspective. The metrics reflect the view that conditionalities are a functional, albeit sometimes difficult, tool for global financial stability.",
-    "directionality_logic": "International financial institutions and private creditors are beneficiaries (d near 0.0) as they gain from reduced risk and a stable lending environment. Debtor nation governments are payers (d near 0.7) as they bear the political and social costs of implementing reforms. Inefficient state sectors are victims (d near 1.0) as they are directly dismantled. Future taxpayers are beneficiaries (d near 0.1) as they are expected to benefit from long-term stability. International capital markets are beneficiaries (d near 0.0) due to systemic risk reduction.",
-    "perspectival_gap": "From the perspective of debtor nations and affected populations (as in the 'debtor_extraction_reading' sibling), the same conditionalities would compute as highly extractive and suppressive. This reading emphasizes the systemic benefits and the 'tough love' aspect of necessary reforms, leading to a 'rope' classification, while other readings would highlight the asymmetric power dynamics and social costs, leading to 'snare' or 'tangled_rope' classifications. The divergence is rooted in whether the 'adjustment' is seen as a shared burden for collective good or an imposed cost for creditor benefit.",
-    "kernel_context": "This constraint is the 'creditor_coordination_reading' of the 'structural_adjustment_conditionalities' kernel. It frames conditionalities as essential for global financial stability and long-term development. Sibling readings include 'debtor_extraction_reading' (conditionalities as neo-colonial extraction) and 'hybrid_selectivity_reading' (conditionalities as selectively applied discipline)."
+    "narrative_context": "This constraint story analyzes structural adjustment conditionalities from the perspective of international creditors, viewing them as essential coordination mechanisms. In this reading, conditionalities solve a genuine collective action problem in international finance by ensuring fiscal sustainability and maintaining market confidence, benefiting both creditors and future taxpayers in debtor states. The 'victims' are identified as inefficient state sectors that are reformed or dismantled for the greater good of economic stability. This reading acknowledges some extraction (0.2) and suppression (0.4) as necessary costs of coordination, but frames them as proportionate to the benefits of a stable global financial system.",
+    "logic_rationale": "The low extractiveness (0.2) reflects the view that conditionalities primarily serve a coordination function, with any extraction being a necessary cost of ensuring fiscal discipline and market confidence. Suppression (0.4) is present as active enforcement is required to ensure compliance, but it's not seen as excessive given the stakes of international financial stability. The low theater ratio (0.1) indicates that the stated purpose of conditionalities (fiscal sustainability) is largely aligned with their actual operation in this reading. Accessibility collapse (0.6) is moderate, as debtor states have some, albeit constrained, alternatives, and resistance (0.3) is present but not overwhelming.",
+    "directionality_logic": "International creditors and global financial markets are clear beneficiaries, as conditionalities reduce their risk and stabilize the system. Future taxpayers in debtor states are also beneficiaries, as they inherit a more fiscally sound economy. Debtor state governments are payers, bearing the political costs of implementing reforms. Inefficient state sectors are direct victims, as they are targeted for restructuring. The directionality for creditors is low (beneficiary), for debtor governments and state sectors it is high (target), and for future taxpayers and global markets it is low (beneficiary).",
+    "perspectival_gap": "From the creditor coordination perspective, the constraint is a Rope, solving a critical coordination problem. However, from the perspective of debtor states or affected populations, the same conditionalities might be experienced as a Snare or Tangled Rope due to perceived coercion and asymmetric extraction. The engine's per-seat classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'creditor_coordination_reading' of the 'structural_adjustment_conditionalities' kernel. It posits that conditionalities are necessary for fiscal sustainability and market confidence. Sibling readings include 'debtor_extraction_reading' (conditionalities as neo-colonial extraction) and 'hybrid_selectivity_reading' (conditionalities as selectively applied discipline)."
   },
   "omegas": [
     {
-      "id": "true_cost_of_adjustment",
-      "question": "What is the true social and economic cost of implementing conditionalities in debtor nations, and how does it compare to the benefits of financial stability?",
-      "resolution_mechanism": "Comprehensive, independent ex-post evaluations of structural adjustment programs, including social impact assessments and counterfactual analyses of alternative development paths.",
-      "impact": "If the social costs significantly outweigh the long-term benefits, it would challenge the 'rope' classification and push towards a 'tangled_rope' or 'snare' by revealing higher effective extraction and victimhood.",
+      "id": "genuine_coordination_vs_power_imposition",
+      "question": "To what extent do conditionalities genuinely solve a coordination problem versus imposing the will of powerful creditors on weaker debtors?",
+      "resolution_mechanism": "Analysis of counterfactual scenarios where debtor states successfully implement reforms without conditionalities, or where conditionalities are negotiated under more symmetric power conditions.",
+      "impact": "If primarily power imposition, the extractiveness and suppression metrics would be re-evaluated upwards, potentially reclassifying the constraint as a Tangled Rope or Snare. If genuine coordination, the Rope classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between coordination and power dynamics."
+    },
+    {
+      "id": "long_term_benefits_vs_short_term_costs",
+      "question": "Are the long-term benefits of conditionalities (fiscal sustainability, market confidence) consistently realized and do they outweigh the short-term social and economic costs borne by debtor populations?",
+      "resolution_mechanism": "Longitudinal empirical studies comparing economic and social development outcomes in states that underwent structural adjustment versus those that did not, controlling for other factors.",
+      "impact": "If long-term benefits are not consistently realized or do not outweigh costs, the 'future_taxpayers_in_debtor_states' might shift from beneficiary to payer, increasing overall extractiveness and challenging the Rope classification.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Assessing the net impact of conditionalities on debtor nations beyond fiscal metrics."
+      "description": "Uncertainty about the net long-term impact of conditionalities."
     },
     {
-      "id": "alternative_coordination_mechanisms",
-      "question": "Are there alternative, less extractive mechanisms for achieving international financial coordination and fiscal sustainability that would not require such extensive conditionalities?",
-      "resolution_mechanism": "Comparative analysis of different international financial architectures and development aid models, including those emphasizing debt relief, grants, or non-conditional budget support.",
-      "impact": "The existence of viable, less extractive alternatives would weaken the 'rope' classification by demonstrating that the current level of extraction and suppression is not structurally necessary for coordination, potentially reclassifying it as a 'tangled_rope' or 'snare'.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Exploring the necessity of conditionalities for international financial coordination."
-    },
-    {
-      "id": "naturalness_of_market_confidence",
-      "question": "To what extent is 'market confidence' a natural, objective phenomenon, and to what extent is it a constructed social fact influenced by creditor preferences and power dynamics?",
-      "resolution_mechanism": "Sociological and political economy studies analyzing the formation and manipulation of 'market sentiment' and 'investor confidence' in the context of international finance.",
-      "impact": "If market confidence is largely a social construct reflecting creditor power, the 'naturalness' of conditionalities as a response to 'market needs' would be undermined, increasing the perceived extractiveness and suppression.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Examining the constructed nature of 'market confidence' as a driver for conditionalities."
+      "id": "selectivity_of_enforcement",
+      "question": "Is the enforcement of conditionalities applied universally based on economic principles, or is it selectively applied based on geopolitical interests, as suggested by the 'hybrid_selectivity_reading'?",
+      "resolution_mechanism": "Comparative analysis of conditionalities applied to geopolitically strategic versus non-strategic debtor states with similar economic profiles.",
+      "impact": "If enforcement is found to be highly selective, it would undermine the claim of universal coordination and suggest a more extractive or politically motivated function, pushing the classification towards Tangled Rope or Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether conditionalities are applied consistently or selectively."
     }
   ],
   "boltzmann": {
@@ -147,14 +204,13 @@
   },
   "network": {
     "affects_constraints": [
-      "debtor_extraction_reading",
-      "hybrid_selectivity_reading"
-    ],
-    "dual_formulation_note": "This constraint is the 'creditor_coordination_reading' of the 'structural_adjustment_conditionalities' kernel. It focuses on the coordination function and benefits to the international financial system. Sibling readings ('debtor_extraction_reading', 'hybrid_selectivity_reading') offer alternative perspectives on the same underlying policy instrument, emphasizing extraction or selective application."
+      "international_debt_management_regime",
+      "global_capital_flow_regulation"
+    ]
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "expertise",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
@@ -168,35 +224,36 @@
     ],
     "axioms": [
       {
-        "atom": "fiscal_discipline_is_foundational_for_growth",
+        "atom": "fiscal_sustainability_is_paramount",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "instrumental"
       },
       {
-        "atom": "market_confidence_is_a_prerequisite_for_investment",
+        "atom": "market_liberalization_drives_growth",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "post_bretton_woods_consensus",
+    "reference_frame": "washington_consensus_framework",
     "drift_state": {
-      "moment": "contemporary_global_south_critiques",
+      "moment": "contemporary_post_crisis_era",
       "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

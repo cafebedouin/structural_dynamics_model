@@ -4,25 +4,97 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "2c2cb4b8-a7a0-4610-b309-e47797c8ddc0"
+    "story_uid": "ec8631bc-62fa-4398-b1e3-94516ab598fe"
   },
   "base_properties": {
-    "extractiveness": 0.85,
+    "extractiveness": 0.65,
     "suppression": 0.95,
-    "theater_ratio": 0.1,
-    "accessibility_collapse": 0.9,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.8,
     "resistance": 0.7,
-    "claimed_type": "snare",
+    "claimed_type": "tangled_rope",
     "human_readable": "State Killing Authority: Retributive Desert",
     "topic_domain": "criminal_justice/political_philosophy/constitutional_law",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "murder_victims_families",
-      "society_at_large"
+      "state_judicial_system",
+      "murdered_person_posthumous_vindication"
     ],
     "victims": [
-      "condemned_persons"
+      "condemned_person",
+      "family_of_condemned"
+    ],
+    "vindicated_propositions": [
+      "lex_talionis_principle",
+      "proportional_justice_doctrine"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_judicial_system",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers the legal framework for capital punishment, interpreting and applying the principle of 'death for death' as a just and proportional response to murder. Benefits from maintaining its authority and the perceived moral order."
+    },
+    {
+      "name": "condemned_person",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The individual sentenced to death, who has forfeited their right to life according to this reading. Bears the ultimate cost of the constraint, with no legal or physical exit from the punishment."
+    },
+    {
+      "name": "family_of_condemned",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bears the emotional and social costs associated with the execution, including stigma and loss. Their options are limited to legal appeals and advocacy, with no direct power to alter the constraint."
+    },
+    {
+      "name": "murdered_person_posthumous_vindication",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The murdered individual, whose right to life is posthumously vindicated by the state's proportional response. This is a conceptual beneficiary, representing the moral balance restored by the punishment."
+    },
+    {
+      "name": "victims_families",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "May experience a sense of justice or closure from the execution, seeing it as a proportional response to their loss. Their benefit is emotional and symbolic, not material."
+    },
+    {
+      "name": "categorical_abolitionists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocate for the inherent impermissibility of state killing, regardless of the crime. Their arguments are excluded from the retributive desert framework, which focuses on proportionality and forfeiture."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear, proportional response to murder, aiming to coordinate societal understanding of justice and the sanctity of life by asserting that a life taken demands a life in return.",
+    "transfer_function": "Transfers the right to life from the condemned person to the state, in exchange for the perceived restoration of moral balance and vindication of the victim's right to life.",
+    "absent_voices": "Categorical abolitionists are excluded from the retributive desert framework, as their premise of inalienable life directly contradicts the forfeiture principle. Their arguments for inherent impermissibility are not considered within this reading's logic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the principle of retributive desert for murder vanished, the entire legal and moral justification for capital punishment in many jurisdictions would collapse. Sentencing guidelines would need fundamental revision, and the societal understanding of justice for murder would shift dramatically, likely towards life imprisonment as the maximum penalty.",
+    "founding_problem": "The problem of how to justly respond to the ultimate crime of murder, ensuring that the punishment fits the gravity of the offense and upholds the moral order.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Philosophical traditions, historical legal codes (e.g., Hammurabi), and some public opinion polls attest to the enduring belief in 'an eye for an eye' as a principle of justice, corroborating the live status of the founding problem from outside the immediate judicial system."
   },
   "interval": {
     "start": 1976,
@@ -32,22 +104,32 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1976,
-      "value": 0.8
+      "value": 0.6
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1990,
-      "value": 0.85
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.82
+      "time_point": 2000,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.85
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
@@ -61,8 +143,18 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2005,
-      "value": 0.92
+      "time_point": 2000,
+      "value": 0.98
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.95
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.95
     },
     {
       "metric": "suppression_requirement",
@@ -77,53 +169,63 @@
     {
       "metric": "theater_ratio",
       "time_point": 1990,
-      "value": 0.08
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.12
+      "time_point": 2000,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
-      "value": 0.1
+      "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'retributive desert' reading of state killing authority, where capital punishment is justified by the principle of lex talionis (death for death) and the forfeiture of the murderer's right to life. It is distinct from readings based on deterrence or categorical abolition. The constraint is framed as a snare due to its high extraction (life itself) and suppression (the state's ultimate coercive power), with identifiable victims (condemned persons) and beneficiaries (victims' families, society's moral order).",
-    "logic_rationale": "Extractiveness is high (0.85) as it involves the ultimate cost: life. Suppression is also very high (0.95) because the state's authority to execute is backed by its monopoly on legitimate force, and there are no exit options for the condemned. Theater ratio is low (0.1) because the act of execution is a direct, non-performative application of the constraint's core function. The metrics reflect the severe, direct, and irreversible nature of this form of punishment.",
-    "directionality_logic": "The state judicial system acts as the agenda-setter, enforcing the constraint. Murder victims' families and society at large are beneficiaries, receiving symbolic justice and moral vindication. Condemned persons are the direct victims, losing their lives. Human rights advocates are excluded, as their foundational premises are incompatible with this reading's justification.",
-    "perspectival_gap": "From the perspective of victims' families and retributive proponents, this constraint is a necessary act of justice, restoring balance. From the perspective of the condemned and abolitionists, it is an unjust act of state violence. The engine's classification as a snare reflects the structural reality of extraction and suppression, regardless of the moral justification offered by its proponents.",
-    "kernel_context": "This constraint, 'State Killing Authority: Retributive Desert,' is one reading of the broader 'state_killing_authority' kernel. It instantiates the view that murderers forfeit their right to life and that proportional punishment demands death for death. Sibling readings include 'deterrence_instrument' (justifying capital punishment by its crime-preventing effects) and 'categorical_abolition' (which holds state killing to be inherently impermissible)."
+    "narrative_context": "This constraint represents the 'retributive desert' reading of state killing authority, where capital punishment is justified by the principle of lex talionis: murderers forfeit their right to life, and proportional justice demands 'death for death'. It is a reading that grounds state authority in a moral imperative for retribution, distinct from utilitarian considerations like deterrence or categorical prohibitions against state killing. The constraint is actively enforced by the state judicial system, extracting the life of the condemned.",
+    "logic_rationale": "Extractiveness is high (0.65) because the constraint directly extracts life. Suppression is very high (0.95) due to the state's monopoly on legitimate force and the complete lack of exit options for the condemned. Theater ratio is low (0.20) as the primary function of execution (retribution) is genuinely pursued, though some performative aspects exist (e.g., public statements, symbolic gestures). Accessibility collapse is high (0.80) as the legal system offers few alternatives once a death sentence is final. Resistance is high (0.70) from abolitionist movements and legal challenges.",
+    "perspectival_gap": "From the perspective of the state judicial system, this constraint is a necessary mechanism for upholding justice and moral order. From the perspective of the condemned and their families, it is a pure extraction, a final and irreversible loss. The murdered person's posthumous vindication is a conceptual benefit, experienced by the state and victims' families as a restoration of balance.",
+    "directionality_logic": "The state judicial system is a beneficiary (d=0.0) as it maintains its authority and the perceived moral order. The murdered person (posthumous vindication) is also a beneficiary (d=0.0) conceptually. The condemned person (d=1.0) and their family (d=0.9) are clear targets, bearing the ultimate costs. Victims' families are beneficiaries (d=0.2) through the sense of justice. Categorical abolitionists are excluded (d=0.8) as their arguments are outside this reading's framework.",
+    "mandatrophy_analysis": "This reading's mandate is tied to the enduring belief in retributive justice. Mandatrophy would occur if society broadly rejected the 'death for death' principle, even if the state continued executions for other reasons (e.g., deterrence). The current contestation over its founding problem status ('live' vs. 'dead') indicates a potential for future mandatrophy if the 'dead' argument gains wider acceptance. The classification as Tangled Rope reflects the coordination of justice principles with the extraction of life, requiring active enforcement to maintain."
   },
   "omegas": [
     {
-      "id": "moral_forfeiture_ambiguity",
-      "question": "Is the right to life truly forfeitable by criminal act, or is it an inalienable right?",
-      "resolution_mechanism": "Philosophical consensus on the nature of rights, or a shift in societal moral intuitions regarding state power over life.",
-      "impact": "If the right to life is inalienable, the foundational premise of this reading collapses, reclassifying the constraint as pure extraction (snare) without moral justification, potentially shifting it towards a 'categorical_abolition' reading.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity regarding the moral basis of life forfeiture."
-    },
-    {
-      "id": "proportionality_measurement",
-      "question": "How is 'death for death' proportionality objectively measured and applied, given the unique value of each human life?",
-      "resolution_mechanism": "Development of a universally accepted metric for moral proportionality in punishment, or a legal framework that consistently applies lex talionis without arbitrary distinctions.",
-      "impact": "If proportionality cannot be objectively measured, the claim of 'justice' becomes subjective, weakening the constraint's legitimacy and potentially exposing it as arbitrary extraction.",
+      "id": "retribution_vs_deterrence_justification",
+      "question": "Is the primary justification for capital punishment in practice truly retributive desert, or is it a cover for deterrence-based instrumentalism?",
+      "resolution_mechanism": "Analysis of judicial opinions and legislative debates: if deterrence arguments consistently outweigh retributive ones, reclassify as deterrence-instrument.",
+      "impact": "If deterrence is the true driver, the constraint's classification would shift towards a more instrumental (and potentially less morally grounded) form of extraction, potentially altering its ethical evaluation.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "The challenge of objectively measuring proportional punishment."
+      "description": "Ambiguity in the primary justification for capital punishment."
     },
     {
-      "id": "sibling_reading_impact",
-      "question": "How would the adoption of the 'categorical_abolition' reading structurally alter this constraint?",
-      "resolution_mechanism": "Analysis of legal and societal changes in jurisdictions that have adopted abolitionist stances.",
-      "impact": "The 'categorical_abolition' reading would directly foreclose the 'retributive_desert' reading by denying the state's authority to take life, rendering this constraint null and void within that framework.",
+      "id": "forfeiture_vs_inalienable_rights",
+      "question": "Does murder truly result in the forfeiture of the right to life, or is the right to life inalienable, even for murderers?",
+      "resolution_mechanism": "Philosophical consensus shift or international legal precedent establishing inalienability as a universal norm.",
+      "impact": "If the right to life is deemed inalienable, the core premise of this reading collapses, leading to a reclassification towards categorical abolition.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Impact of categorical abolition on retributive desert."
+      "description": "Contestation over the fundamental nature of the right to life."
+    },
+    {
+      "id": "victim_vindication_reality",
+      "question": "Is the 'posthumous vindication' of the murdered person a genuine benefit, or a rhetorical construct to justify state action?",
+      "resolution_mechanism": "Sociological studies on the impact of executions on victims' families and broader societal perceptions of justice, alongside philosophical analysis of conceptual personhood.",
+      "impact": "If it's primarily a rhetorical construct, the 'beneficiary' status of the murdered person would be re-evaluated, potentially increasing the perceived extractiveness from the condemned without a corresponding moral balance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The reality of posthumous victim vindication as a benefit."
     }
   ],
   "boltzmann": {
@@ -134,7 +236,7 @@
       "state_killing_authority__deterrence_instrument",
       "state_killing_authority__categorical_abolition"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'state_killing_authority' kernel, focusing on retributive desert. It is linked to the deterrence and abolitionist readings as part of a constraint family."
+    "dual_formulation_note": "This constraint is one reading of the 'state_killing_authority' kernel. Its core premise of retributive desert and forfeiture of the right to life distinguishes it from deterrence-based justifications and categorical prohibitions."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -142,23 +244,23 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "state_killing_authority__deterrence_instrument",
+        "sibling_id": "deterrence_instrument",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "state_killing_authority__categorical_abolition",
+        "sibling_id": "categorical_abolition",
         "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "right_to_life_is_forfeitable",
+        "atom": "murder_forfeits_right_to_life",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "lex_talionis_is_just",
+        "atom": "lex_talionis_is_proportional_justice",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
@@ -173,14 +275,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,47 +4,136 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "dc10795f-9658-44e0-9061-f6ba378db7ea"
+    "story_uid": "4da4d40d-4e85-42ca-9b29-4aad1d866b01"
   },
   "base_properties": {
     "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.2,
-    "accessibility_collapse": 0.6,
-    "resistance": 0.45,
+    "suppression": 0.78,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.4,
     "claimed_type": "tangled_rope",
-    "human_readable": "Sanctity of Life Principle in End-of-Life Policy",
+    "human_readable": "Sanctity of Life Prohibition on Assisted Dying",
     "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "religious_institutions",
-      "pro_life_advocacy_groups",
-      "healthcare_systems_focused_on_preservation"
+      "conservative_bioethicists",
+      "palliative_care_providers"
     ],
     "victims": [
-      "terminally_ill_patients_seeking_assisted_dying",
-      "elderly_vulnerable_to_coercion",
-      "disabled_persons_at_risk_of_devaluation"
+      "terminally_ill_patients",
+      "severely_disabled_individuals",
+      "economically_disadvantaged_patients"
+    ],
+    "vindicated_propositions": [
+      "intrinsic_value_of_life_doctrine",
+      "do_no_harm_principle"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "religious_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Advocate for and enforce the sanctity of life principle, viewing all intentional life-ending as morally impermissible. They provide moral and theological grounding for legal prohibitions and influence public opinion and policy makers. Their identity is deeply fused with this doctrine."
+    },
+    {
+      "name": "conservative_bioethicists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from the persistence of the sanctity of life framework, which aligns with their professional and ethical commitments. They publish research, advise policy, and participate in legal challenges to assisted dying, reinforcing the constraint's legitimacy."
+    },
+    {
+      "name": "palliative_care_providers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefit from the focus on life preservation and comfort care, as it directs resources and attention to their services. While not directly enforcing the prohibition, their practice aligns with it, and they often present palliative care as the ethical alternative to assisted dying."
+    },
+    {
+      "name": "terminally_ill_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the cost of being denied the option of assisted dying, even when facing unbearable suffering and a clear desire to end their lives. Their choices are limited to prolonged suffering, natural death, or illicit means, with significant legal and social barriers to exit."
+    },
+    {
+      "name": "severely_disabled_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Are often included in the 'vulnerable' population whose lives are protected by the sanctity of life principle, even if they do not wish to be. They may experience a loss of agency and fear that their lives are being prolonged against their will, or that their desire for assisted dying is interpreted as a sign of devaluing their lives."
+    },
+    {
+      "name": "economically_disadvantaged_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Face heightened vulnerability to coercion if assisted dying were widely available, as economic pressures could influence end-of-life decisions. The sanctity of life constraint, while protecting them from this specific coercion, also denies them a choice that might be desired in the face of prolonged, costly illness."
+    },
+    {
+      "name": "physicians",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are bound by ethical codes and legal frameworks that prohibit active participation in ending a patient's life. This limits their professional role to preserving life and alleviating suffering, even when patients request assistance in dying. They bear the moral and professional cost of denying patient requests, but also benefit from a clear, protective boundary."
+    },
+    {
+      "name": "proponents_of_autonomy",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for individual self-determination in end-of-life decisions. They are excluded from the core decision-making framework of the sanctity of life reading, which prioritizes the intrinsic value of life over individual preference. Their arguments are often framed as a threat to the vulnerable."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a categorical moral and legal boundary against intentional life-ending, providing a clear framework for medical practice and public policy that prioritizes life preservation and protects vulnerable populations from potential coercion.",
+    "transfer_function": "Transfers the ultimate decision-making authority over the timing and manner of death from the individual to a collective moral and legal framework, enforced by medical and religious institutions. It also transfers the burden of prolonged suffering onto individuals who desire assisted dying.",
+    "absent_voices": "Proponents of individual autonomy and patient choice are actively excluded from the core framing of this constraint, as their arguments directly challenge the foundational premise of life's intrinsic value overriding personal preference. Their voices are present in public discourse but not in the constraint's internal logic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the sanctity of life prohibition vanished overnight, medical ethics, legal frameworks, and end-of-life care practices would undergo a profound reorganization. Assisted dying would likely become a legal and medical option, shifting the landscape of patient rights, physician roles, and societal views on death and suffering.",
+    "founding_problem": "The problem of protecting human life from arbitrary or coerced termination, particularly for vulnerable individuals who might be pressured to end their lives.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Religious leaders and conservative bioethicists attest that the problem of protecting vulnerable lives remains live, citing ongoing concerns about potential abuses if assisted dying is legalized. Patient advocacy groups for the disabled also corroborate the risk of coercion, even if they disagree on the solution."
+  },
   "interval": {
-    "start": 1950,
+    "start": 1970,
     "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1950,
+      "time_point": 1970,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1970,
+      "time_point": 1985,
       "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1990,
+      "time_point": 2000,
       "value": 0.6
     },
     {
@@ -59,143 +148,138 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1950,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 1970,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1990,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
       "time_point": 2010,
-      "value": 0.73
+      "value": 0.77
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.75
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1950,
-      "value": 0.1
+      "value": 0.78
     },
     {
       "metric": "theater_ratio",
       "time_point": 1970,
-      "value": 0.12
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.15
+      "time_point": 1985,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.09
     },
     {
       "metric": "theater_ratio",
       "time_point": 2010,
-      "value": 0.18
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
-      "value": 0.2
+      "value": 0.1
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'sanctity of life' reading of end-of-life authority, which holds that human life has intrinsic value and prohibits intentional life-ending, regardless of individual preference. It is a contested kernel, with other readings emphasizing individual autonomy or the empirical risks of a 'slippery slope'. This reading places vulnerable populations (elderly, disabled, economically disadvantaged) into the victim set due to the risk of coercion, and imposes a categorical prohibition on assisted dying, limiting the physician's role to life preservation. The constraint is actively enforced through legal and medical frameworks.",
-    "logic_rationale": "The extractiveness (0.65) is substantial, as it denies individuals control over their own death, leading to prolonged suffering for some. Suppression (0.75) is high due to legal prohibitions and professional ethical codes that actively prevent assisted dying. Theater ratio (0.20) is low, indicating that the constraint's enforcement is largely functional in upholding its stated purpose, though some performative aspects exist in public discourse. The increasing extractiveness and suppression over time reflect the hardening of positions in response to growing advocacy for autonomy.",
-    "directionality_logic": "Religious institutions and pro-life groups are clear beneficiaries, as the constraint aligns with their moral frameworks and policy goals. Healthcare systems and physicians, while also constrained, benefit from clear ethical boundaries. Terminally ill patients seeking assisted dying are direct targets/victims, bearing the cost of denied autonomy. Vulnerable elderly and disabled persons are also victims, as the constraint, while ostensibly protecting them, can also limit their agency and choices, potentially leading to prolonged suffering or a lack of control over their end-of-life process.",
-    "perspectival_gap": "From the perspective of beneficiaries, the constraint is a necessary moral safeguard, a 'rope' that coordinates society around a fundamental value. From the perspective of patients seeking assisted dying, it is a 'snare' that traps them in suffering. The engine's classification as a 'tangled_rope' reflects this hybrid nature: it coordinates a moral stance but does so with significant extraction from those whose preferences are overridden.",
-    "kernel_context": "This constraint is the 'sanctity_reading' of the 'end_of_life_authority' kernel. It stands in contrast to the 'autonomy_reading' (which prioritizes individual choice) and the 'slippery_slope_mechanism' (which focuses on the empirical risks of liberalizing end-of-life laws). This reading asserts a categorical prohibition on intentional life-ending based on intrinsic value."
+    "narrative_context": "This constraint represents the 'sanctity of life' reading of end-of-life authority, which holds that human life has intrinsic value and prohibits intentional life-ending regardless of individual preference. It is a foundational principle in many religious and ethical traditions, shaping legal and medical policy. This reading places vulnerable populations (elderly, disabled, economically disadvantaged) into the victim set due to the perceived risk of coercion if assisted dying were permitted, even as it denies agency to terminally ill patients. The constraint is actively enforced through legal prohibitions and professional medical codes.",
+    "logic_rationale": "Extractiveness is high (0.65) because it imposes a significant cost on individuals who desire to end their suffering through assisted dying, denying them a choice they value. Suppression is also high (0.78) due to strong legal and institutional barriers, making exit options like assisted dying virtually impossible within the formal system. Theater ratio is low (0.1) as the constraint's function is genuinely maintained, with little performative activity masking atrophy. The metrics reflect a system that is effective in its stated goal of prohibiting life-ending, but at a high cost to those whose preferences are suppressed.",
+    "directionality_logic": "Religious institutions and conservative bioethicists are beneficiaries and agenda-setters, as the constraint aligns with their core values and strengthens their institutional authority. Palliative care providers also benefit from the focus on life preservation. Terminally ill patients, severely disabled individuals, and economically disadvantaged patients are victims/payers, as they bear the direct costs of denied agency and prolonged suffering. Physicians are both agenda-setters (through their ethical codes) and payers (bearing the moral burden of denying patient requests).",
+    "perspectival_gap": "From the perspective of religious institutions and conservative bioethicists, this constraint is a necessary protection for human dignity and the vulnerable (a Rope or even a Mountain). From the perspective of terminally ill patients, it is a Snare, trapping them in suffering against their will. The engine's classification will reflect this divergence based on the structural positions.",
+    "mandatrophy_analysis": "The constraint's mandate to protect vulnerable lives is still considered 'live' by its proponents, preventing a full mandatrophy resolution. However, the increasing resistance from patient autonomy advocates suggests a growing contestation of whether the constraint's current form is the optimal or only way to achieve that protection. The high suppression indicates that its persistence relies on active enforcement against alternatives, rather than universal consent.",
+    "kernel_context": "This constraint is the 'sanctity_reading' of the 'end_of_life_authority' kernel. It stands in contrast to the 'autonomy_reading' (which prioritizes individual choice) and the 'slippery_slope_mechanism' (which focuses on the empirical risks of expanding assisted dying access)."
   },
   "omegas": [
     {
-      "id": "sanctity_vs_autonomy_primacy",
-      "question": "Which principle (sanctity of life or individual autonomy) should take precedence in end-of-life decisions?",
-      "resolution_mechanism": "Societal consensus shift, legislative action, or judicial rulings that re-prioritize one principle over the other.",
-      "impact": "If autonomy gains primacy, the constraint would shift towards a 'rope' or 'scaffold' for those seeking assisted dying, with significantly lower extraction. If sanctity is reaffirmed, the current 'tangled_rope' classification would be reinforced.",
-      "confidence": "high",
-      "type_class": "preference",
-      "description": "The fundamental moral choice between two competing ethical principles."
+      "id": "vulnerability_vs_autonomy_priority",
+      "question": "Does prioritizing the protection of vulnerable populations from potential coercion (sanctity of life) necessarily foreclose individual autonomy in end-of-life decisions, or can both be reconciled?",
+      "resolution_mechanism": "Development of robust safeguards and legal frameworks that protect the vulnerable while allowing for autonomous choice in specific, well-defined circumstances.",
+      "impact": "If reconcilable, the constraint's suppression of autonomy could be reduced without compromising protection, potentially shifting its classification towards a more balanced Tangled Rope or even a Rope. If irreconcilable, the current high suppression is inherent to this reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The fundamental tension between collective protection and individual self-determination in end-of-life policy."
     },
     {
-      "id": "vulnerability_protection_vs_autonomy_denial",
-      "question": "To what extent does the categorical prohibition on assisted dying genuinely protect vulnerable populations from coercion, versus denying autonomy to competent individuals?",
-      "resolution_mechanism": "Empirical studies on the incidence of coercion in jurisdictions with legalized assisted dying, and qualitative research on the experiences of vulnerable populations under both regimes.",
-      "impact": "If coercion is rare and manageable, the 'victim' status of vulnerable groups under this reading would be re-evaluated, potentially reducing the perceived justification for the high suppression. If coercion is widespread, it would reinforce the current structure.",
+      "id": "coercion_risk_empirical_basis",
+      "question": "What is the empirical evidence for the actual risk of coercion for vulnerable populations if assisted dying is legalized with safeguards, compared to the current suffering endured by those denied the option?",
+      "resolution_mechanism": "Longitudinal studies and comparative analyses from jurisdictions where assisted dying is legal, evaluating the effectiveness of safeguards and the incidence of coercion.",
+      "impact": "Strong evidence of low coercion risk would weaken the 'protection of vulnerable' justification for the categorical prohibition, potentially reducing the perceived legitimacy of the constraint's high suppression. Conversely, high coercion risk would reinforce it.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The actual protective effect of the prohibition versus its cost in autonomy."
+      "description": "The factual basis for the 'slippery slope' argument and its impact on vulnerable groups."
     },
     {
-      "id": "slippery_slope_empirical_evidence",
-      "question": "Does the empirical evidence from jurisdictions that have legalized assisted dying support the 'slippery slope' hypothesis (expansion beyond initial criteria)?",
-      "resolution_mechanism": "Longitudinal comparative studies of end-of-life practices and legal changes in jurisdictions with varying assisted dying laws.",
-      "impact": "Strong empirical evidence for a 'slippery slope' would strengthen the justification for the sanctity reading's categorical prohibition, potentially increasing its perceived legitimacy. Weak or absent evidence would undermine a key argument for its persistence.",
-      "confidence": "medium",
+      "id": "identity_lock_physicians",
+      "question": "To what extent is the physician's 'identity_locked' exit option a result of deeply internalized professional ethics (deontological) versus structural legal and institutional pressures (conventional)?",
+      "resolution_mechanism": "Surveys and qualitative studies of physicians in jurisdictions with varying legal frameworks for assisted dying, exploring their moral distress and professional identity shifts.",
+      "impact": "If primarily internalized, changing legal frameworks might not immediately alter physician behavior or perceived constraints. If primarily structural, legal changes would more directly reduce their 'trapped' status, potentially shifting their directionality and the constraint's overall suppression.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Empirical validity of the 'slippery slope' argument."
+      "description": "Structural vs. internalized components of physician identity lock in end-of-life care."
     }
   ],
-  "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
-  },
-  "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is the 'sanctity_reading' of the 'end_of_life_authority' kernel. It is structurally distinct from the 'autonomy_reading' and 'slippery_slope_mechanism' readings, which are modeled as separate constraints."
-  },
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "end_of_life_authority__autonomy_reading",
+        "sibling_id": "autonomy_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "end_of_life_authority__slippery_slope_mechanism",
+        "sibling_id": "slippery_slope_mechanism",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "human_life_has_intrinsic_value",
+        "atom": "intrinsic_value_of_human_life",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "intentional_life_ending_is_categorically_wrong",
+        "atom": "protection_of_the_vulnerable_from_coercion",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "traditional_medical_ethics_preservation",
+    "reference_frame": "traditional_medical_ethics_life_preservation",
     "drift_state": {
-      "moment": "contemporary_autonomy_advocacy_era",
+      "moment": "contemporary_patient_rights_movement",
       "direction": "repudiation_pressure",
       "magnitude": "substantial",
-      "acknowledged": true
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }
