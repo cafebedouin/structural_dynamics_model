@@ -17984,8 +17984,11 @@ regime pair (free; free-tier cap 1000 req/day).
 prompt `e03e2210`; the July sonnet leg is at `becd0f87`, so **sonnet vs sonnet2 is redraw + prompt change**
 (the flash-vs-flash2 shape) — read at one engine commit: h1 69% / verdict 71% / signature 89% /
 claimed_type 93% / ε exact 54%, |Δε| median 0.00, p90 0.10, 12% ≥0.10; seat-type vector changes on
-43% of seeds (38% even with |Δε| < 0.10) vs 22% on the Flash thinking-off floor. A PURE sonnet floor
-is sonnet2 vs a sonnet3 (~$40, operator's call); likewise haiku3 (~$16). Cross-FAMILY ε
+43% of seeds (38% even with |Δε| < 0.10) vs 22% on the Flash thinking-off floor. Haiku read (coherent): h1 53% / verdict 72% / signature 87% / claimed_type 87% / ε 49%, |Δε| p90 0.10,
+seat-vector churn 69% (67% with ε pinned) — the June haiku leg is at schema `2e9dff2f` (pre-gate,
+stakeholder-sparse), so haiku vs haiku2 is the LARGEST regime change in the set, not a floor. **Of the
+three 2026-08-22 pairs only flash2 vs flash3 is a pure floor; sonnet3 and haiku3 (`--leg-suffix 3`,
+same commit) launched 2026-08-22 ~10:15 to get the pure Anthropic floors (~$40 + ~$16). Cross-FAMILY ε
 exact-agreement is ~3% (Claude `.x8` vs Flash `.x5` rails) — use |Δε|, never exact match, across
 families.
 

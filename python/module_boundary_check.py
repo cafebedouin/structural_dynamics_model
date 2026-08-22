@@ -344,6 +344,8 @@ CORPUS_DIRS = {
     "testsets_flash3":  "Second same-commit redraw (gemini-2.5-flash, thinking off; 2026-08-21).",
     "testsets_flash_think":  "Regime-contrast leg (gemini-2.5-flash, thinking_budget=8192; 2026-08-21).",
     "testsets_flash_think2": "Redraw of the regime-contrast leg (gemini-2.5-flash, thinking_budget=8192; 2026-08-21).",
+    "testsets_sonnet3":  "Second same-commit redraw (claude-sonnet-5; sonnet2 vs sonnet3 = the pure sonnet floor; 2026-08-22).",
+    "testsets_haiku3":   "Second same-commit redraw (claude-haiku-4-5; haiku2 vs haiku3 = the pure haiku floor; 2026-08-22).",
     "testsets_kimi2":    "Same-model REDRAW of testsets_kimi (kimi-k2.6 batch; the kimi floor; 2026-08-22).",
     "testsets_sonnet2":  "Same-model REDRAW of testsets_sonnet (claude-sonnet-5 batch; the sonnet floor; 2026-08-22).",
     "testsets_haiku2":   "Same-model REDRAW of testsets_haiku (claude-haiku-4-5 batch, thinking disabled; the haiku floor; 2026-08-22).",
