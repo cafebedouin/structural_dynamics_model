@@ -1,0 +1,339 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__deployer_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "4e51fb3f-ed89-4c46-9adc-8c53d47b7e70"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.69,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Deployer Primary Liability Regime for AI Systems",
+    "topic_domain": "legal/technological/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "foundation_model_providers",
+      "developer_communities"
+    ],
+    "victims": [
+      "system_deployers",
+      "harmed_end_users"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "system_deployers",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organizations that integrate and operate AI systems in production environments (hospitals, banks, autonomous vehicle fleets, content platforms). Under deployer-liability regimes, they bear primary legal and financial responsibility for harms caused by the deployed system, regardless of whether the harm originated from model design flaws, training data issues, or emergent behaviors they did not and could not predict. Their burden includes comprehensive auditing, monitoring, documentation of due diligence, and insurance or self-insurance against downstream liability. They cannot exit deployment without abandoning their operational capacity; their exit options collapse around the decision to deploy at all."
+    },
+    {
+      "name": "foundation_model_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Companies that train and release large language models, vision models, and multi-modal systems. Under deployer liability, they are substantially shielded from downstream harm claims: the deployer, not the model provider, bears the duty to audit, constrain, and monitor the model. Model providers externalize deployment risk and maintain pricing power despite uncertainty about their products' failure modes. They can exit through model retirement or fine-tuning guidance without absorbing liability cascades."
+    },
+    {
+      "name": "developer_communities",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Open-source developers, researchers, and tool-builders who create applications and systems layered on top of foundation models. Under deployer liability, they are similarly shielded: if an application they publish causes harm in deployment, the deployer's due diligence obligation extends to vetting and constraining the application before use. Developers retain the benefit of broad distribution and adoption without assuming liability for all downstream deployment contexts."
+    },
+    {
+      "name": "harmed_end_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals and communities who suffer direct harm from deployed AI systems (discriminatory loan denials, medical misdiagnosis, privacy violations, autonomous vehicle injuries, defamatory content generation). Under deployer liability, their recourse is against the deployer organization, not the model provider or developer. However, if the deployer can establish they exercised due diligence (conducted audits, implemented controls), the end user's claim may be denied or limited, leaving harmed parties without remedy despite suffering the concrete injury."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Governments, sectoral regulators (FDA, SEC, financial authorities), and cross-border standard-setters that establish the liability regime. They define the scope of deployer responsibility, the due diligence standard, the safe-harbor conditions, and enforcement mechanisms. They face pressure from deployer organizations to limit liability and from civil society to ensure harmed parties have recourse."
+    },
+    {
+      "name": "insurance_and_verification_markets",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Insurance carriers, auditing firms, and certification bodies that emerge to manage deployer liability: they conduct compliance audits, issue risk assessments, price insurance coverage, and certify due diligence. They collect insurance premiums and audit fees from deployers and profit from the opacity: the harder it is to predict AI failure modes, the higher the risk premiums they can charge and the more audits and certifications they can sell."
+    },
+    {
+      "name": "excluded_parties",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Civil society organizations advocating for victim compensation, academic researchers demanding model transparency, and competing deployment frameworks emphasizing provider accountability. They argue that deployers lack the technical knowledge to audit opaque models and that liability should follow causal responsibility (the provider/developer who created the capability). They are structurally excluded from the regime design because liability rules are written by deployers, model providers, and regulators without systematic civil-society participation in the foundational premise-setting."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear chain of responsibility for AI system safety: deployers have decision authority over deployment contexts, so deployers bear the duty to audit, constrain, and monitor their systems. This creates a single accountable party and avoids the diffuse-responsibility problem where model providers deny responsibility because they did not control deployment, and deployers deny responsibility because they did not design the model.",
+    "transfer_function": "Transfers liability risk from upstream providers (model creators, foundation model companies) to downstream deployers (operational organizations). Deployers absorb the cost of due diligence, insurance, and potential liability settlements; providers externalize deployment risk and maintain pricing power despite model opacity.",
+    "absent_voices": "Harmed end users and their advocates are structurally excluded from regime-design decisions; they do not participate in defining the deployer liability standard or the safe-harbor conditions. Civil-society accountability movements and transparency advocates are sidelined. Academic researchers demanding model auditability are not parties to the negotiation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If deployer-primary liability vanished and was replaced by developer/provider liability or shared liability, the allocation of insurance costs, due-diligence burdens, and compensation pools would reorganize. Model providers would face liability pressure to increase transparency and auditability; deployers would have stronger claims for model provider indemnification; harmed parties would have alternative defendants with deeper pockets. The entire insurance, audit, and certification market built around deployer liability would shrink or reorient.",
+    "founding_problem": "In the early deployment phase of large AI models, responsibility for harms was ambiguous: model providers claimed they provided only tools and could not be held liable for all possible downstream uses; deployers claimed they lacked the technical knowledge to audit opaque models; harmed parties had no clear defendant. The deployer-liability regime was proposed as a solution: place responsibility clearly on the party with decision authority and deployment context (the deployer), and make deployers' due diligence obligations the mechanism for risk management.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Model providers and large technology companies attest that deployer liability creates clear incentives for safety and allows them to continue innovation without rear-facing liability. Deployers and their legal representatives initially supported it as a way to establish insurance and safe-harbor mechanisms, though increasingly contest it as the due-diligence burden grows. Civil-society organizations and some academic researchers attest that the founding problem was NEVER that responsibility was ambiguous to deployers—deployers made conscious choices to deploy opaque systems—but that providers lacked accountability. Harmed-party advocates attest the regime leaves them without meaningful recourse when deployers claim due diligence."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Deployer-primary liability is ONE reading of a contested kernel about who bears responsibility for harms caused by deployed AI systems. This reading assigns primary liability to the organization that deploys and operates the system, on the grounds that they control the deployment context and make the decision to put the system in production. The REFERENT is the standing liability allocation under this reading—the regime as described—assessed by this reading's own lights (deployment-context causation, operational decision authority). The reading's endorsed alternative (e.g., provider liability or shared liability) is NOT the referent; ε measures the extractiveness of the deployer-liability regime itself. Sibling readings (developer_liability, shared_liability) are separate constraints with their own ε values, beneficiary/victim structures, and deployed rationales.",
+    "key_agents": [
+      "system_deployers (institutional power, decision authority, constrained exit) — primary liable parties under this reading",
+      "foundation_model_providers (institutional power, arbitrage exit, externalize risk) — shielded from downstream harm claims",
+      "developer_communities (moderate power, mobile exit) — similarly shielded via deployer due-diligence burden",
+      "harmed_end_users (powerless, trapped exit) — recourse against deployer; remedy subject to deployer's due-diligence defense",
+      "regulatory_authorities (institutional power, agenda-setter) — define deployer responsibility standard and enforcement",
+      "insurance_and_verification_markets (powerful, arbitrage exit) — profit from deployer liability via audit fees, insurance premiums",
+      "excluded_parties (civil society, researchers, transparency advocates) — structurally absent from regime design"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.62 at interval end) because the regime transfers upstream risk to deployers who lack technical knowledge to audit opaque models, creating a systematic asymmetry: deployers bear liability for failures they did not cause and cannot fully predict, while providers retain pricing power and innovation freedom. Suppression is high (0.71) because deployers are constrained to accept the regime (they cannot deploy without assuming liability) and excluded parties are absent from foundational regime-setting. Theater is moderate (0.48) because the regime includes genuine safety-motivation (deployers do conduct audits and monitoring) but a substantial portion of enforcement energy defends the risk-transfer mechanism itself rather than end-user protection. The measurement series shows extractiveness rising from 0.48 to 0.62 over the interval (as the regime matures and deployers internalize their liability burden) then slight decline at t=20 (as political pressure mounts and alternative regime proposals gain traction). Suppression plateaus around 0.70–0.72 (the regime's enforcement infrastructure stabilizes). Theater rises and plateaus, indicating the regime's protective functions become routinized while the underlying asymmetry persists.",
+    "directionality_logic": "Foundation model providers and developers sit near the beneficiary end (d ≈ 0.1–0.2): they externalize deployment risk, maintain pricing power, and face negligible liability exposure despite creating the core capability. System deployers sit near the target end (d ≈ 0.8–0.9): they bear primary liability, internalize risk their decision authority does not fully control, and absorb costs (audits, insurance, liability settlements) without corresponding coordination benefit. Harmed end users sit at the target end (d ≈ 1.0): they suffer the harm and have limited recourse (their only defendant is the deployer, who can claim due-diligence defense). Insurance and verification markets occupy a dual position (d ≈ 0.5–0.6): they benefit from the regime (collect fees) but also bear some cost (must maintain credibility, face regulatory pressure). Regulatory authorities and excluded parties sit outside the beneficiary/payer axis (analytical power).",
+    "perspectival_gap": "From the provider/developer seat: the regime is coordination—it clarifies responsibility, enables innovation, and allows them to focus on capability creation without rear-facing liability. From the deployer seat: the regime is extraction—it assigns liability for harms they did not cause, imposes due-diligence burdens they cannot fully discharge (auditing opaque models), and transfers risk upstream providers created. From the end-user seat: the regime is neither coordination nor extraction but abdication—the only path to remedy requires proving the deployer failed their due-diligence obligation, a burden end users cannot meet. The engine computes these divergences from the structural data (beneficiary/victim declarations, exit options, power asymmetry) without adjudicating which seat's perception is correct.",
+    "mandatrophy_analysis": "The founding problem ('responsibility was ambiguous') is increasingly contested: deployers now argue the problem was never ambiguity but provider opacity; providers argue the problem was never responsibility but risk-aversion by deployers. The regime persists because (1) deployers have internalized the liability burden and built business models around it (exit cost is now high), (2) providers have accrued substantial power and influence over regulatory design, and (3) harmed parties remain excluded from the regime's foundational design. The classification as tangled_rope (not snare) depends on the genuine coordination function: deployers do achieve clarity about responsibility and can implement monitoring and control. But the extraction component is substantial: the regime transfers upstream risk to downstream parties who lack control over the model creation that caused the risk. Mandatrophy is live but not yet resolved—the regime's function (clarity) has partially atrophied relative to its original justification, and political pressure to revise it toward shared or provider liability is mounting.",
+    "kernel_context": "This constraint instantiates the 'deployer_liability' reading of the contested liability_attribution kernel. The kernel is the standing legal question: 'Who bears primary responsibility for harms caused by deployed AI systems?' Three structurally distinct readings coexist: (1) deployer_liability (this constraint) — deployers bear primary liability as operational decision-makers; (2) developer_liability (sibling constraint) — developers/providers bear primary liability as capability creators; (3) shared_liability (sibling constraint) — liability is distributed along the value chain based on causal contribution and control. Each reading produces a different ε, different beneficiary/victim structure, and different political economy. This constraint is the reading where deployers are the primary liable party and providers are shielded. The sibling readings reverse or distribute these allocations. All three readings are live and coexist in contemporary policy debate; no single framework has foreclosed the others."
+  },
+  "omegas": [
+    {
+      "id": "deployer_knowledge_asymmetry",
+      "question": "Can deployers realistically conduct adequate due diligence on opaque foundation models, or does the due-diligence standard impose an impossible burden?",
+      "resolution_mechanism": "Empirical study: measure the gap between audit depth deployers can achieve versus the technical complexity of model failure modes; survey deployer organizations about due-diligence cost, feasibility, and perceived adequacy.",
+      "impact": "If deployers cannot achieve adequate due diligence despite good-faith effort, the regime is fundamentally extractive (imposing unachievable liability); if they can, the coordination function is genuine. This determines whether the classification should shift toward snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the deployer due-diligence standard is technically achievable given model opacity."
+    },
+    {
+      "id": "provider_deliberate_opacity",
+      "question": "Do foundation model providers deliberately maintain model opacity to externalizes deployment risk, or is opacity an unavoidable side effect of scaling?",
+      "resolution_mechanism": "Comparative analysis: study providers' investment in interpretability, auditability, and transparency; interview provider executives about the trade-off between capability scaling and auditability; examine whether providers offer transparent-but-weaker models as an option.",
+      "impact": "If providers deliberately choose opacity to externalize liability, the regime is enforced extraction by the provider set against the deployer set; if opacity is inherent to scaling, the regime may be a genuine coordination problem without remedy. This affects whether the reading forecloses the developer_liability reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether model opacity is a deliberate choice or inherent to scaling."
+    },
+    {
+      "id": "end_user_remedy_closure",
+      "question": "Under deployer-primary liability with deployer due-diligence defense, what fraction of harmed end users have actual legal recourse?",
+      "resolution_mechanism": "Litigation analysis: sample deployed-AI harms; determine for each harm whether the deployer's due-diligence defense likely succeeds; calculate the fraction where harmed parties have meaningful recourse versus are left without remedy.",
+      "impact": "If the deployer due-diligence defense forecloses most end-user claims, the regime is a liability-exoneration structure dressed as responsibility allocation, and the extraction vector shifts from deployers-to-providers to deployers-to-end-users. This may justify reclassification to snare or suggest mandatrophy (the coordination function of 'clear responsibility' is undermined by deployer-defense closure).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether end users retain meaningful legal recourse despite deployer-primary liability."
+    },
+    {
+      "id": "sibling_reading_foreclosure",
+      "question": "Does this reading's core premise (deployers are the accountable decision-makers) logically foreclose the developer_liability reading (providers are accountable capability creators), or do they coexist as distinct framings?",
+      "resolution_mechanism": "Conceptual analysis: a single organization (e.g., the EU) could enact shared liability, thereby rejecting pure deployer-primary liability without logically foreclosing it. Conversely, a reading that asserts 'only deployers make decisions about deployment' does foreclose any reading that asserts 'only providers make decisions about capability creation' within a single jurisdiction. Examine whether sibling readings claim logical necessity or merely political preference.",
+      "impact": "If readings foreclose each other, the kernel will resolve toward one dominant reading; if they coexist, the kernel persists as a live multi-reading regime. Classification of the reading_relations (forecloses vs. coexists_with) depends on this resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's premises logically foreclose or coexist with sibling readings."
+    },
+    {
+      "id": "regulatory_capture_dynamics",
+      "question": "Is the deployer-liability regime maintained because it is genuinely optimal, or because model providers have captured the regulatory design process?",
+      "resolution_mechanism": "Governance analysis: study regulatory participation (who sits on standards bodies, advises regulators, funds policy research); compare the regime that would emerge from pure deployer advocacy versus provider advocacy versus end-user advocacy; examine whether regulatory reversals have occurred when political balance shifted.",
+      "impact": "Evidence of capture would suggest the regime persists not because it solves the coordination problem but because providers extract political power over the design. This would strengthen the extraction classification and suggest the regime is more snare than tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the deployer-liability regime reflects genuine coordination necessity or regulatory capture."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__developer_liability",
+      "liability_attribution__shared_liability",
+      "ai_safety_due_diligence_standard",
+      "ai_model_transparency_requirement"
+    ],
+    "dual_formulation_note": "The liability_attribution kernel instantiates three structurally distinct readings: deployer_liability (this constraint), developer_liability (sibling), and shared_liability (sibling). Each reading has different ε, different beneficiary/victim allocations, and different policy implications. They coexist in contemporary governance; no single reading has achieved exclusive dominance. The three constraints are linked via network.affects_constraints to enable comparison of how different liability allocations change incentives for transparency, due diligence, and provider accountability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ],
+  "gain_flow": "foundation_model_providers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "deployer_operational_authority_framework",
+    "drift_state": {
+      "moment": "contemporary_liability_contestation",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shared_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deployment_decision_authority_entails_liability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "operational_context_control_is_sole_liability_basis",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "provider_opacity_is_inherent_to_capability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

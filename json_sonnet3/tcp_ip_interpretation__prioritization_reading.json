@@ -1,0 +1,307 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__prioritization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "94a44ceb-ed8b-4516-b565-cd42c216794a"
+  },
+  "base_properties": {
+    "extractiveness": 0.61,
+    "suppression": 0.52,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TCP/IP Read as Permitting Paid Prioritization (Network Management Reading)",
+    "topic_domain": "technology_governance/internet_policy/telecommunications_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "last_mile_isps",
+      "large_incumbent_content_platforms"
+    ],
+    "victims": [
+      "unfunded_edge_services",
+      "independent_startups",
+      "residential_broadband_subscribers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "last_mile_isps",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Own the physical last-mile bottleneck and interpret TCP/IP's lack of an explicit non-discrimination mandate as license to sell prioritized delivery lanes and interconnection terms. They set traffic-shaping policy, negotiate paid peering and paid prioritization deals, and justify differentiated queuing as legitimate congestion management. They collect the prioritization fees directly and control the technical means of enforcing the reading."
+    },
+    {
+      "name": "large_incumbent_content_platforms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Have the capital to pay for fast lanes or negotiate favorable interconnection, and their scale means differentiated service actually widens their delivery advantage over smaller rivals. They can absorb or pass through prioritization costs and can shift traffic across multiple ISPs and CDNs, so the reading costs them comparatively little while advantaging their competitive position."
+    },
+    {
+      "name": "unfunded_edge_services",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Small services, nonprofits, and public-interest applications (e.g. telehealth pilots, community education platforms) that cannot afford fast-lane fees. Under the prioritization reading their packets are technically permitted to be queued behind paid traffic during congestion, degrading service quality in ways they cannot remedy without capital they lack. They have no meaningful exit — leaving means not reaching users on that ISP's network at all."
+    },
+    {
+      "name": "independent_startups",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Compete against incumbents who can pay for prioritization; startups must either raise capital to buy equivalent treatment or accept degraded delivery relative to funded rivals. The reading raises the effective cost of market entry for any bandwidth-sensitive service, entrenching incumbents structurally rather than through product quality."
+    },
+    {
+      "name": "residential_broadband_subscribers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Pay for a connection but experience its effective quality shaped by which upstream services paid for priority, not by their own subscription tier. In markets with limited ISP competition they cannot switch providers to avoid a given prioritization scheme. Some may see genuinely improved reliability for latency-sensitive services (telemedicine, VoIP) that the network-management framing does fund — the benefit is real but distributed unevenly and not something subscribers control or can price."
+    },
+    {
+      "name": "network_engineering_standards_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Bodies like the IETF that wrote and maintain the TCP/IP specification documents. They did not adjudicate the neutrality-versus-prioritization dispute in the protocol text itself; they observe the interpretive fight from outside, sometimes issuing clarifying commentary on what the protocol technically permits versus what policy layers on top."
+    },
+    {
+      "name": "telecom_regulators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Would adjudicate whether the prioritization reading constitutes unreasonable discrimination under telecommunications law, but jurisdiction is frequently contested, underfunded, or captured by industry comment processes; in several jurisdictions their authority to act on this reading has been legislatively or judicially narrowed, leaving the ISP's own interpretation operative by default."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Genuinely solves a real engineering problem: during congestion, some differentiation of traffic classes (e.g. deprioritizing bulk file transfer behind real-time voice/video) improves aggregate network performance and can be technically necessary rather than arbitrary.",
+    "transfer_function": "Moves effective delivery quality and market advantage from unfunded and small edge services toward ISPs (fee revenue) and large incumbent platforms (competitive moat), routed through the technical mechanism of packet queuing and paid interconnection.",
+    "absent_voices": "Small edge services and public-interest applications that cannot afford prioritization fees have no seat in ISP peering negotiations or standards discussions; telecom regulators who might otherwise arbitrate 'reasonable network management' have been structurally sidelined in several jurisdictions.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "ISPs and large platforms would say network investment and legitimate congestion management collapse without the ability to differentiate service, degrading everyone's experience. Edge services and consumer advocates would say the prior open-internet baseline (best-effort, non-discriminatory delivery) is exactly what would be restored, and their situation would improve. The disagreement is genuinely substantive, not merely rhetorical.",
+    "founding_problem": "TCP/IP's original best-effort delivery model has no formal quality-of-service guarantee; as real-time and bandwidth-intensive applications proliferated, congestion management became a genuine technical problem that the base protocol does not solve on its own.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Network engineers and standards bodies attest that congestion management is a live, real technical problem independent of any commercial motive. However, independent economic analyses commissioned by public-interest groups and testimony from smaller ISPs and edge-service operators — outside the beneficiary set of large ISPs and incumbent platforms — argue that paid prioritization schemes as actually deployed exceed what congestion management technically requires and function primarily as rent extraction and competitive gatekeeping."
+  },
+  "interval": {
+    "start": 2005,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading within the contested TCP/IP kernel: that the protocol's silence on quality-of-service enforcement should be read as permission for ISPs to implement differentiated traffic handling, including paid fast lanes, framed as legitimate network management. This is distinct from the neutrality_reading (which reads the same protocol as embodying an end-to-end non-discrimination principle) and the zero_rating_reading (which concerns selective content-cost exemptions rather than latency/bandwidth prioritization). Each reading is authored as its own constraint with its own ε; this file addresses only the prioritization reading's structural claim and its own beneficiary/victim map, not the kernel contest as a whole.",
+    "key_agents": [
+      "last_mile_isps: agenda_setter (institutional/arbitrage) — sets and enforces the prioritization interpretation, collects fast-lane revenue",
+      "large_incumbent_content_platforms: beneficiary (powerful/mobile) — benefits from widened competitive moat via paid prioritization",
+      "unfunded_edge_services: payer (moderate/constrained) — bears degraded delivery without capital to buy parity",
+      "independent_startups: payer (moderate/constrained) — faces raised effective barrier to entry",
+      "residential_broadband_subscribers: payer/beneficiary (powerless/trapped) — mixed effects, no control over which upstream services are prioritized",
+      "network_engineering_standards_bodies: observer (institutional/analytical) — did not adjudicate the interpretive dispute in the protocol text",
+      "telecom_regulators: excluded (institutional/analytical) — jurisdiction to arbitrate has been narrowed in several jurisdictions"
+    ],
+    "logic_rationale": "Extraction is authored at 0.61 (substantial but not maximal) because the reading rests on a genuine technical function — congestion management is real — layered with a commercial extraction mechanism that goes beyond what congestion management strictly requires. Suppression at 0.52 reflects that alternatives (net-neutrality rules, common-carrier reclassification) exist and are actively fought over in legislatures and courts rather than foreclosed outright; this is not a settled monopoly-style suppression but an ongoing, resistance-facing arrangement. Theater ratio rises across the measured interval (0.20 to 0.40) as 'network management' justifications increasingly cover commercially motivated prioritization deals rather than genuine congestion events — a Goodhart-style drift where the stated function (managing congestion) is increasingly cited to justify activity (selling fast lanes) that exceeds it.",
+    "directionality_logic": "Last-mile ISPs sit at the full-beneficiary end: they administer the interpretation, capture the prioritization fee revenue, and have durable market power over the last mile with essentially no exit pressure. Large incumbent platforms are beneficiaries by capital advantage even though they are nominally 'payers' for prioritization — their scale converts a cost into a competitive moat, so their effective directionality is much closer to beneficiary than the naive payer label would suggest. Unfunded edge services and independent startups are structural targets: trapped by the fact that leaving one ISP's network is not a substitute for reaching that ISP's subscriber base. Residential subscribers are the most powerless seat, carrying diffuse costs (traffic shaped by upstream deals they cannot see or negotiate) alongside occasional genuine service-quality gains for latency-sensitive applications they use.",
+    "mandatrophy_analysis": "The founding problem — congestion management on a best-effort network — remains partially live (real-time applications genuinely benefit from differentiated queuing under true congestion), which is exactly why this reading cannot be classified as a pure snare: there is a real coordination function. But the tangled_rope classification captures that the same enforcement machinery that manages genuine congestion is also used to extract rents from parties who have no bearing on the congestion problem itself (a startup's packets are not the cause of a congestion event, yet they pay the cost of it). Treating this as either 'pure coordination' (rope) or 'pure extraction' (snare) would mislabel one real half of the structure.",
+    "perspectival_gap": "From the ISP's agenda-setting seat, this looks like legitimate, engineering-justified network operation they built and maintain at real capital cost. From the unfunded edge-service payer seat, the identical queuing and interconnection policy operates as involuntary tax on market access with no meaningful recourse. The engine computes these as different seat-level types from the same structural data; the divergence is exactly what a contested kernel reading is expected to produce.",
+    "kernel_context": "This constraint instantiates the prioritization_reading of the tcp_ip_interpretation kernel: TCP/IP's silence on enforced quality-of-service is read as authorizing ISP-administered differentiated traffic handling, including paid fast lanes, as legitimate network management. Two sibling readings of the same kernel are authored as separate constraints: neutrality_reading (TCP/IP's end-to-end design principle is read as requiring non-discriminatory best-effort delivery, forecloses paid prioritization as a legitimate use) and zero_rating_reading (a narrower claim about selective data-cost exemptions for sponsored content, a distinct commercial mechanism from latency/bandwidth prioritization). This file's ε (0.61) and stakeholder map describe only the prioritization reading; the sibling readings carry their own independent ε values and are not averaged or reconciled with this one."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_indeterminacy",
+      "question": "Does the TCP/IP protocol's lack of an explicit non-discrimination mandate constitute affirmative permission for differentiated service, or is it merely silence that later policy layers (net neutrality rules, common carrier law) are meant to fill?",
+      "resolution_mechanism": "This is a genealogical and legal question, not a technical one: it would be resolved (in the sense of settling which reading governs a given jurisdiction) by binding regulatory or judicial determination of whether ISPs are common carriers subject to non-discrimination duties, and by historical analysis of IETF documents' intent regarding quality-of-service extensions.",
+      "impact": "If the neutrality_reading is judicially/regulatorily entrenched, the prioritization_reading's enforcement (fast-lane deals) becomes legally foreclosed in that jurisdiction, converting this constraint's extraction toward zero. If the prioritization_reading remains legally live, ISPs retain the enforcement basis this story describes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether protocol silence should be read as permission or as a gap for policy to fill — the core interpretive fork of the kernel."
+    },
+    {
+      "id": "congestion_management_boundary_ambiguity",
+      "question": "Where is the line between traffic differentiation that is technically necessary for congestion management and traffic differentiation that exceeds congestion management and functions as commercial extraction?",
+      "resolution_mechanism": "Independent technical audit of actual network congestion data correlated with which traffic classes receive prioritization, and whether prioritization deals are struck absent measurable congestion.",
+      "impact": "A tight correlation between congestion events and differentiation would support a rope-leaning reading of at least part of the mechanism; a loose or absent correlation (prioritization sold regardless of congestion state) would support reclassifying more of the mechanism toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether differentiated service tracks actual congestion or is decoupled commercial extraction."
+    },
+    {
+      "id": "sibling_reading_relationship_ambiguity",
+      "question": "Does adopting the prioritization_reading in a given legal framework logically foreclose the neutrality_reading in that same framework, or can regulators hold both simultaneously (e.g. permitting 'reasonable' prioritization while formally endorsing a neutrality principle)?",
+      "resolution_mechanism": "Comparative analysis of actual regulatory frameworks: jurisdictions that have adopted 'reasonable network management' exceptions within otherwise neutrality-oriented rules suggest coexistence is legally possible; jurisdictions with strict common-carrier reclassification suggest genuine foreclosure.",
+      "impact": "If coexistence is legally common, this reading's relationship to neutrality_reading is better modeled as coexists_with (as currently declared) rather than forecloses; if strict regimes are dominant, the relationship may be closer to mutual foreclosure within those specific frameworks.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the prioritization and neutrality readings can coexist within a single regulatory framework or are mutually exclusive."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "neutrality_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "zero_rating_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "network_operators_may_differentiate_traffic_for_management_purposes",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "quality_of_service_is_a_legitimate_paid_commodity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "best_effort_delivery_with_engineering_discretion",
+    "drift_state": {
+      "moment": "post_2015_open_internet_order_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__neutrality_reading",
+      "tcp_ip_interpretation__zero_rating_reading"
+    ],
+    "dual_formulation_note": "This story is one of three siblings decomposing the colloquial 'net neutrality debate' / 'TCP/IP interpretation' concept per the ε-invariance principle: neutrality_reading (end-to-end non-discrimination, low extraction, rope-leaning), prioritization_reading (this file — paid differentiated service, substantially extractive, tangled_rope), and zero_rating_reading (sponsored-content data exemptions, a distinct commercial mechanism). Each carries its own ε and stakeholder map; none is a measurement of the others under a different observable. Linked bidirectionally via affects_constraints since regulatory action on any one reading changes the legal and commercial viability of the others."
+  },
+  "gain_flow": "last_mile_isps",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "climate_mitigation_imperative__opportunity_cost_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "69a14d86-b3af-44fc-a645-ef80e65ba03d"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Carbon-per-Dollar-per-Year Deployment Imperative (Opportunity-Cost Reading)",
+    "topic_domain": "energy_policy/climate_mitigation/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "utility_scale_solar_developers",
+      "wind_developers",
+      "battery_storage_manufacturers",
+      "grid_service_aggregators"
+    ],
+    "victims": [
+      "nuclear_developers",
+      "nuclear_supply_chain_workers",
+      "host_communities_of_stalled_reactor_projects",
+      "ratepayers_in_nuclear_dependent_grids"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "utility_scale_solar_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Compete for capital allocation, permitting priority, and public subsidy against nuclear projects. The opportunity-cost framing directs finance ministries, green banks, and climate funds toward their shorter construction timelines, which increases deal flow and lowers their cost of capital relative to nuclear bids."
+    },
+    {
+      "name": "wind_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from the same capital-reallocation logic as solar; the imperative's carbon-per-dollar-per-year metric favors their multi-month to two-year build timelines over nuclear's decade-plus horizon, drawing procurement auctions and portfolio standards in their direction."
+    },
+    {
+      "name": "battery_storage_manufacturers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Positioned as the flexibility complement to intermittent renewables; the imperative's framing treats storage buildout as substitutable for baseload, channeling capital that might otherwise fund nuclear firming capacity toward battery manufacturing capacity instead."
+    },
+    {
+      "name": "grid_service_aggregators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Sell demand-response and virtual-power-plant services predicated on a grid built around fast-deploying variable generation. Their business model gains legitimacy and contracts from the same metric that disfavors nuclear baseload."
+    },
+    {
+      "name": "nuclear_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sunk into decade-long construction and licensing cycles; when climate funds, green bonds, and carbon-reduction mandates apply a carbon-per-dollar-per-year screen, their projects are structurally disadvantaged even where completed reactors would deliver deep, firm decarbonization. Capital that would have completed a reactor is redirected mid-project or withheld at the financing stage; exit means absorbing stranded-asset losses or lobbying for exemption from the metric."
+    },
+    {
+      "name": "nuclear_supply_chain_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Employed in forging, fuel fabrication, and specialized construction trades tied to reactor build cycles. When projects are cancelled or deprioritized under the opportunity-cost screen, their skills are not readily transferable to renewables construction on the same timeline, and regional job losses concentrate in single-industry towns."
+    },
+    {
+      "name": "host_communities_of_stalled_reactor_projects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Rezoned, taxed, and organized around an anticipated multi-decade reactor employment base and tax revenue; when financing is redirected mid-build under the deployment-speed metric, the community is left with a half-built asset, foregone tax base, and no comparable renewables buildout sited locally to replace it."
+    },
+    {
+      "name": "ratepayers_in_nuclear_dependent_grids",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Depend on existing or near-completion nuclear capacity for firm, low-carbon power; when the opportunity-cost framing steers new investment away from completing or replacing that capacity, they face either fossil-fired reliability backstops (raising both cost and emissions) or unreliable supply, with no direct say in the capital-allocation decision."
+    },
+    {
+      "name": "climate_finance_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Multilateral climate funds, green bond frameworks, and national mitigation agencies that adopt the carbon-per-dollar-per-year screen as their allocation rule, administer eligibility criteria, and can revise or waive the screen for specific technologies. They set and enforce the metric that channels capital away from nuclear and toward faster-deploying alternatives."
+    },
+    {
+      "name": "atmospheric_carbon_budget",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The physical constraint the imperative claims to serve — a finite remaining carbon budget that makes near-term abatement rate, not eventual installed capacity, the operative variable. Not an actor; represented for completeness because the metric's entire justification rests on this budget's finiteness."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates scarce climate finance and policy attention toward whichever low-carbon technologies deliver the most avoided emissions per dollar per year, under the premise that the remaining carbon budget is depleting faster than slow-build technologies can address it.",
+    "transfer_function": "Moves capital, subsidy eligibility, and regulatory priority away from nuclear developers and their supply chains and communities, toward solar, wind, and storage developers, on the basis of deployment speed rather than total lifecycle output or grid role.",
+    "absent_voices": "Grid reliability engineers and utility system planners who model firm-capacity adequacy over decadal horizons are largely absent from the finance-allocation decision; their concerns about intermittency-driven fossil backstop reliance surface mainly in post-hoc reliability reports, not in the capital-screening criteria itself. Nuclear-dependent grid operators are also structurally underrepresented in multilateral climate finance governance relative to their exposure.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the opportunity-cost screen vanished overnight, climate finance institutions would revert to technology-neutral or portfolio-based criteria; nuclear projects currently priced out of green finance would become financeable again, and some renewables deals currently winning on speed alone would face more competition. Renewables developers and storage manufacturers dispute that this would meaningfully slow the transition, arguing deployment speed is decisive regardless of financing criteria; nuclear developers and reliability-focused utilities argue the reallocation is the whole mechanism by which their projects are starved of capital.",
+    "founding_problem": "The remaining carbon budget before locking in dangerous warming is small and shrinking; abatement that arrives in 2040 counts for much less cumulative-emissions purposes than the same abatement arriving in 2028, so capital allocation criteria that ignore deployment speed systematically underweight near-term climate risk.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "IPCC carbon budget assessments and independent climate scientists outside both the renewables and nuclear industries corroborate that near-term abatement rate matters more than eventual installed capacity for peak warming outcomes — this is the strongest external corroboration in the kernel. However, independent grid-reliability engineers and system-adequacy researchers (also outside both industries) corroborate the sibling portfolio_optimization_reading's concern that speed-only screening can degrade firm capacity margins, producing fossil-backstop reliance that partially offsets the near-term gains this reading is built to capture."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE reading of the contested climate_mitigation_imperative kernel: the opportunity-cost reading, which holds that mitigation policy should be evaluated by carbon abated per dollar per year, and that nuclear power's capital intensity and multi-decade construction timelines make it a net-harmful allocation of scarce climate finance relative to faster-deploying renewables and storage. Under this reading, nuclear developers, their supply chains, host communities, and dependent ratepayers enter the victim set because capital that could have completed reactors is redirected toward solar, wind, and storage on the basis of deployment speed alone. This is a distinct constraint from the portfolio_optimization_reading (which holds nuclear necessary for reliable baseload and would place nuclear among the beneficiaries of a technology-neutral allocation rule) and the systems_transition_reading (which opposes nuclear on decentralization/democratic-control grounds rather than deployment speed). The three readings share a kernel — the underlying imperative that mitigation policy must respond to a finite, depleting carbon budget — but diverge sharply on beneficiary/victim structure and on what metric operationalizes 'mitigation requires.' Per the ε-invariance principle, each reading is authored here as its own constraint with its own stable ε; the sibling readings are separate files linked via network relations, not alternative measurements of this one.",
+    "key_agents": [
+      "utility_scale_solar_developers: primary beneficiary (organized/mobile) — captures redirected capital and permitting priority",
+      "nuclear_developers: primary target (powerful/constrained) — bears capital reallocation despite institutional power, because the metric is timeline-blind to their scale",
+      "climate_finance_institutions: agenda_setter (institutional/analytical) — administers and could revise the carbon-per-dollar-per-year screen",
+      "ratepayers_in_nuclear_dependent_grids: diffuse target (powerless/trapped) — bears reliability and cost consequences with no voice in the allocation criteria",
+      "atmospheric_carbon_budget: analytical observer (non-agent) — the physical fact the entire reading's justification rests on"
+    ],
+    "logic_rationale": "Extraction is authored at 0.62 by interval end because the constraint's operation systematically redirects capital away from a class of actors (nuclear developers, their workers, their host communities, their dependent ratepayers) whose economic and reliability interests are structurally disfavored by a metric that treats construction timeline as dispositive rather than as one input among several. This is real extraction under the opportunity-cost reading's own terms: it is not a neutral technical screen but an allocation rule that has losers as well as winners. Suppression is moderate (0.38) and rising — the constraint's persistence increasingly depends on active enforcement (green taxonomy exclusions, subsidy eligibility rules, credit-rating methodologies) rather than on unanimous technical consensus, because the sibling portfolio_optimization_reading contests the same carbon budget facts and reaches a different allocation conclusion. Theater ratio is modest (0.28) — the coordination function (allocating scarce capital toward measurable near-term abatement) is largely genuine, not cover, but a growing share of the metric's institutional defense addresses reputational and political pressure from the nuclear-favoring coalition rather than the underlying carbon-budget arithmetic itself. Accessibility collapse is moderate (0.4): once a climate finance institution adopts the screen, alternatives (technology-neutral portfolio standards) are not eliminated but are actively displaced within that institution's own criteria. Resistance is high (0.72) precisely because this reading is contested at the kernel level by two credible sibling readings with different beneficiary/victim structures — nuclear developers, reliability engineers, and systems-transition advocates all resist this reading's allocation conclusion, though for different and sometimes opposed reasons.",
+    "directionality_logic": "Renewables and storage developers are declared beneficiaries because the carbon-per-dollar-per-year metric, once adopted by climate finance institutions, directly increases their access to capital, subsidy, and procurement priority relative to a technology-neutral baseline — d sits near the beneficiary end for these organized, mobile actors. Nuclear developers are declared victims: despite institutional power, their exit options are constrained by multi-decade sunk capital and licensing regimes that renewables developers do not carry, so the constraint's directionality toward them is high despite their nominal power level — this is a case where power and directionality diverge, and the derivation should not collapse them. Powerless, trapped actors (host communities, dependent ratepayers) receive the highest derived d because they have no meaningful exit from the consequences of capital reallocation decided at the institutional level far above them.",
+    "mandatrophy_analysis": "The founding problem — a shrinking carbon budget where near-term abatement rate matters more than eventual installed capacity — remains live and is corroborated by IPCC assessments outside both the renewables and nuclear industries, which prevents this reading from being dismissed as pure rent-seeking cover for renewables developers. But the founding_problem_corroboration also surfaces a genuine tension the reading does not resolve: reliability engineers outside both industries corroborate the sibling portfolio_optimization_reading's concern about firm-capacity adequacy. This is why the constraint is authored tangled_rope rather than rope: it has a genuine, well-corroborated coordination function (accelerate near-term abatement under budget constraints) AND identifiable structural victims who pay through the same mechanism (nuclear developers and their dependents) via active enforcement (green taxonomy exclusions, screening criteria). It is not pure extraction dressed as coordination — the coordination claim survives external scrutiny — but it is not pure coordination either, because the metric's timeline-only framing produces real, asymmetric costs that a portfolio-based allocation would not impose on the same parties.",
+    "kernel_context": "This is the opportunity_cost_reading of the climate_mitigation_imperative kernel. The kernel is the shared commitment that climate mitigation policy must respond to a finite, depleting carbon budget. This reading operationalizes 'mitigation requires' as carbon-abated-per-dollar-per-year and concludes nuclear is net-harmful due to capital intensity and timeline. The sibling portfolio_optimization_reading operationalizes the same kernel as maximizing all low-carbon sources for reliability, placing nuclear among the necessary beneficiaries rather than the victims. The sibling systems_transition_reading operationalizes it as decentralization and democratic control, opposing nuclear on centralization grounds independent of deployment speed. All three readings agree the carbon budget is real and shrinking; they disagree on what allocation rule that fact entails, and that disagreement is located at the choice of optimization metric (speed-per-dollar vs. total-portfolio-adequacy vs. governance-structure), not at the underlying physics."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_choice_ambiguity",
+      "question": "Is the carbon-per-dollar-per-year metric the correct operationalization of the climate_mitigation_imperative kernel, or does it smuggle in a contestable normative choice (weighting near-term abatement over long-term firm capacity) under the appearance of a purely technical screen?",
+      "resolution_mechanism": "Compare integrated warming outcomes across full-portfolio system models that vary the weighting between near-term deployment speed and long-term reliability/firm-capacity adequacy, under multiple carbon budget scenarios; if results are highly sensitive to the weighting choice, the metric embeds a value choice rather than a neutral technical fact.",
+      "impact": "If the metric is shown to be normatively loaded rather than purely technical, this reading's claim to be simply 'following the physics' weakens, and its extraction of capital from nuclear developers looks more like a policy choice with distributional losers than an inevitable consequence of the carbon budget.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the deployment-speed metric is a neutral operationalization of the shared kernel or a contestable normative framing that determines the victim set."
+    },
+    {
+      "id": "nuclear_capital_intensity_causal_claim",
+      "question": "Is nuclear's capital intensity and construction timeline an inherent technological feature, or substantially a product of regulatory and financing environments that this reading's own dominance helps entrench (a self-fulfilling opportunity-cost loop)?",
+      "resolution_mechanism": "Compare construction timelines and cost trajectories in jurisdictions with standardized reactor designs, streamlined licensing, and stable financing commitments (e.g., South Korea, historical French buildout) against jurisdictions where nuclear finance is intermittently available and licensing is case-by-case; if timelines and costs are substantially environment-dependent rather than fixed, the 'net-harmful' conclusion is partly endogenous to the financing pattern this reading produces.",
+      "impact": "If capital intensity and timeline are substantially policy-dependent rather than fixed, the opportunity-cost reading's beneficiary/victim assignment may be partly self-reinforcing: starving nuclear of capital lengthens timelines and raises costs, which then validates the same screen that caused the starvation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether nuclear's disadvantage under this metric is an inherent technology fact or a partly self-fulfilling consequence of the financing pattern the metric itself produces."
+    },
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Could this constraint alternatively be framed around 'grid decarbonization adequacy' (a systems-level framing) rather than 'capital allocation efficiency' (the framing adopted here), and would that alternative framing shift the classification toward rope (pure coordination, no clear victim) rather than tangled_rope?",
+      "resolution_mechanism": "Author a systems-adequacy-framed sibling story explicitly and compare computed classifications; the choice between framings is currently guided by the kernel context's explicit assignment of nuclear to the victim set for this reading, per the SCOPE manifest's structural delta.",
+      "impact": "If the systems-adequacy framing were adopted instead, nuclear might appear as a contested-but-included technology rather than a structural victim, likely shifting this reading closer to rope; the capital-allocation framing adopted here is what generates the tangled_rope classification by making the victim set explicit and enforcement-dependent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alternative framing (systems adequacy vs. capital allocation efficiency) would change which stakeholders count as victims and could shift the computed classification; this story adopts the capital-allocation framing per the assigned structural delta."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_mitigation_imperative__portfolio_optimization_reading",
+      "climate_mitigation_imperative__systems_transition_reading"
+    ],
+    "dual_formulation_note": "This story is one of three constraints decomposed from the natural-language 'climate mitigation imperative' kernel per the ε-invariance principle. Each reading operationalizes 'mitigation requires X' differently and produces a different beneficiary/victim structure: opportunity_cost_reading (this story) puts nuclear in the victim set and renewables in the beneficiary set, claimed tangled_rope; portfolio_optimization_reading would put nuclear in the beneficiary set as necessary baseload, likely claimed rope or tangled_rope depending on how renewables curtailment costs are treated; systems_transition_reading puts nuclear in the victim set on centralization grounds independent of deployment speed, likely claimed snare or tangled_rope depending on how centralized renewables ownership is treated. All three share the same underlying kernel (finite carbon budget) but differ in ε, in claimed_type, and in stakeholder structure — they are linked here rather than merged into one story with a measurement parameter."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "technology_neutral_decarbonization_consensus",
+    "drift_state": {
+      "moment": "post_2015_green_finance_taxonomy_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "portfolio_optimization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "systems_transition_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deployment_speed_dominates_lifecycle_output",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "near_term_abatement_incommensurably_outweighs_long_horizon_firm_capacity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,363 @@
+% ============================================================================
+% CONSTRAINT STORY: jihad_quranic_corpus__revolutionary_vanguard_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-19
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_jihad_quranic_corpus__revolutionary_vanguard_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: jihad_quranic_corpus__revolutionary_vanguard_reading
+ *   human_readable: Jihad as Fard 'Ayn Against Apostate Rulers and Occupiers (Revolutionary Vanguard Reading)
+ *   domain: religious/political/legal
+ *
+ * SUMMARY:
+ *   This story instantiates one specific reading within the contested jihad
+ *   kernel: jihad as an immediate individual obligation (fard 'ayn) triggered
+ *   by the perceived apostasy of ruling authority or foreign occupation,
+ *   activated through takfir declarations and emergency jurisprudence that
+ *   dispenses with the classical requirement of imam-authorization and
+ *   standard evidentiary safeguards. This is structurally distinct from a
+ *   defensive-spiritual reading (which retains proportionality and
+ *   non-combatant immunity as binding) and from an expansionist-legalist
+ *   reading (which retains imam authority and procedural conditions even
+ *   while permitting offensive campaigns). The distinguishing structural
+ *   moves are: (1) apostate-designated Muslims and occupying populations
+ *   enter the victim set through takfir and collective-guilt logic; (2)
+ *   authority decentralizes to any individual who accepts the obligation,
+ *   eliminating the state-monopoly and imam-authorization constraint; (3)
+ *   emergency doctrine is invoked to override classical jurisprudential
+ *   safeguards including proportionality and non-combatant immunity; (4)
+ *   civilians become legitimate targets via collective guilt rather than
+ *   direct combatant status. Each of these is a separate structural claim
+ *   from the sibling readings, which is why this reading carries its own ε
+ *   rather than sharing one with them — measuring 'jihad' by this reading's
+ *   own lights yields a substantially extractive, actively enforced
+ *   arrangement, while the defensive-spiritual reading of the same underlying
+ *   textual corpus yields a near-mountain low-extraction profile. That
+ *   divergence is exactly the signal the ε-invariance principle requires be
+ *   handled by decomposition, not by one story with a measurement parameter.
+ *
+ * KEY AGENTS:
+ *   - takfiri_commanders: primary agenda-setters (organized/arbitrage) — issue the rulings and set doctrine
+ *   - vanguard_ideologues: primary beneficiaries (organized/mobile) — theological authority and platform without battlefield exposure
+ *   - recruitment_networks: secondary beneficiaries (organized/arbitrage) — convert doctrine into mobilization pipeline
+ *   - rank_and_file_recruits: primary targets (powerless/identity_locked) — bear mortal risk under fused identity
+ *   - civilian_populations_under_occupation and religious_minorities: primary targets (powerless/trapped) — absorb violence under collective-guilt logic
+ *   - classical_jurisprudential_establishment and state_authorities: excluded parties whose objection the doctrine is structurally built to override
+ *   - comparative_legal_scholars: analytical observer
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(jihad_quranic_corpus__revolutionary_vanguard_reading, 0.81).
+domain_priors:suppression_score(jihad_quranic_corpus__revolutionary_vanguard_reading, 0.88).
+domain_priors:theater_ratio(jihad_quranic_corpus__revolutionary_vanguard_reading, 0.42).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(jihad_quranic_corpus__revolutionary_vanguard_reading, extractiveness, 0.81).
+narrative_ontology:constraint_metric(jihad_quranic_corpus__revolutionary_vanguard_reading, suppression_requirement, 0.88).
+narrative_ontology:constraint_metric(jihad_quranic_corpus__revolutionary_vanguard_reading, theater_ratio, 0.42).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(jihad_quranic_corpus__revolutionary_vanguard_reading, accessibility_collapse, 0.62).
+narrative_ontology:constraint_metric(jihad_quranic_corpus__revolutionary_vanguard_reading, resistance, 0.79).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(jihad_quranic_corpus__revolutionary_vanguard_reading, snare).
+narrative_ontology:human_readable(jihad_quranic_corpus__revolutionary_vanguard_reading, "Jihad as Fard 'Ayn Against Apostate Rulers and Occupiers (Revolutionary Vanguard Reading)").
+narrative_ontology:topic_domain(jihad_quranic_corpus__revolutionary_vanguard_reading, "religious/political/legal").
+
+domain_priors:requires_active_enforcement(jihad_quranic_corpus__revolutionary_vanguard_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(jihad_quranic_corpus__revolutionary_vanguard_reading, '54ab1412-22c7-46ae-a090-dda2a74331c6').
+narrative_ontology:cs_kernel_codification('54ab1412-22c7-46ae-a090-dda2a74331c6', distributed).
+narrative_ontology:cs_authority_grounding('54ab1412-22c7-46ae-a090-dda2a74331c6', extraction).
+narrative_ontology:cs_interpretation_layer_present('54ab1412-22c7-46ae-a090-dda2a74331c6').
+narrative_ontology:cs_reading_relation('54ab1412-22c7-46ae-a090-dda2a74331c6', jihad_quranic_corpus__defensive_spiritual_reading, forecloses).
+narrative_ontology:cs_reading_relation('54ab1412-22c7-46ae-a090-dda2a74331c6', jihad_quranic_corpus__expansionist_legalist_reading, influences).
+narrative_ontology:cs_axiom('54ab1412-22c7-46ae-a090-dda2a74331c6', foundational, individual_obligation_overrides_state_authorization).
+narrative_ontology:cs_axiom_status(individual_obligation_overrides_state_authorization, holdable).
+narrative_ontology:cs_axiom_grounding('54ab1412-22c7-46ae-a090-dda2a74331c6', individual_obligation_overrides_state_authorization, conventional).
+narrative_ontology:cs_axiom('54ab1412-22c7-46ae-a090-dda2a74331c6', foundational, collective_guilt_licenses_civilian_targeting).
+narrative_ontology:cs_axiom_status(collective_guilt_licenses_civilian_targeting, holdable).
+narrative_ontology:cs_axiom_grounding('54ab1412-22c7-46ae-a090-dda2a74331c6', collective_guilt_licenses_civilian_targeting, instrumental).
+narrative_ontology:cs_reference_frame('54ab1412-22c7-46ae-a090-dda2a74331c6', classical_imam_authorized_jihad).
+narrative_ontology:cs_drift_state('54ab1412-22c7-46ae-a090-dda2a74331c6', post_20th_century_state_collapse_era, gap(authority_erosion, severe, false)).
+narrative_ontology:cs_created_at('54ab1412-22c7-46ae-a090-dda2a74331c6', '').
+narrative_ontology:cs_kernel_id(jihad_quranic_corpus__revolutionary_vanguard_reading, jihad_quranic_corpus).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(jihad_quranic_corpus__revolutionary_vanguard_reading, vanguard_ideologues).
+narrative_ontology:constraint_beneficiary(jihad_quranic_corpus__revolutionary_vanguard_reading, takfiri_commanders).
+narrative_ontology:constraint_beneficiary(jihad_quranic_corpus__revolutionary_vanguard_reading, recruitment_networks).
+narrative_ontology:constraint_victim(jihad_quranic_corpus__revolutionary_vanguard_reading, civilian_populations_under_occupation).
+narrative_ontology:constraint_victim(jihad_quranic_corpus__revolutionary_vanguard_reading, muslims_declared_apostate).
+narrative_ontology:constraint_victim(jihad_quranic_corpus__revolutionary_vanguard_reading, rank_and_file_recruits).
+narrative_ontology:constraint_victim(jihad_quranic_corpus__revolutionary_vanguard_reading, religious_minorities_in_contested_territory).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Issue the takfir rulings that declare rulers, security forces, and ordinary Muslims apostate, and derive from that declaration the emergency jurisprudence that suspends the classical safeguards (imam's authorization, proportionality, non-combatant immunity). They set the doctrine, adjudicate who counts as a legitimate target, and can relocate operations or reframe doctrine when contested; their material position improves with expanded conflict.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, takfiri_commanders, agenda_setter,
+    organized, generational, arbitrage, regional).
+
+% Produce the theological argument that individual obligation bypasses state authority and classical jurisprudential gatekeeping. They gain authority, publishing platforms, and recruitment reach from the doctrine's spread, and are rarely themselves exposed on the battlefield; they can shift geographic base when a theater becomes untenable.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, vanguard_ideologues, beneficiary,
+    organized, civilizational, mobile, global).
+narrative_ontology:stakeholder_secondary_role(jihad_quranic_corpus__revolutionary_vanguard_reading, vanguard_ideologues, agenda_setter).
+
+% Convert the fard 'ayn framing into a pipeline: the doctrine's removal of the imam-authorization requirement means any individual can be persuaded that obligation attaches to them personally, right now, without institutional vetting. This directly expands the recruit pool the network draws from and monetizes through funding, propaganda reach, and territorial control.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, recruitment_networks, beneficiary,
+    organized, generational, arbitrage, global).
+
+% Are told the obligation is personal, urgent, and inescapable given the apostasy of surrounding authority; once identity is fused with the doctrine, defection is framed as apostasy itself, closing the exit that existed before indoctrination. They absorb the mortal risk the commanders and ideologues do not.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, rank_and_file_recruits, payer,
+    powerless, immediate, identity_locked, regional).
+
+% Government officials, security personnel, clerics who dissent, or ordinary citizens cooperating with state institutions are reclassified as apostates through takfir, which under this reading licenses violence against them without the classical requirement of due process or state-sanctioned adjudication. They have no venue to contest the designation from where they stand.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, muslims_declared_apostate, payer,
+    powerless, immediate, trapped, regional).
+
+% Live in contested territory where the emergency doctrine's collective-guilt logic reclassifies civilians associated with occupying or apostate structures as legitimate targets. They cannot leave the territory, cannot contest their classification, and bear the majority of casualties from attacks justified under this reading.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, civilian_populations_under_occupation, payer,
+    powerless, immediate, trapped, local).
+
+% Face heightened targeting because the emergency-doctrine framing treats their presence and communal status as evidence of alignment with occupation or apostate rule, without the classical protections that would ordinarily apply to non-combatant minorities under a state-adjudicated jurisprudence.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, religious_minorities_in_contested_territory, payer,
+    powerless, immediate, trapped, local).
+
+% Trained clerics and jurisprudential bodies who hold that fard 'ayn requires an imam's declaration and that takfir against fellow Muslims is subject to strict evidentiary conditions are declared irrelevant or complicit by this reading's own logic, since state-affiliated scholarship is treated as part of the apostate structure being bypassed. Their objections exist but are structurally excluded from the doctrine's own decision procedure.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, classical_jurisprudential_establishment, excluded,
+    institutional, civilizational, constrained, global).
+
+% The state apparatus this reading explicitly bypasses and targets; they would object that the doctrine strips them of the very legitimacy classical jurisprudence assigns to constituted authority, but their objection is precisely what the doctrine is built to override, so they have no standing inside the framework itself — only outside it, through counterinsurgency and prosecution.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, state_authorities_and_security_forces, excluded,
+    institutional, generational, constrained, national).
+
+% Study the doctrinal history of fard 'ayn, takfir methodology, and emergency jurisprudence across traditions, documenting how this reading departs from classical safeguards without being party to the conflict it authorizes.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__revolutionary_vanguard_reading, comparative_legal_scholars, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(jihad_quranic_corpus__revolutionary_vanguard_reading, vanguard_ideologues).
+narrative_ontology:fixing_cost_class(jihad_quranic_corpus__revolutionary_vanguard_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: At the level the doctrine claims for itself, it coordinates rapid, decentralized mobilization against a perceived existential threat when normal institutional channels (state, established clergy) are viewed as themselves compromised — solving an urgent collective-action problem for believers who accept that framing, without waiting for hierarchical authorization.
+% TRANSFER_FUNCTION: Moves lives, physical risk, and moral responsibility from the commanders and ideologues who articulate and benefit from the doctrine onto recruits who carry it out and onto civilian populations, apostate-designated Muslims, and minorities who absorb the resulting violence; moves religious authority away from classical jurisprudential institutions toward self-appointed takfiri adjudicators.
+% ABSENT_VOICES: Classical jurisprudential bodies who would insist on imam-authorization and strict evidentiary standards for takfir are excluded by the doctrine's own premise that state-linked religious authority is part of the apostasy; the civilians and minorities who become targets under collective-guilt logic have no venue within the framework to contest their classification; dissenting family members of recruits who witness identity-lock forming have no standing to intervene once the obligation is framed as personal and urgent.
+% DISAPPEARANCE_RATIONALE: If this reading vanished overnight, recruitment pipelines built on personal-obligation urgency would lose their central theological lever, takfir-based target designation would lose its jurisprudential cover, and populations currently classified as legitimate targets under collective-guilt logic would revert to the protections classical and defensive readings extend to non-combatants; state authorities would face one less delegitimizing framework, and classical jurisprudential bodies would regain uncontested standing over who may declare and authorize jihad.
+% FOUNDING_PROBLEM: Framed by its proponents as solving the problem of Muslim-majority states perceived as illegitimate, foreign-occupied, or apostate, where waiting for a properly constituted imam's authorization is presented as tantamount to permanent paralysis against urgent threats — the doctrine positions itself as the only mechanism capable of acting when normal authority has, in its own account, forfeited legitimacy.
+% FOUNDING_PROBLEM_CORROBORATION: Vanguard ideologues and takfiri commanders attest the founding problem (illegitimate/occupied governance) remains acutely live and justifies bypassing state authority. Classical jurisprudential scholars from outside the benefiting parties — including scholars who share the underlying concern about occupation and misrule — attest that the specific doctrinal move (removing imam-authorization, expanding takfir, invoking collective guilt against civilians) is a jurisprudential innovation without classical precedent, and that the arrangement now functions primarily to authorize recruitment and violence against broadened target sets rather than to resolve the founding grievance.
+narrative_ontology:disappearance_verdict(jihad_quranic_corpus__revolutionary_vanguard_reading, world_rearranges).
+narrative_ontology:founding_problem_status(jihad_quranic_corpus__revolutionary_vanguard_reading, contested).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(jihad_quranic_corpus__revolutionary_vanguard_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_sonnet3', 'agent/example_platform_commission.json',
+    'claude-sonnet-5', 'max_tokens=16384,thinking=disabled,temperature=api_default').
+narrative_ontology:story_seed(jihad_quranic_corpus__revolutionary_vanguard_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(jihad_quranic_corpus__revolutionary_vanguard_reading, 0.81, 'claude-sonnet-5', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(jihad_quranic_corpus__revolutionary_vanguard_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(jihad_quranic_corpus__revolutionary_vanguard_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(jihad_quranic_corpus__revolutionary_vanguard_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is high and rising (0.55 to 0.81) because the doctrine's core mechanism — removing the imam-authorization gate and expanding takfir — systematically widens who can be targeted while concentrating doctrinal authority and recruitment capital with a small set of commanders and ideologues. Suppression is even higher (reaching 0.88) because persistence depends on active identity-lock formation in recruits and active foreclosure of classical jurisprudential counter-argument, not on voluntary uptake. Theater ratio is moderate (0.42) — genuine mobilization function coexists with substantial performative doctrinal production (fatwas, communiqués) whose primary purpose is legitimation rather than operational coordination. accessibility_collapse (0.62) and resistance (0.79) reflect that alternatives (defensive-spiritual and expansionist-legalist readings, state jurisprudential channels) remain visibly available and are actively defended by classical scholars, which is why this is authored as snare rather than mountain: the doctrine must actively suppress and delegitimize a live, contested field of alternatives, it does not emerge as an uncontested natural fact.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Takfiri commanders and vanguard ideologues sit near the full-beneficiary end: they set the rules, gain authority and reach, and are structurally insulated from the violence the doctrine authorizes (mobile/arbitrage exit). Recruits sit near the full-target end despite nominal doctrinal 'agency' — identity_locked exit options mean the obligation, once internalized, forecloses the option of recognizing themselves as extracted from. Civilian populations, apostate-designated Muslims, and religious minorities are the clearest targets: trapped exit, no venue to contest classification, and the collective-guilt mechanism specifically exists to bring them into the target set that classical jurisprudence would exclude.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding-problem interview marks this reading's status as contested rather than dead: the underlying grievance (occupation, perceived illegitimate governance) that proponents cite is not fabricated, which is precisely why the classification cannot collapse to 'pure fabrication with no coordination logic.' But the corroboration trail shows the specific doctrinal apparatus — bypassing imam authority, expanding takfir, invoking collective guilt against civilians — is not required to address that grievance; classical and defensive readings address similar grievances with binding proportionality and non-combatant immunity intact. This is exactly the divergence the classification exists to surface: a genuine grievance (mandatrophy avoided — this is not misclassified as pure invention) coupled with an extractive, suppression-dependent doctrinal mechanism riding on top of it (snare, not scaffold or rope) that primarily serves recruitment and command-authority interests rather than resolving the founding problem.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    genuine_grievance_vs_instrumentalized_doctrine,
+    'Is the underlying grievance (occupation, perceived apostate governance) driving genuine adoption of this reading independent of the recruitment and command-authority interests that benefit from it, or is the grievance primarily instrumentalized cover for those interests?',
+    'Comparative case analysis of recruit testimony, defection narratives, and post-conflict tribunal records distinguishing grievance-driven adoption from network-engineered radicalization pathways.',
+    'If grievance-driven and largely independent of network interests, the classification should weight toward tangled_rope (genuine coordination function coexisting with extraction); if primarily instrumentalized, snare is the more accurate classification, as authored here.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(genuine_grievance_vs_instrumentalized_doctrine, empirical, 'Whether the doctrine''s coordination claim is genuine or primarily cover for extraction.').
+
+omega_variable(
+    takfir_authority_legitimacy,
+    'Within Islamic jurisprudential tradition itself, does the removal of imam-authorization for takfir and jihad declarations have any classically defensible precedent, or is it a modern doctrinal innovation with no continuous lineage?',
+    'Textual-historical analysis of classical fiqh sources (Hanafi, Shafi''i, Maliki, Hanbali, and minority traditions) on takfir methodology and fard ''ayn conditions, cross-checked against the doctrine''s own cited sources.',
+    'If no defensible classical lineage exists, this reading''s authority_grounding is better characterized as extraction dressed as lineage; if partial precedent exists (e.g., in specific medieval emergency contexts), the reading has a thinner but real jurisprudential basis that should temper the extraction assessment.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(takfir_authority_legitimacy, conceptual, 'Whether the doctrine''s bypass of imam-authorization has genuine classical jurisprudential precedent.').
+
+omega_variable(
+    collective_guilt_target_expansion_boundary,
+    'Where does this reading''s collective-guilt logic draw the line on who counts as a legitimate target among civilian populations in contested territory, and is that line stable or does it expand under operational pressure?',
+    'Longitudinal tracking of target designations and casualty patterns across multiple theaters where this reading has been operationally applied, checking whether the declared boundary (e.g., security-force affiliation) holds or drifts toward broader categories over time.',
+    'A stable, narrow boundary would somewhat mitigate the extraction assessment for the broader civilian population; an expanding boundary under operational pressure would corroborate the high and rising extractiveness trajectory authored in the measurements.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(collective_guilt_target_expansion_boundary, empirical, 'Whether the collective-guilt target boundary is stable or expands operationally over time.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(jihad_quranic_corpus__revolutionary_vanguard_reading, 0, 40).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(jiha_tr_t0, jihad_quranic_corpus__revolutionary_vanguard_reading, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(jiha_tr_t8, jihad_quranic_corpus__revolutionary_vanguard_reading, theater_ratio, 8, 0.28).
+narrative_ontology:measurement(jiha_tr_t16, jihad_quranic_corpus__revolutionary_vanguard_reading, theater_ratio, 16, 0.32).
+narrative_ontology:measurement(jiha_tr_t24, jihad_quranic_corpus__revolutionary_vanguard_reading, theater_ratio, 24, 0.36).
+narrative_ontology:measurement(jiha_tr_t32, jihad_quranic_corpus__revolutionary_vanguard_reading, theater_ratio, 32, 0.39).
+narrative_ontology:measurement(jiha_tr_t40, jihad_quranic_corpus__revolutionary_vanguard_reading, theater_ratio, 40, 0.42).
+
+% Extraction over time
+narrative_ontology:measurement(jiha_be_t0, jihad_quranic_corpus__revolutionary_vanguard_reading, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(jiha_be_t8, jihad_quranic_corpus__revolutionary_vanguard_reading, base_extractiveness, 8, 0.62).
+narrative_ontology:measurement(jiha_be_t16, jihad_quranic_corpus__revolutionary_vanguard_reading, base_extractiveness, 16, 0.68).
+narrative_ontology:measurement(jiha_be_t24, jihad_quranic_corpus__revolutionary_vanguard_reading, base_extractiveness, 24, 0.74).
+narrative_ontology:measurement(jiha_be_t32, jihad_quranic_corpus__revolutionary_vanguard_reading, base_extractiveness, 32, 0.78).
+narrative_ontology:measurement(jiha_be_t40, jihad_quranic_corpus__revolutionary_vanguard_reading, base_extractiveness, 40, 0.81).
+
+% Suppression requirement over time
+narrative_ontology:measurement(jiha_su_t0, jihad_quranic_corpus__revolutionary_vanguard_reading, suppression_requirement, 0, 0.58).
+narrative_ontology:measurement(jiha_su_t8, jihad_quranic_corpus__revolutionary_vanguard_reading, suppression_requirement, 8, 0.66).
+narrative_ontology:measurement(jiha_su_t16, jihad_quranic_corpus__revolutionary_vanguard_reading, suppression_requirement, 16, 0.73).
+narrative_ontology:measurement(jiha_su_t24, jihad_quranic_corpus__revolutionary_vanguard_reading, suppression_requirement, 24, 0.79).
+narrative_ontology:measurement(jiha_su_t32, jihad_quranic_corpus__revolutionary_vanguard_reading, suppression_requirement, 32, 0.84).
+narrative_ontology:measurement(jiha_su_t40, jihad_quranic_corpus__revolutionary_vanguard_reading, suppression_requirement, 40, 0.88).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(jihad_quranic_corpus__revolutionary_vanguard_reading, identity_coordination).
+narrative_ontology:boltzmann_floor_override(jihad_quranic_corpus__revolutionary_vanguard_reading, 0.08).
+narrative_ontology:affects_constraint(jihad_quranic_corpus__revolutionary_vanguard_reading, defensive_spiritual_reading).
+narrative_ontology:affects_constraint(jihad_quranic_corpus__revolutionary_vanguard_reading, expansionist_legalist_reading).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one of three siblings decomposed from the single natural-language label 'jihad' under the jihad_quranic_corpus kernel, per the ε-invariance principle: measuring the same textual corpus through the defensive-spiritual lens versus the revolutionary-vanguard lens yields structurally different beneficiary/victim sets and different ε (near-mountain versus substantially-extractive-snare), which means they are not one constraint viewed two ways but two constraints sharing a textual root. This file (revolutionary_vanguard_reading) influences the operating environment of both siblings by shifting resource availability (state counter-terrorism response, public perception of the broader corpus) and legitimacy conditions (making the classical procedural safeguards the expansionist_legalist_reading retains look either more or less indispensable by contrast) without logically foreclosing either sibling reading.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(jihad_quranic_corpus__revolutionary_vanguard_reading, organized, 0.15).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

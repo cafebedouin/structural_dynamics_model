@@ -1,0 +1,408 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "b4854c1e-a715-4b21-8a17-739b37376404"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Regulation of Legal Drug Markets with Quality/Access Controls",
+    "topic_domain": "public_health/economic_policy/criminal_justice",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulated_market_participants",
+      "public_health_authorities",
+      "third_parties_from_illegal_markets"
+    ],
+    "victims": [
+      "black_market_suppliers",
+      "criminalized_users_transition_cohort"
+    ],
+    "vindicated_propositions": [
+      "market_regulation_superior_to_prohibition",
+      "state_capacity_to_manage_substance_markets"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_regulatory_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enacts legal framework permitting controlled drug commerce, issues licenses to suppliers, sets quality/purity standards, manages access restrictions (age, purchase limits, prescription requirements where applicable), collects licensing revenue and tax. Administers compliance inspections and enforcement against unlicensed suppliers. Bears political cost of regulating markets that prohibition framed as intrinsically illegitimate."
+    },
+    {
+      "name": "regulated_market_participants",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Licensed growers, manufacturers, distributors, retailers operate within legal framework. Access to capital, banking, liability insurance, trademark protection, and distribution infrastructure previously unavailable in illegal markets. Compete on product quality and pricing rather than violence. Face compliance costs (testing, labeling, tracking) and regulatory uncertainty about future rule changes. Benefit from elimination of criminal prosecution risk and from stable, predictable market conditions relative to black market competitors."
+    },
+    {
+      "name": "users_exiting_criminal_system",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "No longer face arrest, incarceration, or criminal record for possession/use. Access products of known composition (reduced overdose risk from adulterants). Purchase at regulated venues with consistent potency and safety profiles. May face taxation and access restrictions (licensing-based distribution, age gates, quantity limits). Pay regulated prices rather than black-market markups, but higher than unregulated street prices. Retain use-pattern choice; do not face mandatory treatment unless statutory frameworks require it. Transition cohort carries lingering criminal records despite legalization."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Gain regulatory visibility into supply chains, potency profiles, and use patterns (via sales tracking and tax data). Can implement interventions at the supply level: mandated testing, tamper-evident packaging, potency labeling, restrictions on marketing claims. Coordinate with health services on overdose response (access to product composition data enables better emergency protocols). Inherit the political responsibility for managing use-related public health outcomes—failures are now attributed to regulatory design rather than user choice."
+    },
+    {
+      "name": "third_parties_protected_from_illegal_markets",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Eliminated or substantially reduced exposure to drug-related crime (trafficking violence, property crime by users funding habit through illegal channels, neighborhood destabilization). Community institutions (schools, workplaces, neighborhoods) experience reduced disruption from criminal drug distribution and associated gang activity. Do not participate in market directly but benefit from externality reduction. Bear residual harms if legalization increases use volume or if regulatory framework fails to control supply distribution."
+    },
+    {
+      "name": "black_market_suppliers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose market access as legal suppliers capture distribution. High-margin illegal operations eliminated by price competition and convenience of legal purchase. May attempt to capture market share in age-restricted or quantity-restricted products; face criminal prosecution for unlicensed supply. Economic incentive is complete elimination (cannot compete on price or legitimacy against regulated suppliers). Some transition into licensed market; others remain in black market for unregulated variants or customer bases excluded by legal-market access restrictions."
+    },
+    {
+      "name": "criminalized_users_transition_cohort",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Carry criminal records incurred under prohibition regime even after legalization; collateral consequences (employment barriers, housing discrimination, voting restrictions, professional licensing bans) persist. Legal pathway forward does not erase past enforcement. Some remain unable to participate in legal market due to identity/background—employers may refuse to hire, landlords to rent—that locks them into continued illegal-market participation or economic marginalization despite legalization. Psychological reorientation required: identity formed under criminalization may be incompatible with legal-market participant status."
+    },
+    {
+      "name": "enforcement_agencies",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Organizations (DEA, local police drug units) built on enforcement against illegal drug supply lose primary jurisdiction and resource justification. Would advocate maintaining prohibition or strict enforcement boundaries; legalization removes their core function. Shifts enforcement burden to regulatory compliance inspection rather than criminal investigation—different institutional structure, different career paths, reduced headcount justification."
+    },
+    {
+      "name": "public_opinion_constituencies",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Segments that perceive drug use as intrinsically immoral or a sign of personal failure may reject legalization premise. Excluded from the regulatory consensus that constitutes legalization authority; their objections are suppressed via democratic process or institutional override. Fear of increased use volume or perception of government endorsement drives resistance. Would advocate continued prohibition but lack institutional power to block legalization in jurisdictions that move forward."
+    },
+    {
+      "name": "treatment_and_harm_reduction_providers",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Shift from criminalization-focused or abstinence-mandatory approaches to integration with legal market. Gain resources for evidence-based interventions (medication-assisted treatment, supervised consumption, harm reduction) when drug use is no longer criminalized. Regulatory framework determines whether treatment is mandatory, incentivized, or voluntary; this constraint does not determine those details but creates the institutional space for integration."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Replaces unregulated criminal supply with state-managed legal commerce: achieves product quality verification, potency labeling, safe distribution, tax revenue generation, and public-health visibility into supply chains. Eliminates violence and adulteration risks endemic to black markets. Coordinates multiple third-party protections (community safety, overdose response capability, treatment integration) through unified regulatory framework rather than fragmented enforcement.",
+    "transfer_function": "Moves drug supply from criminal networks to licensed operators; moves tax revenue and licensing fees from black market to state budget; moves users from criminal legal status to consumer status with restricted but legal access. Transfers enforcement burden from criminal prosecution to regulatory compliance. Transfers property crime incentive away from users (legal prices lower than black-market markups by mid-supply, though retail may be higher; users no longer fund habits through crime). Transfers political responsibility for use-related outcomes from 'user choice' to 'regulatory design.'",
+    "absent_voices": "Enforcement agencies built on prohibition would articulate arguments for maintaining criminal penalties; segments of public opinion viewing drug use as moral failure rather than medical/social phenomenon are structurally excluded from legalization consensus. Black market suppliers have incentive to oppose but no institutional voice in democratic framing. Prohibition-reading populations (viewing legalization as betrayal of moral order) are not represented in regulatory design; their objections are overridden via majority democratic process or technocratic authority.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legal regulatory framework disappeared overnight, black markets would rapidly reconstitute—suppliers would return to criminal supply, users would face re-criminalization, overdose deaths from adulterants would spike, community violence would return, tax revenue would vanish, treatment integration would collapse. The constraint is constitutive of a different legal-economic order; its disappearance would force reorganization into either prohibition-enforcement or continued black-market chaos.",
+    "founding_problem": "Prohibition regime criminalizes users and enforcement fails to eliminate supply; creates black markets characterized by violence, product adulteration, overdose deaths, mass incarceration, and police-community conflict. Harm reduction and public health interventions are impossible within criminalization framework. Alternative: regulate supply as controlled market to achieve product safety, revenue generation, third-party protection, and reduced enforcement burden.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public health researchers, epidemiologists, and economists outside legalization-supporting constituencies document black-market harms, overdose death trends, and mass incarceration consequences. Jurisdictions that have implemented legalization (Canada, Uruguay, some U.S. states) provide empirical attestation that the regulatory model is implementable and produces measurable reductions in overdose deaths and drug-related crime. Prohibition advocates contest that legalization increases use and normalization; this corroboration is split—evidence-based assessments from public health institutions against moral-religious objections from prohibition constituencies."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.18,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the LEGALIZATION READING of the contested substance_control_authority kernel. The state claims authority to regulate drug markets as legal commerce with quality/access controls—a shift from criminalization (prohibition_reading) and from minimalist public-health harm reduction (harm_reduction_reading). Users exit both the criminal prosecution system and the black-market victim set; regulated market participants and public health authorities become co-beneficiaries; enforcement burden shifts from criminal investigation to compliance inspection. The reading's core normative premise is market regulation superior to prohibition as a mechanism for protecting third parties while respecting user autonomy. This constraint is NOT neutral about the founding problem—it frames legalization as the superior response to prohibition's documented harms. The claim/metric gap is deliberate: the constraint is CLAIMED as tangled_rope (coordination function + asymmetric extraction), authored as structurally true from the legalization seat, while the metrics describe moderate extractiveness and moderate suppression. The prohibition and harm-reduction readings, if authored, would show different structural relationships and would carry different metrics. This story describes only this one reading.",
+    "logic_rationale": "Extractiveness is moderate (0.38 at interval end) because regulatory licensing and tax extraction occur, but the primary function—eliminating black-market violence and product adulteration—delivers genuine coordination benefit to most participants. The reduction over the interval (from 0.15 projected to 0.38 observed at t=30) reflects the system maturing: initial uncertainty about regulatory design decreases as market participants adapt, compliance becomes routine, and the coordination function stabilizes. Suppression starts high (0.65 projected) because transition enforcement requires actively eliminating black-market supply and criminalizing unlicensed production; as legalization normalizes and market participants align with regulation, active suppression requirement drops to 0.22 by t=30. Theater ratio mirrors this: high at transition (0.35) as enforcement agencies justify budgets and political leaders justify the policy shift; as the market settles, performative activity drops to ~0.18 (some ongoing public education and ritual compliance inspections, but mostly functional regulation). Accessibility collapse is moderate (0.45) because users retain choice (legal purchase, use patterns) but are constrained by access restrictions (age, venue, quantity limits, product selection). Resistance stays moderate-to-high (0.52) because segments opposing legalization persist (prohibition constituencies, moral-religious objectors, some enforcement agencies); organized resistance decreases as generations of users normalize legalization, but attitudinally-rooted objection remains structural.",
+    "directionality_logic": "Regulated market participants sit as clear beneficiaries (d~0.1-0.2): they gain market legitimacy, access to capital, predictable rules, and elimination of violent competition. Public health authorities and state regulatory bodies are institutional beneficiaries (d~0.15) collecting tax revenue and regulatory leverage while gaining legal authority. Users exiting criminalization are net beneficiaries despite some constraints (d~0.2-0.3): removal of criminal jeopardy outweighs access restrictions for most. Black market suppliers are the targeted payers (d~0.95): legal competition eliminates their market entirely. The criminalized-users transition cohort carries identity-lock (d~0.55): they gain legal status going forward but carry criminal records and employment barriers from the prior regime; their exit from criminalization is incomplete. Third parties protected from illegal markets are diffuse beneficiaries (d~0.1) gaining externality reduction without direct participation. Enforcement agencies shift from agenda-setters under prohibition to subordinate compliance roles, moving from beneficiary to payer-adjacent (excluded rather than formally payer because they retain institutional status but lose function). The measurement series tracks the suppression_requirement drop sharply (0.65→0.22) as active enforcement against black supply succeeds and legalization normalizes; this is accurate to the reading's premise that suppression is front-loaded in transition, not structural long-term.",
+    "perspectival_gap": "Agenda-setter seat (state regulatory authority) experiences the constraint as coordination provision with modest revenue extraction; the seat runs the regulatory apparatus, has political legitimacy for the policy, and shoulders responsibility for use-related public health outcomes. Beneficiary seats (regulated market participants, public health authorities) experience it as access and legitimacy with compliance costs they accept as necessary. Target seats (black market suppliers) experience complete market elimination and criminal prosecution—no divergence in type from the regulation's perspective, but divergence in function: what the agenda-setter sees as crime suppression, the target sees as market foreclosure via state power. Transition-cohort seats (users with criminal records) experience legal access paired with residual criminalization barriers—they benefit from the coordination function but pay the extraction cost of transition legality asymmetry. Third-party seats experience pure positive externality (crime reduction, community safety) with minimal direct cost. The engine computes per-seat types from these asymmetries: the agenda-setter and most beneficiary seats should compute as tangled_rope or rope (coordination + modest extraction); the eliminated black market seat computes as snare (pure target extraction); the transition cohort computes as tangled_rope or higher-extraction rope depending on how identity-lock is weighted.",
+    "mandatrophy_analysis": "The founding problem (prohibition's documented harms: mass incarceration, overdose deaths, black-market violence, treatment inaccessibility) is live in the observed period (t=10 to t=30): public health metrics show overdose decline post-legalization, incarceration reduction, violence drop in legalization jurisdictions. The constraint's founding purpose (eliminate prohibition harms via market regulation) aligns with the measured coordination function; the constraint is not mandatrophy-resolved. A potential mandatrophy pathway exists if legalization increases overall use volume to the point where new harms outweigh black-market harm reduction (the omega variable capturing this uncertainty), but observed evidence from legalization jurisdictions (Canada, Uruguay, some U.S. states) shows modest-to-no increase in use prevalence, suggesting the founding function persists. The measurement series shows extractiveness stabilizing (not rising) around 0.38 by t=30, indicating the system is not drifting toward pure extraction; theater ratio stabilizes low (~0.18), indicating continued functional activity rather than theatrical maintenance. No mandatrophy signal emerges from the structured data.",
+    "kernel_context": "This constraint instantiates the LEGALIZATION READING of the contested kernel 'substance_control_authority.' The kernel is a persisting state commitment to some form of drug market control, but the substance and legitimacy of that control are read differently by three major constituencies: the prohibition_reading (state authority to criminalize use/possession to protect third parties from crime and disorder); the harm_reduction_reading (state authority to accept use while minimizing health harms through public health interventions); and this reading—the legalization_reading (state authority to regulate markets as legal commerce with quality/access controls). Each reading instantiates a different constraint with different beneficiary/victim structures, different suppression profiles, and different foundational premises. This reading differs from prohibition_reading in core premise: legalization asserts market regulation is superior to criminalization as a third-party protection mechanism; prohibition asserts criminalization is necessary. They coexist historically (some jurisdictions chose prohibition, others legalization) but are logically incompatible within a single framework. This reading differs from harm_reduction_reading in scope and mechanism: harm reduction accepts use and minimizes harms through public health; legalization regulates commerce and restricts access. They are compatible within a policy mix (a legalization framework can incorporate harm reduction) but represent different primary functions and authority claims. The legalization reading is the newest institutionally, with implementation in a small number of jurisdictions (Canada since 2018, Uruguay since 2013, parts of U.S. since ~2014); prohibition is historically dominant globally; harm reduction is intermediate in adoption."
+  },
+  "omegas": [
+    {
+      "id": "use_volume_increase_hypothesis",
+      "question": "Does legalization increase overall drug use volume, and if so, by how much, and does increased use erase the net harm reduction from eliminating black markets and incarceration?",
+      "resolution_mechanism": "Long-term epidemiological tracking in legalization jurisdictions (Canada, Uruguay, U.S. states) compared to prohibition-regime controls; surveys of use prevalence, frequency, and population-level health outcomes; cost-benefit analysis integrating black-market harm reduction against use-related harms from increased volume.",
+      "impact": "If legalization increases use substantially (e.g., 30%+ prevalence increase) with corresponding health harms (overdose deaths, addiction, hospital admissions, mental health impacts) that offset black-market harm reduction, the constraint's founding problem becomes contested or shifts from 'prohibition harms are worse' to 'trade-off between harms.' Classification could move toward piton (atrophied function) if the regulatory apparatus persists without solving its founding problem. If use volume remains stable or increases minimally, the constraint's founding function is confirmed and no mandatrophy emerges.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net public health impact of legalization when use volume increase is factored into black-market harm reduction."
+    },
+    {
+      "id": "regulatory_capture_risk",
+      "question": "Do regulated market participants capture regulatory authority, converting the coordination function into pure extraction (snare-like dynamics with regulatory apparatus as the enforcement mechanism)?",
+      "resolution_mechanism": "Longitudinal study of regulatory decisions, licensing denials, pricing pattern analysis, comparative regulation across jurisdictions; evidence of regulator-industry alignment, revolving-door hiring, preference policies favoring large participants over independent operators.",
+      "impact": "If capture occurs, the constraint's classification shifts from tangled_rope toward snare: the regulatory apparatus becomes a tool for market-participant extraction rather than coordination, suppression remains high (to enforce licensing exclusivity), and beneficiaries contract to capture-aligned market participants. If capture is resisted (strong independence, enforcement against favoritism), the tangled_rope classification holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree to which regulatory authority is captured by regulated market participants, converting coordination into extraction."
+    },
+    {
+      "id": "transition_cohort_incomplete_decriminalization",
+      "question": "For users carrying criminal records from prohibition-era enforcement, do collateral consequences and identity-lock mechanisms persist indefinitely or erode as social norms shift, and what policy interventions (record expungement, employment protections) are required to complete decriminalization?",
+      "resolution_mechanism": "Longitudinal employment/housing outcome tracking for individuals with drug convictions; survey data on employer/landlord discrimination; analysis of expungement policies in legalization jurisdictions; qualitative research on identity reorientation post-legalization.",
+      "impact": "If collateral consequences persist (high identity-lock), a subset of beneficiary seats remain substantially paying the transition cost long-term; the constraint's beneficiary extraction is asymmetric and may be underestimated by snapshot metrics at t=30. If systematic expungement and anti-discrimination policy are implemented, the transition cohort completes its shift to full beneficiary and extractiveness drops further. This affects whether the transition cohort remains identity_locked (trapped) or becomes mobile (arbitrage-capable) in the long term.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Persistence of criminalization collateral consequences for users despite legalization and adequacy of policy responses."
+    },
+    {
+      "id": "reading_substitution_dynamics",
+      "question": "Does the legalization reading, once institutionalized, foreclose the prohibition and harm-reduction readings within its own framework, or do all three readings coexist indefinitely as competing legitimacy claims?",
+      "resolution_mechanism": "Political-historical analysis of legalization jurisdictions: evidence of reading foreclosure (prohibition fully delegitimized, harm reduction absorbed into legalization) versus coexistence (prohibition constituencies retain political power to threaten re-criminalization, harm reduction remains live alternative framing). Observation of shifts in institutional authority grounding (does legalization become 'natural' authority or remain contested).",
+      "impact": "If legalization forecloses prohibition within its framework, the constraint's institutionalization is deeper and reversal less likely; if coexistence persists, the constraint remains contested and vulnerable to reading-shift via political change. This affects long-term stability and whether measurement series will show destabilization after t=30 if political conditions shift.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Degree to which legalization reading achieves institutional dominance or coexists indefinitely with competing readings of the kernel."
+    },
+    {
+      "id": "diffuse_externality_conversion_risk",
+      "question": "Do third parties protected from illegal markets (community safety gain) remain beneficiaries, or do regulatory failures (supply leakage to black markets, inadequate access controls leading to youth access, over-commercialization driving normalization) convert them to payers bearing unexpected costs?",
+      "resolution_mechanism": "Tracking of secondary black-market emergence post-legalization; youth access data; community perception surveys; measurement of spillover harms (commercialization effects on neighboring jurisdictions with prohibition, normalization effects on age-restricted population).",
+      "impact": "If third parties remain pure beneficiaries, the constraint's beneficiary list holds and extracted value flows primarily to regulated market participants and state authorities. If third parties convert to payers (unexpected harms emerge), the constraint's extraction pattern becomes more diffuse and benefits-concentration to agenda-setters increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of third-party benefit category and whether externality reduction persists or reverses."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__prohibition_reading",
+      "substance_control_authority__harm_reduction_reading"
+    ],
+    "dual_formulation_note": "The legalization_reading is one instantiation of the contested kernel substance_control_authority. Two sibling readings (prohibition_reading and harm_reduction_reading) describe different state authority claims and beneficiary/victim structures applied to the same persisting commitment: state management of drug markets. This reading assumes legalization as the superior response to prohibition's documented harms; the prohibition reading assumes criminalization is necessary for third-party protection; the harm-reduction reading minimizes state coercion and emphasizes public health interventions. All three readings share the referent (state drug policy authority) but author different ε values, beneficiary/victim sets, and classification outcomes based on their distinct premises. Constraint family links: legalization influences both prohibition (political pressure to shift policy) and harm-reduction (may absorb harm-reduction services into regulatory framework); harm-reduction coexists with legalization historically and institutionally; prohibition coexists with legalization in different jurisdictions but would foreclose legalization within a unified framework. The ε-invariance principle (DP-001) requires three separate stories because the structural assessments diverge fundamentally—legalization reads prohibition as extractive and harmful; prohibition reads legalization as abandoning third-party protection; harm reduction reads both as overstating state authority."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "gain_flow": "regulated_market_participants",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "market_regulation_superior_to_criminalization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "state_capacity_for_substance_market_governance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "regulated_legal_market_framework",
+    "drift_state": {
+      "moment": "contemporary_legalization_maturity",
+      "direction": "authority_erosion",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

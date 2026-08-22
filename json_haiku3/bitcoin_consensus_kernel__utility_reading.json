@@ -1,0 +1,308 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_consensus_kernel__utility_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "be369fab-3a3a-41f2-aca4-d0fd6d2ba0ed"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.31,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Bitcoin Whitepaper as Iterative Consensus Kernel (Utility Reading)",
+    "topic_domain": "cryptoeconomics/monetary_systems",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "protocol_developers",
+      "adopter_ecosystem",
+      "layer_two_builders"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "protocol_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Propose and implement consensus-layer changes through soft forks, taproot upgrades, segwit adoption, and other backward-compatible protocol improvements. They interpret the whitepaper as establishing a minimum viable consensus mechanism that must evolve to remain competitive and secure. Their legitimacy rests on demonstrating network consensus through miner/node adoption."
+    },
+    {
+      "name": "adopter_ecosystem",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Users, merchants, exchanges, and institutions adopting Bitcoin. They benefit from protocol evolution that improves scalability, privacy, and security without requiring full replacement of the consensus base. Their choice set includes which version of the chain to follow; their power grows with network effects and liquidity."
+    },
+    {
+      "name": "layer_two_builders",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Developers of the Lightning Network, Stacks, and other layer-two protocols that extend Bitcoin's capability without modifying the base consensus. They benefit from soft-fork improvements to the base layer (e.g., taproot enabling schnorr signatures for more efficient channels) and from the whitepaper reading that permits iteration. They operate with substantial exit optionality: layer-two protocols can fork, migrate to alternative chains, or establish independent value."
+    },
+    {
+      "name": "monetary_maximalist_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Holders who view Bitcoin's value as grounded in immutability of the monetary policy and perceive protocol evolution as dilution of that guarantee. They bear the cost of accepting that the whitepaper is a starting specification, not a final treaty. Their exit is to sell or migrate to a fork (e.g., Bitcoin Cash, which they view as adhering to the 'true' whitepaper), but switching entails leaving the largest network and liquidity. Their identity as 'monetary maximalists' is constitutively bound to the immutability claim."
+    },
+    {
+      "name": "mining_ecosystem",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Large mining pools and specialized mining operations. They are economically agnostic about protocol direction — they follow hashpower incentives and network value. Under this reading, they implement what the consensus decides, but their enormous capital investments give them effective veto over contentious changes. They observe the constraint rather than drive it."
+    },
+    {
+      "name": "maximalist_reading_community",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Adherents of the maximalist reading (the sibling constraint) who believe the whitepaper establishes immutable monetary policy and view soft forks as violations of the founding covenant. They are excluded from agenda-setting in this reading's framework, though they argue vociferously against it. Their identity as 'true Bitcoin believers' is constitutively bound to the immutability claim; exit would require abandoning that identity frame."
+    },
+    {
+      "name": "pragmatic_synthesis_community",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Adherents of the pragmatic-synthesis reading who accept that the base layer is immutable but the upper layers (layer-two protocols, applications, economics) are the true innovation frontier. Under this reading, they operate in a middle position: they permit base-layer iteration where they see technical necessity, but frame it as 'legitimate bug-fixing' not 'protocol redesign' to preserve the immutability guarantee as a limit-condition. They influence but do not fully guide this reading's framing."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The whitepaper establishes a minimum viable proof-of-work consensus mechanism enabling a decentralized ledger. The utility reading frames the whitepaper itself as a founding specification that must evolve to solve emerging coordination problems: scaling, privacy preservation, and resistance to future cryptographic threats. Protocol developers coordinate on what 'evolution within the whitepaper' means — they solve the collective-action problem of upgrading the system without fragmenting the network.",
+    "transfer_function": "Moves legitimacy and governance authority from the static text of the whitepaper to the community consensus process that interprets it. Stakeholders who view the whitepaper as a final monetary constitution bear the cost of accepting that their reading no longer governs unilaterally; stakeholders who benefit from iterative protocol improvement gain the ability to propose and implement changes. Layer-two builders receive improved base-layer capabilities.",
+    "absent_voices": "Closed-loop maximalist reading holders and those bound by the immutability frame are excluded from shaping this reading's interpretation. Holders of alternative cryptocurrencies (which implement different consensus models) are structurally absent from Bitcoin's consensus process. Future stakeholders whose interests depend on protocol stability cannot directly voice concerns about the pace or direction of iteration.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the whitepaper disappeared and the maximalist reading became dominant, Bitcoin's protocol would be constrained to the original technical specification with no soft forks, taproot, or segwit adoption. Layer-two protocols would lose efficiency gains from base-layer improvements. If instead the pragmatic synthesis became the single dominant reading, the boundary between 'legitimate base-layer bug-fixes' and 'true protocol changes' would sharpen, constraining the scope of consensus-layer iteration. The reading structures what kinds of changes the community can collectively permit.",
+    "founding_problem": "Bitcoin's whitepaper describes a proof-of-work consensus mechanism for a decentralized ledger with a fixed monetary policy and immutable rules. The founding problem was establishing a system that cannot be surreptitiously changed by any single authority — a trust-minimized ledger. The utility reading interprets this as: the whitepaper solved the founding problem of establishing consensus, but the consensus mechanism itself must be capable of evolving to address emergent scaling, privacy, and security problems that the original design did not anticipate.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Satoshi Nakamoto's whitepaper and early writings on Bitcoin discuss the design as a proof-of-concept and acknowledge limitations (e.g., 'Simplified Payment Verification' for future scalability). Protocol developers who implemented taproot, segwit, and other soft forks attest that these changes preserve the founding guarantee (decentralization, immutability of the monetary policy, trustlessness) while solving emergent coordination problems. Independent analyses of layer-two protocols (Lightning Network research, academic cryptography papers) corroborate that iterative protocol improvement enables scaling without sacrificing the core innovation. Maximalist reading holders dispute this, arguing that any change violates the covenant; their corroboration of the 'immutability is the founding problem' reading comes from within the maximalist community, not independent observation."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.22,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Bitcoin's whitepaper is a contested kernel. The utility reading interprets it as establishing a minimum viable consensus mechanism that enables and legitimizes iterative protocol improvement. Under this reading, the whitepaper solved the founding problem of decentralized consensus; the reading permits soft forks, layer-two protocols, and technical evolution as long as the core guarantees (decentralization, absence of central authority, hardness of the monetary policy floor) are preserved. This reading is distinguished from the maximalist reading (which treats the whitepaper as immutable monetary law) and the pragmatic synthesis (which permits iteration only at upper layers while treating the base layer as fixed). The utility reading reflects the actual dominant interpretation among protocol developers, layer-two builders, and much of the adopter ecosystem. Moderate extractiveness (0.48) reflects the cost borne by monetarist holders who lose the guarantee of immutability.",
+    "key_agents": [
+      "Protocol developers: organize consensus on what counts as legitimate iteration within the whitepaper frame; propose and implement soft forks",
+      "Layer-two builders: depend on base-layer evolution to implement efficient layer-two protocols; benefit from the iteration-permitting reading",
+      "Adopter ecosystem: benefit from scaling and privacy improvements enabled by protocol evolution; their network-effects power grows with iteration",
+      "Monetary maximalist holders: bear the cost of losing the immutability guarantee; constrained exit to forks (Bitcoin Cash) that they view as the 'true' Bitcoin",
+      "Mining ecosystem: economically agnostic but structurally powerful; observe the constraint rather than drive it",
+      "Maximalist reading community: excluded from agenda-setting but maintain a competing interpretation; identity-locked to the immutability frame"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.48) and rising modestly over the interval (0.35 → 0.48) because the utility reading extracts a cost from those who view the whitepaper as a final monetary covenant: they lose the guarantee of immutability. The rise reflects the cumulative effect of protocol changes (segwit, taproot, potential future changes like UTXO set improvements) that narrow the maximalist reading's empirical footprint. Theater is low (0.22) because the actual function — enabling iterative consensus-based protocol improvement — is the real stated purpose; enforcement is minimal because consensus is earned through adoption and hashpower, not coercion. Suppression is also low (0.31) because the reading itself explicitly permits dissent: those who reject it can fork (Bitcoin Cash, Bitcoin SV) or stick with older protocol versions. The reading's legitimacy does not rest on suppressing the maximalist argument; rather, the utility reading's dominance reflects network-effects and adoption decisions by the majority coalition. Accessibility collapse is moderate (0.62) because once you understand that the whitepaper is interpretable as a living specification (not a final constitution), the perceived alternatives shift: you can adopt the maximalist reading by joining Bitcoin Cash, or adopt the pragmatic synthesis by acknowledging base-layer bounds. The collapse is not complete because the maximalist reading remains available and identity-coherent for its adherents.",
+    "perspectival_gap": "Protocol developers and layer-two builders experience this reading as pure coordination — a solution to the problem of how to upgrade the system without fragmenting it. Monetary maximalist holders experience it as extraction — the loss of the immutability guarantee they paid (in early adoption risk) to secure. The engine should compute this divergence from the structural data: maximalist holders are identity-locked to the immutability frame (exit_options = identity_locked), which amplifies directionality toward the payer end; protocol developers operate with mobile exit (they can propose forks or join alternative projects), which dampens directionality toward the beneficiary end. The same reading produces different effective extraction for different seats.",
+    "directionality_logic": "Protocol developers (power=organized, exit=mobile) are beneficiaries at the low-d end: they can propose changes, adopt the reading if it serves their interests, or migrate to other projects. Adopter ecosystem (power=organized, exit=mobile) benefits from iteration and has arbitrage-grade exit: they can switch to alternative L1 platforms (Ethereum, Solana) if Bitcoin's direction diverges from their preferences. Layer-two builders (power=powerful, exit=mobile) explicitly gain efficiency from base-layer soft forks and operate with full arbitrage exit. Monetary maximalist holders (power=moderate, exit=constrained → identity_locked) bear the cost of accepting a reading they did not choose: their exit requires either selling (liquidity-destructive) or migrating to a fork they view as less-valuable (network-effects-costly). The identity_locked exit is the key: they cannot exit without dissolving their identity as 'Bitcoin maximalists' — they are trapped in a cognitive frame the reading undermines.",
+    "mandatrophy_analysis": "Under the utility reading, the mandate is explicit: enable iterative consensus-based protocol improvement to solve emerging coordination problems (scaling, privacy, security). This reading does NOT suffer from mandatrophy because the coordination function (enabling upgrades without fragmenting the network) is alive and actively served by the mechanism (soft forks, consensus signaling, adoption-based legitimacy). The maximalist reading, by contrast, would suffer mandatrophy if it became dominant and tried to enforce immutability: the founding problem (establishing trustless consensus) would be solved, but the enforcement mechanism (rejecting all protocol changes) would persist, producing a zombie constraint. The utility reading is not zombie; it is actively contested and functions as stated.",
+    "kernel_context": "This constraint instantiates the utility reading of the bitcoin_consensus_kernel. The kernel is the whitepaper itself — a text that is interpreted differently by three communities. The utility reading reads the whitepaper as establishing a minimum viable consensus mechanism that legitimizes iterative improvement. The sibling readings are: (1) maximalist_reading, which treats the whitepaper as immutable monetary law; (2) pragmatic_synthesis, which permits iteration at upper layers but constrains base-layer changes to 'bug-fixes' that preserve immutability as a limit-condition. The three readings differ structurally in their treatment of the boundary between 'legitimate consensus-based evolution' and 'violation of the founding covenant.' The utility reading is the dominant interpretation among protocol developers and layer-two builders; it has asymmetric power because it controls the narrative of what 'soft fork' and 'consensus change' mean."
+  },
+  "omegas": [
+    {
+      "id": "immutability_vs_evolution_boundary",
+      "question": "Where is the boundary between 'legitimate iterative improvement within the whitepaper' and 'violation of the founding monetary covenant'? What counts as preserving the 'core guarantee' vs. changing it?",
+      "resolution_mechanism": "Empirical: if a proposed hard fork (e.g., increasing the supply cap or changing the difficulty algorithm) gains consensus adoption, the community's behavior reveals where the boundary actually lies. Conceptual: formal analysis of which protocol properties are semantically essential to 'being Bitcoin' vs. implementational details.",
+      "impact": "If the boundary is empirically determined by adoption consensus, the utility reading is correct: evolution is legitimate as long as the community agrees. If the boundary is conceptually fixed (certain properties are intrinsically immutable), the maximalist reading gains force, and the utility reading overreaches.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The contested semantic boundary between protocol evolution and covenant violation."
+    },
+    {
+      "id": "network_effects_vs_reading_truth",
+      "question": "Does the dominance of the utility reading reflect that it is the correct interpretation of the whitepaper, or does it reflect network-effects power accumulating behind the largest protocol-development coalition?",
+      "resolution_mechanism": "Methodological: compare the dominance of the reading to the quality of the corroborating evidence from outside the dominant coalition (independent economists, cryptographers, academic analyses). Historical: trace the contingency points where the reading could have lost (the 2015 block-size debate, the 2017 scaling wars) and ask whether the outcome was overdetermined by the technical argument or by political organizing.",
+      "impact": "If the reading's dominance is overdetermined by the technical argument, the utility reading is robust. If dominance reflects political organizing and path-dependence, the reading is contingent and vulnerable to regime change (e.g., mining-coalition shift, regulatory capture, technical catastrophe that revives immutability demands).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether reading dominance reflects epistemic truth or institutional power."
+    },
+    {
+      "id": "maximalist_reading_as_legitimacy_check",
+      "question": "Is the continued vigorous assertion of the maximalist reading (Bitcoin Cash, Bitcoin SV, hard-money advocates) a sign that the utility reading is suppressing a real alternative, or a sign that the utility reading is genuinely open and the maximalist reading simply has fewer adherents?",
+      "resolution_mechanism": "Structural: measure suppression mechanisms preventing maximalist reading adoption (e.g., do mining pools actively refuse to work on Bitcoin Cash? Do exchanges de-list forks? Do major developers actively discourage the reading?). Compare to metrics of suppression in snare constraints. If suppression is genuine, the constraint is a snare of coordination disguised; if suppression is absent, the reading's dominance reflects preference, not coercion.",
+      "impact": "If suppression is genuine, the reading is a snare: the appearance of 'consensus-based legitimacy' masks the fact that the maximalist reading is being forcibly excluded. If suppression is absent, the reading is a genuine rope: alternatives exist and can compete.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the constraint suppresses the maximalist reading or permits genuine alternatives."
+    },
+    {
+      "id": "sibling_reading_epistemic_independence",
+      "question": "Do the three readings (utility, maximalist, pragmatic) represent genuinely independent epistemic frameworks for interpreting the whitepaper, or do they form a nested hierarchy where one reading logically implies bounds on the others?",
+      "resolution_mechanism": "Logical analysis: map the axioms of each reading and check for entailment relationships. If axiom_A → bounds on axiom_B, the readings are not independent. Historical analysis: did the readings emerge simultaneously or sequentially? If pragmatic synthesis is a recent synthesis between maximalist and utility readings, it may be derivative rather than foundational.",
+      "impact": "If the readings are independent, the kernel genuinely admits three coexisting interpretations. If one reading is logically entailed by another, the set should be reduced and the constraint family reorganized.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The logical independence structure of the three kernel readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_consensus_kernel__maximalist_reading",
+      "bitcoin_consensus_kernel__pragmatic_synthesis",
+      "lightning_network_efficiency",
+      "cryptocurrency_regulatory_capture"
+    ],
+    "dual_formulation_note": "The bitcoin_consensus_kernel decomposes into three constraint stories per OQ-26 ε-invariance principle: utility_reading (this file, moderate extractiveness, permits iteration), maximalist_reading (high extractiveness, immutability as founding law), and pragmatic_synthesis (lower extractiveness, iteration at upper layers only). Each reading instantiates a different ε because the beneficiary/victim structure and the interpretation of 'legitimate change' differ structurally. They are not the same constraint viewed from different angles; they are genuinely different constraints grounded in the same text. All three are linked via network.affects_constraints to enable constraint-family analysis."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reference_frame": "whitepaper_as_minimum_viable_specification",
+    "drift_state": {
+      "moment": "post_taproot_adoption",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "maximalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "pragmatic_synthesis",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "consensus_mechanism_enables_evolution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "monetary_policy_floor_immutable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "soft_forks_preserve_covenant",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ],
+  "gain_flow": "protocol_developers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

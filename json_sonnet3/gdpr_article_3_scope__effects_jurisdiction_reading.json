@@ -1,0 +1,327 @@
+{
+  "header": {
+    "constraint_id": "gdpr_article_3_scope__effects_jurisdiction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "83b61243-dc70-4d5c-a93d-4b446c9cc3c5"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GDPR Article 3(2) Extraterritorial Effects-Based Jurisdiction",
+    "topic_domain": "technology governance/international law/privacy regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eu_data_subjects",
+      "eu_based_competitors",
+      "eu_data_protection_authorities"
+    ],
+    "victims": [
+      "non_eu_controllers_targeting_eu_market",
+      "small_non_eu_online_businesses"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "eu_data_subjects",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Residents in the EU whose personal data is collected by non-EU controllers offering goods/services to them or monitoring their behavior. Under this reading they retain the same protections regardless of where the controller is incorporated or where processing occurs; they cannot themselves relocate to escape data practices, so extraterritorial reach is the mechanism that follows them."
+    },
+    {
+      "name": "eu_data_protection_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Apply the targeting/monitoring test under Article 3(2) to determine whether a non-EU controller falls within scope, then investigate and fine controllers found to process EU residents' data without complying with GDPR obligations. Their authority to reach outside EU territory rests entirely on the effects doctrine; enforcement leverage comes from fines, adequacy findings, and cooperation with EU-based intermediaries."
+    },
+    {
+      "name": "non_eu_controllers_targeting_eu_market",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Large non-EU platforms and data brokers that knowingly offer goods/services to or monitor EU residents. They must build GDPR-compliant data architectures, appoint EU representatives, and face fines up to 4% of global turnover, even though they have no physical presence in the EU. Exit means abandoning the EU market entirely, which is commercially costly for firms with meaningful EU user bases."
+    },
+    {
+      "name": "small_non_eu_online_businesses",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Small merchants and app developers outside the EU who incidentally attract EU visitors or customers online. They often lack the legal resources to determine whether the targeting test applies to them, and disproportionately bear compliance uncertainty and cost relative to their revenue; many simply geoblock EU users rather than assess exposure, which is itself a form of trapped exit."
+    },
+    {
+      "name": "eu_based_competitors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Firms operating inside the EU that already bear compliance costs by virtue of territorial presence. Article 3(2)'s extraterritorial reach levels the playing field by imposing equivalent obligations on non-EU rivals competing for the same EU customers, removing a potential competitive advantage that non-EU firms would otherwise hold."
+    },
+    {
+      "name": "non_eu_national_governments",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Governments whose domestic firms are regulated by a foreign authority's rules despite no domestic presence of that authority. They have no vote in the EU's rulemaking or enforcement decisions affecting their firms, and their own regulatory sovereignty over firms physically located and licensed within their own territory is functionally overridden for EU-facing conduct."
+    },
+    {
+      "name": "cjeu_and_edpb",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The Court of Justice of the EU and European Data Protection Board interpret the targeting/monitoring test, issue guidelines, and adjudicate contested scope determinations, shaping how far the effects-based reading extends in practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents a regulatory gap in which non-EU controllers could freely collect and process EU residents' personal data by routing operations offshore, ensuring that protection follows the data subject rather than the controller's place of incorporation.",
+    "transfer_function": "Moves compliance burden and enforcement exposure from EU residents (who would otherwise bear unmitigated privacy risk) onto non-EU controllers who target or monitor them; secondarily shifts competitive advantage from unregulated non-EU firms toward EU-based and already-compliant firms.",
+    "absent_voices": "Non-EU governments and their domestic regulators have no formal voice in how the targeting/monitoring test is drawn or enforced against their firms; small non-EU businesses uncertain of their exposure are rarely represented in EDPB guideline consultations, which draw disproportionately on large-firm and EU civil-society input.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Article 3(2)'s extraterritorial reach were withdrawn, non-EU controllers offering goods or services to EU residents could process their data under home-jurisdiction rules alone; EU residents' protections would depend entirely on controller location, and much current compliance infrastructure (EU representatives, cross-border data processing agreements, geofenced compliance builds) built specifically to satisfy the effects test would become unnecessary.",
+    "founding_problem": "Purely territorial jurisdiction let non-EU controllers process EU residents' data by locating servers and incorporation outside the EU, defeating the substantive protections the GDPR was meant to guarantee — a target could be reached in Europe while the controller sat entirely beyond EU territorial writ.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "EU data protection authorities and academic privacy-law scholars attest the loophole was real pre-GDPR (citing the 1995 Directive's weaker extraterritorial reach and documented offshore data-processing arbitrage). Independent trade-law scholars outside the EU institutions corroborate that a territorial-only rule would have created a straightforward regulatory arbitrage path, though they dispute whether the chosen remedy's scope is proportionate to the problem it solves."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the effects-jurisdiction reading of GDPR Article 3(2): jurisdiction attaches to the EU residency of the data subject and the targeting/monitoring conduct of the controller, not to territorial presence or market-access conditionality. Under this reading, a non-EU firm with no EU establishment that offers goods or services to, or monitors the behavior of, EU residents falls squarely within scope, and enforcement follows through fines, EU representative requirements, and adequacy-linked cooperation mechanisms. This is a distinct constraint from the market-access reading (which frames the same text as a Brussels Effect standard-setting device with no jurisdictional claim) and the territorial-sovereignty reading (which holds the same extraterritorial application to exceed legitimate regulatory authority). Each carries a different ε, a different beneficiary/victim structure, and a different classification; they are linked here only through network.affects_constraints, per the ε-invariance principle.",
+    "key_agents": [
+      "eu_data_subjects: primary beneficiary (organized/constrained) — protection follows them regardless of controller location",
+      "eu_data_protection_authorities: agenda_setter (institutional/analytical) — apply and enforce the targeting/monitoring test",
+      "non_eu_controllers_targeting_eu_market: primary target (powerful/constrained) — bear compliance cost and fine exposure",
+      "small_non_eu_online_businesses: secondary target (moderate/trapped) — disproportionate compliance uncertainty relative to resources",
+      "eu_based_competitors: secondary beneficiary (organized/mobile) — competitive leveling effect",
+      "non_eu_national_governments: excluded (institutional/constrained) — no voice, sovereignty functionally overridden for EU-facing conduct",
+      "cjeu_and_edpb: analytical observer (institutional/analytical) — interpret and bound the test's reach"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.58 (moderate-high): the effects test imposes real compliance costs and fine exposure on firms with no EU territorial presence, but the coordination function it serves — closing the offshore-processing loophole — is genuine and not merely pretextual, so extraction is substantial rather than total. Suppression is 0.62: alternatives to compliance (geoblocking EU users, restructuring to avoid targeting characterization) exist but are increasingly foreclosed as enforcement practice matures and the targeting test is applied more expansively by the CJEU and EDPB guidance — the suppression_requirement series shows this hardening over the interval (0.35 to 0.62) as case law and guidance accumulate. Theater ratio is low (0.22) because enforcement activity substantively tracks the stated function (protecting EU residents' data) rather than drifting toward proxy metrics. Accessibility collapse is moderate (0.40): non-EU firms retain the option of exiting the EU market entirely, which is a real if costly alternative, so alternatives have not collapsed as completely as in a true mountain case. Resistance is moderate (0.55): non-EU controllers and their home governments actively contest scope determinations, file objections during EDPB consultations, and some jurisdictions have raised sovereignty objections through trade channels.",
+    "directionality_logic": "EU data subjects and EU data protection authorities sit near the beneficiary end: the former receive protection without effort, the latter administer and gain enforcement authority. Non-EU controllers targeting the EU market and small non-EU online businesses sit near the target end: they bear the transfer (compliance cost, fine exposure) with constrained or trapped exit — the small-business tier especially, since geoblocking is a blunt, welfare-reducing exit rather than a genuine choice. EU-based competitors are structural beneficiaries of the leveling effect despite bearing their own compliance costs directly, because the extraterritorial reach removes what would otherwise be a competitive disadvantage relative to unregulated non-EU rivals — this justifies their beneficiary role despite mobile exit options.",
+    "perspectival_gap": "From the EU data protection authority seat, this is a coordination mechanism closing a jurisdictional gap that would otherwise let controllers evade substantive protection through mere geographic arbitrage — a rope. From the small non-EU business seat with no meaningful EU presence and no realistic capacity to assess targeting exposure, the same structure operates as an externally imposed cost with no corresponding voice in its design — closer to extraction riding on a real coordination story. The engine computing tangled_rope from the beneficiary/victim/enforcement structure captures both readings without needing to pick one as authoritative.",
+    "mandatrophy_analysis": "The founding problem (territorial arbitrage defeating substantive data protection) remains live — cross-border data flows and offshore processing capacity have only grown since GDPR's enactment, so the disappearance_verdict of world_rearranges is not a residual claim from an obsolete mandate. This distinguishes the constraint from mandatrophy: the mandate has not outlived its function, though the SCOPE of its application (how expansively 'targeting' and 'monitoring' are read) continues to be actively contested and could itself drift toward overreach if enforcement practice broadens without corresponding proportionality checks.",
+    "kernel_context": "This story instantiates the effects_jurisdiction_reading of the gdpr_article_3_scope kernel: jurisdiction is read as following the EU residency of the data subject via the targeting/monitoring test, independent of controller location. Two sibling readings exist as separate constraints: market_access_reading treats the same text as conditional market access / Brussels Effect standard-setting rather than a jurisdictional assertion (denying that this is extraterritorial application at all); territorial_sovereignty_reading treats the same extraterritorial application as exceeding legitimate regulatory authority entirely. All three share the same statutory text but diverge sharply on ε, beneficiary/victim structure, and classification — they are linked via network.affects_constraints, not merged into one story."
+  },
+  "omegas": [
+    {
+      "id": "targeting_test_scope_creep",
+      "question": "Does the targeting/monitoring test, as applied by EDPB guidance and CJEU case law, remain bounded to firms that deliberately orient activity toward EU residents, or is it drifting toward capturing any firm whose website is merely accessible from the EU?",
+      "resolution_mechanism": "Track the ratio of enforcement actions against firms with clear EU-directed marketing/currency/language signals versus firms with only incidental EU accessibility, across successive EDPB guideline revisions and CJEU rulings.",
+      "impact": "If scope creeps toward mere accessibility, effective extraction rises sharply for the small-business victim tier and the constraint drifts from tangled_rope toward snare; if the test stays bounded to deliberate targeting, the coordination function remains proportionate to the extraction it imposes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the targeting/monitoring test is scope-stable or expanding beyond deliberate EU-directed conduct."
+    },
+    {
+      "id": "kernel_reading_indeterminacy",
+      "question": "Is the effects-jurisdiction reading the legally correct interpretation of Article 3(2), or is it one contestable reading among the territorial-sovereignty and market-access alternatives, with the statutory text itself underdetermining which applies?",
+      "resolution_mechanism": "This is inherently a conceptual/legal-interpretive question resolved by evolving CJEU doctrine and comparative international law scholarship, not by empirical measurement alone; track whether CJEU jurisprudence explicitly forecloses the territorial-sovereignty reading or leaves it live as a minority position among member state courts and international law scholars.",
+      "impact": "If CJEU doctrine forecloses the territorial-sovereignty reading, this reading's enforcement legitimacy strengthens and non-EU resistance framed in sovereignty terms loses doctrinal traction; if the readings remain genuinely contested, enforcement against non-EU controllers carries persistent legitimacy risk that could affect adequacy negotiations and cross-border enforcement cooperation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the effects-jurisdiction reading has doctrinal priority or remains one of several live contested readings of the same text."
+    },
+    {
+      "id": "compliance_cost_proportionality",
+      "question": "Is the compliance cost actually borne by non-EU controllers proportionate to the privacy harm the effects test prevents, or does it systematically overshoot for the small-business tier relative to actual EU-resident data volume processed?",
+      "resolution_mechanism": "Comparative empirical study of GDPR compliance cost as a share of revenue for small non-EU firms versus the actual EU-resident data volumes and sensitivity they process, benchmarked against equivalent EU-domestic small-firm compliance costs.",
+      "impact": "If costs are disproportionate for small non-EU firms relative to actual data-protection risk, the victim classification for small_non_eu_online_businesses strengthens and the constraint's extraction profile for that tier moves closer to a snare than the aggregate tangled_rope reading suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compliance burden on small non-EU firms is proportionate to the data-protection risk they actually pose."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gdpr_article_3_scope__market_access_reading",
+      "gdpr_article_3_scope__territorial_sovereignty_reading"
+    ],
+    "dual_formulation_note": "Three constraint stories decompose the natural-language concept 'GDPR Article 3(2) extraterritorial scope': this story (effects_jurisdiction_reading, tangled_rope, ε=0.58 — jurisdiction follows the data subject via targeting/monitoring), market_access_reading (frames the same text as Brussels Effect conditional market access rather than jurisdictional assertion, lower expected ε), and territorial_sovereignty_reading (frames the same extraterritorial application as exceeding legitimate regulatory authority, likely reads as snare from the non-EU sovereign's seat with high suppression and low legitimacy). Each carries independent ε, beneficiary/victim data, and classification per the ε-invariance principle; they are linked here as siblings under the shared gdpr_article_3_scope kernel."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "effects_based_protective_jurisdiction",
+    "drift_state": {
+      "moment": "post_schrems_ii_enforcement_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "territorial_sovereignty_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "market_access_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "protection_follows_the_data_subject",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "targeting_conduct_grounds_jurisdiction_not_territory",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

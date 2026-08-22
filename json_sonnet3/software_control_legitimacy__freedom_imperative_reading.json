@@ -1,0 +1,309 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__freedom_imperative_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "c478b622-89cb-4b21-a69b-b5456f736d42"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.62,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Proprietary Software Regime, Read as Categorical Denial of User Freedom",
+    "topic_domain": "software engineering / political economy of technology / intellectual property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "computer_users_as_rights_holders"
+    ],
+    "victims": [
+      "proprietary_software_users",
+      "device_owners_under_locked_platforms",
+      "downstream_developers_denied_source"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_vendors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Write and distribute software under licenses that withhold source code, restrict modification, and use copyright and technical measures (DRM, code signing, remote attestation) to prevent users from inspecting or altering what runs on their own machines. They set license terms, enforce them through litigation and platform gatekeeping, and capture the resulting rents. From this reading's premises, they are the party whose authority over the artifact is illegitimate in the first place — the fact that they built the software does not, in this reading, entitle them to control what a user does with their own computer."
+    },
+    {
+      "name": "proprietary_software_users",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run software they cannot inspect, cannot modify to fix bugs or add needed features, and cannot legally share or repair without vendor permission. Many depend on proprietary tools for work, education, or access to essential services and have no practical free-software substitute for their specific need. In this reading, every one of them is a victim of an illegitimate control structure regardless of whether they experience dissatisfaction — the harm is the denial of control itself, not the resulting inconvenience."
+    },
+    {
+      "name": "device_owners_under_locked_platforms",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Purchase hardware whose bootloaders, firmware, or operating systems are locked such that they cannot run software of their own choosing on a device they nominally own. Jailbreaking or rooting is often a legal gray zone or a warranty-voiding act. Ownership of the physical object does not confer control of what it computes."
+    },
+    {
+      "name": "downstream_developers_denied_source",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Want to build on, audit, patch, or port software they rely on but are blocked by the absence of source and by licenses that criminalize reverse engineering. They must reimplement functionality from scratch or go without, a direct transfer of labor and opportunity to the original vendor's monopoly on the artifact."
+    },
+    {
+      "name": "computer_users_as_rights_holders",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "In this reading, every computer user is a rights-holder whose entitlement to run, study, modify, and share the software running on their own machines is treated as fundamental — a precondition of autonomy over one's own tools, analogous to a civil liberty. This class collectively 'benefits' from the reading's framework in the sense that recognizing the right vindicates their standing, even though most individuals in this class have not organized to claim it and remain practically trapped inside proprietary ecosystems today."
+    },
+    {
+      "name": "free_software_movement_advocates",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Articulate and campaign for this reading (the four freedoms framework), maintain free-software licenses and projects, and press the ethical argument in public discourse, litigation, and standards bodies. They both diagnose the illegitimacy and build the alternative infrastructure, occupying a dual observer/agenda-setting position relative to the kernel contest itself."
+    },
+    {
+      "name": "enterprise_customers_with_support_contracts",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Large organizations that have negotiated favorable proprietary licensing, indemnification, and support SLAs and who experience the arrangement as a functioning commercial relationship, not a rights violation. Their voice — that the arrangement works fine for them and that source access is not what they are purchasing — is largely absent from this reading's framing, which treats the freedom claim as applying uniformly regardless of contractual satisfaction."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "None recognized as legitimate by this reading at the level of control: this reading holds that vendor retention of exclusive control over modification and inspection solves no problem that couldn't be solved, and solved more legitimately, by software released under free licenses. Any coordination benefit proprietary software provides (support guarantees, unified releases, liability allocation) is treated as achievable without denying users the four freedoms, so it does not justify the control structure.",
+    "transfer_function": "Moves control over computing — the capacity to run, inspect, modify, and redistribute software — from the people who operate the machines to the vendors who wrote and license the code, backed by copyright law, technical restriction measures, and platform gatekeeping.",
+    "absent_voices": "Enterprise customers and users who report satisfaction with proprietary support relationships are structurally outside this reading's frame, since the reading locates the harm in the denial of control itself rather than in any measurable dissatisfaction; a user's contentment with a proprietary product does not, on this reading's own terms, answer the legitimacy question.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If proprietary licensing and technical restriction were abolished overnight, free-software advocates hold the software ecosystem would reorganize around openly licensed code with control returned to users; vendors and enterprise customers hold that commercial software development, indemnification, and much current investment-backed innovation would collapse or relocate. The two camps dispute not just the value of the outcome but what would actually happen, which is itself part of the kernel contest this reading is one side of.",
+    "founding_problem": "Early software culture (pre-1980s, in the free-software movement's own genealogy) treated source sharing and modification as normal collaborative practice; the founding problem this reading identifies is the subsequent enclosure of that practice — the shift to license-and-restrict business models that made running, studying, modifying, and sharing software into acts requiring permission or committing infringement.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Free-software movement advocates (the reading's own proponents) attest the problem is live and worsening (locked bootloaders, DRM, SaaS-ification eliminating even nominal ownership). Some corroboration from outside the movement exists in the form of right-to-repair legislative testimony, competition-authority findings on platform lock-in (e.g., app store antitrust inquiries), and computer-science historians documenting the pre-1980s norm shift; property-rights and pragmatic-openness proponents dispute that the shift constitutes a wrong requiring remedy, so corroboration of the problem's existence is broader than corroboration of this reading's remedy."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.81
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the freedom_imperative reading of the software_control_legitimacy kernel: the claim that a user's control over the computing they run is a fundamental entitlement, such that any license or technical mechanism withholding that control (source access, modification rights, redistribution rights) is ethically illegitimate regardless of the commercial or coordination rationale offered for it. Under this reading, the referent of ε is the standing proprietary-software arrangement as it actually operates today — not the free-software alternative this reading endorses. Every proprietary license, from this reading's own lights, categorically converts its user into a victim of denied control; the class of 'beneficiary' is not the vendor (whose authority this reading treats as unearned) but users considered as rights-holders whose entitlement is vindicated wherever the reading's premises are accepted, whether or not any individual user is presently claiming it. This is one of four sibling readings of the same kernel (commons, pragmatic_openness, property_rights); each is authored as its own constraint file with its own ε, per the ε-invariance principle — this file does not average across them or describe the contest internally.",
+    "key_agents": [
+      "proprietary_software_vendors: agenda_setter (institutional/arbitrage) — hold license and technical control, collect rents",
+      "proprietary_software_users: payer (moderate/constrained) — denied inspection/modification/redistribution rights on tools they depend on",
+      "device_owners_under_locked_platforms: payer (powerless/trapped) — cannot run own-choice software on owned hardware",
+      "downstream_developers_denied_source: payer (moderate/constrained) — blocked from building on or auditing dependencies",
+      "computer_users_as_rights_holders: beneficiary (powerless/trapped) — the class whose standing this reading vindicates",
+      "free_software_movement_advocates: observer/agenda_setter (organized/arbitrage) — articulates and builds the reading's alternative infrastructure",
+      "enterprise_customers_with_support_contracts: excluded (powerful/mobile) — satisfied contractual relationship the reading's frame does not register as counter-evidence"
+    ],
+    "logic_rationale": "Extraction is authored high (0.81 at interval end) because this reading treats the entire proprietary-software transaction as illegitimate transfer of control regardless of price paid or satisfaction reported — the categorical rejection of closed source means every instance of withheld source/modification/redistribution rights counts as extraction under this reading's own premises, not merely instances with measurable grievance. Suppression is authored more moderately (0.62, rising over the interval) because the coercive apparatus — copyright litigation, DRM/DMCA anti-circumvention law, platform code-signing and attestation — has hardened over the software industry's history (from copyright-only enforcement in early decades to today's combined legal-plus-technical lockdown), which the suppression_requirement series traces. Theater ratio is kept low and slowly rising (0.10 to 0.20): from this reading's view there is little performative element to proprietary licensing — the restriction is functionally real and increasingly effective, not mostly theatrical, though EULA 'agreement' rituals and click-through consent add a small and growing theatrical veneer over what is substantively involuntary. All three series share one time grid (T=0,8,16,24,32,40) per the alignment rule.",
+    "directionality_logic": "Proprietary_software_vendors are the agenda-setters who write the license terms and enforce them (institutional power, arbitrage exit — they can restructure their business models freely, unlike their users). Proprietary_software_users, device_owners_under_locked_platforms, and downstream_developers_denied_source are declared victims: the constraint's control transfer runs from them to the vendor, and their exit options range from constrained (moderate power, some substitute products exist) to trapped (powerless device owners with no legal path to modify their own hardware). Computer_users_as_rights_holders is the beneficiary class in a structurally unusual sense — it is not a party collecting rents but the class whose normative standing the reading's argument vindicates; declaring it as beneficiary rather than omitting it keeps the reading's own logic visible (the moral 'payoff' of the reading accrues to this class even where its members are simultaneously listed, under other names, among the payers). This double-appearance (payers who are also, in the abstract, the rights-holder class) is intentional and is the reading's own structure, not an authoring error.",
+    "mandatrophy_analysis": "The founding problem (open, collaborative software practice being enclosed by license-and-restrict business models) is declared live, not dead, which forecloses treating this reading as an obsolete crusade against a settled or already-corrected practice — the reading's proponents and independent right-to-repair/antitrust evidence both attest ongoing enclosure (locked bootloaders, SaaS elimination of ownership). This keeps the classification honest about what the reading is actually doing: naming a persistent, worsening structural condition rather than re-litigating a historical grievance that no longer applies.",
+    "kernel_context": "This is the freedom_imperative reading of the software_control_legitimacy kernel. Sibling readings, each its own constraint file: pragmatic_openness_reading (treats control as a methodology choice; proprietary models remain legitimate alternatives — this sibling's ε should be far lower and its beneficiary/victim structure symmetric or absent), property_rights_reading (treats vendor control as a legitimate property right protecting investment — under that reading, today's proprietary vendors would appear as beneficiaries with legitimate authority, not agenda-setters imposing illegitimate control, and there would likely be no victim class at all), and commons_reading (treats the question as one of negotiated collective governance rather than either absolute freedom or absolute property — a hybrid structure, likely tangled_rope rather than snare). This reading is the most extraction-maximal of the four: it is the one that places every instance of proprietary licensing, without exception, into the victim set."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection_freedom_imperative",
+      "question": "Is the freedom_imperative reading of software control the structurally correct one, or is it one contestable ethical framing among at least three others (pragmatic_openness, property_rights, commons) that this kernel supports?",
+      "resolution_mechanism": "No empirical resolution mechanism exists for this question because it is a normative/conceptual dispute about the moral status of control over computing, not an empirical claim about outcomes. What can be tracked is which reading dominates in specific institutional venues over time (legislation, court rulings, standards bodies, developer community norms) as evidence of contested legitimacy rather than settled fact.",
+      "impact": "If the property_rights_reading is instead taken as structurally correct, the same proprietary licensing arrangement reclassifies with vendors as legitimate beneficiaries and no victim class at all — an entirely different type (likely rope or scaffold) from the same underlying facts. This is the central kernel-contest fact this omega exists to register.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which kernel reading (freedom_imperative vs. pragmatic_openness vs. property_rights vs. commons) is structurally correct, if any single one is."
+    },
+    {
+      "id": "categorical_vs_graduated_harm",
+      "question": "Does this reading's categorical treatment of every proprietary license as harm (regardless of user satisfaction or negotiated terms) correctly capture the moral structure of the situation, or does it erase real variation between coercive lock-in (locked bootloaders) and freely negotiated commercial licensing (enterprise support contracts)?",
+      "resolution_mechanism": "Compare user/organizational testimony and revealed preference (contract renewal rates, willingness to pay, absence of exit-seeking) across a spectrum from locked consumer hardware to negotiated enterprise licensing; assess whether the reading's uniform victim classification tracks any observable difference in these populations' behavior or only tracks the presence/absence of the four freedoms as a formal matter.",
+      "impact": "If graduated harm is the better model, the extractiveness score authored here (uniform 0.81 across all proprietary software) overstates the harm to satisfied enterprise customers and understates the harm to trapped device owners; a more granular story-family (splitting locked-platform control from ordinary commercial licensing) might be the more accurate decomposition under the ε-invariance principle.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether categorical rejection of all proprietary software obscures real variation in coercion versus negotiated consent."
+    },
+    {
+      "id": "rights_holder_class_without_organized_claim",
+      "question": "Can a class (computer_users_as_rights_holders) meaningfully 'benefit' from a reading's vindication of their standing when the overwhelming majority of that class has not organized around, or even encountered, the claim being made on their behalf?",
+      "resolution_mechanism": "Track whether growth in free-software adoption, right-to-repair legislation, and public awareness campaigns correlates with increased self-identification of computer users as rights-holders (survey data, movement membership growth) versus the claim remaining confined to a small activist and developer population.",
+      "impact": "If the rights-holder class remains almost entirely unaware of or unmobilized around the claim, the 'beneficiary' designation is doing significant normative work that the structural data (trapped exit options, powerless power level) does not otherwise support — this is a tension internal to the reading worth flagging rather than resolving by fiat.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether an unmobilized, unaware class can coherently occupy the beneficiary role this reading assigns it."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_control_legitimacy__pragmatic_openness_reading",
+      "software_control_legitimacy__property_rights_reading",
+      "software_control_legitimacy__commons_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of four sibling readings of the software_control_legitimacy kernel, each authored as a separate ε-invariant constraint file per the ε-invariance principle. freedom_imperative_reading is the extraction-maximal reading (categorical rejection of proprietary control, universal victim set among proprietary users). property_rights_reading is expected to be near-inverse (vendors as legitimate beneficiaries, minimal or no victim set). pragmatic_openness_reading treats the question as methodology, likely producing low ε and a rope or absent-conflict classification. commons_reading is the negotiated middle, likely tangled_rope. All four link to each other bidirectionally to preserve the kernel-family structure for contamination/network analysis."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "four_freedoms_baseline",
+    "drift_state": {
+      "moment": "platform_lockdown_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "pragmatic_openness_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "property_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "commons_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "control_over_own_computing_is_fundamental_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "withholding_source_modification_rights_is_illegitimate_regardless_of_consent",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

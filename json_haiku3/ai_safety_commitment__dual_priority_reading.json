@@ -1,0 +1,369 @@
+{
+  "header": {
+    "constraint_id": "ai_safety_commitment__dual_priority_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "54729c18-a270-474d-aa2b-dca58470a9dd"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.51,
+    "resistance": 0.74,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dual-Priority AI Safety Commitment (Existential + Near-Term)",
+    "topic_domain": "technology_governance/risk_assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_safety_research_community",
+      "safety_governance_institutions"
+    ],
+    "victims": [
+      "populations_exposed_to_present_harms",
+      "future_human_civilization"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ai_safety_research_community",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Academic and independent research institutions that frame AI safety as a coordinated research problem spanning both existential-risk and near-term-harm domains. They set research agendas, allocate grant funding, define terminology and problem boundaries, and adjudicate which harms count as 'safety-relevant.' They benefit from the commitment by maintaining coherent institutional legitimacy and capturing resources directed toward 'AI safety' broadly."
+    },
+    {
+      "name": "existential_risk_researchers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Researchers focused on long-term, low-probability extinction scenarios from advanced AI systems. They benefit from the dual-priority framing because it legitimizes their research within a broader safety mandate, capturing institutional and philanthropic funding. They also incur costs: they must engage with competing research agendas, defend resource allocation against near-term harm researchers, and maintain coherence with a commitment to both branches."
+    },
+    {
+      "name": "near_term_harms_researchers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers focused on documented present-day harms: algorithmic bias, labor displacement, misinformation amplification, privacy violations. They benefit from the dual-priority frame because it brings their concerns into the safety mandate. They incur costs: their research must justify urgency against existential timescales, they share limited funding pools, and the commitment structure often treats near-term harms as derivative or subordinate."
+    },
+    {
+      "name": "populations_exposed_to_present_harms",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Communities experiencing documented harms now: workers in algorithmic management systems, people subject to discriminatory AI decisions, populations targeted by AI-amplified misinformation, marginalized groups bearing disproportionate harms from deployment. They pay through direct harm exposure and lack agency in how the dual-priority commitment allocates resources between their immediate needs and speculative future risks."
+    },
+    {
+      "name": "future_human_civilization",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "A non-agent entity representing humanity across future time horizons. Listed for narrative completeness as the population bearing existential risk. Its interests are declared through present institutions and researchers who claim to speak for long-term flourishing."
+    },
+    {
+      "name": "ai_development_companies",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Commercial AI developers operate within a dual-priority safety commitment they did not author and have limited voice in. They would argue that research resources should prioritize deployment-relevant safety (near-term) and feasible mitigation (not speculative long-term). Their exclusion from the commitment's agenda-setting means the constraint operates largely without their input on what constitutes 'safety' in their operational context."
+    },
+    {
+      "name": "funding_bodies_and_philanthropists",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Major funders (OpenPhil, US government agencies, tech company foundations) enforce the dual-priority commitment through grant-making. They benefit by positioning themselves as funding a comprehensive safety mandate; they enforce by requiring funded research to address both branches or justify neglect of either. They set the boundary of what counts as 'safety' through their allocation decisions."
+    },
+    {
+      "name": "policy_makers_and_regulators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Government agencies tasked with AI regulation and oversight. They benefit from the dual-priority frame because it legitimizes comprehensive regulatory action spanning both immediate harms (algorithmic accountability) and long-term risks (AI governance structures). They face tension between addressing documented harms and preparing for speculative futures with limited regulatory machinery."
+    },
+    {
+      "name": "affected_labor_communities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Workers displaced or harmed by AI deployment in labor contexts. They experience a present-day extraction (job loss, wage pressure, unsafe conditions) that the dual-priority commitment frames as a component of a broader safety mandate rather than a distinct harm requiring urgent redress. Their ability to mobilize is constrained by the dispersion of their harm across multiple sectors."
+    },
+    {
+      "name": "marginalized_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Communities bearing disproportionate harms from biased or discriminatory AI systems. They are identity-locked into the categories the systems target (race, gender, disability status, immigration status), making exit impossible. The dual-priority commitment treats their harms as safety-relevant but often secondary to existential-risk research, creating a coherence gap: their urgent, documented harm is subordinated to speculative future risk."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Unifies fragmented AI safety research (existential-risk and near-term-harms branches) under a single institutional mandate, enabling cross-disciplinary dialogue, shared funding streams, and integrated governance frameworks. Prevents the two research communities from becoming entirely separate institutions with no common language or legitimacy bridge.",
+    "transfer_function": "Moves research resources, institutional legitimacy, and policy-making authority from other domains (and from near-present interventions) into a unified 'AI safety' framework. The transfer flows upward to high-level research agendas and funding bodies; downward it distributes (unevenly) to both existential-risk and near-term-harms researchers, but in proportions that favor the more institutionalized existential-risk branch.",
+    "absent_voices": "Affected communities (workers, marginalized populations) have no seat in setting the dual-priority commitment; they would object that their present harms are treated as secondary and that the commitment's resource allocation favors speculative future risks over documented urgency. AI development companies are excluded from the safety research agenda, though they execute the systems that cause both categories of harm.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the dual-priority commitment evaporated overnight, the AI safety research community would fragment into two competing institutional ecosystems (existential-risk and near-term-harms tracks), with separate funding streams, journals, conferences, and regulatory pathways. Governance structures would shift: near-term harms would be reassigned to consumer protection, labor law, and anti-discrimination regimes (where enforcement currently lags); existential-risk work would either disappear (lacks mainstream legitimacy alone) or consolidate into specialized high-level institutions. The present coherence is enforced; removal would rearrange the landscape significantly.",
+    "founding_problem": "When AI systems began showing documented present-day harms (bias in hiring algorithms, discrimination in credit decisions, labor displacement) AND theoretical work identified long-term risks from advanced AI, the field faced a choice: treat them as separate problems or as branches of a unified 'AI safety' mandate. The dual-priority commitment was built to prevent institutional fission — to hold both in a single framework so neither dominates and both can claim legitimacy.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The safety research community and funding institutions attest the founding problem remains live: both harms exist, institutional integration remains necessary. Affected communities and near-term harm researchers counter that the founding problem has shifted: the real problem is now that the dual-priority commitment subordinates present harms to existential speculation. Regulatory bodies and policy makers (independent seats) attest the commitment helps them coherently address both near-term and long-term risks, but note that resource allocation remains skewed toward long-term concerns."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The dual-priority reading holds that AI safety requires addressing both existential risk (misaligned superintelligent systems) and near-term harms (algorithmic bias, labor displacement, misinformation) as non-competing priorities within a unified institutional framework. This reading was built to prevent institutional fission between two research communities with different timescales and audiences. The constraint operates as a tangled rope: it genuinely coordinates fragmented research, preventing complete institutional separation; it simultaneously extracts from affected present-harm communities by subordinating their urgent needs to speculative long-term risks, and from near-term researchers by requiring them to justify research within an existential-risk-dominant paradigm. The claim/metric gap is deliberate: the constraint is CLAIMED as rope (coordination without extraction) while metrics reflect substantial extraction (0.62) and suppression (0.71), with rising theater (0.48) suggesting the commitment's coordinative function is increasingly performative.",
+    "key_agents": [
+      "AI safety research community: agenda-setters and beneficiaries — maintain institutional coherence and capture funding",
+      "Existential-risk researchers: powerful beneficiaries but constrained by dual-priority — can operate independently but benefit from legitimacy",
+      "Near-term harms researchers: moderate, constrained — dependent on dual-priority framing for institutional recognition",
+      "Populations exposed to present harms: powerless payers — experience documented extraction without agency",
+      "Future human civilization: non-agent analytical entity through which existential risk is claimed",
+      "AI development companies: excluded from agenda-setting despite operating the harmful systems",
+      "Funding bodies and regulators: co-agenda-setters who enforce the dual-priority through allocation"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.62) because the commitment transfers resources and institutional legitimacy from other domains into AI safety, concentrating power in research institutions and funding bodies, and because it subordinates present-harm communities' urgent needs to long-term speculation. Suppression is substantial (0.71) because maintaining the dual-priority frame requires actively suppressing voices that would argue for resource reallocation toward present harms: near-term harm researchers cannot argue their case at full strength without threatening the unified mandate; affected communities have no formal voice in the research agenda. Theater is rising (0.25→0.48 over the interval, then plateauing) because the commitment increasingly performs unity while actual resource allocation diverges — funding bodies speak the language of dual priority while allocating disproportionately to existential-risk research, and both branches engage in rhetorical claims about integration that don't map to operational practice. Accessibility collapse (0.51) is moderate because alternative institutional arrangements exist (separate research tracks, siloed regulation) but require overcoming the invested coherence of the present system. Resistance (0.74) is high because affected communities, labor advocates, and some near-term harm researchers actively contest the priority structure, even if their resistance doesn't translate to institutional power.",
+    "perspectival_gap": "The existential-risk researchers and funding bodies should compute as experiencing a rope (genuine coordination enabling their research), while powerless affected communities should compute as trapped in a snare (subordinated harms, no exit, suppressed voice). The dual-priority research community should compute as beneficiaries experiencing moderate extraction (constrained by the commitment but advantaged by institutional legitimacy). The engine's per-seat classification from the structural data will reveal this divergence: high directionality (d near 1.0) for powerless affected communities; low directionality (d near 0.0) for existential-risk researchers and funders; moderate d for near-term harm researchers caught between benefit and constraint. This is the intended measurement: the claim asserts rope, the metrics describe tangled rope, and the per-seat computation reveals why different actors experience it so differently.",
+    "directionality_logic": "Existential-risk researchers: d near 0.2 (beneficiary end) — they benefit substantially from the dual-priority frame, have institutional power and mobile exit options, face minimal extraction beyond having to acknowledge near-term research. Near-term harm researchers: d near 0.5 (symmetric) — they benefit from institutional recognition but are constrained by the existential-risk-dominant paradigm and compete for limited funding; moderate extraction, moderate benefit. Affected communities (labor, marginalized populations): d near 0.85 (target end) — powerless, identity-locked or trapped in the harms the systems cause, no voice in research agenda, subordinated to speculative risks, high extraction. Funding bodies: d near 0.15 (beneficiary end) — they benefit from controlling a comprehensive safety mandate and capture resource flow, face minimal extraction. The structural asymmetry is the story's point: the constraint benefits those with power to set agendas and harms those with no voice in them.",
+    "mandatrophy_analysis": "The dual-priority commitment risks mandatrophy on the near-term-harms branch: the founding problem ('prevent institutional fission') was real in the early phase but has been substantially solved — the research community now coexists (if unequally) within a single institutional framework. The problem is whether the mandate has outlived its function. If the dual-priority frame is now simply a device for subordinating present-harm research to existential-risk research, the mandate should be classified as mandatrophy (a zombie commitment). The measurement series and commentary show theater rising (performative coordination without resource alignment), extraction plateauing (the subordination is stable, not intensifying), and resistance high (the arrangement is contested but stable). This suggests early mandatrophy: the unified framework is maintained for institutional coherence, not because it serves its founding function of preventing fission. The tangled-rope classification is defensible because genuine coordination still occurs (existential-risk and near-term research do interact, funding streams do blend), but the rising theater_ratio flags the hypothesis that extraction is becoming the primary function.",
+    "kernel_context": "This constraint instantiates the DUAL_PRIORITY reading of the AI_SAFETY_COMMITMENT kernel. The kernel is the core claim that AI safety is a unified research domain requiring attention to multiple timescales and harm categories. The dual-priority reading holds this unity as non-negotiable: both existential risk and near-term harms must be addressed as components of a single mandate. Sibling readings: (1) EXISTENTIAL_RISK reading — AI safety means existential-risk prevention; near-term harms are deployment-specific and should be solved through conventional regulation, not a unified 'safety' mandate. (2) NEAR_TERM_HARMS reading — AI safety means preventing documented present harms; existential speculation is a distraction that subordinates urgent needs. The dual-priority reading occupies the middle position, claiming both are necessary and non-competing. The structural challenge is maintaining this claim when resources are finite: the constraint's operation shows rising theater (performative commitment to both) and plateauing extraction (subordination of near-term harms is stable), suggesting the reading's coherence is increasingly maintained through institutional performance rather than resource alignment."
+  },
+  "omegas": [
+    {
+      "id": "resource_allocation_coherence",
+      "question": "Can a unified AI safety commitment genuinely allocate resources equitably between existential-risk and near-term-harms research, or is the commitment structurally biased toward long-term speculation?",
+      "resolution_mechanism": "Multi-year institutional audit of funding allocation across both branches, controlling for researcher power and institutional entrenchment. Track whether near-term harm research receives proportional resources relative to workforce displaced, discrimination incidents documented, or population affected.",
+      "impact": "If allocation is demonstrably biased toward existential risk despite equal harm metrics, the dual-priority reading becomes mandatrophy (zombie commitment) and reclassifies to snare (the 'dual priority' is rhetorical cover for existential-risk dominance). If allocation tracks harm metrics, the tangled-rope classification holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the dual-priority commitment can operationally support both branches or is structurally biased."
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is the suppression of near-term-harm researcher advocacy structural (institutional barriers to funding and publication) or internalized (researchers self-suppress to maintain institutional legitimacy)?",
+      "resolution_mechanism": "Post-separation trajectory: if near-term harm research flourishes under independent institutional support (separate funding stream, journals, conferences), suppression was internalized; if research stalls due to loss of legitimacy spillover from existential-risk institutions, suppression is structural.",
+      "impact": "Internalized suppression indicates identity-lock and higher effective extraction (targets carry the suppression with them even after exit). Structural suppression is higher in magnitude but allows clearer separation. If internalized, the constraint's effective extraction is worse than the authored 0.62 suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of near-term harm advocacy is structural or internalized."
+    },
+    {
+      "id": "mandate_obsolescence",
+      "question": "Has the dual-priority commitment's founding function (prevent institutional fission between existential-risk and near-term-harms research) been achieved to the point that the mandate is now obsolete, persisting only through institutional inertia?",
+      "resolution_mechanism": "Counterfactual: would existential-risk and near-term-harms research separate completely if the dual-priority commitment dissolved? If yes, mandate is live; if no, mandate is dead (mandatrophy).",
+      "impact": "If mandatrophy is confirmed, the constraint reclassifies from tangled-rope to piton (persists through institutional theater, not functional need). If mandate is live, tangled-rope holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the dual-priority commitment has outlived its founding function."
+    },
+    {
+      "id": "reading_foreclosure_test",
+      "question": "Is the dual-priority reading logically foreclosed by either sibling reading (existential-risk-only or near-term-harms-only), or do all three coexist as live positions in the field?",
+      "resolution_mechanism": "Institutional census: identify major research institutions, funding bodies, and regulatory agencies by their declared AI-safety position. Are there pure existential-risk-only institutions? Pure near-term-harms-only institutions? Institutions claiming dual priority? If all three types exist and are stable, the readings coexist. If one has been eliminated by institutional pressure or philosophical argument, note the foreclosure.",
+      "impact": "If readings coexist, the network edges should all be 'coexists_with'. If one reading forecloses another (e.g., if a philosophical argument convinced the field that existential risk necessarily dominates near-term concerns), the edge becomes 'forecloses' and the network structure changes to capture the argument's force.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the dual-priority reading forecloses, is foreclosed by, or coexists with its sibling readings."
+    },
+    {
+      "id": "kernel_referent_stability",
+      "question": "What is the kernel (the contested claim) stable referent for this reading? Is it 'the institutional arrangements governing AI safety research,' or 'the actual trajectory of risks from AI systems,' or 'the normative commitment of the safety field'?",
+      "resolution_mechanism": "Frame analysis: ask stakeholders (existential-risk researchers, near-term harm researchers, affected communities, funders, regulators) what they believe the dual-priority commitment is about. Are they answering the same question? If not, they inhabit different kernels and the reading is under-determined.",
+      "impact": "If the kernel is unstable (different stakeholders believe the commitment addresses different referents), the reading cannot be ε-invariant and should decompose into separate stories. If stable, the reading is coherent but may be extractive.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel referent is stable across stakeholder interpretations."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_safety_commitment__existential_risk_reading",
+      "ai_safety_commitment__near_term_harms_reading"
+    ],
+    "dual_formulation_note": "This constraint is the DUAL_PRIORITY reading of the AI_SAFETY_COMMITMENT kernel. Two sibling readings are authored separately: (1) EXISTENTIAL_RISK reading — claims existential-risk prevention is the core of AI safety, treats near-term harms as deployment-specific rather than safety-domain issues. (2) NEAR_TERM_HARMS reading — claims near-term harms are the core of AI safety, treats existential speculation as institutional distraction. The three readings decompose because their ε values diverge substantially: dual-priority reading authors ε=0.62 (high extraction from affected communities due to resource subordination); existential-risk reading authors lower ε for the existential-concern domain but higher for exclusion of near-term voices; near-term-harms reading authors high ε for present-harm subordination. Each reading has a different victim set and beneficiary structure. The network edges (both siblings are affected by this reading) capture the structural competition for institutional resources and legitimacy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.68
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "existential_risk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "near_term_harms_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dual_priority_non_competing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "institutional_unity_prerequisite",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "unified_ai_safety_mandate",
+    "drift_state": {
+      "moment": "contemporary_resource_scarcity_period",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "ai_safety_research_community",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

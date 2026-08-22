@@ -1,0 +1,304 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_scope__individual_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "8766ebb1-59f0-4b41-9c7e-477fc019e79b"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment Individual Right Reading",
+    "topic_domain": "constitutional_law/political_theory/rights_jurisprudence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "individual_citizens",
+      "firearms_manufacturers",
+      "gun_ownership_advocates"
+    ],
+    "victims": [
+      "public_health_constituencies",
+      "gun_violence_communities",
+      "state_regulatory_authority"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "well_regulated_militia_clause_scope",
+      "question": "Does 'well regulated Militia' function as a prefatory clause limiting the operative clause to militia-related purposes, or is it merely historical context leaving the operative right unqualified?",
+      "resolution_mechanism": "Originalist textual analysis combined with founding-era state militia documents and contemporary constitutional scholarship across reading traditions. The foundational disagreement between readings hinges on this interpretive choice.",
+      "impact": "Individual-right reading assigns the clause minimal limiting force; collective-right reading assigns it maximal scope-limiting effect; civic-right reading treats it as conditioning clause. This single interpretive choice produces different ε values across readings, different beneficiary/victim structures, and different constraint classifications.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Interpretive scope of the militia prefatory clause — the core structural disagreement between the three readings of this kernel."
+    },
+    {
+      "id": "historical_consensus_on_founding_intent",
+      "question": "Did the Framers intend to protect an individual right to firearm ownership for self-defense, or a state's right to maintain militias, or a conditioned right tied to civic militia participation?",
+      "resolution_mechanism": "Founding-era documents (ratification debates, state constitutions, Framers' papers), militia membership and training patterns 1787-1791, and legal historians' forensic analysis. The three readings advance conflicting corroborations from the same historical record.",
+      "impact": "High confidence in a founding intent claim would stabilize the kernel within one reading's reference frame and possibly foreclose others; ambiguity or contested evidence sustains coexistence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What did the Framers intend to protect — the historical question that grounds all three readings."
+    },
+    {
+      "id": "modern_firearm_lethality_and_historical_context",
+      "question": "Does the availability of weapons far more lethal than those extant in 1791 require the individual-right reading to be bounded by findings about public safety necessity in a way inconsistent with its originalist framing?",
+      "resolution_mechanism": "Constitutional doctrine on scope-limiting factors (intermediate scrutiny, regulatory tailoring, public health exceptions in other contexts) combined with empirical data on firearm lethality expansion and accident/suicide/homicide rates.",
+      "impact": "If modern weapons require substantial regulatory boundaries even under individual-right framing, the reading's practical extractiveness (scope narrowing) increases; if the reading's originalist logic forbids such boundaries, the ε remains high but faces pressure from competing public-safety readings.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether modern weapon lethality triggers re-reading of the historical right's scope."
+    },
+    {
+      "id": "identity_lock_gun_owners_reading_survival",
+      "question": "For individuals whose political, professional, or personal identity is constituted through gun ownership and the individual-right reading, how much would abandoning this reading destabilize their self-concept?",
+      "resolution_mechanism": "Ethnographic documentation of gun-owner communities, identity fusion research (how gun rights tie to militia self-concept, frontier narrative, rural independence, personal security identity), and comparison to exit-option behavior if this reading were reversed.",
+      "impact": "High identity lock would make the reading's persistence path inertial rather than epistemic — the reading would persist because agents have fused their identity to it, not because its corroboration is strongest. This is a suppression mechanism (internalized, identity-based) that the low suppression score (0.42) does not fully capture.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Identity fusion with the individual-right reading — suppression mechanism not fully captured by the structural suppression metric."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The individual-right reading of the Second Amendment claims that the operative clause ('the right of the people to keep and bear Arms, shall not be infringed') protects an individual's right to firearm ownership for any lawful purpose — self-defense, sport, resistance to tyranny — independent of militia service. This reading frames all individuals as beneficiaries of the right and treats state regulatory authority as a victim (constrained by strict scrutiny). The reading rose to judicial salience with District of Columbia v. Heller (2008) and has hardened as a constitutional matter since. This story captures the individual-right reading AS IT STANDS, assessed by its own interpretive lights: the standing arrangement it describes is the constitutional protection of unqualified individual gun ownership rights, and extraction is measured relative to what regulatory authorities and public-health constituencies bear as a cost of that protection. The endorsed alternative (how a different reading would structure things) is NOT the referent of ε — per DP-001 (ε-invariance), ε measures the reading's own referent, not its alternative.",
+    "kernel_context": "This constraint is one reading of the Second Amendment scope kernel. The kernel is the text 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.' Three readings compete: (1) individual_right_reading (this story) — the operative clause protects individual ownership unconnected to militia; (2) collective_right_reading (sibling) — the amendment protects state authority to maintain militias, not individual rights; (3) civic_right_reading (sibling) — the amendment protects individual rights CONDITIONED on civic militia participation. The readings share the kernel text but diverge on the scope and conditionality of the protected right, producing different beneficiary/victim structures and different constraint types. This story generates only the individual-right reading in pure form.",
+    "key_agents": [
+      "Individual citizens (beneficiaries — possess unqualified right to own firearms)",
+      "Firearms manufacturers and dealers (beneficiaries — benefit from broad market access and minimal regulatory constraint)",
+      "Gun ownership advocates and civil rights organizations (beneficiaries — defend the reading and the right it protects)",
+      "Public health constituencies and gun violence communities (victims — bear the aggregate cost of widespread firearm access via injury/death rates, but constrained by the reading's protection)",
+      "State regulatory authorities (victims — constrained by strict scrutiny from regulating ammunition, licensing, storage, or narrow categories of firearm sales)",
+      "Collective-right and civic-right reading proponents (excluded from this story's consensus — their reading would reframe the entire structure)"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.68) because the individual-right reading PROTECTS broad firearm access, generating a large asymmetry: beneficiaries (all gun owners, manufacturers) collect the benefit of unrestricted rights, while victims (regulatory authorities, public-health constituencies) bear costs they cannot fully mitigate. The reading itself does NOT extract in the sense of a snare — it does not present a cover story for pure coercion. But it is tangled because it BOTH (1) protects genuine individual liberty (a coordination function: establishing that ownership is a right, not a privilege the state revokes) AND (2) blocks regulatory alternatives that would reduce aggregate harms (an asymmetric extraction). Suppression is lower (0.42) than extraction because the reading's persistence does not depend primarily on coercion or hiding alternatives — it depends on a coherent interpretive case grounded in text, history, and judicial authority. However, suppression is not negligible because the reading's survival also depends on limiting public visibility of gun-violence data and on maintaining identity fusion with gun owners (internalized suppression, per the identity_lock omega). Theater ratio is moderate (0.28) — there is real constitutional discourse and textual exegesis, but an increasing share of institutional activity is defensive (resisting reinterpretation) rather than affirmative (advancing new interpretation).",
+    "directionality_logic": "Individual citizens and manufacturers are beneficiaries (d near 0.0): they collect the protected right with minimal constraint. State regulatory authorities are victims (d near 1.0): the reading's strict scrutiny standard blocks most regulatory alternatives and transfers discretion to courts (away from legislatures). Public-health constituencies are also victims but with higher exit options (d ~0.7): they cannot exit the jurisdictions the reading governs, but they can organize politically for constitutional amendment or can advocate in the sibling readings. The beneficiary/victim split is driven entirely by the reading's assignment of the protected right to individuals and its constraint on state authority — change the reading, and the directionalities reverse.",
+    "perspectival_gap": "The structural divergence between the beneficiary and victim seats should be stark. From the beneficiary seat (gun owner, manufacturer), the reading is a protection of fundamental liberty — no extraction narrative applies; the owner simply possesses a right. From the regulatory authority seat (victim), the reading is a constraint on their power to protect public health, and they bear the cost of that constraint. From the gun-violence community seat, the reading extracts lives and health. The engine should compute these as sharply divergent types when populated with the same structural facts. The perspectival gap is not a failure — it is the design signal: a reading that is liberty-protecting from one seat and extractive from another reveals the reading's asymmetric structure.",
+    "mandatrophy_analysis": "The founding problem (what the right was meant to protect) was stated as the need for a free people to resist tyranny and defend themselves against government and private harm. That problem is LIVE in the eyes of the reading's beneficiaries (gun owners cite ongoing tyranny risk and crime) but is CONTESTED or DEAD in the eyes of victims and alternative readings (modern democracies have police, courts, and are not tyrannies). The reading itself does not resolve mandatrophy — it depends on whether you believe the founding problem is still the live threat its proponents claim. This is a genuine kernel-level disagreement, not a constraint that has outlived its function. The reading persists because it has institutional authority (Supreme Court precedent) and identity lock, not because it is theatrically maintained or zombified. Classification as tangled_rope (rather than piton) is appropriate: the reading genuinely coordinates a protection (individual liberty in arms) AND extracts asymmetrically (from regulatory capacity and public-health authorities)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_scope__collective_right_reading",
+      "second_amendment_scope__civic_right_reading"
+    ],
+    "dual_formulation_note": "The Second Amendment scope kernel admits three structurally distinct readings: individual_right_reading (this story, protects unqualified individual ownership), collective_right_reading (protects state militia authority), and civic_right_reading (protects individual rights conditioned on militia participation). Each reading assigns different ε values, different beneficiary/victim structures, and produces different constraint types. They are not views on one constraint; they are three constraints arising from one contested text. All three must be authored separately and linked via network.affects_constraints to form the kernel family. This reading (individual_right) influences the others by establishing a constitutional precedent that competing readings must address."
+  },
+  "stakeholders": [
+    {
+      "name": "individual_citizens",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Possess the protected right to own firearms for lawful purposes. They benefit from the reading's broad scope and minimal regulatory constraint. They cannot exit the jurisdiction to escape the reading (though they can advocate for alternative readings). Their power is diffuse as individuals but organized through advocacy groups."
+    },
+    {
+      "name": "firearms_manufacturers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Operate under the protection of the individual-right reading, which shields them from ammunition bans, licensing mandates, and sales restrictions that would reduce their market. They benefit directly from broad consumer access. They have arbitrage options: can relocate to favorable jurisdictions or litigate unfavorable regulations."
+    },
+    {
+      "name": "gun_ownership_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Defend and promote the individual-right reading through litigation, legislation, and advocacy. They benefit from the reading's authority and expand its scope through case law. They have substantial exit options: they can shift to alternative strategies (state legislation, constitutional amendment) if the reading weakens."
+    },
+    {
+      "name": "state_regulatory_authority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Is constrained by the individual-right reading from enacting ammunition restrictions, universal licensing, storage mandates, or narrow firearm bans. The reading's strict scrutiny standard requires them to justify regulations with compelling state interest — a high bar. They bear the cost of reduced regulatory capacity in public health matters."
+    },
+    {
+      "name": "public_health_constituencies",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the aggregate cost of the reading's broad protection: higher rates of gun violence, suicide, accidents, and homicide than in jurisdictions with more restrictive readings. They cannot exit the jurisdictions the reading governs. They can advocate for alternative readings or for narrowing exceptions (domestic violence, etc.) within the reading's frame."
+    },
+    {
+      "name": "gun_violence_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Face the direct cost of the reading's protection: injury, death, community destabilization from firearm violence. They have minimal exit options and minimal power to influence the reading. They are diffuse and unorganized relative to gun owners and manufacturers."
+    },
+    {
+      "name": "collective_right_reading_proponents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Would argue that the Second Amendment protects state militia authority, not individual ownership rights, and that the reading is a modern innovation inconsistent with founding-era intent. They are structurally excluded from the consensus this reading establishes — their interpretation is treated as legally settled against by the current doctrine."
+    },
+    {
+      "name": "civic_right_reading_proponents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Would argue that the Second Amendment protects individual rights CONDITIONED on civic militia participation or training, splitting the difference between collective and individual readings. They are excluded from the individual-right consensus and would advance a reading that constrains the right's scope more than the individual reading but less than the collective reading."
+    },
+    {
+      "name": "originalist_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze founding-era intent and constitutional text. They produce the corroborating analysis the individual-right reading depends on. They can shift findings if new historical evidence emerges, and they compete with other scholarly traditions (living constitutionalism, structural, democratic constitutionalism) on interpretive authority."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes that firearm ownership is an individual right, not a privilege the state may revoke, and thus coordinates expectation that citizens may possess firearms for lawful purposes (self-defense, sport, political expression) without governmental preapproval.",
+    "transfer_function": "Transfers regulatory discretion from legislative bodies (which might impose licensing, ammunition controls, or narrow firearm bans) to courts applying strict scrutiny, and transfers political capital from public-health advocates to gun-ownership advocates and manufacturers. Transfers the aggregate cost of unrestricted firearm access to public-health constituencies and gun-violence communities.",
+    "absent_voices": "Collective-right and civic-right reading proponents are excluded — they would argue the reading misconstrues the militia clause and that the right should be conditioned or collective. Gun-violence communities (families of victims, public-health researchers) are structurally present but have minimal voice in the reading's authority structure (courts, originalist scholars, gun-rights organizations).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the individual-right reading disappeared overnight — if Supreme Court doctrine or constitutional amendment reversed it — the entire structure of gun regulation would reorganize: manufacturers would face new market constraints, states could impose licensing and ammunition controls, gun owners would lose their unqualified constitutional shield, and public-health constituencies would gain regulatory options. The political and legal landscape would shift materially.",
+    "founding_problem": "The Framers sought to protect the right of citizens to possess firearms for self-defense against private harms and to resist governmental tyranny — to preserve the means for a free people to defend liberty.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist scholars (Heller-era scholarship by Randy Barnett, Eugene Volokh, others) corroborate the founding-intent claim by citing founding-era state constitutions and militia documents. Gun-ownership advocates cite contemporary crime rates and tyranny risks as evidence the problem remains live. Gun-violence public-health researchers and alternative-reading proponents argue that the founding problem (tyranny by centralized government, absence of professional police) is DEAD in modern democracies and that the reading persists due to institutional inertia and identity lock, not because the founding problem is live. No consensus corroboration outside the benefiting parties exists."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unqualified_individual_right_to_arms",
+    "drift_state": {
+      "moment": "contemporary_public_health_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "collective_right_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "civic_right_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "operative_clause_unqualified_by_militia",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "strict_scrutiny_bars_most_regulations",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "firearms_manufacturers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

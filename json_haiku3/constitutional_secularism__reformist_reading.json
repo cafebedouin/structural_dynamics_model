@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "constitutional_secularism__reformist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_constitutional_secularism__reformist_reading",
+    "measurement_id_prefix": "const_sec_reform",
+    "story_uid": "feaa0ca8-256b-4b97-a2d1-9f9dec1d7753"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.76,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Affirmative Duty to Eliminate Oppressive Religious Practices (Reformist Reading)",
+    "topic_domain": "constitutional_law/political_theory/religious_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "scheduled_castes",
+      "women_in_oppressive_sects",
+      "religious_minorities_in_majority_dominated_communities"
+    ],
+    "victims": [
+      "religious_conservatives",
+      "faith_communities_resisting_state_intervention"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "reformist_vs_neutral_kernel_reading",
+      "question": "Is the kernel's legitimacy grounded in state affirmative obligation to reform oppressive practices (reformist reading), or in state neutrality and equal distance from all religions (strict neutrality reading)?",
+      "resolution_mechanism": "Constitutional text interpretation by competent authority; legislative history; case law trajectory tracking whether courts treat religious freedom as absolute or as subject to compelling state interest in protecting weaker sections.",
+      "impact": "If reformist reading is adopted, the constraint computes as tangled_rope with affirmative beneficiary (scheduled castes, women). If neutrality reading prevails, the constraint reframes to snare (pure extraction masquerading as impartial regulation) or to mountain (equal-distance principle as natural constitutional law).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the constitutional kernel mandates state intervention in oppressive religious practices or mandates state neutrality."
+    },
+    {
+      "id": "identity_locked_exit_for_exit_costs",
+      "question": "For religious conservatives whose practices the state targets for elimination, is their high exit cost (resistance to constraint) due to structural economic/legal barriers (trapped) or to identity-fusion with the practice itself (identity_locked)?",
+      "resolution_mechanism": "Post-intervention trajectory: if suppression of the practice persists after legal barriers are removed and alternative income/community pathways are opened, the exit cost is internalized (identity_locked); if practice revives once legal barriers relax, the exit cost is structural (trapped).",
+      "impact": "If identity_locked, the constraint's effective suppression is higher than the authored scalar suggests — the victim carries the suppression internalized. If trapped, the constraint is purely structural coercion and may be more easily reversible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether victim suppression is structural or internalized identity-fusion."
+    },
+    {
+      "id": "marginalized_section_liberation_vs_autonomy_extraction",
+      "question": "Does the constraint genuinely liberate marginalized sections within communities (coordination + extraction bundled), or does it extract autonomy from religious groups under the cover of protecting weaker members?",
+      "resolution_mechanism": "Counterfactual comparative: measure post-intervention agency and dignity trajectories of the protected group versus the intervened-upon group; track whether protected-group gains persist and whether they required continued suppression of intervened-upon group.",
+      "impact": "If liberation is genuine and persists, the constraint is tangled_rope (coordination + extraction structurally coupled). If gains to protected group depend on ongoing suppression of interveners, the structure is snare (extraction masquerading as protection). If gains reverse after intervention pressure eases, the extraction was illusory.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's beneficiary gains are real or dependent on continued victim suppression."
+    },
+    {
+      "id": "state_capacity_vs_legitimacy_overreach",
+      "question": "Does the state's affirmative duty to eliminate practices extend only to practices causing objective documented harm, or does it extend to practices that reformist ideology deems backward regardless of harm measurement?",
+      "resolution_mechanism": "Administrative practice tracking: examine what fraction of state interventions target documented harm to identifiable individuals versus target practices deemed oppressive by reformist ideology but with no clear harm allegant; measure variance across jurisdictions with different reformist strictness.",
+      "impact": "If scope is narrow (documented harm), the constraint is more defensible as coordination (protecting the harmed). If scope is broad (ideology-driven), the constraint collapses toward snare (extraction of autonomy under humanitarian cover). This feeds the mandatrophy analysis: did the state duty mission creep beyond its founding problem?",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether affirmative duty scope is bounded by documented harm or expanded by reformist ideology."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "This constraint embodies a reformist reading of constitutional secularism: the state has an affirmative constitutional duty to eliminate religious practices that oppress marginalized groups—particularly scheduled castes (in the Indian constitutional context) and women within oppressive sects—even when doing so requires substantial interference with religious autonomy and the beliefs of religious conservatives. The constraint is read as liberatory when the beneficiary cohort (scheduled castes, women trapped in oppressive practices) is emphasized, and as coercive when the victim cohort (faith communities resisting state redefinition of their practices) is emphasized. This story instantiates the reformist reading; sibling readings (strict neutrality and principled intervention) would author different ε values and beneficiary/victim structures from the same constitutional kernel.",
+    "key_agents": [
+      "Scheduled castes and oppressed subgroups: primary beneficiaries; state intervention dissolves group-internal hierarchies and oppressive practices.",
+      "Women in oppressive religious sects: secondary beneficiary cohort; intervention protects from harm enforced through religious authority.",
+      "Religious conservatives (across majority and minority communities): primary victims; state suppresses their religious autonomy in the name of protecting weaker sections.",
+      "State constitutional authority: agenda setter; defines which practices count as oppressive and enforces elimination.",
+      "Principled-intervention advocates: secondary beneficiaries; reformist reading provides legitimacy for paternalistic state action.",
+      "Strict-neutrality advocates: excluded voice; would argue the constraint violates constitutional equal distance and converts state into arbiter of religious correctness."
+    ],
+    "logic_rationale": "Extractiveness is high and rising (0.52→0.78 over interval) because the constraint's operation depends on state power to unilaterally declare practices oppressive and to enforce elimination regardless of the targeted community's assent. The constraint begins at moderate extraction (0.52) when limited to practices with unambiguous harm evidence (sati, child marriage), but rises sharply as scope expands to practices deemed oppressive by reformist ideology (dietary restrictions, gender roles, inheritance customs) where harm is contested or ideological. Theater ratio rises from 0.18 to 0.42, indicating growing divergence between the stated purpose (protecting weaker sections) and actual enforcement (controlling religious practice content). Suppression rises because enforcement requires active resistance to religious conservatives' countervailing claims to autonomy. The rise in suppression requirement matches the rise in extractiveness: as the constraint expands beyond narrow harm-based intervention, more active suppression is needed to hold it in place because religious communities' resistance intensifies. One shared time grid: every metric is authored at every time point (0, 5, 10, 15, 20, 25).",
+    "perspectival_gap": "The beneficiary seat (scheduled castes, women) experiences this as liberation—removal of internal group hierarchy, access to exit, dignity restoration. The victim seat (religious conservatives) experiences this as coercive state intrusion into internal community governance, delegitimization of their practices, and suppression of their countervailing autonomy claims. The state agenda-setter seat experiences this as fulfilling a constitutional mandate to protect weaker sections. The divergence arises because the constraint simultaneously coordinates protection (for the beneficiary) and extracts autonomy (from the victim), and which effect dominates depends entirely on where you sit. The engine should compute markedly different types for these three seats: the state may see coordination/tangled_rope; the beneficiary may see snare (autonomy extraction from the victim, which gives them breathing room); the victim sees pure snare. The reformation clause means the beneficiaries genuinely benefit, which blocks pure-snare certification from the beneficiary seat—making the per-seat divergence a primary signal of the constraint's structure.",
+    "directionality_logic": "Scheduled castes and women have low d (toward beneficiary): state intervention removes structural oppression, giving them exit options and dignity they lacked. The constraint subsidizes their position (negative effective extraction). Religious conservatives have high d (toward target): the state suppresses their autonomy claims and imposes redefinition of their practices under the threat of legal sanction. The state agent-setter has middling d, closer to beneficiary (0.25–0.35): it collects political legitimacy and institutional power from being the arbiter of correct practice, but also bears enforcement costs and legitimacy blowback. Strict-neutrality advocates, excluded from the conversation, would occupy high d (toward target) because the constraint violates their framework's core principle. No directionality overrides are needed; the structural derivation from beneficiary/victim + exit options is coherent.",
+    "mandatrophy_analysis": "The reformist reading explicitly declares that the state's founding problem was protection of weaker sections from internal group oppression—a genuinely live problem with documented harm. The constraint was built to solve that coordination problem (protect the harmed from within-group hierarchy) while simultaneously extracting autonomy from the intervening group. The mandatrophy risk is mission creep: does the affirmative duty scope remain bounded by documented harm to identifiable weaker sections, or does it expand to cover practices merely deemed backward by reformist ideology? The measurement series shows base_extractiveness rising faster than the harm-evidence base expands, suggesting the constraint is drifting toward ideology-driven suppression. Theater ratio rising (0.18→0.42) indicates performative maintenance is growing—state interventions increasingly target symbolic oppression (dress, dietary practice, inheritance form) rather than documented harm (violence, coerced participation). If this drift continues to the point where the constraint persists primarily to maintain reformist ideology's authority rather than to protect documented harm, mandatrophy triggers: the founding coordination problem is gone, but the extraction persists. The constraint would then reclassify from tangled_rope to piton (degraded function, theatrical maintenance) from the state's seat, though from the beneficiary's seat it might remain tangled_rope if real protections persist.",
+    "kernel_context": "This constraint instantiates the REFORMIST READING of the constitutional_secularism kernel. The kernel is the contested commitment grounding state legitimacy in religious affairs: what does constitutional secularism require? The reformist reading holds that secularism mandates state affirmative duty to eliminate oppressive practices within religious communities, prioritizing protection of weaker sections over religious autonomy. The strict_neutrality reading holds that secularism mandates state equal distance and non-interference. The principled_intervention reading holds a middle position: state may intervene when practices harm weaker sections, but lacks a blanket affirmative duty. The reformist reading is the most extractive of the three—it expands state authority deepest into community practice and suppresses religious conservatives' autonomy claims most aggressively. This story generates ONLY the reformist reading as a clean constraint; the other readings are separate story files linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_secularism__strict_neutrality_reading",
+      "constitutional_secularism__principled_intervention_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the constitutional_secularism kernel. Reformist reading (this story) is the most extractive; it mandates state duty to eliminate oppressive practices. Strict neutrality reading treats secularism as equal distance (less extractive from religious conservatives, but also less protective of weaker sections). Principled intervention reading allows case-by-case state intervention (intermediate position). All three readings share the same constitutional text (the kernel) but decompose differently into constraint structures. The kernel itself is distributed (no single codification authoritatively resolves which reading is correct) and authority_grounding is distributed (competing parties claim legitimacy from the text). Each reading is generated as a separate story file with its own ε, beneficiary/victim structure, and computed type; the readings are linked here to show their mutual influence."
+  },
+  "stakeholders": [
+    {
+      "name": "scheduled_castes",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Historically oppressed by within-community hierarchy enforced through religious authority and practice. The constraint opens exit from internal oppression: women can pursue education, property ownership, occupational choice. The state intervention removes barriers that were previously enforced by religious community elites. They lack exit options within the community (identity-locked or physically trapped by kinship ties), making state intervention the only path to autonomy. The constraint does not dissolve the community—it restructures power within it."
+    },
+    {
+      "name": "women_in_oppressive_sects",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Trapped in sects or communities that restrict their autonomy through religious authority: enforced veiling, child marriage, restricted property rights, forced religious observance. The constraint provides legal backing for exit and for challenging community enforcement. They are identity-locked (leaving means losing family, community, social identity), making state sanction for exit-taking valuable. The constraint externalizes enforcement against within-group oppression."
+    },
+    {
+      "name": "religious_minorities_in_majority_dominated_communities",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "In some cases, minority-community members who dissent from majority-enforced practices (e.g., lower-caste women in a majority-dominated caste-based community) gain protection from state intervention. However, the same constraint can also be weaponized against minority practices, making them simultaneously beneficiaries (when intervention protects their dissenting members) and payers (when intervention targets their practices as backward). Ambiguous position."
+    },
+    {
+      "name": "religious_conservatives",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Faith communities and religious elites whose practices the state targets for elimination or modification. They experience the constraint as suppression of their autonomy claims, delegitimization of their traditions, and enforced reshaping of community life according to reformist ideology. Exit options are constrained: leaving the community means losing identity and social position, but staying means accepting state-enforced practice modification. They mount legal and political resistance to defend their autonomy against state redefinition."
+    },
+    {
+      "name": "state_constitutional_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets the boundaries of acceptable religious practice and enforces them through law and administrative sanction. Defines which practices count as oppressive and which merit protection. Collects legitimacy from its role as protector of the marginalized and arbiter of constitutional values. Bears enforcement costs and legitimacy challenges from religious conservatives and strict-neutrality advocates. Can modify the constraint's scope and definition unilaterally through judicial interpretation or legislative action."
+    },
+    {
+      "name": "strict_neutrality_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Constitutional scholars, judges, and rights advocates who argue the constraint violates constitutional secularism's core principle of equal distance from all religions. They would contend the state cannot be arbiter of which practices are oppressive without favoring some religious visions over others. Excluded from the decision-making process about which practices count as oppressive, but present in constitutional litigation and scholarly debate. Their position would yield a different constraint (strict_neutrality_reading) if adopted."
+    },
+    {
+      "name": "principled_intervention_advocates",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reformist scholars, judges, and social-reform advocates who endorse the state's power to intervene in religious affairs when weaker sections are demonstrably harmed. Gain legitimacy and institutional influence from the constraint's operation. Distinguished from the reformist reading's core beneficiaries (scheduled castes, women) in that they hold this position ideologically rather than from within-group oppression. They are co-authors of the constraint's legitimacy framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Protection of structurally oppressed subgroups (scheduled castes, women) within communities that enforce oppression through religious authority and practice. The constraint solves the collective-action problem of internal hierarchy: without state intervention, within-group elites can enforce oppression on weaker members who lack external exit options. The state provides an enforcement mechanism external to the community that allows weaker members to contest internal authority.",
+    "transfer_function": "Transfers religious autonomy from faith communities and religious conservatives to the state and to the protected subgroups. State gains authority to define acceptable practice; protected subgroups gain exit options and dignity. Religious conservatives lose autonomy to maintain unchanged practice and to enforce community norms on dissenting members.",
+    "absent_voices": "Strict-neutrality advocates are structurally excluded: they would argue that the constraint violates constitutional equal distance and converts the state from neutral arbiter into advocate for reformist ideology. Also excluded: religious communities' own accounts of what counts as harm and what practices are central to identity (the state unilaterally defines oppression rather than negotiating it). Excluded: religious conservatives' claims that some 'oppressive practices' are genuinely central to faith and cannot be modified without destroying the tradition.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint disappeared, scheduled castes and women currently protected by it would lose legal backing for exit and challenge. Internal community hierarchies would re-harden as state enforcement withdrew. Communities would reassert control over dissenting members and oppressive practices would likely intensify absent external protection. The entire landscape of community-internal power distribution would shift as state-backed rights protections evaporated.",
+    "founding_problem": "Religious communities in hierarchical societies enforce oppression on internal weaker sections—scheduled castes and women—through religious authority and practice. Caste hierarchies, child marriage, denial of property rights, forced religious observance, and seclusion are enforced as religious requirements. Weaker members lack exit options because community membership is identity-constitutive and economically essential. Without external enforcement, internal authority cannot be challenged.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Scheduled castes, women's-rights advocates, and human-rights organizations outside the benefiting communities attest the problem is live: documented practices continue and cause ongoing harm. Religious conservative and strict-neutrality advocates contest whether these practices should be classified as oppressive or whether they are central to faith identity; this contestation does not change the fact that harm occurs under current community enforcement, only whether the state should intervene. Administrative data showing continued cases of child marriage, sati practices (in some regions historically), caste-based discrimination, and forced religious observance corroborate the founding problem's persistence."
+  },
+  "gain_flow": "state_constitutional_authority",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "strict_neutrality_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "principled_intervention_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_affirmative_duty_to_eliminate_oppressive_practices",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "human_rights_supremacy_over_religious_autonomy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "reformist_ideology_as_constitutional_mandate",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "constitutional_secularism_as_emancipatory_project",
+    "drift_state": {
+      "moment": "contemporary_mission_creep_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

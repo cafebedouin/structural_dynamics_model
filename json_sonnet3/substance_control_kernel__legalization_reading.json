@@ -1,0 +1,323 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "34453259-334e-4407-8550-b05b8268519d"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.35,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulated Legal Substance Market with Externality Taxation",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "licensed_cannabis_alcohol_industry",
+      "state_tax_authorities",
+      "adult_recreational_users"
+    ],
+    "victims": [
+      "dui_crash_victims",
+      "secondhand_exposure_bystanders",
+      "unlicensed_market_participants",
+      "low_income_heavy_users"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "adult_recreational_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Purchase substances through licensed retail without criminal liability for possession or use. Pay embedded excise taxes at point of sale. Their exit from state scrutiny is real: no arrest risk, no criminal record, ability to move between jurisdictions with different regimes."
+    },
+    {
+      "name": "licensed_cannabis_alcohol_industry",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Operates licensed production, distribution, and retail under the legalization regime, lobbying for favorable tax rates and against re-criminalization. Captures the consumer surplus that would otherwise flow to illicit sellers or remain foregone under prohibition. Shapes regulatory design through trade associations."
+    },
+    {
+      "name": "state_tax_authorities",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Collects excise and sales tax revenue from the legal market and licensing fees from operators; sets tax rates and enforcement priorities. Has a direct fiscal interest in market volume, creating tension with public health goals that would reduce consumption."
+    },
+    {
+      "name": "dui_crash_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the externality cost of impaired driving directly: injury, death, or property loss caused by another party's substance use. They did not consent to the risk and have no exit from sharing roads with users; their only recourse is post-hoc civil or criminal liability against the impaired party, which does not undo the harm."
+    },
+    {
+      "name": "secondhand_exposure_bystanders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Neighbors, coworkers, children, and shared-space occupants exposed to secondhand smoke or public intoxication effects they did not choose. Zoning and public-use restrictions offer partial mitigation but exposure in mixed housing or public spaces persists; exit means relocating, which is not available to renters or the economically constrained."
+    },
+    {
+      "name": "unlicensed_market_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Small-scale growers, sellers, and users who cannot afford licensing costs, lack capital to enter the regulated market, or operate in jurisdictions with partial legalization. They remain criminally exposed even as the substance itself is legal for licensed actors elsewhere, and the legal market's existence undercuts sympathy for their continued prosecution."
+    },
+    {
+      "name": "low_income_heavy_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Users with dependency patterns who bear a disproportionate share of excise taxes (regressive relative to income) and face limited access to treatment despite the legal market's tax revenue nominally funding public health programs. Their consumption is treated as a revenue stream rather than a condition requiring intervention."
+    },
+    {
+      "name": "public_health_agencies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Track morbidity, addiction rates, and externality costs (emergency response, treatment demand) generated by the legal market, and advocate for tax-funded mitigation programs. Can document whether legalization revenue actually offsets the harms it generates."
+    },
+    {
+      "name": "law_enforcement_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Enforce the narrowed remaining prohibitions: DUI statutes, unlicensed sales, public-use violations, and sales to minors. Their enforcement burden shifts from possession/use policing toward externality policing, but does not disappear."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a licensed, taxed, quality-controlled market that channels substance production and sale away from unregulated actors, while concentrating state intervention on externalities (impaired driving, exposure to non-consenting third parties, underage sales) rather than on the underlying use itself.",
+    "transfer_function": "Moves consumer spending from illicit sellers to licensed industry and state tax authorities; moves the residual externality costs (crashes, exposure, dependency-related public health burden) onto third parties and heavy users who receive no offsetting share of the tax revenue proportional to the harm they bear.",
+    "absent_voices": "DUI crash victims and secondhand exposure bystanders are rarely organized into the regulatory conversation that sets tax rates and public-use rules; their interests are represented, if at all, by public health agencies and law enforcement rather than by themselves directly. Unlicensed market participants, particularly in partial-legalization jurisdictions, have no voice in a policy debate that treats the legal/illegal boundary as settled.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legalization regime disappeared overnight, the licensed industry would lose its legal basis and revenue, the state would lose a substantial tax stream, users would face renewed criminal exposure, and production/distribution would likely revert toward unregulated or black-market channels with less quality control and no externality-tax funding for mitigation — a substantial rearrangement, not a return to a natural baseline.",
+    "founding_problem": "Prohibition-era criminalization of substance use generated mass incarceration, black-market violence, adulterated/unsafe product, and no revenue capture for the state, while failing to reduce use; the legalization reading was built to redirect state intervention toward actual third-party harms and to convert an underground economy into a taxed, regulated one.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health agencies and independent economists outside the licensed industry corroborate that criminalization's harms (incarceration, unsafe supply) were real and substantially reduced post-legalization in studied jurisdictions; however, the same outside observers report that externality costs (DUI rates in some jurisdictions, dependency-related health burden) have not been fully offset by tax revenue allocation, and low-income heavy users report the promised treatment-funding benefit has been unevenly delivered — the founding problem of criminalization harm is substantially addressed, but the harm-reduction and externality-capture promises remain only partially realized."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the legalization reading of the substance control kernel: substance use itself is treated as an individual liberty matter outside legitimate state interest, and state intervention is legitimate only where it prevents or prices third-party harm (impaired driving, secondhand exposure, sales to minors) and captures externality costs through taxation. Under this reading, the user who consumes without harming others exits the victim set entirely — a structural departure from the prohibition reading, where the user is themselves the primary target of state coercion. New victims enter: third parties bearing uncompensated externalities, and market participants excluded from the legal channel by licensing costs or partial-legalization jurisdictional gaps. A new beneficiary class emerges — the licensed industry — alongside the state as tax collector. This is a distinct constraint from prohibition_reading and harm_reduction_reading, not a different observable angle on the same one: the beneficiary/victim sets, the enforcement target, and the extraction referent all differ structurally between readings, satisfying the ε-invariance decomposition requirement.",
+    "logic_rationale": "Extractiveness (0.42) is moderate: real extraction occurs — regressive tax incidence on heavy users, externality costs pushed onto non-consenting third parties without full compensation — but it is substantially lower than under prohibition because consensual use no longer triggers criminal penalty. Suppression (0.35) is markedly lower than a prohibition regime's suppression profile, reflecting the narrowed scope of state coercion to externality-generating conduct (DUI, underage sales, unlicensed commerce) rather than use itself. Accessibility collapse (0.30) is low-moderate: legal purchase channels are broadly accessible to adults with means, though licensing barriers still collapse access for would-be small producers. Resistance (0.45) reflects ongoing contestation from residual prohibitionist constituencies, public health advocates seeking more redistribution of tax revenue toward treatment, and unlicensed-market participants resisting continued criminalization at the margins.",
+    "directionality_logic": "Adult recreational users and the licensed industry sit near the beneficiary end: users gain liberty and market access, industry captures rents from legal exclusivity and brand/scale advantages over informal competitors. The state is a direct fiscal beneficiary via tax capture. DUI crash victims and secondhand exposure bystanders are structural targets — they bear costs generated by others' legally sanctioned conduct, with no consent and limited recourse, placing them near the full-target end of directionality despite not being parties to the substance transaction at all. Unlicensed market participants are trapped between two regimes: legal for licensed actors, criminal for them, which is treated as a genuine victim class in this reading rather than an incidental gap. Low-income heavy users occupy an ambiguous middle: nominally 'liberated' beneficiaries who in practice pay a regressive tax share disproportionate to any offsetting treatment access.",
+    "mandatrophy_analysis": "The founding problem — mass incarceration and unregulated, unsafe black-market supply under prohibition — is substantially resolved by this reading's own evidence and by independent public-health corroboration; that is a genuine coordination achievement, not merely inertia. But the reading's mandate has partially outrun its original justification: externality-tax revenue was promised as the mechanism that would fund treatment and offset third-party harm, and the corroboration record shows that promise only partially delivered. This is not a full mandatrophy resolution (the arrangement is not purely vestigial performance) but it documents a live gap between the reading's justificatory claim and its operational delivery, which the tangled_rope classification (coordination for users plus concentrated extraction from externality-bearers) is built to capture rather than obscure.",
+    "kernel_context": "This constraint instantiates the legalization_reading of substance_control_kernel. The sibling prohibition_reading holds that use itself is the legitimate target of state coercion (moral transgression model); this reading explicitly removes consensual use from the victim/target set and relocates state legitimacy to externality prevention. The sibling harm_reduction_reading treats use as a health condition warranting pragmatic intervention independent of cessation; this reading differs by treating use as a liberty default requiring no intervention absent third-party harm, with health outcomes addressed only incidentally through tax-funded programs rather than as the central justificatory frame. The three readings are not three ways of measuring one arrangement — they instantiate different beneficiary/victim structures and different accounts of what the state is for, hence three separate constraint files."
+  },
+  "omegas": [
+    {
+      "id": "externality_tax_adequacy",
+      "question": "Does the excise tax revenue captured under legalization actually offset the externality costs (DUI enforcement/emergency response, secondhand exposure mitigation, dependency treatment) it is meant to price, or does it fall short and leave a residual uncompensated transfer onto third parties?",
+      "resolution_mechanism": "Comparative fiscal audit tracking legalization tax revenue allocation against documented externality costs (crash data, emergency service utilization, treatment demand) across legalized jurisdictions over multiple years.",
+      "impact": "If revenue substantially covers externality costs, the tangled_rope's extraction component shrinks toward a rope; if it falls persistently short, the gap between liberty framing and actual cost allocation supports treating this as more extractive than currently scored.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether externality taxation genuinely internalizes third-party costs or merely gestures at doing so."
+    },
+    {
+      "id": "reading_boundary_at_dependency",
+      "question": "At what point does a 'liberty exercise' by a dependent user stop being freely consensual in the sense the legalization reading requires, given that dependency itself may compromise the voluntariness the liberty framing assumes?",
+      "resolution_mechanism": "Clinical and behavioral-economics research on addiction's effect on decision-making autonomy, cross-referenced against this reading's own liberty premise.",
+      "impact": "If dependency substantially undermines voluntariness for a large share of heavy users, the legalization reading's core axiom (informed adult choice) applies to a smaller population than the reading assumes, which would support closer kinship with the harm_reduction_reading for that subpopulation rather than a clean liberty framing.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the liberty axiom holds uniformly across the user population or breaks down for dependent users."
+    },
+    {
+      "id": "partial_legalization_residue",
+      "question": "In jurisdictions with partial or patchwork legalization, is the continued criminal exposure of unlicensed participants a temporary transitional artifact or a structurally permanent feature of this reading as implemented?",
+      "resolution_mechanism": "Longitudinal tracking of licensing-cost barriers and enforcement patterns against unlicensed actors in jurisdictions years after initial legalization, to see whether the gap closes or persists.",
+      "impact": "A persistent gap supports classifying unlicensed_market_participants as a durable victim class rather than a transitional one, reinforcing the tangled_rope reading; a closing gap would support scaffold-like transitional framing for that specific sub-arrangement.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether licensing-barrier criminalization is transitional or a permanent structural feature."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "prohibition_reading",
+      "harm_reduction_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of substance_control_kernel. prohibition_reading treats use itself as the target of coercion (moral transgression model, high suppression, users as primary victims); harm_reduction_reading treats use as a health condition warranting intervention independent of cessation (public health framing, low suppression, users as beneficiaries of care rather than liberty). legalization_reading (this file) treats use as a liberty default, removes users from the victim set, and relocates victimhood to non-consenting third parties bearing externalities and to market participants excluded by licensing structure. Each reading carries a distinct ε, distinct beneficiary/victim sets, and a distinct claimed_type; they are linked via affects_constraints because policy movement in one reading's jurisdiction (e.g., a state adopting legalization) structurally affects the resourcing and legitimacy conditions available to the other readings elsewhere."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "criminalized_use_baseline",
+    "drift_state": {
+      "moment": "post_state_legalization_wave",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "consensual_use_outside_state_interest",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_intervention_limited_to_externality_capture",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "licensed_cannabis_alcohol_industry",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_consensus_kernel__utility_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "732f7796-a4ac-41cd-9704-57de2fb65cda"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Consensus Kernel — Utility/Iterative-Improvement Reading",
+    "topic_domain": "cryptoeconomics/monetary_systems/distributed_consensus",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "layer2_protocol_builders",
+      "application_developers",
+      "new_adopters",
+      "mining_pool_operators"
+    ],
+    "victims": [
+      "long_term_holders_expecting_fixed_rules",
+      "hardware_wallet_maintainers",
+      "minority_nodes_rejecting_soft_forks"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "layer2_protocol_builders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build payment channels, sidechains, and settlement layers on top of the base consensus rules, relying on the ability to propose and activate soft forks (e.g. SegWit, Taproot) that extend script capability without breaking full-node validation. Their business model depends on the base layer remaining amenable to incremental extension rather than freezing at the whitepaper's original opcode set."
+    },
+    {
+      "name": "application_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build wallets, exchanges, and services that consume whatever consensus rules are live. They benefit from soft-fork upgrades that add functionality (covenants, better privacy, smart contract primitives) without requiring them to migrate users to a new chain."
+    },
+    {
+      "name": "new_adopters",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Enter the network expecting a functioning, evolving payment and settlement system. They benefit from improvements in transaction throughput, privacy, and usability that iterative consensus changes deliver, without having agreed to any particular 'immutable' founding covenant themselves."
+    },
+    {
+      "name": "mining_pool_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Signal for and activate soft forks by running upgraded software and setting version bits; in this reading their role in advancing consensus rules is treated as legitimate stewardship of a mechanism intended to evolve, not usurpation of a fixed protocol. Their exit is constrained by sunk capital in mining hardware calibrated to specific rule sets."
+    },
+    {
+      "name": "long_term_holders_expecting_fixed_rules",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Acquired the asset on the premise (as they understood it) that the twenty-one million cap and base monetary policy were permanently fixed by the whitepaper's design. Under this reading, the 'minimum viable mechanism' framing treats even monetary-policy-adjacent debates as open to iterative revision by rough consensus, which erodes the certainty they priced into their holding. They cannot exit the asset's rule-set without exiting the asset itself."
+    },
+    {
+      "name": "hardware_wallet_maintainers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must continuously re-certify firmware and signing logic against a moving target of soft-fork activations. Each iterative improvement imposes a maintenance and audit cost that a genuinely frozen protocol would not require; they bear this cost to keep older devices compatible with the evolving live chain."
+    },
+    {
+      "name": "minority_nodes_rejecting_soft_forks",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Run full nodes that reject a given soft fork's new rules on principle, but soft forks are engineered to be backward-compatible so that non-upgraded nodes still accept the new blocks as valid — leaving objectors economically absorbed into the new rules rather than genuinely able to reject them. Their nominal veto is structurally weaker than their formal validation role suggests."
+    },
+    {
+      "name": "core_protocol_developers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Write and review the reference implementation's proposed changes (BIPs), framing the whitepaper as establishing a floor — a minimum viable mechanism — rather than a ceiling. They mediate which proposals reach activation readiness, exercising substantial informal authority over what counts as 'iterative improvement' versus 'unacceptable change.'"
+    },
+    {
+      "name": "maximalist_holders",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that this reading's 'minimum viable, iteratively improvable' framing is itself a category error — that the whitepaper's monetary policy is a founding covenant, not a draft. They are present in public discourse but structurally outvoted in the rough-consensus process this reading treats as legitimate; their objection is heard but does not block activation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a large, permissionless set of nodes, miners, and users around a shared, upgradeable rule set — allowing the network to add capability (better scripting, privacy, scaling primitives) through backward-compatible soft forks without requiring universal simultaneous agreement or a disruptive hard fork/chain split.",
+    "transfer_function": "Moves protocol-design authority and de facto veto power from the diffuse, rules-are-fixed expectation of long-term holders toward the smaller set of core developers and signaling miners who determine which soft forks activate; moves ongoing maintenance and re-certification costs onto downstream implementers (wallet software, hardware signers) who must track a moving rule set.",
+    "absent_voices": "Long-term holders who bought the asset on a strict fixed-supply, fixed-rules premise are not organized as a formal veto bloc and have no seat in the BIP process; maximalist advocates are vocal in public forums but are structurally unable to block soft-fork activation once miner/node rough consensus forms.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the 'minimum viable, iteratively improvable' reading were displaced by the maximalist reading tomorrow, the practical effect on already-activated soft forks (SegWit, Taproot) would be minimal — those changes are embedded in the live chain — but the legitimacy basis for FUTURE protocol changes would shift dramatically: any further evolution would need to justify itself as consistent with an immutable covenant rather than as ordinary iteration, likely freezing further base-layer development. Whether that constitutes 'world rearranges' or 'world unchanged' is exactly what the three readings dispute.",
+    "founding_problem": "The whitepaper needed to establish SOME workable, deployable consensus mechanism to solve double-spending without a trusted third party; it explicitly described itself as a starting design ('the system is secure as long as...') rather than a finished, permanently fixed specification, leaving room for later refinement as the network's needs and threat model became clearer.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Core developers and layer-2 builders attest the founding problem was 'build a working, extensible system' and that iterative improvement is squarely within the whitepaper's own stated design philosophy. Independent computer-science historians and several early mailing-list participants (outside the current beneficiary set) corroborate that the original design was explicitly provisional in places (e.g., the author's own forum posts describing planned future changes to scripting and scaling); however, long-term holders and maximalist commentators dispute that this provisionality extended to monetary policy specifically, and no neutral third party has definitively settled which subset of rules the founding design treated as fixed versus open."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the utility/iterative-improvement reading of the Bitcoin consensus kernel: the whitepaper is read as establishing a minimum viable consensus mechanism, not a frozen covenant, so soft forks and layer-2 protocols represent legitimate evolution rather than covenant violation. Under this reading, beneficiaries are the builders and adopters who need the protocol to keep adding capability (SegWit-style capacity increases, Taproot-style privacy/scripting gains, ongoing L2 settlement innovation), while the costs land on parties who priced in an assumption of permanent fixity — long-term holders, hardware wallet maintainers who must track a moving target, and minority nodes whose formal veto is structurally weaker than it appears because soft forks are engineered to be backward-compatible. This is a Tangled Rope: it genuinely coordinates a large, permissionless network around a shared upgrade path (real coordination function) while extracting certainty and imposing maintenance costs on parties who did not consent to treating the rules as provisional (real extraction), and it requires active enforcement in the form of miner signaling thresholds and reference-implementation gatekeeping to hold.",
+    "logic_rationale": "Extraction (0.42) is moderate, not extreme: soft forks are opt-in in the narrow technical sense (non-upgraded nodes still validate) but the practical effect is that objecting minorities are economically absorbed rather than genuinely exited. Suppression (0.38) reflects the informal-but-real gatekeeping exercised by core developers and mining pools over which proposals reach activation, without rising to the level of a snare's coercive apparatus. Theater ratio (0.28) captures that the 'rough consensus and running code' process has real technical substance but also carries a degree of legitimacy theater — describing outcomes as organic community consensus when a small set of maintainers and large pools exercise outsized influence over what gets proposed at all. Accessibility collapse is moderate (0.35): running an old client, refusing to upgrade, or forking away remain technically available, so alternatives have not collapsed as completely as under a genuine monopoly. Resistance (0.58) is substantial because the maximalist faction is loud, organized, and persistent even though structurally outvoted.",
+    "directionality_logic": "Builders, application developers, and new adopters sit toward the beneficiary end: they gain capability and lower barriers to entry from each iterative improvement and bear little of the associated maintenance or certainty cost. Mining pool operators and core developers are agenda-setters who both administer the evolution process and benefit from the legitimacy and continued relevance it grants them. Long-term holders and minority nodes sit toward the target end: they bear a cost (eroded certainty, formally weaker veto than expected) that flows through the same mechanism the coordination story celebrates. Hardware wallet maintainers are a genuine payer class — a real, recurring, non-symbolic cost of the constraint's iterative nature.",
+    "mandatrophy_analysis": "The founding-problem interview resolves as contested rather than dead or clearly live: the whitepaper's own text supports a provisional-design reading for scripting and scaling, but that provisionality is disputed as extending to monetary policy specifically. This prevents the story from either dismissing the utility reading as pure rent-seeking (mandatrophy would require pronouncing the founding problem dead while the mechanism persists — here the problem status itself remains open) or crediting it uncritically as pure coordination (the tangled_rope classification requires acknowledging the real cost imposed on long-term holders and minority nodes). The Q5 disappearance verdict is deliberately 'contested' because the three kernel readings disagree about what would even count as 'the world rearranging.'",
+    "kernel_context": "This constraint is the utility_reading of the bitcoin_consensus_kernel: the whitepaper establishes a minimum viable mechanism meant to be iteratively improved, with soft forks and layer-2 protocols as legitimate evolution. Sibling readings of the same kernel are maximalist_reading (whitepaper as immutable monetary covenant — any change violates founding intent) and pragmatic_synthesis (base-layer monetary rules immutable, upper layers open to innovation). This reading authors the highest extractiveness of the three because it is the only reading under which monetary-policy-adjacent debate itself is treated as legitimately open, which is precisely what the maximalist and long-term-holder seats experience as extraction of certainty they believed they had purchased."
+  },
+  "omegas": [
+    {
+      "id": "monetary_policy_boundary_ambiguity",
+      "question": "Did the whitepaper's own design philosophy treat monetary policy (the 21 million cap, issuance schedule) as within the same 'iteratively improvable' category as scripting and scaling, or did it implicitly or explicitly treat monetary policy as a separate, fixed commitment?",
+      "resolution_mechanism": "Close textual and historical analysis of the whitepaper plus contemporaneous author statements (mailing list, forum posts) specifically addressing whether the supply cap was ever presented as provisional versus foundational; corroboration from independent historians of the project who are not current stakeholders in either camp.",
+      "impact": "If the founding design demonstrably treated monetary policy as equally open to iteration, this reading's extraction score should fall (the cost to long-term holders reflects a mistaken expectation, not a genuine broken promise). If the founding design demonstrably ring-fenced monetary policy specifically, this reading understates extraction and the pragmatic_synthesis reading is the more accurate structural account.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the whitepaper's provisionality extended to monetary policy or only to non-monetary protocol features."
+    },
+    {
+      "id": "soft_fork_consent_quality",
+      "question": "Does the backward-compatibility property of soft forks constitute genuine consent from non-upgrading nodes, or does it constitute engineered non-exit — a mechanism designed so that objection is technically registered but practically ineffective?",
+      "resolution_mechanism": "Analysis of historical soft-fork activation episodes (e.g., SegWit's UASF/BIP148 period) for evidence of genuine optionality: did meaningfully-sized minorities who rejected the change retain a functioning, valued chain, or were they economically absorbed?",
+      "impact": "If soft forks reliably absorb objectors economically rather than allowing a viable minority chain to persist, the suppression score for this reading should be higher than authored, and the tangled_rope classification's active-enforcement component is understated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether soft-fork backward compatibility represents real consent or engineered inescapability for dissenting nodes."
+    },
+    {
+      "id": "kernel_reading_selection_stakes",
+      "question": "Is the choice among the three kernel readings (maximalist, pragmatic_synthesis, utility) itself a neutral interpretive question, or does it functionally determine who wins ongoing protocol-design disputes — making the reading choice itself a site of extraction?",
+      "resolution_mechanism": "Track which reading is invoked by which faction in live protocol debates (e.g., block size wars, covenant opcode proposals) and whether invocation correlates with material stake in the outcome.",
+      "impact": "If reading-choice correlates strongly with material interest, the three-reading decomposition itself should be understood as a live political contest rather than a settled interpretive typology, which would argue for even more caution in treating any single reading's ε as descriptively final.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the kernel-reading trichotomy is a neutral interpretive frame or itself a contested political tool."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_consensus_kernel__maximalist_reading",
+      "bitcoin_consensus_kernel__pragmatic_synthesis"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the bitcoin_consensus_kernel, decomposed per the epsilon-invariance principle: measuring 'the Bitcoin social contract' as a single constraint conflates three structurally distinct claims with different epsilon values. maximalist_reading treats the whitepaper as an immutable covenant (lowest extraction — any deviation is simply illegitimate and doesn't count as the constraint operating). pragmatic_synthesis splits the base layer (immutable) from upper layers (open) and sits at intermediate extraction. utility_reading (this story) treats the whole mechanism as iteratively improvable and authors the highest extraction because it is the only reading under which even monetary-policy-adjacent change is framed as legitimate iteration rather than covenant violation. All three share the same underlying kernel (the whitepaper's founding text and the network's consensus process) but diverge on what counts as fixed versus revisable within it."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "whitepaper_as_extensible_starting_design",
+    "drift_state": {
+      "moment": "post_taproot_layer2_expansion_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "maximalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "pragmatic_synthesis",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "protocol_is_extensible_by_design",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "rough_consensus_activation_is_legitimate_governance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

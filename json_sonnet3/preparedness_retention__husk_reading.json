@@ -1,0 +1,297 @@
+{
+  "header": {
+    "constraint_id": "preparedness_retention__husk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "94351dfb-6ed1-4558-aab9-dc1beb306390"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.81,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Flood Preparedness as Memorial Performance (Husk Reading)",
+    "topic_domain": "governance/disaster_preparedness",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "civil_defense_agency_leadership",
+      "municipal_certifying_authorities"
+    ],
+    "victims": [
+      "coastal_residents",
+      "frontline_emergency_responders"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "civil_defense_agency_leadership",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Designs and mandates the annual drill and inspection calendar, sets the certification criteria that municipalities must satisfy, and reports compliance rates upward to legislators and the public as evidence of readiness. Its budget, reputation, and continued mandate depend on the appearance of a well-drilled system, not on the system's performance during an actual D5-magnitude event, which has not occurred within any current leader's tenure."
+    },
+    {
+      "name": "municipal_certifying_authorities",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Administers local drills to satisfy the national checklist, signs off on inspection paperwork, and receives funding tied to certification status rather than to measured response competence. Career incentives reward smooth, incident-free drill days; surfacing real gaps in tacit skill risks funding cuts and reputational damage, so failure modes are quietly patched rather than reported."
+    },
+    {
+      "name": "coastal_residents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Live inside the flood defense perimeter the drills are meant to protect. They receive periodic evacuation notices and reassurance that the system is 'certified ready,' but have no way to independently verify whether the certification reflects live operational competence or paperwork compliance. Their exit options are limited by housing cost, family ties, and the absence of credible alternative protection; they bear the full consequence if the performance is hollow."
+    },
+    {
+      "name": "frontline_emergency_responders",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Execute the drills as scripted and are evaluated on adherence to procedure rather than improvisational competence under novel failure conditions. Many privately report that real skills (rapid closure sequencing under partial equipment failure, coordinating across agencies during compound infrastructure loss) atrophy between the rare full-scale exercises, but raising this in the after-action review risks being read as insubordination or as jeopardizing the unit's certification score."
+    },
+    {
+      "name": "independent_flood_engineers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Publish technical critiques arguing that current drill scenarios are simplified relative to plausible D5 compound-failure scenarios and that tacit skill decays faster than the certification cycle assumes. Their findings circulate in academic and engineering venues but are not incorporated into the certifying authority's pass/fail criteria, and they have no formal seat in the certification process."
+    },
+    {
+      "name": "national_legislature",
+      "role": "observer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Receives the agency's compliance statistics as the basis for continued appropriations and can point to high certification rates as evidence of due diligence discharged. Has limited independent capacity to audit whether certification tracks live competence and generally accepts the agency's self-reported metrics, which indirectly makes it a beneficiary of the performance it is nominally overseeing."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In principle, a shared drill and inspection calendar coordinates scarce specialist attention (engineers, responders, equipment) across many municipalities so that readiness assessment happens on a predictable, comparable schedule rather than ad hoc.",
+    "transfer_function": "Moves public funds and political credibility from the state to the civil defense agency and municipal authorities in exchange for a certification signal; moves actual protective margin away from residents and responders, who receive reassurance rather than verified live capacity.",
+    "absent_voices": "Independent flood engineers and frontline responders who privately doubt the certification's validity are structurally outside the sign-off process — their critiques appear in journals and informal debriefs but never enter the pass/fail criteria that determine funding and public messaging.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the drill-and-certification apparatus vanished overnight, the agency and municipalities argue infrastructure and legal defense preparedness would immediately erode (their claim: the ritual is load-bearing). Independent engineers and many responders argue the actual response capacity would barely change, since the ritual is already decoupled from live skill retention — the visible apparatus would disappear but the underlying competence gap, which already exists, would simply become visible instead of hidden. The verdict is genuinely contested between these two readings of the same events.",
+    "founding_problem": "After a catastrophic historical flood event, the state needed a mechanism to demonstrate to a traumatized public and to insurers/legislators that flood defense readiness was being maintained and verified on a recurring basis, rather than assumed.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Independent flood engineers and academic emergency-management researchers, who sit outside the certifying and legislative beneficiary chain, attest that the original problem (verified live readiness) is no longer being solved by the current apparatus — their published post-drill analyses report simplified scenarios and untested compound-failure conditions. The civil defense agency and municipal authorities, who benefit from the certification signal, attest the problem remains live and well-served; no fully independent audit body with subpoena power over drill design has yet adjudicated between these two attestations."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.77
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the husk reading of the preparedness_retention kernel: the claim that flood defense drills and inspections have decayed into memorial performance — activity that produces the FEELING of retained competence (paperwork, ceremony, certification statistics) without the underlying tacit skill needed to respond to a genuine compound-failure D5 event. The founding coordination problem (verified readiness after a historical catastrophe) is treated, in this reading, as substantially decoupled from the apparatus that now claims to solve it. The apparatus still performs a coordination function — it schedules scarce specialist attention and produces auditable paper trails — but the metrics track visible compliance far more than they track live operational capacity, and the gap between the two has widened over the forty-year interval as the last generation with direct catastrophe experience has retired.",
+    "logic_rationale": "Theater ratio starts moderate (0.42) and rises to 0.81 by the end of the interval, reflecting the husk reading's core claim: as institutional memory of the original catastrophe fades, more of the apparatus's activity shifts toward producing certifiable signals (checklists, scripted drills, media-friendly demonstration exercises) and less toward exercises designed to surface and repair genuine capability gaps. Base extractiveness rises in parallel (0.38 to 0.68) because the apparatus increasingly extracts legitimacy and budget from a public that reasonably assumes certification implies capability. Suppression is moderate and rises slowly (0.30 to 0.52) — this is not a heavily coercive constraint; the suppression is mostly the quiet discouragement of dissenting after-action findings and the structural exclusion of independent critics from the certification criteria, rather than overt coercion of residents.",
+    "directionality_logic": "Civil defense agency leadership and municipal certifying authorities sit near the beneficiary end: they collect budget, legitimacy, and career continuity from the certification signal, and their exit options (arbitrage/constrained but institutionally secure) buffer them from the consequences of a hollow performance. Coastal residents and frontline responders sit near the target end: residents are trapped by geography and housing cost and bear the full downside if the readiness signal is false; responders execute the ritual and privately bear the professional risk of naming its hollowness. Independent flood engineers are excluded rather than coordinated — their critique is structurally unable to reach the certification criteria, which is precisely what an omega below interrogates.",
+    "mandatrophy_analysis": "The husk reading resists collapsing into a simple snare verdict because a genuine coordination function persists underneath the performance: someone must schedule specialist attention, and the checklist apparatus does produce SOME real information (equipment inventories, personnel rosters) even if it fails to test tacit skill under novel conditions. Classifying this as tangled_rope rather than pure snare honors that the drills are not merely theater from inception — they retain partial genuine function (the coordination half) while having drifted toward extraction of legitimacy that is not backed by tested capability (the extraction half). This is precisely the seat-divergence the engine should register: from the agency's seat, drills are functioning coordination; from the resident's seat, at the moment of a real D5 event, the same structure would be experienced as having extracted false assurance.",
+    "kernel_context": "This constraint instantiates the husk_reading of the preparedness_retention kernel — the claim that drills and inspections are memorial performance decoupled from live competence. Two sibling readings exist as separate constraint stories: competence_reading holds that the same drills genuinely preserve operational capacity (a rope-leaning reading with different ε and beneficiary/victim structure), and hybrid_reading holds that competence is stratified — retained in specialized technical institutions while broader societal-level preparedness becomes ceremonial. This story's ε (0.68), beneficiary set (institutional legitimacy holders), and victim set (residents and responders bearing undiscovered capability gaps) are authored specifically for the husk reading and are not averaged with or hedged against the sibling readings' values."
+  },
+  "omegas": [
+    {
+      "id": "husk_vs_competence_empirical_resolution",
+      "question": "Does live operational competence actually decay faster than the certification cycle assumes, or does the drill apparatus in fact preserve the tacit skills needed for a genuine D5 event, as the competence_reading claims?",
+      "resolution_mechanism": "A full-scale, unscripted compound-failure exercise (multiple simultaneous infrastructure failures, no advance script, independent observers scoring improvisational performance rather than procedural adherence) would directly test whether tacit skill exists beneath the ceremonial layer. Absent such a test, the question remains genuinely open between readings.",
+      "impact": "If competence is shown to be substantially retained, this story's classification would be undermined in favor of the competence_reading or hybrid_reading; if the gap is confirmed empirically, the husk reading's tangled_rope-with-rising-extraction trajectory would be strongly corroborated and could plausibly justify reclassification toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the husk reading's core empirical claim (competence decay beneath ceremony) is true."
+    },
+    {
+      "id": "committer_location_of_disagreement",
+      "question": "Where exactly does the husk reading's disagreement with the hybrid_reading live — is it a disagreement about ALL preparedness institutions uniformly decaying, or does the husk reading implicitly concede that SOME specialized technical bodies (e.g., a national water authority) retain real competence while claiming the broader societal/municipal layer does not?",
+      "resolution_mechanism": "A structural audit distinguishing specialized technical-institution competence from municipal/societal-level drill performance would locate whether the husk reading is a claim about the whole system or is actually a narrower claim that collapses into the hybrid_reading once decomposed by institution type.",
+      "impact": "If the husk reading, examined closely, turns out to concede stratification, it may not be a fully distinct reading from hybrid_reading but a rhetorically stronger version of the same underlying structural claim — this would not change this story's authored ε, but would change how the kernel's three readings should be understood to relate to one another.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the husk reading is fully distinct from the hybrid reading or a stronger restatement of it."
+    },
+    {
+      "id": "certification_capture_naturalness",
+      "question": "Is the divergence between certification signal and live competence an inevitable byproduct of any large-scale bureaucratic readiness system (a structural near-mountain), or is it a constructed, correctable feature of THIS specific certification design that benefits identifiable agents?",
+      "resolution_mechanism": "Comparative study of preparedness systems in other domains (aviation safety, nuclear plant operations) that have historically achieved tighter coupling between certification and live competence, to establish whether the gap is a design choice or a structural inevitability of the scale involved.",
+      "impact": "If comparable systems achieve tighter coupling, the gap here is a constructed feature serving the identified beneficiaries, supporting the tangled_rope/extractive reading; if no comparable system achieves tighter coupling at this scale, the gap may be closer to structurally inevitable, weakening the extraction claim.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the ceremony/competence gap is a constructed choice or a scale-inevitable feature."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_retention__competence_reading",
+      "preparedness_retention__hybrid_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the preparedness_retention kernel. competence_reading authors the same drill-and-inspection apparatus with low ε (genuine skill retention, rope-leaning); husk_reading (this story) authors it with substantial and rising ε (memorial performance decoupled from live competence, tangled_rope); hybrid_reading authors a stratified structure where specialized technical institutions retain competence while broader societal readiness becomes ceremonial (mixed ε across institutional strata). The three stories share the same underlying kernel text and drill calendar but diverge in beneficiary/victim structure and in whether the coordination function is judged intact. Per the ε-invariance principle, these are three distinct constraints, not one constraint measured three ways."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ],
+  "gain_flow": "civil_defense_agency_leadership",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ceremonial_performance_displaces_tacit_skill",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "certification_signal_decouples_from_operational_capacity_over_generational_time",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_catastrophe_verified_readiness_mandate",
+    "drift_state": {
+      "moment": "contemporary_post_last_survivor_generation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

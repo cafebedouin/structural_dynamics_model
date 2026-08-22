@@ -1,0 +1,319 @@
+{
+  "header": {
+    "constraint_id": "remonstrance_authority__crown_reading",
+    "version": "1.0",
+    "generated_date": "2026-07-01",
+    "status": "ACTIVE",
+    "story_uid": "0497c31b-5a92-4261-9c6b-4ca551715b5e"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.58,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.74,
+    "claimed_type": "snare",
+    "human_readable": "Parlementary Remonstrance as Fiscal Veto (Crown Reading)",
+    "topic_domain": "constitutional_history/political_economy/legal_authority",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parlementary_magistrates",
+      "venal_office_holders",
+      "regional_privileged_orders"
+    ],
+    "victims": [
+      "royal_treasury",
+      "crown_fiscal_administration",
+      "unrepresented_taxpaying_subjects"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "crown_fiscal_administration",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Drafts fiscal edicts (new taxes, forced loans, currency manipulation, venal office sales) needed to fund war and administration. Must submit edicts to regional parlements for registration; when a parlement remonstrates and refuses registration, the edict cannot be enforced in that jurisdiction without a lit de justice or direct royal coercion. Exit from this friction requires either capitulation to magistrate demands, expensive ceremonial force, or piecemeal jurisdiction-by-jurisdiction imposition — all costly relative to simply having the edict registered."
+    },
+    {
+      "name": "parlementary_magistrates",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Hold venal, heritable judicial offices whose value depends partly on the parlement's power to block or delay royal fiscal measures that would devalue those offices, threaten local tax exemptions, or bypass local elites' consent. Remonstrate against edicts framed as defending 'fundamental law,' while the practical effect is protecting their own office values, regional tax privileges, and the fiscal exemptions of the orders they are drawn from. Can escalate remonstrance repeatedly, forcing the Crown into costly registration ceremonies, and face little personal risk since dismissal or exile is rare and reversible."
+    },
+    {
+      "name": "venal_office_holders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Purchased offices whose resale value and income depend on the parlement successfully resisting reforms that would abolish venality, restructure the tax base, or dilute their privileges. Benefit passively from every successful remonstrance without personally participating in it."
+    },
+    {
+      "name": "regional_privileged_orders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Nobility and clergy whose tax exemptions and local jurisdictional privileges are the substantive content most remonstrances defend under the language of 'ancient constitution.' They do not sit in the parlement themselves in most cases but benefit whenever a fiscal edict that would touch their exemptions is blocked."
+    },
+    {
+      "name": "unrepresented_taxpaying_subjects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the tax burden that remains after privileged orders' exemptions are preserved by successful remonstrance; when the Crown cannot raise revenue efficiently through orderly registration, it falls back on regressive indirect taxes, venal office proliferation, and currency debasement, all of which land disproportionately on commoners. Have no seat in the remonstrance process and no standing to be heard by either Crown or parlement."
+    },
+    {
+      "name": "royal_treasury",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bears the direct fiscal cost of delayed or blocked registration: interest accrues on unfunded war debt, credit terms worsen as lenders price in registration risk, and each forced lit de justice consumes political capital that could otherwise be spent on reform. Has no exit from the parlements' jurisdictional monopoly over registration within their regions."
+    },
+    {
+      "name": "royal_council",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Decides whether to negotiate with a remonstrating parlement, override it by lit de justice, or exile/recall magistrates. Each option carries cost: negotiation concedes fiscal ground, override risks provincial unrest and the appearance of tyranny, exile disrupts judicial administration. The council's choices are shaped by how much political capital the Crown can spend at a given moment."
+    },
+    {
+      "name": "provincial_estates_and_towns",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Local bodies with their own fiscal interests who are neither party to the remonstrance exchange between Crown and parlement nor represented within it, despite bearing consequences of whichever fiscal settlement eventually emerges. Would object that the parlement speaks for magistrate and noble interests, not for the towns or third estate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In its cleanest form, the registration-and-remonstrance procedure lets a legal body formally review royal edicts for consistency with existing law before they take effect, catching genuine drafting errors and creating a documented record of royal legislation. That narrow verification function is real and would remain valuable even absent any fiscal dispute.",
+    "transfer_function": "The remonstrance right, as exercised in ongoing fiscal contests, moves the cost of postponed or blocked taxation from privileged and office-holding elites onto the royal treasury (in borrowing costs and delayed reform) and ultimately onto unrepresented taxpaying subjects (via regressive substitute revenue measures), while preserving the office values and tax exemptions of the magistrates and orders who exercise or benefit from the veto.",
+    "absent_voices": "Provincial estates, town corporations, and the mass of taxpaying commoners have no procedural role in the registration exchange; they experience its fiscal consequences (debasement, indirect taxes, venal office proliferation) without ever being heard by either side of the Crown-parlement confrontation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the remonstrance veto vanished overnight, the Crown could register fiscal edicts without provincial obstruction, parlementary offices would lose a major source of their political and market value, privileged orders would lose their most reliable institutional shield against tax reform, and royal fiscal administration would face materially lower borrowing costs and faster reform capacity — arrangements throughout the fiscal and judicial system depend on the veto's presence.",
+    "founding_problem": "The registration procedure was built to give royal edicts formal legal verification and a public record before enforcement, and secondarily to give the Crown's own courts a check against manifestly unlawful commands.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Royal jurists and fiscal ministers (an interested party, discounted accordingly) attest the verification function has been supplanted by obstruction. More weight goes to comparative institutional historians examining parlementary finance records showing office resale values tracking remonstrance success rates, and to foreign observers (e.g. contemporary diplomatic correspondence) noting the parlements' fiscal interest in blocking reform independent of any legal defect in the edicts — corroboration from outside both the Crown and the magistrates themselves."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the CROWN reading of the contested remonstrance-authority kernel: the parlements' right to remonstrate against and withhold registration of royal edicts is read here as a minoritarian veto that has drifted from a genuine legal-verification function into an instrument protecting the particularist fiscal privileges of venal magistrates, office-holders, and exempt orders, at growing cost to royal fiscal capacity and to unrepresented taxpayers. The sibling magistrate_reading treats the same procedural right as a fundamental constitutional safeguard against arbitrary royal innovation; that is a different constraint, authored separately, with its own ε and its own beneficiary/victim structure. This story does not average across the two readings or hedge ε between them — it authors the Crown's structural relationship to the arrangement on its own terms.",
+    "key_agents": [
+      "crown_fiscal_administration: primary target (institutional/constrained) — bears delay and borrowing costs from blocked registration",
+      "royal_treasury: primary target (institutional/trapped) — pays interest and credit-cost consequences directly",
+      "parlementary_magistrates: primary beneficiary (organized/arbitrage) — office values and regional influence protected by successful remonstrance",
+      "regional_privileged_orders: secondary beneficiary (powerful/mobile) — tax exemptions shielded by the veto without direct participation",
+      "unrepresented_taxpaying_subjects: diffuse victim (powerless/trapped) — bears substitute regressive taxation when reform is blocked",
+      "royal_council: agenda_setter (institutional/constrained) — decides whether to negotiate, override, or coerce"
+    ],
+    "logic_rationale": "Extractiveness is authored high (0.71 by interval end) because, on the Crown reading, the remonstrance right's practical effect over the recorded interval is to protect magistrate office values and noble/clerical tax exemptions at direct cost to fiscal administration and indirect cost to commoners — not to perform the verification function that would justify low ε. Suppression is moderate (0.58): the Crown retains coercive tools (lit de justice, exile) but each use is costly and politically limited, so the parlements' obstruction is not fully suppressed even under Crown-favorable framing. Accessibility collapse is comparatively low (0.38) because alternative fiscal mechanisms (forced loans, venal office sales, indirect taxation) remain available to the Crown even when registration is blocked — the veto redirects rather than eliminates fiscal options, which is itself part of why its cost lands on unrepresented subjects. Resistance is high (0.74) reflecting the magistrates' persistent, organized, low-personal-risk capacity to remonstrate repeatedly.",
+    "directionality_logic": "Parlementary magistrates and the office-holders and privileged orders behind them sit near the full-beneficiary end: they collect protected office value and preserved exemptions without bearing the fiscal consequences of blocked reform, and their exit options (arbitrage — they can escalate or moderate remonstrance opportunistically) keep their effective extraction low. The Crown's fiscal administration and treasury sit near the full-target end: trapped by jurisdiction (cannot simply route around a parlement's registration monopoly in its own region) and bearing the direct fiscal cost of delay. Unrepresented taxpaying subjects are also targets, but through a longer causal chain (regressive substitute taxation) rather than direct extraction by the parlement — this is why they are named victims but their situation differs qualitatively from the treasury's.",
+    "mandatrophy_analysis": "The founding_problem/disappearance_verdict pair is deliberately set to flag capture on the Crown reading: founding_problem_status is 'dead' (the verification function this procedure was built for has been supplanted) while disappearance_verdict is 'world_rearranges' (the arrangement's removal would still reorganize the fiscal-judicial system). That mismatch is exactly the zombie-mandate signature — an arrangement whose original justification has lapsed but which persists because concentrated beneficiaries (magistrates, office-holders, privileged orders) now depend on it for reasons unrelated to its founding function. The classification as snare on the Crown reading follows from this: the coordination story (legal verification) is cover for what the metrics describe as ongoing asymmetric extraction from Crown and commoners alike.",
+    "kernel_context": "This is the CROWN reading of the remonstrance_authority kernel. The sibling magistrate_reading (a separate constraint file) reads the identical procedural right as a fundamental constitutional mechanism preserving ancient liberties against arbitrary royal innovation — under that reading, the Crown itself would appear as the primary threat and the parlements as legitimate defenders of settled law, with a correspondingly low or near-zero ε for the arrangement. The two readings share the kernel (the remonstrance procedure itself) but diverge entirely on ε, beneficiary/victim assignment, and claimed type, per the ε-invariance principle: this is not the same constraint measured two ways, it is two constraints sharing a contested legal mechanism."
+  },
+  "omegas": [
+    {
+      "id": "remonstrance_kernel_reading_divergence",
+      "question": "Is the remonstrance right, at its core, a fiscal-legal verification mechanism now captured by particularist interests (Crown reading), or a genuine safeguard of ancient constitutional liberty against royal fiscal innovation (magistrate reading)?",
+      "resolution_mechanism": "No single empirical test resolves this — it is a live framing dispute in the historiography itself (absolutist vs. constitutionalist historical traditions). Comparative analysis of remonstrance content (procedural/legal objections vs. explicit defense of exemptions and office values) across the historical record could shift the balance of evidence but not settle the normative question of which framing is authoritative.",
+      "impact": "Adopting the magistrate reading instead would substantially lower authored ε for this same procedural mechanism, move the Crown from the payer set toward the agenda_setter/threat seat, and likely reclassify the arrangement as rope or tangled_rope rather than snare — this is precisely why the two readings are authored as separate constraints rather than reconciled within one.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The kernel-level disagreement between crown_reading and magistrate_reading over what the remonstrance right fundamentally is."
+    },
+    {
+      "id": "venality_causal_weight",
+      "question": "How much of the parlements' remonstrance behavior is causally driven by office-holders' pecuniary interest in blocking reform, versus genuine (if self-serving) constitutional conviction about the limits of royal fiscal power?",
+      "resolution_mechanism": "Archival analysis correlating individual magistrates' remonstrance voting records with their personal office-resale exposure and family exemption holdings; comparison with the small number of magistrates who supported reforms against their own pecuniary interest.",
+      "impact": "If pecuniary interest dominates, the Crown reading's snare classification is strongly supported; if constitutional conviction dominates even where it conflicts with self-interest, the coordination function claimed in the magistrate reading gains credibility and the Crown reading's ε may be overstated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether remonstrance is better explained by pecuniary capture or genuine constitutional principle."
+    },
+    {
+      "id": "substitute_taxation_incidence",
+      "question": "Would blocked fiscal edicts, if registered without obstruction, actually have fallen more equitably than the substitute measures (venal office sales, debasement, indirect taxes) the Crown resorted to instead?",
+      "resolution_mechanism": "Fiscal-incidence reconstruction comparing the distributional profile of the specific blocked edicts against the actually-enacted substitute revenue measures for the same fiscal years.",
+      "impact": "If blocked edicts were themselves regressive (e.g. new indirect taxes the parlement opposed on behalf of ordinary subjects, not just elites), the unrepresented_taxpaying_subjects victim assignment weakens and part of the remonstrance function shifts toward genuine, if incidental, taxpayer protection — complicating the pure snare reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the specific fiscal measures blocked by remonstrance were themselves more or less regressive than their substitutes."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.06
+  },
+  "network": {
+    "affects_constraints": [
+      "remonstrance_authority__magistrate_reading",
+      "venal_office_system",
+      "royal_fiscal_credit_regime"
+    ],
+    "dual_formulation_note": "This story and remonstrance_authority__magistrate_reading are the two declared readings of the remonstrance_authority kernel. They share the same underlying legal procedure (registration and remonstrance of royal edicts by sovereign courts) but diverge in ε (this reading authors high extraction from the Crown's fiscal seat; the magistrate reading authors low extraction, framing the arrangement as protective of settled liberty), in beneficiary/victim assignment (this reading names magistrates and privileged orders as beneficiaries and the Crown/unrepresented subjects as victims; the magistrate reading would name the Crown's fiscal innovation as the threat and the body politic as beneficiary of the check), and in claimed_type (snare here, versus rope or tangled_rope there). Both readings are linked here and should be linked reciprocally in the sibling file."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.1
+    }
+  ],
+  "gain_flow": "parlementary_magistrates",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "magistrate_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sovereign_fiscal_authority_indivisible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "particularist_privilege_lacks_constitutional_standing",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "absolute_sovereign_fiscal_prerogative",
+    "drift_state": {
+      "moment": "pre_revolutionary_fiscal_crisis",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

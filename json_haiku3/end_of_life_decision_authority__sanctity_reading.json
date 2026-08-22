@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_decision_authority__sanctity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_end_of_life_decision_authority__sanctity_reading",
+    "story_uid": "7e37c29e-c6fe-406a-b220-0040d012197d"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.79,
+    "resistance": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sanctity of Life Reading: End-of-Life Decision Authority",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_medical_gatekeepers",
+      "sanctity_doctrine_adherents"
+    ],
+    "victims": [
+      "pressured_vulnerable_patients",
+      "terminal_suffering_patients"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "sanctity_vs_autonomy_foreclosure",
+      "question": "Does the sanctity reading's core premise (life has intrinsic value independent of individual will) logically foreclose the autonomy reading's core premise (individuals possess sovereign authority over their own death), or do they represent incommensurable frameworks?",
+      "resolution_mechanism": "Philosophical analysis of whether 'intrinsic value transcends will' and 'will determines value' are logical contradictories (foreclosing) or merely incompatible policy orientations held by different parties (coexisting). Test: can a single legal or institutional framework coherently hold both premises without contradiction, or does adopting one require rejecting the other?",
+      "impact": "If foreclosing: one reading will eventually displace the other at the institutional level, producing a unitary policy. If coexisting: the constraint family represents an irreducible pluralism, and policy outcomes will reflect power struggles between parties holding each reading, not logical resolution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether sanctity and autonomy readings logically foreclose each other or represent coexistent frameworks."
+    },
+    {
+      "id": "suffering_externalization_mechanism",
+      "question": "Is the sanctity reading's externalization of terminal patient suffering a structural feature of the reading itself, or a contingent policy outcome dependent on institutional implementation?",
+      "resolution_mechanism": "Comparative institutional analysis: do jurisdictions embracing the sanctity reading uniformly externalize suffering, or do some implement aggressive palliative care that reduces but does not eliminate the structural cost-shift to patients? If suffering externalization is contingent, the reading is not entailed to extract from terminal patients.",
+      "impact": "If structural: terminal suffering patients are necessarily in the victim set regardless of palliative investment; the constraint extracts from them by design. If contingent: terminal suffering patients are victims only in jurisdictions that fail to invest in palliative alternatives; the constraint's extractiveness varies by implementation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether terminal patient suffering is a necessary extraction or a contingent policy failure."
+    },
+    {
+      "id": "pressured_vulnerable_definition",
+      "question": "What specific constellation of pressures and vulnerabilities makes a patient 'pressured-vulnerable' such that euthanasia availability predicts harm? Is it economic coercion (healthcare costs), relational coercion (family pressure), institutional coercion (bed rationing), identity-bound shame, or some combination?",
+      "resolution_mechanism": "Epidemiological analysis of euthanasia uptake patterns in jurisdictions with availability: do uptake rates correlate with economic precarity, relational isolation, institutional bed pressure, or a mix? Post-legalization trajectory analysis: do uptake rates among economically disadvantaged populations rise or stabilize?",
+      "impact": "The specific mechanism determines which agents are in the victim set and whether the sanctity reading extracts from them by design (structural coercion of the vulnerable) or by institutional failure (inadequate social safety nets that could be fixed without abandoning the reading). Victim identification depends on this resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which constellation of pressures constitutes the 'pressured-vulnerable' victim set."
+    },
+    {
+      "id": "intrinsic_value_grounding",
+      "question": "What grounds the sanctity reading's claim that human life possesses intrinsic value independent of individual will? Is the grounding theological (divine source), deontological (rights-based), or a different epistemic framework?",
+      "resolution_mechanism": "Textual and institutional analysis of how sanctity advocates defend the intrinsic-value claim: appeal to religious authority (theological), appeal to universal human rights or dignity doctrines (deontological), appeal to natural law (philosophical). The grounding type determines which communities' corroboration would authenticate the founding problem.",
+      "impact": "If theological: the reading's authority rests on religious authority lineage; policy contestation may be irreducible across secular/religious boundaries. If deontological: secular philosophical argument about rights could shift the reading's legitimacy. If natural-law: empirical challenge to the natural-law premise could undermine the reading's foundation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Theological, deontological, or philosophical grounding of intrinsic-value claim."
+    },
+    {
+      "id": "physician_healer_role_reconstruction",
+      "question": "Does the sanctity reading require that physician role be reconstructed as life-preservation-only (healer cannot intentionally end life under any circumstances), or is that reconstruction a contingent institutional choice?",
+      "resolution_mechanism": "Historical and comparative analysis: did the medical community adopt the healer-only role BECAUSE of the sanctity reading, or did the sanctity reading later claim alignment with an existing professional norm? Did physician opposition to assisted dying exist before the sanctity doctrine formalization? Do contemporary sanctity advocates argue the healer-role is entailed by the reading, or a separate professional boundary?",
+      "impact": "If entailed: the reading's institutional expression requires physician role change; moving the reading into law means restructuring medical practice. If contingent: the reading could coexist with physicians trained to support patient autonomy in end-of-life decisions; role reconstruction is a separate policy choice, not a reading-entailed consequence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether physician healer-only role is entailed by sanctity reading or contingently adopted."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "The sanctity-of-life reading grounds end-of-life decision authority in the claim that human life possesses intrinsic value independent of individual will or circumstance. Under this reading, intentional life-ending violates that value and is therefore impermissible, even when a competent individual requests it. The constraint operates by: (1) reserving decision authority to institutional gatekeepers (physicians, ethics committees, legal authorities) rather than placing it with the patient; (2) reconstructing the physician's role as life-preservation-only, foreclosing participation in death-hastening; (3) externalizing the cost of terminal suffering onto patients and families (palliative care is offered but active euthanasia is refused); (4) protecting vulnerable individuals from coercion by making euthanasia legally unavailable, but at the cost of constraining autonomous choice for competent, non-vulnerable patients. This reading competes with the autonomy reading (individuals possess sovereign authority) and the vulnerability-protection reading (authority should be distributed to prevent both denial and coercion). The sanctity reading is CLAIMED as a tangled rope because it serves a genuine coordination function (protecting vulnerable individuals from coercion) while also extracting from terminal suffering patients and from patients who would choose death but are foreclosed by the reading's operation. The constraint's persistence depends on active enforcement: legal prohibition of assisted dying, professional licensing rules that discipline physicians who participate, institutional policies that elevate palliative care as the alternative, and messaging that frames the prohibition as protection rather than restriction.",
+    "key_agents": [
+      "institutional_medical_gatekeepers (physicians, hospital ethics committees, licensing boards) — agenda-setters, enforce the life-preservation norm, control what information patients receive about end-of-life options",
+      "sanctity_doctrine_adherents (religious institutions, pro-life advocacy organizations, certain philosophical traditions) — beneficiaries, vindicate the intrinsic-value claim through institutional policy alignment",
+      "pressured_vulnerable_patients (economically precarious, relationally isolated, institutionally powerless patients in healthcare systems with bed rationing or high treatment costs) — victims, structurally at risk if euthanasia becomes available because cost/pressure logic could override autonomous choice",
+      "terminal_suffering_patients (competent, non-vulnerable individuals with irreversible terminal diagnoses who experience unbearable suffering and would choose assisted death) — victims, structurally constrained by the reading's foreclosure of death as an option, bear the cost of life-preservation norm regardless of their preference",
+      "analytical_observer (medical ethicists, policy researchers, human rights advocates) — observers, measure whether the constraint's protective function justifies its extraction from terminal patients"
+    ],
+    "logic_rationale": "Extractiveness is high and rising (0.42 to 0.68 over the interval) because: (1) the reading imposes a single normative position on all patients regardless of individual circumstance, (2) the cost of that imposition falls asymmetrically on terminal patients and the economically vulnerable, and (3) institutional gatekeepers do not bear the cost of the constraint — they benefit from clarity of role and alignment with doctrine. Suppression is also high and rising (0.58 to 0.71) because the constraint's persistence depends on active enforcement: legal prohibition, professional discipline, messaging campaigns that frame the prohibition as compassionate protection. Theater ratio is moderate (0.28 to 0.42) because the constraint does perform a genuine protective function — vulnerable individuals are genuinely at risk from coercion — but a growing share of enforcement activity serves institutional legitimacy-maintenance rather than actual protection (as palliative care capacity increases and socioeconomic inequality persists, the need to blanket-prohibit euthanasia to protect the vulnerable diminishes, but the prohibition remains). The rising theater ratio suggests the constraint's protective function is being maintained theatrically rather than responding to actual vulnerability.",
+    "perspectival_gap": "From the institutional gatekeeper seat: the constraint is coordination (protects vulnerable patients from coercion by patients' families or healthcare systems under financial pressure; clarity of role for physicians; alignment of medicine with intrinsic-value doctrine). From the terminal suffering patient seat: the same structure is extraction (my autonomous choice is foreclosed; my suffering is externalized; I bear the cost of protecting someone else's vulnerability). From the pressured-vulnerable patient seat: the constraint is genuine protection (euthanasia availability under current socioeconomic conditions creates coercive pressure to choose death; I am protected by the prohibition). The engine computes these divergent readings from directionality: institutional gatekeepers sit at powerful/analytical with arbitrage-grade exit options (they can exit into private practice, administrative roles, or other healthcare systems), so their effective extraction from this constraint is near-zero or negative (they collect authority and role clarity). Terminal suffering patients sit at various power levels but all face trapped or identity-locked exit (they cannot leave the constraint's domain; their identity as a dying person in pain is identity-locked to the system). Pressured-vulnerable patients sit at powerless/organized with constrained exit, making them legitimate beneficiaries of the constraint's protective function.",
+    "directionality_logic": "Institutional medical gatekeepers: powerful/analytical, arbitrage exit → directionality near 0.0 (full beneficiary). They set the rules, control implementation, align with doctrine authority, suffer minimal cost. Terminal suffering patients: moderate-to-powerful/biographical, identity-locked exit (cannot leave dying condition) → directionality near 1.0 (full target). Their autonomy is foreclosed; their suffering is externalized; they cannot exit the constraint. Pressured-vulnerable patients: powerless/biographical, trapped exit → directionality near 0.5 (symmetric/protected). They benefit from the constraint's protection but also bear its costs (no choice, constrained agency). The asymmetry is the structure: institutional gatekeepers experience the constraint as empowering; terminal patients experience it as constraining; vulnerable patients experience it as protecting them from themselves. No override needed — the derived directionality captures the structural divergence.",
+    "mandatrophy_analysis": "The sanctity reading avoids the snare classification despite high extraction because: (1) it articulates a genuine coordination problem (protecting vulnerable patients from coercion), (2) beneficiaries exist who genuinely benefit (pressured-vulnerable patients, institutional gatekeepers, doctrine adherents), and (3) the constraint's persistence is defended by reference to a live founding problem (vulnerability to euthanasia coercion). However, mandatrophy risks are present: (a) the founding problem's scope has narrowed as palliative care capacity increases and as socioeconomic inequality persists but becomes more visible, making the blanket prohibition less necessary for actual protection and more theatrical; (b) as the constraint persists and terminal patients age into the system, awareness of the constraint's extraction cost rises, increasing pressure on institutional gatekeepers to justify ongoing prohibition; (c) the constraint's vulnerability-protection function could be achieved through narrower interventions (mandatory consultation, cooling-off periods, social support for pressured patients) while restoring autonomy for terminal patients — the refusal to adopt narrower alternatives shifts the constraint toward pure extraction. The theater ratio's rise from 0.28 to 0.42 signals the beginning of this drift: the constraint's protective machinery is increasingly performative rather than responsive to actual vulnerability.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'end_of_life_decision_authority'. The kernel is the standing problem of who holds authority over end-of-life decisions and under what conditions. The sanctity reading holds that human life possesses intrinsic value independent of individual will, so decision authority should be held by institutional gatekeepers bound to preserve life. The autonomy reading holds that competent individuals possess sovereign authority over their own death. The vulnerability-protection reading holds that authority should be distributed across institutional checkpoints to prevent both denial of death when appropriate and coercion toward death when illegitimate. Each reading instantiates a different constraint with different beneficiaries, victims, extraction profiles, and enforcement mechanisms. This file authors the sanctity reading only, not the kernel or the other readings."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_decision_authority__autonomy_reading",
+      "end_of_life_decision_authority__vulnerability_protection_reading"
+    ],
+    "dual_formulation_note": "This constraint is part of the end-of-life decision authority constraint family (three readings of a contested kernel). The sanctity reading grounds decision authority in intrinsic human value; the autonomy reading grounds it in individual will; the vulnerability-protection reading grounds it in distributed checkpoints. Each reading has a different ε, beneficiary set, victim set, and enforcement mechanism. They are NOT alternative observables of a single constraint (ε-invariance principle, OQ-26) — they are genuinely different constraints arising from different readings of a contested kernel. Network links enable the engine to trace how each reading's evolution affects the others' legitimacy and enforcement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.48
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "institutional_medical_gatekeepers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Physicians, hospital ethics committees, medical licensing boards, and national health authorities that enforce the life-preservation norm. They control what information patients receive about end-of-life options, enforce professional discipline against physicians who participate in assisted dying, design institutional policies that elevate palliative care as the only acceptable alternative, and adjudicate edge cases. They benefit from the constraint by having clear role definition (healer, not death-facilitator) and alignment with religious/philosophical authority structures that validate their professional identity."
+    },
+    {
+      "name": "sanctity_doctrine_adherents",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Religious institutions, pro-life advocacy organizations, philosophical traditions grounded in natural law or theological frameworks that view human life as intrinsically sacred. They benefit by having their normative reading embedded in law, medical practice, and institutional policy. The constraint vindicates their worldview and gives it legal force without requiring them to convince every individual of its truth — the law does the work for them."
+    },
+    {
+      "name": "terminal_suffering_patients",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Competent individuals with irreversible terminal diagnoses (advanced cancer, ALS, end-stage dementia, etc.) who experience unbearable suffering and would choose assisted death to end that suffering. They are barred by the constraint from that choice. They can refuse treatment (passive exit), but active hastening of death is prohibited. Their suffering is externalized — the constraint leaves them to die slowly while palliative care is offered as the sole alternative. They cannot exit the constraint because their dying condition is identity-locked; death will come, but only on the institution's timeline. The constraint extracts from them by foreclosing their autonomous choice while leaving the suffering in place."
+    },
+    {
+      "name": "pressured_vulnerable_patients",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Economically precarious, socially isolated, or institutionally powerless patients who might face coercion from family members (do not burden us), healthcare systems (you are taking up a needed bed; consider a quicker exit), or internalized shame (I am a burden; I should not continue). Under the sanctity reading's reading, they are protected by the blanket prohibition on euthanasia — euthanasia is not an option anyone can pressure them toward. However, they also bear costs: they cannot access euthanasia even if they genuinely choose it; the constraint assumes they cannot be trusted with autonomous choice and must be protected from themselves. The constraint overrides their agency for their own good."
+    },
+    {
+      "name": "physicians_facilitating_death",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "A subset of physicians who view end-of-life assistance as consistent with healing (ending suffering is a form of care) and who would provide it if permitted and requested. They are excluded from participation by professional licensing rules, legal prohibition, and institutional policy. They are kept out not by lack of expertise or legitimacy within the broader medical community (some jurisdictions and peer communities recognize their perspective), but by the sanctity reading's reconstruction of the physician role as life-preservation-only. Their voice is suppressed by professional discipline."
+    },
+    {
+      "name": "medical_ethicists_vulnerability_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "A diverse group that includes (1) ethicists who defend the sanctity reading on vulnerability grounds — the blanket prohibition protects the pressured-vulnerable from coercion, (2) ethicists who criticize the reading as overly restrictive and propose narrower alternatives (mandatory consultation, cooling-off periods, social support), and (3) human-rights advocates who argue that terminal patients' right to bodily autonomy and relief from suffering should outweigh the vulnerability-protection function. They analyze the constraint's operation and corroborate or contest the founding problem's status."
+    },
+    {
+      "name": "legislative_bodies",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "National parliaments and state legislatures that enact laws prohibiting assisted dying. They set the constraint's formal legal structure and can modify it through new legislation. They are observers in that they respond to public pressure and expert testimony; they are also partial agenda-setters in that they can choose which reading to enshrine in law or maintain neutrality and permit regional variation."
+    }
+  ],
+  "gain_flow": "institutional_medical_gatekeepers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Protects economically precarious and relationally isolated patients from coercion toward death by making euthanasia legally unavailable — by removing the option entirely, the constraint removes the coercive pressure that family members or healthcare systems under financial stress could exert. Also coordinates physicians around a unified role definition (life-preservation) that simplifies professional identity and institutional practice, reducing the cognitive and moral burden on individual clinicians to make case-by-case judgments about hastening death.",
+    "transfer_function": "Moves decision authority FROM individuals (patient autonomy) TO institutional gatekeepers (physicians, ethics committees, legal authorities). Also moves suffering FROM healthcare systems and families (who might bear social/financial costs of caring for a dying person) TO dying patients (who bear the costs by continuing to live and suffer). Moves moral authority FROM individuals (who might invoke secular autonomy grounds) TO doctrine-adherents and institutional frameworks (who invoke sacred-life doctrine).",
+    "absent_voices": "Patients in jurisdictions or communities where the sanctity reading does not dominate are largely absent from this constraint's decision-making (e.g., patients in Netherlands, Belgium, Switzerland where different readings are legally instantiated). Secular bioethicists who defend patient autonomy on grounds other than vulnerability are present in medical ethics literature but excluded from institutional policy-making in many jurisdictions. Some religious traditions (e.g., Jewish Talmudic reasoning on pikuach nefesh — saving life overrides other commandments, but ending suffering can be consistent with respecting life) have nuanced positions that are not represented in the simplified doctrine used to enforce this reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the sanctity reading's legal enforcement disappeared overnight, institutional policy would shift rapidly. Physicians would regain discretion; patients would regain choice; institutional gatekeepers would lose their unified role definition and would need to develop case-by-case reasoning frameworks or defer to patient preference. Vulnerable patients would face increased coercion risk (from family and healthcare systems) unless social safety nets improved. Healthcare systems would face new resource-allocation questions (how to support patients choosing death?). The arrangement's disappearance would not return the world to a natural state — it would activate a different reading of the same kernel (autonomy or vulnerability-protection), which would have its own institutional consequences.",
+    "founding_problem": "Economically precarious and relationally isolated patients face coercion from family members (financial burden narratives), healthcare systems under bed-rationing or cost pressure (you are taking needed resources), or internalized shame (I should not burden others). This coercion can push patients toward requesting death not from autonomous choice but from external pressure. The founding problem is: how can we protect vulnerable patients from this coercion? The sanctity reading's answer: make euthanasia legally unavailable so no one can use the threat/promise of death as a coercive tool.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Institutional medical gatekeepers and sanctity doctrine adherents attest the founding problem is live and active. Some medical ethicists and human-rights advocates outside the benefiting parties corroborate vulnerability-driven coercion as a real risk. However, other medical ethicists and autonomy advocates argue: (1) the founding problem has been overstated and is not as severe as the blanket prohibition assumes, (2) narrower interventions (mandatory consultation, social support, mandatory waiting periods) could address the founding problem without foreclosing autonomous death, (3) the constraint persists not because the founding problem demands it but because institutional gatekeepers and doctrine adherents benefit from maintaining it. The corroboration is partial — some outside voices support the founding problem's importance, others contest whether the founding problem's severity justifies the constraint's current scope."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "autonomy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "vulnerability_protection_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "human_life_intrinsic_sacred_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "intentional_death_violates_sacred_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "life_preservation_imperative",
+    "drift_state": {
+      "moment": "contemporary_palliative_care_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

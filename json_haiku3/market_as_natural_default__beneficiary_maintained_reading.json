@@ -1,0 +1,588 @@
+{
+  "header": {
+    "constraint_id": "market_as_natural_default__beneficiary_maintained_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "d97859e7-e55e-4b48-9d51-181814e7fdba"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.51,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market-as-Natural-Default: Beneficiary-Maintained Reading",
+    "topic_domain": "political_economy/ideology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "financial_sector",
+      "multinational_corporations",
+      "property_owners"
+    ],
+    "victims": [
+      "labor_dependent_populations",
+      "small_producers",
+      "subsistence_communities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "financial_sector",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Controls the narrative infrastructure that presents market logic as inevitable and natural. Funds think tanks, chairs departments of economics, sponsors media narratives, and produces research justifying market outcomes as equilibrium states. Actively funds counter-narratives to alternative economic arrangements (cooperative ownership, state provision, commons-based allocation). Collects rents from the arrangement via favorable tax, regulatory, and monetary policy."
+    },
+    {
+      "name": "multinational_corporations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from the naturalization of property rights, contract enforcement, and profit extraction as baseline institutional structures. Are insulated from questioning whether these arrangements are inevitable or desirable. Participate in institutional capture (regulatory capture, university governance, think tank boards) that maintains the closed framing of what 'the market' is and whether alternatives are thinkable."
+    },
+    {
+      "name": "property_owners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from the naturalization of private property as the only legitimate form of resource control. Land, capital, and claims are treated as natural objects to be owned privately; common ownership, stewardship, and usufruct arrangements are presented as exotic or failed alternatives rather than viable historical systems."
+    },
+    {
+      "name": "labor_dependent_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Must accept market-determined wages and conditions as natural and inevitable. Have access to alternative economic arrangements (worker cooperatives, mutual aid, commons-based production) suppressed in mainstream discourse and policy. Face active reframing: alternatives are labeled inefficient, utopian, or unscalable by the same institutions that benefit from market naturalization. Experience the constraint as having no exit because 'there is no alternative.'"
+    },
+    {
+      "name": "small_producers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Compete in markets structured to favor scale and capital intensity. Are told this is natural competitive selection rather than a designed arrangement. Cannot access the institutional supports (narrative, regulatory, financial) that large firms use to naturalize the market system. Exit via cooperative or commons-based production requires swimming against institutional framing and policy."
+    },
+    {
+      "name": "subsistence_communities",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Many are forcibly integrated into market economies by colonial and post-colonial policy. Their own institutions of resource management and production are not just suppressed but erased from the possibility space—intellectually through anthropology and development theory that marks them as primitive, institutionally through legal systems that do not recognize commons or usufruct claims. Identity fusion with their own institutions makes exit from market logic psychologically and socially incoherent."
+    },
+    {
+      "name": "heterodox_economists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Produce sustained scholarly critique of market naturalization—institutional economics, ecological economics, feminist economics, Marxist political economy. Are systematically excluded from: mainstream journal publication, university funding, media platforms, policy advisory roles. Must front-load their critique with apologies for challenging 'established theory.' Their absence from the agenda-setting table is what the enforcement machinery exists to maintain."
+    },
+    {
+      "name": "alternative_institutional_models",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Cooperative ownership structures, commons-based resource management, state provision, planned economies, gift economies—these institutional forms historically existed and continue to exist in pockets. They are not forgotten but actively reframed as marginal, failed, or impossible. Their existence is not suppressed; their viability and scalability are suppressed."
+    },
+    {
+      "name": "policy_maker_institutions",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate within the constraint's framing: they design policy to tweak markets, not to question whether the market is the appropriate coordinating mechanism for a given domain. Central banks, finance ministries, and trade negotiators are staffed by economists trained in the naturalized framing. Their capacity to imagine non-market alternatives for healthcare, education, housing, or resource allocation is structurally limited by the institutional capture."
+    },
+    {
+      "name": "media_systems",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Amplify the market-as-natural narrative through: framing economic crises as failures of regulation rather than design, covering labor issues as supply-and-demand stories rather than power dynamics, treating privatization as technical improvement rather than resource redistribution. Are funded by advertising from financial and corporate beneficiaries. Frame the naturalization as neutral reporting."
+    },
+    {
+      "name": "observer_frame",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structural picture: market naturalization is neither natural nor accidental, but an ongoing institutional project. Identifies which institutions defend it, by what mechanisms, at what cost to non-beneficiaries. Can model what the world would look like if this constraint vanished—what alternatives would surface, what rents would decompress, what arrangements would re-emerge."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single, universal language (price, profit, property) for allocating resources across heterogeneous populations without explicit negotiation or centralized planning authority. Solves the problem: how to coordinate production and distribution at global scale when feudal authority is gone and democratic negotiation is infeasible. This coordination function is genuine and was historically necessary.",
+    "transfer_function": "Moves control over production, capital accumulation, and resource allocation to property owners and financial intermediaries. Moves labor and rents to capital holders. Extracts from workers (via wages below productivity), small producers (via scale disadvantage), and subsistence communities (via forced commodification). Concentrates in financial sector, multinational corporations, and property owners.",
+    "absent_voices": "Heterodox economists (institutional, ecological, feminist, Marxist traditions) who argue markets are one mechanism among many, not natural law. Cooperative movements and commons stewardship traditions arguing for viable alternatives. Subsistence producers whose institutions are erased. These voices would argue: the founding problem is solved; alternatives are proven viable; naturalization is ideological cover for rent extraction. They are excluded from mainstream academic funding, policy advising, and media platforms—systematically, not accidentally.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If beneficiary-maintained naturalization stopped (if policy recovered the capacity to ask 'is the market appropriate for this domain?' for healthcare, education, housing; if media reported alternatives as viable; if heterodox economics received funding equal to orthodox; if legal/financial barriers to cooperatives were removed), the constraint would collapse within a decade. Cooperative ownership would explode. State provision would return to education and healthcare. Rents flowing to finance would compress dramatically. The naturalization is what makes alternatives seem impossible; removing it makes them inevitable. The world would rearrange because the entire institutional logic depends on market naturalization being unchallengeable.",
+    "founding_problem": "In the 18th–19th centuries, feudal authority systems collapsed and mercantilist coordination mechanisms broke down. Global trade and production required a coordinating mechanism that didn't depend on personal loyalty, heredity, or centralized planning. Markets emerged as a solution: price signals aggregate distributed knowledge without requiring anyone to plan the whole system. The problem was real and acute. The constraint solved it.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "We now have multiple working coordination mechanisms: state bureaucracies (healthcare, education, infrastructure), international institutions (UN, trade agreements), digital platforms (open source, Wikipedia), cooperative enterprises (Mondragon, credit unions), and blended systems (Nordic economies). The founding problem—how to coordinate without feudal authority—was acute in 1750. It is now solved. Market mechanisms are one of the solutions, not the inevitable solution. Historical economists document this shift: Polanyi on the embedding of markets in social systems; Hirschman on the mutual dependence of markets and state; Zuboff on the emergence of new extraction mechanisms within market naturalization. Comparative institutional analysis by economists outside the mainstream (North, Acemoglu, Ostrom) all document that viable alternatives exist and operate successfully at scale. The persistence of market naturalization as dominant framing is not explained by the founding problem's continued acuteness—it is explained by beneficiary maintenance."
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.51
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1980,
+    "tn": 2026,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.76
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.74
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.76
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.64
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.66
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.44
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.64
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.46
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.64
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.44
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.56
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.54
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Market naturalization is the active institutional project by which finance, corporations, and property owners present market allocation as inevitable, efficient, and natural—a product of human nature or economic laws—rather than as one possible coordinating mechanism among many. This reading treats that naturalization as ACTIVELY DEFENDED post-hoc: beneficiaries fund the narratives, capture institutions that could question them, and suppress alternatives from policy and academic discourse. The founding problem (how to coordinate without feudalism) was live in the 18th century; it is now dead. The constraint persists not because the problem persists but because beneficiaries maintain its framing. Alternatives are neither forgotten nor impossible; they are actively reframed as unthinkable. This is distinct from the hybrid_amnesia_reading (initial forgetting creates openness to capture) and the lapsed_alternative_reading (alternatives fade from cultural memory). Here, alternatives are visible—worked examples exist (cooperatives, state provision, commons)—and are actively labeled as marginal or failed.",
+    "key_agents": [
+      "Financial sector: institutional agenda-setter; funds think tanks, chairs economics departments, produces naturalizing research; collects rents from the arrangement; arbitrage-exit capable.",
+      "Labor-dependent populations: powerless payers; trapped in wage systems; told alternatives are impossible; identity-locked into market participation.",
+      "Heterodox economists and cooperative institutions: excluded from policy tables and mainstream funding; would argue alternatives are viable; systematic erasure from conversation.",
+      "Property owners: beneficiaries insulated from questioning legitimacy of private property; participate in capture; have mobile exit but defend the system.",
+      "Subsistence communities: identity-locked payers; forced integration into market systems; own institutions erased intellectually and legally; exit unthinkable."
+    ],
+    "logic_rationale": "Extractiveness starts low (0.32 in 1980) when alternatives were still partially visible in policy discourse (labor unions, state industries, cooperative movements were still seen as live options). It rises as institutional capture deepens: financial deregulation, neoliberal policy shifts, consolidation of media ownership, and defunding of public institutions all operate within the beneficiary-maintained reading. The measurement grid shows that at the INDIVIDUAL level, accessibility collapse rises from 0.58 to 0.72—workers individually perceive fewer alternatives. At STRUCTURAL level, it's already high and stays high (0.68→0.76) because the system itself naturalizes market logic. Suppression rises across all levels (individual 0.38→0.58, structural 0.46→0.64), peaking around 2008 when the financial crisis could have shattered market naturalization, but beneficiaries mounted an active counter-narrative (too big to fail, market failures require more markets, austerity is inevitable). Theater ratio climbs (0.38→0.51) as the machinery of naturalization becomes more sophisticated: peer-reviewed journals that exclude heterodox work are presented as neutral science; policy recommendations from beneficiary-funded economists are framed as technical expertise; 'innovation' in finance is covered as beneficial disruption rather than new extractive mechanisms. The 2008 peak and slight decline reflects the moment when naturalization was most vulnerable (crisis visible, alternatives briefly thinkable) and beneficiaries had to intensify defense—hence theater rises sharply. Post-2008 stabilization at 0.48 extractiveness reflects a quasi-equilibrium: suppression and theater hold alternatives at bay; extractiveness cannot rise much further without provoking mass exit or coalition-building, so beneficiaries stabilize the constraint rather than ratchet it tighter.",
+    "perspectival_gap": "From the beneficiary seats (financial sector, multinational corporations, property owners), the market is a natural, efficient, inevitable system—deviations from it are failures that require more market (deregulation, privatization). They experience the constraint as having no enforcement cost because they control the narrative infrastructure; it feels like natural fact. From the payer seats (labor, small producers), the constraint appears as active enforcement: media that never questions market logic, policy that treats alternatives as unthinkable, educational systems that teach market fundamentals as truth rather than framework. The excluded seats (heterodox economists, cooperative movements) see the full machinery: funded PR, institutional capture, suppression of alternatives. The engine computes these seat-specific classifications from power/exit/directionality: beneficiaries at high power with arbitrage exit and low d→low/negative χ (they experience positive subsidy); payers at low power with trapped/identity-locked exit and high d→high χ (extraction is felt as oppressive inevitability); excluded seats experience observational divergence.",
+    "directionality_logic": "Financial sector d≈0.05 (full beneficiary): controls the narrative machinery, arbitrage-capable (can move capital if domestic policy shifts), institutional power. Multinational corporations d≈0.1: benefit from naturalization of property and contract, but some labor/regulatory pressure reduces pure beneficiary status. Property owners d≈0.25: benefit substantially but have political/social constraints (legitimacy questions in some regions); mobile exit but ideologically locked to property defense. Labor d≈0.85: trapped and identity-locked (their survival depends on markets); high suppression; alternatives suppressed. Small producers d≈0.8: constrained exit (cooperatives and commons alternatives exist but require institutional support they don't have); moderate power but low relative to market-dominating firms. Subsistence communities d≈0.95: identity-locked; alternatives not just suppressed but erased; powerless. Directionality overrides: none needed—the derivation chain (beneficiary/victim + power + exit) produces accurate d values.",
+    "mandatrophy_analysis": "This constraint is LIVE tangled_rope, not a false mountain. The founding problem (feudalism → market coordination) was real and acute in 1750. It is now dead (we have multiple coordination mechanisms; markets are no longer novel). The founding_problem_status is 'dead' and disappearance_verdict is 'world_rearranges'—this is the classic mandatrophy signature. Beneficiaries maintain the constraint not because it still solves the founding problem, but because it distributes rents in their favor. The measuring difference between mandatrophy_resolved=false (the constraint persists despite dead founding problem) and theater_ratio rising (performance becoming the primary function) is visible in the grid: suppression rises despite stable/declining extractiveness (the rents don't inflate; the defense effort does). The constraint can be classified as tangled_rope (genuine coordination kernel + asymmetric extraction + active enforcement) AND marked for mandatrophy review: the coordination benefit has decoupled from the distribution, and beneficiaries now defend primarily the distribution, not the coordination. A policy intervention that recovered alternatives (cooperative financing, public banking, worker ownership) would collapse the constraint; it persists only because that recovery is suppressed.",
+    "kernel_context": "This constraint is the beneficiary_maintained_reading of the kernel 'market_as_natural_default'. The kernel is the claim that markets are the natural, efficient, inevitable way to allocate resources—a claim that persists despite multiple alternative mechanisms existing and working. This reading instantiates that kernel by asserting that beneficiaries actively defend market naturalization post-hoc: narrative work (think tanks, media, academia), institutional capture (regulatory agencies, finance ministries), and suppression of alternatives (excluding heterodox economics from publication and policy). Sibling readings: lapsed_alternative_reading treats market dominance as historical forgetting—alternatives fade from cultural memory without active defense; hybrid_amnesia_reading treats the constraint as arising from initial closure (alternatives were forgotten when markets emerged) which THEN creates openness to beneficiary capture. This reading differs from both: alternatives are visible and worked examples exist (Wikipedia, cooperatives, state healthcare); they are actively reframed as marginal or utopian, not forgotten."
+  },
+  "omegas": [
+    {
+      "id": "beneficiary_intent_vs_structural_outcome",
+      "question": "Do beneficiaries consciously and deliberately maintain market naturalization as an ideological project, or do they genuinely believe in it and maintain it out of conviction rather than strategic interest?",
+      "resolution_mechanism": "Internal documentation from beneficiary institutions (leaked strategy memos, archived planning documents, oral histories from insiders). Pattern matching on rhetorical behavior: deliberate decoupling of private belief and public narrative is a strong indicator of strategic maintenance.",
+      "impact": "If deliberate: the constraint is a snare with ideological cover—classification demotes to pure extraction. If conviction-driven: the constraint is a genuine tangled_rope with active-but-sincere enforcement. If mixed: mandatrophy is acute (beneficiaries defend a dead founding problem believing it's alive).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether market naturalization is actively maintained out of strategic interest or sincere conviction that markets are natural."
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "Is the measured suppression primarily internalized—individuals believe no alternatives are thinkable—or is it structural—barriers make alternatives actually inaccessible?",
+      "resolution_mechanism": "Post-exit trajectory: when individuals exit suppressive arrangements and gain access to alternative narratives and institutions (cooperative workplaces, heterodox education, autonomous communities), does suppression persist? Rapid recovery of alternative-considering capacity = internalized; persistence = structural.",
+      "impact": "If internalized: suppression is psychological, not just institutional; higher effective suppression than the scalar metric suggests (target carries it with them after exit). If structural: removing barriers (funding heterodox economics, legal/financial support for cooperatives, media pluralism) directly collapses suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of alternatives is internalized (psychological) or structural (institutional barriers)."
+    },
+    {
+      "id": "kernel_reading_alternative_viability",
+      "question": "Are alternative institutional forms (cooperatives, commons, state provision) actually scalable and functionally viable at the scale markets operate, or are they genuine niche solutions unsuitable for global coordination?",
+      "resolution_mechanism": "Comparative analysis of performance and cost for hybrid systems that blend market mechanisms, state provision, and cooperative/commons components (e.g., Nordic economies, Mondragon industrial complex, municipal utilities). Scaled trials where barriers are removed and alternatives receive equivalent institutional/financial support.",
+      "impact": "If viable: the constraint's suppression of alternatives is unjustified by structural necessity; alternatives are suppressed purely to maintain beneficiary rents (snare reclassification). If niche: market naturalization has partial truth; constraint is correctly classified as tangled_rope (necessary coordination with asymmetric benefit).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether alternative institutional forms are genuinely scalable or constrained to specific contexts."
+    },
+    {
+      "id": "founding_problem_genuine_revival",
+      "question": "Could the founding problem (coordination without centralized authority) re-emerge under conditions of state collapse, digital fragmentation, or post-centralization? Is the constraint poised to become functionally necessary again?",
+      "resolution_mechanism": "Historical scenario analysis and institutional fragmentation studies. If state-level authority collapses or digital networks fundamentally fragment, do markets re-emerge as the primary coordination mechanism?",
+      "impact": "If re-emergence likely: the constraint's persistence is forward-looking, not merely beneficiary-maintained; it would reclassify as scaffold (temporary support for a transition now complete, but institutionally poised for re-emergence). If re-emergence unlikely: the constraint's persistence is purely beneficiary-maintained and mandatrophy is complete.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the founding problem (coordination without centralized authority) could re-emerge and justify market naturalization prospectively."
+    },
+    {
+      "id": "kernel_reading_contention",
+      "question": "Is the lapsed_alternative_reading (market dominance results from historical forgetting without active defense) empirically distinguishable from this beneficiary_maintained_reading, or are they describing the same constraint from different temporal angles?",
+      "resolution_mechanism": "Documentary evidence of active defense mechanisms (funded narratives, institutional capture) vs. passive forgetting. If beneficiary-funded think tanks and academic programs emerged BEFORE alternatives faded from public discourse, active defense is primary. If forgetting preceded active defense machinery, forgetting is primary.",
+      "impact": "If distinguishable (active defense is primary): this reading's classification as tangled_rope + mandatrophy is correct. If the readings describe the same constraint with different causal framings: the two readings coexist_with rather than influencing each other; they are perspectival rather than structural variants.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether active beneficiary maintenance and passive historical forgetting are distinguishable mechanisms or descriptive frames for the same constraint."
+    },
+    {
+      "id": "identity_lock_reversibility",
+      "question": "For agents locked into market participation via identity fusion (labor-dependent populations whose self-concept is 'I am a wage earner'), is the identity lock structurally irreversible or contingent on continuous reinforcement from narrative institutions?",
+      "resolution_mechanism": "Longitudinal study of individuals who exit wage-dependent markets and gain sustained access to cooperative/autonomous production: does identity reconstitute around non-wage labor? If yes, lock is reversible; if no, lock is identity-fused and quasi-irreversible.",
+      "impact": "If reversible: removing the constraint (funding alternatives, recovering cooperative tradition) allows rapid identity reconstruction and mass exit. If irreversible: constraint persists even if enforcement machinery is dismantled, because targets' self-concept enforces it internally.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether identity lock to market participation is reversible when institutional reinforcement is removed."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "market_as_natural_default__hybrid_amnesia_reading",
+      "market_as_natural_default__lapsed_alternative_reading"
+    ],
+    "dual_formulation_note": "The kernel 'market_as_natural_default' decomposes into three readings, each with distinct structural properties and ε values. This reading (beneficiary_maintained) treats naturalization as actively engineered by identifiable beneficiaries; it emphasizes narrative work and institutional capture. The hybrid_amnesia_reading treats initial forgetting as creating openness to capture. The lapsed_alternative_reading treats forgetting itself as the primary mechanism, without active beneficiary defense. All three share the same referent (the standing arrangement: market allocation as natural default) but author different mechanisms for its persistence. The engine computes per-reading classifications; this constraint instantiates the beneficiary_maintained mechanism and should not be averaged or fused with sibling readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
+    }
+  ],
+  "gain_flow": "financial_sector",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "market_as_natural_default"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hybrid_amnesia_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "lapsed_alternative_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "market_naturalization_actively_defended",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "alternatives_are_suppressed_not_forgotten",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "markets_as_natural_inevitable_default",
+    "drift_state": {
+      "moment": "contemporary_2026",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

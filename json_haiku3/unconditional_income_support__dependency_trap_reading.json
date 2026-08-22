@@ -1,0 +1,394 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "357a8ec0-1d03-4fdb-b526-f46f4f65f4b9"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support as Incentive-Distorting Subsidy (Dependency Trap Reading)",
+    "topic_domain": "political_economy/social_policy/welfare_state",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "middle_and_upper_income_recipients",
+      "ubi_advocacy_organizations"
+    ],
+    "victims": [
+      "working_poor_losing_targeted_programs",
+      "taxpayers_bearing_aggregate_cost"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "working_poor",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Currently receive means-tested benefits (housing assistance, food support, childcare subsidies) that total $8,000–$15,000 annually depending on local program availability. Under unconditional income support at $1,000/month ($12,000/year), those targeted programs are eliminated or severely cut to offset the universal payment. Net outcome: lose specialized support (e.g., housing vouchers worth $6,000–$10,000) and receive a smaller, undifferentiated $12,000 check. The gap leaves them worse off. Their exit option is labor market participation, but low-skill employment offers wages often below regional cost of living; the substitution of universal payments for targeted aid removes the margin that made survival possible."
+    },
+    {
+      "name": "middle_and_upper_income_recipients",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Receive the same $12,000/year unconditional payment as everyone else. For households already earning $80,000–$150,000+, this is a pure windfall; they face no income test, no work requirement, no behavioral condition. They deploy it as discretionary savings, investment, or supplemental consumption. The universality of the payment ensures they collect without stigma or verification burden. They are net beneficiaries: they pay higher taxes (average $2,000–$3,500 more annually on progressive schedules) but receive the $12,000 transfer, netting positive return or manageable negative return depending on their marginal rate."
+    },
+    {
+      "name": "ubi_advocacy_organizations",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocate for unconditional income support as policy, building political capital around the universality claim: everyone receives, no means test, no bureaucratic verification. This framing solves for their core goal (basic income redistribution) and their organizational interest (simple, universal programs are easier to scale, defend, and claim credit for than complex, targeted systems). They frame opposition as anti-redistribution and frame support as pro-universal-human-dignity. The elimination of targeted programs is treated as a feature (removing stigma) rather than an extraction mechanism (replacing more efficient support with less efficient universality)."
+    },
+    {
+      "name": "taxpayers_and_general_revenue",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the aggregate fiscal cost: unconditional income support at $1,000/month for 260 million adults is approximately $3.12 trillion annually (gross). Offsets (elimination of some existing welfare programs, modest efficiencies) reduce net cost to approximately $1.4–$1.8 trillion. Taxpayers fund this through progressive income tax increases (marginal rates rise 5–8 percentage points) and/or payroll tax increases. Their extraction is diffuse: no single taxpayer controls the policy, and the cost is socialized across the tax base, making individual resistance difficult. Their exit option is capital mobility (high earners can relocate) or political voice (advocate for repeal), but the policy enjoys supermajority support among low-income voters, making electoral reversal unlikely."
+    },
+    {
+      "name": "means_tested_program_administrators",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer housing assistance, SNAP, childcare subsidies, and other targeted programs. Unconditional income support crowds out their function: the programs are defunded to offset the universal payment, eliminating the administrative apparatus and the specialized knowledge to match aid to need (e.g., regional housing costs, family composition, medical expenses). They lose budgets, staff, and organizational mission. Their objection (that targeted programs are more efficient and reach only the needy) is overridden by the universality claim (everyone gets the same, no means test). They are excluded from the policy design process and are not recognized as having legitimate interests in program continuation."
+    },
+    {
+      "name": "labor_market_and_employers",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Unconditional income support operates as a labor-market subsidy to non-work: individuals can opt out of employment at a lower reservation wage (the $12,000/year floor). Pilots show a -3.2% employment reduction per AEI meta-analysis. Employers face reduced labor supply in low-wage sectors (hospitality, agriculture, retail), putting upward pressure on wages or forcing operational adjustments. They do not control the policy and cannot exit the jurisdiction, so their cost is absorbed as operational pressure or passed to consumers. They are treated as a payer (bearing the employment reduction cost) but are not recognized as affected parties in the policy discourse."
+    },
+    {
+      "name": "policy_analysts_and_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the policy's distributional and behavioral effects. From this reading's seat, the constraint is a snare: it replaces efficient, targeted transfers with a universal, undifferentiated transfer that leaves the poorest worse off and benefits the non-needy. The reading depends on empirical claims about employment elasticity (does labor supply decline?) and distributional analysis (who gains, who loses?). Their seat is analytical and they exercise voice through research and publication; they do not control implementation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ostensibly coordinates a simplified redistribution mechanism: one single transfer replaces dozens of means-tested programs, reducing administrative overhead and stigma. The universality claim eliminates verification requirements and makes the payment universally available.",
+    "transfer_function": "Moves approximately $1.4–$1.8 trillion annually from high-income taxpayers to all adult citizens, distributed as a flat $1,000/month payment. In this reading, the constraint functionally transfers wealth FROM working poor and taxpayers TO middle/upper-income recipients and advocacy organizations (political capital gain). The working poor lose more targeted support than they gain in universal payment; middle-income recipients receive a windfall; taxpayers bear the full fiscal cost.",
+    "absent_voices": "Means-tested program administrators, low-wage employers, working poor with specialized needs (disabled workers, regional cost-of-living variance, family-size adjustment). These parties would object that universality destroys program efficacy for the poorest and that the employment reduction is not offset by the payment floor. They are excluded because the universality framing treats their objection as opposition to redistribution itself, not recognition of distributional mechanics.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support and its universal funding structure disappeared overnight, the world rearranges sharply: targeted welfare programs are restored (or rebuilt), labor supply in low-wage sectors recovers, the fiscal burden on high earners falls by $1.4–$1.8 trillion annually, and the working poor regain access to specialized support. The constraint is not natural; it is a chosen institutional arrangement that can be unmade.",
+    "founding_problem": "Welfare bureaucracy is inefficient, means-testing creates stigma and perverse incentives for program enrollment/disenrollment, and poverty persists despite targeted spending. The founding claim is that a single, universal payment bypasses the bureaucratic apparatus and delivers the same poverty-reduction outcome more efficiently.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The constraint's advocates (UBI organizations, progressive economists building the universality model) attest the founding problem is live: bureaucracy is too complex, stigma is real, and means-testing traps workers in poverty cycles. Opposing economists (AEI, targeted-program researchers, working-poor advocacy groups) attest the founding problem is misframed: targeted programs are more efficient per dollar deployed, universality is fiscally unsustainable, and the constraint's designers have not solved the fundamental efficiency problem—they have moved it, not eliminated it. Independent analysis (Congressional Budget Office, GAO evaluations of pilot programs) from outside the advocacy-organization beneficiary set supports the contestation: efficiency gains are modest, employment reduction is measurable, and distributional effects are more negative for the poorest than the advocates claim."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.77,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the dependency-trap reading of the unconditional income support kernel. Under this reading, unconditional income support is structured as a snare that extracts from the working poor by replacing targeted welfare programs with a universal payment that leaves them worse off, and transfers upward to middle/upper-income recipients who receive a windfall. The reading emphasizes the constraint's behavioral effects (employment reduction, labor market substitution) and its distributional mechanics (who gains, who loses, who bears the cost). The constraint is claimed as a snare because it disguises extraction as universality: it presents the elimination of targeted programs (an extractive choice) as a side effect of the universality principle (a cover story), when in fact the elimination IS the extraction mechanism. The three sibling readings (freedom-floor, universality-paradox) interpret the same kernel (unconditional income support as policy arrangement) differently and would author different ε values, different beneficiary/victim structures, and different types. This story is ONE reading only; the siblings are separate constraint stories in a linked family.",
+    "key_agents": [
+      "working_poor: primary target (lose targeted programs worth more than universal payment)",
+      "middle_and_upper_income_recipients: primary beneficiary (net windfall from universality)",
+      "ubi_advocacy_organizations: agenda-setter (design and defend the constraint, gain political capital from universality frame)",
+      "taxpayers_and_general_revenue: secondary target (bear fiscal cost)",
+      "means_tested_program_administrators: excluded stakeholder (lose programs and function)",
+      "labor_market_and_employers: excluded stakeholder (bear employment reduction cost)"
+    ],
+    "logic_rationale": "Extractiveness at 0.78 reflects the high asymmetry: the constraint functionally transfers wealth from working poor and taxpayers to non-needy recipients and advocacy organizations. The measurement series shows extraction rising from 0.62 at t=0 (initial implementation, still navigating program transition) to 0.78 by t=16 (full maturation, all targeted programs eliminated, behavioral effects realized, political entrenchment high). Theater rises from 0.28 to 0.42 over the interval: initially, the universality justification is most credible (new program, administrative simplification narrative dominant); as time passes and targeted-program loss becomes visible, the theater ratio rises—more of the constraint's persistence becomes dependent on defending the universality narrative against distributional criticism. Suppression rises from 0.58 to 0.71: the constraint requires active suppression of working-poor objections (framed as opposition to redistribution), exclusion of means-tested administrators from policy voice, and prevention of alternative framings (e.g., a hybrid system retaining targeted programs and adding a modest UBI top-up). The time grid is aligned: every metric shares the same seven time points (0, 2, 4, 8, 12, 16, 20), enabling temporal coherence across the measurement series.",
+    "directionality_logic": "The working poor carry directionality near 1.0 (full target): they pay the extraction (lose targeted support), have trapped exit options (cannot exit the jurisdiction or the welfare system entirely), and face identity-locked dependency on the constraint's rules. The middle/upper-income recipients carry directionality near 0.0 (full beneficiary): they collect a net windfall, have arbitrage-grade exit (can relocate if tax rates rise, can reallocate income to lower tax bases), and face minimal suppression. The taxonomy diverges across power levels: a powerful, arbitrage-capable agent (middle income) experiences the same constraint as a beneficiary with near-zero directionality; a powerless, trapped agent (working poor) experiences the same constraint as a target with high directionality and high effective extraction. The UBI advocacy organizations carry directionality near 0.5 in abstract (they collect political capital, not fiscal transfer), but their structural position is as an agenda-setter—they design and enforce the constraint—so their directionality is better understood as asymmetric beneficiary with organized power. The engine derives d from beneficiary/victim + exit + power; the measurement reveals seat divergence.",
+    "perspectival_gap": "From the agenda-setter seat (UBI advocacy organizations), the constraint appears as a rope: a genuine coordination solution to welfare bureaucracy inefficiency, universally beneficial, morally aligned with redistribution principles. From the working-poor seat, the constraint appears as a snare: a mechanism that replaces valuable targeted support with a smaller universal check, harming the poorest while benefiting the non-needy. From the taxpayer seat, the constraint appears as extraction with moderate theater: the universality claim justifies a massive fiscal transfer to non-needy recipients, and resistance is suppressed by framing opposition as anti-redistribution. The three readings (this one, freedom-floor, universality-paradox) each anchor to a different seat's experience and generalize it as the constraint's true nature. This reading anchors to the working-poor and taxpayer-burden seats.",
+    "mandatrophy_analysis": "The constraint's founding problem (welfare bureaucracy is inefficient, means-testing creates stigma) is claimed as LIVE by the constraint's advocates but is CONTESTED by independent analysis. The empirical evidence (CBO, GAO evaluations) suggests efficiency gains are modest and distributional effects are worse for the poorest than claimed. The theater ratio rising from 0.28 to 0.42 indicates the constraint's persistence increasingly depends on defending the universality narrative rather than on genuine program efficacy. The constraint begins to exhibit mandatrophy signature: the founding problem (bureaucratic inefficiency) is substantially addressed by administrative reform and targeted-program optimization (which occurs in parallel or independently), yet the constraint persists because it serves the political interest of the agenda-setters (universality claim, organizational power) and the fiscal interest of non-needy recipients. The disappearance verdict is world_rearranges (arrangements depend on the constraint), so mandatrophy does NOT declare here—mandatrophy requires world_unchanged or contested verdict. However, the rising theater ratio and the empirical contestation of the founding problem suggest ongoing drift toward mandatrophy condition if evidence continues to undermine the founding claim.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'unconditional_income_support' (the policy arrangement itself). This reading instantiates the 'dependency_trap_reading': unconditional income support is an incentive-distorting subsidy that rewards idleness, crowds out targeted aid, and redistributes upward to non-needy recipients. The sibling readings are 'freedom_floor_reading' (UCS as autonomy-enabling floor removing labor-market coercion) and 'universality_paradox_reading' (UCS as politically ambiguous Trojan horse). The three readings share a referent (the unconditional income support policy arrangement) but instantiate different constraints with different epsilon values, beneficiary/victim structures, and types. This reading emphasizes distributional extraction and behavioral distortion; the siblings emphasize autonomy gains or political incoherence. The readings coexist as live positions held by different parties (dependency-trap advocates, freedom advocates, universality skeptics); no single party's framework logically forecloses the others. The disagreement is located in the structural interpretation of the constraint's effects on labor supply, distributional outcomes, and the motivations of the advocacy organizations."
+  },
+  "omegas": [
+    {
+      "id": "employment_elasticity_empirical_contention",
+      "question": "What is the true employment elasticity of unconditional income support at the tested payment level ($1,000/month)? Do labor-market effects from small pilots ($200–$500/month, 1–3 year duration) generalize to full-scale, permanent implementation ($1,000/month)?",
+      "resolution_mechanism": "Multi-year pilot studies with varied payment levels and durations; real-world implementation data from jurisdictions running unconditional income support long-term; meta-analysis of employment outcomes across multiple studies with consistent methodology.",
+      "impact": "If employment elasticity is low (near zero), the dependency-trap reading's core claim about incentive distortion weakens, and the constraint approaches rope or tangled-rope classification. If elasticity is high (>2%), the snare classification strengthens and the extraction claim is validated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Employment behavioral response to full-scale unconditional income support."
+    },
+    {
+      "id": "targeted_program_replacement_efficiency",
+      "question": "Is eliminating targeted programs to fund unconditional income support actually more efficient than operating both systems in parallel (hybrid approach: targeted programs + modest UBI top-up), or is the constraint's motivation to eliminate targeted programs driven by the agenda-setter's interest in simplification and political universality rather than genuine efficiency optimization?",
+      "resolution_mechanism": "Comparative cost analysis of three scenarios: (1) baseline targeted programs only, (2) full universality + targeted-program elimination, (3) hybrid (targeted programs retained + modest UBI addition). Per-dollar poverty-reduction outcomes for each scenario. Analysis of why the policy designer chose elimination over addition.",
+      "impact": "If elimination is less efficient than hybrid approaches, the constraint is not solving a genuine coordination problem—it is extracting from the poorest to satisfy the agenda-setter's institutional interest in universality. This would support the snare classification. If elimination is substantially more efficient, the constraint approaches tangled-rope (coordination + extraction) or rope (genuine coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's elimination of targeted programs is optimality-driven or ideology-driven."
+    },
+    {
+      "id": "middle_income_windfall_capture",
+      "question": "Is the upward redistribution to middle/upper-income recipients a design feature (intentional cross-subsidy of universality) or an unintended side effect discovered after implementation?",
+      "resolution_mechanism": "Policy design documents, legislator testimony, advocacy organization communications from pre-implementation period. Post-implementation distributional analysis showing gain/loss by income quintile. Statements from designers about whether they anticipated the upward redistribution.",
+      "impact": "If intentional, the constraint is a design choice to sacrifice poor-targeting for political universality—it is clearly extractive, supporting snare classification. If unintended, the constraint retains a more generous interpretation (honest mistake in design), but the persistence after discovery would indicate extraction-covering (mandatrophy drift).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the upward redistribution is an intended feature or an unintended consequence."
+    },
+    {
+      "id": "reading_contention_over_behavioral_premise",
+      "question": "Do the freedom-floor reading and the universality-paradox reading accept the dependency-trap reading's empirical premises about employment reduction and distributional loss, or do they dispute the premises themselves?",
+      "resolution_mechanism": "Comparative reading analysis: do the sibling readings concede employment elasticity but claim it is offset by autonomy gains (freedom-floor), or do they dispute the elasticity itself (universality-paradox)? This determines whether the readings coexist or whether one forecloses the other on empirical grounds.",
+      "impact": "If all readings accept the employment reduction but interpret its meaning differently (extraction vs. autonomy, efficiency vs. incoherence), they coexist. If the freedom-floor reading disputes the employment reduction entirely, it forecloses the dependency-trap reading on factual grounds. If the universality-paradox reading claims both readings' empirical premises are simultaneously true but incoherent, it influences both without foreclosing either.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The relationship between readings is determined by whether they dispute premises or interpretations of shared premises."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_rhetorical",
+      "question": "Is the measured suppression (0.71) structural (legal/institutional barriers to alternative welfare configurations, political entrenchment making program restoration difficult) or rhetorical (opposition framed as anti-redistribution, making dissent costly but not legally barred)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if a jurisdiction dismantles unconditional income support and restores targeted programs without legal/constitutional barrier, the suppression is primarily rhetorical. If restoration is blocked by constitutional interpretation, political super-majority requirements, or path-dependent institutional lock-in, the suppression is structural. Survey of working-poor agents on whether their suppression persists after the constraint is removed.",
+      "impact": "If structural, the constraint's extractive force is higher than the measured suppression suggests (target cannot exit even if the arrangement is removed). If rhetorical/internalized, the working poor carry some suppression in their cognition even after the constraint's removal, indicating identity-lock or ideology-driven internalization.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized/rhetorical."
+    },
+    {
+      "id": "kernel_reading_foreclosure_test",
+      "question": "Does the dependency-trap reading logically foreclose the freedom-floor reading, or do they coexist as interpretatively incommensurable but simultaneously holdable positions?",
+      "resolution_mechanism": "Formal logical analysis: if one reading's core axiom directly contradicts the other's (e.g., 'employment elasticity is zero' vs. 'employment elasticity is nonzero'), they may coexist on empirical grounds (different factual premises). If they interpret the same facts through incompatible frameworks (e.g., employment reduction is extraction vs. autonomy enablement), they coexist. Foreclosure occurs only if one reading's acceptance logically precludes the other's framework, not merely its conclusion.",
+      "impact": "If foreclosure: the engine computes one reading as invalid given the other's adoption, routing to contradiction detection. If coexistence: both readings remain live in the corpus, modeling genuine political disagreement. This determines the reading_relations classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether readings are logically incommensurable or merely empirically disputed."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "unconditional_income_support__freedom_floor_reading",
+      "unconditional_income_support__universality_paradox_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'unconditional_income_support' (the policy arrangement itself). Three structurally distinct constraints instantiate three readings: dependency_trap_reading (this file, snare type, high extractiveness), freedom_floor_reading (rope/coordinate type, autonomy-enabling, low extractiveness from beneficiary seats), and universality_paradox_reading (tangled_rope type, political incoherence, contested effectiveness). The three readings share a referent (unconditional income support policy) but instantiate different constraints with different epsilon values, beneficiary/victim structures, and stakeholder experiences. All three are linked via this network field. The decomposition follows DP-001 (epsilon-invariance principle): measuring the constraint differently (employment effects, distributional outcomes, autonomy impacts) produces substantially different epsilon values, signaling multiple constraints, not one constraint viewed from multiple angles. Each reading is complete, internally coherent, and falsifiable on its own terms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "gain_flow": "middle_and_upper_income_recipients",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "employment_reduction_indicates_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "universality_principle_incompatible_with_targeting_efficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "program_elimination_imposes_net_cost_on_poorest",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "targeted_welfare_state_efficiency_baseline",
+    "drift_state": {
+      "moment": "post_unconditional_support_implementation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "unconditional_income_support__freedom_floor_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

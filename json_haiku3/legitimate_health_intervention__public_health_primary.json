@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__public_health_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "b4b2309f-7dc3-4b38-a88c-afec2ee27ff7",
+    "created_at": "2026-06-15T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.73,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Legitimacy via Population Morbidity Reduction (Public Health Primary Reading)",
+    "topic_domain": "public_health/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_populations",
+      "vulnerable_age_cohorts",
+      "unvaccinated_disease_vectors"
+    ],
+    "victims": [
+      "vaccine_hesitant_individuals",
+      "medical_exemption_claimants",
+      "employment_terminated_unvaccinated"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "readings_kernel_contest",
+      "question": "Is legitimacy grounded primarily in measurable population-level health outcomes (public_health_primary reading), in individual bodily autonomy irrespective of outcomes (bodily_autonomy_primary reading), or in proportionality between intervention severity and threat level (proportionality_reading)?",
+      "resolution_mechanism": "Constitutional adjudication, legislative mandate revision, or persistent empirical challenge to the reading's core premise (e.g., evidence that interventions do not produce claimed population benefit, or that externality models fail to account for cross-cohort variation in disease transmission).",
+      "impact": "This reading instantiates public_health_primary: the constraint's legitimacy is ONLY sustained by measured reduction in population morbidity/mortality. If empirical evidence shows the intervention no longer reduces population harm (e.g., pathogen evolution, waning efficacy, behavioral substitution), the constraint loses its legitimacy ground in this reading — the constraint either reclassifies to snare (pure extraction with a weakened cover story) or the reading itself forecloses. Sibling readings would reframe the assessment differently: bodily_autonomy_primary would reject the constraint regardless of population benefit; proportionality_reading would require re-weighting severity against autonomy.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which normative ground — population welfare, individual bodily integrity, or proportionality — legitimates the constraint."
+    },
+    {
+      "id": "externality_model_accuracy",
+      "question": "Do unvaccinated individuals actually impose measurable externalities (disease transmission, hospitalization burden, mortality) on the general population, or does the externality model misattribute causal responsibility (e.g., by ignoring vaccinated transmission, behavioral compensation, or prior immunity)?",
+      "resolution_mechanism": "Epidemiological analysis of transmission chains, hospitalization attribution by vaccination status, and counter-factual modeling of disease dynamics under alternative policy regimes.",
+      "impact": "If externalities are overestimated or misattributed, the victim set (vaccine_hesitant_individuals, medical_exemption_claimants) bears costs not justified by the public health ground this reading claims. The constraint would then show characteristics of snare (extraction under a false coordination cover) rather than tangled_rope (genuine coordination + asymmetric enforcement). If externalities are real but smaller than measured suppression/enforcement suggests, the constraint shows extraction above the level the public health benefit justifies — still tangled_rope, but with higher excess extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the externality model accurately identifies who harms whom and by how much."
+    },
+    {
+      "id": "enforcement_mechanism_proportionality",
+      "question": "Are the suppression mechanisms (employment termination, access restrictions, social exclusion) proportionate to the public health objective and the magnitude of individual externality, or do they constitute punitive measures decoupled from the stated harm reduction goal?",
+      "resolution_mechanism": "Comparative analysis of enforcement intensity across populations (are enforcement actions stratified by risk profile, or uniform across low-risk and high-risk populations?); cost-benefit assessment of alternative less-suppressive mechanisms (e.g., testing protocols, treatment access); post-removal trajectory of suppression (does suppression persist after the policy ends, indicating internalization or institutional capture?).",
+      "impact": "If enforcement is disproportionate, the constraint shifts from tangled_rope (extraction justified by coordination need + actual enforcement necessity) toward snare (extraction maintained by suppression regardless of stated goal). High theater_ratio (0.42) already suggests growing disjunction between stated function and actual enforcement activity; if proportionality assessment shows enforcement far exceeds what the public health claim requires, that confirms the disjunction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement mechanisms remain calibrated to the public health objective or have become decoupled from it."
+    },
+    {
+      "id": "alternative_readings_coexistence_boundary",
+      "question": "Can bodily_autonomy_primary and proportionality_reading coexist with public_health_primary in a single legal/institutional framework, or does public_health_primary's supremacy axiom logically foreclose them?",
+      "resolution_mechanism": "Jurisprudential analysis: if courts, legislatures, or institutions actively hold multiple readings simultaneously (some agents claim autonomy grounds, others claim proportionality, still others claim public health supremacy), the readings coexist; if institutional dominance rules out one reading's core premise as legally binding, foreclosure is present.",
+      "impact": "This omega addresses the cs_structure.reading_relations choice: if public_health_primary forecloses bodily_autonomy_primary (the readings logically cannot both be true in the same framework), that is a foreclosure relation. If they coexist as competing positions held by different institutional/legal authorities, that is coexistence. The choice shapes the family structure and terminal type predictions: foreclosure implies one reading will eventually lose legal standing; coexistence implies indefinite contestation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's axioms logically rule out sibling readings' core premises, or whether multiple readings can remain live positions."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.71) structurally enforced (external barriers: employment loss, legal restrictions) or internalized (cognitive patterns: acceptance of the legitimacy claim, fear of contagion attribution, identity fusion with 'good citizen' status)?",
+      "resolution_mechanism": "Post-intervention tracking: remove the enforcement mechanism and measure whether suppression persists in targeted populations. High persistence indicates internalization; rapid rebound indicates structural suppression.",
+      "impact": "If suppression is internalized, the constraint's effective suppressive force is higher than the authored 0.71 suggests — the target carries the constraint with them after external enforcement ends. If structural, the suppression is narrower (only active when enforcement machinery operates) and could be more easily disrupted by exit or legal challenge. Internalization also affects identity_locked exit coding: highly internalized suppression suggests stronger identity fusion with the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the vaccine-hesitant population."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Under the public health primary reading, legitimacy of health interventions (vaccination mandates, treatment requirements, access restrictions) derives entirely from measured reduction in population-level morbidity and mortality. Individual refusal to comply is reframed as an externality — an imposition of disease transmission risk, hospitalization burden, and mortality on immunocompromised and vulnerable populations. Unvaccinated individuals enter the victim set as disease vectors whose refusal imposes costs on others. The enforcement mechanisms (employment termination, facility access restrictions, travel barriers, social exclusion) are justified as necessary to contain the externality. This reading is ONE instantiation of the contested kernel 'legitimate_health_intervention'; sibling readings (bodily_autonomy_primary and proportionality_reading) reject or significantly reweight these claims.",
+    "key_agents": [
+      "Public health authorities: agenda_setter, institutional power, generational time horizon — set and enforce population-level mandates; justify restrictions by appeal to measured morbidity/mortality reduction; control the epidemiological data that define externality magnitude.",
+      "Immunocompromised populations: beneficiary, powerless to organized power atoms, biographical to generational time horizons — receive protection from disease exposure; constrained exit (cannot leave society to avoid unvaccinated individuals); treatment access tied to compliance enforcement.",
+      "Vaccine-hesitant individuals: payer (in the victim set), moderate to powerless power atoms, biographical time horizon — bear employment termination, access restrictions, social exclusion; exit options range from identity_locked (refuse vaccination on principle) to constrained (require exemptions, testing, accommodation).",
+      "Medical exemption claimants: payer (in the victim set), powerless to moderate power atoms, biographical time horizon — face scrutiny of exemption claims; suppression via medical gatekeeping and institutional skepticism.",
+      "Unvaccinated disease vectors (framing from this reading): payer (in the victim set AND as disease sources), powerless to moderate power atoms, biographical time horizon — externality bearers in the public health account; their refusal constitutes harm imposition on vulnerable populations.",
+      "Healthcare system: beneficiary (reduced patient load, managed capacity) and payer (enforcement overhead), institutional power, generational time horizon — administers access restrictions and employment coordination.",
+      "Proportionality advocates: excluded (role=excluded), observer, analytical power — would argue for risk stratification, proportional intervention, and cost-benefit weighting; structurally outside the decision-making process in public_health_primary framing.",
+      "Bodily autonomy advocates: excluded (role=excluded), observer, analytical power — would argue refusal is a fundamental right regardless of externality magnitude; their voice is not in the room where this reading operates."
+    ],
+    "logic_rationale": "Extractiveness (0.68 at interval end) is high because the constraint imposes substantial costs on vaccine-hesitant populations (employment loss, access denial, social exclusion) that persist even after disease risk declines or vaccines become less effective — the enforcement infrastructure decouples from the stated health objective and becomes institutionalized extraction. Suppression (0.71) reflects active enforcement mechanisms: employment termination is legal suppression; access restrictions are regulatory suppression; social exclusion is institutional suppression. Theater_ratio (0.42 and rising to plateau) indicates growing disjunction between stated public health function and actual enforcement activity — as disease threat declines or pathogen characteristics shift, the enforcement intensity does not proportionally decline, suggesting the constraint has become partially self-sustaining (theater). Accessibility_collapse (0.64) is moderate-to-high: once the public health framing is accepted as legitimate, alternatives (medical exemptions, testing protocols, risk-stratified approaches) appear collapsed or illegitimate, but some escape routes persist (religious exemptions, political accommodation, geographic exit). Resistance (0.73) is high: vaccine-hesitant populations, medical freedom advocates, bodily autonomy litigants, and proportionality advocates mount sustained resistance, visible in court challenges, legislative amendments, and civil disobedience. The measurement series shows extractiveness and suppression rising from 0.42/0.48 (t=0) to 0.68/0.71 (t=30) and plateauing, while theater_ratio rises from 0.18 to 0.42 and plateaus — indicating a phase transition where the constraint moved from high-function coordination (early pandemic, genuine coordination problem) to enforced extraction (later period, problem solved but mechanism persists). The plateau suggests equilibrium: further extraction would trigger political backlash or legal reversal; current extraction is sustained by institutional inertia and theater.",
+    "perspectival_gap": "The public health authority seat (agenda_setter, institutional power) experiences this as genuine coordination: we identified an externality (disease transmission), set a measurable target (population morbidity/mortality reduction), and enforce compliance to achieve it. The constraint is justified by outcomes. The vaccine-hesitant seat (payer, powerless-to-moderate power) experiences this as extraction: we are being coerced to bear costs (employment loss, access denial, social exclusion) based on a framing we reject, enforced by institutions we cannot influence, with no path to exit or meaningful appeal. We did not accept the externality model; we were subjected to it. The immunocompromised beneficiary seat experiences genuine coordination function: we depend on others' compliance for our safety; the constraint protects us. The proportionality advocate (excluded, observer) sees both functions but argues they are asymmetrically weighted: the constraint treats disease transmission as a supreme value and individual autonomy as negligible, when proportionality would require re-weighting based on actual threat level, vaccine efficacy, and autonomy costs. The engine computes these divergences from the structural data — different power atoms, different exit options, different roles — without requiring consensus on the constraint's legitimacy.",
+    "directionality_logic": "Public health authorities sit at d near 0.0-0.2 (beneficiary directionality): they set the rules, control the data, and have no exit pressure; the constraint benefits their authority and institutional mission. Immunocompromised populations sit near d=0.3-0.4 (beneficiary/low-target asymmetry): they genuinely benefit from disease reduction but carry suppression burden indirectly (their safety depends on enforcement). Vaccine-hesitant individuals sit near d=0.8-0.95 (target directionality): they bear employment loss, access denial, and social costs; their exit options are constrained (identity_locked refusal, or constrained by material dependence on employment/services); the constraint extracts from them. Medical exemption claimants sit near d=0.75-0.9 (high-target): they bear suppression via medical gatekeeping and institutional skepticism. The directive asymmetry is sharp: the beneficiary seats (authority, immunocompromised) sit far toward the low-extraction end, while the payer seats (hesitant, exemption claimants) sit far toward the high-extraction end. This asymmetry is the tangled_rope signature: genuine coordination function (disease reduction) paired with asymmetric extraction (unequal cost/benefit distribution) and active enforcement (required to maintain the asymmetry).",
+    "mandatrophy_analysis": "The constraint's mandate is 'reduce population-level morbidity and mortality through mandatory health intervention compliance.' The founding problem (pandemic disease threat, vulnerable population risk) is contested in status: the public health authority claims the problem is live and ongoing (resistant pathogens, new variants, immunocompromised vulnerability); hesitant populations and proportionality advocates claim the problem is substantially solved (vaccines effective, disease endemic, mortality manageable) or solved at a cost disproportionate to remaining threat. The measurements show extractiveness and suppression rising and plateauing even as the founding threat declines (t=0-30 represents a period where disease severity declined, vaccines became widely available, and mortality fell). Theater_ratio rising from 0.18 to 0.42 and plateauing indicates the constraint is increasingly maintained by performance rather than function: enforcement activities continue (employment restrictions, access controls) but are less directly coupled to the stated health objective. The mandate has not died (no single moment of death), but it has outlived the acute founding problem — the constraint now persists by institutional inertia and enforcement infrastructure maintenance rather than by solving a live coordination problem. This is not a classic piton (which would require no beneficiary; here the public health authority still collects authority/prestige/resource from the constraint), but it is moving toward piton characteristics: persistence despite mandate decay, requiring theater to maintain legitimacy.",
+    "kernel_context": "This constraint instantiates the 'public_health_primary' reading of the contested kernel 'legitimate_health_intervention'. The kernel is the contested claim about what grounds the legitimacy of coercive health interventions (mandatory vaccination, treatment requirements, access restrictions). The public_health_primary reading asserts that legitimacy derives from MEASURED REDUCTION IN POPULATION-LEVEL MORBIDITY/MORTALITY, and that individual refusal constitutes an externality imposition on vulnerable populations. Sibling readings: (1) bodily_autonomy_primary: Legitimacy requires informed consent for medical interventions; state coercion violates bodily integrity regardless of public benefit. Core premise: bodily integrity as a supreme value, prior to consequences. (2) proportionality_reading: Legitimacy requires proportionality between intervention severity (costs to autonomy, access restriction, social exclusion) and threat level (actual disease transmission risk, mortality risk, vulnerability distribution); both population harm and individual autonomy matter, weighted by epidemiological characteristics. Core premise: a multi-value optimization, not a supremacy hierarchy. The public_health_primary reading forecloses bodily_autonomy_primary in one specific dimension: if measured population benefit is sufficiently large, public_health_primary declares coercion legitimate; bodily_autonomy_primary declares it illegitimate regardless of benefit. These are logically incompatible in a single framework — if you hold public_health_primary's supremacy axiom (population welfare overrides individual autonomy), bodily_autonomy_primary's premise (autonomy as supreme) is foreclosed. However, they coexist historically: different legal jurisdictions, different institutional actors, and different time periods hold them simultaneously, creating the contest. The proportionality_reading coexists with public_health_primary (not foreclosed) because both acknowledge population welfare and individual autonomy as real values; they differ in weighting mechanism, not in which values exist. Proportionality_reading also influences public_health_primary: proportionality advocates argue for risk stratification, reduced intervention in low-threat populations, and sun-setting clauses — these arguments create structural pressure on public_health_primary's operation even if they don't logically foreclose it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimate_health_intervention__bodily_autonomy_primary",
+      "legitimate_health_intervention__proportionality_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the kernel 'legitimate_health_intervention'. The constraint family includes three sibling readings, each instantiating a different legitimacy ground: public_health_primary (this constraint — population-level outcomes as supreme), bodily_autonomy_primary (individual medical consent as supreme), and proportionality_reading (multi-value optimization by threat level). Each reading has distinct beneficiary/victim structures, distinct ε values, and distinct type classifications. They are NOT the same constraint viewed from different angles; they are different constraints derived from the same contested kernel. The family is linked by network.affects_constraints and by the kernel_context commentary. Each reading must be authored separately to preserve the structural data that generates its classification; merging readings into one story would obscure the structural differences that make the contest real. The upstream reading (public_health_primary) influences the downstream readings: bodily_autonomy advocates argue against public_health_primary's supremacy claim; proportionality advocates argue for re-weighting of public_health_primary's weights."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set population-level morbidity/mortality targets; determine which interventions (vaccination mandates, access restrictions, treatment requirements) are necessary to achieve them; control epidemiological data and threat-level assessments; enforce compliance through employment, access, and regulatory mechanisms. Justify restrictions by appeal to public health benefit. Face sustained political pressure and legal challenges but retain institutional authority and resource control."
+    },
+    {
+      "name": "immunocompromised_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Depend on others' compliance with health interventions for their own safety; cannot exit society to avoid unvaccinated individuals; carry biological vulnerability that makes disease transmission lethal or severely harmful. Benefit from population-level compliance via reduced transmission risk. Suppression burden is indirect (social costs of enforcement felt through healthcare rationing, access delays, institutional tensions)."
+    },
+    {
+      "name": "vaccine_hesitant_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Refuse vaccination on grounds of bodily autonomy, medical skepticism, or ideological conviction. Subject to employment termination, facility access restrictions (healthcare, education, travel), social exclusion, and regulatory barriers. Exit options are severely constrained: refusing vaccination on principle makes exit identity-locked (the refusal is central to their self-conception); material exit (relocating to permissive jurisdictions) is expensive and often unavailable; legal exit (exemption claims) faces institutional skepticism. Bear direct suppression costs."
+    },
+    {
+      "name": "medical_exemption_claimants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Seek medical exemptions to mandatory interventions on grounds of genuine medical contraindications or prior adverse events. Face heightened institutional skepticism, gatekeeping by healthcare providers operating under enforcement pressure, and burden-of-proof requirements that shift decision authority to public health officials rather than treating physicians. Constrained exit: must navigate bureaucratic exemption processes; cannot simply refuse as a matter of principle."
+    },
+    {
+      "name": "healthcare_providers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from reduced patient load (if population compliance reduces disease incidence) and from coordination of care around mandated interventions. Pay enforcement overhead costs: time spent administering access restrictions, processing exemption claims, documenting compliance status, managing conflicts with hesitant patients. Licensed to practice under regulatory conditions that mandate enforcement participation; exit means losing license and practice."
+    },
+    {
+      "name": "proportionality_advocates",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Argue for risk-stratified interventions, proportionality between threat level and intervention severity, and cost-benefit weighting that accounts for both population welfare and individual autonomy. Structurally excluded from the decision-making process under public_health_primary framing (their voice is not seated in the authority structure). Would counsel for sunset clauses, intervention de-escalation, and exemption pathways, but lack institutional power to implement these proposals. Remain as critics rather than participants."
+    },
+    {
+      "name": "bodily_autonomy_advocates",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Assert that mandatory medical interventions violate bodily integrity and the right to medical self-determination, regardless of population benefit. Structurally excluded from the authority structure under public_health_primary framing (their core premise — autonomy as supreme — is treated as illegitimate within this reading). Pursue legal challenges, legislative amendments, and civil disobedience, but lack institutional power to overturn the constraint in public_health_primary's operating jurisdiction. Represent the fundamental challenge to the constraint's legitimacy grounds."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a collective-action problem: vulnerable populations depend on others' vaccination/treatment compliance to prevent disease transmission, which creates an externality problem (individuals can free-ride on others' compliance while refusing themselves). The constraint coordinates compliance by making individual refusal costly, internalizing the externality into the hesitant individual's cost-benefit calculation. Without coordination, disease transmission creates a tragedy-of-the-commons dynamic where individual incentives diverge from population welfare.",
+    "transfer_function": "Moves disease transmission risk and mortality burden FROM the compliant and immunocompromised populations TO the public health authority (which absorbs responsibility and faces credibility loss if disease spreads) and away from vaccine-hesitant individuals (who externalize their infection risk). Employment and access restrictions transfer economic burden and social status from hesitant populations to the authority as enforcement cost. Healthcare resources shift from routine care to disease management and enforcement administration.",
+    "absent_voices": "Proportionality advocates and bodily autonomy advocates are structurally excluded. Proportionality advocates would argue for risk stratification, graduated interventions, and sun-setting mechanisms based on threat level — they are excluded because public_health_primary treats all disease reduction as equally valued regardless of threat magnitude. Bodily autonomy advocates would reject the entire externality framing and assert autonomy as a supreme value — they are excluded because their core premise contradicts public_health_primary's legitimacy ground. Also excluded: vaccine-injured individuals who would argue for robust adverse-event compensation and exemption pathways, and individuals in low-risk populations who would argue they bear intervention costs disproportionate to their personal risk.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint disappeared overnight, disease transmission dynamics would reorganize: vaccination rates would decline to individual-preference levels (estimated 40-60% depending on disease characteristics and prior immunity), disease incidence would rise among vulnerable populations, healthcare system capacity would be challenged by increased cases and hospitalizations, and immunocompromised individuals would face elevated mortality risk. Employers would no longer enforce compliance, healthcare access would normalize, and social exclusion would cease. The public health authority would lose institutional authority and epidemiological control, forcing policy reorganization around voluntary-uptake mechanisms or rationing by risk profile. The externality problem would remain live (disease transmission is real), but would be managed differently — through pricing mechanisms, insurance differentiation, or medical triage rather than legal mandates.",
+    "founding_problem": "Early pandemic disease threat (unknown pathogenicity, high transmission rate, vulnerable population risk) created a collective-action problem: individuals refusing vaccination/treatment imposed disease transmission risk on others without bearing the full cost. Immunocompromised populations had no exit option (cannot isolate indefinitely) and faced severe mortality risk. The founding problem was genuine: absent coordination, disease would spread rapidly through the vulnerable population, causing preventable deaths and overwhelming healthcare capacity.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health authorities attest the problem is still live, citing resistant pathogens, new variants, and persistent immunocompromised vulnerability. Independent epidemiological analysis from academic medical centers confirms disease transmission risk remains real but is substantially lower than in the founding period (disease has become endemic, vaccines are widely available, mortality is manageable). Proportionality advocates and bodily autonomy litigants attest the founding problem has been substantially solved and the constraint persists as extraction. Disease burden has shifted from crisis to endemic management, and the external evidence (hospitalization rates, mortality trends) shows the founding threat is no longer acute. However, public health authorities have not reduced enforcement intensity proportionally — suppression remains at 0.71 even as disease threat declined, suggesting mandate persistence beyond functional necessity."
+  },
+  "gain_flow": "public_health_authorities",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "population_welfare_supremacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "externality_imposition_as_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "pandemic_emergency_medical_necessity",
+    "drift_state": {
+      "moment": "endemic_disease_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "legitimate_health_intervention__bodily_autonomy_primary",
+      "legitimate_health_intervention__proportionality_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

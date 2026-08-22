@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "public_health_mandate_authority__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "f5a2f211-a3a9-416a-90f7-a63df2516f7e"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.5,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality-Balanced Public Health Mandate Authority",
+    "topic_domain": "public_health_law/constitutional_rights/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_populations",
+      "healthcare_system_capacity",
+      "public_health_agencies"
+    ],
+    "victims": [
+      "unvaccinated_individuals_low_threat_context",
+      "immunocompromised_individuals_denied_accommodation",
+      "workers_facing_mandate_conditioned_employment"
+    ],
+    "vindicated_propositions": [
+      "state_police_power_bounded_by_necessity",
+      "least_restrictive_means_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets and periodically re-evaluates mandate scope, threshold triggers, and sunset conditions based on epidemiological severity data. Justifies the mandate's intensity as proportionate to the measured threat and revises it as case rates, variant severity, or hospital capacity change. Bears reputational and legal exposure if the proportionality assessment is later found unjustified."
+    },
+    {
+      "name": "immunocompromised_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Cannot generate protective immunity themselves and depend on population-level transmission reduction for safety. Benefit from mandates during high-severity periods but have no independent way to compel continued protection once political will to maintain restrictions fades; their situation is the primary justificatory weight on the 'severity of threat' axis."
+    },
+    {
+      "name": "unvaccinated_individuals_low_threat_context",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Face employment conditions, access restrictions, or other coercive pressure to comply with a mandate whose proportionality becomes contestable once threat severity declines (e.g., a mild seasonal variant). Their exit options are constrained by job dependency or access dependency, not eliminated outright, distinguishing this reading from a categorical-ban framing."
+    },
+    {
+      "name": "immunocompromised_individuals_denied_accommodation",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "In some proportionality assessments, mandates are relaxed or narrowed to reduce coercive burden on the compliant majority even though this population's exposure risk has not declined at the same rate. If the sliding scale trades their protection for reduced imposition on others, they become victims of the same balancing test that in other configurations protects them."
+    },
+    {
+      "name": "workers_facing_mandate_conditioned_employment",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Employment continuity is conditioned on mandate compliance. Whether this coercion is proportionate depends on the magnitude-of-coercion axis: termination is a severe cost regardless of how mild the underlying threat is, so this population's harm can be disproportionate even under a moderate-severity mandate."
+    },
+    {
+      "name": "healthcare_system_capacity",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Hospital and ICU capacity is protected when transmission mandates hold during surge periods. Not an agent itself but the structural interest the severity-of-threat axis is calibrated against; capacity data is the primary empirical input to the sliding scale."
+    },
+    {
+      "name": "courts_reviewing_mandate_proportionality",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether a specific mandate's severity, alternatives, coercion magnitude, and duration were proportionate to the threat at the time it was imposed. Their rulings retroactively validate or invalidate the sliding-scale test itself as applied, and can compel narrowing, sunset, or complete withdrawal of a mandate."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Argue the proportionality test is manipulable — that agencies can always characterize a threat as severe enough to justify current policy and can extend duration indefinitely by redefining benchmarks. They are heard in litigation and public comment but do not set the initial threshold or trigger the review cycle."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a structured, revisable framework for calibrating collective transmission-control measures against actual epidemiological severity, avoiding both under-response to genuine threats and indefinite over-restriction once threat recedes.",
+    "transfer_function": "Moves burden of compliance (bodily autonomy, employment conditionality, movement restriction) from the population as a whole onto whichever subgroup the current proportionality assessment designates as bearing the coercive cost, in exchange for reduced transmission risk accruing to medically vulnerable populations and strained healthcare infrastructure.",
+    "absent_voices": "Civil liberties advocates participate in litigation and comment but do not control the initial severity-assessment trigger or the review cadence; immunocompromised individuals denied accommodation under a relaxed mandate configuration have no independent voice once the balancing test shifts against them — their harm is absorbed into an aggregate proportionality judgment that does not track their individual risk.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the proportionality framework vanished, the kernel dispute would not resolve — it would revert to whichever categorical reading (public_health_primary or bodily_autonomy_primary) currently holds more political power, likely producing either indefinite mandates or a permanent ban on mandate authority. Proponents say the sliding-scale mechanism itself, not just its current output, is what prevents both extremes; opponents say the framework's flexibility is precisely what allows extraction disguised as calibration.",
+    "founding_problem": "Public health emergencies vary enormously in severity and duration, and a single fixed rule (either 'mandates are always permissible' or 'mandates are never permissible') fails to track this variance — producing either unjustified coercion during mild threats or unjustified inaction during severe ones.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Constitutional law scholars outside both public-health and civil-liberties advocacy communities (e.g., administrative law academics writing on Jacobson v. Massachusetts and its progeny) attest the proportionality problem is live and structurally unresolved by either categorical reading. Civil liberties advocates counter that the test's open-endedness is itself the mechanism by which agencies avoid ever being forced to concede a mandate is disproportionate — corroboration exists but is contested on whether the framework solves the problem or merely defers it."
+  },
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.5,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This constraint is the proportionality_reading of the public_health_mandate_authority kernel. Unlike the public_health_primary reading (which treats collective protection of the vulnerable commons as categorically dispositive) and the bodily_autonomy_primary reading (which treats non-consensual medical intervention as categorically impermissible regardless of collective benefit), this reading treats legitimacy as a function of four sliding variables: threat severity, availability of less-restrictive alternatives, magnitude of coercion, and duration of imposition. It is the reading most commonly instantiated in actual constitutional adjudication (e.g., Jacobson-descended case law), and it produces a dynamic victim boundary rather than a fixed one — the same population can move from beneficiary to victim as the threat/coercion ratio shifts. The sibling readings are NOT part of this constraint; they are separate constraints in the same family, linked via network.affects_constraints.",
+    "narrative_context": "During a declared public health emergency, a jurisdiction imposes escalating and then de-escalating mandate measures (vaccination, masking, or movement restriction conditioned on employment or access) calibrated against a stated severity threshold. As the pathogen's measured severity declines (case fatality rate drops, treatments become available, or population immunity rises), the mandate is narrowed and eventually sunset. The proportionality framework is the mechanism that governs when and how much coercion is authorized at each severity level — it is not itself a fixed rule but a standing test applied and re-applied by agencies and courts across the interval.",
+    "key_agents": [
+      "public_health_agencies: agenda_setter, sets and revises mandate scope against severity data",
+      "immunocompromised_populations: primary structural beneficiary during high-severity phases",
+      "unvaccinated_individuals_low_threat_context: bears coercive cost that becomes disproportionate as severity declines",
+      "immunocompromised_individuals_denied_accommodation: becomes a victim of the same balancing test that otherwise protects the class",
+      "courts_reviewing_mandate_proportionality: analytical/adjudicative seat testing the proportionality claim after the fact"
+    ],
+    "logic_rationale": "Extractiveness is authored as a declining-then-rising curve (0.68 at T0 falling to 0.35 at T24, rising slightly to 0.42 at T36) because the proportionality reading's defining feature is that ε is NOT fixed — it tracks the severity/coercion ratio across the interval, per the expected structural delta. Early in the interval the threat is characterized as severe and coercion is high relative to alternatives (high ε); mid-interval, alternatives (treatments, natural/vaccine immunity) expand and coercion narrows (declining ε); late-interval a moderate uptick models either a new variant or a court finding the narrowed mandate still overshoots the reduced threat. Suppression tracks a similar but not identical curve, since suppression is the raw enforcement mechanism (mandate conditions on employment/access) which lags threat reassessment by design — agencies are slower to relax enforcement machinery than to revise official severity language, which is why suppression_requirement stays higher longer than extractiveness through the early-to-mid interval and stabilizes at 0.5 rather than tracking all the way down with ε.",
+    "directionality_logic": "Directionality here is intentionally dynamic rather than fixed to a single population, which is the structural delta this reading is meant to capture. Immunocompromised populations are the beneficiary class when the mandate is proportionate to a genuine high-severity threat (low d, subsidized). The same class becomes a payer/victim when a proportionality assessment relaxes the mandate to reduce coercive burden on the compliant majority without a corresponding decline in their personal exposure risk — this is why immunocompromised_individuals_denied_accommodation appears as a separate stakeholder from immunocompromised_populations: they are structurally the same demographic experiencing opposite directionality depending on where the sliding-scale assessment currently sits. Unvaccinated individuals and mandate-conditioned workers sit on the target end whenever coercion magnitude is high relative to threat severity, and move toward the beneficiary end (avoided the mandate's cost) as thresholds relax.",
+    "perspectival_gap": "The agenda-setting public health agencies experience this constraint as a functioning coordination mechanism they administer in good faith against evolving data (rope-like from that seat). The workers and unvaccinated individuals bearing employment-conditioned coercion during a period the sliding scale has not yet caught up to declining severity experience the identical structure as extraction backed by active enforcement (tangled-rope-to-snare-like from that seat). The engine's per-seat computation is expected to diverge sharply between the agenda_setter seat and the payer seats precisely because the proportionality test's central claim — that legitimacy tracks a genuine sliding scale — is contestable in real time from inside the interval, not just in retrospect.",
+    "mandatrophy_analysis": "The proportionality framework is explicitly the mechanism proposed to PREVENT mandatrophy — mandates that outlive their founding threat. Because it carries a built-in requirement to re-assess against current severity, alternatives, coercion magnitude, and duration (rather than a one-time authorization), in principle it should self-correct as threat recedes, which the declining extractiveness curve models. But the T36 uptick and the theater_ratio's late-interval plateau around 0.28-0.30 signal the risk the omega variables document: agencies retain review authority and can characterize a stabilized-but-nonzero threat as 'still severe enough' indefinitely, at which point the proportionality test stops functioning as a genuine constraint on mandate duration and starts functioning as a procedural justification for continuing a mandate whose founding severity has in fact passed — the dead-problem/live-authority mismatch the R5 fields are built to surface."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection_indeterminacy",
+      "question": "Is the proportionality reading the correct lens for this kernel, or does its apparent moderation between the public_health_primary and bodily_autonomy_primary readings actually function to legitimate whichever categorical position currently holds institutional power by dressing it in the language of case-by-case balancing?",
+      "resolution_mechanism": "Track whether proportionality assessments, across many jurisdictions and pathogens, actually produce narrowing/sunset outcomes proportional to measured severity decline, versus whether they systematically ratchet toward whichever direction institutional incentives favor (agencies toward continuation, courts toward restriction) regardless of the stated severity data.",
+      "impact": "If assessments track severity data with reasonable fidelity, the proportionality reading is a genuine third framework distinct from both categorical siblings. If assessments systematically diverge from stated severity in a consistent direction, the proportionality reading is better understood as one of the categorical readings wearing a balancing-test costume.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the sliding-scale test is a genuine independent framework or a legitimation device for a pre-committed categorical position."
+    },
+    {
+      "id": "dynamic_victim_boundary_measurement",
+      "question": "At what point in the severity/coercion trajectory does the victim-designated population actually flip from unvaccinated/mandate-burdened individuals to immunocompromised/vulnerable individuals denied continued protection?",
+      "resolution_mechanism": "Would require a jurisdiction-specific empirical threshold model correlating case fatality rate, hospital capacity utilization, and mandate coercion intensity with which population bears greater marginal harm at each point — likely reconstructable retrospectively from epidemiological and labor outcome data but not knowable prospectively at the time decisions are made.",
+      "impact": "If the flip point can be identified with reasonable confidence in real time, the proportionality framework's core promise (tracking genuine relative harm) is empirically achievable. If the flip point is only identifiable retrospectively, the framework authorizes real-time decisions under an appearance of precision it cannot actually deliver, which would support the civil-liberties critique that the test is manipulable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the dynamic victim boundary the sliding scale implies is measurable prospectively or only retrospectively."
+    },
+    {
+      "id": "kernel_framing_undetermination_cs",
+      "question": "Should this reading's cs_structure be framed around the mandate-issuing agency (the obvious institutional kernel) or around the proportionality doctrine itself as a free-standing interpretive commitment that courts and agencies both claim to be bound by, independent of any specific mandate episode?",
+      "resolution_mechanism": "Examine whether courts treat the proportionality test as a fixed doctrinal kernel they are interpreting (fixed_text-like, grounded in constitutional case law) versus treating each mandate as a fresh administrative determination reviewed under a loosely analogous standard (implicit, practice-grounded).",
+      "impact": "Framing around the doctrine (fixed_text/lineage, courts as interpreters) yields a more stable, less agency-controlled kernel than framing around the issuing agency (formalized/extraction), which would treat the test as agency-administered and more exposed to the mandatrophy risk described above. This story adopts the doctrine framing; the agency framing is the alternative that would change interpretation_layer_present's grounding.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the CS kernel is the proportionality doctrine (courts as lineage-interpreters) or the issuing agency's mandate authority (agency as extraction-interpreter)."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_primary",
+      "bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "This constraint is one of three siblings decomposing the natural-language 'public health mandate legitimacy' claim, per the ε-invariance principle. public_health_primary treats collective protection as categorically dispositive (low/near-zero contestable ε from its own lights, since coercion is justified whenever collective benefit exists). bodily_autonomy_primary treats non-consensual intervention as categorically impermissible (high ε by construction, since any mandate is a rights violation regardless of severity). This proportionality_reading is structurally distinct from both: ε is NOT fixed but a function of the severity/alternatives/coercion/duration variables, authored here as a temporal trajectory across the interval rather than a single scalar judgment. The three stories share a kernel (public_health_mandate_authority) but are NOT the same constraint — each has its own stakeholders, its own victim/beneficiary boundary, and its own claimed_type."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "jacobson_rational_basis_deference",
+    "drift_state": {
+      "moment": "post_pandemic_heightened_scrutiny_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimacy_is_a_function_of_proportional_fit_not_categorical_rule",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "victim_and_beneficiary_status_are_dynamic_not_fixed_by_vaccination_status",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

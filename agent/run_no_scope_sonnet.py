@@ -167,7 +167,16 @@ def run(args):
         gen_by_id = {s["constraint_id"]: s for s in remaining}
         reqs, id_map = build_sonnet_batch_requests(remaining, args.model)
         print(f"\n[attempt {attempt}/3] submitting {len(reqs)} Sonnet requests ({args.model})...")
-        batch = client.messages.batches.create(requests=reqs)
+        try:
+            batch = client.messages.batches.create(requests=reqs)
+        except Exception as e:  # e.g. BadRequestError: credit balance too low (witnessed 2026-08-22)
+            # Exit CLEANLY: the ladder already holds everything written so far; a `--n 0` re-run
+            # resumes the residue once the account is funded. A traceback here lost nothing but
+            # hid the cause under 20 lines of stack.
+            print(f"\nBATCH CREATE FAILED ({type(e).__name__}): {str(e)[:300]}\n"
+                  f"  {len(remaining)} seeds still pending on the ladder; re-run with --n 0 to resume.")
+            (OUT_DIR / "failures.json").write_text(json.dumps(remaining, indent=2, ensure_ascii=False), encoding="utf-8")
+            return
         print(f"  batch {batch.id}")
         poll_batch(client, batch.id, args.poll_interval)
         process_batch_results(

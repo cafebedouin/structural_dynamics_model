@@ -1,0 +1,401 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_kernel__welfare_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_federation_welfare_coordination",
+    "story_uid": "70c679a9-e85c-45a1-9a18-de65678d3bb0"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.54,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Free Movement via Welfare System Coordination (Preservation Reading)",
+    "topic_domain": "political_economy/federalism/migration_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "sending_state_labor_exporters",
+      "multinational_employers",
+      "receiving_state_consumers"
+    ],
+    "victims": [
+      "posted_workers",
+      "receiving_state_native_workers",
+      "receiving_state_welfare_systems"
+    ],
+    "vindicated_propositions": [
+      "subsidiarity_principle",
+      "social_dumping_prevention_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "sending_state_governments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Their labor forces find employment abroad, reducing unemployment pressure on domestic welfare systems. They retain formal authority to design housing, education, and health benefits without supranational mandates. They collect minimal revenue from posted-worker social levies (which are paid only in some receiving states and often underreported). They face pressure from multinational employers to maintain the posted-worker exemption so that firms can post workers without full social-security contributions. They are strategically constrained: exiting the EU is politically catastrophic, and demanding supranational fiscal compensation for brain drain would require admitting that supranational cost-sharing is necessary — which would undermine their claim to welfare-design autonomy."
+    },
+    {
+      "name": "multinational_service_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Post workers from low-wage member states to high-wage member states, paying only home-country social security for 2 years (or transiting through temporary-worker arrangements), capturing wage differentials as profit. They lobby intensively to preserve the posted-worker exemption and to prevent receiving states from enforcing wage floors on posted workers. The coordination-by-national-systems frame (this reading) is their ideal outcome: free movement creates supply, national welfare systems cannot redistribute upward (no supranational pooling), wage competition persists. They have high exit options: they can shift postings between member states, relocate firms, or move to third-country markets if EU rules tighten."
+    },
+    {
+      "name": "posted_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Contracted to work in a high-wage receiving state for 2 years with exemption from that state's social-security contributions. Earn below-local-market wages (typically 30–50% below native workers in same occupation). Have minimal access to receiving-state welfare (unemployment, housing, family benefits) due to contribution requirements and residency periods. Live in sub-standard housing provided by employers, often with language barriers, legal-status precarity. Return home at contract end without accumulated pension contributions or welfare credits in either the sending or receiving state. Professional identity is fused with the contract: they are 'posted workers,' a legal category with restricted rights, not workers-qua-workers. Exit would mean unemployment in the sending state (where they were displaced from) or extreme poverty in the receiving state (where they are unprotected). The arrangement is coercive via contract law and status law, not via violence, but the coercion is structural: individual contracts are take-it-or-leave-it, and leaving means returning to worse alternatives."
+    },
+    {
+      "name": "receiving_state_native_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face two forms of competition: (1) posted workers undercutting wage floors in low-skill sectors (construction, logistics, hospitality, agriculture) — this is temporary and volatile (workers rotate in/out on 2-year contracts); (2) permanent migrants (EU citizens and family reunification migrants) who accumulate in labor markets, creating structural employment displacement and downward wage pressure. Unions represent their interests and have negotiated sectoral wage agreements, but these are undermined by posted-worker exemptions and by employer circumvention (false self-employment, temporary-agency routing of posted workers). Exit options are constrained: they cannot leave the labor market (need income), cannot easily relocate within EU (welfare benefits are residence-tied, housing is expensive), and cannot politically reverse free movement (it is entrenched). Geographic and social mobility are expensive and risky."
+    },
+    {
+      "name": "receiving_state_welfare_systems",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Fund social benefits (housing, unemployment, child allowances, health, pensions) for residents. Face cost pressures from: (a) non-contributory migrants (EU citizens who have not accumulated sufficient contributions but are entitled to residency and some benefits; third-country family members); (b) wage-compressed working poor (native workers whose incomes are suppressed by free movement, making them more reliant on welfare); (c) aging populations (independent of migration, but interacts with fiscal pressure). Formally design welfare benefits and eligibility rules without supranational mandates (the reading's core claim: subsidiarity preserved). Enforce anti-dumping rules (residency requirements: 3–5 years before welfare eligibility; contribution tests: work for X months to qualify for unemployment; nationality conditions where permitted by non-discrimination law). Simultaneously, they are trapped: they cannot exit the federation, cannot radically close borders (ECJ will strike down blanket exclusions), cannot fully recoup social-service costs through employer/employee taxation (firms evade, workers' incomes are suppressed). Welfare design autonomy is formal; fiscal autonomy is constrained."
+    },
+    {
+      "name": "receiving_state_governments",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set and administer anti-dumping rules (residency requirements, contribution tests, nationality conditions, eligibility rules) to prevent welfare cost-shifting. They are the nominal rulers of the constraint — they enforce it through law and administration. Simultaneously, they are trapped by the constraint's larger logic: they cannot fundamentally restrict free movement (ECJ will strike it down), cannot demand supranational fiscal compensation (would require harmonization, contradicting subsidiarity), and must manage political pressure from native workers who face wage competition and welfare-system natives who see austerity. They preserve welfare-design autonomy (can set benefit levels and eligibility) but lose fiscal autonomy (costs are determined by free movement + coordination rules). This is the characteristic position of a tangled_rope agenda_setter: they both set the rule and suffer from its extraction."
+    },
+    {
+      "name": "european_commission",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Interprets, enforces, and updates the anti-dumping provisions through Directives, regulations, and enforcement decisions. Formally committed to preserving member-state welfare-design autonomy while enforcing free movement (the welfare_coordination reading's institutional seat). Reviews member-state welfare rules for compliance with non-discrimination law and free-movement scope. Mediates disputes between sending states (lobbying to preserve posted-worker exemptions) and receiving states (lobbying for tighter eligibility rules). The Commission's actual institutional stance oscillates: DG Employment tends toward the welfare-coordination reading (coordination through national systems); DG Justice tends toward the integration reading (expansive free-movement interpretation). The agency houses both readings internally."
+    },
+    {
+      "name": "european_court_of_justice",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Interprets Treaty free-movement provisions and non-discrimination principles in litigation. Recent case law (Dano 2014, Coman 2018, Dobrica 2021) shows the Court oscillating between the integration and welfare-coordination readings. In some cases, it upholds member-state residency and contribution requirements (welfare-coordination line: national systems can coordinate welfare without supranational mandates). In others, it strikes down nationality conditions and restricts residency requirements (integration line: free movement should be maximized, non-discrimination strictly interpreted). The reading's institutional stability depends on the Court's future jurisprudential direction. If the ECJ converges on the integration reading, this welfare-coordination reading will become unstable."
+    },
+    {
+      "name": "low_skill_labor_movements",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Trade unions and labor parties would argue for: (a) harmonization of social protection (supranational minimum wage, benefit floors), (b) restrictions on posted-worker exemptions (require same wage/benefits regardless of origin), (c) fiscal compensation to sending states (reduce brain drain). They are excluded from the formal federation governance (Commission, Council, ECJ) and can only participate through national governments (which may not represent labor interests). If they were included, the constraint would transform radically — the coordination mechanism would shift from national systems toward supranational social protection."
+    },
+    {
+      "name": "third_country_migrants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are outside the free-movement regime and subject to member-state migration control. Are more restricted than EU citizens and often face harsher welfare exclusions. Are not at the table in federation-level negotiations. Would have the most to gain from supranational harmonization (which would reduce nationality-based discrimination) or the most to lose from tightened national control."
+    },
+    {
+      "name": "neoliberal_policy_consensus",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The doctrine that labor mobility is efficiency-maximizing and that national competition between welfare systems (through subsidiarity) drives cost-control and innovation. The welfare-coordination reading (this one) is institutionally embedded in this consensus: free movement + subsidiarity + wage competition = efficient equilibrium. This consensus is not a party but a vindicated proposition; it structures the policy space."
+    },
+    {
+      "name": "social_solidarity_doctrine",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The doctrine that welfare systems are expressions of national solidarity and must be designed by elected national representatives, not supranational authorities. This doctrine is vindicated by the subsidiarity principle that frames this reading. It is not a party but a constitutive legitimacy claim."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates free movement of labor across borders while preserving member-state welfare-system design autonomy and fiscal sustainability. The coordination problem solved: how to permit labor mobility without requiring supranational welfare harmonization (which member states refuse) or allowing welfare cost-shifting that exhausts receiving-state fiscal capacity. Coordination mechanism: national welfare systems set eligibility rules (residency periods, contribution requirements) that prevent immediate welfare access for migrants; EU enforces anti-social-dumping principles (non-discrimination, minimum contribution standards) to prevent eligibility-rule abuse; sent states retain formal authority to design benefit levels and programs.",
+    "transfer_function": "Moves labor supply from lower-wage to higher-wage regions (wage arbitrage profit for multinational employers). Moves wage pressure downward in receiving-state labor markets (lower wages for native workers and permanent migrants). Moves fiscal costs to receiving-state welfare systems and to receiving-state workers' incomes (via wage suppression and increased welfare need among compressed-income workers). Moves design autonomy and political agency to member-state governments (they set welfare rules). Moves efficiency gains (lower service costs for receiving-state consumers, lower-cost labor for employers) to firms and consumers.",
+    "absent_voices": "Labor movements (trade unions, labor parties): would argue for harmonization of social protection and restriction of posted-worker exemptions. Are represented by unions in sectoral negotiations but are outside the formal federation governance. Third-country migrants: would argue for supranational welfare protection and against nationality-based discrimination; are structurally excluded from federation decision-making. Sending-state citizens who lose access to public services due to worker emigration: are not organized in EU governance; their interests are represented only indirectly through their national governments.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished — if the coordination-through-national-systems rule, anti-dumping provisions, and subsidiarity principle all disappeared — the federation would face a cascading restructuring: either (a) member states would abandon free movement entirely and re-erect borders (fragmenting the single market), or (b) member states would be forced into supranational welfare harmonization (ending the subsidiarity principle and member-state design autonomy), or (c) uncontrolled free movement would continue without anti-dumping protections, leading to welfare crises in high-benefit receiving states. Each alternative contradicts the reading's core claim (that coordination-through-nationals-systems is stable). The constraint's disappearance forces a choice between the integration reading (harmonization upward) and the member-sovereignty reading (border re-erection and restricted mobility).",
+    "founding_problem": "Post-1992 implementation of free movement of persons created a policy challenge: if EU citizens can move freely across borders, they can claim welfare benefits in receiving states immediately, potentially creating fiscal crises in high-benefit states. Simultaneously, sending states lose workers and tax revenue without compensation. The founding problem was institutional: how to permit free movement without either (a) requiring supranational welfare harmonization (which member states refused), or (b) allowing welfare-cost dumping that destabilizes receiving-state welfare systems. The coordination solution: coordinate through national welfare systems, enforce anti-dumping rules to prevent abuse, preserve member-state design autonomy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Commission working documents (DG Employment, DG Justice) confirm the fiscal sustainability challenge remains: member states with generous welfare systems and high net migration continue to report welfare-cost pressures from migrants. Member-state governments (particularly Austria, Sweden, Germany, Denmark) actively lobby to tighten residency requirements and contribution tests, citing welfare-sustainability concerns. ECJ jurisprudence upholds the legitimacy of residency requirements and contribution tests as anti-dumping measures (Dano, Dias cases), confirming the founding problem is institutionally recognized as live. Independent social-policy analysts (outside member-state governments and the Commission) document ongoing tensions between free movement and welfare-system fiscal capacity in receiving states. However, the problem is contested: the integration reading argues that welfare concerns are overstated and that supranational cost-pooling is the real solution; the member-sovereignty reading argues that the problem is structural and requires restricting free movement itself. The welfare-coordination reading's corroboration rests on the actual institutional practice (member states enforce anti-dumping rules to manage welfare costs) rather than on disputed solutions."
+  },
+  "interval": {
+    "start": 1995,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2004,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.54,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The EU's free-movement regime operates through coordinated national welfare systems rather than supranational harmonization. Member states retain design autonomy over housing, health, education, and unemployment benefits, while the EU enforces anti-social-dumping rules (residency periods, contribution requirements, eligibility tests) to prevent cost-shifting. This is ONE READING of the federation_membership_kernel. The constraint embodies a coordination compromise: free movement without supranational welfare cost-pooling. The trade-off is that posted workers and receiving-state workers face wage pressure while sending states lose fiscal base; the arrangement preserves member-state welfare sovereignty but distributes costs unevenly. Extraction has risen over the interval (1995–2024) as posted-worker postings have industrialized and wage-competition effects have accumulated; theater (the share of activity that is rule-enforcement vs. actual coordination) has also risen as anti-dumping provisions require increasing administrative effort. The measurement series track this drift: the coordination function (preventing welfare crises) is real, but the extractive machinery (posted-worker arbitrage, wage undercutting, cost-shifting to receiving-state natives) has become more prominent relative to the original trust-building purpose of free movement.",
+    "key_agents": [
+      "Sending-state governments: gain emigration relief and remittances; formally retain welfare-design autonomy",
+      "Multinational service providers (construction, logistics, hospitality firms): exploit posted-worker wage arbitrage across member states",
+      "Posted workers: caught in 2-year contracts with minimal receiving-state protections and wage floors; identity locked to the employment relationship",
+      "Receiving-state native workers: face wage pressure and employment displacement from both posted workers (temporary, structural undercutting) and permanent migrants (accumulation)",
+      "Receiving-state welfare systems: formally design benefits without supranational mandate but bear fiscal costs from non-contributory migrants and wage-compressed working-poor populations",
+      "Receiving-state governments: agenda-setters who enforce anti-dumping rules while managing fiscal pressure; preserve welfare autonomy but shift costs internally",
+      "European Commission: interprets and enforces anti-dumping provisions; preserves member-state design autonomy (this reading) rather than pushing harmonization (integration reading)",
+      "ECJ (European Court of Justice): arbiter between free-movement and welfare-preservation principles; actual jurisprudence oscillates between the integration and welfare-coordination readings"
+    ],
+    "logic_rationale": "Extractiveness (0.68 by 2024) is high because posted-worker posting has become a structural arbitrage mechanism: the 2-year exemption from receiving-state social security is maintained despite decades of evidence it creates wage-floor violation and worker precarity; multinational firms capture value from the wage gap and the receiving state does not recoup training/welfare costs. Suppression (0.54) is lower than extractiveness because the constraint is not primarily coercive: it operates through formal legal categories (posted workers have a different status from residents, by EU law) and through wage competition rather than active enforcement against resistance. Resistance (0.71) is high because native workers and labor unions actively contest the arrangement, but their resistance does not change the rule because the benefiting parties (firms, sending states) have institutional power and the coordination logic (free movement) is entrenched. Theater (0.41 by 2024) has risen over the interval: early post-1995 administration was genuinely about preventing welfare tourism; by 2024, much Commission and member-state energy goes to enforcing (and selectively not enforcing) anti-dumping rules in ways that preserve the posted-worker arbitrage. The rising theater marks the point where the original coordination problem (prevent catastrophic welfare costs) has been technically solved by anti-dumping rules, but those rules are selectively enforced to permit ongoing extraction. Accessibility collapse (0.62): alternatives (harmonization upward, abandoning free movement, national wage floors) are theoretically available but blocked by institutional lock-in (supranational welfare requires unanimous member-state consent, which will never happen; wage harmonization is opposed by low-cost regions and employers). Receiving-state workers and sending-state citizens have limited alternatives; exit by migration requires skill/language/capital. The accessibility collapse is moderate, not total, because the reading's entire claim is that it preserves some choice (member-state design autonomy), which creates an appearance of flexibility even as structural constraints tighten.",
+    "perspectival_gap": "Sending-state governments and multinational employers perceive this arrangement as genuine, mutually-beneficial coordination: free movement allows workers to find higher-wage employment, sending states are relieved of unemployment costs, receiving states design welfare as they choose, firms access lower-cost labor. Receiving-state native workers and welfare-system administrators perceive structural extraction: they bear wage pressure and fiscal costs for a benefit (labor mobility, efficiency) that does not accrue to them. Posted workers perceive pure coercion: they are locked into contracts with minimal protections in a high-cost receiving state, earning below-market wages, with no access to the receiving state's social benefits. The engine should compute these divergent types: from the sender-state and employer position, the constraint is rope (genuine coordination, minimal suppression, real benefits flow to participants). From the receiving-state payer positions (native workers, welfare systems), it is tangled rope or snare (asymmetric extraction, active enforcement of the posted-worker exemption, identifiable victims). From the posted-worker position, it is snare (coercion, limited exit, wage-floor violation). The authored claim (tangled rope) averages these, but the authored metrics (high extraction, active enforcement, moderate suppression) skew toward the payer seats.",
+    "directionality_logic": "Beneficiaries: sending-state governments gain emigration relief (d near beneficiary end, ~0.2); multinational employers gain wage arbitrage (d near beneficiary end, ~0.1); receiving-state consumers gain lower prices from cheaper services (d near beneficiary end, ~0.25). Victims: posted workers bear direct extraction (identity-locked, powerless, d near target end, ~0.9); receiving-state native workers face wage pressure and displacement (moderate power, constrained exit, d near target end, ~0.75); receiving-state welfare systems bear costs (institutional power but trapped, d near target end, ~0.8). The directionality derivation is straightforward: beneficiaries have high exit options (for firms) or are relieved of fiscal pressure (for governments); victims have low exit options (posted workers identity-locked to contracts, native workers trapped in receiving state) or bear direct cost pressure (welfare systems). No overrides are needed; the structural data speaks clearly. The receiving-state governments have a secondary role as agenda-setter (they enforce anti-dumping rules) which elevates their power atom (institutional) but does not change directionality toward the constraint itself — they are still targets relative to the free-movement/coordination mechanism, because they must absorb fiscal costs even as they formally design welfare. This tension is part of the tantalized rope character: they both run the system and suffer from it.",
+    "mandatrophy_analysis": "The founding problem is live but the coordination mechanism has drifted. The founding problem (1995) was preventing welfare crises in high-benefit receiving states as free movement admitted a new labor supply. The mechanism (anti-dumping rules: residency periods, contribution requirements, eligibility tests) was genuine coordination. By 2024, the mechanism persists but the founding problem's landscape has changed: (a) posted-worker flows have industrialized and are now structural; (b) wage pressure is cumulative, not one-time adjustment; (c) the anti-dumping rules are selectively enforced (sent states' governments lobby to keep posted-worker exemptions in place; receiving states adopt residency rules that are then struck down by the ECJ). The theater ratio has risen because more administrative effort goes to managing the tensions (enforcement of anti-dumping rules, disputes with the ECJ) than to solving the original problem. However, the constraint has NOT yet crossed into pure theater (theater_ratio still <0.5): the mechanism still performs its nominal function (prevents unlimited welfare tourism, preserves member-state autonomy in design). Mandatrophy is incipient but not resolved. A full mandatrophy reading would require either (a) the founding problem to be dead (welfare crises prevented entirely by anti-dumping rules) AND the mechanism to be mostly performance, or (b) the founding problem to be actively denied by the benefiting parties (Commission and sending states claiming welfare is no longer a sustainability concern, even though evidence shows it is). Neither is yet true. The constraint is a tangled rope in mandatrophy drift: it still coordinates a real problem (welfare sustainability + free movement) but increasingly extracts value from posted workers and receiving-state natives as the coordination mechanism's enforcement selectivity has become institutionalized.",
+    "kernel_context": "This constraint instantiates the welfare_coordination_reading of the federation_membership_kernel. The kernel is the standing commitment to free movement of persons and labor in the EU, coded in the Treaties and interpreted by the ECJ. Three readings compete: (1) integration_reading: free movement is fundamental, should be maximized, supranational authority (ECJ) interprets expansively toward equal treatment and full mobility; (2) member_sovereignty_reading: free movement is bounded by national welfare capacity, member states can exclude economically-inactive migrants and protect social solidarity; (3) welfare_coordination_reading (this one): free movement operates through coordinated national welfare systems, EU enforces anti-dumping rules, member states keep welfare-design autonomy. This reading occupies the middle institutional ground. The integration reading would push toward supranational welfare harmonization or ECJ-mandated open borders with individual safety nets. The member-sovereignty reading would tighten national exclusions and push back on free movement. This reading preserves free movement + national autonomy through coordination infrastructure. The kernel contest is live: recent EU litigation (Dano, Coman, Dobrica) shows the ECJ oscillating between the integration and welfare-coordination lines. The reading's core is the axiom that subsidiarity is achievable — that member states can preserve welfare-design autonomy while permitting free movement — which neither the integration nor sovereignty readings accept."
+  },
+  "omegas": [
+    {
+      "id": "posted_worker_cost_incidence",
+      "question": "Are posted-worker wage-floor violations and receiving-state welfare costs economically separable from the 'coordination' function of free movement, or are they constitutive of how the coordination actually operates?",
+      "resolution_mechanism": "Counterfactual policy experiment: jurisdiction that eliminates the 2-year posted-worker exemption while maintaining free movement. Do labor flows, wage adjustment, and fiscal costs change in ways that clarify whether the posted-worker exemption is essential to coordination or a separable extraction mechanism?",
+      "impact": "If separable, the constraint should reclassify: posted-worker extraction would be snare-like (coercion via contract law, identity lock), while the receiving-state welfare-fiscal pressure would be tangled_rope. If constitutive (the story's current frame), the constraint remains tangled rope as a whole. This resolves whether the mandatrophy is incipient or structural.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether posted-worker precarity is a contingent byproduct or essential mechanism of coordination."
+    },
+    {
+      "id": "subsidiarity_maintainability",
+      "question": "Can member states substantively preserve welfare-design autonomy (free choice of benefit levels, duration, eligibility rules) under ongoing free movement and fiscal integration pressures, or does free movement structurally converge toward either supranational harmonization or national protectionism?",
+      "resolution_mechanism": "Long-run institutional analysis: over the next 20 years, do member states converge toward (a) a common welfare floor enforced by ECJ non-discrimination rulings, or (b) a fragmentation where high-welfare states erect legal barriers to migrants, or (c) sustained diversity in welfare design with stable equilibrium? This reading claims (c) is possible; the integration reading claims (a) is inevitable; the sovereignty reading claims (b).",
+      "impact": "If convergence toward harmonization occurs (integration reading pathway), this welfare_coordination_reading becomes unstable and reverts to integration or sovereignty. If fragmentation occurs (sovereignty pathway), coordination fails and the constraint becomes a snare (member states coerce migrants out). If diversity persists (this reading's claim), the constraint remains tangled rope but may resolve mandatrophy by demonstrating the mechanism genuinely solves the founding problem.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the subsidiarity principle is institutionally maintainable or convergent toward supranational or national closure."
+    },
+    {
+      "id": "anti_dumping_enforcement_selectivity",
+      "question": "Are differences in anti-dumping rule enforcement across member states (sending states lobbying for exemptions, receiving states lobbying for tighter rules) driven by genuine welfare-sustainability concerns, or by distributional politics that protect incumbent beneficiaries (multinational firms in sending states, capital-intensive firms in receiving states)?",
+      "resolution_mechanism": "Political-economy analysis of Commission enforcement decisions, member-state lobbying records, and ECJ case outcomes relative to fiscal burden metrics. If enforcement correlates with genuine welfare fiscal pressure, the reading's claim holds. If enforcement correlates with firm lobbying and political power, the theater ratio rises and mandatrophy becomes realized.",
+      "impact": "If distributional politics dominate, the rising theater ratio marks the constraint's evolution from genuine coordination toward institutional theater: the anti-dumping rules are maintained as appearance of welfare protection while enforcement is captured by multinational interests. This would trigger a mandatrophy reclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement selectivity reflects genuine coordination needs or captured institutional performance."
+    },
+    {
+      "id": "posted_worker_identity_lock_mechanism",
+      "question": "Is the identity lock of posted workers structural (they are genuinely separated from the receiving state's labor market and welfare system by law, language, skill non-recognition) or internalized (they have absorbed the contractor/temporary worker self-concept and do not pursue permanent-resident pathways even when legally possible)?",
+      "resolution_mechanism": "Post-contract career-outcome analysis: do posted workers transition to permanent residence or return home? If transitions are high, identity lock is legal-structural, not internalized; suppression would be structural. If transitions are rare even when legally possible, identity lock is internalized; suppression is partly cognitive/cultural.",
+      "impact": "If structural, the posted-worker arrangement is a pure snare in that seat, sustained by legal coercion. If internalized, the constraint extracts through identity management and cannot be fixed by legal change alone. Either way, the constraint's extraction from posted workers is higher and more entrenched than the tangled-rope claim allows.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized mechanisms of posted-worker precarity and exit prevention."
+    },
+    {
+      "id": "welfare_coordination_kernel_contest",
+      "question": "Is this reading's core axiom — that member-state welfare-design autonomy is sustainable under free movement through anti-dumping coordination — a genuine institutional equilibrium or a transient compromise between the integration and sovereignty readings?",
+      "resolution_mechanism": "This is the committer frame itself: the three readings (integration, sovereignty, welfare_coordination) are three contesting framings of the federation_membership_kernel, each endorsed by different EU institutional actors and member states. The resolution depends on which reading's foundational axioms become institutionally entrenched. If the ECJ converges on the integration reading, welfare harmonization follows. If national welfare-protection movements succeed, sovereignty reading emerges. If the current compromise (coordination + subsidiarity) holds, this reading persists.",
+      "impact": "This omega is the reading's structural uncertainty itself. The constraint cannot be stabilized in its current form unless the welfare-coordination axiom (subsidiarity is maintainable) is validated institutionally. If the axiom is foreclosed by institutional drift, the constraint reclassifies to either integration or sovereignty reading, each with different ε, different beneficiaries, and different type.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether welfare-coordination is a stable institutional equilibrium or a transient reading in a kernel contest."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership_kernel__integration_reading",
+      "federation_membership_kernel__member_sovereignty_reading",
+      "posted_worker_directive_transposition",
+      "receiving_state_welfare_fiscal_crisis"
+    ],
+    "dual_formulation_note": "This constraint is part of the federation_membership_kernel family. It instantiates ONE reading (welfare_coordination) alongside sibling readings (integration, member_sovereignty). Each reading has its own ε, beneficiary/victim structure, and type classification. The constraint family is linked because each reading interprets the same standing commitment (free movement in EU Treaties) differently. The welfare_coordination reading (this one) decomposes free movement into coordination mechanisms (anti-dumping rules) rather than either maximizing mobility (integration) or restricting to protect welfare (sovereignty). Ε differs because the three readings assess the standing arrangement's extractiveness differently: the integration reading sees extraction from those denied mobility; the sovereignty reading sees extraction from sending-state citizens whose welfare is eroded; the coordination reading sees extraction from posted workers and receiving-state natives via wage arbitrage. These are genuinely distinct ε referents (different standing arrangements under contest from each reading's perspective), not observational variants of one constraint."
+  },
+  "gain_flow": "multinational_service_providers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "subsidiarity_preserved_free_movement",
+    "drift_state": {
+      "moment": "contemporary_2024",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "integration_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "member_sovereignty_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "subsidiarity_maintains_welfare_autonomy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "coordination_through_national_systems_sustainable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

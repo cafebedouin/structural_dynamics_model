@@ -1,0 +1,291 @@
+{
+  "header": {
+    "constraint_id": "gpl_reciprocity_obligation__copyleft_as_freedom_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "ea6381cc-a1a3-4a00-8fc9-fc33ce782d6d",
+    "created_at": "2026-06-11T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.72,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.81,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Reciprocity: Freedom-Preserving Reading",
+    "topic_domain": "software_licensing/intellectual_property/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "downstream_users",
+      "open_source_derivative_projects"
+    ],
+    "victims": [
+      "proprietary_integrators",
+      "closed_source_vendors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "downstream_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive software built on GPL-licensed components with guaranteed access to source code and modification rights. Under this reading, they benefit from the prevention of proprietary lock-in: any GPL-derived work must remain freely available to them. They cannot exit the arrangement except by switching to proprietary alternatives, which they perceive as losing freedoms."
+    },
+    {
+      "name": "open_source_derivative_projects",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Inherit GPL-licensed codebases and are required to contribute improvements back under the same license. They benefit from access to collective work and guarantees that downstream projects cannot monopolize their contributions. The constraint preserves the commons for their successors. They pay by being unable to privatize their own work built on GPL foundations."
+    },
+    {
+      "name": "proprietary_integrators",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Wish to incorporate GPL code into proprietary products without disclosing source. The GPL reciprocity obligation requires them either to open-source their integration or avoid GPL components altogether. They bear the cost of license incompatibility and the loss of the option to build proprietary layers atop GPL work. Their exit is constrained because alternative permissive licenses forgo the specific network effects and maturity GPL communities provide."
+    },
+    {
+      "name": "closed_source_vendors",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate business models predicated on proprietary software as a competitive advantage and source of revenue through licensing fees and lock-in. GPL reciprocity directly suppresses their preferred integration paths and business model scalability. They must either license proprietary alternatives or pay legal/compliance costs to segregate GPL-licensed components from their proprietary work."
+    },
+    {
+      "name": "original_gpl_authors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set the GPL license terms and defend them through legal enforcement (cease-and-desist letters, litigation against GPL violators). They maintain and evolve the license text, define compliance boundaries, and adjudicate ambiguous cases. They benefit from ensuring the commons persists and from the legitimacy accrued through defining and protecting software freedom."
+    },
+    {
+      "name": "competing_open_source_foundations",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Manage alternative open-source licenses (Apache, MIT, BSD) that permit proprietary integration without reciprocity obligation. They would argue for the freedom to build proprietary value atop open work; their absence from GPL governance means their perspective on licensing flexibility is not centered in the design of copyleft mechanisms. They advocate for permissive licensing but are not party to GPL license-setting decisions."
+    },
+    {
+      "name": "free_software_movement",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Interprets and advocates the freedom-preservation reading: that viral licensing's reciprocity obligation is a tool to prevent proprietary capture and ensure user software freedom persists. They engage in discourse, legal analysis, and community norm-setting to defend and propagate this framing. They observe the full structure and comment on its freedom-preservation function."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of proprietary capture in software ecosystems: creates a mechanism where improvements to foundational code must be shared back, preventing any single vendor from monopolizing derivative work. Coordinates a global commons of shared software components on terms that guarantee downstream access and modification rights. The coordination problem is real: without reciprocity, communities that invest in maintaining shared code face the risk that vendors will incorporate that code, add proprietary improvements, and lock downstream users out of accessing the collective work.",
+    "transfer_function": "Moves the right to restrict software distribution from proprietary integrators to the commons: requires that any derivative work remain under GPL terms, transferring the ability to lock up software from individual vendors back to all users collectively. In monetary terms, proprietary vendors lose the option to capture licensing revenue from GPL-derived products; in freedom terms, users gain the guarantee that improvements will remain accessible.",
+    "absent_voices": "Proprietary vendors and businesses whose models depend on closed-source software are structurally excluded from GPL governance and license-setting decisions. They would argue for the freedom to privatize improvements and build proprietary layers, but they are not represented in GPL foundation bodies. Permissive-license advocates who see GPL reciprocity as unnecessarily restrictive are also absent from GPL governance (they maintain competing licenses instead). Developing-world software consumers who lack resources to participate in GPL enforcement are also largely absent from governance structures.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If GPL reciprocity obligations vanished overnight, proprietary vendors would immediately incorporate GPL code into closed-source products without disclosing improvements. The collective commons would fragment into proprietary derivatives maintained behind corporate walls. Downstream users would lose guaranteed access to improvements and could be locked into proprietary software built on work they helped fund. The software development ecosystem would reorganize around vendor lock-in rather than user freedom, with network effects and developer communities captured by proprietary entities.",
+    "founding_problem": "In the early 1990s, the free-software movement identified a structural risk: foundational free software could be proprietarily captured. A company could take GPL'd code, add valuable improvements, and lock them behind proprietary licensing, while upstream communities and downstream users lost access to the accumulated work. This was not merely theoretical: the movement observed business strategies attempting exactly this (proprietary Unix systems incorporating BSD code, commercial software companies building on GNU tools without contributing back). GPL reciprocity was designed to make proprietary capture economically and legally impossible.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Original GPL authors (Richard Stallman, Free Software Foundation) attest the problem remains live, citing ongoing integration attempts and attempts to find loopholes (TiVoization, GPL enforcement disputes). Empirical corroboration: recurring legal cases (Oracle v. Google on copyleft scope, AWS licensing disputes over separation of GPL-licensed and proprietary code), integration attempts, and reverse-engineering efforts demonstrate that vendors continue to seek to capture GPL'd work. Competing foundations and closed-source vendors dispute the problem's framing—they argue the problem is GPL's restriction, not proprietary capture—but they do not dispute the technical risk itself (that proprietary entities would incorporate GPL work and restrict downstream access if permitted). External scholarly analysis (LLM licensing studies, BSD vs. GPL ecosystem comparisons) provides independent corroboration that the founding problem (capture risk) remains empirically present."
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.18
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_contest_separation",
+      "question": "Are the three readings (freedom, commons, restriction) genuinely distinct constraints, or are they the same constraint viewed from different seats?",
+      "resolution_mechanism": "By the ε-invariance principle (DP-001), if the three readings assign different ε values to GPL reciprocity, they are structurally different constraints and should be decomposed as separate stories. If they share an ε but differ only in beneficiary framing, they are one constraint with multiple interpretations.",
+      "impact": "This corpus treats them as three separate constraints because: (1) the freedom reading's ε captures prevention of proprietary capture (protective, low-to-moderate extraction from users' perspective); (2) the commons reading's ε captures institutional preservation of collective ownership (different beneficiary structure); (3) the restriction reading's ε captures suppression of proprietary business models (high extraction from vendor perspective). The ε values differ because the referents differ: what is extracted, from whom, for what purpose. If the readings shared an ε, decomposition would be unnecessary.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings are structurally separate constraints or one constraint with rival interpretations."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates ONE reading of the GPL reciprocity obligation kernel: the freedom-preserving reading. Under this reading, viral licensing (the requirement that derivative works remain under GPL terms) is fundamentally a mechanism to prevent proprietary capture and ensure user software freedom persists across generations. The mechanism imposes costs on proprietary integrators, but those costs are justified as preventing a greater harm: the loss of user freedoms through downstream lock-in. The beneficiaries are downstream users who receive guaranteed access to improvements. The victims are proprietary vendors who cannot monetize GPL code through closed-source integration. This reading coexists with two siblings: the commons-institutional reading (which privileges institutional commons preservation over individual user freedom) and the restriction reading (which frames reciprocity as a constraint on business freedom). Each reading is a separate constraint story with its own ε, beneficiary structure, and classification.",
+    "key_agents": [
+      "downstream_users: powerless beneficiaries who gain guaranteed access to source and modification rights",
+      "open_source_derivative_projects: moderate-power beneficiaries who inherit commons and must contribute back",
+      "proprietary_integrators: powerful victims constrained by license incompatibility",
+      "closed_source_vendors: institutional victims facing business model suppression",
+      "original_gpl_authors: institutional agenda-setters who maintain and enforce the license",
+      "competing_open_source_foundations: organized excluded parties who favor permissive licensing",
+      "free_software_movement: organized observers interpreting and advocating this reading"
+    ],
+    "logic_rationale": "Extractiveness is low-to-moderate (0.28) because the benefit to downstream users is genuine (guaranteed source access, modification rights, prevention of proprietary lock-in) even though proprietary vendors bear costs. This is not pure extraction—it is coordination with asymmetric distribution. Under this reading, the asymmetry is justified: the constraint prevents a greater extraction (proprietary capture). Suppression is high (0.72) because the mechanism fundamentally prevents proprietary integrators from pursuing their preferred business model—they cannot legally incorporate GPL code into closed-source products. Alternatives (permissive licenses, proprietary alternatives) remain available but are framed by this reading as insufficient because they permit the capture that GPL prevents. Theater is low (0.18) because the GPL compliance and enforcement machinery directly serve the freedom-preservation function; there is relatively little performative overhead. Temporal measurements show extractiveness and suppression stabilizing after ~25 years: the enforcement infrastructure matured and reached steady state; the mechanism's costs and benefits have become routinized in the ecosystem. The shared time grid (0, 5, 10, 15, 25, 35) allows all three metrics to track together without grid-misalignment.",
+    "perspectival_gap": "The constraint computes very differently across seats. From the perspective of a downstream user or free-software advocate, the arrangement is protective: it preserves their freedom and the commons. From the perspective of a proprietary vendor, the same arrangement is extractive and restrictive: it prohibits their preferred integration path and forces them to accept a cost. From the perspective of a permissive-license advocate, the arrangement is overly rigid: it restricts downstream business flexibility unnecessarily. The engine computes per-seat classifications by deriving directionality from the stakeholder's power, exit options, and role. A proprietary vendor (powerful, constrained exit, payer role) sits at high d, experiencing high χ. A downstream user (powerless, mobile exit, beneficiary role) sits at low d, experiencing low/negative χ (subsidy). The analytical seat observes the structural asymmetry and recognizes that the same mechanism protects one party's freedom by constraining another's.",
+    "directionality_logic": "Downstream users are structural beneficiaries (low d → low/negative χ): they receive guaranteed access and modification rights without bearing a direct cost; they can exit only to proprietary alternatives, which they perceive as losing freedoms, so their exit is strongly constrained in perception even though technically mobile. Proprietary integrators are structural targets (high d → high χ): they bear the cost of license incompatibility, face legal prohibition of their preferred integration model, and have constrained alternatives (they can use permissive licenses, but those alternatives forgo the specific benefits GPL provides, so the choice is costlier). Open-source derivative projects are beneficiaries with secondary payer characteristics: they benefit from commons access but must contribute back, so they experience both roles. The GPL authors sit at agenda-setter: they set and enforce the terms; they have high power and maintain the license, so directionality depends on whether one treats them as enforcers of user freedom (beneficiary-aligned) or as boundary-keepers excluding proprietary vendors (target-aligned). This story treats them as aligned with the user-freedom reading (their motivation is stated as freedom preservation) so they approach beneficiary directionality.",
+    "mandatrophy_analysis": "The founding problem (proprietary capture risk) remains live as an empirical threat, corroborated by recurring integration attempts (TiVoization, AWS licensing disputes, Oracle litigation). The constraint persists because the coordination function (commons preservation) remains valuable to downstream communities. However, there is an emerging mandatrophy question: as cloud computing and SaaS business models decouple software use from distribution, the original GPL enforcement mechanism (requiring distribution of source code) has become less effective at preventing vendor lock-in—a vendor can now lock users in through service terms rather than through proprietary software. This reading's framing of GPL as freedom-preserving assumes the original enforcement mechanism remains adequate. If the mechanism degrades (vendors find loopholes), the constraint might persist for theater reasons (maintaining the appearance of commons control) while its actual freedom-preservation function atrophies. This is not yet mandatrophy (the founding problem is still actively addressed) but a emerging vulnerability.",
+    "kernel_context": "This constraint is ONE reading of the contested kernel gpl_reciprocity_obligation. The kernel is the GPL license itself—a stabilized text (the GNU General Public License, versions 1–3) that multiple communities interpret differently. This reading instantiates the FREEDOM-PRESERVING interpretation: viral licensing is fundamentally a tool to prevent proprietary capture and ensure user software freedom persists. The sibling readings are: (1) copyleft_as_commons_reading: treats GPL as institutional technology for commons preservation and collective ownership, distinct from individual-user freedom; (2) copyleft_as_restriction_reading: treats GPL reciprocity as a constraint on business freedom and proprietary innovation, prioritizing vendor flexibility. All three readings describe the same GPL mechanism—the same license text, the same reciprocity obligation, the same enforcement structure. The readings differ in which beneficiary set is primary (users vs. commons institution vs. proprietary business) and what the mechanism's function is (freedom preservation vs. commons maintenance vs. restriction). This reading's core axiom: user software freedom is foundational and takes precedence over proprietary business flexibility. The sibling readings reject or reorder this axiom."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_reciprocity_obligation__copyleft_as_commons_reading",
+      "gpl_reciprocity_obligation__copyleft_as_restriction_reading"
+    ],
+    "dual_formulation_note": "The GPL reciprocity obligation kernel is contested among three readings. This constraint (freedom-preserving) treats viral licensing as preventing proprietary capture and preserving user software freedom. The sibling constraints address the same mechanism under different interpretations: commons-institutional (preserving collective ownership) and restriction (constraining proprietary business models). All three stories share the same kernel_id and describe the same GPL license; they differ in beneficiary set, axioms, and ε. They are linked via network.affects_constraints to indicate kernel membership and interpretive contest."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "original_gpl_authors",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "user_software_freedom_framework",
+    "drift_state": {
+      "moment": "contemporary_saas_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "copyleft_as_commons_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyleft_as_restriction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "user_software_freedom_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proprietary_capture_prevention_justified",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

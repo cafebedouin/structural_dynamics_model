@@ -1,0 +1,317 @@
+{
+  "header": {
+    "constraint_id": "price_formation_kernel__institutional_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "f0646e5b-3152-49c4-a789-509616192eaf"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Housing Price Formation as Institutional Construction (Zoning, Lending, Tax, Platforms)",
+    "topic_domain": "political_economy/housing_markets/institutional_analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_homeowners",
+      "mortgage_lenders",
+      "real_estate_intermediary_platforms",
+      "municipal_tax_base_administrators"
+    ],
+    "victims": [
+      "renters",
+      "first_time_buyers",
+      "informal_and_manufactured_housing_residents"
+    ],
+    "vindicated_propositions": [
+      "local_land_use_autonomy_doctrine",
+      "homeownership_as_wealth_building_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_homeowners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Hold appreciating equity whose growth is substantially produced by zoning restrictions (minimum lot sizes, single-family-only districts, permitting friction) that they vote to preserve at the municipal level. Mortgage interest deductions and capital gains exclusions on primary residences further subsidize their position. They can sell into the same restricted market they helped construct, realizing gains without personally 'setting' a price."
+    },
+    {
+      "name": "mortgage_lenders",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Set underwriting standards, loan-to-value ratios, and credit-scoring criteria that determine who can access mortgage credit at what price, which directly shapes effective demand and therefore observed transaction prices. Securitize and sell loan risk, largely insulating themselves from local price declines. Government-sponsored enterprise backing further reduces their downside."
+    },
+    {
+      "name": "real_estate_intermediary_platforms",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate listing aggregation, valuation algorithms (automated valuation models), and transaction brokerage that both reflect and actively influence asking and closing prices. Collect commissions and data-licensing revenue regardless of whether prices rise or fall. Their algorithmic estimates become self-referential inputs that buyers, sellers, and even lenders anchor to."
+    },
+    {
+      "name": "municipal_tax_base_administrators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Depend on rising assessed property values to fund local budgets without raising nominal tax rates, which creates an institutional incentive to preserve zoning restrictions and resist upzoning that would depress per-unit land values even while increasing overall housing supply."
+    },
+    {
+      "name": "renters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Pay rents set within a supply envelope constrained by zoning and permitting rules they had no vote in shaping, and face landlords whose costs (including financing and taxes) are passed through. Exit means relocating away from jobs, schools, and social networks, which is not a real option for most within a metro area's labor market."
+    },
+    {
+      "name": "first_time_buyers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Compete for a supply artificially restricted by zoning, against buyers with existing home equity from incumbents, using credit terms set by lenders whose standards they do not influence, in a marketplace whose price discovery is mediated by platforms that also serve seller and lender interests. Down payment and underwriting friction disproportionately excludes them relative to cash-rich incumbents and investors."
+    },
+    {
+      "name": "informal_and_manufactured_housing_residents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live in housing forms often excluded or restricted by zoning codes and denied conventional mortgage financing on favorable terms, effectively priced out of the institutional price-formation system entirely and pushed into higher-cost, less-protected financing arrangements or informal tenure."
+    },
+    {
+      "name": "housing_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study the interaction of zoning, credit access, tax treatment, and platform intermediation to explain price divergence across otherwise similar metros. Their findings inform (but do not control) policy debate over zoning reform, lending regulation, and property tax design."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Zoning stabilizes neighborhood character and infrastructure load planning; lending standards manage default risk and systemic credit exposure; property tax assessment funds local services; intermediary platforms reduce search and information costs in an otherwise opaque market. Each function, taken alone, solves a real coordination problem.",
+    "transfer_function": "The combined institutional apparatus moves wealth from renters and first-time buyers (who pay elevated prices/rents produced by artificially constrained supply and credit-gated demand) to incumbent owners (equity appreciation), lenders (interest and securitization spreads), and intermediary platforms (commissions and data rents), while also shifting fiscal burden away from rising assessed values onto transaction-stage buyers.",
+    "absent_voices": "Renters and prospective first-time buyers rarely have standing votes in municipal zoning hearings, which are structurally dominated by existing homeowners; informal and manufactured housing residents are almost entirely absent from both zoning deliberation and mortgage-market design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If zoning restrictions, current lending standards, favorable tax treatment of ownership, and platform-mediated valuation all vanished simultaneously, effective housing supply would expand, credit access would broaden or contract unpredictably, assessed-value-driven municipal budgets would need restructuring, and price discovery would shift to a fundamentally different (and currently untested) mechanism — incumbent equity gains, lender securitization margins, and platform commission structures would all be disrupted.",
+    "founding_problem": "Zoning arose to separate incompatible land uses and manage infrastructure and public health externalities; lending standards arose to manage default and systemic financial risk after credit crises; property tax arose to fund local government without direct central transfers; intermediary platforms arose to reduce information asymmetry and search costs in a highly heterogeneous, illiquid asset market.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Municipal planning bodies and lender trade associations attest the founding problems (land-use conflict, systemic credit risk) remain live and justify current structures. Independent housing economists, federal housing finance researchers, and legislative testimony in multiple jurisdictions attest that the original coordination functions have been substantially captured by exclusionary and rent-preserving purposes — supply restriction functioning as a wealth-preservation mechanism for incumbents rather than a genuine land-use or risk-management necessity."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This is the institutional reading of the price-formation kernel: housing prices are not a discovered fact about scarcity and preference (the naturalist reading) nor purely a function of credit-cycle asset dynamics (the financialization reading) nor a separable land-rent-versus-improvement-value phenomenon (the Georgist reading), but the constructed output of four interacting institutional apparatuses — municipal zoning codes, mortgage lending standards, property and income tax treatment of ownership, and intermediary listing/valuation platforms. Each apparatus has a genuine coordination function (land-use planning, credit-risk management, local fiscal funding, search-cost reduction), but their combined operation systematically transfers wealth from renters and first-time buyers to incumbent owners, lenders, and platforms, and requires continuous active maintenance (zoning enforcement, underwriting policy, tax assessment cycles, platform algorithm governance) to persist. This reading treats price as a construction with identifiable authors, not a discovery.",
+    "logic_rationale": "Extractiveness is authored at 0.62 (moderate-high) reflecting that the transfer is real and substantial but partially offset by genuine coordination value in each component apparatus — this is not pure extraction. Suppression is authored at 0.58: zoning hearings, underwriting criteria, and platform algorithms are not fully open to challenge by those they price out, but formal legal avenues for zoning reform and lending-discrimination litigation exist and are sometimes used. Theater ratio is moderate-low (0.30) because the coordination functions (public health zoning, default-risk underwriting) are substantively real, not merely performative, even though their current configuration serves exclusionary ends. Resistance (0.55) and accessibility_collapse (0.50) reflect an actively contested arrangement — YIMBY movements, lending-discrimination suits, and platform-transparency campaigns represent real, ongoing resistance, not a fully settled structure.",
+    "directionality_logic": "Incumbent homeowners, lenders, intermediary platforms, and tax administrators are beneficiaries: each collects rents (equity appreciation, interest/securitization spread, commission/data revenue, stable-or-rising tax base) through the same structure that constrains supply and gates credit access. Renters, first-time buyers, and informal/manufactured housing residents are victims: they pay elevated prices or rents, face credit gatekeeping they did not design, and in the case of informal housing residents are substantially excluded from the formal price-formation system altogether. The directionality derivation places incumbents and institutional actors near the beneficiary pole (low d) and renters/informal residents near the full-target pole (high d, trapped exit); first-time buyers sit closer to the target pole than incumbents but retain more mobility than renters.",
+    "mandatrophy_analysis": "The classification as tangled_rope (not snare) is essential here: each institutional component solves a problem that would recur if the institution vanished (land-use externalities, credit-risk management, local fiscal funding, information asymmetry in an illiquid market) — collapsing this into pure extraction would mislabel genuine coordination functions as if they had no legitimate basis. But treating it as a pure rope would erase the asymmetric transfer that the disappearance analysis and beneficiary/victim declarations make visible. The founding-problem interview shows contested status precisely because incumbents can honestly point to live coordination problems while excluded parties can honestly point to captured, rent-preserving operation — both readings of the same structure are simultaneously true from different seats, which is the tangled-rope signature.",
+    "kernel_context": "This constraint instantiates the institutional_reading of the price_formation_kernel: the claim that housing prices are constructed by the interaction of zoning, lending standards, tax treatment, and intermediary platforms, rather than being a natural equilibrium (naturalist_reading), a credit-driven asset-price phenomenon (financialization_reading), or a decomposable land-rent-versus-improvement question (georgist_reading). This reading's ε (0.62) and beneficiary/victim structure describe only this institutional-construction claim under its own lights; the sibling readings are separate constraint stories with their own ε values, not alternative measurements of the same quantity."
+  },
+  "omegas": [
+    {
+      "id": "institutional_vs_naturalist_boundary",
+      "question": "Is the price level observed in a given housing market better explained as an institutionally constructed outcome (this reading) or as a market-clearing response to underlying scarcity and preference that would emerge even under a laissez-faire regulatory baseline (naturalist_reading)?",
+      "resolution_mechanism": "Comparative analysis of metros with substantially different zoning/lending/tax regimes but similar underlying scarcity and demographic pressure; natural experiments from major zoning reforms (e.g., statewide upzoning mandates) isolating the institutional contribution to price from the scarcity contribution.",
+      "impact": "If price variance across similar-scarcity metros is dominated by regulatory variation, the institutional reading is strongly supported and the naturalist reading's implicit claim of institutional neutrality is undermined. If price variance persists even after regulatory harmonization, the naturalist reading gains support and this reading's beneficiary/victim framing overstates institutional causation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional construction or natural scarcity dominates observed price variance across markets."
+    },
+    {
+      "id": "coordination_capture_separability",
+      "question": "Can the genuine coordination functions of zoning, underwriting, and tax assessment be structurally separated from their exclusionary/rent-preserving effects, or are the two inseparable in current institutional design?",
+      "resolution_mechanism": "Track outcomes in jurisdictions that have attempted to preserve coordination functions (public health zoning, prudent underwriting) while removing exclusionary elements (e.g., by-right multifamily zoning, algorithmic fair-lending audits) — if coordination outcomes hold while exclusion falls, separability is demonstrated.",
+      "impact": "If separable, current extractiveness is largely attributable to a removable exclusionary layer rather than the coordination function itself, supporting reform-oriented interventions. If inseparable, the measured extraction may be a structural feature of any workable version of these institutions.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether coordination and extraction are separable within the institutional apparatus."
+    },
+    {
+      "id": "reading_disagreement_locus",
+      "question": "Where exactly do the four kernel readings (institutional, naturalist, financialization, georgist) locate the causal mechanism of price formation, and can more than one be simultaneously correct about different components of the same observed price?",
+      "resolution_mechanism": "Structural decomposition of a given metro's price level into a land-rent component (georgist), a credit-expansion component (financialization), a regulatory-constraint component (institutional), and a residual scarcity/preference component (naturalist), using hedonic and time-series decomposition methods.",
+      "impact": "If the decomposition yields a large regulatory-constraint coefficient, the institutional_reading's tangled-rope classification is well-supported as the dominant mechanism; if the credit-expansion or land-rent coefficients dominate, the sibling readings' classifications carry more explanatory weight for the same observed prices even though all four remain structurally distinct constraints.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locating where the four kernel readings' causal claims agree, diverge, or are jointly non-exclusive."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "price_formation_kernel__naturalist_reading",
+      "price_formation_kernel__georgist_reading",
+      "price_formation_kernel__financialization_reading"
+    ],
+    "dual_formulation_note": "This is one of four sibling constraint stories decomposing the natural-language claim 'housing price formation' per the ε-invariance principle: naturalist_reading (mountain-flavored, low ε — price as equilibrium discovery), georgist_reading (decomposes land rent from improvement value), financialization_reading (credit-cycle asset-price dynamics), and this institutional_reading (tangled-rope, moderate-high ε — price as constructed by zoning/lending/tax/platform apparatus). Each reading has its own ε, beneficiary/victim structure, and claimed type; they are linked here because they compete for explanatory primacy over the same observed price phenomenon without being the same constraint."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "midcentury_exclusionary_zoning_settlement",
+    "drift_state": {
+      "moment": "contemporary_housing_affordability_crisis",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "naturalist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "georgist_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "financialization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "prices_are_institutionally_constructed_not_discovered",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "regulatory_apparatus_generates_identifiable_beneficiaries_and_victims",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

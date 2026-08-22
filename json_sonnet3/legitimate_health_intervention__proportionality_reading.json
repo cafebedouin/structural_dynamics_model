@@ -1,0 +1,302 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "story_uid": "784adae8-ebc0-4acb-8359-d8b2123d0dce"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality Doctrine for Legitimate Health Intervention",
+    "topic_domain": "public health policy / medical ethics / constitutional law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_risk_population_cohorts",
+      "public_health_authorities"
+    ],
+    "victims": [
+      "low_severity_disease_refusers",
+      "civil_liberties_litigants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Design and calibrate the proportionality test itself — deciding what counts as sufficient transmissibility and case-fatality rate to justify a given intervention severity. They administer quarantine, mandate, and closure powers under this doctrine and are the ones whose authority the doctrine legitimizes when courts apply it deferentially."
+    },
+    {
+      "name": "high_risk_population_cohorts",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Elderly, immunocompromised, and other high-severity-exposure groups whose morbidity/mortality risk justifies stronger intervention under the disease-weighting logic. They receive protective benefit from interventions calibrated upward for high-transmissibility, high-fatality diseases like measles, without bearing the intervention's restrictive costs directly."
+    },
+    {
+      "name": "low_severity_disease_refusers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Individuals who decline an intervention for a low-severity disease (e.g. seasonal flu) and are nonetheless swept into interventions calibrated for higher-severity conditions, or who face intervention regimes justified by aggregate risk categories that do not match their individual exposure. The proportionality test's disease-level weighting can override their individualized risk profile."
+    },
+    {
+      "name": "civil_liberties_litigants",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocacy organizations and individual plaintiffs who challenge specific interventions as disproportionate to actual threat level. They must litigate case-by-case against a doctrine that grants substantial deference to public health authorities' own severity assessments, bearing legal costs and delay while the intervention remains in force pending review."
+    },
+    {
+      "name": "courts_and_reviewing_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Apply the proportionality test to specific interventions, weighing transmissibility, case-fatality rate, and severity of restriction against alternatives. Their rulings determine, case by case, whether the doctrine's balance has been honestly struck or has drifted toward rubber-stamping authority claims."
+    },
+    {
+      "name": "moderate_risk_general_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The bulk of the population subject to whatever intervention the proportionality calculus produces for a given outbreak. They benefit from reduced transmission when the calibration is accurate, and bear restriction costs (closures, mandates, mobility limits) scaled to the authorities' severity assessment, which they have limited capacity to independently verify in real time."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared decision rule for calibrating intervention severity to disease characteristics, so that measles-level threats and flu-level threats are not treated identically — coordinating population protection with individual liberty by making the tradeoff itself contestable and reviewable rather than absolute in either direction.",
+    "transfer_function": "Moves discretionary authority to public health bodies to set severity thresholds, and moves the burden of contesting a specific application onto the individuals or groups who believe the calibration is wrong for their case — shifting the cost of proving disproportion onto the party restricted.",
+    "absent_voices": "Individuals whose personal risk profile diverges sharply from their disease-category's aggregate statistics (e.g., a low-risk individual within a high-severity outbreak, or a high-risk individual within a low-severity one) have no seat in a doctrine that weights by disease characteristics rather than individualized risk; they are folded into whichever cohort the disease-level analysis assigns them to.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Public health authorities and reviewing courts would say a great deal rearranges: without a proportionality anchor, intervention severity would either default to maximal population-protective measures (public_health_primary reading) or collapse toward near-total deference to individual refusal (bodily_autonomy_primary reading), with no doctrinal mechanism to prevent either extreme. Civil liberties litigants might say the doctrine mainly formalizes a deference structure that would persist under another name even if this specific test vanished.",
+    "founding_problem": "Courts and legislatures needed a workable standard to prevent both underreaction to genuinely dangerous outbreaks and overreaction that treats every disease as though it were a mass-casualty threat, following historical episodes of both regulatory neglect and disproportionate quarantine/mandate overreach.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional scholars and public health law historians outside any single health authority attest the proportionality problem remains live — cited in judicial opinions evaluating COVID-era mandates against SARS-era and pre-vaccine measles-era interventions. Civil liberties organizations corroborate that the underlying tension (aggregate risk vs. individual autonomy) has not been resolved, though they dispute whether the doctrine as applied actually achieves proportionality or merely provides cover for authority deference."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the proportionality reading of the legitimate_health_intervention kernel: legitimacy is a function of the fit between intervention severity and disease-specific threat characteristics (transmissibility, case-fatality rate), rather than being anchored solely in population-level outcomes (public_health_primary) or solely in individual consent (bodily_autonomy_primary). The doctrine's victim set is conditional on disease severity by design — a measles outbreak generates a different proportionality calculus, and a different victim set, than a seasonal flu season. ε is authored for the standing arrangement as it operates: a real coordination function (preventing both regulatory neglect and overreach) riding alongside a real extraction function (authorities capture substantial discretion in setting the severity thresholds that determine who bears the restriction cost).",
+    "logic_rationale": "Extractiveness is moderate (0.42) and rises during high-severity outbreak periods (measles-type events push suppression_requirement to 0.6 at t=12) then partially recedes as outbreak conditions ease — this is not a monotonic drift but reflects the doctrine's conditional structure: its extractive bite scales with the disease characteristics it is applied to, exactly as the kernel reading specifies. Theater ratio stays comparatively low (0.22) because the proportionality test does correspond to real epidemiological variables being weighed, not pure performance, though the discretion in applying weights allows some performative overreach during high-visibility outbreaks. Suppression tracks the same conditional curve as extractiveness because the same disease-severity variable drives both.",
+    "directionality_logic": "Public health authorities set and administer the proportionality test and are structurally closest to the beneficiary end — the doctrine legitimizes and protects their discretionary calibration. High-risk cohorts benefit from correctly calibrated interventions without bearing their cost. Low-severity disease refusers and civil liberties litigants sit near the target end: the disease-weighting logic can subordinate their individualized risk profile to an aggregate disease-category judgment they did not choose and have limited power to contest in real time. The moderate_risk_general_public is genuinely mixed — real coordination benefit from proportionate response, real cost from restrictions scaled to a severity assessment they cannot independently verify.",
+    "mandatrophy_analysis": "The doctrine is not obsolete in the R5 sense — the founding problem (preventing both neglect and overreach) remains live and is corroborated by scholars outside the benefiting institutions. But mandatrophy risk exists at the margins: once a severity threshold is set for a disease category, the discretion to revisit that threshold as real-world transmissibility or fatality data update can lag, so an outbreak initially calibrated as high-severity can retain intervention intensity after the empirical picture moderates — this is exactly the metric substitution the theater_ratio and suppression_requirement series are tracking around t=12 to t=16.",
+    "kernel_context": "This constraint is the proportionality_reading of the legitimate_health_intervention kernel. Unlike public_health_primary (legitimacy from measurable population-level outcome reduction alone, treating individual refusal as pure externality) or bodily_autonomy_primary (legitimacy requires informed consent regardless of public benefit), this reading makes legitimacy a function of fit between severity and disease characteristics — it is deliberately conditional: a measles-level threat and a flu-level threat generate different legitimate intervention sets and different victim sets under the same doctrine. This reading's ε is authored for the doctrine's own operation (moderate, disease-conditional extraction via authority discretion in threshold-setting), not for either sibling's endorsed alternative arrangement."
+  },
+  "omegas": [
+    {
+      "id": "proportionality_calibration_authorship",
+      "question": "Who actually sets the severity thresholds inside the proportionality test — an independent epidemiological process, or the same public health authorities whose interventions the test is meant to constrain?",
+      "resolution_mechanism": "Institutional analysis of the threshold-setting process: is transmissibility/case-fatality-rate weighting produced by a body structurally separate from the enforcing authority, with adversarial input from civil liberties representation, or is it set unilaterally by the same agency administering the intervention?",
+      "impact": "If the same authority sets both the threshold and the intervention, the proportionality test functions partly as self-certification, pushing the doctrine toward tangled_rope or even snare at the administrative seat; if threshold-setting is genuinely independent and contestable, the doctrine functions closer to a rope with real coordination benefit and minimal capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the severity-weighting mechanism is independently set or self-certified by the enforcing authority."
+    },
+    {
+      "id": "kernel_reading_divergence_location",
+      "question": "Where exactly does the proportionality reading's victim set diverge from the public_health_primary and bodily_autonomy_primary readings' victim sets, and which disease-severity band produces the sharpest divergence?",
+      "resolution_mechanism": "Compare victim sets across the three sibling constraints for a matched set of historical outbreaks (e.g. measles resurgence, seasonal flu, a moderate-transmissibility/moderate-fatality pathogen) to identify the severity band where the three readings prescribe materially different interventions and different victims.",
+      "impact": "Establishes the committer-frame structural fact that the proportionality reading is not merely a compromise position but instantiates a genuinely conditional constraint structure — ε and victim set are functions of disease characteristics, which is exactly the structural delta distinguishing this reading from its siblings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locating the disease-severity band where the three kernel readings diverge most sharply in prescribed victims."
+    },
+    {
+      "id": "individualized_vs_aggregate_risk_mismatch",
+      "question": "How large is the gap between disease-level aggregate risk weighting and individual-level actual risk, and does that gap constitute a distinct suppressed voice or merely acceptable approximation error?",
+      "resolution_mechanism": "Epidemiological analysis of within-cohort risk variance for diseases the doctrine treats as uniform severity classes; compare against the doctrine's stated individual-autonomy weighting commitment.",
+      "impact": "A large mismatch would suggest the doctrine's claimed weighting of individual autonomy is substantially theatrical relative to disease-level aggregation, supporting a higher theater_ratio and a partial reclassification toward extraction at the individual-refuser seat.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether disease-level severity weighting adequately approximates individual risk or systematically misclassifies atypical individuals within a cohort."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "severity_weighted_dual_value_balancing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "disease_characteristics_determine_intervention_ceiling",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "graduated_proportionality_review_standard",
+    "drift_state": {
+      "moment": "post_covid19_mandate_litigation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_primary",
+      "bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the legitimate_health_intervention kernel, each authored as a separate ε-invariant constraint per the ε-invariance principle. public_health_primary anchors legitimacy in measurable population-level outcome reduction alone; bodily_autonomy_primary anchors it in informed consent regardless of public benefit; this proportionality_reading makes legitimacy conditional on the fit between intervention severity and disease-specific threat characteristics, producing a victim set and ε that vary by disease transmissibility/case-fatality rate rather than being fixed. The three stories are linked bidirectionally in network.affects_constraints as members of one constraint family; each carries its own claimed_type, metrics, and stakeholder set."
+  },
+  "gain_flow": "public_health_authorities",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

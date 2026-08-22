@@ -1,0 +1,328 @@
+{
+  "header": {
+    "constraint_id": "digital_money_emergence_boundary__consumer_holdings_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "a8562965-d498-4095-9508-8beda91705c7"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.44,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Consumer-Holdings Boundary of Digital Money Emergence (E-Money Directive Reading)",
+    "topic_domain": "monetary_economics/financial_history/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "e_money_institutions",
+      "regulatory_bodies_emi_ecb",
+      "fintech_issuers"
+    ],
+    "victims": [
+      "e_purse_consumers",
+      "unbanked_e_money_holders",
+      "small_prepaid_issuers"
+    ],
+    "vindicated_propositions": [
+      "consumer_holding_criterion_of_moneyness"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_bodies_emi_ecb",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Defines the legal category of electronic money (the EU E-Money Directive, 2000/46/EC and successors) and draws the line that determines whether a digital instrument counts as 'money' requiring prudential regulation, safeguarding of funds, and separate statistical treatment (M4/M5-type distinctions from bank deposits). Sets licensing categories (EMI status) that fintech issuers must obtain to operate legally. Does not hold consumer risk directly but administers the boundary and can redraw it."
+    },
+    {
+      "name": "fintech_issuers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "E-money institutions and prepaid/e-purse issuers that benefit from a legally recognized category distinct from banking: lighter capital requirements than a bank charter, a defined product they can market as 'digital money' with regulatory legitimacy, and a moat against being classified either as unlicensed deposit-taking (illegal) or as fully regulated banks (costly). Can relocate licensing jurisdiction within the EU passporting regime if one regulator is unfavorable."
+    },
+    {
+      "name": "e_purse_consumers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals holding balances on e-purses, prepaid cards, or e-money accounts. Because e-money is legally distinguished from a bank deposit, their holdings typically lack deposit-guarantee-scheme protection even though the funds look and function like money in daily use. If the issuer fails, safeguarding rules are a weaker protection than deposit insurance. Cannot easily verify which protections apply without specialist knowledge of the boundary the regulation draws."
+    },
+    {
+      "name": "unbanked_e_money_holders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People who use e-money products as a substitute for a bank account because they cannot access or afford traditional banking. They depend entirely on the e-money category's legitimacy for their day-to-day transacting, but bear the full consequence of the category's lighter protective regime — they have no traditional bank fallback and cannot 'exit' into banking without the resources banking requires."
+    },
+    {
+      "name": "small_prepaid_issuers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Smaller e-money issuers who benefit from the category's existence (it lets them operate at all) but bear disproportionate compliance costs relative to large issuers when the boundary's rules tighten — safeguarding audits, capital thresholds, and reporting obligations scaled for institutional issuers strain smaller balance sheets. Exiting the category means shutting down the product line."
+    },
+    {
+      "name": "central_bank_statisticians",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Maintain the monetary aggregates (M1 through M4/M5) and must decide whether e-money balances count as narrow money, broad money, or a separate aggregate entirely. Their classification choices feed monetary policy transmission analysis without their having a stake in the underlying commercial dispute."
+    },
+    {
+      "name": "traditional_banks",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Compete with e-money issuers for transaction volume and float but were not the primary constituency the E-Money Directive was drafted to serve; their objection — that e-money issuers operate deposit-like products under a lighter regulatory regime, creating an uneven playing field — was heard in consultation but the boundary was drawn to enable fintech entry rather than to equalize the two regimes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a workable legal and statistical boundary so that digital balances individuals hold and spend directly can be issued, regulated, and counted as a distinct instrument from bank deposits — solving a real classification problem for supervisors, issuers, and consumers who need to know what protections (or lack thereof) attach to a given balance.",
+    "transfer_function": "Moves regulatory legitimacy and market access to fintech e-money issuers and defines the terms under which consumer digital balances receive (lesser) protection than bank deposits; the coordination benefit of a defined product category is captured largely by issuers and regulators, while the protection gap relative to deposit insurance is borne by the consumers who hold the balances.",
+    "absent_voices": "Ordinary e-purse and e-money holders, especially unbanked users who rely on these products as their only transacting instrument, were not meaningfully represented in the directive's drafting process, which was driven by industry consultation and central-bank/supervisory technical concerns about prudential categorization.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the consumer-holdings legal boundary vanished, e-money issuers would lose their distinct licensing category and would have to be reclassified either as unlicensed deposit-takers (forcing closure or full bank licensing) or as unregulated non-financial float-holders (removing consumer protections entirely); central bank statisticians would lose the M4/M5-type distinction and monetary aggregates would need re-derivation; millions of prepaid and e-wallet balances across the EU would face immediate legal uncertainty.",
+    "founding_problem": "In the 1990s, e-purse and prepaid stored-value products proliferated without any clear legal status: were they bank deposits requiring banking licenses, unregulated IOUs, or something else? Supervisors needed a category to prevent both regulatory arbitrage (unlicensed deposit-taking) and stifling innovation by forcing every issuer into full bank charters.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The European Commission and EBA continue to assert the category remains necessary to enable fintech innovation while protecting consumers from unlicensed deposit-taking. Independent consumer-protection researchers and deposit-insurance scholars outside the fintech and regulatory establishment have documented that e-money safeguarding provisions offer materially weaker protection than deposit guarantee schemes, and argue the original problem (undefined legal status) has been solved but has been replaced by a durable protection gap that serves issuer cost savings as much as consumer need."
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.44,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the consumer-holdings reading of the digital money emergence kernel: money is deemed to have gone digital only at the point individuals could directly hold and transact with a digital instrument outside a traditional bank account — marked by 1990s e-purse products and formalized in the EU's 2000 E-Money Directive (2000/46/EC). This reading requires a legal and statistical boundary: e-money must be distinguished from bank deposits (feeding an M4/M5-type aggregate split) and issuers must obtain a distinct license category (EMI status) rather than a bank charter. The reading's beneficiaries are the regulatory bodies who administer this new category and the fintech/e-money issuers who gain a legitimate, lighter-weight route to market. This is a distinct constraint from the conceptualization_reading (which locates emergence in 1960s-1980s theoretical/cryptographic work, with academic and cryptographic-community beneficiaries) and the infrastructure_reading (which locates emergence in 1960s-1970s electronic transfer rails like ATMs, ACH, and SWIFT, with beneficiaries among interbank infrastructure operators). Per the ε-invariance principle, these are not the same constraint measured three ways: the consumer-holdings boundary has its own beneficiary set, its own victim set (individual holders bearing a weaker protection regime), and its own extraction profile, and is authored here as its own file, linked via network.affects_constraints.",
+    "key_agents": [
+      "regulatory_bodies_emi_ecb: Primary agenda-setter (institutional/analytical) — defines and administers the legal boundary",
+      "fintech_issuers: Primary beneficiary (organized/mobile) — gains a distinct, lighter-weight licensing category",
+      "e_purse_consumers: Primary target (powerless/constrained) — holds balances with weaker protection than bank deposits",
+      "unbanked_e_money_holders: Most exposed target (powerless/trapped) — depends entirely on e-money with no banking fallback",
+      "central_bank_statisticians: Analytical observer — must classify e-money within monetary aggregates",
+      "traditional_banks: Excluded competitor — objected to an uneven playing field in consultation but the boundary was drawn around fintech entry"
+    ],
+    "logic_rationale": "Extraction (0.52) sits at a moderate level: the category creation genuinely solves a real classification problem (avoiding forcing every prepaid issuer into a full bank charter, avoiding leaving consumers with zero legal protection), but the same boundary systematically produces a protection gap — e-money safeguarding rules are lighter than deposit guarantee schemes — that saves issuers compliance cost at consumer expense. Suppression (0.44) reflects that consumers cannot easily exit the category once they hold e-money balances (redraw of the boundary is a regulatory, not individual, choice) but is not extreme because e-money remains largely voluntary relative to necessity goods. Theater (0.28) is present but modest: safeguarding requirements are substantively enforced, not purely cosmetic, though disclosure of the deposit-insurance gap to ordinary consumers is often thin. Accessibility collapse (0.5) and resistance (0.4) reflect a boundary that is now largely settled among regulators and industry, though consumer-protection researchers and deposit-insurance scholars continue to contest whether the gap is justified.",
+    "directionality_logic": "Regulatory bodies and fintech issuers derive as beneficiaries: the former administer and gain jurisdictional relevance from a new regulatory category, the latter gain market access at lower capital cost than a bank charter — both sit near the beneficiary end of directionality. E-purse consumers and unbanked e-money holders are victims: they hold the actual balances subject to the weaker protection regime, with the unbanked holders overridden toward the full-target end because they are structurally trapped (no banking fallback) rather than merely constrained. Small prepaid issuers are dual-positioned: they benefit from the category's existence but bear disproportionate compliance costs at their scale relative to large issuers, which the moderate power/constrained exit combination captures without needing an override.",
+    "mandatrophy_analysis": "The founding problem (undefined legal status for 1990s stored-value products) is genuinely dead as originally stated — regulators, courts, and issuers now agree e-money is a defined legal category. But the arrangement persists past that resolution because it now also performs an ongoing function: enabling issuers to offer deposit-like products without deposit-like protections. The founding_problem_status is authored as 'contested' rather than 'dead' because regulatory bodies maintain the category is still solving a live innovation-enablement problem, while consumer-protection researchers hold the original problem is solved and the persisting protection gap is a separate, unaddressed harm riding on the original justification. This divergence between stated purpose and current effect is exactly what the tangled_rope classification and this omega-routed commentary are meant to surface without adjudicating.",
+    "kernel_context": "This constraint instantiates the consumer_holdings_reading of the digital_money_emergence_boundary kernel — the reading that locates digital money's emergence at the point individuals could directly hold and transact digital instruments outside bank accounts (1990s e-purses, EU E-Money Directive 2000). Two sibling readings exist as separate constraint files: conceptualization_reading (emergence = 1960s telecom advances and 1985 Chaum formalization of blind-signature digital cash — beneficiaries are the cryptographic/academic research community establishing theoretical priority) and infrastructure_reading (emergence = 1967 ATMs, 1972 ACH, 1977 SWIFT — beneficiaries are interbank infrastructure operators and payment-network incumbents). This reading's distinguishing structural claim is that moneyness requires individual consumer holding and transacting capacity, not mere technical possibility (conceptualization) or interbank electronic transfer capacity (infrastructure) — which is why it requires the M4/M5 statistical distinction the other two readings do not need, and why its beneficiary set (regulators defining legal categories, fintech issuers) differs sharply from the other readings' beneficiary sets (cryptographers, infrastructure operators)."
+  },
+  "omegas": [
+    {
+      "id": "consumer_holding_boundary_indeterminacy",
+      "question": "Is the consumer-holdings criterion (individual direct holding outside a bank account) the correct structural marker for digital money's emergence, or is it a regulatory line drawn for administrative convenience rather than economic substance?",
+      "resolution_mechanism": "Comparative analysis of whether e-money balances function economically identically to bank deposits from the holder's perspective (fungibility, transaction finality, acceptance) versus whether the legal distinction tracks a genuine difference in the underlying claim's nature.",
+      "impact": "If the boundary tracks genuine economic substance, the tangled_rope classification's coordination function is stronger (real problem, real solution). If the boundary is primarily administrative convenience that happens to produce lighter regulatory treatment, the extraction component dominates and the constraint drifts toward snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the consumer-holdings criterion is economically substantive or an administratively convenient line."
+    },
+    {
+      "id": "sibling_reading_displacement",
+      "question": "Does the consumer-holdings reading's later dating (2000, EMD) versus the infrastructure reading's earlier dating (1967-1977) or the conceptualization reading's earliest dating (1960s-1985) reflect three genuinely independent emergence events, or does it reflect retrospective boundary-drawing by whichever community wants to claim priority or avoid regulatory attention?",
+      "resolution_mechanism": "Track which reading each institutional actor (central banks, fintech trade associations, cryptography historians) invokes in policy and historical documents, and whether the choice correlates with that actor's interest in an earlier or later emergence date.",
+      "impact": "If reading choice correlates with actor interest, all three readings should be treated as contested framings rather than settled historical fact, reinforcing the need to keep them as separate, non-averaged constraint files per the ε-invariance principle.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings reflect independent facts or interest-driven boundary selection."
+    },
+    {
+      "id": "protection_gap_justification",
+      "question": "Is the lighter safeguarding regime for e-money (relative to deposit guarantee schemes) a justified proportionate response to lower systemic risk, or an unjustified extraction that externalizes issuer failure risk onto consumers?",
+      "resolution_mechanism": "Empirical study of e-money issuer failure rates and consumer losses relative to bank failure rates and insured losses, controlling for balance size and consumer demographics (particularly unbanked holders).",
+      "impact": "If losses are proportionate to the lighter risk profile, the tangled_rope's extraction component is smaller than currently authored. If unbanked holders suffer disproportionate uninsured losses, the victim classification and extraction magnitude are understated.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the consumer protection gap is proportionate to actual risk or an unjustified cost externalization."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "digital_money_emergence_boundary__conceptualization_reading",
+      "digital_money_emergence_boundary__infrastructure_reading"
+    ],
+    "dual_formulation_note": "This story is one of three constraints in the digital_money_emergence_boundary kernel family. conceptualization_reading dates emergence to 1960s-1985 theoretical work (beneficiary: cryptographic/academic community); infrastructure_reading dates emergence to 1967-1977 electronic transfer infrastructure (beneficiary: interbank infrastructure operators); consumer_holdings_reading (this file) dates emergence to 1990s-2000 consumer-held instruments (beneficiary: regulators and fintech issuers). Each reading has a distinct ε: the infrastructure reading's ε is likely lower (interbank rails are widely regarded as pure coordination with minimal contested beneficiary capture), the conceptualization reading's ε is likely near-zero (academic priority claims extract little), while this reading's ε (0.52) reflects the consumer protection gap embedded in the E-Money Directive's licensing architecture. The three are linked, not merged, per Rule 1 of the committer frame."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "gain_flow": "fintech_issuers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "conceptualization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "infrastructure_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "moneyness_requires_individual_direct_holding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "legal_category_creation_is_necessary_for_emergence",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "pre_emd_undefined_stored_value_status",
+    "drift_state": {
+      "moment": "post_2009_emd_recast_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

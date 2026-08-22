@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__husk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "578bd415-089e-47f8-aff3-054dbc6edfa1"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.81,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.35,
+    "claimed_type": "piton",
+    "human_readable": "Flood Preparedness Drill and Inspection Regime (Husk Reading)",
+    "topic_domain": "disaster_preparedness/institutional_memory",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "emergency_management_agency_leadership",
+      "municipal_flood_authority"
+    ],
+    "victims": [
+      "floodplain_residents",
+      "frontline_evacuation_personnel"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "emergency_management_agency_leadership",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Schedules and certifies the annual drill calendar, signs off on inspection checklists, and reports compliance rates to oversight bodies and insurers. Could redesign drills to test actual failure modes but the cost of admitting current drills are theater — reputational, budgetary, legal — exceeds what leadership individually bears when the flood has not yet come. Rotates out on a timescale shorter than most flood-return periods, so the consequences of atrophy land on a successor."
+    },
+    {
+      "name": "municipal_flood_authority",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Cites completed drills and passed inspections as evidence of due diligence when negotiating budgets, insurance terms, and political cover after near-misses. The paperwork trail is real and audit-legible even when the underlying capability it certifies has decayed; the authority's legitimacy is propped up by the record independent of whether the record still tracks readiness."
+    },
+    {
+      "name": "floodplain_residents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live behind levees and in evacuation zones whose maintenance is certified by the same inspection regime. Cannot independently verify whether an inspection tested real structural capacity or reviewed old paperwork, and cannot relocate away from flood risk on short notice. When the drill fails to reflect a real emergency's conditions, they bear the consequence directly — in casualties, property loss, or evacuation chaos — while the certifying agency bears reputational cost only."
+    },
+    {
+      "name": "frontline_evacuation_personnel",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Execute the drills as scripted, often against unrealistic scenarios (fair weather, daytime, pre-notified routes) that management selects for predictable, presentable outcomes. Many privately know the drills don't stress real failure conditions — night flooding, road washout, non-English speakers, mobility-impaired residents — but raising this in after-action reports has little career upside and is frequently filtered out before it reaches leadership."
+    },
+    {
+      "name": "insurance_and_bond_underwriters",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Price flood risk and set municipal bond terms partly on the basis of documented compliance with drill and inspection schedules. Benefit from a legible, auditable paper record regardless of whether it reflects operational reality; have no strong incentive to investigate the gap because the record satisfies their own downstream reporting requirements."
+    },
+    {
+      "name": "state_emergency_oversight_board",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Reviews compliance filings and occasionally conducts audits, but typically checks that drills occurred on schedule rather than whether they tested anything meaningful. Has authority to mandate substantive reform but limited capacity to observe operational quality directly, and relies on the same self-reported records the local authority produces."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Originally: standardize evacuation procedures and verify levee/pump/gate integrity across multiple agencies and jurisdictions so that, in a real flood, response would be coordinated rather than improvised.",
+    "transfer_function": "Moves legitimacy and continued budget/insurance access to the certifying agencies and their leadership, in exchange for a paperwork record; moves real risk exposure to floodplain residents, who receive the appearance of readiness without the underlying operational capacity the paperwork claims to certify.",
+    "absent_voices": "Frontline personnel who know the drills are scripted for predictable success are structurally filtered out of after-action reporting. Floodplain residents, especially those without English fluency or mobility, are never consulted on drill design and have no channel to flag that evacuation routes assume conditions unlike a real flood night.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the drill and inspection regime vanished overnight, the paperwork-legitimacy function (insurance terms, bond ratings, political cover) would visibly collapse immediately — that arrangement clearly depends on it. Whether actual flood outcomes would be materially different is contested: on this reading, operational competence has already atrophied behind the paperwork, so removing the ritual might change little for outcomes while changing everything for who is exposed as unprepared.",
+    "founding_problem": "Historical flood disasters where uncoordinated, ad hoc evacuation and unverified infrastructure caused avoidable deaths; drills and inspections were built to ensure procedures were rehearsed and infrastructure verified before the next flood, not merely documented.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "After-action reviews from independent disaster researchers and journalists following recent flood events in comparable jurisdictions have documented drills that assumed daytime, dry-road, English-speaking, ambulatory populations — conditions absent in the actual floods that followed. No entity outside the certifying agencies and their insurers attests that the drills still test the conditions a real flood would present; the corroboration for competence comes only from the benefiting parties' own compliance filings."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.77
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This is the husk reading of the preparedness_persistence kernel: drills and inspections are understood as memorial performance whose institutional form has decoupled entirely from the operational competence it once certified. On this reading, the constraint presents itself with mountain-like inevitability — 'of course we drill, of course we inspect, this is simply how disaster readiness works' — while the actual capability the ritual once verified has atrophied into a checklist exercise designed for predictable, presentable outcomes rather than real stress conditions. The beneficiary is institutional legitimacy (agency leadership, the flood authority, insurers/bond markets who need a legible compliance record); the victim is the floodplain population whose actual risk exposure is undiminished by a ritual that no longer tests the conditions a real flood would present.",
+    "key_agents": [
+      "emergency_management_agency_leadership: agenda_setter/beneficiary (institutional/arbitrage) — schedules and certifies drills, bears little cost from their decay",
+      "municipal_flood_authority: beneficiary (institutional/constrained) — legitimacy sustained by the paper record independent of underlying capability",
+      "floodplain_residents: payer (powerless/trapped) — bear the real consequence when ritual diverges from operational reality",
+      "frontline_evacuation_personnel: payer/excluded (moderate/constrained) — know the drills are scripted but have no effective channel to say so",
+      "insurance_and_bond_underwriters: beneficiary (organized/mobile) — price risk off the compliance record without auditing its operational substance",
+      "state_emergency_oversight_board: observer (institutional/analytical) — checks schedule compliance, not operational quality"
+    ],
+    "logic_rationale": "Theater ratio is authored high and rising (0.35 to 0.81) because the story's central claim is exactly that form has decoupled from function over time — drills increasingly test conditions selected for successful, presentable completion rather than realistic flood scenarios. Extractiveness rises in parallel (0.30 to 0.68) because the paperwork-legitimacy function increasingly extracts institutional and financial value (budget justification, favorable bond terms, political cover) from a ritual whose protective value to residents has not kept pace. Suppression is moderate (0.52), not extreme: no one is coercively silenced, but frontline reporting is structurally filtered and resident input is never solicited, which functions as a softer, non-coercive suppression of the information that would reveal the gap. Accessibility collapse is moderate-high (0.6): once the drill schedule and inspection checklist exist and are treated as sufficient, alternative approaches (adversarial red-team drills, resident-designed evacuation tests) become institutionally invisible rather than actively forbidden. Resistance is low (0.35) precisely because the ritual's mountain-like self-presentation forecloses the perception that resistance is even warranted — you cannot resist what looks like settled, natural procedure.",
+    "directionality_logic": "Agency leadership and the flood authority sit near the beneficiary end: they collect legitimacy, budget continuity, and political cover from the compliance record with minimal personal exposure to flood outcomes given short leadership tenures relative to flood-return periods. Insurers and bond underwriters likewise benefit from a legible record they have no strong incentive to audit substantively. Floodplain residents sit at the target end: trapped exit, powerless, and directly exposed to the gap between certified and actual readiness. Frontline personnel are structurally intermediate — they pay a professional cost (their honest observations are filtered) without receiving the institutional benefit leadership captures, and they are excluded from redesigning the exercises whose flaws they are best positioned to see.",
+    "mandatrophy_analysis": "The founding problem — uncoordinated, unrehearsed, unverified flood response causing avoidable deaths — is read here as dead: the mechanism built to solve it has persisted long past the point where it demonstrably still solves it, corroborated by outside after-action analysis, not by the certifying agencies themselves. This is the mandatrophy signature: an arrangement whose mandate (verify real readiness) has been quietly substituted by a proxy mandate (produce a compliant record) that is easier to satisfy and equally sufficient for the institutional purposes (legitimacy, insurance, budget) that now sustain it. Classifying this as piton rather than mountain prevents the constraint from being mistaken for an irreducible feature of disaster governance; classifying it as piton rather than snare acknowledges that no single party is extracting concentrated rents — the extraction is diffuse institutional self-protection, not capture by an identifiable profiteer, which is exactly the piton signature the kernel context flags as the expected structural delta.",
+    "kernel_context": "This constraint instantiates the husk_reading of the preparedness_persistence kernel: drills and inspections as memorial performance, form persisting while operational competence atrophies. The sibling competence_reading holds the opposite premise — that drills are live exercised knowledge that maintains readiness — and is authored as a separate constraint with its own ε (low extraction, genuine coordination function, closer to rope). The sibling hybrid_reading holds that preparedness is stratified: some components (engineering inspection of physical infrastructure) remain competent while others (evacuation drills, community engagement) have ritualized; it is authored separately with a mixed metric profile reflecting that partial-atrophy structure. This husk_reading's ε (0.68, rising) reflects a full-atrophy diagnosis and is not averaged against or reconciled with the siblings' ε values — each reading is a distinct constraint per the ε-invariance principle."
+  },
+  "omegas": [
+    {
+      "id": "husk_vs_competence_empirical_discriminator",
+      "question": "Is the drill and inspection regime genuinely a husk (form without function) or is it live exercised knowledge (the competence_reading) — what observable would discriminate between the two readings for this specific jurisdiction?",
+      "resolution_mechanism": "Compare drill scenario design against actual flood event conditions from the historical record (time of day, weather, road conditions, population mobility/language profile) across multiple cycles; a persistent mismatch between drilled and real conditions favors the husk reading, while adaptive scenario design that incorporates prior flood lessons favors the competence reading.",
+      "impact": "If discriminating evidence shows drills adapting to real flood lessons over time, this story's classification should shift toward the competence_reading's structure (rope-like, genuine coordination) rather than piton; if the mismatch persists or widens, it corroborates the husk reading and would predict continued extraction growth.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the husk diagnosis is empirically distinguishable from the competence reading for this jurisdiction."
+    },
+    {
+      "id": "husk_hybrid_boundary_location",
+      "question": "Where exactly does the husk/competent boundary sit — is it possible that engineering inspection (levees, pumps, gates) remains genuinely competent even while evacuation drills have hollowed out, as the hybrid_reading claims, making this story's full-husk diagnosis too broad?",
+      "resolution_mechanism": "Disaggregate the compliance record by component: compare physical infrastructure inspection findings (measurable engineering metrics — structural load tests, pump throughput tests) against evacuation drill after-action reports (procedural, harder to falsify) to see if one component shows genuine competence while the other shows atrophy.",
+      "impact": "If infrastructure inspection is found to be substantively rigorous while only evacuation drills are theatrical, the more accurate reading for this jurisdiction may be the hybrid_reading rather than this full husk_reading — this story would then be over-generalizing atrophy across components that behave differently.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether full-husk is the right granularity or whether atrophy is component-specific, as the hybrid reading claims."
+    },
+    {
+      "id": "leadership_awareness_of_atrophy",
+      "question": "Do agency leaders who schedule and certify these drills privately know the exercises no longer test real conditions, or do they sincerely believe the drills remain operationally meaningful?",
+      "resolution_mechanism": "Internal communications discovery, whistleblower testimony, or comparison of internal risk assessments against public compliance filings for divergence.",
+      "impact": "Sincere belief in the drills' adequacy would support classifying this as institutional self-deception (a piton with no deliberate deceiver); documented internal awareness of the gap without correction would push the classification toward snare-like concentrated culpability rather than diffuse piton drift.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the husk persists through sincere belief or knowing neglect."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__competence_reading",
+      "preparedness_persistence__hybrid_reading"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the preparedness_persistence kernel. competence_reading holds drills are live exercised knowledge (low ε, rope-like); husk_reading (this story) holds form has decoupled from function (high ε, piton); hybrid_reading holds atrophy is component-specific (mixed ε, mixed classification across sub-functions). Each reading is authored as a separate constraint with its own stable ε per the ε-invariance principle; they are linked here rather than merged into one story with an observable parameter."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "post_disaster_rehearsal_mandate",
+    "drift_state": {
+      "moment": "contemporary_compliance_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "certified_form_substitutes_for_verified_function",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "institutional_legitimacy_decouples_from_protective_outcome",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

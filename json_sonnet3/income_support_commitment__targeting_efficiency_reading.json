@@ -1,0 +1,311 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__targeting_efficiency_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "bf1cf20f-418a-4b69-91cd-6afbb1b2face"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.58,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.63,
+    "claimed_type": "snare",
+    "human_readable": "Targeting-Efficiency Reading of the Income Support Commitment",
+    "topic_domain": "political_economy/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "current_targeted_program_recipients",
+      "means_testing_administrators",
+      "fiscal_conservative_policymakers"
+    ],
+    "victims": [
+      "current_targeted_program_recipients",
+      "categorically_ineligible_low_income_households",
+      "benefits_cliff_workers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "current_targeted_program_recipients",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "A household stacking SNAP, housing assistance, Medicaid, TANF, and EITC currently receives a combined package (e.g. $31,100 for a Queens single parent) calibrated to documented categorical need. Under this reading's preferred targeting-efficiency reform, any move toward a flatter universal payment funded by consolidating those programs would replace the stacked package with a smaller flat sum (e.g. $19,100) — the same household is simultaneously the reading's cited justification (targeting serves the needy) and the population that loses most if targeting is abandoned in favor of universalism. They cannot easily leave the benefits system without losing categorical eligibility entirely."
+    },
+    {
+      "name": "means_testing_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and enforce the eligibility verification, asset tests, and categorical rules that determine who receives what. Their institutional relevance, budget lines, and professional expertise are built around administering complexity; a shift to unconditional universal payment would eliminate much of their function. They set the terms of the 'demonstrated need' standard and can tighten or loosen it."
+    },
+    {
+      "name": "fiscal_conservative_policymakers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Cite targeting efficiency to argue that scarce fiscal resources should be concentrated on the poorest rather than spread thinly across all income levels, which keeps the aggregate income-support budget lower than a universal alternative would require. Benefit politically from a narrative of fiscal discipline and from a program structure that is easier to cut incrementally by tightening eligibility than a universal payment would be."
+    },
+    {
+      "name": "categorically_ineligible_low_income_households",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Households just above categorical thresholds, or whose need doesn't fit the documented categories (irregular gig income, undocumented status, non-custodial caregivers) receive nothing despite comparable material hardship to enrolled households. Targeting's demonstrated-need standard structurally excludes them; they bear the cost of a system organized around proving categorical eligibility rather than income level alone."
+    },
+    {
+      "name": "benefits_cliff_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Workers whose earnings, if increased even modestly, would trigger loss of multiple stacked benefits simultaneously (the 'benefits cliff'), producing effective marginal tax rates over 80-100%. Targeting's need-verification structure creates this cliff; they experience it as a wall against earning more, and their exit option (working more) is punished by the same targeting apparatus that is defended as efficient."
+    },
+    {
+      "name": "universal_basic_income_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that unconditional universal payment would eliminate benefits cliffs, administrative gatekeeping, and stigma, and would reach the categorically-excluded poor. Are structurally absent from the targeting-efficiency policy conversation, which treats universalism's cost (spreading a fixed budget across all income levels) as self-evidently wasteful without engaging the coverage-gap argument on its own terms."
+    },
+    {
+      "name": "welfare_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Model the distributional effects of targeted versus universal transfers, including the specific finding that funding a UBI by consolidating targeted programs (rather than through new revenue) produces net losses for currently-enrolled poor households. Their modeling is the primary source for the 'poor as both beneficiary and victim' framing this reading depends on."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Concentrating a fixed pool of transfer dollars on households that pass a demonstrated-need test solves the problem of finite fiscal resources meeting unlimited potential claims — it directs the largest per-household transfer to those with the most documented need rather than diluting the same budget across every income level.",
+    "transfer_function": "Moves tax revenue to categorically-verified low-income households through multiple stacked programs; simultaneously withholds transfer from anyone who cannot document categorical need, and structurally would withdraw resources from currently-enrolled households if the same fiscal envelope were redistributed as a flatter universal payment.",
+    "absent_voices": "Universal basic income advocates and the categorically-ineligible poor (irregular income, non-standard household structures) are largely absent from the targeting-efficiency debate as it is conventionally staged; the debate is framed as targeted-vs-universal spending levels rather than as a question about who administrative categories exclude.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the targeting commitment vanished and were replaced by unconditional universal distribution funded from the same consolidated budget, currently-enrolled recipients would see their package shrink substantially (the $31,100-to-$19,100 delta), means-testing administrators would lose their institutional function, and benefits-cliff dynamics would disappear — a genuine rearrangement in multiple directions simultaneously, which is exactly why this kernel produces three incompatible readings rather than one.",
+    "founding_problem": "Twentieth-century welfare states faced the problem of finite public budgets and wanted transfers to reach those in the deepest material need rather than being spread indiscriminately across all income levels, including the affluent.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Fiscal conservative policymakers and means-testing administrators attest the founding problem (efficient allocation of scarce transfer dollars) remains live. Independent welfare-economics research (outside both the administering agencies and the advocacy groups on either side) documents that the administrative machinery built to solve this problem now generates benefits-cliff disincentives and coverage gaps that arguably create as much hardship as they prevent — external corroboration is mixed, not unanimous."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.69
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the targeting-efficiency reading of the income_support_commitment kernel: the claim that income support should be concentrated on demonstrated need rather than distributed universally. The reading is structurally distinct from the dependency_trap_reading (which centers work-disincentive effects of unconditional support) and the freedom_floor_reading (which centers autonomy and dignity effects of unconditional support) — those are separate constraint stories with their own ε and stakeholder sets, not alternative measurements of this one. Here, ε is authored high because the reading's own internal logic, followed to its typical policy conclusion (fund any move toward universalism by consolidating existing targeted programs within a fixed fiscal envelope), extracts from the very population it claims to serve: current recipients lose a documented net amount ($31,100 to $19,100 in the canonical Queens-parent illustration) when the targeting apparatus is dismantled in favor of flat universal distribution funded from the same pool. The poor are simultaneously the reading's stated beneficiary class and its actual victim class under its own preferred reform trajectory — that double role is the structural signature this reading is built to name.",
+    "key_agents": [
+      "current_targeted_program_recipients: primary nominal beneficiary and primary actual victim under the reading's preferred reform (powerless/trapped) — receives targeted package now, loses net value if package is flattened",
+      "means_testing_administrators: agenda_setter (institutional/arbitrage) — designs and enforces demonstrated-need verification, institutionally invested in targeting's persistence",
+      "fiscal_conservative_policymakers: beneficiary (powerful/arbitrage) — uses targeting-efficiency framing to justify lower aggregate transfer budgets",
+      "benefits_cliff_workers: payer (powerless/trapped) — bears the marginal-tax-rate wall that targeting's stacked-program structure produces",
+      "welfare_policy_analysts: analytical observer — models and documents the beneficiary/victim overlap this reading depends on"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.72 by interval end because the targeting-efficiency reading, when it translates into policy (consolidating targeted programs to fund a flatter universal replacement within the same budget envelope), produces a documented net loss for the population it is offered to protect. Suppression (0.58) reflects the demonstrated-need verification apparatus itself — asset tests, categorical eligibility rules, recertification burdens — which actively filters claimants rather than passively distributing. Theater ratio is moderate-low (0.31): means-testing does perform real allocative work, but a rising share of its apparatus (recertification frequency, documentation burden) has drifted toward administrative self-justification rather than improved targeting accuracy, which the rising trajectory captures.",
+    "directionality_logic": "Current targeted-program recipients carry a dual role deliberately: nominal beneficiary of the present targeted system (low d against the CURRENT arrangement) but the primary target/victim of this reading's own preferred reform trajectory (high d against the STRUCTURAL SHIFT the reading advocates). Means-testing administrators and fiscal conservative policymakers are the reading's actual structural beneficiaries — administrators via institutional persistence, policymakers via lower aggregate fiscal exposure and a defensible-sounding efficiency narrative. Benefits-cliff workers and categorically-ineligible households are victims of the targeting apparatus's own design, independent of any reform question — their cost is inherent to demonstrated-need verification, not contingent on the UBI-replacement scenario.",
+    "perspectival_gap": "From the agenda-setter seat (means-testing administrators) this reads as prudent stewardship of scarce resources toward those who need them most. From the payer seat (current recipients under the reading's own preferred reform trajectory, and benefits-cliff workers under the status quo) the same demonstrated-need architecture reads as an extraction mechanism that produces cliffs, gaps, and — in the specific UBI-funded-by-consolidation scenario — a net loss for its own nominal beneficiaries. The engine should compute these as structurally different seat classifications from the same authored data.",
+    "mandatrophy_analysis": "The founding problem (finite budgets should reach the neediest first) remains partially live — genuine scarcity constraints exist — but the specific administrative machinery built to solve it (categorical verification, asset testing, program stacking) has accumulated extraction and gap-creation effects that arguably now exceed its original coordination benefit. Classifying this as snare rather than rope or tangled_rope reflects the authored judgment that, within THIS reading's own preferred policy trajectory, the coordination story (target the needy) is used to justify an outcome (fund universalism from the targeted pool) that extracts from the targeted population itself — the coordination function and the extraction are not merely coupled but the latter runs through the former's own logic.",
+    "kernel_context": "This constraint is the targeting_efficiency_reading of the income_support_commitment kernel. Two sibling readings exist as separate constraint stories: the dependency_trap_reading (unconditional support as work-disincentive) and the freedom_floor_reading (unconditional support as autonomy-enabler). This reading takes no position on work-disincentive effects; its distinguishing claim is narrower — that scarce transfer resources should be allocated by demonstrated need rather than universally, and its ε is authored high because pursuing that claim to its typical policy conclusion (fund universalism by consolidating targeted programs) extracts from the poor it claims to serve. The sibling readings would authorize different beneficiary/victim sets and different ε: the freedom_floor_reading would likely show low ε (autonomy gain, few identifiable victims), and the dependency_trap_reading would locate its victims in a different population (long-term unconditional recipients whose labor-market position erodes), not in current targeted-program recipients."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection_and_disagreement_locus",
+      "question": "Is the disagreement among the three income_support_commitment readings located in empirical predictions (does unconditional support cause dependency, does targeting cause cliffs) or in prior normative commitments (is demonstrated need or unconditional dignity the correct allocation principle)?",
+      "resolution_mechanism": "Cross-national natural experiments comparing targeted and universal transfer systems on labor supply, poverty depth, and administrative cost could resolve the empirical sub-claims; the normative sub-claim (which allocation principle is correct) is not resolvable by data and would remain a live disagreement across readings regardless.",
+      "impact": "If the disagreement is purely empirical, convergent evidence could in principle collapse the three readings toward one policy consensus. If it is substantially normative, the three readings will persist as genuinely different constraints indefinitely, each with its own ε, exactly as modeled here.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's sibling readings disagree empirically or normatively, and whether that disagreement is resolvable."
+    },
+    {
+      "id": "sibling_reading_structural_delta",
+      "question": "How would the beneficiary/victim structure and ε change under the freedom_floor_reading and dependency_trap_reading, given they are authored as separate constraint stories?",
+      "resolution_mechanism": "Author both sibling stories independently and compare: the freedom_floor_reading is expected to show low ε (autonomy gain, minimal identifiable victims) and the dependency_trap_reading is expected to locate victims among long-term unconditional recipients rather than current targeted-program recipients.",
+      "impact": "Confirms the ε-invariance principle holds across the kernel: each reading is a genuinely distinct constraint rather than a different observable of one constraint, since their ε values and victim populations differ substantially.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Documents the expected structural divergence across the three sibling readings of this kernel."
+    },
+    {
+      "id": "administrative_capture_vs_genuine_scarcity",
+      "question": "Is the demonstrated-need verification apparatus's persistence driven by genuine fiscal scarcity that requires targeting, or has the apparatus itself become an entrenched administrative interest that would resist replacement even if fiscal capacity for universalism existed?",
+      "resolution_mechanism": "Compare jurisdictions with expanded fiscal capacity (e.g. resource-windfall states) to see whether targeting apparatus is dismantled or retained when scarcity constraints loosen.",
+      "impact": "If apparatus persists despite loosened scarcity, this supports reclassifying the administrative layer itself toward piton/snare independent of the targeting-efficiency argument's merits; if apparatus is dismantled when scarcity loosens, this supports the reading's own claim that targeting is a scarcity-driven necessity rather than institutional self-preservation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether targeting apparatus reflects genuine scarcity constraint or entrenched administrative interest."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "freedom_floor_reading",
+      "dependency_trap_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the income_support_commitment kernel, each authored as a separate story per the ε-invariance principle. targeting_efficiency_reading (this story) authors high ε because its own preferred policy trajectory extracts from current targeted recipients. freedom_floor_reading is expected to author low ε (autonomy/dignity gains, minimal victims). dependency_trap_reading is expected to author moderate-to-high ε with a different victim population (long-term unconditional recipients experiencing labor-market erosion). All three should be linked bidirectionally via affects_constraints, and none should attempt to average or hedge ε across the readings — that would violate DP-001."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.62
+    }
+  ],
+  "gain_flow": "means_testing_administrators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "allocation_should_track_demonstrated_need",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "universal_distribution_dilutes_scarce_transfer_capacity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "means_tested_categorical_welfare_state",
+    "drift_state": {
+      "moment": "contemporary_benefits_cliff_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

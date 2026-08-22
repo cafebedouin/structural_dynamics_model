@@ -95,6 +95,12 @@ in runbook §9.
   redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
   stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
   (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
+- **10:05 — sonnet3 (960/1005) and haiku3 (833/1005) first passes landed, then BOTH drivers died on
+  attempt 2: Anthropic `credit balance is too low` (the $89.56 went to sonnet2/haiku2/sonnet3/haiku3
+  batches + reservations; auto-load not yet visible). RESUME once funded — same commands, ladder-driven:
+  `python3 -u -m agent.run_no_scope_sonnet --seeds prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json
+  --n 0 --leg-suffix 3` and `... --leg-name haiku --leg-suffix 3 --model claude-haiku-4-5-20251001`.
+  The driver now exits cleanly on a batch-create failure (writes failures.json) instead of a traceback.
 - **10:00 — floors landed and pushed (e5b3f247): sonnet2 1003 (~$39.6), haiku2 996 (~$16), both certified and
   registered (9 live legs, census GREEN).** Sonnet floor read (coherent, OQ-347): h1 69% / verdict 71% /
   ε exact 54%, seat-vector churn 43% — redraw + prompt change (July leg at `becd0f87`); a pure floor =

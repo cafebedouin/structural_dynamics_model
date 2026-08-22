@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "eu_council_unanimity__veto_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "babdc764-0efa-483c-bdcd-8c2dead6f8b6"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "EU Council Unanimity as Veto Trap",
+    "topic_domain": "institutional_design/international_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "coalition_majority",
+      "eu_policy_integration_agenda"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "blocking_minority_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Holds credible veto power over EU Council decisions. Uses the veto or threat of veto to extract concessions, opt-outs, budgetary side-payments, or policy carve-outs from the coalition majority. Their material interest may be parochial (domestic budget protection, sectoral exemption) or ideological (blocking direction of integration). The veto is costless to initiate and carries no procedural penalty; exercising it is purely a negotiating tactic."
+    },
+    {
+      "name": "coalition_majority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Wants to pass a policy that would advance the broader EU agenda (fiscal union, labor mobility, environmental standards). Must negotiate with every member state individually to avoid blockage. Systematically overpays the blocking minority through side-deals, opt-outs (like UK's rebate, Poland's judicial independence carve-out), or budget reallocations that the majority would not grant if choice were unrestricted."
+    },
+    {
+      "name": "eu_commission",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Proposes harmonizing policies to member states but cannot unilaterally enact them. Must satisfy all unanimity requirements, which means accommodating veto holders' demands. Plays the role of mediator and broker, absorbing the transaction cost of sequential negotiation and often proposing watered-down compromises that weaker member states can live with."
+    },
+    {
+      "name": "small_or_economically_weak_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Possess formal veto power equal to large states, but lack credible threat power because the majority can more easily isolate them. They have fewer coalition options, weaker exit (EU membership costs less to lose for large states), and less bargaining material to withhold. They pay the extraction cost without the blocking power to demand compensation."
+    },
+    {
+      "name": "eu_parliament",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Represents supranational democratic preference across all EU citizens. Cannot override Council unanimity and has no formal role in blocking decisions. Would oppose many of the side-deals made to secure veto-holder consent, but is structurally excluded from the negotiation where those deals form. Their voice, representing majority citizen preference across the EU, is written out of the constraint."
+    },
+    {
+      "name": "supranational_integration_agenda",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The EU's institutional commitment to deepening union through harmonization of standards, labor mobility, environmental regulation, and fiscal coordination. Unanimity blocks it repeatedly, forcing compromises that slow integration and embed exceptions that undermine the policy's integrity. The agenda is not an agent but a victim of the constraint's operation."
+    },
+    {
+      "name": "international_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars, analysts, and external states watching whether EU institutional design enables effective collective action or traps it in minoritarian extraction. They observe that unanimity was intended as a sovereignty safeguard but operates as a structural vulnerability once members lose ideological consensus and pursue narrow national advantage."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures no member state is forced into a collective commitment against its explicit consent—a safeguard against majoritarian coercion of peripheral or ideologically distinct members into policies they oppose.",
+    "transfer_function": "Transfers policy concessions, budgetary side-payments, exemptions (opt-outs), and ideological victories from the coalition majority to the blocking minority state, mediated through the threat of veto.",
+    "absent_voices": "EU Parliament (supranational democratic preference across all citizens) and non-blocking small member states (who lack credible threat power and cannot extract concessions) are structurally excluded from the negotiation where veto-triggered deals form. Their opposition would matter if they were seated, but the constraint is designed so they are not.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unanimity vanished overnight and the EU shifted to qualified majority voting (or supermajority voting), the blocking minority would lose its extraction tool; policies the majority prefers would pass without side-deals; budgetary reallocations negotiated to buy off vetoes would cease; opt-outs that privileged particular states would face pressure to harmonize. The entire institutional equilibrium would reorganize around majority preference, not minority veto.",
+    "founding_problem": "Early EU (1950s-1980s) required unanimous consent to protect smaller or ideologically distinct member states from being coerced into a federal project they had not explicitly endorsed. Unanimity was a check on majoritarian overreach and a guarantee of national sovereignty.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "By the 1990s-2000s, member states largely converged on the integration project's desirability (even if disagreeing on speed and direction). Unanimity became less a protection against coerced membership and more a tool for individual members to extract rents from the majority's desire to deepen union. Scholars of EU institutional design (Tsebelis, Garrett, Moravcsik) and policy analysts document that veto use shifted from existential sovereignty defense to parochial bargaining. The blocking minority no longer claims unanimity is a sovereignty safeguard; they assert their right to extract concessions as compensation for moving toward policies they would prefer not to support—a different rationale, and one that corroborates the founding problem is dead."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The EU Council's unanimity requirement—every member state must consent to binding decisions—was designed as a sovereignty safeguard in the 1950s when the integration project was contested. By the 1990s-2000s, consensus on the desirability of integration had largely emerged, but unanimity persisted as a structural feature. Under this reading (the veto_trap_reading), unanimity operates as a minoritarian extraction mechanism: a single member state can credibly threaten to block policies the coalition majority wants, forcing the majority to buy off the veto holder through side-payments, opt-outs, budgetary reallocations, or policy exemptions. The constraint benefits the blocking minority and harms the coalition majority. This reading sits in tension with two siblings: the sovereignty_guarantor_reading (which justifies unanimity as protecting national sovereignty against majoritarian coercion—a live justification when the founding problem persists) and the diplomatic_capital_reading (which frames unanimity as forcing iterative negotiation that strengthens legitimacy—a coordination story). This JSON instantiates only the veto_trap_reading, which treats veto use as extraction and high ε as structural rather than pathological.",
+    "key_agents": [
+      "blocking_minority_state: holds credible veto power; uses it to extract concessions from the majority",
+      "coalition_majority: wants to pass policy; must systematically overpay the veto holder to avoid blockage",
+      "eu_commission: mediates negotiations; absorbs transaction costs; proposes compromises",
+      "small_or_economically_weak_states: possess formal veto but lack credible threat power; pay extraction cost without compensation",
+      "eu_parliament: represents supranational democratic preference; structurally excluded from veto negotiations",
+      "international_observers: witness whether unanimity is a sovereignty safeguard or a structural trap"
+    ],
+    "logic_rationale": "Extractiveness is high (0.72 at interval end) because the constraint systematically transfers value from the majority to the blocking minority through credible threats: the veto is costless to initiate, carries no procedural penalty, and creates a negotiation dynamic where the majority has more to lose (from blockage) than the blocking minority has to lose (from exercising it). Suppression is moderately high (0.68) because the constraint forces the majority into concessions they would not grant if the choice set were unrestricted—the majority's policy preference is suppressed by the institutional requirement to satisfy the minority. Theater rises from 0.28 to 0.42 because as the constraint matures, more of the 'consensus building' rhetoric (the diplomatic_capital justification) becomes performative—the real negotiation is increasingly transparent as extraction, not deliberation. The measurement series captures a historical trajectory: extractiveness rises steeply to t=20 (where vetoes proliferate as members learn the tactic), then plateaus (the constraint's extractive capacity is exhausted—all low-hanging concessions have been extracted). Suppression follows a similar curve. Theater rises throughout because the EU increasingly frames the process as 'consensus building' while the underlying dynamics are nakedly extractive. At t=30, the constraint has reached equilibrium: the blocking minority has extracted what it can, the majority has accepted the structural cost, and the process is now theatrical—formal negotiation masking settled extraction.",
+    "perspectival_gap": "From the blocking minority's seat, unanimity is a legitimate power to protect national interest through credible negotiating leverage—they do not experience themselves as extractive, but as exercising hard-won institutional power. From the coalition majority's seat, unanimity is an institutional trap that forces overpayment for policies the majority prefers; they experience the extraction acutely. From the EU Parliament's excluded seat, the constraint is a democratic deficit—supranational preference is being traded away in backroom deals to satisfy individual states. The engine should compute different types for these seats: the blocking minority may see rope (coordination through negotiation), the majority sees snare (forced extraction), and the Parliament sees a pure power dynamic where it has no standing. The CLAIM here is snare (this reading holds that extraction is the structural mechanism); the metrics support that claim, but only from the majority seat, not uniformly across all seats.",
+    "directionality_logic": "The blocking minority state is the beneficiary (collects concessions, opt-outs, budgetary transfers, ideological victories—d approaches 0.0). The coalition majority is the victim (pays the concessions, accepts the delays, tolerates the exceptions—d approaches 1.0). The EU Parliament is the structural loser: it is excluded from the negotiation where the deals form, so it has no directionality toward the constraint in the normal sense, but its preference is systematically suppressed in favor of the blocking minority's concession-extraction. Small weak states have formal veto power (d should be low, like large blocking states) but lack credible threat power; their exit options are more constrained (leaving the EU costs them more than it costs large states). This creates an asymmetry within the formal peers: large states exploit veto power as an extraction tool; small states have the same formal power but cannot use it effectively. No override is needed for the large blocking minority (the structural derivation captures their benefit correctly). Small weak states are a different structural position and might warrant an override if the story's focus narrows to their predicament—but this broad story treats them as constrained payers without special override.",
+    "mandatrophy_analysis": "The founding problem (protecting member states from coercion into an unwanted integration project) is dead: member states now want deeper integration (or at least do not credibly object to it on sovereignty grounds). Yet unanimity persists, and its primary function has shifted from sovereignty protection to extractive rent-seeking. The constraint exhibits classic mandatrophy: the original mandate has outlived its function, but the institutional structure persists because the beneficiaries (those who can use the veto to extract) have no incentive to change it. The solution (moving to qualified majority or supermajority voting) is blocked by the beneficiaries themselves—the ones with veto power have no reason to surrender it. The constraint is thus a candidate for the mandatrophy_resolved flag if the story author believes the shift in mandate is irreversible; here, it is not flagged because the mandate dispute is live in the sibling readings (the sovereignty_guarantor_reading still claims the founding problem is live). The mandatrophy dynamic is the diagnostic fact that distinguishes this reading from its siblings: this reading says the founding problem is dead and the constraint is now pure extraction; the sovereignty_guarantor reading says the founding problem is live and unanimity is a legitimate safeguard.",
+    "kernel_context": "This constraint is one reading (veto_trap_reading) of the contested kernel eu_council_unanimity, which governs the EU Council's decision-making rule requiring all member states to consent to binding decisions. Three readings exist: (1) veto_trap_reading (this one): unanimity as minoritarian extraction mechanism through credible blocking threats—high ε because blocking transfers value from majority to minority through coercive concessions. (2) sovereignty_guarantor_reading: unanimity as foundational protection protecting each state from majoritarian coercion implicating sovereignty—low ε because the rule coordinates around a foundational boundary (no state coerced into unwanted integration). (3) diplomatic_capital_reading: unanimity as forcing iterative negotiation that strengthens policy legitimacy and consensus—moderate ε because the rule solves a genuine coordination problem (legitimacy requires inclusive deliberation) at the cost of transaction overhead. Each reading instantiates a different ε, different beneficiary/victim structure, and different claimed type for the same institutional kernel. The veto_trap_reading treats ε as high because extraction is the primary mechanism once the founding problem (protection from coercion) is no longer live. The other readings disagree on whether the founding problem is live (sovereignty_guarantor) or whether the transaction cost of unanimity is legitimate coordination overhead (diplomatic_capital)."
+  },
+  "omegas": [
+    {
+      "id": "founding_problem_liveness",
+      "question": "Is the EU founding problem (protection of member states from majoritarian coercion into unwanted integration) still live, or is it dead?",
+      "resolution_mechanism": "Survey member states on whether they experience unanimity as a sovereignty safeguard (problem live) or as a constraint they would gladly lift (problem dead). Analyze voting patterns: if vetoes cluster around sovereignty concerns, the problem is live; if vetoes cluster around sectoral/budgetary narrow interests, the problem is dead.",
+      "impact": "If the founding problem is live, the sovereignty_guarantor_reading is correct and unanimity is a legitimate safeguard (low ε). If it is dead, the veto_trap_reading is correct and unanimity is pure extractive structure (high ε). This omega is the core of the kernel contest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether unanimity is a sovereignty safeguard (founding problem live) or minoritarian extraction (founding problem dead)."
+    },
+    {
+      "id": "veto_credibility_vs_threat_value",
+      "question": "Do blocking minorities actually extract concessions, or do they exercise veto as a last resort when consensus has genuinely failed?",
+      "resolution_mechanism": "Game-theoretic analysis of EU negotiation data: if veto threats are systematically used as first-mover negotiating tactics before consensus efforts are exhausted, extraction is the mechanism; if vetoes occur only when negotiation reaches an impasse, the mechanism is consensus-building with veto as a backstop.",
+      "impact": "If veto is a negotiating tactic (extraction), ε remains high and snare is correct. If veto is a true last resort (consensus mechanism), ε drops substantially and rope or diplomatic_capital_reading becomes more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the veto is primarily a negotiating extraction tool or a consensus-building backstop."
+    },
+    {
+      "id": "side_deal_efficiency_loss",
+      "question": "Do the side-payments, opt-outs, and budgetary reallocations required to satisfy veto holders create a less efficient or less coherent EU policy regime than qualified majority voting would?",
+      "resolution_mechanism": "Comparative institutional analysis: model EU policy outcomes under unanimity vs. qualified majority voting in a counterfactual framework, controlling for member state preferences. Measure policy coherence (number of exceptions, exemptions, carve-outs), transaction costs (negotiation time and resources), and distributional efficiency (whether resources flow to the most efficient users or to the most powerful veto holders).",
+      "impact": "If unanimity produces substantially worse outcomes (more incoherent policy, higher transaction costs, regressive distribution), it strengthens the case that extraction is the dominant mechanism and snare is correct. If outcomes are roughly equivalent, unanimity's coordination benefit (forcing consensus) may justify the transaction cost.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether unanimity's transaction costs and policy incoherence are proportional to the coordination benefits it produces."
+    },
+    {
+      "id": "alternative_readings_foreclosure",
+      "question": "Can all three readings (veto_trap, sovereignty_guarantor, diplomatic_capital) coexist in one party's framework, or does this reading's core premise foreclose one or both siblings?",
+      "resolution_mechanism": "Examine whether a single actor (e.g., a EU member state) can consistently hold all three frames, or whether accepting one reading logically requires rejecting another. If a state claims unanimity is a sovereignty safeguard AND that veto threats are extractive AND that the process builds legitimacy, are those claims coherent or in tension?",
+      "impact": "If the readings are logically incompatible (e.g., claiming unanimity is a legitimate safeguard while also treating it as extractive rentseeking), then at least one reading forecloses another. If they are compatible (e.g., unanimity protects sovereignty AND is used for extraction AND does build some legitimacy), they coexist. The kernel's logical structure determines the reading_relations values in cs_structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the veto_trap reading and its siblings are logically compatible or mutually foreclosing."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_council_unanimity__sovereignty_guarantor_reading",
+      "eu_council_unanimity__diplomatic_capital_reading",
+      "qualified_majority_voting_eu_council"
+    ],
+    "dual_formulation_note": "This constraint is one reading (veto_trap_reading) of the kernel eu_council_unanimity. The sibling readings (sovereignty_guarantor_reading, diplomatic_capital_reading) are separate constraint stories with different ε values, beneficiary/victim structures, and claimed types. All three readings share the same institutional kernel (the unanimity rule) but instantiate it structurally and normatively differently. The network links capture the constraint family structure: each reading influences and contests the others. Decomposition is necessary because the observable (whether the rule operates as sovereignty protection, coordination mechanism, or extraction tool) changes ε and type classification, violating ε-invariance if forced into one story. See commentary.kernel_context for the kernel contest and how the readings relate."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "blocking_minority_state",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_guarantor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "diplomatic_capital_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "veto_as_extraction_mechanism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "founding_problem_obsolescence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "consensus_building_legitimacy",
+    "drift_state": {
+      "moment": "veto_weaponization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "eu_council_unanimity__sovereignty_guarantor_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "header": {
+    "constraint_id": "literacy_acquisition_kernel__phonics_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_literacy_acquisition_kernel__phonics_reading",
+    "measurement_id_prefix": "literacy_phonics",
+    "story_uid": "f50cdc4e-0cc3-42e7-8803-5295ccf21005"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Phonics-First Reading Acquisition Model",
+    "topic_domain": "educational_psychology/literacy_pedagogy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "struggling_readers_weak_phonological_awareness",
+      "students_with_dyslexia_spectrum",
+      "reading_specialists_speech_pathologists"
+    ],
+    "victims": [
+      "classroom_teachers_general_education",
+      "students_motivated_by_meaning_over_mechanics"
+    ],
+    "vindicated_propositions": [
+      "decoding_as_foundational_skill",
+      "phonological_awareness_predicts_reading_success",
+      "explicit_instruction_outperforms_immersion"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "reading_specialists_cognitive_scientists",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Institutional research community and publishing infrastructure that develops, validates, and advocates for the phonics-first model. Controls research funding, journal publication, conference representation, and professional certification. Justifies the model as grounded in cognitive science of reading, phonological awareness, and dyslexia intervention. Sets standards that teachers must implement to be certified as competent. Accrues funding, prestige, and career advancement through the model's dominance."
+    },
+    {
+      "name": "struggling_readers_weak_phonological_awareness",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Children who have not developed strong implicit phonological awareness and cannot reliably decode novel words through context or guessing. Without explicit, systematic phonics instruction, they experience repeated reading failure and develop negative self-concept around literacy. The phonics-first model gives them explicit, rule-based pathways to decode unfamiliar words. Outcome research shows their decoding and reading comprehension improve measurably under this model. They cannot opt out of reading instruction and have no voice in curriculum design."
+    },
+    {
+      "name": "students_with_dyslexia_spectrum",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Children whose neurology structurally impairs implicit phonological processing and visual-word-form matching. The Orton-Gillingham lineage and explicit phonics instruction, including multisensory elements and cumulative review, was designed for dyslexic learners and remains the most empirically supported intervention for them. Under whole-language or meaning-first approaches, dyslexic students are left to discover implicit patterns they are neurologically ill-equipped to discover, leading to persistent reading failure. They are entirely dependent on pedagogical choices made by teachers and specialists."
+    },
+    {
+      "name": "classroom_teachers_general_education",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Elementary and special-education teachers responsible for implementing reading instruction in classrooms. Required by curriculum mandates, district policies, or state standards to implement a phonics-first or structured literacy model, often with scripted lesson plans and fidelity-monitoring that constrain pedagogical judgment. Must implement with fidelity or face performance evaluations keyed to compliance metrics. Lose the ability to respond fluidly to student interest, emergent reading cues, or contextual teachable moments. Can leave teaching but cannot refuse the curriculum while employed."
+    },
+    {
+      "name": "students_motivated_by_meaning_over_mechanics",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Early readers who are intrinsically motivated by narrative, story, character, and the social experience of shared reading. They want to read books that excite them and understand the plot. Phonics-first sequencing that delays meaningful text engagement until decoding skills are built positions reading as a mechanics exercise and can dampen early-reading motivation. These children are often capable of decoding words using context and prediction and can engage with actual stories from the beginning, but the curriculum delays meaningful texts. They have no power to opt out and cannot advocate for an alternative instructional sequence during their critical reading development window."
+    },
+    {
+      "name": "whole_language_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Teachers and researchers who believe reading acquisition is a natural developmental process that emerges from meaningful engagement with texts and that explicit phonics instruction is pedagogically misguided. They believe phonics-first delays the intrinsic reward of understanding stories and that immersion in meaningful text is the optimal context for all reading skills to develop incidentally. They are largely excluded from curriculum-setting conversations in phonics-first jurisdictions, receive less research funding, and are positioned as using anecdotal or ideologically driven reasoning rather than evidence-based practice."
+    },
+    {
+      "name": "balanced_literacy_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Teachers and researchers who advocate for integration of systematic phonics instruction WITH simultaneous meaningful text engagement and student choice. They propose that phonics and comprehension can develop in parallel and that both skill-building and motivation are necessary. They receive pressure to choose between phonics-first and meaning-first models for implementation fidelity, and are often dismissed by both extremes as unprincipled compromisers. Their research is less well-funded than phonics-first research in current policy environments."
+    },
+    {
+      "name": "educational_policy_makers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "State education departments, school boards, and federal education policy authorities. They set or endorse reading curricula standards, make funding decisions, and interpret research findings for policy. They mediate between competing pedagogical models and reading research communities. They can mandate phonics-first implementation, require outcomes-based flexibility, or leave choice at the district level. They are influenced by research findings, advocacy from reading specialists, and political pressure from parent and teacher organizations."
+    },
+    {
+      "name": "reading_research_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic researchers producing empirical studies on reading acquisition, phonological awareness, phonics effectiveness, dyslexia intervention, and reading motivation. Controls journal publication, conference representation, and peer-review standards that determine what counts as legitimate evidence. Supplies the research base that legitimate pedagogical models. Internal disagreements about methodological standards, effect-size interpretation, and generalization of findings across heterogeneous populations create ongoing uncertainty about which instructional model is actually most effective for the full range of learners."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of how to systematically teach decoding when some children's phonological awareness does not develop incidentally — provides a rule-based, replicable instructional sequence that can be standardized across classrooms and tailored to struggling readers' needs.",
+    "transfer_function": "Moves pedagogical autonomy and instructional time from classroom teachers and students' self-directed reading exploration to a standardized phoneme-grapheme sequence administered by specialists and curriculum designers. Teachers implement curricula rather than design them. Reading instruction time is allocated to phonemic awareness and decoding before meaningful text engagement.",
+    "absent_voices": "Whole-language and balanced-literacy advocates are substantially excluded from curriculum-setting and professional development in phonics-first jurisdictions. Teachers' lived experience of student motivation and engagement is deprioritized in favor of standardized fidelity measures. Students who are intrinsically motivated by narrative are not consulted on their preference for meaning-first versus mechanics-first sequencing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished overnight, classroom teachers would regain instructional autonomy and would likely rebalance phonics and meaningful text in response to student interest and classroom context. Some struggling readers and students with dyslexia would improve under continued systematic phonics (not dependent on the constraint). Others would fall further behind without it, requiring reactive intervention. The efficiency of early identification and prevention would decline. Reading outcomes would likely become more stratified by initial phonological awareness and home literacy environment.",
+    "founding_problem": "Children's reading acquisition does not always follow a natural developmental curve when explicit phonological awareness and decoding instruction are not provided; some children, particularly those with weak phonological awareness or dyslexia, require systematic, structured instruction in phoneme-grapheme correspondence to access text. Meaning-only approaches leave these children behind.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Reading scientists studying phonological awareness development and dyslexia intervention, longitudinal studies tracking reading outcomes under different instructional models, and meta-analyses of phonics intervention effectiveness all attest to the founding problem's live status. Classroom teachers observe children who fail to decode without explicit instruction. Special educators note that dyslexic students reliably benefit from Orton-Gillingham-based approaches. Outside-beneficiary corroboration: cognitive neuroscience of reading shows phonological processing as a foundational neural system; independent research reviews by organizations not proposing the solution (e.g., National Institute of Child Health and Human Development in the US) affirm that some form of systematic phonics instruction produces stronger outcomes than meaning-only approaches on standardized decoding measures."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The phonics-reading constraint instantiates ONE READING of the contested literacy-acquisition kernel. This reading asserts that reading acquisition requires explicit, systematic instruction in phoneme-grapheme correspondence, delivered BEFORE meaningful connected-text exposure, and that decoding competence precedes and enables comprehension. The constraint is CLAIMED as tangled_rope because it genuinely solves a coordination problem (systematic decoding instruction for struggling readers, especially those with dyslexia) while simultaneously extracting from classroom teachers' instructional autonomy and from students whose intrinsic motivation is dampened by mechanics-first sequencing. The beneficiary/victim structure is structurally asymmetric: beneficiaries (struggling readers, dyslexic students, reading specialists who control the model) are deeply dependent on the constraint; victims (classroom teachers, meaning-motivated students) bear costs that are diffuse and professionally normalized. The kernel context section (Rules 1–4) documents this reading's relationships to sibling readings and the specific structural axioms that distinguish it. The authored metrics intentionally diverge from the claimed type to capture the real operational reality: high extraction on teacher autonomy, high suppression via curriculum mandates and fidelity monitoring, and rising theater_ratio as the constraint's protective mechanisms harden against alternative approaches.",
+    "key_agents": [
+      "reading_specialists_cognitive_scientists: agenda-setter, institutional power — controls the pedagogical model, research funding, and curriculum standards that enforce phonics-first sequencing",
+      "struggling_readers_weak_phonological_awareness: beneficiary, powerless, trapped — children who fail to decode incidentally and depend on explicit systematic instruction to access text",
+      "students_with_dyslexia_spectrum: beneficiary, powerless, trapped — children whose neurology is structured to benefit from Orton-Gillingham-based phonics instruction",
+      "classroom_teachers_general_education: payer, moderate power, constrained exit — bear the cost of scripted curricula, fidelity monitoring, and loss of pedagogical judgment",
+      "students_motivated_by_meaning_over_mechanics: payer, powerless, trapped — children whose intrinsic reading motivation is dampened by mechanics-first sequencing; cannot opt out during critical reading window",
+      "whole_language_advocates: excluded, organized, constrained — teachers and researchers whose pedagogical model is marginalized from curriculum-setting and funding",
+      "balanced_literacy_advocates: excluded, organized, constrained — teachers and researchers whose integrationist approach is pressured into false-choice position between models"
+    ],
+    "logic_rationale": "The constraint shows rising extractiveness over the 30-year interval (0.52 → 0.68), which reflects institutional consolidation of phonics-first model in policy and research funding. Suppression remains high and relatively stable (0.58 → 0.72) because the constraint's persistence depends on actively marginalizing whole-language and balanced-literacy approaches, not on participant preference — curriculum mandates, professional development requirements, and fidelity monitoring all serve to enforce the model against teachers' desire to adapt. Theater_ratio rises moderately (0.25 → 0.42) because enforcement activity increasingly focuses on legitimacy maintenance (research citation, policy alignment, rhetoric about 'science of reading') rather than on the core coordination function (helping struggling readers). The measurement grid is uniform across all three metrics at all seven time points, satisfying the alignment rule. Extractiveness plateaus by t=25 (0.68) because the institutional constraint has reached a stable dominance level in policy; further rise would trigger explicit backlash. The temporal pattern reflects not random drift but institutional consolidation of a pedagogical model through research funding, professional credentialing, and policy mandates.",
+    "perspectival_gap": "The core perspectival gap is between institutional authority (reading scientists, policy makers) and frontline practitioners (classroom teachers, students). The authority structure reads the constraint as evidence-based best practice grounded in cognitive science. The practitioner structure reads it as coercive imposition of a model that ignores individual variation in learning pathway and readiness for meaning-engaged text. This gap is not resolvable by more evidence — it is a structural gap between two different seats' experiences of the same constraint. The engine models this by computing different effective extraction values for each seat from the same structural data.",
+    "directionality_logic": "Struggling readers and dyslexic students emerge as beneficiaries because (1) they are explicitly named as the target group the constraint was designed to serve; (2) their exit options are trapped (they cannot opt out of reading instruction; they cannot self-teach phonics without external scaffolding); (3) their power is powerless (they have no voice in curriculum design); and (4) outcome data show their reading performance improves measurably under this model. Their directionality is near the full-beneficiary end of the scale (d ≈ 0.2). Classroom teachers emerge as payers because (1) they bear the cost of scripted curricula and fidelity monitoring; (2) their exit options are constrained (they can leave teaching, but they cannot refuse the curriculum while remaining employed); (3) their power is moderate (they have professional status but limited institutional leverage); and (4) their professional autonomy is systematically constrained by enforcement mechanisms. Their directionality is near the target end (d ≈ 0.75). Reading specialists emerge as beneficiary-cum-agenda-setter because (1) they directly profit from the model's dominance (funding, credentials, career prestige); (2) their exit options are arbitrage-grade (they can advocate for alternative models but have institutional leverage to resist); (3) their power is institutional (they control research funding, publication, and professional standards); (4) they set the constraint rather than submit to it. Their directionality is near the full-beneficiary end (d ≈ 0.15). No directionality overrides were necessary; the structural derivation produces accurate values.",
+    "mandatrophy_analysis": "The constraint shows early-stage mandatrophy risk. The founding problem (some children need explicit phonics instruction to access text) is live and well-corroborated. But the constraint has hardened into a universal model applied to all children regardless of phonological-awareness baseline. The theater_ratio is rising (0.25 → 0.42), which indicates defensive activity: research citation, curriculum compliance rubrics, and professional development mandatory trainings are increasingly focused on legitimacy maintenance rather than on the core function (helping struggling readers). If this trajectory continues, the constraint will eventually enter a state where the founding problem is partially obsolete (most children receive sufficient phonics exposure in the home and in informal reading contexts to develop adequate decoding skills) but the constraint persists because reading specialists and curriculum publishers have institutional interest in its continuation. The mandatrophy watch: if theater_ratio rises above 0.5 while extractiveness on teacher autonomy remains high, reclassify to piton (the constraint becomes mostly performance and institutional inertia). Current state: the mandatrophy risk is CONDITIONAL — it depends on whether the founding problem remains live for the populations the constraint ostensibly serves. If struggling readers' outcomes plateau despite increasing scripting and surveillance, mandatrophy is likely.",
+    "kernel_context": "This constraint instantiates the PHONICS_READING reading of the contested LITERACY_ACQUISITION_KERNEL. The kernel is the complex of commitments about how reading is acquired, where literacy learning lives, and whether decoding and meaning-making are sequential or parallel processes. This reading holds that: (1) decoding is foundational and must precede meaning-engagement; (2) phoneme-grapheme correspondence can and should be taught explicitly and systematically; (3) this approach is especially valuable for struggling readers and those with dyslexia; (4) by extension, this approach is beneficial for all readers because it builds the foundational skill explicitly rather than relying on incidental discovery. Sibling readings occupy different positions on these dimensions: WHOLE_LANGUAGE_READING asserts that meaningful text engagement IS the pathway to decoding development and that explicit phonics is pedagogically unnecessary and motivationally harmful; BALANCED_LITERACY_READING asserts that phonics and meaning-engagement are complementary and should proceed in parallel; STRUCTURED_LITERACY_READING (Orton-Gillingham tradition) asserts that even more systematic, cumulative, multisensory phonics instruction is necessary and beneficial, especially for dyslexic learners. These readings coexist as live positions held by different professional coalitions, but they do not share a single coherent pedagogical framework — a classroom teacher must choose one model or face accusations of unprincipled eclecticism. The structural distinction is the sequencing claim: this reading requires decoding-first sequencing; whole_language requires meaning-first; balanced asserts parallel; structured extends the phonics depth for greater rigor. The contested kernel is not about whether phonics instruction exists (all four readings affirm it does); it is about whether phonics is foundational, sufficient, or properly balanced. The divergent readings produce different constraints because they distribute beneficiary/victim status differently: this reading benefits struggling readers and harms meaning-motivated students; whole_language would reverse the distribution; balanced would diffuse the conflict."
+  },
+  "omegas": [
+    {
+      "id": "universal_applicability_vs_targeted_intervention",
+      "question": "Is systematic phonics-first instruction optimal for all children, or is it a targeted intervention for children with weak phonological awareness, with meaning-first approaches working equally well for children with strong implicit decoding skills?",
+      "resolution_mechanism": "Longitudinal studies comparing reading outcomes for children with heterogeneous phonological-awareness baselines, randomized to phonics-first vs. meaning-first vs. balanced instruction, controlling for socioeconomic and home-literacy variables. Meta-analysis of effect-size heterogeneity across subpopulations in existing phonics intervention studies.",
+      "impact": "If phonics-first is optimal universally, the constraint's beneficiary class is all children (justifying universal implementation). If it is targeted, the constraint should be applied selectively, and classroom teachers should retain discretion to match pedagogical approach to student profile — the constraint would then be substantially less extractive on teacher autonomy. The current enforcement posture assumes universality; evidence for targeting would require reclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether phonics-first is universally superior or best targeted to specific learner profiles."
+    },
+    {
+      "id": "reading_motivation_vs_decoding_skill_tradeoff",
+      "question": "Does meaning-first engagement in early reading increase intrinsic reading motivation (leading to longer engagement and more cumulative reading exposure) in ways that compensate for slower initial decoding-skill development under whole-language approaches?",
+      "resolution_mechanism": "Longitudinal studies tracking both reading achievement (decoding, comprehension, fluency) AND reading motivation/engagement (time spent reading, self-reported enjoyment, reading persistence through later grades) for children under different instructional models, with measurement extended to age 13–16 to capture cumulative effects.",
+      "impact": "If meaning-first increases motivation enough to produce equivalent or superior long-term reading outcomes despite slower initial decoding development, the whole-language reading becomes less clearly inferior and the extraction on meaning-motivated students becomes harder to justify. If phonics-first children maintain reading engagement into later grades, the motivation cost evaporates. Current evidence is sparse on this tradeoff; the outcome would reshape the benchmarking between readings.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the decoding speed advantage of phonics-first is offset by motivation losses."
+    },
+    {
+      "id": "kernel_framing_reading_vs_skill",
+      "question": "Is reading acquisition fundamentally a SKILL-acquisition process (where decoding-first and explicit instruction are optimal) or a MEANING-MAKING AND IDENTITY process (where motivation, social engagement, and self-directed text selection are optimal)? Or is the framing itself the contestation?",
+      "resolution_mechanism": "Philosophical analysis of how reading is constituted in pedagogy; examination of what outcomes are measured (standardized decoding tests favor skill framing; engagement, book-reading frequency, self-concept-as-reader favor meaning framing). Policy analysis of how the kernel is coded in institutional settings — do mandates require fidelity to phonics-first or permit flexibility provided reading outcomes meet benchmarks?",
+      "impact": "If reading is fundamentally a skill, phonics-first is justified and the constraint's extraction is a necessary part of the solution. If reading is fundamentally a meaning-making identity practice, phonics-first is an extractive imposition of a skill-centric framing that undermines the real work of literacy. This omega is CONCEPTUAL not empirical — it will not be resolved by more data but by shifts in how the kernel is framed within professional communities and policy.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the kernel contest is resolvable empirically or reflects incompatible framings of what reading IS."
+    },
+    {
+      "id": "teacher_fidelity_monitoring_as_enforcement",
+      "question": "Is the high suppression value (0.72) attributable to the pedagogical model itself (phonics-first is inherently extractive of teacher autonomy) or to the enforcement machinery (fidelity monitoring, scripted curricula, evaluation rubrics that measure compliance rather than adaptation)?",
+      "resolution_mechanism": "Policy analysis comparing teacher autonomy and satisfaction under phonics-first models WITH high-fidelity enforcement vs. phonics-first models with lower-fidelity flexibility. Survey of classroom teachers' experience of autonomy under different levels of implementation monitoring. Analysis of whether reduced enforcement changes the constraint's operational character (still tangled_rope if the phonics coordination function remains) or reclassifies it.",
+      "impact": "If suppression is enforcement-machinery-driven (not inherent to phonics-first pedagogy), then relaxing fidelity monitoring while maintaining systematic phonics instruction could reduce extraction on teacher autonomy. This would reshape the constraint from high-extraction tangled_rope to lower-extraction rope. If suppression is inherent to the model (scripted lessons ARE the core), then the model and the enforcement are inseparable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of teacher autonomy is inherent to phonics-first or driven by enforcement infrastructure."
+    },
+    {
+      "id": "kernel_reading_contested_by_construction",
+      "question": "Is the literacy-acquisition kernel genuinely contested (different parties hold incompatible positions with comparable evidence and institutional legitimacy), or has the phonics-reading already foreclosed the alternatives through institutional dominance and research funding consolidation?",
+      "resolution_mechanism": "Analysis of research-funding distribution across reading pedagogies in the last 20 years; citation patterns in influential reviews (are alternatives cited as credible positions or as superseded views?); representation of competing pedagogies in teacher-training curricula; policy-mandate patterns across jurisdictions (are all mandates phonics-first or do some districts mandate alternatives?). Interview evidence from reading specialists and teachers about whether alternatives are perceived as live options or as defeated positions.",
+      "impact": "If alternatives have been foreclosed through institutional consolidation (not evidence), the constraint is not a reading of a genuinely contested kernel but a coercive imposition of one reading. This would reclassify the constraint from tangled_rope (which requires genuine coordination alongside asymmetric extraction) to snare (pure extraction disguised as coordination). If alternatives remain live (held by organized professional coalitions, represented in some institutional settings), the kernel remains contested and this reading remains one option among others.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the kernel contest is genuinely open or has been institutionally closed by phonics-first dominance."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "literacy_acquisition_kernel__whole_language_reading",
+      "literacy_acquisition_kernel__balanced_literacy_reading",
+      "literacy_acquisition_kernel__structured_literacy_reading"
+    ],
+    "dual_formulation_note": "The literacy-acquisition kernel decomposes into four reading-specific constraints, each instantiating a different pedagogical commitment about how reading is acquired and how instruction should be sequenced. This reading (phonics_reading) asserts decoding-first sequencing; whole_language_reading asserts meaning-first; balanced_literacy_reading asserts parallel sequencing; structured_literacy_reading asserts extended systematic phonics with multisensory elements. The ε values differ substantially across readings because they operate under different beneficiary/victim structures: phonics_reading benefits struggling readers and extracts from meaning-motivated students and classroom teachers; whole_language_reading would benefit meaning-motivated students and extract from struggling readers who fail without explicit instruction; balanced_literacy_reading would diffuse the extraction by serving both but satisfying neither fully. These are NOT the same constraint viewed from different angles — they are different constraints grounded in the same contested kernel. The network edges record that each reading is downstream of (influenced by) the others through institutional competition for funding, curricular authority, and teacher training."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.68
+    }
+  ],
+  "gain_flow": "reading_specialists_cognitive_scientists",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "whole_language_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "balanced_literacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "structured_literacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decoding_foundational_sequentially_prior",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "phoneme_grapheme_correspondence_explicitly_teachable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "skilled_reading_builds_on_systematic_phonological_decoding",
+    "drift_state": {
+      "moment": "contemporary_literacy_debates",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

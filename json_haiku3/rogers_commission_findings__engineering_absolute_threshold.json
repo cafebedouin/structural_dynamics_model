@@ -1,0 +1,312 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_findings__engineering_absolute_threshold",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "5264ac73-7279-4483-996f-8f881436e17f"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.92,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.89,
+    "resistance": 0.41,
+    "claimed_type": "mountain",
+    "human_readable": "Rogers Commission Engineering Safety Absolute: O-Ring Redesign Certification Requirement",
+    "topic_domain": "organizational_safety/technology_governance/regulatory_compliance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "flight_crew_safety_standard"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "rogers_commission_engineering_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Establishes and certifies the O-ring thermal boundary and redesign specifications. Conducts post-failure analysis, sets the certification standard, and reviews all redesign proposals against the discovered failure mode. The authority derives from structural understanding of the failure physics, not from organizational hierarchy."
+    },
+    {
+      "name": "flight_crew",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Safety boundary ensures they do not launch into a known failure mode. They cannot refuse launch without career consequences and have no independent verification authority. The constraint protects them by preventing launch approval under the discovered unsafe condition."
+    },
+    {
+      "name": "launch_scheduling_cadence",
+      "role": "payer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Launch operations halt until redesign certification is complete. This is an abstract loss (postponement, schedule compression, program delays) borne by the organization's production objectives, not by individual actors but as a collective operational cost."
+    },
+    {
+      "name": "nasa_management",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would prefer to manage risk probabilistically and maintain launch cadence; politically constrained to accept the engineering veto after the public inquiry. They are excluded from the certification authority itself and cannot override the technical boundary without explicit reversal of the Rogers findings — which carries political cost too high to contemplate."
+    },
+    {
+      "name": "contractor_engineering_teams",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the cost of redesign and extended development cycles. Also benefit from the veto authority it grants engineering judgment in Flight Readiness Reviews going forward — the constraint shifts power from management-driven launch pressure toward engineer-led safety certification."
+    },
+    {
+      "name": "competing_launch_programs",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Are not part of this constraint's immediate scope (Shuttle program specific) but face parallel organizational pressures. If the constraint erodes or is circumvented, they would experience increased pressure to launch despite unresolved safety questions; their exclusion from this boundary makes them witnesses to whether it holds."
+    },
+    {
+      "name": "public_trust_in_spaceflight",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "A transparent, binding technical constraint on launch operations restores confidence that safety decisions are not subordinated to schedule pressure. Public legitimacy of the space program depends on demonstrable commitment to the boundary, not on the boundary being circumvented for political gain."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a single, binding technical authority (Rogers engineering certification) to adjudicate whether a discovered failure mode has been remedied before launch can resume. Solves the coordination problem: who decides when the specific discovered hazard has been adequately addressed? The constraint answers: the engineering authority that discovered the hazard, not the schedule-keeper.",
+    "transfer_function": "Moves decision authority from management-driven Flight Readiness Review (schedule-influenced) to engineer-certified thermal boundary (physics-determined). The transfer is of veto power, not money: engineers gain authority to stop launch; management loses authority to override technical objection via risk acceptance framing.",
+    "absent_voices": "Actuarial risk quantifiers and probabilistic safety analysts are excluded from the authority structure of this reading. They would argue for risk acceptance frameworks and probabilistic failure bounds; this reading forecloses their input into the launch certification decision by anchoring it to an absolute redesign requirement, not a risk metric. Competing launch programs are excluded structurally and would testify about whether organizational pressure erodes the boundary.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the engineering absolute boundary disappeared — if launches were permitted to resume without O-ring redesign certification — the Shuttle program would have resumed flights on the same hardware under a management risk-acceptance framework, and a second failure would have occurred (historical counterfactual: STS-51-L happened because the boundary was not in place; its prevention is the constraint's operational fact). The world reorganizes: either flights resume under the old thermal regime and risk materializes, or the boundary gets informally re-established through accumulated engineering objections that approximate the same veto authority.",
+    "founding_problem": "The Challenger failure revealed that organizational pressure for schedule had overridden engineering concerns about O-ring thermal behavior in cold conditions. The founding problem is: how can technical safety concerns be protected from being rationalized away by schedule pressure and cost-benefit risk acceptance?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Rogers Commission (external investigative authority outside NASA management) documented the failure causation and established the technical boundary as non-negotiable. Subsequent Shuttle Program operations through 2011 operated under this boundary: no flights occurred until O-ring redesign and certification was complete. Independent aerospace safety analysis and engineering literature corroborate that the founding problem persists — organizational pressure for schedule creates standing tension against technical safety authority."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.91
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.92
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.08
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Rogers Commission findings after the Challenger disaster established a technical safety boundary: flight operations must cease until O-ring thermal redesign is certified as adequate. This reading interprets the constraint as an engineering absolute — a physically necessary condition for launch, not a probabilistic risk to be accepted by informed decision-makers (the actuarial_risk_acceptance reading) or a compliance process to be managed (the management_compliance_narrative reading). The engineering absolute reading treats the boundary as grounded in material failure physics: once the failure mode is understood, launching into that mode without remediation is structurally impermissible, regardless of risk quantification or management acceptance. The constraint suppresses launch operations at very high magnitude (0.92); extractiveness is low but non-zero because the constraint carries organizational cost (schedule delay, program overhead) that is borne by collective actors rather than individuals. Theater is minimal: the constraint is mostly functional — its operation consists of verifying redesign compliance, not performing symbolic safety review.",
+    "key_agents": [
+      "Rogers Commission engineering authority: establishes and certifies the O-ring redesign boundary; authority derives from technical expertise in failure analysis",
+      "Flight crew: beneficiaries; safety protected by veto over launch under known hazard condition; trapped exit (cannot refuse launch without career cost)",
+      "NASA management: excluded from certification authority; politically constrained to accept the technical veto after public inquiry",
+      "Contractor engineering teams: bear redesign costs; gain veto authority in Flight Readiness Review going forward",
+      "Launch scheduling cadence: abstract payer; operations halted until redesign certified"
+    ],
+    "logic_rationale": "The claim is Mountain because the constraint is treated as emerging from material physics: once the O-ring thermal failure mode is discovered and characterized, launching without remediation becomes physically impermissible under the engineering reading. Suppression is extremely high (0.92) because the constraint operates as an absolute veto: launches cannot proceed under any risk-acceptance rationale or management decision-making framework so long as the discovered hazard is unresolved. The suppression is structural and non-negotiable — it is not attenuated by power or exit options because the boundary is anchored to a physical fact (the failure mode), not to organizational preference. Extractiveness is low (0.18) and rises gradually: the founding constraint carries only the cost of delayed schedule (reorganized as redesign cycles); as time passes and organizational pressure accumulates to resume operations, extractive elements begin to layer (corner-cutting on redesign verification, pressure to find an acceptable-risk interpretation of partial compliance). Theater is minimal (0.08): the constraint's operation is mostly functional — verifying redesign against the specified thermal boundary — rather than performative. The measurement series shows extractiveness rising slightly as years pass without return to flight (organizational pressure mounting, cost accumulation), while suppression and theater remain flat (the boundary itself does not erode, and symbolic compliance activity stays minimal — the constraint is robustly maintained because the failure physics is undisputed).",
+    "directionality_logic": "Flight crew sits at full beneficiary (d ≈ 0.0): the constraint protects them without imposing cost on them; they have no say in whether it applies but gain unambiguous safety benefit. Launch cadence (abstract; schedule delay) sits at full target (d ≈ 1.0): the constraint imposes cost (postponement) with no offsetting benefit to the schedule itself — the cost is real and distributed across the program. NASA management sits at moderate-to-high target (d ≈ 0.65): they bear organizational cost (delayed program revenue, political pressure for progress) and are excluded from the certification authority; they cannot redefine the boundary without reversing the Rogers findings (high exit barrier). Contractor engineering teams sit at moderate-beneficiary (d ≈ 0.35): they bear redesign costs but gain veto authority in future Flight Readiness Reviews, shifting power toward engineering judgment and away from management-driven schedule pressure. The engine derives these d values from the beneficiary/victim declarations (flight crew is beneficiary, launch cadence/management/contractors bear costs) and the exit options (crew trapped, management constrained, contractors organized).",
+    "perspectival_gap": "From the engineering authority's seat, the constraint is straightforward: the failure mode is characterized, redesign is the necessary remedy, certification gates launch. No disagreement. From NASA management's seat, the constraint appears as an obstacle to program progress — a hard stop that persists regardless of risk quantification or management judgment. They experience it as externally imposed veto authority. From the flight crew's seat, it is unambiguous protection: they benefit and have no standing to object. From the contractor engineering teams' seat, it is mixed: burden of redesign work, but empowerment in future Flight Readiness Reviews. From the schedule/program cadence seat (abstract), it is pure cost with no upside. The engine computes these divergences from the declared roles and structural positions — the same constraint is experienced as natural boundary (engineering), external constraint (management), protection (crew), empowerment (engineers), and delay (schedule).",
+    "mandatrophy_analysis": "This constraint does not resolve mandatrophy; instead, it *prevents* mandatrophy. The founding problem (organizational pressure overriding safety concerns) is structurally prevented by anchoring the launch decision to physics-based certification, not management risk-acceptance. Mandatrophy would occur if the constraint were maintained performatively after the founding problem no longer existed — i.e., if redesign were certified and the boundary were maintained theatrically to justify continued organizational overhead. The measurement series shows theater_ratio flat at ~0.08, indicating the constraint remains functional rather than becoming performative. If theater_ratio were to rise sharply (e.g., redesign certified but launches still delayed for ceremonial safety review), mandatrophy would be indicated. The constraint is robust against mandatrophy precisely because the beneficiary (flight crew safety) and the foundational requirement (O-ring redesign certification) are aligned: as long as the redesign is genuine, the constraint serves its founding function.",
+    "kernel_context": "This constraint instantiates one reading of the contested Rogers Commission kernel. The kernel is the set of findings and recommendations from the 1986 investigation into the Challenger disaster. Three readings decompose this kernel into distinct constraints: (1) engineering_absolute_threshold (THIS READING) — O-ring redesign is a non-negotiable requirement for launch; (2) actuarial_risk_acceptance — Rogers findings establish a quantified risk-assessment requirement; (3) management_compliance_narrative — Rogers findings establish a compliance and documentation process. Each reading interprets the same kernel differently: the engineering reading anchors to material physics (failure mode → redesign necessity), the actuarial reading anchors to risk quantification (acceptable if probability documented), and the management reading anchors to process (acceptable if documented and mitigated). The sibling readings are not alternative framings of the same constraint — they are distinct constraints with different beneficiary/victim structures, different ε values, and different classification outcomes."
+  },
+  "omegas": [
+    {
+      "id": "engineering_absolute_vs_management_risk",
+      "question": "Is the O-ring redesign requirement a non-negotiable physics-based boundary, or is it a risk quantification framework that NASA management could override with informed acceptance?",
+      "resolution_mechanism": "Historical: whether the constraint was maintained as binding when organizational pressure mounted, or whether exceptions were granted on a risk-acceptance basis. Counterfactual: if Rogers findings had recommended a probabilistic risk acceptance framework instead of an absolute redesign requirement, would NASA have operated under that framework?",
+      "impact": "If negotiable by risk acceptance, the constraint reclassifies from Mountain to Tangled Rope or Snare (depending on who holds override authority). If truly absolute, it remains Mountain anchored to physics-based necessity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the constraint is physics-absolute or risk-negotiable"
+    },
+    {
+      "id": "natural_law_vs_constructed_authority",
+      "question": "Does the constraint emerge naturally from the material properties of O-rings under thermal stress, or is it constructed by the Rogers Commission's institutional authority to interpret findings?",
+      "resolution_mechanism": "Expertise audit: independent thermal and materials engineers confirm or dispute the claimed failure mode. Historical: whether the constraint persisted when Rogers Commission authority eroded (post-Challenger public attention, post-Columbia as pressures changed), or whether it remained because the physics is undisputed.",
+      "impact": "If physics-grounded and expert consensus is stable, Mountain classification stands. If the constraint persists primarily through institutional authority (Rogers Commission legitimacy), reclassify to Rope (coordination around a shared authority) or Piton (maintained by institutional inertia after the authority eroded).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint is grounded in material physics or in institutional authority"
+    },
+    {
+      "id": "engineering_veto_persistence",
+      "question": "Does the constraint durably empower engineering judgment in Flight Readiness Reviews, or is it a temporary post-disaster reaction that erodes as organizational pressure normalizes?",
+      "resolution_mechanism": "Track engineering objection authority over multi-year horizon: do engineers retain veto power, or does management eventually override engineering objections using risk-acceptance rationales?",
+      "impact": "Durable empowerment of engineering judgment indicates the constraint remains Mountain (a structural shift to physics-based decision-making). Erosion indicates the constraint is Piton (performative maintenance of post-disaster authority that management gradually reclaims).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the engineering veto authority is durable or eroded over time"
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is the measured suppression (0.92) structural — enforced by certification authority and organizational policy — or internalized in engineering judgment such that engineers would choose to oppose launch even without the formal boundary?",
+      "resolution_mechanism": "Counterfactual: if the formal boundary were removed but engineering authority in Flight Readiness Review remained, would engineers still resist launching with unresolved O-ring concerns? If yes, the suppression is internalized in professional judgment; if no, it is purely structural.",
+      "impact": "If internalized, the suppression is robust against institutional erosion — engineers carry the safety standard with them even if the formal constraint is circumvented. If structural, the suppression depends on maintenance of the formal authority and is vulnerable to institutional bypass.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether suppression is structurally enforced or internalized in professional judgment"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "rogers_commission_findings__actuarial_risk_acceptance",
+      "rogers_commission_findings__management_compliance_narrative"
+    ],
+    "dual_formulation_note": "Rogers Commission kernel decomposed into three constraints: (1) engineering_absolute_threshold (THIS — physics-based, Mountain-class) establishes O-ring redesign as non-negotiable; (2) actuarial_risk_acceptance (Tangled Rope-class) reinterprets findings as risk-quantification requirement; (3) management_compliance_narrative (Rope-class) treats findings as process documentation requirement. All three readings share the same kernel (Rogers investigation) but yield different ε values, beneficiary/victim structures, and classifications. This reading forecloses the actuarial reading within any single-authority framework and influences the management reading's authority structure."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "actuarial_risk_acceptance",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "management_compliance_narrative",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "discovered_failure_mode_precludes_operation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "engineering_certification_gates_launch_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "physics_based_safety_boundary",
+    "drift_state": {
+      "moment": "contemporary_organizational_pressure_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

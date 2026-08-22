@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "ai_risk_governance_priority__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "c034445f-3c01-444f-804e-4fd8dff06971"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Existential-Risk-Priority Reading of AI Risk Governance",
+    "topic_domain": "AI governance / technology ethics / risk assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "xrisk_research_institutes",
+      "frontier_ai_labs_claiming_safety_leadership",
+      "ai_safety_credentialed_researchers"
+    ],
+    "victims": [
+      "algorithmic_bias_affected_communities",
+      "gig_and_displaced_workers",
+      "surveilled_populations",
+      "global_south_ai_deployment_subjects"
+    ],
+    "vindicated_propositions": [
+      "longtermist_expected_value_calculus",
+      "agi_discontinuity_hypothesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "xrisk_research_institutes",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets the research agenda, funding priorities, and public framing for what counts as 'AI risk' — writes the reports governments cite, staffs the advisory panels, and defines which harms count as governance-worthy. Draws grant funding, philanthropic capital, and policy access specifically premised on the superintelligence-annihilation framing; has no exposure to the near-term harms it deprioritizes."
+    },
+    {
+      "name": "frontier_ai_labs_claiming_safety_leadership",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Fund and co-produce existential-risk discourse while continuing to ship the very systems whose present-day harms (bias, labor displacement, surveillance capability) the same discourse deprioritizes. Safety-leadership branding buys regulatory goodwill and slows near-term accountability measures that would be costlier to comply with than speculative long-horizon commitments."
+    },
+    {
+      "name": "ai_safety_credentialed_researchers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Career paths, publication venues, and prestige now attach to alignment-as-control research (adversarial testing, interpretability aimed at AGI scenarios). Exit to near-term-harms work is possible but costs status and funding access built around the existential framing."
+    },
+    {
+      "name": "algorithmic_bias_affected_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Experience discriminatory scoring, denial of services, and misclassification from deployed systems today. Governance resources, hearing time, and regulatory attention are diverted toward speculative superintelligence scenarios; they have no capacity to redirect the agenda and no exit from the systems already governing their lives."
+    },
+    {
+      "name": "gig_and_displaced_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear labor displacement and algorithmic management harms from current-generation deployment. The governance apparatus, when it prioritizes AGI containment, produces frameworks (compute thresholds, model registries for frontier systems) that do not touch the mid-size deployment causing their present harm."
+    },
+    {
+      "name": "surveilled_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Subject to present-day AI-enabled surveillance and predictive policing; the existential framing does not address deployed surveillance infrastructure because it is not a 'superintelligence' scenario, leaving no governance lever pointed at their harm."
+    },
+    {
+      "name": "global_south_ai_deployment_subjects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Receive exported AI systems (content moderation, credit scoring, agricultural automation) built and tested primarily against harms salient to wealthy-country deployers. Global governance capacity is spent on frontier-lab containment rather than on deployment harms concentrated in their jurisdictions."
+    },
+    {
+      "name": "future_humanity",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Named as the ultimate beneficiary of existential-risk prevention (a world not annihilated or permanently curtailed by misaligned superintelligence) but has no vote, no seat, and no way to corroborate whether the resources spent in its name are well-targeted; also the notional victim class if the risk is real and unaddressed."
+    },
+    {
+      "name": "policymakers_and_regulators",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Draft binding frameworks under advice largely supplied by xrisk-aligned institutions and labs; increasingly asked to weigh compute-threshold regulation for frontier models against near-term harm statutes, with the existential framing crowding legislative bandwidth and staff attention."
+    },
+    {
+      "name": "near_term_harms_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Civil-society and academic groups documenting present algorithmic harms are present in the discourse but structurally underweighted in the specific governance bodies and funding streams this reading controls — they would argue the existential framing is a resource-diversion mechanism, but their objection routes through a separate governance track, not this one."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates scarce technical-safety talent, compute-governance frameworks, and international attention around a specific catastrophic tail risk — misaligned superintelligent systems — that no single actor can unilaterally prevent and that plausibly requires advance coordination before capabilities arrive.",
+    "transfer_function": "Moves research funding, regulatory attention, legislative bandwidth, and philanthropic capital toward frontier-capability containment and away from remediation of present-day algorithmic harms; the beneficiary institutions capture funding, prestige, and policy access, while the cost is borne by populations experiencing deployed-system harms now who receive proportionally less governance capacity.",
+    "absent_voices": "Communities harmed by present algorithmic bias, surveillance, and labor displacement are present in the broader AI-ethics discourse but structurally underweighted within the governance bodies, funding panels, and legislative priorities this reading sets; they would argue the existential framing functions as a resource-diversion and reputation-laundering mechanism for labs shipping present-harm systems.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If existential-risk-priority governance vanished overnight, xrisk institutes and their funding streams would lose their primary justification and largely dissolve or repurpose; frontier labs would lose a reputational shield but continue operating under whatever governance replaced it. Whether the world 'rearranges' or 'stays the same' is exactly the contested question between this reading and the near-term-harms reading: existential-risk advocates hold that real catastrophic exposure would increase; near-term-harms advocates hold that governance capacity would simply become available for present-harm remediation, i.e. the world improves for those currently paying the cost.",
+    "founding_problem": "The founding problem, as this reading states it: transformative AI capabilities may arrive with a discontinuous jump in capability that current governance, safety research, and international coordination are unprepared for, and a misaligned system at that capability level could cause irreversible civilizational harm with no opportunity for correction after the fact.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Some independent AI researchers outside the xrisk-institute funding network (in academic ML safety and some national AI-safety institutes) corroborate that discontinuous capability jumps and alignment failure are live technical concerns worth resourcing. However, critics outside the beneficiary set — labor economists, algorithmic-fairness researchers, and civil-society auditors — dispute that the probability-weighted urgency justifies the current resource allocation relative to documented, non-speculative present harms; no corroborating source independent of the beneficiary institutions has established the relative prioritization itself as correct, only that the underlying technical risk is non-zero."
+  },
+  "interval": {
+    "start": 2015,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the existential-risk-priority reading of the contested kernel 'AI risk governance must prioritize X.' Under this reading, the governance imperative is to prevent superintelligence scenarios capable of annihilating or permanently curtailing humanity's potential, and resources — research funding, legislative bandwidth, international coordination capacity — should flow toward alignment-as-control, adversarial capability testing, and AGI-scenario governance frameworks. This is NOT a story about AI risk governance in general; it is a story about the specific claim that x-risk deserves priority over present, documented harms. The sibling readings (near_term_harms_reading, bridge_reading) are separate constraints with their own ε and stakeholder structures — this file does not average over them, hedge between them, or describe their contest internally.",
+    "key_agents": [
+      "xrisk_research_institutes: agenda-setter and beneficiary — defines what counts as governance-worthy risk",
+      "frontier_ai_labs_claiming_safety_leadership: beneficiary — captures reputational and regulatory cover",
+      "algorithmic_bias_affected_communities, gig_and_displaced_workers, surveilled_populations, global_south_ai_deployment_subjects: payers — bear present harms deprioritized by the resource diversion",
+      "future_humanity: named beneficiary/notional victim with no seat or corroboration capacity",
+      "policymakers_and_regulators: agenda-setter/observer under heavy influence from xrisk-aligned advisory input"
+    ],
+    "logic_rationale": "Extractiveness (0.58) reflects a genuine coordination function (advance preparation for a plausible catastrophic tail risk) layered with a real resource-diversion effect measurable in comparative funding and legislative attention data — hence tangled_rope rather than pure rope or pure snare. Suppression (0.42) is moderate: this reading does not forcibly silence near-term-harms advocacy, but it structurally captures governance bandwidth, funding panels, and legislative drafting priority such that alternative framings compete from a starting disadvantage. Theater ratio (0.40) and its upward trajectory reflect a growing share of 'safety' activity (voluntary commitments, safety-summit communiques, published risk frameworks) that functions more as reputational signaling by frontier labs than as binding capability constraint. Accessibility collapse is comparatively low (0.35) — near-term-harms governance tracks still exist and are not eliminated, only under-resourced relative to this reading's priority claim. Resistance (0.55) is substantial: near-term-harms advocates, labor economists, and algorithmic-fairness researchers actively contest the prioritization, which is exactly the resistance you would expect from a genuinely contested kernel reading rather than settled consensus.",
+    "directionality_logic": "xrisk research institutes and safety-branded frontier labs sit near the full-beneficiary end: they set the agenda, capture funding and reputational capital, and bear none of the deprioritized present-day harms. Populations experiencing algorithmic bias, surveillance, and labor displacement sit near the full-target end: trapped or constrained exit, no seat in the resource-allocation decision, and their harms are the ones this reading's resource diversion leaves under-addressed. 'Future humanity' is deliberately given an analytical power atom with no real exit options — it is invoked as the ultimate stakeholder but structurally cannot corroborate, contest, or benefit from the allocation in any observable way within this interval, which is itself part of what makes the beneficiary/victim asymmetry durable: the named beneficiary of the whole framing cannot show up to complain if the allocation is wrong.",
+    "mandatrophy_analysis": "The founding problem (discontinuous capability jump, irreversible misalignment) may well remain live at the technical level — this story does not claim x-risk is fabricated. What the six-questions R5 interview surfaces is narrower: the founding-problem STATUS is contested specifically on the question of relative prioritization, and corroboration for the current resource allocation (as opposed to the underlying risk) comes almost entirely from within the beneficiary set. That is the specific pattern this classification exists to flag — not 'x-risk is fake' but 'the priority claim built on top of a real risk has outrun independent corroboration of its resource-allocation implications,' which is the tangled_rope signature: genuine coordination function, real asymmetric extraction, same structure.",
+    "perspectival_gap": "From the agenda-setter seat (xrisk institutes, safety-branded labs), this reading reads as urgent, underfunded coordination against a unique irreversible risk. From the payer seats (bias-affected communities, displaced workers, surveilled populations), the same structure reads as a resource-diversion mechanism that reliably wins governance attention against harms that are documented, present, and disproportionately borne by populations with the least capacity to redirect the agenda. The engine computes both seat-classifications from the same structural data; this divergence is the finding, not an error to reconcile.",
+    "kernel_context": "This constraint instantiates the existential_risk_reading of the kernel ai_risk_governance_priority. The kernel is contested by three readings: near_term_harms_reading (priority to present, documented harms affecting marginalized populations), bridge_reading (both concerns as non-mutually-exclusive and structurally entangled), and this reading (priority to preventing superintelligence-scale annihilation/curtailment scenarios). This file authors ONLY the existential-risk reading's own ε, beneficiary/victim structure, and classification — it does not average over or describe the other two readings' internal logic, which live in their own constraint files linked via network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "genuine_risk_vs_priority_capture",
+      "question": "Is the underlying existential risk this reading names sufficiently probable and severe to justify the CURRENT relative allocation of governance resources against it, or has a real but low/uncertain-probability risk been used to justify a resource allocation disproportionate to its expected disvalue relative to present, certain harms?",
+      "resolution_mechanism": "Comparative cost-effectiveness analysis conducted by parties with no funding or reputational stake in either framing, examining marginal harm-reduction per dollar/staff-hour across x-risk research versus present-harm remediation; independent audit of xrisk-institute funding sources and disclosure of conflicts with frontier-lab safety-branding.",
+      "impact": "If the allocation is well-calibrated to genuinely comparable expected-value reasoning, this reading is closer to a rope with real coordination value; if the allocation reflects capture by well-resourced beneficiary institutions setting their own priority terms, the tangled_rope classification understates the extraction and it drifts toward snare.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether existential-risk prioritization reflects calibrated expected-value reasoning or beneficiary-institution capture of the governance agenda."
+    },
+    {
+      "id": "future_humanity_representation_gap",
+      "question": "Can 'future humanity' function as a coherent beneficiary/victim class for governance purposes when it has no mechanism to corroborate, contest, or correct the allocation made in its name?",
+      "resolution_mechanism": "There is no empirical resolution mechanism in principle — this is a conceptual question about whether unrepresentable future stakeholders can ground present resource-allocation claims without a proxy-representation mechanism accountable to some observable check.",
+      "impact": "If no coherent representation mechanism exists, claims made on behalf of future humanity function structurally as claims made by whoever currently holds the microphone (the agenda-setting institutions), which strengthens the case that the beneficiary/victim asymmetry is durable and self-reinforcing rather than a resolvable empirical question.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether unrepresented future beneficiaries can ground present governance priority claims without a corroboration mechanism."
+    },
+    {
+      "id": "cs_framing_alternative_agenda_layer",
+      "question": "Should the kernel-adjudicating authority be read as the xrisk research institutes themselves (the obvious framing — they administer funding panels and advisory bodies), or as the deeper legitimacy claim that AGI-scenario risk is the correct lens for civilizational-scale governance at all (a framing layered above the institutions, closer to a paradigm than an administrator)?",
+      "resolution_mechanism": "Track whether contestation, when it occurs, targets specific institutional funding decisions (supports the administrator framing) or targets the underlying longtermist/discontinuity paradigm itself (supports the paradigm framing) — examine legislative hearing transcripts and academic rebuttal literature for which target predominates.",
+      "impact": "Under the administrator framing, cs_structure.authority_grounding = extraction (institutions extract benefit from kernel stability) is clearly correct. Under the paradigm framing, authority_grounding might instead resemble diffuse_epistemic (a loosely held expected-value framework rather than a specific institutional hierarchy), which would change how interpretation_layer_present should be read. This story adopts the administrator framing because the named beneficiaries (institutes, labs) are concrete, funded, and identifiable — but the alternative framing would classify authority differently.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's adjudicating authority is the concrete beneficiary institutions or the underlying longtermist paradigm layered above them."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "ai_risk_governance_priority__near_term_harms_reading",
+      "ai_risk_governance_priority__bridge_reading"
+    ],
+    "dual_formulation_note": "This story is one of three sibling constraints decomposing the natural-language claim 'AI risk governance must prioritize X' per the ε-invariance principle. Each reading (existential_risk_reading, near_term_harms_reading, bridge_reading) has its own ε, beneficiary/victim structure, and classification — they are not the same constraint viewed from different angles. This reading shows higher ε on speculative-capability governance and lower ε on present algorithmic-harm governance; the near_term_harms_reading sibling shows the inverse ε profile with a different victim/beneficiary set (present-harm-affected populations as victims of neglect become the coordination beneficiaries under that reading's frame); the bridge_reading sibling attempts to hold both without the resource-diversion structure this reading identifies, and should show correspondingly lower ε and different (or absent) tangled_rope gating."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.6
+    }
+  ],
+  "gain_flow": "xrisk_research_institutes",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "near_term_harms_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bridge_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "irreversible_catastrophic_tail_risk_dominates_expected_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "capability_discontinuity_justifies_advance_resource_commitment",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "precautionary_longtermist_priority_ordering",
+    "drift_state": {
+      "moment": "post_2023_frontier_model_governance_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

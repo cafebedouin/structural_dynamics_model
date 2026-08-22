@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "ai_safety_commitment__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "b4b45ed9-2c56-4c5c-91a2-c4fe84c48f5e"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.47,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Safety as Existential Risk Prevention (X-Risk Reading)",
+    "topic_domain": "technology/governance/risk",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "humanity_conditional_on_alignment_success",
+      "frontier_ai_labs",
+      "existential_risk_research_institutes"
+    ],
+    "victims": [
+      "future_humans",
+      "present_day_algorithmically_harmed_populations",
+      "open_source_ai_developers"
+    ],
+    "vindicated_propositions": [
+      "instrumental_convergence_thesis",
+      "orthogonality_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "frontier_ai_labs",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Fund and staff the interpretability, RLHF, and alignment research programs that define what counts as 'safety work'; simultaneously race to build the systems the research is meant to constrain. They set the technical agenda for what existential risk mitigation means, control the compute and talent pipeline, and use existential-risk framing to argue for regulatory moats that raise entry costs for competitors while continuing frontier development themselves."
+    },
+    {
+      "name": "existential_risk_research_institutes",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive funding, prestige, and policy access premised on the extinction-risk framing being the correct lens on AI safety. Careers, grant cycles, and institutional survival are tied to the continued salience of misalignment-driven extinction scenarios. Can relocate between labs, academia, and think tanks; not trapped, but identity and livelihood are substantially fused to the framing's continued credibility."
+    },
+    {
+      "name": "humanity_conditional_on_alignment_success",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Stands to benefit from successful alignment work if and only if the speculative technical bet pays off; has no vote in which interventions are pursued, no ability to exit the wager being made on its behalf, and no mechanism to evaluate whether the resources spent on speculative alignment research were well allocated relative to alternatives."
+    },
+    {
+      "name": "future_humans",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Bear the entire downside if the alignment bet fails, the resources were misallocated, or the extinction framing was wrong about the actual risk landscape; cannot participate in current decisions, cannot object to present resource allocation, and cannot be compensated for a failed wager made in their name. Their interests are invoked constantly and represented by no one who will ever be accountable to them."
+    },
+    {
+      "name": "present_day_algorithmically_harmed_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Experience documented harms today — biased hiring algorithms, discriminatory risk scores, labor displacement, content moderation failures — while research funding, policy attention, and 'AI safety' branding are directed toward speculative extinction scenarios instead. The existential framing competes for the same finite regulatory and philanthropic attention their harms need, and loses.  They cannot easily exit algorithmic systems embedded in employment, credit, and government services."
+    },
+    {
+      "name": "open_source_ai_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face proposed compute thresholds, licensing regimes, and model-weight restrictions justified by extinction risk, which fall disproportionately on smaller, open, or academic developers who cannot absorb compliance costs the way frontier labs can. Regulatory capture risk is high: the same institutions authoring the extinction framing lobby for rules that entrench their own market position."
+    },
+    {
+      "name": "ai_governance_bodies",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Draft pause proposals, compute caps, and international coordination frameworks premised on extinction-level risk being the operative threat model; take testimony overwhelmingly from the labs and institutes who benefit from that framing being taken as settled, and have limited independent technical capacity to adjudicate the underlying risk claims."
+    },
+    {
+      "name": "near_term_harms_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that resources, regulatory bandwidth, and the term 'AI safety' itself are being captured by a speculative framing that displaces attention from measurable, present-day, remediable harms; are present in policy discourse but structurally deprioritized whenever existential framing dominates funding calls and legislative hearings."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a genuinely hard technical and civilizational problem: if superintelligent systems with misaligned goals are physically possible, preventing an unrecoverable catastrophe requires research, monitoring, and possibly coordinated slowdown that no single actor can produce alone — a real collective-action problem if the underlying risk model is correct.",
+    "transfer_function": "Moves research funding, regulatory attention, and philanthropic capital toward speculative long-horizon technical interventions (interpretability, RLHF, pause proposals) and away from documented present-day algorithmic harms; moves compliance costs from well-resourced frontier labs (who help write the rules) onto smaller open-source and academic developers; moves accountability for the entire wager onto persons not yet born.",
+    "absent_voices": "Future humans have no representative who is accountable to them rather than to present funders; present-day victims of algorithmic bias and labor displacement are in the room but consistently lose attention and funding priority to the extinction framing; skeptical AI researchers who dispute the empirical basis of near-term superintelligence timelines are frequently characterized as insufficiently safety-conscious rather than engaged on the merits.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the existential-risk framing vanished overnight, frontier labs would lose a major justification for present research direction and regulatory positioning, and existential-risk institutes would lose their funding basis entirely — the world of AI governance discourse would visibly rearrange. Whether the underlying catastrophic risk itself would be unaffected (a real risk simply un-discussed) or the risk was substantially overstated (in which case little of substance changes) is exactly what the reading's proponents and skeptics dispute; the verdict depends on an unresolved empirical question about the risk's actual magnitude.",
+    "founding_problem": "Advanced AI systems might eventually possess capabilities and autonomy sufficient that a misaligned objective, once instantiated, could not be corrected before it caused irreversible, potentially extinction-level harm to humanity — a problem with no historical precedent and no opportunity to learn from a first failure.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Some independent AI researchers outside frontier labs and existential-risk institutes (e.g. in academic ML safety, complexity science, and skeptical technology-policy circles) attest the risk model rests on largely untested extrapolations from current systems and that timelines are highly uncertain; others outside the funded institutes independently corroborate that convergent instrumental goals and deceptive alignment are theoretically plausible failure modes worth serious study. No corroboration exists that is fully independent of some stake in the AI research ecosystem — there is no disinterested outside referee for a problem this novel."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the existential-risk reading of the contested AI safety kernel: safety means preventing extinction-level outcomes from misaligned superintelligent systems. Under this reading, the coordination function is real if the underlying risk model is correct — a genuinely unprecedented catastrophic-risk problem requiring research and possibly coordinated slowdown no single actor can produce alone. But the reading also generates a distinctive extraction structure: research funding, regulatory attention, and the moral authority of the word 'safety' itself are directed toward speculative, long-horizon technical interventions (interpretability, RLHF, pause proposals, compute governance) benefiting frontier labs and existential-risk institutes, while present-day documented algorithmic harms compete for the same finite attention and lose. The victim set under this reading is structurally unusual: all future humans, a potentially infinite and entirely unrepresented population who bear the downside of a wager made without their input and cannot be compensated if the wager fails or was based on an incorrect risk model.",
+    "key_agents": [
+      "frontier_ai_labs: agenda_setter/beneficiary (institutional/arbitrage) — set the technical safety agenda while racing to build the systems it targets",
+      "existential_risk_research_institutes: beneficiary/agenda_setter (organized/mobile) — funding and prestige tied to extinction framing's continued salience",
+      "humanity_conditional_on_alignment_success: beneficiary (powerless/trapped) — benefits only if the speculative bet succeeds",
+      "future_humans: payer (powerless/trapped, universal scope) — bears the entire downside of a wager made in their name with no voice",
+      "present_day_algorithmically_harmed_populations: payer (powerless/constrained) — loses attention and funding priority to the extinction framing",
+      "open_source_ai_developers: payer (moderate/constrained) — bears disproportionate compliance costs from extinction-justified regulation",
+      "near_term_harms_advocates: excluded (organized/constrained) — present in discourse but structurally deprioritized"
+    ],
+    "logic_rationale": "Extractiveness (0.58) reflects substantial but not extreme extraction: real coordination value exists if the risk model is correct, but a large share of resource allocation is directed by institutions with a direct stake in the framing's continued dominance, and present-day harms are measurably deprioritized. Suppression (0.42) is moderate — dissenting researchers face reputational pressure and funding disadvantage rather than direct coercion; the mechanism is attention-capture and institutional gatekeeping, not legal force. Theater ratio (0.47) is elevated and rising because a growing share of visible 'safety' activity (position papers, pledges, voluntary commitments) functions as reputational signaling relative to the technical difficulty of the underlying problem, particularly as labs simultaneously accelerate capability development. Accessibility collapse (0.35) is comparatively low: alternative framings (near-term harms, dual-priority) remain visible and actively argued in the discourse — this reading has not achieved uncontested dominance. Resistance (0.61) is substantial, coming from near-term-harms advocates, open-source developers facing regulatory capture, and skeptical researchers disputing the risk model's empirical grounding.",
+    "directionality_logic": "Frontier labs and existential-risk institutes sit near the beneficiary end: they set research agendas, receive funding and prestige, and retain mobile or arbitrage-grade exit options even as they administer the framing. Humanity-conditional-on-success sits as an unusual beneficiary: powerless and trapped, but positioned to gain only contingently. Future humans and present-day algorithmically harmed populations sit near the full-target end: powerless, unable to exit the systems or the wager, bearing costs without voice or compensation mechanism. Open-source developers sit in the middle-target range: moderate power, real but constrained exit, bearing disproportionate compliance costs from rules the more powerful beneficiaries helped shape.",
+    "mandatrophy_analysis": "The founding problem (irreversible catastrophic misalignment) may still be live — the reading's proponents assert it is undiminished by any safety work done so far, since no alignment technique has been validated against a genuinely superintelligent system. This story therefore does NOT resolve mandatrophy: the tangled_rope classification holds because the coordination function is genuinely contested as live rather than dead, while the extraction (attention and funding capture by well-positioned institutions) is verifiably occurring in parallel. Rising theater_ratio without resolution of founding_problem_status is the diagnostic signature of a coordination claim under strain — the constraint has not become inert (piton), but its performative component is growing faster than its verified technical output.",
+    "kernel_context": "This constraint instantiates the existential_risk_reading of the ai_safety_commitment kernel: AI safety is read as extinction-outcome prevention from misaligned superintelligence, with a victim set of all future humans and speculative technical interventions (RLHF, interpretability, governance pauses) carrying high authored ε. Two sibling readings exist as separate constraints: near_term_harms_reading (safety as prevention of documented present-day harms — bias, discrimination, labor exploitation, misinformation; low ε on speculative interventions, high ε on present accountability gaps) and dual_priority_reading (both are non-competing priorities simultaneously). This reading and near_term_harms_reading compete directly for the same finite attention and funding pool, which is why the extraction structure here includes present_day_algorithmically_harmed_populations as victims of THIS reading's dominance, not merely as beneficiaries of a different reading."
+  },
+  "omegas": [
+    {
+      "id": "risk_model_empirical_validity",
+      "question": "Is the instrumental convergence / deceptive alignment risk model empirically well-founded given current AI systems, or is it a largely untested extrapolation whose plausibility cannot yet be assessed?",
+      "resolution_mechanism": "Longitudinal tracking of capability scaling against alignment-relevant behaviors (deceptive alignment indicators, goal generalization failures) in progressively more capable systems; adversarial red-teaming results; convergence or divergence of independent research groups' threat models over time.",
+      "impact": "If the risk model is well-founded, the coordination function is genuine and much of the measured extraction is a legitimate cost of urgent coordination under uncertainty. If the model is substantially speculative, the extraction reading dominates: resources and attention are being captured by an unfalsifiable framing that primarily benefits the institutions asserting it.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the extinction-risk model has genuine empirical support or functions as an unfalsifiable resource-capture narrative."
+    },
+    {
+      "id": "kernel_reading_contest_location",
+      "question": "This constraint is one reading (existential_risk_reading) of the contested ai_safety_commitment kernel. The disagreement with sibling readings (near_term_harms_reading, dual_priority_reading) is located specifically in the definition of the victim set (infinite future humans vs. documented present populations) and in the allocation of scarce regulatory/philanthropic attention between speculative and documented harms. A sibling reading (near_term_harms_reading) would reverse which population is named victim and which is named beneficiary of the same funding flows.",
+      "resolution_mechanism": "Track whether the resource pools competed for (safety funding budgets, congressional hearing time, media attention cycles) are fixed-sum or expandable — if AI safety funding as a category has grown enough to fund both agendas without tradeoff, the readings' victim sets do not actually compete; if the pool is fixed or growing slower than claims on it, the readings are in direct zero-sum tension.",
+      "impact": "If the funding pool is genuinely fixed-sum, this reading's dominance mechanically produces the near_term_harms_reading's victim set (present-day algorithmically harmed populations) as a structural byproduct, strengthening the tangled_rope classification here. If the pool is expandable and dual_priority_reading's non-competing framing holds empirically, this reading's extraction score should be revised downward.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where the three sibling readings' disagreement is structurally located, and whether it is zero-sum."
+    },
+    {
+      "id": "future_human_representation_mechanism",
+      "question": "Can any present institution legitimately claim to represent the interests of an unrepresented, potentially infinite future population, or does the invocation of 'future humans' as beneficiaries/victims function primarily as rhetorical leverage for present institutional agendas?",
+      "resolution_mechanism": "Examine whether existential-risk institutions have built any actual accountability mechanism to future-oriented outcomes (e.g., binding commitments, external audits of past risk predictions against subsequent reality) versus purely asserting representation without mechanism.",
+      "impact": "If no accountability mechanism exists or is even contemplated, the 'future humans' beneficiary/victim framing is doing rhetorical work without structural substance, which would weaken the case for treating this as a genuine tangled_rope (coordination + extraction) versus a snare dressed in coordination language.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether representation of unborn future humans is structurally real or purely rhetorical leverage."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "near_term_harms_reading",
+      "dual_priority_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the ai_safety_commitment kernel. existential_risk_reading (this file) authors a high ε for speculative long-horizon technical interventions and names all future humans as the primary victim class alongside present-day algorithmically harmed populations who lose attention priority. near_term_harms_reading authors low ε on those same speculative interventions and high ε on present algorithmic accountability gaps, naming present-day harmed populations as primary victims and treating the extinction framing itself as the attention-capturing mechanism. dual_priority_reading treats both risk categories as non-competing and authors a correspondingly different, lower-extraction structure premised on an expandable resource pool. The three do not share one ε because they are not one constraint — they are three structurally distinct claims sharing a natural-language label, linked here per the ε-invariance decomposition principle."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "extinction_prevention_as_overriding_priority",
+    "drift_state": {
+      "moment": "post_frontier_lab_commercialization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "near_term_harms_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dual_priority_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "extinction_risk_overrides_present_harm_prioritization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "future_persons_carry_moral_weight_equal_to_present_persons",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "frontier_ai_labs",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

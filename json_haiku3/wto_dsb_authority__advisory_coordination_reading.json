@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "wto_dsb_authority__advisory_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "1b686106-8d3d-4bc7-b942-43b08be8541b",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.15,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.62,
+    "claimed_type": "rope",
+    "human_readable": "WTO DSB Advisory Coordination (Member State Sovereignty Reading)",
+    "topic_domain": "international/institutional/governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "dsb_panel_expertise",
+      "wto_member_states",
+      "bilateral_negotiation_process"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "advisory_vs_binding_framing",
+      "question": "Is the DSB's institutional position fundamentally advisory (member states retain discretion to reject panel recommendations) or functionally binding (reputational and trade retaliation costs make non-compliance prohibitively expensive)?",
+      "resolution_mechanism": "Empirical measurement: tracking compliance rates when panel recommendations directly conflict with major member-state domestic preferences, controlling for trade-power asymmetry. If powerful states comply with adverse rulings at similar rates as weak states, the constraint is functionally binding; if powerful states systematically ignore adverse rulings and face no enforcement, the advisory framing holds.",
+      "impact": "If advisory framing is correct, this constraint is a coordination mechanism (rope); if functionally binding despite formal advisory language, it is a tangled rope or snare with hidden enforcement machinery (institutional authority disguised as advice). The classification shifts along this resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether DSB authority is formally advisory but functionally binding through power asymmetry."
+    },
+    {
+      "id": "reading_contest_kernel_ambiguity",
+      "question": "Which reading of the WTO DSB authority kernel is institutionally dominant: advisory-coordination (member state sovereignty preserved), binding-referee (treaty law creates compliance obligations), or judicial-activism (illegitimate interpretive drift)?",
+      "resolution_mechanism": "Textual analysis of the WTO Dispute Settlement Understanding (DSU) and DSB practice over time; tracking institutional practice drift (do panels expand remedies, create new obligations, or constrain themselves to advisory recommendations?); survey of member state statements and compliance behavior; analysis of appellate body reasoning to identify whether interpretive methodology has shifted authority from advisory to quasi-judicial.",
+      "impact": "The reading that dominates institutional practice determines how the constraint is classified. If advisory framing dominates, this story's ε (0.28) and claimed type (rope) hold. If binding framing dominates, ε rises (extraction through compliance obligation without corresponding institutional accountability) and type shifts to tangled_rope or snare. If judicial-activism dominates, the constraint's legitimacy is contested and a new story (constraint_wto_dsb_authority__judicial_activism_reading) documents that reading.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Kernel contest: which reading of DSB authority is institutionally realized?"
+    },
+    {
+      "id": "power_asymmetry_implicit_enforcement",
+      "question": "How much of the measured suppression (0.15) is explicit DSB enforcement machinery versus implicit enforcement through power-asymmetric trade retaliation by powerful members against weak members who fail to comply?",
+      "resolution_mechanism": "Comparative case analysis: examine compliance outcomes when powerful states are complainants vs. weak states; compare retaliation patterns when weak states win rulings against powerful states versus the reverse; measure asymmetry in cross-retaliation authorization and enforcement.",
+      "impact": "If suppression is mostly implicit power-asymmetric retaliation, the constraint is more snare-like than rope-like (weak-state coercion through bilateral power, not institutional coordination). If suppression is truly low and compliance is voluntary, the rope classification holds. The split determines whether effective extraction is symmetric across member states or concentrates on powerless actors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether DSB suppression is explicit or implicit through power asymmetry."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "The World Trade Organization's Dispute Settlement Body (DSB) provides a formal mechanism for member states to resolve trade disagreements. Under THIS READING (the advisory-coordination reading), DSB panels issue expert opinions designed to facilitate negotiated settlements between disputing parties; final authority to accept, modify, or reject panel recommendations rests with the member states themselves. Compliance is voluntary, grounded in reputation and reciprocal benefit, not institutional coercion. This reading emphasizes state sovereignty and the role of bilateral negotiation, treating the DSB as a coordination mechanism that reduces transaction costs and information asymmetry but preserves each state's ultimate policy discretion. The constraint's extractiveness is low (0.28) because the advisory framing generates minimal compliance pressure independent of power; suppression is similarly low (0.15) because member states theoretically retain exit (non-compliance) as a live option, though that exit carries reputation and bilateral retaliation costs (power-asymmetric, not institutional).",
+    "key_agents": [
+      "dsb_panels: expert bodies that generate advisory opinions and facilitate settlement negotiation",
+      "powerful_wto_members: states with large economies and trade leverage (USA, EU, China) that can negotiate from strength",
+      "weak_wto_members: states with small economies and limited trade leverage that depend on DSB neutrality for protection against larger members",
+      "wto_secretariat: administers procedures and coordinates panel operations",
+      "bilateral_complainants: the states bringing specific disputes"
+    ],
+    "logic_rationale": "Under the advisory reading, extractiveness (0.28) is moderate-low because compliance is nominally voluntary; the constraint coordinates expertise and negotiation space without commanding obedience. The measurements show slight upward drift (0.18 → 0.28 over 25 years), consistent with the DSB's institutional maturation and growing reliance on its recommendations, but the level remains well below binding-referee territory (which would exceed 0.60). Theater ratio (0.42, stable over time) reflects a significant performative component: member states frequently invoke DSB authority rhetorically while quietly ignoring adverse rulings when power asymmetry permits, or comply opportunistically when politically aligned with the ruling. Suppression is low (0.15) under this reading because the DSB itself produces no enforcement — exit is theoretically available (non-compliance carries reputational cost, not institutional penalty). The power atoms show why this is contestable: weak states cannot exit (reputation/retaliation costs are prohibitive relative to their trade dependence); powerful states exit with limited cost (they absorb diplomatic friction and selective retaliation). The constraint's effective extractiveness diverges sharply between seats — high for weak states, near-zero for powerful states — which is exactly why the alternative readings (binding-referee, judicial-activism) emerge as powerful states experience the constraint as binding authority they cannot escape, and weak states experience it as nominal protection that depends on power, not law.",
+    "directionality_logic": "Under the advisory reading, the beneficiary group is the WTO membership as a collective (coordination benefit: reduced negotiation friction, expert input, neutral forum). Individual member state directionality varies by power: powerful states get near-beneficiary positioning (d near 0.1-0.2) because advisory opinions are inputs they can weight heavily in their own negotiations; weak states get near-target positioning (d near 0.75-0.85) because the ostensible advisory status masks their actual structural dependence on the DSB to survive disputes with more powerful members. The DSB secretariat and panel expertise (vindicated_propositions) are not agents collecting extraction but rather institutional structures that the arrangement vindicates — they are declared as vindicated_propositions (expertise coordination, neutral adjudication principle) rather than beneficiaries. Directionality derivation from the beneficiary/victim declarations alone would produce a symmetric reading; the omega variables document why the actual structural relationship is asymmetric and seat-dependent.",
+    "perspectival_gap": "Powerful member states (USA, EU, China) perceive the DSB as providing advisory input they integrate into their own strategic negotiations — they experience the constraint as low-extractive coordination with high exit optionality (they can ignore adverse rulings or negotiate settlements on their own terms). Weak member states (least-developed countries, small economies) perceive the DSB as their primary lever against more powerful members — they experience the constraint as high-extractive because non-compliance by a powerful state to a ruling favorable to them carries no enforcement, leaving them with no remedy. The advisory reading privileges the powerful-state perspective; the binding-referee reading privileges the weak-state perspective (institutional authority would make rulings enforceable regardless of power). The engine's per-seat classification should capture this divergence: powerful seats compute rope or near-mountain (low extraction, coordination benefit); weak seats compute tangled_rope or snare (high effective extraction, constrained exit despite formal advisory language).",
+    "mandatrophy_analysis": "The advisory reading avoids mandatrophy (constraint whose founding problem has expired) because the founding coordination problem remains live: member states still need neutral adjudication mechanisms, expert fact-finding, and negotiation facilitation to reduce bargaining costs. The constraint has not outlived its function under this reading; it has instead matured from a consultative mechanism (early 1990s) into a more structured expert body, which the measurement data shows. The theater ratio's stability (0.38-0.42) suggests the performative component is constant — not increasing as it would if the constraint were degrading into pure theater. Mandatrophy would emerge under the binding-referee reading if member states began openly non-complying with binding rulings despite their legal obligations (theater ratio would spike sharply as the binding authority was sustained only by performative maintenance, not real compliance pressure).",
+    "kernel_context": "This constraint is the advisory-coordination READING of the contested WTO DSB authority KERNEL. The kernel is the formal text of the Dispute Settlement Understanding (DSU) and the DSB's operational practice over 30 years. This reading interprets the kernel to mean: DSB panels provide expert advisory opinions designed to facilitate negotiated settlements; member states retain ultimate policy discretion; compliance is voluntary and grounded in reciprocal benefit, not institutional coercion. Two sibling readings contest this interpretation: (1) the binding-referee reading reads the same DSU text to impose binding obligations grounded in treaty law, with compliance machinery enforced through cross-retaliation and institutional reputation; (2) the judicial-activism reading argues that DSB practice has drifted from the original advisory intent toward quasi-judicial lawmaking, creating new obligations beyond the DSU's mandate. This story instantiates ONLY the advisory-coordination reading as a clean, ε-invariant constraint (extracted from the kernel as the advisory-reading parties experience it). The sibling readings are separate constraint stories with their own ε values, beneficiary structures, and classifications. Do not read alternative framings into this file."
+  },
+  "stakeholders": [
+    {
+      "name": "dsb_panels",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Convene to hear evidence from disputing parties, consult WTO legal expertise, and draft advisory opinions on the facts and law of specific trade disputes. Panels do not enforce compliance or determine final liability; they produce informed recommendations that member states may accept, modify, or reject in subsequent negotiations. Panels have significant intellectual influence over the settlement outcome but no binding authority.",
+      "agent": true
+    },
+    {
+      "name": "powerful_wto_members",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Large economies (USA, EU, China, Japan) that participate in many disputes. Under the advisory reading, they benefit from the DSB's neutral forum and expert input while retaining flexibility to negotiate outside DSB recommendations or non-comply with adverse rulings using their trade leverage. They can ignore unfavorable panel opinions with manageable diplomatic costs because their size and market access give them retaliation capacity. They also contribute expertise and institutional resources to staffing panels.",
+      "agent": true
+    },
+    {
+      "name": "weak_wto_members",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Developing countries and least-developed states with limited trade leverage. Under the advisory reading, they nominally benefit from neutral adjudication but depend entirely on powerful members' willingness to comply with favorable panel recommendations. When a powerful member ignores a ruling favorable to a weak state, the weak state has no enforcement mechanism and no practical remedy other than to absorb the loss or attempt ineffectual retaliation. They are identity-locked into the WTO institutional framework because exit (withdrawal, non-participation) would eliminate their only leverage in international trade disputes.",
+      "agent": true
+    },
+    {
+      "name": "bilateral_complainants",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individual states bringing specific disputes to the DSB. They commit substantial legal resources, expertise, and diplomatic attention to DSB proceedings. They benefit from having their case heard and an expert opinion rendered, but they pay the cost of litigation (legal fees, negotiation time, foregone bilateral settlement options) and face the risk that the panel's advice will not influence the respondent state to settle on favorable terms, especially if the respondent is more powerful.",
+      "agent": true
+    },
+    {
+      "name": "wto_secretariat",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers DSB procedures, appoints panelists, manages timelines, and coordinates compliance. Under the advisory reading, the secretariat facilitates advice-giving and negotiation rather than enforcing binding rulings. The secretariat staff provide continuity and institutional memory across disputes.",
+      "agent": true
+    },
+    {
+      "name": "excluded_non_members",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-WTO states and sub-state actors (corporations, civil society, workers, environmental interests) whose trade interests are affected by DSB rulings but who have no voice in the dispute resolution process. They would advocate for standing to participate in or appeal DSB decisions, but WTO membership rules exclude them from the table.",
+      "agent": true
+    },
+    {
+      "name": "panel_expertise",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The collective knowledge of trade law, economics, and fact-finding that panels bring to disputes. Treated as an institutional asset of the WTO system.",
+      "agent": false
+    },
+    {
+      "name": "neutral_adjudication_principle",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The foundational norm that trade disputes are resolved by impartial processes rather than raw power asymmetry. Vindicated by the DSB's existence and authority.",
+      "agent": false
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a neutral expert forum and systematic fact-finding process to resolve trade disputes that might otherwise be negotiated under pure power asymmetry. Reduces information costs, produces authoritative expert opinions, and creates a focal point for settlement negotiations between disputing parties. Coordinates expectation about how disputes should be adjudicated, independent of relative power.",
+    "transfer_function": "Transfers institutional resources (secretariat staff, panel time, legal expertise) from the WTO membership collectively to individual disputes. Also transfers reputational costs to powerful members who violate advisory recommendations — the transfer is soft (reputation, not money or enforcement), not all states pay equally (powerful states pay less), and not all recommendations are accepted (advisory, not binding). The mechanism moves credibility from the DSB's institutional authority to the settlement outcome.",
+    "absent_voices": "Non-WTO members and sub-state actors (corporations, labor unions, environmental organizations, developing-country workers affected by trade rules) would voice strong objections to being excluded from DSB procedures and to the advisory nature of rulings — they would advocate for standing to participate, for binding enforcement, and for remedies that account for non-trade interests (labor rights, environmental protection). Least-developed countries often lack the legal capacity to participate effectively even though they are members. Powerful member states' domestic constituencies (workers losing jobs to trade liberalization, farmers competing with subsidized imports) are excluded from the dispute process itself, though they may lobby their governments. These absences mean DSB settlements reflect state-level interests, not the full preference distribution of the people and entities affected by trade rules.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the DSB ceased to exist overnight, member states would need to replace it with an alternative dispute mechanism (bilateral negotiation, regional dispute bodies, or ad-hoc arbitration) or abandon systematic trade-dispute resolution entirely. Trade conflict would likely increase because negotiation costs would rise without the neutral forum and expert input; large states would resolve disputes in their favor using leverage, not negotiation. Weak states would lose their only institutional lever against powerful members. The WTO institutional order itself would be destabilized because dispute resolution is foundational to the membership contract (governments committed to trade liberalization partly because they expected neutral adjudication of violations, not power-based retaliation).",
+    "founding_problem": "Trade liberalization agreements (GATT, WTO) require a neutral mechanism to adjudicate disputes about whether member states are complying with their commitments. Without a neutral forum, trade negotiations cannot be sustained because each state fears that powerful states will exploit ambiguities in trade rules to evade their commitments, and weaker states will be unable to enforce their rights. The founding problem was: how can trade partners commit to market-opening agreements when they cannot rely on neutral adjudication to police compliance?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Economic analyses of the WTO system (Bagwell & Staiger, Goldmann, Busch & Reinhardt) confirm that the DSB's existence increases the credibility of trade commitments and reduces negotiation costs compared to bilateral or unilateral enforcement. Member states' consistent participation in DSB proceedings and their documented compliance rates (70-90% depending on country and type of ruling) demonstrate that they view the mechanism as solving the founding problem. However, compliance rates vary sharply by power asymmetry (powerful states comply less frequently with adverse rulings, weak states more frequently), and several major disputes have been ignored by powerful members (e.g., US non-compliance with appellate body rulings on cotton subsidies, EU and US non-compliance on Airbus/Boeing), which prompts an alternative reading: the founding problem is CONTESTED, and the binding-referee reading argues that the advisory framing has failed to ensure compliance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "wto_dsb_authority__binding_referee_reading",
+      "wto_dsb_authority__judicial_activism_reading"
+    ],
+    "dual_formulation_note": "The WTO DSB authority kernel decomposes into three distinct constraint stories, each instantiating a different reading of the same institutional text and practice. This story is the advisory-coordination reading: DSB panels provide expert advisory opinions designed to facilitate negotiated settlements; member states retain ultimate policy discretion. The binding-referee reading interprets the same institutional apparatus to impose binding compliance obligations grounded in treaty law. The judicial-activism reading argues that DSB practice has drifted from advisory intent toward quasi-judicial lawmaking. The three readings are linked in network.affects_constraints and share the same kernel_id (wto_dsb_authority) but diverge in ε (extractiveness), beneficiary/victim structure, and computed type. This decomposition follows the ε-invariance principle: a single institutional text cannot be a single constraint because different parties read it to establish different effective relationships with different extraction profiles and beneficiary structures. Each reading is a separate constraint with its own ε, stakeholders, and classification."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "binding_referee_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "judicial_activism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "member_state_sovereignty_retained",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "compliance_voluntary_reciprocal_benefit",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "advisory_coordination_institutional_authority",
+    "drift_state": {
+      "moment": "contemporary_dispute_settlement_practice_2020s",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

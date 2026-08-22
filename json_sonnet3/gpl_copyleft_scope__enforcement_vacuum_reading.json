@@ -1,0 +1,334 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__enforcement_vacuum_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "5eb16e92-750c-499e-97b2-34af7808a3d5"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.31,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Derivative-Work Scope Under Judicial Non-Resolution (Enforcement Vacuum Reading)",
+    "topic_domain": "software_licensing/intellectual_property/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_platform_vendors",
+      "dual_licensing_companies",
+      "legal_intermediary_firms"
+    ],
+    "victims": [
+      "small_commercial_adopters",
+      "compliance_uncertain_startups",
+      "downstream_integrators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "fsf_aligned_maintainers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain projects under a strong-copyleft reading and threaten or pursue enforcement action against perceived violations within communities where they have standing and reputational leverage. Their enforcement capacity is real inside FSF-aligned ecosystems but drops sharply outside them, so the same license text produces different practical constraint depending on which community is watching."
+    },
+    {
+      "name": "large_platform_vendors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate at a scale where they can fund legal teams to adopt the narrow-scope reading with confidence, absorb litigation risk if challenged, and shape industry practice toward permissive interpretations through sheer market weight. The absence of precedent lets them treat GPL scope as a negotiable business risk rather than a fixed obligation."
+    },
+    {
+      "name": "dual_licensing_companies",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sell commercial licenses as an escape from the very ambiguity they benefit from preserving: the scarier and more contested the copyleft boundary appears, the more valuable their proprietary alternative becomes. They have no incentive to see the question resolved."
+    },
+    {
+      "name": "legal_intermediary_firms",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Provide licensing-risk audits, compliance opinions, and litigation defense whose market exists only because the derivative-work boundary is unsettled. Billable hours scale with the persistence of the ambiguity."
+    },
+    {
+      "name": "small_commercial_adopters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must decide whether to link against GPL-covered code without the resources to commission a legal opinion or withstand an enforcement action, however unlikely. They either over-comply by avoiding useful GPL components entirely or under-comply and carry unquantified exposure that can be selectively activated by whichever interpretive community notices them."
+    },
+    {
+      "name": "compliance_uncertain_startups",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Have already built products on architectures whose licensing status is genuinely contested (plugin boundaries, dynamic linking) and cannot cheaply re-architect. Investors and acquirers treat the ambiguity as a due-diligence risk, depressing valuation regardless of which reading is eventually correct."
+    },
+    {
+      "name": "downstream_integrators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Combine components from multiple upstream projects, each governed by communities with different enforcement postures and different de facto readings of the same license text. They inherit compounded uncertainty they did not create and cannot resolve by reading the license more carefully."
+    },
+    {
+      "name": "pragmatic_flexible_adopters",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Deliberately exploit the interpretive plurality: they adopt whichever reading is locally convenient, betting that low enforcement capacity in their specific ecosystem makes the aggressive reading unlikely to be tested against them. They benefit from the vacuum precisely because they have the sophistication to navigate it, unlike less-resourced adopters facing the same text."
+    },
+    {
+      "name": "courts_and_legislatures",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Have not been presented with, or have not resolved, a case that would settle the derivative-work boundary for software linking. Their absence from the field is not neutral — it is the structural condition that makes the enforcement-vacuum reading possible at all."
+    },
+    {
+      "name": "license_compliance_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study enforcement patterns, settlement terms, and community norms across ecosystems to map where the strong reading is actually live and where the narrow reading effectively governs, without any single authoritative doctrine to cite."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Where it functions as coordination, the GPL's scope ambiguity lets diverse communities converge on shared code while each interpretive community enforces the boundary consistent with its own norms and capacity — FSF-aligned projects hold a strict line, industry-dominated ecosystems hold a loose one, and both groups get usable shared infrastructure without a single global rule being imposed on all of them.",
+    "transfer_function": "Moves compliance risk and legal-uncertainty cost from sophisticated, well-resourced adopters (who can price and navigate the ambiguity, or fund the interpretation favorable to them) onto small commercial adopters and startups who cannot afford legal opinions and must either over-comply at a competitive cost or under-comply and carry latent exposure.",
+    "absent_voices": "Courts and legislatures that could settle the derivative-work boundary have not done so; their absence is structurally load-bearing rather than incidental. Small adopters who bear the transaction cost of the ambiguity are rarely present in the standards and community conversations where enforcement norms are set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "A definitive appellate ruling settling the derivative-work boundary for dynamic linking and plugin architectures would collapse the plurality overnight: dual-licensing business models built on the ambiguity would need to reprice, legal-risk-audit demand would fall sharply, and adopters currently hedging between readings would consolidate on whichever rule won, redrawing which projects are viable to build commercially.",
+    "founding_problem": "Copyleft licensing was built to prevent proprietary capture of shared code by requiring that derivative works remain under compatible terms; the derivative-work boundary needed to be broad enough to prevent easy circumvention through trivial technical repackaging.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "FSF-aligned communities attest the anti-circumvention purpose is still live and requires the strong reading to hold. Independent legal scholars and several appellate-level amicus filings from outside both the FSF and industry vendor camps have noted that the original drafters' intent does not resolve the specific dynamic-linking question, and that the persistent non-litigation of key cases (rather than doctrinal settlement) is what preserves the plurality — a reading corroborated by parties with no stake in either enforcement community's success."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.31
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This constraint is the enforcement_vacuum_reading of the gpl_copyleft_scope kernel. Unlike the strong_copyleft_reading (which asserts the boundary extends to all coupling forms) and the narrow_scope_reading (which asserts it follows traditional derivative-work doctrine and excludes mere aggregation/plugins/certain dynamic linking), this reading asserts that the absence of definitive judicial precedent is itself the operative structural fact: both readings remain simultaneously live and licensed as plurality, and which one actually constrains a given adopter depends on the enforcement capacity of the interpretive community that happens to be watching them (FSF-aligned projects vs. industry-dominated ecosystems), not on which reading is doctrinally correct.",
+    "narrative_context": "GPL Section 2(b)'s derivative-work boundary has never been definitively settled by appellate precedent for the hardest cases (dynamic linking, plugin architectures). Rather than resolving into one dominant interpretation, the ambiguity has stabilized into a durable plurality: FSF-aligned maintainers enforce a strong reading within communities where they hold reputational and organizational leverage, while large commercial ecosystems operate on a narrow reading with little practical risk of challenge. This constraint story documents that stabilized-plurality condition itself as a structural fact with its own beneficiaries, victims, and coordination/extraction mixture — distinct from either substantive reading of what the license actually requires.",
+    "key_agents": [
+      "fsf_aligned_maintainers: enforcement-capable within their communities, near-powerless outside them",
+      "large_platform_vendors: beneficiaries of the vacuum via scale-enabled risk absorption",
+      "dual_licensing_companies: beneficiaries who profit directly from ambiguity persisting",
+      "small_commercial_adopters: bear uncompensated transaction cost of unresolved doctrine",
+      "courts_and_legislatures: structurally absent; their non-intervention is load-bearing"
+    ],
+    "logic_rationale": "Extractiveness is authored low-to-moderate (0.38 at interval end) because the enforcement-vacuum condition itself does not directly transfer wealth the way a captured toll would — it produces diffuse compliance-cost and valuation-risk transfer onto less-resourced adopters, real but modest relative to a hard extraction mechanism. Theater ratio is authored moderate-and-rising (0.42) because a growing share of activity in this space — compliance audits, licensing risk assessments, conference panels on 'GPL compliance best practices' — has become performative reassurance rather than resolution of the underlying question; the industry has built an entire compliance-consulting apparatus around NOT resolving the ambiguity. Suppression is authored low (0.31) because no party is coercively blocked from litigating or legislating to resolve the question; the vacuum persists through inaction and asymmetric capacity, not active suppression of alternatives. Accessibility collapse is moderate (0.35): adopters can still exit into permissive-licensed alternatives or commercial licenses, so this is not a fully collapsed structure. Resistance is moderate-high (0.55): FSF-aligned enforcement actors and legal reform advocates actively push for clarification, and this pressure is a real, ongoing feature of the landscape.",
+    "directionality_logic": "Large platform vendors, dual-licensing companies, and legal intermediary firms sit near the beneficiary end: each has either the scale to absorb the ambiguity's risk, or a business model that depends on the ambiguity persisting. Small commercial adopters, compliance-uncertain startups, and downstream integrators sit near the target end: they bear the transaction cost of unresolved doctrine without the resources to price or exploit it, and their exit options are constrained or trapped by prior architectural commitments. Pragmatic flexible adopters are the interesting middle case — moderately powerful, mobile, and genuinely benefiting from the ambiguity by exploiting local low-enforcement-capacity conditions, which the derivation correctly places nearer the beneficiary end despite technically being 'adopters' like the victim group.",
+    "perspectival_gap": "From the FSF-aligned maintainer seat, the plurality looks like ongoing, legitimate defense of copyleft's coordination purpose against erosion — an agenda_setter exercising real enforcement authority within its domain. From the small commercial adopter seat, the identical structural fact (unresolved doctrine, community-dependent enforcement) looks like an unpriced tax on anyone without the resources to navigate or exploit it. The engine's per-seat computation should reflect this: fsf_aligned_maintainers experience something closer to a functioning rope within their sphere, while small_commercial_adopters experience something closer to extractive uncertainty.",
+    "mandatrophy_analysis": "The founding problem (preventing proprietary capture of shared code via trivial technical circumvention) remains genuinely live in principle, which blocks a clean piton classification. But the specific mechanism now sustaining the ambiguity — non-litigation, non-legislation, and a compliance-consulting industry with an interest in non-resolution — has drifted from 'defending the coordination function' toward 'monetizing the unresolved question.' Classifying this as tangled_rope rather than snare or piton preserves the genuine coordination the plurality still permits (diverse ecosystems can each operate under locally coherent rules) while flagging the asymmetric extraction it also enables (diffuse cost transfer onto under-resourced adopters) as a live structural feature requiring enforcement-by-inaction to persist."
+  },
+  "omegas": [
+    {
+      "id": "reading_plurality_structural_vs_transitional",
+      "question": "Is the enforcement-vacuum condition a stable structural feature of software copyleft licensing (permanent plurality by design of the legal system's incrementalism), or a transitional state awaiting a test case that will collapse it into one dominant reading?",
+      "resolution_mechanism": "Track appellate docket activity for GPL derivative-work cases over a multi-year window; a circuit split or definitive ruling would resolve this empirically. Absence of any such case after a long interval would support the structural-permanence reading.",
+      "impact": "If structural, this constraint's tangled_rope classification is durable and the beneficiary/victim asymmetry it documents should be treated as an enduring feature of the licensing ecosystem. If transitional, this story describes a temporary state that a future sibling reading (post-precedent) would supersede.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the interpretive vacuum is a permanent structural feature or an artifact awaiting judicial resolution."
+    },
+    {
+      "id": "enforcement_capacity_measurement",
+      "question": "Can 'which interpretive community has enforcement capacity in a specific context' be measured objectively, or is it itself contested and asserted differently by FSF-aligned actors versus industry actors?",
+      "resolution_mechanism": "Compile a dataset of actual GPL compliance actions, settlements, and cease-and-desist outcomes across ecosystems, coded by which reading was applied and by which community initiated enforcement.",
+      "impact": "If enforcement capacity is measurable and asymmetric as described, the beneficiary/victim structure authored here is empirically grounded. If enforcement patterns are more uniform or unpredictable than the FSF-aligned/industry-dominated dichotomy suggests, the story's central mechanism should be revised.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the community-dependent enforcement-capacity claim is empirically verifiable."
+    },
+    {
+      "id": "kernel_framing_alternative_courts_as_kernel_owner",
+      "question": "An alternative framing treats the courts_and_legislatures' non-intervention itself as the kernel-defining authority (silence as a form of ruling), rather than treating the GPL text as the kernel and courts as merely absent adjudicators. Under that framing, does this reading's classification change?",
+      "resolution_mechanism": "Compare classification outcomes under (a) GPL-text-as-kernel with courts as excluded/absent stakeholders (the framing used here) versus (b) judicial-non-intervention-as-kernel with the GPL text as a downstream artifact interpreted differently depending on which non-intervention regime applies.",
+      "impact": "Framing (a), used in this story, treats the plurality as a property of the license text under contested reading. Framing (b) would treat the plurality as a property of judicial institutional behavior, potentially shifting beneficiaries toward 'those who benefit from judicial restraint' rather than 'those who benefit from license ambiguity' — a subtly different victim/beneficiary map that would not change the tangled_rope verdict but would change which agent is named agenda_setter.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Alternative CS framing: GPL-text-as-kernel versus judicial-non-intervention-as-kernel, and whether it shifts the stakeholder map."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "strong_copyleft_reading",
+      "narrow_scope_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the gpl_copyleft_scope kernel. strong_copyleft_reading and narrow_scope_reading each assert a specific, determinate doctrinal answer to the derivative-work boundary question with correspondingly different beneficiary/victim structures and epsilon values reflecting their own internal coherence. This reading (enforcement_vacuum_reading) instead asserts that the absence of resolution between those two readings is itself the operative structural constraint, with its own distinct low-to-moderate epsilon (0.38) reflecting diffuse transaction-cost extraction rather than a determinate compliance obligation. All three are linked as a constraint family; none averages or interpolates between the others per the epsilon-invariance principle."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "strong_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "narrow_scope_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "interpretive_plurality_is_operative_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "enforcement_capacity_determines_practical_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "gpl_v2_drafting_era_undertheorized_linking_boundary",
+    "drift_state": {
+      "moment": "post_saas_and_dynamic_linking_proliferation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

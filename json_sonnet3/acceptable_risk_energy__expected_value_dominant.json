@@ -1,0 +1,309 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "4cefad53-f616-46cc-bde1-802ffdf90dd4"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.71,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expected-Value-Dominant Acceptable Risk Standard for Energy Pathways",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_industry_operators",
+      "grid_planners_and_regulators",
+      "public_health_from_reduced_air_pollution"
+    ],
+    "victims": [
+      "coal_and_gas_frontline_communities",
+      "artisanal_mining_and_extraction_workers",
+      "populations_near_potential_nuclear_accident_sites"
+    ],
+    "vindicated_propositions": [
+      "mortality_per_twh_as_sufficient_risk_metric",
+      "expected_value_maximization_as_rational_policy_criterion"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_industry_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate reactors whose mortality-per-TWh figures are low once accident probabilities are multiplied through. The expected-value framing lets them present nuclear as the safest major energy source and secure permitting, insurance caps, and public subsidy on that basis. They face no discounting of the benefit their favored metric grants them."
+    },
+    {
+      "name": "grid_planners_and_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adopt mortality-per-TWh as the official comparative standard for licensing, siting, and portfolio decisions. They administer the metric, choose which harms are counted (occupational, ambient, accident) and at what discount, and can revise the standard, but doing so would mean re-litigating decades of settled licensing and comparative-risk precedent."
+    },
+    {
+      "name": "public_health_from_reduced_air_pollution",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Represents the aggregate mortality reduction achieved when fossil generation is displaced by lower-mortality-per-TWh sources under this standard. Not an organized actor, but the outcome the standard is credited with producing."
+    },
+    {
+      "name": "coal_and_gas_frontline_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bear the chronic, diffuse, statistically routine mortality from ambient air pollution and combustion byproducts that the standard counts in full weight against fossil pathways. Their harm is real and counted, but its diffuseness means no single incident triggers remediation, compensation, or exit; they cannot relocate or change fuel mix on their own."
+    },
+    {
+      "name": "artisanal_mining_and_extraction_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Die in mining accidents and from occupational exposure feeding both fossil and some mineral-intensive low-carbon supply chains. Counted in the fossil-pathway mortality tally when it applies, but their labor market offers no alternative income and no voice in how the standard is set."
+    },
+    {
+      "name": "populations_near_potential_nuclear_accident_sites",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bear the tail risk of low-probability, high-consequence accidents (contamination, displacement, multi-generational exclusion zones). Under this reading their expected harm is discounted by probability and averaged into a per-TWh figure that reads as favorable, even though realized harm at their specific site, if it occurs, is catastrophic and irreversible rather than diffuse."
+    },
+    {
+      "name": "catastrophic_tail_dominant_reading_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that discounting catastrophic, irreversible, spatially concentrated harms by probability is a category error when consequences are non-ergodic (a community that loses its land once cannot be made whole by another community's averaged safety elsewhere). Their framing loses out in official standard-setting bodies that have adopted the expected-value metric as the comparative baseline."
+    },
+    {
+      "name": "option_value_preserving_reading_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that deep uncertainty about future accident rates, waste outcomes, and technology change means the portfolio should preserve pathway diversity rather than optimize point-estimate expected harm now. Their preference for hedging against model error is not represented in a single-number mortality-per-TWh ranking."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides regulators, utilities, and the public with one comparable number across energy sources so that licensing, siting, and portfolio decisions do not have to relitigate incommensurable harm types (chronic pollution vs. acute accident vs. occupational death) from scratch each time.",
+    "transfer_function": "Moves regulatory and public legitimacy toward nuclear and away from fossil generation by counting fossil's diffuse chronic mortality at full weight while counting nuclear's catastrophic-but-rare mortality at its low probability-weighted average; moves siting risk onto the specific, powerless communities near nuclear facilities who would bear a tail event that the aggregate metric renders statistically invisible at the national level.",
+    "absent_voices": "Communities living near candidate nuclear sites are represented in the metric only as an averaged, probability-discounted quantity, not as parties whose specific, place-based catastrophic exposure gets weighed on its own terms. Advocates of catastrophic-tail-dominant and option-value-preserving readings are excluded from the standard-setting bodies that have already settled on the expected-value framing as official.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If mortality-per-TWh expected-value ranking were abandoned as the official comparative standard, licensing and siting decisions would have to justify pathway choices on different grounds (tail-risk avoidance or option preservation), altering permitting timelines, insurance requirements, and the comparative legitimacy currently enjoyed by nuclear operators and grid planners who rely on the metric's ranking.",
+    "founding_problem": "Energy policy needed some way to compare wildly different harm profiles (chronic low-level pollution deaths vs. rare catastrophic accidents vs. occupational extraction deaths) on a common scale so that decisions were not made purely on availability heuristics or media salience of dramatic accidents.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health epidemiologists outside the nuclear industry attest that fossil-fuel ambient mortality is real, large, and undercounted in public discourse relative to its statistical weight — corroborating the standard's original diagnostic function. Independent risk theorists and disaster-studies researchers, also outside the beneficiary set, attest that the founding problem has mutated: the standard is now used less to correct availability bias and more to foreclose tail-risk and option-value objections in siting fights, which is a different function than the one it was built for."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint is the expected-value-dominant reading of the acceptable-risk-energy kernel: acceptable risk is operationalized as minimizing aggregate expected harm across energy pathways, measured via mortality-per-TWh. Under this reading, fossil fuel mortality (ambient air pollution, mining, occupational exposure) is counted at full statistical weight because it is chronic and well-sampled, while nuclear accident mortality is discounted by its low probability of occurrence, producing a low expected-harm figure for nuclear even though any single realized accident would be catastrophic and geographically concentrated. This reading actively suppresses fossil-pathway legitimacy (high suppression score) by treating the aggregate ranking as dispositive for siting and licensing questions that specific communities experience very differently depending on which pathway is sited near them. The sibling readings — catastrophic_tail_dominant and option_value_preserving — evaluate the same underlying kernel (what counts as 'acceptable risk' in energy policy) by different lights and are NOT represented as alternatives within this constraint; they are separate constraints with their own ε and stakeholder sets.",
+    "logic_rationale": "Extractiveness is moderate (0.42) rather than extreme because the standard does perform genuine coordination work — it prevents purely availability-driven or media-driven energy siting decisions and it does correctly count large, real, previously undercounted fossil mortality. But it also has an asymmetric effect: probability discounting is mathematically appropriate for repeated, ergodic events but converts catastrophic, non-repeatable, geographically concentrated harm into a number that understates what a specific affected community would actually experience. Suppression is high (0.71, rising over the interval) because the standard's growing entrenchment in regulatory and licensing bodies increasingly forecloses procedural space for tail-risk or option-value arguments — those framings are treated as already-settled rather than live alternatives in most licensing venues.",
+    "directionality_logic": "Nuclear operators and grid planners derive as low-d beneficiaries: the metric's structure (probability-weighted averaging) mathematically favors low-probability/high-consequence pathways over the fossil chronic-harm profile, and they did not need to lobby for this — it falls out of the metric choice itself. Fossil-adjacent frontline communities and extraction workers derive as high-d targets: their harm is fully counted (so the standard is 'accurate' about them) but that accuracy is instrumentalized to delegitimize their pathway rather than to compensate or protect them, and they have no exit (trapped, powerless). Populations near nuclear sites are a distinct high-d case: their harm is counted honestly in expectation but the expectation itself is the mechanism that discounts their specific exposure — a directionality override is not needed here because the beneficiary/victim declarations already capture this correctly through the probability-discounting structure.",
+    "mandatrophy_analysis": "The founding problem (comparing incommensurable harm types on a common scale to avoid availability-bias-driven policy) remains partly live — chronic fossil mortality genuinely needs a counterweight to media salience of rare accidents. But the standard's function has partially drifted: it is now also used as a closing move in siting disputes, foreclosing procedural consideration of tail-risk and option-value objections rather than merely correcting for cognitive bias. This is not full mandatrophy (the coordination function has not fully atrophied) but a partial capture — hence tangled_rope rather than snare or piton: there is a real coordination function (commensurable comparison) and a real asymmetric extraction (foreclosure of alternative risk framings that would protect specific frontline and siting-adjacent populations).",
+    "kernel_context": "This story instantiates the expected_value_dominant reading of the acceptable_risk_energy kernel. The kernel itself is the underspecified question 'what does acceptable risk mean for comparing energy pathways?' This reading answers it by declaring that minimizing probability-weighted aggregate mortality (mortality-per-TWh) is the correct decision criterion. Two sibling readings exist as separate constraints: catastrophic_tail_dominant (which treats avoiding low-probability catastrophic outcomes as lexically prior to minimizing expected aggregate harm) and option_value_preserving (which treats pathway diversity under deep uncertainty as the governing criterion rather than any point-estimate ranking). This story's ε, beneficiaries, and victims are authored only for the expected-value-dominant arrangement as it actually operates in current regulatory practice; it does not average across, hedge toward, or import metrics from the sibling readings."
+  },
+  "omegas": [
+    {
+      "id": "ergodicity_of_energy_mortality_risk",
+      "question": "Is energy-pathway mortality risk ergodic (repeated trials converge to the expected value for any given community) or non-ergodic (a single catastrophic realization is irreversible and cannot be averaged away by other communities' safety)?",
+      "resolution_mechanism": "Formal decision-theoretic analysis of whether the relevant population for risk-averaging is the individual site/community (non-ergodic, tail-dominant framing more defensible) or the national/global energy system as a whole (ergodic, expected-value framing more defensible). This is the central technical dispute between this reading and catastrophic_tail_dominant.",
+      "impact": "If risk is properly non-ergodic at the community level, this reading's use of aggregate expected-value ranking to justify specific siting decisions is a category error that systematically undercounts what affected communities actually bear, strengthening the case for reclassifying this constraint as more extractive (closer to snare) toward nuclear-adjacent populations.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the metric's averaging is philosophically appropriate to the risk structure it is applied to."
+    },
+    {
+      "id": "kernel_framing_choice_disclosure",
+      "question": "Which reading of the acceptable_risk_energy kernel governs official standard-setting, and is that choice made explicitly or does it enter regulatory practice as if it were the only reasonable interpretation of 'acceptable risk'?",
+      "resolution_mechanism": "Textual and procedural analysis of regulatory rulemaking records: does the record acknowledge catastrophic_tail_dominant and option_value_preserving as rejected alternatives, or does it treat mortality-per-TWh ranking as simply what acceptable risk means, without argued selection among readings?",
+      "impact": "If the expected-value reading was adopted without explicit argued rejection of the sibling readings, the suppression score authored here (0.71) may understate the degree to which alternative risk framings were foreclosed by default rather than by reasoned contest — this is the committer-structure ambiguity proper to a kernel reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's dominance in practice reflects a contested choice or an unexamined default."
+    },
+    {
+      "id": "fossil_mortality_causal_attribution",
+      "question": "How much of the ambient air pollution mortality attributed to the fossil pathway under this metric is causally attributable to combustion emissions specifically, versus co-occurring industrial and transportation sources that would persist even if the energy pathway changed?",
+      "resolution_mechanism": "Epidemiological source-apportionment studies isolating power-generation combustion from other ambient pollution sources in the same populations.",
+      "impact": "If a meaningful share of counted fossil-pathway mortality is misattributed, the full-weight counting of fossil harm this reading relies on may be somewhat inflated relative to nuclear's probability-discounted figure, narrowing the gap the metric produces.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Measurement uncertainty in the mortality-per-TWh inputs for the fossil pathway."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "probability_weighted_aggregate_harm_minimization",
+    "drift_state": {
+      "moment": "contemporary_siting_disputes",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "option_value_preserving",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "expected_value_is_the_correct_aggregation_rule",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "probability_discounting_is_valid_across_consequence_scales",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_dominant",
+      "acceptable_risk_energy__option_value_preserving"
+    ],
+    "dual_formulation_note": "This story is one of three constraints decomposing the natural-language 'acceptable risk in energy policy' concept per the eps-invariance principle. Each reading of the acceptable_risk_energy kernel is authored as a separate constraint with its own ehsilon, beneficiary/victim structure, and classification: expected_value_dominant (this story, tangled_rope, moderate ehsilon, favors nuclear/grid-planning beneficiaries via probability discounting), catastrophic_tail_dominant (prioritizes avoiding low-probability catastrophic outcomes, likely favors fossil-adjacent tail-risk-averse framings and disfavors nuclear siting), and option_value_preserving (maintains pathway diversity under deep uncertainty, likely favors incumbents across all pathways and disfavors any single-pathway lock-in). This reading's expected-value framing structurally influences the option_value reading by consuming the regulatory legitimacy and resource allocation that a diversity-preserving standard would otherwise claim, without logically foreclosing it. It coexists with (rather than forecloses) the catastrophic_tail_dominant reading because both remain live positions held by different regulatory and advocacy coalitions with no logical resolution between them."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

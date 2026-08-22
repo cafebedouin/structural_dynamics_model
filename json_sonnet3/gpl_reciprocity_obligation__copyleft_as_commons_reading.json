@@ -1,0 +1,303 @@
+{
+  "header": {
+    "constraint_id": "gpl_reciprocity_obligation__copyleft_as_commons_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "44b65ce2-f75c-4659-a203-3cc9d8039aa4"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.55,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Reciprocity Obligation as Commons-Preserving Institution",
+    "topic_domain": "software_licensing/intellectual_property/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "the_commons_as_institution",
+      "downstream_contributors",
+      "long_horizon_maintainers"
+    ],
+    "victims": [
+      "individual_exit_maximizers",
+      "proprietary_forkers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "the_commons_as_institution",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The accumulated body of GPL-licensed code and the norm of shared improvement it sustains. It is not an actor but the standing arrangement the reciprocity obligation exists to keep intact — every enforced copyleft clause adds to its stock and forecloses its unilateral privatization by any one contributor."
+    },
+    {
+      "name": "downstream_contributors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Developers and firms who build on GPL code and, because the license requires it, must release their derivative improvements under the same terms. They receive a growing shared codebase in exchange for the obligation, and most report the trade favorable over a multi-year horizon even though it forecloses the option to keep enhancements proprietary."
+    },
+    {
+      "name": "long_horizon_maintainers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Project stewards (e.g., FSF, kernel maintainers, foundation boards) who chose copyleft terms and defend them through license enforcement actions. They administer the reciprocity requirement, litigate or negotiate compliance with violators, and treat the mandatory-sharing clause as the mechanism that keeps the commons from being strip-mined by any single actor's short-term advantage."
+    },
+    {
+      "name": "individual_exit_maximizers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individual developers or small teams who would prefer to take GPL code, modify it, and monetize the modification privately without releasing source. The reciprocity obligation forecloses this path entirely — their only options are to comply (release derivative source), avoid GPL code altogether, or violate the license and risk enforcement. From their seat, the obligation is a tax on their labor paid directly to a collective they did not choose to join by using the software."
+    },
+    {
+      "name": "proprietary_forkers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Firms with the resources to build substantial products atop GPL components who are blocked from a closed-source distribution model by the copyleft terms. They can afford legal review and sometimes negotiate dual-licensing, but absent that route they must either comply, engineer around the GPL dependency at real cost, or exit the ecosystem. Their scale means the reciprocity obligation costs them the most in absolute foregone-proprietary-value terms even though they have more workarounds than individual developers."
+    },
+    {
+      "name": "end_users_of_derivative_software",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "People who receive the source code and modification rights to software built on GPL components, because the license forced disclosure. They benefit incidentally from a fight they are not party to, gaining rights they did not bargain for and mostly do not exercise, but which remain available if they ever need them."
+    },
+    {
+      "name": "proprietary_software_industry_norms",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The competing institutional logic — that source code disclosure should be a business choice, not a legal obligation attached to reuse — has no seat at the table when a maintainer chooses GPL terms for a project. Firms built around closed-source extension models discover the constraint only when they try to build on GPL code, at which point the terms are already fixed."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a real collective-action problem: without a reciprocity requirement, any actor can take shared improvements, privatize a derivative, and never return value to the commons — the classic tragedy where individually rational extraction depletes a jointly produced resource. The GPL's copyleft clause makes continued participation conditional on continued contribution, which is what keeps the shared codebase growing rather than being drained.",
+    "transfer_function": "Moves the option value of proprietary exclusivity away from anyone who builds on GPL code and into the shared codebase as mandatory source disclosure — labor and modification value flow from individual users/modifiers of GPL software to the pool of all future users of that codebase, including competitors.",
+    "absent_voices": "The proprietary software industry's preferred norm — that reuse and disclosure should be negotiated commercially rather than legally mandated — is not represented in the license terms themselves; a firm only encounters the constraint after choosing to build on GPL code, by which point the terms are fixed and non-negotiable except through dual-licensing deals the original maintainer may or may not offer.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the reciprocity obligation vanished overnight (imagine all GPL code silently relicensed permissively), the immediate practical effect on existing deployed software would be small, but the incentive structure for future contribution would shift sharply: firms could take improvements from the commons without returning them, contribution volume to the shared pool would likely fall as free-riding became costless, and the specific institutional promise that funds long-horizon collaborative projects (kernel development, compiler toolchains) would be broken for every future contributor who relied on it.",
+    "founding_problem": "Early free-software advocates observed that permissively licensed code was routinely taken into proprietary products with no improvements returned, and that some released code was later reappropriated into restrictive successor products that locked out the original contributors and users — the founding problem was capture and enclosure of jointly produced software commons by singular commercial actors.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Long-horizon maintainers and FSF-aligned historians attest the enclosure problem remains live, citing ongoing proprietary-fork attempts and license-violation enforcement actions as evidence. Independent industry analysts and antitrust-adjacent commentary (outside both the FSF and the firms it targets) note that the software commons has diversified enough — permissive licenses, dual-licensing markets, cloud-service business models — that mandatory reciprocity is no longer the only viable anti-enclosure mechanism, making the founding problem's current necessity, as opposed to its historical validity, a live dispute rather than a settled fact."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This story instantiates the commons-preservation reading of the GPL reciprocity kernel: mandatory copyleft terms are read here as institutional technology whose function is to prevent enclosure of a jointly produced software commons, with the commons itself as beneficiary and individual exit-maximizing developers/firms as the parties who pay the obligation's cost. Two sibling constraints read the same license text differently and are NOT part of this file: copyleft_as_freedom_reading treats the same clause as a user-freedom-preservation mechanism (beneficiary = end users' four freedoms, victim = redistributors who would restrict them); copyleft_as_restriction_reading treats it as a business-model constraint (beneficiary = none structurally, victim = firms wanting proprietary integration, closer to pure restriction with no commons framing). Each reading has its own epsilon and its own stakeholder structure; they are linked via network.affects_constraints, not merged here.",
+    "narrative_context": "The GNU General Public License requires that any distributed derivative of GPL-licensed code be released under the same license, with source available. Read as commons-preserving institutional technology, this is a coordination mechanism solving a genuine collective-action problem: absent a reciprocity requirement, a jointly built software commons is vulnerable to unilateral privatization by whichever actor is best positioned to extract and enclose it. This reading treats the commons itself as an institutional beneficiary and treats individual developers/firms who would prefer to extract value without returning it as the parties who bear the obligation's cost — a medium-extraction tangled rope, not a pure snare, because the coordination function (sustained collective codebase growth) is real and substantial, not merely cover for extraction.",
+    "logic_rationale": "Extraction (0.42, rising mildly to 0.42 by interval end) reflects a genuine but moderate cost imposed on individual and corporate actors who must forgo proprietary capture of their own derivative work — this is neither negligible (a pure rope) nor severe (a snare), because the obligation trades a real constraint for a real, ongoing input of shared value. Suppression (0.55) reflects that the obligation is actively enforced through litigation and public compliance campaigns (e.g., SFC, SFLC enforcement actions) rather than resting on voluntary norm-following alone — it is a hard legal requirement backstopped by copyright law, not a soft convention. Theater ratio stays low (0.15, rising slightly) because enforcement actions substantially track genuine compliance concerns rather than performative signaling; the modest rise reflects growing bureaucratization of compliance-checking as the ecosystem scales.",
+    "directionality_logic": "The commons-as-institution and long-horizon maintainers/contributors sit near the beneficiary end: they receive the accumulating shared codebase and administer the mechanism that sustains it, at low individual cost relative to what they gain collectively. Individual exit-maximizers and proprietary forkers sit near the target end: the reciprocity obligation directly forecloses their preferred extraction path (proprietary capture of derivative improvements), and their exit options are constrained — they can comply, avoid the GPL codebase, or exit the ecosystem, but cannot simply opt out of the obligation while still using the covered code. End users of derivative software are incidental beneficiaries: they gain source-availability rights they did not bargain for as a side effect of a dispute between maintainers and would-be enclosers.",
+    "mandatrophy_analysis": "This reading resists mislabeling the GPL as pure extraction (a snare) precisely because it names a genuine, ongoing coordination function — the commons continues to grow and continues to depend on the reciprocity mechanism for its continued growth, which is why founding_problem_status is authored as contested rather than dead: the enclosure risk the GPL was built to prevent has neither vanished nor become fully hypothetical. Equally, it resists mislabeling the GPL as a pure rope (no extraction) because it names real victims — individual exit-maximizers and proprietary forkers genuinely bear a cost that the coordination story alone does not erase. The tangled_rope classification holds both facts without collapsing either into the other."
+  },
+  "omegas": [
+    {
+      "id": "commons_vs_individual_freedom_framing",
+      "question": "Is the GPL's reciprocity requirement better modeled as an institution protecting a collective good (the commons) from individual free-riding, or as a restriction on individual developers' freedom to license their own labor as they choose?",
+      "resolution_mechanism": "This is exactly the committer-structure question the kernel decomposition exists to resolve: it is not resolved within this story but by comparing this reading's classification against the sibling readings (copyleft_as_freedom_reading, copyleft_as_restriction_reading) instantiated as separate constraints and linked via network.affects_constraints. Where the readings' computed classifications diverge sharply, the divergence itself is the finding.",
+      "impact": "Under the commons reading (this story), individual exit-maximizers are payers and the commons is a beneficiary, yielding tangled_rope. Under the restriction reading, there is no commons beneficiary and the classification shifts toward snare or a low-coordination tangled_rope. Under the freedom reading, the beneficiary shifts to end users and the victim set shifts to would-be proprietary redistributors.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the GPL kernel is best modeled as commons-protection, freedom-protection, or business-restriction — the central committer ambiguity this kernel decomposition is designed to surface."
+    },
+    {
+      "id": "commons_beneficiary_is_institution_not_actor",
+      "question": "Can an institution (the commons) meaningfully be a directionality beneficiary in the engine's terms, or does treating it as a beneficiary smuggle in an unstated assumption that the commons has interests separable from its individual current contributors?",
+      "resolution_mechanism": "Track whether the commons' growth trajectory (lines of shared code, number of active maintained forks staying compliant) tracks contributor welfare over multi-decade horizons, or whether it primarily tracks the interests of the specific maintainer organizations (FSF, SFC) that administer enforcement.",
+      "impact": "If commons growth diverges from aggregate contributor welfare, the 'commons as beneficiary' framing may be a proxy for 'incumbent maintainer organizations as beneficiary,' which would push this reading's computed type closer to a captured tangled_rope or snare rather than genuine coordination.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether treating an institution (not a stakeholder actor) as the beneficiary is a defensible modeling move or an unexamined proxy for maintainer-organization interests."
+    },
+    {
+      "id": "enforcement_intensity_vs_ecosystem_maturity",
+      "question": "Is rising suppression (enforcement activity) over the measured interval evidence of a hardening, increasingly extractive institution, or evidence of a maturing ecosystem simply developing more formal compliance infrastructure (SFC, SPDX tooling) around a stable underlying obligation?",
+      "resolution_mechanism": "Compare enforcement-action volume against violation-rate and voluntary-compliance-rate trends; if voluntary compliance is rising alongside enforcement infrastructure, the rise reflects maturation rather than intensifying coercion.",
+      "impact": "If enforcement is intensifying disproportionately to actual violations, that supports a drift toward snare; if it tracks scale and voluntary compliance is stable or rising, it supports the coordination reading remaining stable over time.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rising suppression_requirement reflects genuine enforcement hardening or normal scaling of compliance infrastructure."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_reciprocity_obligation__copyleft_as_freedom_reading",
+      "gpl_reciprocity_obligation__copyleft_as_restriction_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the gpl_reciprocity_obligation kernel, all instantiating the same license clause with different beneficiary/victim structures and different epsilon values: copyleft_as_commons_reading (this file, medium extraction, beneficiary=commons-institution, tangled_rope), copyleft_as_freedom_reading (beneficiary=end-user freedoms, victim=would-be proprietary redistributors), copyleft_as_restriction_reading (no coordination beneficiary claimed, victim=firms seeking proprietary integration, closer to snare/pure-restriction). Per the epsilon-invariance principle, these are three separate constraints, not one constraint measured three ways — each carries its own stable epsilon and is linked here for contamination-propagation and comparative analysis, not merged."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "commons_protection_founding_intent",
+    "drift_state": {
+      "moment": "contemporary_permissive_license_proliferation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "copyleft_as_freedom_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyleft_as_restriction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "collective_codebase_is_a_protectable_good",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "reciprocity_obligation_is_necessary_anti_enclosure_mechanism",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "the_commons_as_institution",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

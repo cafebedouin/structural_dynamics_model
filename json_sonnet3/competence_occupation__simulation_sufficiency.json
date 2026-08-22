@@ -1,0 +1,324 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "97af86cc-365b-4284-bd87-225e3f1a9167"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Sufficiency Reading of Competence Occupation",
+    "topic_domain": "high_reliability_organizations/safety_training",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_vendors",
+      "training_departments",
+      "regulatory_compliance_officers",
+      "organizational_leadership"
+    ],
+    "victims": [
+      "frontline_operators",
+      "downstream_public_affected_by_incidents"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "simulation_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sell simulator hardware, software licenses, and scenario libraries to operators. Revenue depends directly on the claim that simulation, if run at sufficient frequency and fidelity, fully occupies the competence kernel. Every certification cycle that accepts simulation hours as sufficient is a renewed contract."
+    },
+    {
+      "name": "training_departments",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design and administer the drill schedule, set pass/fail thresholds, and report compliance metrics upward. Their institutional survival depends on producing a defensible record of 'hours trained' rather than on the harder-to-measure question of retained skill under real conditions. They control which observable the organization treats as ground truth."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Cycle through mandated simulation drills to keep certifications current. They cannot opt out without losing employment eligibility, and they bear the direct consequence if the drills fail to transfer to a real degraded-condition event — the gap between simulated and real stress, fatigue, and consequence weight lands on them at the moment of failure, not on the people who designed the drill calendar."
+    },
+    {
+      "name": "downstream_public_affected_by_incidents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Passengers, patients, residents near the facility, or others whose safety depends on operator competence in a genuine crisis. They have no visibility into whether the certification regime is producing real skill or compliance theater, and no exit from exposure to the operator's competence level."
+    },
+    {
+      "name": "regulatory_compliance_officers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Audit training records against a simulation-hours standard because it is auditable, quantifiable, and defensible in litigation. Accepting simulation sufficiency as the compliance bar reduces their own exposure and workload relative to auditing harder-to-measure real-condition performance."
+    },
+    {
+      "name": "organizational_leadership",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Approves simulation-based training budgets because they are cheaper, safer, and more schedulable than exposing operators to real degraded conditions or maintaining costly redundant real-world practice systems. Insulated from the consequence if the kernel is not actually occupied, since accountability in a rare catastrophic event is diffused across the institution."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study incident post-mortems and skill-decay literature. Some find simulation-only regimes correlate with degraded improvisation under genuinely novel failure modes not represented in scenario libraries; their findings compete for institutional attention against vendor-funded efficacy studies."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Simulation drills genuinely solve a real coordination problem: they let large numbers of operators practice low-frequency, high-consequence procedures repeatedly, safely, and on a predictable schedule, without waiting for or manufacturing real catastrophic events.",
+    "transfer_function": "Moves training budget and organizational trust from more expensive, harder-to-schedule real-condition exposure mechanisms (live drills, controlled real degraded-mode operation) toward simulation vendors and internally-controlled compliance metrics; moves residual risk from institutions that certify competence onto frontline operators and the public who depend on that competence in an actual event.",
+    "absent_voices": "Frontline operators who have experienced the gap between simulated and real stress conditions are rarely consulted on whether the drill design captures the actual failure texture; safety researchers whose findings complicate the sufficiency claim compete against vendor-funded studies for institutional airtime and are frequently excluded from certification-standard-setting bodies.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If simulation-based certification were no longer accepted as sufficient, training departments would need to build costly real-condition or hybrid exposure mechanisms, certification timelines would lengthen, simulation vendor revenue would collapse, and regulatory audit burden would shift from paperwork review to harder real-performance assessment.",
+    "founding_problem": "Operators of high-consequence systems (nuclear plants, aviation, surgery, emergency response) needed a way to practice rare catastrophic-failure procedures without waiting for real catastrophes or risking real harm during practice.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Training departments, vendors, and compliance officers attest the problem is solved: simulation captures the necessary procedural and decision-making elements. Independent safety researchers and several post-incident investigation boards (outside the training/vendor/compliance chain) attest the founding problem is only partially solved — investigations of real incidents have repeatedly found operators competent on simulated scenarios but unable to adapt to conditions the scenario library did not anticipate."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.57
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the simulation_sufficiency reading of the competence_occupation kernel: the claim that scheduled, sufficiently frequent and fidelitous simulation drills fully occupy the competence kernel and prevent skill decay, such that no further exercise mechanism is structurally necessary. Under this reading, training compliance (hours logged, scenarios passed) becomes the observable that stands in for actual retained competence. This is a genuine coordination mechanism — rare catastrophic procedures cannot be practiced live without unacceptable risk — but it has hardened into a tangled rope because the same structure that solves the scheduling problem also lets training departments, compliance officers, vendors, and leadership substitute an auditable, cheap proxy (simulation hours) for the much harder and more expensive question of real-condition competence, while the cost of that substitution's failure mode (a genuinely novel incident the scenario library never modeled) lands on frontline operators and the public rather than on anyone in the certifying chain.",
+    "key_agents": [
+      "simulation_vendors: primary economic beneficiary of the sufficiency claim, organized/arbitrage",
+      "training_departments: agenda-setter, controls the observable substituted for real competence",
+      "frontline_operators: payer, trapped exit, bears consequence gap at moment of real failure",
+      "downstream_public_affected_by_incidents: powerless payer, no visibility into the substitution",
+      "regulatory_compliance_officers: beneficiary of an auditable proxy, reduces their own exposure",
+      "organizational_leadership: beneficiary of cost savings, insulated from tail-risk accountability",
+      "safety_researchers: analytical observer, contested findings on transfer failure"
+    ],
+    "logic_rationale": "Extractiveness (0.58) and theater_ratio (0.62) both rise across the interval because as certification regimes mature, more of the visible training activity comes to serve compliance-record production rather than skill transfer — this is the Goodhart drift the sufficiency reading is structurally prone to once simulation hours become the metric an entire vendor/compliance ecosystem is built around defending. Suppression (0.52) reflects that operators cannot opt out of the simulation regime without losing certification, but it is only moderate because the drills are not purely coercive theater — they retain real coordination value for procedural and decision-tree competence. accessibility_collapse (0.50) and resistance (0.45) sit at mid-range: alternative exercise mechanisms (real degraded-condition practice, hybrid regimes) are not fully foreclosed — they are the sibling readings — but the sufficiency framing actively displaces them in budget and regulatory attention, and some resistance (from safety researchers, from operators after near-miss experiences) persists but lacks institutional standing to change the standard.",
+    "directionality_logic": "Simulation vendors, training departments, compliance officers, and leadership all sit toward the beneficiary end: they either collect revenue, reduce audit burden, reduce cost, or discharge their institutional mandate by pointing to compliance records. Frontline operators and the downstream public sit toward the target end: operators are trapped (cannot exit certification without losing livelihood) and bear the consequence gap directly in a real event; the public is trapped by definition (they cannot select for operators trained under a different regime) and has zero visibility into whether the substitution has occurred.",
+    "mandatrophy_analysis": "The founding problem (practicing rare catastrophic procedures safely) is not dead — it remains genuinely live, which is why this cannot be classified as a pure snare or piton. The mandatrophy risk here is narrower: the MECHANISM (simulation-hours-as-sufficient-proxy) has been extended past its evidentiary support by the parties who benefit from the extension, while the underlying coordination function it was built to serve continues to operate. Classifying this as tangled_rope rather than snare preserves the real coordination content (rare-event practice under safe conditions) while flagging that the same structure carries asymmetric extraction (cost-avoidance for the certifying chain, risk-transfer to operators and public) that requires active enforcement (mandatory certification, no legal alternative pathway) to sustain.",
+    "kernel_context": "This constraint instantiates the simulation_sufficiency reading of the competence_occupation kernel: the position that simulation-based drills, run at adequate frequency and fidelity, are STRUCTURALLY SUFFICIENT to occupy the competence kernel and prevent skill decay, with no further mechanism required. Sibling readings not covered here: real_incident_necessity holds that only genuine catastrophic incidents provide authentic occupying conditions (a much harder line that would treat this reading's entire evidentiary basis as illusory); hybrid_occupation holds that competence occupation requires continuous multi-mechanism exercise (simulation plus refresher plus procedural reinforcement plus line audits) without consensus on the optimal mixture. Each reading has its own ε, beneficiary structure, and classification and is authored as a separate constraint story linked via network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "simulation_transfer_validity",
+      "question": "Does simulation-based training, at any achievable frequency and fidelity, actually occupy the competence kernel for genuinely novel failure conditions not represented in the scenario library, or only for anticipated-and-modeled failure modes?",
+      "resolution_mechanism": "Longitudinal comparison of post-incident investigation findings (real catastrophic events) against the specific scenarios operators were certified on, tracking whether failures cluster in gaps between modeled and encountered conditions.",
+      "impact": "If transfer validity holds only for modeled conditions, the sufficiency claim is structurally false for the class of events that matter most (novel, unmodeled failures) — the constraint would be substantially extractive with a coordination cover story rather than genuine sufficiency; if transfer validity holds broadly, the claimed_type moves closer to rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulation fidelity generalizes to unmodeled real conditions."
+    },
+    {
+      "id": "kernel_reading_selection_pressure",
+      "question": "Is the simulation_sufficiency reading the operationally dominant one because it best fits the evidence, or because it is the reading that is cheapest to institutionalize and most defensible in litigation regardless of its evidentiary merit?",
+      "resolution_mechanism": "Compare adoption patterns of simulation_sufficiency vs. hybrid_occupation across regulatory regimes with different litigation-exposure profiles and different cost constraints; if adoption tracks cost/liability rather than incident outcomes, selection pressure rather than evidentiary merit is driving the reading.",
+      "impact": "If cost/litigation-driven, this reading's institutional dominance reflects capture by the beneficiary coalition (vendors, compliance officers, leadership) rather than a genuine resolution of which mechanism occupies the kernel — reinforces tangled_rope classification and supports treating the hybrid reading as underweighted rather than rejected.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the reading's dominance reflects evidentiary merit or institutional cost-avoidance."
+    },
+    {
+      "id": "theater_ratio_trajectory_endpoint",
+      "question": "Does the rising theater_ratio trajectory (0.32 to 0.62) represent an asymptote where compliance activity stabilizes at a genuine coordination-plus-overhead mixture, or an unbounded drift where the observable fully decouples from the underlying skill-decay problem?",
+      "resolution_mechanism": "Extend the measurement interval and compare theater_ratio growth against independently-measured incident rates in facilities under this regime versus hybrid regimes.",
+      "impact": "An asymptote supports tangled_rope with a stable extraction/coordination ratio; unbounded drift would support reclassification toward snare or piton as the coordination content becomes vestigial.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether theater ratio growth is bounded or unbounded."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__real_incident_necessity",
+      "competence_occupation__hybrid_occupation"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the competence_occupation kernel. simulation_sufficiency (this story) treats simulation drills as structurally sufficient and shows the highest theater_ratio drift because it is the reading most vulnerable to metric substitution (training hours standing in for retained skill). real_incident_necessity treats only genuine catastrophic incidents as adequate, which would carry a very different — likely much lower extraction but much higher direct-harm-risk — profile since it rejects safe practice substitutes almost entirely. hybrid_occupation treats the question as genuinely unresolved and requires multi-mechanism exercise, which likely shows a more moderate extraction profile with higher genuine coordination content but also higher direct cost. All three share the same underlying founding problem (safe practice for rare catastrophic procedures) but diverge sharply on which mechanism the kernel treats as sufficient, and therefore on who benefits from that determination."
+  },
+  "gain_flow": "simulation_vendors",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_fidelity_is_functionally_equivalent_to_real_exposure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "frequency_and_fidelity_optimization_fully_solves_skill_decay",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_challenger_simulation_adoption_standard",
+    "drift_state": {
+      "moment": "contemporary_high_reliability_org_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

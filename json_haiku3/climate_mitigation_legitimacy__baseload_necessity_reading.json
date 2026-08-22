@@ -1,0 +1,617 @@
+{
+  "header": {
+    "constraint_id": "climate_mitigation_legitimacy__baseload_necessity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "d5e8d6e8-c8c3-4abc-abf9-e061f37768d3"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Baseload Necessity Doctrine in Climate Mitigation",
+    "topic_domain": "energy/climate/policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_industry",
+      "incumbent_utilities",
+      "financial_institutions_holding_nuclear_debt",
+      "long_term_climate_modelers"
+    ],
+    "victims": [
+      "renewable_energy_sector",
+      "distributed_generation_advocates",
+      "energy_democracy_movements",
+      "developing_nations_with_limited_capital"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_industry",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Constructs and operates large-scale nuclear plants. The baseload-necessity doctrine legitimates continued investment in multi-billion-dollar reactor projects with 60+ year capital recovery timelines. Actively promotes the doctrine through industry associations, technical reports, and policy engagement. Collects long-term revenue streams from government contracts and energy sales that would be threatened if renewable-only pathways gained policy acceptance."
+    },
+    {
+      "name": "incumbent_utilities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Own centralized generation assets (coal plants being retired, nuclear plants, hydro) and distribution infrastructure. The baseload doctrine supports continued investment in large, centralized generation requiring extensive transmission infrastructure. Their business model depends on electricity flowing from few large generators to many distributed consumers; distributed renewable generation with local storage threatens this centralization rent."
+    },
+    {
+      "name": "financial_institutions_holding_nuclear_debt",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Hold tens of billions in debt on existing nuclear plants and in-construction projects. The doctrine's acceptance reduces refinancing risk by maintaining policy support for baseload infrastructure. A shift to renewable primacy could trigger plant abandonment, asset write-downs, and debt restructuring. They influence policy through lending conditions and credit ratings."
+    },
+    {
+      "name": "long_term_climate_modelers",
+      "role": "beneficiary",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produce long-range decarbonization scenarios (IPCC, IEA net-zero pathways) where nuclear capacity expands substantially to meet firm baseload demand. Their modeling parameterizes the baseload-necessity assumption; scenarios built on the doctrine show nuclear as indispensable. Their professional standing and funding depend on the legitimacy of their baseline assumptions."
+    },
+    {
+      "name": "renewable_energy_sector",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Manufactures and deploys solar, wind, storage, and grid-balancing technologies. The baseload-necessity doctrine claims their technologies cannot meet peak-load and seasonal firm-capacity requirements, making them structurally subordinate to nuclear. This reduces policy incentives for storage R&D, grid flexibility investment, and deployment at the scale needed for renewable-only pathways. They pay through policy subordination and constrained investment signals."
+    },
+    {
+      "name": "distributed_generation_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Promote local, community-scale renewable generation and microgrids as alternatives to centralized plants. The baseload doctrine frames distributed, intermittent generation as inherently unreliable and inadequate, legitimating regulatory barriers to local generation interconnection and forcing projects to meet centralized grid-stability criteria. Their options are constrained by grid codes, interconnection standards, and utility control of transmission."
+    },
+    {
+      "name": "energy_democracy_movements",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Advocate for public ownership, community control, and equitable distribution of energy production. The baseload doctrine legitimates capital-intensive centralized infrastructure (nuclear plants cost $15–20 billion+, require 10+ year construction, need government backing) that forecloses community ownership models. They bear the costs of continued centralization (energy poverty, lack of local control, fossil-fuel-dependent imports) and cannot exit without dissolving their identity as advocates for democratic energy."
+    },
+    {
+      "name": "developing_nations_with_limited_capital",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Have limited capital for decarbonization investment but abundant renewable resources (solar, wind, hydro potential). The baseload doctrine channels development finance toward nuclear projects that require external capital, technical expertise, and long-term operational commitment. This locks their economies into debt-financed centralized infrastructure instead of enabling locally-resourced renewable deployment. They cannot exit without abandoning decarbonization or contracting with external nuclear-finance partners."
+    },
+    {
+      "name": "grid_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate transmission and distribution networks and manage real-time frequency/voltage. The baseload doctrine simplifies their operational mandate: large, firm generators (nuclear, coal, hydro) provide predictable power flow; their task is dispatch and load-balancing. A renewable-heavy grid requires active demand-response, storage orchestration, and dynamic frequency support — operationally more complex. The doctrine legitimates their preference for centralized, controllable generation; they co-author grid codes that subordinate renewable generation to dispatchability requirements."
+    },
+    {
+      "name": "renewable_technology_researchers",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Study storage, grid integration, demand flexibility, and synthetic fuels to address intermittency. The baseload doctrine frames their research as peripheral to the 'core' decarbonization problem. Their work competes for funding and policy attention against assumed-necessary nuclear projects. If the doctrine were overturned, their research would move from 'optimization problem' (how to supplement baseload with renewables) to 'central problem' (how to run a renewable-heavy grid), radically shifting resource allocation."
+    },
+    {
+      "name": "climate_scientists_focused_on_rapid_transition",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Emphasize that the timescale of decarbonization (years to decade) is much faster than nuclear deployment timescale (10–20 years per plant). They argue that baseload-focused strategies will fail to meet near-term targets. The doctrine excludes their voice from policy tables by asserting long-term necessity (baseload matters for 2050 decarbonization) and deferring urgency (nuclear plants built now will operate for 60+ years). They are analytically present but policy-excluded."
+    },
+    {
+      "name": "climate_policy_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set carbon budgets, allocate R&D funding, license infrastructure projects, and enforce grid standards. They mediate between the constraint's beneficiaries and victims. They hear testimony from all sides but operate within framing assumptions (e.g., that baseload is necessary) that shape which policies are considered 'realistic.' Their decisions either entrench or dislodge the doctrine."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the technical coordination problem of matching generation to demand in a decarbonized grid: any grid must balance instantaneous load and maintain frequency/voltage stability. The doctrine offers one solution — large, firm generators (nuclear, hydro, biomass) handle the base demand reliably, renewables handle the variable demand on top. This is one valid technical architecture among several feasible ones.",
+    "transfer_function": "Moves capital commitments, deployment priority, and policy legitimacy from renewable-technology sectors to nuclear industry and incumbent utilities. Allocates R&D funding toward long-timescale nuclear projects and away from storage, demand-flexibility, and distributed generation. Redirects electricity revenue streams from distributed, locally-owned systems toward centralized, institutional generators.",
+    "absent_voices": "Renewable technology researchers, climate scientists emphasizing rapid transition, energy democracy advocates, and developing nations with capital constraints are excluded or marginalized from decarbonization-pathway planning. They would argue that baseload necessity is contingent on system design choices, not a physical law, and that faster, locally-resourced, more equitable pathways exist. Their exclusion means decarbonization-pathway debates proceed without voices that would challenge the centralization assumption.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the baseload-necessity doctrine evaporated overnight, policy would shift toward renewable-first deployment, storage investment, demand-flexibility, and distributed generation. Grid operators would reframe around managing high renewable penetration rather than securing firm baseload. Capital would flow to battery and storage R&D instead of reactor construction. Incumbent utilities and nuclear operators would face forced restructuring; developing nations could scale solar/wind without nuclear-finance obligations. The world would NOT be unchanged (centralized infrastructure investments would be cancelled, R&D redirected, ownership models shifted), but contention exists about whether this rearrangement would accelerate or hinder decarbonization (a contested empirical claim about system dynamics).",
+    "founding_problem": "Early (1980s–2000s) decarbonization analysis showed that decarbonizing grids with variable demand required either massive over-capacity in renewables with waste, or reliable firm power to handle base-load demand when wind/solar were unavailable. Nuclear and hydro were the known firm technologies. The doctrine crystallized that firm power was necessary; the debate shifted to what KIND of firm power.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The nuclear industry and incumbent utilities attest the founding problem remains live: renewables are still variable, grids still require firm capacity, storage is still not deployable at scale. Renewable-sector technologists and energy democracy advocates attest the founding problem has been substantially reframed: storage costs have collapsed (80% reduction in lithium-ion costs since 2010), grid-integration studies show high renewable penetration feasible with active demand-response, and the real constraint is no longer 'what is firm power' but 'what timescale and ownership model can we commit to.' Independent analyses from IRENA, MIT Energy Initiative, and NREL conclude that the founding problem is partly solved and the remainder is partly technical (addressable with deployed tech) and partly policy/economics (deployment speed depends on capital allocation, not physics)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The 'baseload necessity' reading holds that reliable decarbonization requires dispatchable firm power that renewables cannot provide at scale. This is one of four readings of the contested 'climate mitigation legitimacy' kernel. The reading instantiates a constraint that coordinates genuine technical coordination (grids require firm capacity management) while extracting policy priority, capital allocation, and legitimacy from renewable alternatives. Nuclear and incumbent utilities benefit from the doctrine by securing long-term policy support and infrastructure investment; renewable sectors, distributed-generation advocates, and developing nations with capital constraints bear the costs through policy subordination. The constraint is actively enforced through grid codes, R&D funding allocation, and technical standards that subordinate variable renewables to firm-capacity requirements. The measurement series shows base_extractiveness rising from 0.48 to 0.68 over 25 years as the doctrine shifted from technical hypothesis to policy orthodoxy; theater_ratio rising from 0.22 to 0.41 indicates growing proportion of enforcement activity defending the doctrine itself (excluding research, licensing alternative pathways) rather than solving grid coordination problems.",
+    "key_agents": [
+      "Nuclear industry: prime beneficiary, shapes doctrine through technical reports and policy engagement",
+      "Incumbent utilities: benefit from centralization; coordinate with grid operators to subordinate renewables",
+      "Financial institutions: hold nuclear debt; reduce refinancing risk by maintaining policy support",
+      "Long-term climate modelers: produce scenarios parameterized on baseload necessity; professional standing tied to doctrine",
+      "Renewable energy sector: pay through policy subordination and constrained investment signals",
+      "Distributed generation advocates: excluded and subordinated by grid codes requiring firm-power compliance",
+      "Energy democracy movements: identity-locked target; centralization forecloses community ownership models",
+      "Developing nations: trapped; nuclear-finance obligations lock them into debt-financed centralized infrastructure",
+      "Grid operators: co-author enforcement (grid codes); benefit operationally from centralized, controllable generation",
+      "Climate policy authorities: observe; decisions either entrench or dislodge the doctrine"
+    ],
+    "logic_rationale": "Base extractiveness reaches 0.68 because the doctrine channels policy priority and capital from a viable alternative (renewable-heavy systems) toward a capital-intensive, incumbent-controlled pathway. Suppression is higher (0.72) because the constraint's persistence depends on actively subordinating renewable research, excluding distributed-generation pathways, and maintaining grid codes that penalize variable renewables. This active subordination is the suppression mechanism. Theater_ratio (0.41 at interval end) reflects that roughly 40% of enforcement activity now goes to rhetorical defense of the necessity claim rather than operational grid coordination — enforcement capacity is increasingly spent on defending the doctrine against mounting empirical challenge (storage cost collapse, grid-integration studies) rather than on the technical problem it supposedly solves. The trajectory is flatline after year 25, indicating the doctrine has reached policy saturation: it is now entrenched in regulatory frameworks, and further extractiveness gains require different mechanisms (new infrastructure lock-in, financing structures) rather than doctrine-strengthening. Accessibility_collapse (0.62) reflects that alternative decarbonization pathways are not impossible but are severely disadvantaged: policy, capital, and technical standards require renewable-heavy pathways to meet firm-power criteria designed for centralized generation, which is technically feasible but adds cost and complexity. Resistance (0.71) is high because renewable sectors, climate scientists, and developing nations mount substantial research and policy counter-arguments; they have not overcome the doctrine but they are not passive.",
+    "perspectival_gap": "The agenda-setter seats (nuclear industry, incumbent utilities, grid operators) compute the constraint as genuine coordination-enabling infrastructure: they see a technical necessity (grids need firm power) that they provide, and extract legitimate compensation for that service. The victim seats (renewable sectors, distributed advocates, developing nations) compute the constraint as pure extraction: they see a policy choice to subordinate renewable pathways, not a technical necessity, and they bear costs through policy subordination while the real technical problem (firm capacity) can be solved with deployed storage and demand flexibility. Climate policy authorities sit in observation — they hear both frames. The engine computes per-seat classifications from the structural data: the beneficiary seats will compute rope or tangled-rope (real coordination, extraction layered on top); the victim seats will compute snare or tangled-rope (extraction masquerading as coordination). The authored claim (tangled_rope) reflects the author's reading that both frames are structurally real: there IS a coordination problem (grids require firm capacity), and there IS extraction (the doctrine subordinates renewable alternatives that could address that problem). The metrics are authored independently of the claim — the author believes the coordination function is real but only 40–60% of the enforcement energy (per theater_ratio) goes to that coordination; the rest goes to defending the doctrine against empirical challenge.",
+    "directionality_logic": "Nuclear industry: d ≈ 0.1 (full beneficiary). They collect long-term revenue, control the policy narrative, and face minimal constraints on their exit — they can always shift to other large energy projects. Incumbent utilities: d ≈ 0.15 (beneficiary, slightly more constrained than nuclear because utilities face regulatory requirements to serve all customers, but they control the infrastructure and distribution). Financial institutions: d ≈ 0.2 (beneficiary but more constrained — their exit is easier in principle, but debt refinancing lock-in makes exiting difficult; they benefit from reduced refinancing risk). Long-term climate modelers: d ≈ 0.3 (ambiguous; they benefit from being on the 'consensus' side of a major policy question, but they face pressure if their assumptions diverge from empirical evidence; moderately beneficial because their assumptions are treated as settled). Renewable energy sector: d ≈ 0.7 (target). They pay through policy subordination, constrained investment, and technical standards they must comply with. Their exit is highly constrained (they cannot exit renewable technology) but mobile (they can shift deployment to other nations with pro-renewable policies). Distributed generation advocates: d ≈ 0.75 (target, more severely trapped). Their exit is identity-locked; they cannot exit without abandoning their core commitment to distributed, democratic energy. Grid operators: d ≈ 0.4 (symmetric to slightly beneficial). They benefit operationally from the doctrine (simpler dispatch with centralized, firm generation), but they also bear costs (they must manage higher renewable penetration as it forces its way in; they face increasing complexity as the doctrine's technical assumptions break down). Developing nations: d ≈ 0.85 (severely targeted). They are trapped (cannot exit decarbonization or energy development) and their exit to renewable-only pathways requires overcoming policy and finance barriers. Energy democracy movements: d ≈ 0.8 (target, identity-locked). Overrides are not needed — the derivation from beneficiary/victim data and exit options produces these directionalities.",
+    "mandatrophy_analysis": "The baseload-necessity doctrine exhibits mandatrophy: the founding problem (grids require firm capacity management) has been substantially addressed by technological development (storage costs down 80% over 15 years; grid-integration studies showing 70–90% renewable penetration feasible), but the arrangement persists due to incumbent-utility and nuclear-industry policy power. The mandate to 'provide firm power because no alternatives exist' has died, but the arrangement persists because those who benefit from it have political capacity to maintain it. Evidence: (1) renewable-sector technologists produce evidence that the problem is solvable at scale with deployed technologies; (2) developing nations' solar deployment accelerates despite policy barriers, showing revealed preference for renewable-primary pathways; (3) grid operators publish studies on high-renewable-penetration operation; (4) climate scientists increasingly emphasize rapid deployment timescale (years) over baseload timescale (decades). The doctrine persists not because the founding problem is live but because the beneficiaries have institutional power to keep it entrenched. The theater_ratio rise from 0.22 to 0.41 is the clearest mandatrophy signal: enforcement activity increasingly goes to defending the doctrine itself rather than to solving the technical problem it supposedly addresses.",
+    "kernel_context": "This constraint instantiates the 'baseload_necessity_reading' of the 'climate_mitigation_legitimacy' kernel. The kernel is the contested set of decarbonization pathways and their legitimacy conditions. This reading asserts that reliable decarbonization requires dispatchable firm power that renewables cannot provide at scale, therefore nuclear and incumbent utilities are necessary infrastructure. Sibling readings — 'renewable_primacy_reading' (renewables plus storage can achieve full decarbonization), 'portfolio_pragmatism_reading' (optimal pathways include both nuclear and renewables), and 'degrowth_sufficiency_reading' (decarbonization requires demand reduction making large-scale generation expansion unnecessary) — are structurally distinct constraints with different beneficiary sets, victims, and policy implications. They coexist in policy discourse but are not captured in a single constraint story. This story models ONLY the baseload-necessity reading, with its specific ε (0.68), its beneficiary/victim structure, and its policy enforcement mechanisms. Alternative readings would have different ε values (reflecting different cost-benefit structures and policy assumptions) and would instantiate different constraint types."
+  },
+  "omegas": [
+    {
+      "id": "storage_cost_trajectory_uncertainty",
+      "question": "Will battery storage costs continue to decline at historical rates (15–20% annually), or will they plateau as engineering margins tighten?",
+      "resolution_mechanism": "Longitudinal cost tracking of lithium-ion, alternative chemistries, and grid-scale storage; engineering analysis of remaining cost-reduction pathways.",
+      "impact": "If costs continue declining and deployment accelerates, the baseload-necessity claim weakens substantially — firm power can be provided by renewable plus storage at comparable or lower cost than nuclear. If costs plateau, baseload necessity strengthens. A 50% reduction in storage costs would move many grid scenarios from 'nuclear necessary' to 'renewable-storage sufficient,' potentially reclassifying the constraint from tangled-rope to snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost trajectory determines whether renewable-plus-storage is economically competitive with nuclear baseload."
+    },
+    {
+      "id": "firm_power_physical_necessity_vs_policy_choice",
+      "question": "Is the requirement for firm power a physical necessity imposed by grid physics, or a policy choice encoded in grid codes and operational assumptions?",
+      "resolution_mechanism": "Analysis of grids with high renewable penetration (Denmark, Ireland, Chile); controlled experiments in operational research; jurisdictional variation in grid-code requirements for renewable-generation interconnection.",
+      "impact": "If firm power is physical necessity, the baseload doctrine is natural law (mountain from all seats). If it is policy choice, the doctrine is constructed extraction (tangled rope or snare). The evidence suggests elements of both — frequency stability is real physics, but the stringency of firm-power requirements is policy-tunable. A resolution clarifying the policy component would justify tighter scrutiny of whether grid codes are optimized for technical robustness or for incumbent-utility protection.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether firm-power requirement is physical law or policy construct."
+    },
+    {
+      "id": "deployment_timescale_decarbonization_urgency_mismatch",
+      "question": "Given the urgency of near-term decarbonization (targets for 2030–2040) and the 10–20 year construction timescale for nuclear plants, does baseload strategy enable or delay decarbonization?",
+      "resolution_mechanism": "Scenario analysis comparing deployment pathways: nuclear-first (hits baseload targets post-2035 but reaches near-term targets slowly), renewable-fast (hits near-term targets through rapid solar/wind deployment, risks intermittency managing longer-term decarbonization), hybrid (slow nuclear plus fast renewable plus storage). Empirical comparison of actual deployment rates across jurisdictions.",
+      "impact": "If nuclear-first delays decarbonization relative to renewable-fast pathways, the baseload doctrine is misaligned with climate urgency. If nuclear-fast is feasible through policy acceleration and nuclear is operationally necessary for long-term stability, the doctrine is justified. This omega is conceptually and empirically complex: the answer depends on both physics (what is operationally necessary) and policy (what deployment rate is achievable). A resolution would clarify whether the baseload doctrine optimizes for climate impact or for incumbent-asset utilization.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether baseload strategy enables or delays decarbonization given near-term urgency."
+    },
+    {
+      "id": "reading_boundary_firm_power_vs_decentralization",
+      "question": "Is this reading's core claim 'firm power is necessary' or 'centralized firm power is necessary'? Are these logically separable, or does the reading foreclose decentralized firm power (distributed nuclear, distributed storage, peer-to-peer microgrids)?",
+      "resolution_mechanism": "Textual analysis of baseload-necessity claims in policy documents; interviews with doctrine proponents; operational analysis of decentralized firm-power architectures.",
+      "impact": "If the reading only asserts 'firm power is necessary' and allows it to be decentralized, it coexists with renewable-plus-distributed-storage pathways (coexists_with relation). If the reading asserts 'centralized firm power is necessary' to defend incumbent utilities' business model, it forecloses decentralized pathways (influences or forecloses relation, per structure). This determines whether the reading is a genuine technical claim or a bundled policy preference for centralization.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the doctrine asserts firm-power necessity generally or centralized-infrastructure necessity specifically."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the subordination of renewable pathways structural (external barriers: grid codes, financing constraints, licensing timelines) or internalized (the renewable sector has accepted baseload necessity as technically sound and constrained its own ambitions)?",
+      "resolution_mechanism": "Survey of renewable-sector technologists on belief in baseload necessity vs. perceived external barriers; analysis of renewable-sector R&D priorities; natural experiment from jurisdictions with pro-renewable grid codes and open-access financing to see whether renewable deployment accelerates or encounters new barriers.",
+      "impact": "If suppression is primarily structural, removing grid barriers and financing constraints would unlock alternative pathways. If suppression is primarily internalized (the sector believes the doctrine), removing barriers would not change outcomes. If both, a mixed response — some deployment acceleration but continued hesitation from internalized doubt. The distinction matters for policy intervention: structural suppression requires regulatory reform; internalized suppression requires evidence campaigns and R&D investment in alternatives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether renewable-sector constraint is external barrier or internalized belief in baseload necessity."
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 35,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 35,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 35,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 35,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 35,
+        "value": 0.73
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 35,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 35,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 35,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 35,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 35,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 35,
+        "value": 0.75
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.56
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 35,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 35,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 35,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 35,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 35,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 35,
+        "value": 0.65
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_mitigation_legitimacy__renewable_primacy_reading",
+      "climate_mitigation_legitimacy__portfolio_pragmatism_reading",
+      "climate_mitigation_legitimacy__degrowth_sufficiency_reading"
+    ],
+    "dual_formulation_note": "The 'climate_mitigation_legitimacy' kernel decomposes into four structurally distinct constraint readings, each with different beneficiary sets, policy implications, and ε values. This story ('baseload_necessity_reading') asserts firm power necessity; siblings ('renewable_primacy_reading', 'portfolio_pragmatism_reading', 'degrowth_sufficiency_reading') assert alternative pathways are sufficient. Each is a separate constraint with its own ε referent (the standing decarbonization arrangement under that reading's lights), its own victims and beneficiaries, and its own classification by the engine. The readings coexist in policy discourse and influence one another through shared policy-resource constraints (capital allocation to nuclear vs. renewable R&D, grid-code stringency affecting deployment feasibility), hence the network coupling. Each reading's ε is independent and stable within that reading's framing; the engine computes per-seat classification for each reading separately."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "renewable_primacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "portfolio_pragmatism_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "degrowth_sufficiency_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "firm_dispatchable_power_necessary_at_scale",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "renewable_storage_insufficient_for_reliable_decarbonization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "physics_limited_renewables_framework",
+    "drift_state": {
+      "moment": "post_storage_cost_collapse",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.35
+    }
+  ],
+  "gain_flow": "nuclear_industry",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

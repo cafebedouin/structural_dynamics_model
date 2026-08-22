@@ -1,0 +1,320 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_legitimacy__risk_stratification_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "9a10ce35-ac9b-431b-9e15-a787124db7c4"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Risk-Stratified Vaccine Mandate Legitimacy (Proportionality-Gated Reading)",
+    "topic_domain": "public_health/constitutional_law/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_risk_congregate_populations",
+      "healthcare_facility_operators",
+      "courts_seeking_administrable_standard"
+    ],
+    "victims": [
+      "low_risk_workers_swept_into_targeted_mandates",
+      "occupational_groups_misclassified_as_high_exposure"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Define the actuarial risk threshold that separates permissible targeted mandates from impermissible blanket ones. Controls the epidemiological modeling, the exposure-tier categories, and the review cycle for reclassification. Bears reputational and legal cost if thresholds are struck down, but faces no direct personal exposure."
+    },
+    {
+      "name": "high_risk_congregate_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Nursing home residents, immunocompromised patients, and others in settings where transmission risk is empirically elevated. Gain protection when mandates are correctly targeted at the settings around them; have no capacity to enforce the targeting themselves and depend entirely on the threshold being drawn accurately."
+    },
+    {
+      "name": "healthcare_facility_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hospitals and long-term care facilities implement the mandate as a condition of employment and licensure. Benefit from liability protection and outbreak reduction; also administer enforcement (termination, reassignment) against staff who refuse, giving them a dual position as both beneficiary and local enforcer."
+    },
+    {
+      "name": "low_risk_workers_swept_into_targeted_mandates",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Employees classified into a mandated occupational tier (e.g. all hospital staff regardless of patient contact, or all K-12 staff regardless of classroom exposure) whose actual individual transmission risk is low. Bear job loss or coercion under a threshold drawn at the occupational-category level rather than the individual-exposure level; exit means leaving the profession or region."
+    },
+    {
+      "name": "occupational_groups_misclassified_as_high_exposure",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Groups such as remote-working clinical staff, administrative hospital employees, or teachers in low-density rural schools who are categorized with their higher-contact colleagues for administrative simplicity. The proportionality logic that legitimizes the mandate for their high-exposure peers is applied to them by category rather than by measured individual risk, producing the same coercive consequence without the same actuarial justification."
+    },
+    {
+      "name": "courts_seeking_administrable_standard",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Judges reviewing mandate challenges need a workable proportionality test rather than an all-or-nothing rule; the risk-stratification framework gives them a doctrine (narrow tailoring to actuarial risk) that lets them uphold some mandates and strike others without abandoning judicial review of public health measures. They gain a durable analytical tool; they bear no direct cost from either outcome."
+    },
+    {
+      "name": "unvaccinated_individuals_in_low_risk_settings",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals whose personal circumstances (prior infection, remote work, isolated living) place their actual transmission risk below the threshold used to justify the mandate in their occupational category, but who have no individualized process to demonstrate this and are not heard in the categorical rulemaking that sets the threshold."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a proportionality standard that lets mandate authority track actual epidemiological risk rather than applying uniformly across all settings — concentrating coercive intervention where transmission consequences are severe (ICUs, nursing homes) and withholding it where they are not.",
+    "transfer_function": "Moves the burden of mandate compliance (vaccination, employment consequence, or exit from a profession) from the population at large onto whichever occupational or demographic category is drawn inside the actuarial threshold, while shifting protection benefits toward high-risk congregate populations.",
+    "absent_voices": "Individuals whose actual personal risk profile diverges from their assigned category — the remote clinical worker, the previously-infected teacher, the low-density-school staffer — have no individualized hearing in how the threshold-defining category is drawn; the rulemaking process categorizes by occupation, not by measured individual exposure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the risk-stratification doctrine disappeared, courts would be forced back toward the binary choice between upholding blanket mandates outright or striking mandate authority down categorically — either outcome reorganizes which populations are protected and which employment consequences attach, and removes the current administrable middle path judges and health authorities rely on.",
+    "founding_problem": "Early pandemic mandates were challenged as either insufficiently protective (public health primacy critique) or categorically coercive (bodily autonomy critique); courts needed a doctrine that could distinguish a mandate narrowly tailored to a genuine, measurable transmission risk from a mandate imposed on the general population regardless of actual exposure.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Epidemiologists outside the litigating parties attest that transmission risk is genuinely heterogeneous across settings, supporting the underlying premise that stratification is not mere doctrine-shopping. However, labor advocates and misclassified occupational groups — who are not party to the threshold-setting process — attest that the categorical (occupation-level) implementation of the threshold does not track the individual-level risk data the doctrine claims to rely on, meaning the founding problem may be only partially solved in practice even where the doctrine is sound in principle."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the risk-stratification reading of the vaccine mandate legitimacy kernel: mandate authority is legitimate only where actuarial risk data justifies the specific targeted population, and illegitimate where applied as a blanket rule untethered to measured exposure. This is a proportionality-doctrine reading, distinct from the public-health-primacy reading (which grounds mandate authority in the externality itself, not in a threshold test) and the bodily-autonomy-primacy reading (which denies mandate authority regardless of risk magnitude). The reading's own internal tension — that the threshold is drawn at the occupational-category level rather than the individual-exposure level — is what produces its victim set: workers formally inside a mandated high-risk category whose actual measured risk sits below the threshold the doctrine itself claims to require.",
+    "logic_rationale": "Extractiveness (0.42) and suppression (0.48) are moderate rather than high because the doctrine genuinely narrows coercive scope relative to a blanket mandate — this is real coordination function, not pure cover. But both remain non-trivial because the category-level implementation of the threshold reintroduces coercion against individuals whose measured risk does not meet the stated bar; the doctrine's own proportionality logic is not fully carried through to individual-level determination. Theater ratio rises over the interval (0.15 -> 0.30) as litigation and administrative practice increasingly substitute categorical occupational classification for the individualized risk assessment the doctrine claims to perform — a mild Goodhart drift where the proxy (occupation) replaces the target (measured exposure).",
+    "directionality_logic": "High-risk congregate populations and healthcare facility operators sit near the beneficiary end: they gain outbreak protection and liability shielding from correctly-targeted mandates and bear minimal exit cost themselves. Low-risk workers swept into a mandated occupational tier, and occupational groups misclassified as high-exposure, sit near the target end: they bear the mandate's coercive consequence (employment loss, forced vaccination) without the individualized risk finding the doctrine's own logic would require to justify it on them specifically. Courts occupy an analytical, low-exit seat that benefits from doctrinal workability without bearing either mandate's direct cost.",
+    "perspectival_gap": "From the health-authority and court seats, this doctrine looks like a genuine, moderate Rope: it solves the coordination problem of distinguishing justified from unjustified coercion, and does so with real administrability gains. From the misclassified-worker seat, the same structure looks like a Tangled Rope shading toward Snare: the proportionality promise is real in principle but the categorical implementation extracts compliance from individuals the doctrine's own actuarial logic does not reach. The engine should compute this divergence from the structural exit/power data rather than from any single narrative frame.",
+    "mandatrophy_analysis": "The founding problem (distinguishing narrowly-tailored from blanket coercion) remains partially live — transmission risk heterogeneity is real and persists across settings — but the doctrine's administrative implementation has drifted toward categorical occupational sorting, which is easier to litigate and enforce than individualized risk assessment. This is not full mandatrophy (the underlying problem has not disappeared), but it is a genealogical warning sign: a doctrine built to require individualized proportionality has hardened into a categorical proxy, which is exactly the kind of substitution the theater_ratio trend is tracking.",
+    "kernel_context": "This constraint is the risk_stratification_reading of the vaccine_mandate_legitimacy kernel. Sibling readings public_health_primacy_reading (mandate authority grounded directly in the externality, no threshold test required) and bodily_autonomy_primacy_reading (mandate authority categorically denied) are separate constraint files with their own ε, beneficiaries, and victims. This reading occupies structural middle ground: it authorizes some of what public_health_primacy authorizes and forbids some of what public_health_primacy would allow, while rejecting the categorical prohibition bodily_autonomy_primacy asserts. The expected structural delta — that the reading's victim set size varies with where the threshold is drawn, and that at extreme threshold settings this reading can converge toward either sibling — is documented in the omegas below rather than folded into this story's own ε."
+  },
+  "omegas": [
+    {
+      "id": "threshold_convergence_ambiguity",
+      "question": "At what actuarial threshold value does the risk-stratification reading collapse into one of its siblings — either authorizing mandates so broadly it becomes indistinguishable from public_health_primacy_reading, or restricting them so narrowly it becomes indistinguishable from bodily_autonomy_primacy_reading?",
+      "resolution_mechanism": "Comparative doctrinal analysis across jurisdictions that have set the threshold at different levels, tracking whether courts applying a very low or very high threshold produce outcomes that converge with either sibling reading's outcome set.",
+      "impact": "If convergence is easy at plausible threshold values, the risk-stratification reading is less a stable third position than a continuum whose endpoints are the two extreme readings — meaning its distinct identity as a constraint depends on the threshold staying in a genuinely intermediate range.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the moderate reading is a stable third position or a continuum collapsing into its siblings at the extremes."
+    },
+    {
+      "id": "categorical_vs_individual_implementation_gap",
+      "question": "Is the gap between the doctrine's individualized-risk justification and its categorical (occupation-level) implementation a temporary administrative shortcut, or a structural feature that will persist because individualized assessment is administratively infeasible at scale?",
+      "resolution_mechanism": "Track whether any jurisdiction successfully implements individual-level risk assessment for mandate exemption at scale, and at what administrative cost, versus jurisdictions that formally adopt individualized standards but administer them categorically in practice.",
+      "impact": "If individualized assessment is infeasible at scale, the risk-stratification reading's proportionality promise is structurally unfulfillable for a meaningful minority of affected individuals, which would push the constraint's classification toward tangled_rope permanently rather than as a transitional feature correctable by better administration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether categorical implementation of an individualized-risk doctrine is a fixable defect or a structural limit."
+    },
+    {
+      "id": "threshold_setting_authority_capture",
+      "question": "Is the actuarial threshold itself set by disinterested epidemiological analysis, or does the threshold-setting process respond to the administrative and political convenience of the agenda-setters (health authorities, facility operators) who also benefit from the mandate's scope?",
+      "resolution_mechanism": "Compare threshold values across jurisdictions with different institutional structures for threshold-setting (independent scientific panels vs. agency discretion vs. legislative mandate) and check whether threshold stringency correlates with the interests of the setting institution.",
+      "impact": "If threshold-setting is captured by the interests of agenda-setters, the doctrine's proportionality claim is partly cover for extraction rather than a genuine constraint on mandate scope, which would raise the story's effective extractiveness beyond what is authored here.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the threshold itself is independently derived or shaped by the interests of those who administer the mandate."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mandate_legitimacy_requires_actuarial_proportionality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "blanket_coercion_categorically_disfavored_absent_measured_risk",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "narrow_tailoring_doctrine_baseline",
+    "drift_state": {
+      "moment": "post_pandemic_litigation_consolidation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_primacy_reading",
+      "bodily_autonomy_primacy_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three linked readings of the vaccine_mandate_legitimacy kernel. public_health_primacy_reading grounds mandate authority in the externality itself and authors a lower ε for the arrangement it describes (broader mandate authority, framed as duty-fulfillment rather than proportionality-limited extraction). bodily_autonomy_primacy_reading treats any mandate as categorically illegitimate and authors mandate enforcement itself as the extractive constraint (high ε, victims = all coerced individuals regardless of risk). This risk_stratification_reading occupies structural middle ground: its ε (0.42) is lower than bodily_autonomy_primacy_reading's would be (mandate scope is narrower) but higher than public_health_primacy_reading's would be for the same targeted-mandate population (because this reading's own categorical implementation reintroduces coercion against individuals its actuarial logic does not reach). The three stories share no observable — each authors its own beneficiary/victim structure and ε from its own reading's premises, per the ε-invariance principle."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

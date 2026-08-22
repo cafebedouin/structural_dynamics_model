@@ -1,0 +1,428 @@
+{
+  "header": {
+    "constraint_id": "climate_mitigation_imperative__systems_transition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "d861fb9c-8556-42d3-89dc-af92d706a5ad"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.61,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Climate Mitigation via Decentralized Energy Transition (Systems Reading)",
+    "topic_domain": "energy_policy/climate_mitigation/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "distributed_renewable_operators",
+      "community_energy_coalitions",
+      "grid_modernization_advocates"
+    ],
+    "victims": [
+      "incumbent_nuclear_operators",
+      "centralized_utility_monopolies"
+    ],
+    "vindicated_propositions": [
+      "democratic_energy_governance_doctrine",
+      "decentralized_resilience_hypothesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "distributed_renewable_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Solar, wind, and storage operators and companies whose business models align with distributed ownership and community control. They benefit from policy frameworks that mandate grid modernization, prioritize distributed deployment, allocate subsidies to renewables, and establish interconnection standards favorable to small-scale generation. Their exit is mobile (they can relocate to different jurisdictions or pivot to other energy sectors) but their growth depends on policy continuation."
+    },
+    {
+      "name": "incumbent_nuclear_operators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Large utilities and state-backed nuclear operators whose existing fleets, capital investments, and regulatory privileges depend on centralized baseload generation models. Under the systems-transition reading, their generation model is framed as incompatible with democratic energy transition. They face decommissioning mandates, loss of rate-base assumptions, erosion of regulatory privilege, and stranded capital as policy shifts toward distributed alternatives. Their exit is constrained by sunk capital and the long timelines of nuclear decommissioning."
+    },
+    {
+      "name": "community_energy_coalitions",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Local and regional coalitions seeking energy autonomy and democratic ownership of energy generation. They advocate for microgrids, cooperative ownership structures, community choice aggregation, and local energy sovereignty. They benefit from policy frameworks that permit and incentivize community-scale deployment, permit cooperative ownership, and devolve decision-making authority to local entities. Their exit is mobile (they can exit communities or shift organizational form) but their influence depends on policy support."
+    },
+    {
+      "name": "centralized_utility_monopolies",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Regulated utility monopolies structured around centralized generation and transmission control. They bear costs from grid modernization requirements, mandatory interconnection of distributed resources, open-access obligations, and erosion of the regulatory model that assumed centralized capital intensity and concentrated control. Their exit is constrained by regulatory relationships, stranded assets, and the century-long infrastructure sunk in centralized models."
+    },
+    {
+      "name": "climate_policy_makers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government bodies, international agencies, and regulatory authorities setting and enforcing climate mitigation policy. Under the systems-transition reading, their mandate includes both carbon reduction and democratic transformation of energy systems. They enforce the constraint through subsidy allocation, grid codes, interconnection requirements, generation mix targets, and the rhetorical framing of what 'legitimate' mitigation includes. They have institutional power to set the agenda but analytical standing (they interpret what the climate science and energy-justice principles require)."
+    },
+    {
+      "name": "grid_modernization_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Companies, think tanks, researchers, and technologists advocating for smart grid, distributed storage, demand response, and distributed control systems. They benefit from policy mandates requiring grid modernization and from the capital flows supporting distributed architecture (hardware, software, integration services). Their business models depend on decentralized architecture becoming the dominant paradigm. Their exit is mobile (they can serve different markets) but their growth depends on the regulatory direction continuing."
+    },
+    {
+      "name": "incumbent_coal_operators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Coal-fired generation operators and coal-mining companies. They are not the primary target under the systems-transition reading (the primary target is the governance structure, not coal vs. renewables), but they are collateral payers: they depend on centralized generation models and simultaneously face pressure from carbon reduction AND from the decentralization mandate. Their exit is trapped (capital locked in coal assets, labor dependent on mines, capital immobility). They bear costs from both the carbon constraint and the governance constraint."
+    },
+    {
+      "name": "consumer_advocates",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocates for affordable energy access, consumer protection, and energy justice. They benefit from distributed energy options that offer price competition, consumer choice, and local control (beneficiary direction). They bear costs if grid modernization and transition infrastructure increase electricity prices during the buildout phase, or if new technologies impose costs on ratepayers (payer direction). Their interests are genuinely mixed; their exit is constrained by the essential nature of electricity."
+    },
+    {
+      "name": "excluded_fossil_fuel_interests",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Oil, gas, and coal companies and their lobbying associations. They are structurally excluded from the climate-mitigation-policy conversation (carbon constraint is non-negotiable under this reading). They have no formal seat at the table in energy-transition policy but maintain substantial informal influence through lobbying, political contributions, and capture of regulatory bodies. Their voice matters in shaping the timeline and pace of policy implementation even though they cannot argue for continued fossil fuels at the policy table."
+    },
+    {
+      "name": "global_south_energy_access",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Billions of people without reliable electricity access, predominantly in the Global South. Their interests in rapid electrification via any available low-carbon path (including nuclear or centralized hydro) compete with the systems-transition reading's mandate for decentralized, democratically controlled energy. They have minimal voice in climate policy design despite bearing the most material consequences of delayed electrification. Their exit is trapped (no alternative energy access path available; no voice in policy process)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Combines two coordination problems: (1) carbon emissions require rapid phase-out of fossil fuels (technical climate problem); (2) centralized energy monopolies have historically extracted rents and excluded communities from control over energy systems (governance legitimacy problem). The constraint attempts to solve both simultaneously by mandating decentralization as the vehicle for decarbonization — distributed renewables are positioned as the solution to both problems at once.",
+    "transfer_function": "Moves regulatory favor, subsidy flows, grid investment capital, and decision-making authority from incumbent nuclear and utility operators toward distributed renewable operators, community coalitions, and grid modernization advocates. Simultaneously transfers control over energy infrastructure from centralized corporate entities toward communities and smaller operators.",
+    "absent_voices": "Incumbent nuclear operators have minimal voice in the systems-transition framing (they are the problem to be overcome, not a party to be consulted). Fossil fuel companies are categorically excluded. Global South energy-access advocates are structurally excluded from the mitigation policy table — their voice that rapid electrification (via any low-carbon path) is a development priority would challenge the governance mandate's universality, but they have no seat in the policy conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the systems-transition constraint vanished, climate mitigation policy would revert to purely carbon-minimization metrics (portfolio optimization without governance mandates). Incumbent utilities and nuclear operators would recover regulatory privilege and subsidy flows. Distributed renewable operators and community coalitions would lose policy tailwinds and momentum. The energy system would still decarbonize but governance would stay centralized and monopolistic rather than democratizing. The constraint's absence removes the governance-transformation component from mitigation, leaving only carbon reduction.",
+    "founding_problem": "Twofold founding problem: (1) atmospheric carbon requires rapid phase-out of fossil fuels and transition to low-carbon energy; (2) historical centralization of energy systems has created extractive monopolies that capture regulatory bodies, concentrate wealth and control, and exclude communities from decision-making over infrastructure that shapes their lives. The constraint's founding mandate is to solve both problems simultaneously — decarbonize while democratizing.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Climate scientists and energy analysts attest the carbon problem is live and urgent (IPCC, national climate assessments). Energy-democracy advocates, community organizers, and some local government bodies attest the governance problem is live (structural exclusion of communities from energy decisions, monopoly control of supply, concentrated wealth in utility profits). Incumbent utilities and portfolio-optimization energy analysts attest that carbon urgency should override governance preferences; they argue the founding problem is carbon only, governance is a separate issue. Opportunity-cost analysts attest that speed-to-deployment should dominate both carbon and governance. Attestation is divided between the reading's beneficiaries (carbon + governance are co-primary problems) and those reading the kernel differently."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.61,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.61,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.61,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "projected"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest_systems_vs_portfolio",
+      "question": "Is energy transition fundamentally a governance transformation (systems reading) or fundamentally a carbon-minimization optimization problem (portfolio reading)?",
+      "resolution_mechanism": "This is a CONCEPTUAL omega that cannot be empirically resolved: it depends on what normative question the constraint is anchored to. The systems reading privileges democratic legitimacy as a primary goal co-equal with carbon reduction. The portfolio reading privileges carbon reduction as primary and governance as a secondary design parameter. No observation resolves which framing is more important.",
+      "impact": "If the systems reading's framing is authoritative, nuclear is victim-class (incompatible with democratic transition). If the portfolio reading's framing is authoritative, nuclear is a carbon-minimization tool and beneficiary-adjacent. The classification diverges at the constraint definition level.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether energy transition is framed as governance transformation or carbon optimization"
+    },
+    {
+      "id": "nuclear_centralization_necessity",
+      "question": "Is centralized generation (nuclear or otherwise) structurally necessary for reliable baseload supply, or can distributed systems with storage and demand response provide equivalent reliability at lower scale?",
+      "resolution_mechanism": "Empirical: grid modeling and real-world trials of high-renewable, low-centralized-generation systems in comparable jurisdictions. Technical feasibility studies of storage and demand-management scaling.",
+      "impact": "If centralization is necessary, nuclear becomes a genuine coordination good and the extraction framing weakens (victim status is undercut). If distributed systems can reliably replace centralized baseload, nuclear becomes pure extraction riding on a false coordination claim (victim status confirmed). The measurement distinguishes genuine tangled rope from snare misclassified as rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether centralized generation is structurally necessary for grid reliability"
+    },
+    {
+      "id": "democratic_control_operationalization",
+      "question": "What constitutes 'democratic control' of energy systems operationally? Is it majority ownership, community governance boards, participatory budgeting, or open market entry for local actors?",
+      "resolution_mechanism": "Definitional and comparative: jurisdictions with different operational models of 'democratic control' (municipal utilities, energy cooperatives, community choice aggregation, open-access markets, regulated monopolies with stakeholder boards) can be compared on governance outcomes and energy delivery performance.",
+      "impact": "Vague operationalization of 'democratic control' leaves the constraint's enforcement mechanisms contested: what counts as winning and what counts as enforcement is ambiguous. Tighter operationalization enables clearer beneficiary/victim classification and clearer measurement of enforcement.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "What operational definition of democratic energy control grounds the constraint"
+    },
+    {
+      "id": "global_south_energy_justice_conflict",
+      "question": "How does the systems-transition reading's governance mandate apply in contexts where rapid electrification (potentially via nuclear or centralized generation) is necessary for development, equity, and poverty reduction?",
+      "resolution_mechanism": "This is primarily a PREFERENCE omega (values-based): the constraint prioritizes wealthy-country energy democracy; Global South actors prioritize rapid access-at-any-governance-structure. The conflict is real and structural, not a measurement or factual dispute. No empirical resolution exists.",
+      "impact": "If the Global South's energy-access priority is authoritative, the constraint's application becomes conditional on development context. If the systems-transition reading is universalized regardless of context, it becomes a form of imperialism (wealthy countries dictating governance preferences while denying developing economies the centralized deployment paths those countries used historically). The classification impact is on scope and victim characterization.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether the systems-transition mandate is universal or conditional on development context"
+    },
+    {
+      "id": "sibling_reading_relationship_portfolio_optimization",
+      "question": "How does this constraint's systems-governance mandate relate to the portfolio-optimization reading's carbon-minimization mandate? Do they coexist as live policy options or does one foreclose the other?",
+      "resolution_mechanism": "This is the COMMITTER STRUCTURE omega (kernel-reading dynamics): the two readings are held by different policy coalitions (climate scientists vs. energy-systems analysts vs. energy-democracy advocates). No single framework holds both simultaneously in the current policy landscape. They coexist in the real world via institutional separation (different jurisdictions, different agencies, different time horizons) but in any single energy system, at any single time, choosing one reading shapes the outcomes of the other.",
+      "impact": "Structural: the kernel (climate mitigation) is read differently depending on which coalition frames the problem. The constraint definitions are different because the STAKES are different: one stakes are carbon, the other stakes are control. The engine's per-seat classification should reflect this: from a distributed-renewable operator's seat, the systems reading is rope/coordination; from a utility-monopoly seat, it is snare/extraction. From a carbon-focused energy analyst seat, the reading might classify differently altogether.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel contest: systems-transition vs. portfolio-optimization vs. opportunity-cost readings of climate mitigation"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the systems-transition reading of the climate-mitigation kernel: the position that energy mitigation requires not just carbon reduction but transformation of energy systems toward decentralization and democratic control. Under this reading, incumbent nuclear operators and centralized utility monopolies are victims (their extractive centralization is incompatible with the transition mandate), and distributed renewable operators and community energy coalitions are beneficiaries. The constraint is structurally a tangled rope: it coordinates a genuine problem (carbon reduction + governance legitimacy) AND asymmetrically extracts from centralized operators. The claim is independent of the metrics: the policy landscape genuinely instantiates this reading as one live position among contested siblings (portfolio-optimization and opportunity-cost readings); the metrics measure how extractive and suppressive the systems-transition framing is in operation.",
+    "key_agents": [
+      "Distributed renewable operators (moderate-organized): benefit from policy tailwinds and subsidy structures; build the alternative to centralized generation",
+      "Incumbent nuclear operators (institutional): bear costs from decommissioning mandates and loss of regulatory privilege; constrained exit (capital locked in existing fleet)",
+      "Community energy coalitions (moderate-organized): benefit from decentralization mandates and local-governance frameworks; geographically dispersed but networked",
+      "Centralized utility monopolies (institutional): bear costs from grid modernization and interconnection obligations; constrained exit (rate-base model dependent on scale)",
+      "Climate policy makers (institutional-analytical): set and enforce the constraint through subsidy allocation, grid codes, and framing of what 'mitigation' means",
+      "Grid modernization advocates (organized): benefit from mandates for smart grid and storage technology; business model depends on decentralized architecture",
+      "Consumer advocates (moderate): beneficiary-payer: gain energy choice but potentially bear transition costs",
+      "Global South energy access (excluded, powerless): their voice is excluded from the mitigation policy table; rapid electrification via any low-carbon path conflicts with the governance mandate"
+    ],
+    "logic_rationale": "Extractiveness is substantial (0.68) because the constraint asymmetrically burdens incumbent operators while favoring distributed alternatives — the burden is not just cost (decommissioning) but loss of regulatory privilege and control. Suppression is moderate (0.61) because the constraint persists through policy enforcement (subsidy allocation, grid codes, interconnection mandates) and through the framing of 'legitimate' mitigation, not through coercion of individual actors. Theater is elevated (0.42) because part of the enforcement energy goes to maintaining the narrative that nuclear is incompatible with democracy (a live contest, not settled fact), while part genuinely drives deployment of alternatives. The measurement series show extractiveness and suppression rising through the first 20 time points as policy enforcement intensifies (observed: 2010–2022), then plateauing (projected: 2025–2040) as the outcome stabilizes. Theater ratio rising slower but to the same plateau suggests the narrative-enforcement component is real but smaller than the structural enforcement (subsidy flows, grid codes).",
+    "perspectival_gap": "The constraint should compute differently from different seats: (1) From a distributed-renewable-operator seat (beneficiary + moderate power): the constraint is genuine coordination (carbon + governance both solved) with acceptable extraction flowing to policy makers and grid operators. Directionality near beneficiary (d low); effective extraction inverted into subsidy/opportunity. (2) From a nuclear-operator seat (payer + institutional power): the constraint is extraction masked as coordination — the governance mandate is pretextual, the real aim is to shut down nuclear competitors. Directionality near target (d high); effective extraction substantial. (3) From a climate-analyst seat (observer): the constraint is misguided because it privileges governance preferences over carbon speed — opportunity cost of delaying nuclear is higher climate risk. Type might classify as snare (governance extracted as cover story for distributed-renewable favoritism) or rope (if the governance objective is endorsed). The engine computes these divergences from the structural data; the commentary explains why they are real.",
+    "directionality_logic": "Beneficiaries (distributed renewables, community coalitions, grid modernization advocates) have moderate-to-organized power and mobile-to-mobile exit: they can grow in the favorable policy environment but depend on policy continuation for scaling. Directionality near beneficiary end (d ≈ 0.2–0.3). Victims (nuclear and utility operators) have institutional power but constrained exit: they can relocate capital slowly and lobby politically, but their core business model is locked in. Directionality near target end (d ≈ 0.75–0.85). Policy makers have analytical standing and control the enforcement machinery: they are neither beneficiary nor victim but agenda-setter (role: agenda_setter, not a directionality seat). Consumer advocates are split (beneficiary + payer): energy choice (beneficiary direction) vs. transition costs (payer direction) offset — d ≈ 0.5. Global South energy access is trapped (powerless, no voice in the table, energy needs compete with governance preferences): directionality highest (d ≈ 0.95) if their exclusion from the mitigation framework itself becomes a cost they bear.",
+    "mandatrophy_analysis": "The mandate ('energy mitigation through democratic transition') is live (not dead) but contested. Some parties attest it is live and primary (energy-democracy advocates), others attest it is secondary to carbon speed (opportunity-cost readers), others attest it is pretextual (nuclear operators). The disappearance verdict is world_rearranges because if the governance mandate vanished, policy would revert to purely carbon optimization and incumbent operators would recover privilege. Theater-ratio measurement (0.42) reflects that governance narrative is real and enforced but not the sole enforcement mechanism — subsidy flows and grid codes are the hard enforcement. The constraint is not a piton (atrophied function): the governance transformation is an active, contested project, not theater masking a dead function. It is a tangled rope because it genuinely coordinates (carbon + governance) but the coordination is unequal (beneficiaries gain governance + carbon reduction; payers bear costs of both while losing control).",
+    "kernel_context": "This constraint is one reading of the contested climate-mitigation kernel. The kernel is the commitment to reduce emissions and transform energy systems; the readings differ on what 'transform' means and what counts as mitigation. The systems-transition reading (this one) prioritizes democratic governance as a co-primary goal. The portfolio-optimization reading prioritizes maximizing low-carbon sources (including nuclear) and treats governance as secondary to carbon metrics. The opportunity-cost reading prioritizes deployment speed per dollar and treats nuclear's capital intensity and timeline as net-negative regardless of governance framing. Each reading instantiates a different constraint with different victim/beneficiary sets: systems reading = nuclear as victim; portfolio reading = nuclear as beneficiary or carbon-equivalent; opportunity-cost reading = nuclear as victim but for speed reasons, not governance reasons. The kernel context determines what the constraint is about; committing to one reading forecloses others within a single policy jurisdiction (you cannot simultaneously maximize all low-carbon sources AND eliminate nuclear on governance grounds; choosing systems-transition forecloses the portfolio reading in policy practice)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_mitigation_imperative__portfolio_optimization_reading",
+      "climate_mitigation_imperative__opportunity_cost_reading",
+      "nuclear_energy_governance_control",
+      "distributed_energy_decentralization"
+    ],
+    "dual_formulation_note": "This constraint is part of the climate-mitigation-imperative kernel family. The kernel itself is a fixed commitment (reduce emissions + transform energy systems); different readings instantiate different constraints based on what 'transform' means. The systems-transition reading is one reading of this kernel. The portfolio-optimization and opportunity-cost readings are sibling constraints instantiating different normative priorities applied to the same kernel. All three share the carbon-reduction core; they diverge on what transformation means and who counts as a victim. See the kernel_context field in commentary for the full contest structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "gain_flow": "climate_policy_makers",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "medium-high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "climate_mitigation_imperative__portfolio_optimization_reading",
+      "climate_mitigation_imperative__opportunity_cost_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "equitable_democratic_energy_governance",
+    "drift_state": {
+      "moment": "contemporary_monopoly_carbon_inertia",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "portfolio_optimization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "opportunity_cost_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "energy_democracy_coequal_with_decarbonization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "centralized_generation_extractive_by_structure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

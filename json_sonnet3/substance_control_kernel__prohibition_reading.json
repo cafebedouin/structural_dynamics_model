@@ -1,0 +1,346 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__prohibition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "c7b5650e-ab96-411f-8a1a-e4ebe7f6c6db"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.87,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Prohibition Reading of Substance Control: Moral Transgression Requiring State Punishment",
+    "topic_domain": "criminal_justice/public_health/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "law_enforcement_agencies",
+      "private_prison_operators",
+      "asset_forfeiture_units",
+      "drug_testing_industry",
+      "politicians_running_on_order_platforms"
+    ],
+    "victims": [
+      "substance_users",
+      "low_income_defendants",
+      "racial_minority_communities",
+      "families_of_incarcerated_users",
+      "black_market_violence_bystanders"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "law_enforcement_agencies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administers drug enforcement, sets operational priorities within statutory limits, receives budget allocations, equipment grants, and asset forfeiture proceeds tied directly to enforcement volume. Frames continued criminalization as protecting communities from moral and social decay; the framing also justifies the agency's budget growth and headcount."
+    },
+    {
+      "name": "private_prison_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Contracts with state and federal corrections systems are priced per-bed and per-day; a substantial share of the incarcerated population is present on drug possession or distribution convictions. Lobbies against decriminalization measures through trade associations and campaign contributions."
+    },
+    {
+      "name": "asset_forfeiture_units",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Seizes cash, vehicles, and property in connection with drug enforcement actions, often without conviction, and retains a share of proceeds for departmental budgets. Has a direct financial stake in maintaining criminalized status regardless of public-health outcomes."
+    },
+    {
+      "name": "substance_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Faces arrest, prosecution, and incarceration for possession or use; a criminal record forecloses employment, housing, and financial access afterward. Cannot exit the constraint by changing behavior alone once caught in the system — collateral consequences persist independent of subsequent sobriety."
+    },
+    {
+      "name": "low_income_defendants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Lacks resources for private counsel, cannot make bail, and accepts plea deals under coercive time pressure regardless of the underlying facts. Bears the process costs of prohibition disproportionately relative to wealthier defendants who can litigate or divert into treatment programs."
+    },
+    {
+      "name": "racial_minority_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Subject to enforcement intensity disproportionate to usage rates relative to other populations, documented across multiple jurisdictions and decades. Community-level effects include disrupted family structures, reduced political participation from felony disenfranchisement, and diminished trust in state institutions."
+    },
+    {
+      "name": "families_of_incarcerated_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Loses household income and caregiving capacity when a member is incarcerated for a drug offense; bears the emotional and financial cost of an extraction the family did not choose and cannot exit while the member is detained."
+    },
+    {
+      "name": "black_market_violence_bystanders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Lives in neighborhoods where prohibition-driven price premiums fund armed distribution networks; experiences violence as a side effect of a market structure created by criminalization, without having participated in substance use or distribution themselves."
+    },
+    {
+      "name": "politicians_running_on_order_platforms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Campaigns on tough-on-crime and moral-order platforms, using visible enforcement activity as an electoral asset. Bears little of the downstream cost of incarceration or black-market violence and can pivot rhetoric as public opinion shifts without personal exposure to the system's costs."
+    },
+    {
+      "name": "harm_reduction_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argues that punitive framing worsens health outcomes and drives users away from services that could reduce overdose deaths and disease transmission. Their evidence base is frequently cited in policy debate but rarely determines the enforcement posture, which remains set by legislatures and prosecutorial discretion."
+    },
+    {
+      "name": "drug_testing_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sells testing services to employers, courts, and probation systems whose demand is generated directly by the criminalization regime and its associated compliance mandates; revenue scales with the scope of the punitive apparatus rather than with any independent health outcome."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared moral and legal standard against substance use that some communities and institutions genuinely want enforced, and generates a visible signal of social order that certain constituencies value independent of health outcomes.",
+    "transfer_function": "Moves liberty, income, and family stability from substance users and their households to enforcement agencies, corrections contractors, forfeiture units, and testing firms, and moves political capital to officials who campaign on the enforcement posture.",
+    "absent_voices": "Substance users themselves rarely testify in the legislative process that sets penalties; harm reduction researchers and public health epidemiologists are frequently excluded from criminal-justice policy committees in favor of law enforcement testimony; formerly incarcerated people are excluded from most professional licensing boards that could otherwise employ them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If criminal punishment for substance use vanished overnight, incarcerated populations would drop sharply, corrections budgets and forfeiture revenue streams would need replacement, drug-market violence tied to enforcement-driven price premiums would likely fall as markets normalized, and millions of people with existing records would face a different (though not eliminated) barrier landscape. The enforcement apparatus itself would need to reorganize around a different mandate or shrink.",
+    "founding_problem": "Early-to-mid twentieth century policy sought to suppress substances viewed as morally corrosive and socially destabilizing, framing use as a threat to public order requiring state punishment rather than treatment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Law enforcement leadership and some legislators attest the moral-order problem remains live and requires continued punitive enforcement. Independent criminologists, public health researchers, and multiple government commissions (including the 1972 Shafer Commission and subsequent drug policy review bodies) attest the founding moral-threat framing has been substantially undermined by evidence that punitive enforcement does not reduce use rates and instead generates the black-market violence and incarceration costs now observed — corroboration from outside the benefiting enforcement and corrections institutions supports the dead/shifted-function reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.81
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.87
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the prohibition reading of the substance control kernel: substance use is framed as a moral transgression that threatens social order and therefore warrants state punishment. Under this reading, users are structurally reclassified as criminal offenders rather than patients or free actors, and a durable enforcement, corrections, and forfeiture apparatus becomes the primary institutional beneficiary of continued criminalization. Black-market violence is a secondary externality generated by the price premium enforcement creates, borne mostly by bystanders uninvolved in either use or distribution. This is a distinct constraint from the harm_reduction_reading (which treats use as a health condition warranting pragmatic intervention) and the legalization_reading (which treats use as a liberty matter bounded by third-party harm) — each reading produces a different victim set, a different beneficiary structure, and a different ε, and each is authored as its own constraint story per the ε-invariance principle.",
+    "key_agents": [
+      "law_enforcement_agencies: primary agenda_setter and beneficiary (institutional/arbitrage) — administers enforcement and captures budget/forfeiture rents",
+      "substance_users: primary target (powerless/trapped) — bears criminal liability and collateral consequences",
+      "private_prison_operators: secondary institutional beneficiary (organized/arbitrage) — captures incarceration revenue",
+      "racial_minority_communities: disproportionately burdened victim class (powerless/trapped, generational) — bears enforcement intensity asymmetry",
+      "harm_reduction_advocates: excluded voice (moderate/constrained) — argues for a different reading, structurally sidelined from enforcement policy setting"
+    ],
+    "logic_rationale": "Extractiveness is high (0.81 at interval end) because the constraint moves liberty and income from a powerless, trapped population to institutional actors whose budgets and revenue scale directly with enforcement volume — this is not incidental cost but a structural transfer. Suppression is even higher (0.87) because the constraint's persistence depends on active criminal enforcement, asset seizure, and incarceration infrastructure, not on voluntary compliance. Accessibility collapse is comparatively low (0.38) because genuine policy alternatives (decriminalization, harm reduction, legalization) are visibly live in public debate and adopted in some jurisdictions — the constraint has not achieved the near-total alternative foreclosure a mountain would show. Resistance is substantial (0.72), reflecting decades of organized advocacy, litigation, and jurisdictional reform pressure against the punitive framing.",
+    "directionality_logic": "Law enforcement agencies, private prison operators, forfeiture units, and the drug testing industry sit near the beneficiary end of directionality: their revenue and institutional mandate scale with enforcement volume, and their exit options are arbitrage-grade (they can redirect resources but rarely bear personal cost from the regime they administer). Substance users, low-income defendants, and affected communities sit near the full-target end: trapped exit options, powerless structural position, and direct bearing of the criminal liability the constraint imposes. Politicians benefit electorally while bearing almost none of the downstream cost, which is why their exit options are coded mobile rather than arbitrage-grade — they can shift rhetoric but do not extract direct institutional revenue the way agencies and contractors do.",
+    "mandatrophy_analysis": "The founding problem — a perceived moral threat requiring punitive suppression — is contested rather than settled dead or clearly live: enforcement leadership maintains the moral-threat framing is still operative, while multiple government commissions and independent researchers have found punitive enforcement does not reduce use rates and instead generates the incarceration and black-market violence costs now observed externally. This mismatch (contested founding problem status against a disappearance_verdict of world_rearranges) is exactly the signal the mandatrophy check exists to surface: an arrangement whose original justification is empirically undermined but whose institutional beneficiaries have strong incentive to maintain the original framing regardless.",
+    "perspectival_gap": "From the enforcement-agency seat, this reading is a legitimate exercise of coercive state authority protecting social order — a rope defending a real moral consensus. From the substance-user and affected-community seats, the identical structure operates as extraction: criminal liability imposed on behavior that in the sibling readings would be treated as a health condition or a liberty matter. The engine computes this divergence from the declared power/exit/beneficiary structure; the claimed_type of tangled_rope reflects the authoring seat's judgment that both a genuine (if contested) coordination function and asymmetric extraction are structurally present, requiring active enforcement to hold — not a reconciliation of the metrics to the claim.",
+    "kernel_context": "This constraint instantiates the prohibition_reading of the substance_control_kernel. The kernel's shared object is the state's stance toward substance use; this reading holds that use is a moral transgression against social order warranting criminal punishment. The harm_reduction_reading (a sibling constraint, not this one) holds instead that use is a health condition warranting pragmatic intervention independent of cessation — under that reading users are patients, not offenders, and ε is authored much lower. The legalization_reading (also a sibling constraint) holds that use is an individual liberty matter bounded only by third-party harm and externality capture — under that reading the state's coercive posture toward users largely disappears and the victim set shrinks to third-party harm cases only. All three readings are authored as separate constraint stories linked via network.affects_constraints, each with its own ε, beneficiary/victim structure, and classification."
+  },
+  "omegas": [
+    {
+      "id": "moral_consensus_vs_manufactured_consensus",
+      "question": "Is the moral-transgression framing a genuine, durable social consensus that the state is enforcing on behalf of a real coordination demand, or is it a framing actively manufactured and sustained by the institutions (enforcement agencies, private prisons, forfeiture units) that profit from its persistence?",
+      "resolution_mechanism": "Comparative analysis of public opinion polling on substance-use framing across jurisdictions that have decriminalized versus those that have not, cross-referenced with lobbying expenditure and campaign contribution data from enforcement-adjacent industries in maintaining punitive statutes.",
+      "impact": "If the moral consensus is substantially manufactured/sustained by beneficiary lobbying rather than organic public demand, the coordination function claimed for this reading is weaker than authored and the constraint tilts further toward snare; if the moral consensus is genuinely broad-based and independent of institutional lobbying, the tangled_rope classification (real coordination plus extraction) is better supported.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the prohibition reading's moral-order coordination claim is organic or institutionally manufactured."
+    },
+    {
+      "id": "kernel_reading_selection_mechanism",
+      "question": "What structural or political mechanism determines which reading of the substance_control_kernel (prohibition, harm_reduction, legalization) a given jurisdiction adopts at a given time, and how much of that selection is path-dependent on prior enforcement infrastructure investment rather than fresh evaluation of outcomes?",
+      "resolution_mechanism": "Longitudinal comparative policy analysis tracking jurisdictions that have shifted between readings (e.g., cannabis decriminalization/legalization waves, Portugal's 2001 decriminalization) and the sunk-infrastructure factors present or absent at the point of transition.",
+      "impact": "If reading selection is strongly path-dependent on existing enforcement infrastructure (sunk cost lock-in), this supports treating the prohibition reading's persistence as partly inertial/institutional rather than purely a live moral judgment being freshly re-affirmed; this would strengthen a piton-adjacent reading of the enforcement apparatus specifically, distinct from the tangled_rope reading of the constraint as a whole.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether jurisdictional reading-selection is driven by fresh evaluation or infrastructure lock-in."
+    },
+    {
+      "id": "racial_disparity_intent_vs_effect",
+      "question": "Is the disproportionate enforcement burden on racial minority communities a designed feature of the prohibition reading's operation, or an unintended structural effect of otherwise race-neutral enforcement priorities interacting with pre-existing socioeconomic geography?",
+      "resolution_mechanism": "Historical legislative record analysis (statements of intent at time of key statute passage) combined with statistical analysis of enforcement patterns controlling for usage-rate parity across demographic groups.",
+      "impact": "If disparate impact is traceable to demonstrable discriminatory intent in the reading's historical construction, this strengthens the snare-adjacent extraction reading for that specific victim class; if it is a structural effect without traceable intent, the tangled_rope classification's coordination-function claim survives more intact for that population, though the harm remains equally real.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether racially disparate enforcement outcomes reflect designed intent or structural effect."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_kernel__harm_reduction_reading",
+      "substance_control_kernel__legalization_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the substance_control_kernel, decomposed per the ε-invariance principle because the natural-language concept 'drug policy' or 'the state's stance toward substance use' conflates structurally distinct claims with different ε values, different beneficiary/victim structures, and different classifications. The prohibition_reading authors ε=0.81 (substantially extractive, tangled_rope) because users are criminalized and an enforcement/corrections apparatus becomes a concentrated institutional beneficiary. The harm_reduction_reading and legalization_reading are separate constraint stories with their own authored ε, beneficiaries, and victims, linked here via affects_constraints. The prohibition reading structurally influences the sibling readings by consuming enforcement budget and political capital that could otherwise fund harm-reduction infrastructure, and by generating a criminal-record population that legalization reforms must subsequently address (expungement, record-sealing) — an upstream/downstream pressure relationship rather than a logical foreclosure."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "substance_use_is_moral_transgression_against_social_order",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_punishment_is_necessary_and_proportionate_response_to_use",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "criminalization_as_moral_order_enforcement",
+    "drift_state": {
+      "moment": "contemporary_post_mass_incarceration_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "law_enforcement_agencies",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

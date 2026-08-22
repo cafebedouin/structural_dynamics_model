@@ -1,0 +1,287 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__near_miss_as_bridge",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "3ce00764-22a2-4926-97f7-85b8709e8778"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Near-Miss Investigation as Bridge Between Simulation and Catastrophe for Competence Retention",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "operating_crews",
+      "safety_investigation_units",
+      "regulatory_oversight_bodies",
+      "simulator_curriculum_designers"
+    ],
+    "victims": [
+      "frontline_reporting_staff"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "operating_crews",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Rely on simulator training that stays current because near-miss reports feed new failure modes back into scenario design. Their competence is tested against situations that actually occurred, not just designer imagination. They cannot personally choose whether a catastrophe happens to validate their training, but they can and do generate the near-miss reports that keep the loop live."
+    },
+    {
+      "name": "safety_investigation_units",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Run the near-miss reporting and investigation apparatus: collect incident reports, extract causal chains, and translate findings into simulator curriculum updates. They administer the bridge between real-world minor failure and rehearsed competence, and could in principle let the near-miss channel atrophy in favor of pure simulation or wait-for-disaster postures."
+    },
+    {
+      "name": "regulatory_oversight_bodies",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Certify that training programs remain valid without demanding proof of catastrophic exposure. The near-miss bridge gives them an evidentiary basis for competence claims that does not require waiting for or causing disasters, which is what makes ongoing certification politically and ethically viable."
+    },
+    {
+      "name": "simulator_curriculum_designers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Depend on a steady supply of real incident data to keep scenarios from calcifying into stale, gameable set-pieces. Without near-miss inputs their simulators drift toward theater; with them, the training stays anchored to actual system behavior. Their professional value rests on the bridge holding."
+    },
+    {
+      "name": "frontline_reporting_staff",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the exposure of self-reporting near-misses that could be read as personal error, in blame-retaining cultures, even when the formal system claims non-punitive reporting. They do the labor that makes the whole bridge function, and carry disproportionate career risk if the promised protections are not honored in practice."
+    },
+    {
+      "name": "catastrophe_as_necessary_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Hold that only actual catastrophic failure produces the organizational learning and visceral stakes competence retention requires; they are not administering this bridge system and their view that near-miss data is a pale substitute for real disaster does not enter the operational decision loop, though it surfaces in post-incident debate."
+    },
+    {
+      "name": "simulation_as_sufficient_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Hold that high-fidelity simulation alone is structurally equivalent to real events and that near-miss integration is unnecessary overhead; they compete for training budget and design authority against the hybrid bridge model this constraint describes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the maintenance of operational competence across a workforce that cannot ethically or practically be exposed to real catastrophes for training purposes, by channeling minor real-world failures into simulator curriculum revision — closing the gap between rehearsal and reality without requiring disaster.",
+    "transfer_function": "Moves informational value from frontline incident-reporting labor (who generate the raw near-miss data, often at personal exposure) to curriculum designers, investigation units, and ultimately the wider operating workforce and regulators who benefit from validated, current training.",
+    "absent_voices": "Advocates of the catastrophe-as-necessary view argue the bridge is a comfortable fiction that lets institutions claim competence without paying its real cost; advocates of simulation-as-sufficient argue the near-miss channel is unnecessary friction. Neither faction administers the reporting-to-curriculum pipeline and both are structurally outside the operational decision loop this constraint describes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If near-miss investigation and integration vanished, simulator curricula would drift toward designer assumption and stale scenario libraries, competence certification would either revert to catastrophe-dependent validation or become unmoored from real failure modes, and frontline reporting incentives would collapse since there would be no downstream use for the reports.",
+    "founding_problem": "Organizations needed a way to validate and continuously update rehearsal-based training without waiting for, or causing, an actual catastrophic failure — the founding problem was closing the credibility gap between simulated competence and demonstrated real-world competence.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent aviation and nuclear-industry safety researchers outside the certifying bodies and outside the curriculum-design firms attest that near-miss-informed training updates measurably track real system failure modes better than simulation alone; this corroboration comes from academic human-factors literature and cross-industry incident databases, not solely from the investigation units or regulators who benefit from the arrangement."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.18
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In high-reliability domains (aviation, nuclear power, chemical process safety), the question of what validates ongoing competence training is contested. This constraint instantiates the 'near-miss as bridge' reading: near-miss incidents and minor failures, actively investigated and fed back into simulator curricula, provide sufficient real-world grounding to keep training valid without requiring catastrophic events. This is distinct from a pure simulation-sufficiency reading (which claims simulation alone is structurally equivalent to reality) and from a catastrophe-necessity reading (which claims only actual disaster produces genuine learning). The near-miss bridge reading treats catastrophe as neither necessary nor sufficient — the real epistemic work is done by disciplined investigation and integration of sub-catastrophic events.",
+    "key_agents": [
+      "operating_crews: beneficiaries of validated training, also the source of near-miss data",
+      "safety_investigation_units: agenda-setters administering the reporting-to-curriculum pipeline",
+      "regulatory_oversight_bodies: beneficiaries who certify competence without demanding catastrophic proof",
+      "simulator_curriculum_designers: beneficiaries whose scenario libraries depend on real incident input",
+      "frontline_reporting_staff: payers bearing personal exposure risk from self-reporting"
+    ],
+    "logic_rationale": "Extraction is low-moderate (0.28) and rises only slightly over the interval: the coordination function (keeping training current) is real and dominant, but a genuine cost is borne by frontline reporters whose incident disclosures can be used against them despite formal non-punitive-reporting policies — this is the source of the small but real extraction and victim declaration. Suppression is low (0.22) because reporting is generally voluntary and alternatives (withholding reports, informal workarounds) are not systematically blocked, though career risk creates some chilling effect. Theater ratio is low and rises slowly (0.10 to 0.18) reflecting a mild drift toward compliance-oriented reporting rituals as programs mature, but the function remains substantially real. Accessibility collapse is moderate (0.35): once understood, the reporting-to-curriculum pipeline is hard for an individual reporter to route around, but organizational alternatives (whistleblower channels, union grievance processes) persist. Resistance is moderate (0.4), consistent with genuine but contained friction from reporting staff and from rival curriculum-design factions.",
+    "directionality_logic": "Operating crews, investigation units, regulators, and curriculum designers all sit toward the beneficiary end: the arrangement subsidizes their competence claims, certification legitimacy, and professional relevance respectively. Frontline reporting staff sit closer to the target end: they generate the raw material the whole bridge depends on, at personal risk, with constrained exit (their livelihood depends on continuing to work in the reporting system) — this asymmetry is what grounds the victim declaration despite the constraint's overall low extraction.",
+    "perspectival_gap": "From the investigation unit and regulator seats, this is straightforwardly rope: a low-coercion coordination mechanism that lets competence be validated ethically. From the frontline reporting seat, the same mechanism can register as quietly extractive — labor and exposure without matching protection — even though the aggregate extraction score stays low. The engine should show this seat divergence: institutional seats near full beneficiary, frontline seat pulled toward the target end despite the constraint's generally benign profile.",
+    "mandatrophy_analysis": "The founding problem (closing the credibility gap between rehearsal and reality without catastrophe) remains live per corroborating academic and cross-industry evidence, which is why this is not treated as mandatrophy — the near-miss bridge is still doing real work, not merely performing it. Should independent corroboration later show curriculum updates no longer track real incident patterns (rising theater_ratio, stagnant reporting quality), that would be the signal the bridge has degraded toward pure ritual.",
+    "kernel_context": "This constraint instantiates the 'near_miss_as_bridge' reading of the competence_retention_exercise kernel. It is distinct from the 'simulation_as_sufficient' reading (which claims high-fidelity rehearsal alone is structurally equivalent to real events, requiring no near-miss channel) and the 'catastrophe_as_necessary' reading (which claims only actual disaster produces the visceral stakes competence retention needs). This reading's structural claim is that catastrophe is neither necessary nor sufficient: near-miss investigation, actively integrated into simulator design, is the load-bearing mechanism. Each reading is authored as its own constraint story with its own ε and stakeholder structure; this file does not average or hedge across them."
+  },
+  "omegas": [
+    {
+      "id": "near_miss_sufficiency_ambiguity",
+      "question": "Is near-miss data actually sufficient to capture the full space of catastrophic failure modes, or does it systematically under-sample low-frequency, high-severity tail events that only manifest in actual disasters?",
+      "resolution_mechanism": "Comparative analysis of post-catastrophe root-cause findings against pre-catastrophe near-miss investigation records in the same domain: if the catastrophe's causal chain was already visible in near-miss data, the bridge reading is supported; if the causal chain was novel and absent from near-miss records, the catastrophe-necessity reading gains ground.",
+      "impact": "If near-miss data systematically misses tail-risk causal chains, this constraint's claimed sufficiency is overstated and the classification should shift toward acknowledging a residual dependency on catastrophe exposure that the near-miss bridge cannot substitute for.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether near-miss data captures the full distribution of failure modes or only the more frequent, lower-severity tail."
+    },
+    {
+      "id": "reporting_culture_authenticity",
+      "question": "Is the frontline non-punitive reporting protection genuinely honored in practice across the organizations that rely on this bridge, or is it a formal policy that is quietly violated when politically convenient?",
+      "resolution_mechanism": "Track disciplinary and career outcomes for reporting staff following near-miss disclosures, compared against the formal non-punitive-reporting policy commitments, across multiple organizations and over time.",
+      "impact": "If protection is frequently violated, the frontline_reporting_staff victim declaration is understated and effective extraction (and suppression) on that seat is higher than the low aggregate suppression score suggests — the constraint would drift toward tangled_rope at that seat even while remaining rope in aggregate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-punitive reporting protections for frontline staff are actually honored or only nominally declared."
+    },
+    {
+      "id": "committer_reading_selection_ambiguity",
+      "question": "Is the choice of 'near_miss_as_bridge' over its sibling readings ('simulation_as_sufficient' and 'catastrophe_as_necessary') itself contestable within a single organization's actual practice, or do organizations cleanly self-sort into one reading?",
+      "resolution_mechanism": "Survey of actual training-validation criteria used across high-reliability organizations: do they explicitly rely on near-miss integration as load-bearing, treat simulation alone as sufficient, or implicitly wait for disaster to trigger major curriculum overhaul?",
+      "impact": "If most organizations in practice operate a hybrid that leans more heavily on one sibling reading than declared policy admits, the near_miss_as_bridge reading may be aspirational rather than descriptive for a subset of the domain, which would require decomposing this story further by sub-domain rather than treating it as a single clean reading.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the near-miss-as-bridge reading is a clean structural description or an aspirational policy claim that masks reliance on sibling readings in practice."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__simulation_as_sufficient",
+      "competence_retention_exercise__catastrophe_as_necessary"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the competence_retention_exercise kernel, decomposed per the epsilon-invariance principle because the three readings assign structurally different sufficiency conditions (and different implied ε) to the same underlying question of what validates competence retention. The near_miss_as_bridge reading claims a hybrid mechanism with low-moderate extraction and a narrow but real victim class (frontline reporters); the simulation_as_sufficient reading would claim negligible extraction (pure rope, no catastrophe or near-miss dependency); the catastrophe_as_necessary reading would claim high extraction (dependency on disaster exposure imposes costs on those exposed to or caught in catastrophic events). Each is authored as its own file with its own stakeholders and ε."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_sufficient",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "catastrophe_as_necessary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sub_catastrophic_feedback_is_epistemically_adequate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "catastrophe_exposure_is_neither_necessary_nor_sufficient_for_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_disaster_reactive_training_model",
+    "drift_state": {
+      "moment": "contemporary_high_reliability_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "header": {
+    "constraint_id": "exercise_as_competence_maintenance__simulation_sufficiency_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "f3004a61-73cc-43ff-b64f-3da991c09adb"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Sufficiency Reading of Exercise-Based Competence Maintenance",
+    "topic_domain": "safety_engineering/organizational_learning/crisis_preparedness",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulatory_compliance_officers",
+      "simulator_vendors",
+      "training_department_leadership"
+    ],
+    "victims": [
+      "frontline_operators_undertrained_by_low_fidelity_drills",
+      "downstream_public_exposed_to_real_incidents"
+    ],
+    "vindicated_propositions": [
+      "drill_completion_equals_competence_maintained"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_compliance_officers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Write and enforce the drill-frequency and pass/fail criteria that define regulatory compliance. Their job is discharged when the logged exercise is completed to spec; they have no mandate or budget line to evaluate whether the simulated scenario resembles a real one closely enough to transfer skill."
+    },
+    {
+      "name": "simulator_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sell certified simulation platforms and scenario packs. Revenue depends on the regulatory reading that simulated exercise satisfies the competence requirement; a shift toward requiring real-incident exposure or radically higher-fidelity (and thus more expensive, harder-to-certify) simulation would restructure their market."
+    },
+    {
+      "name": "training_department_leadership",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Run the internal drill programs, report completion rates upward, and are evaluated on throughput and compliance metrics rather than on operator performance during real incidents. They administer the constraint and could push for fidelity investment, but the cost of doing so falls on their own budget while the benefit of catching fidelity gaps accrues to operators and the public they rarely meet."
+    },
+    {
+      "name": "frontline_operators_undertrained_by_low_fidelity_drills",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Complete the mandated drills, are certified as competent on that basis, and then face real incidents where the simulated scenario's simplifications (timing, sensory load, ambiguity, consequence-weight) did not prepare them for what actually happens. They cannot decline the drill regime without losing certification, and have no channel to contest the fidelity standard itself."
+    },
+    {
+      "name": "downstream_public_exposed_to_real_incidents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Are the people present when an operator's simulation-certified competence proves insufficient in the real event — passengers, patients, residents near the facility. They have no visibility into drill fidelity and no standing to demand it be raised; they experience the gap only as outcome, after the fact."
+    },
+    {
+      "name": "incident_investigators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Conduct post-incident reviews and can trace failures back to gaps between drill scenarios and the real event, but their findings enter a system that treats drill completion as the operative competence standard regardless of what the review shows."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a repeatable, auditable, scalable mechanism for verifying and refreshing operator competence without waiting for or manufacturing real catastrophes, which would be far more costly and dangerous to use as the training vehicle.",
+    "transfer_function": "Moves the cost of competence verification from expensive real-world exposure onto simulation infrastructure spend, while moving the residual risk of any fidelity shortfall onto operators (who are certified but may remain under-prepared) and the public who encounters them during real incidents.",
+    "absent_voices": "Frontline operators who have experienced the fidelity gap directly rarely have a formal channel into standard-setting; incident investigators' fidelity findings enter the record but do not automatically revise the compliance definition of competence.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If simulated-exercise-as-sufficient-proof were withdrawn overnight, regulators would need an alternative competence standard, simulator vendors would lose their certification market, training departments would need new metrics, and organizations would face either far higher training costs (real-incident exposure or radically upgraded fidelity) or a genuine competence gap becoming visible rather than papered over by compliance metrics.",
+    "founding_problem": "Real catastrophes are too rare, too dangerous, and too costly to use as the primary vehicle for maintaining operator competence at scale; simulation was built to let organizations exercise and verify competence repeatedly without waiting for or causing real disasters.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Simulator vendors and training leadership attest the founding problem is fully addressed by current drill regimes. Incident investigators and independent safety researchers outside the training and vendor ecosystem attest that fidelity gaps between drills and real events recur in post-incident findings, suggesting the founding problem (real transferable competence) is only partially solved by the current standard, even though the compliance proxy (drill completion) is fully solved."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models the regulatory and organizational arrangement built on the claim that simulated catastrophe is a genuine exercise of the competence kernel — not a substitute for it, but the real thing, with retention effectiveness determined by simulation fidelity. Under this reading, drill completion against certified scenario packs is treated as sufficient evidence of maintained competence: pass the simulator, you are certified competent, full stop. The claim has a real coordination function (competence verification at scale without manufacturing real disasters) but the metrics track a growing gap between what the compliance standard verifies (drill completion) and what it is presented as verifying (transferable real-world competence), while enforcement (regulatory mandate + certification gatekeeping) holds the reading in place regardless of accumulating fidelity-gap evidence from incident investigations.",
+    "key_agents": [
+      "regulatory_compliance_officers: agenda_setter (institutional/analytical) — writes and enforces the sufficiency standard",
+      "simulator_vendors: beneficiary (organized/mobile) — commercial interest in simulation-as-sufficient",
+      "training_department_leadership: beneficiary/agenda_setter (organized/constrained) — administers drills, reports compliance metrics upward",
+      "frontline_operators_undertrained_by_low_fidelity_drills: payer (moderate/constrained) — certified but potentially under-prepared",
+      "downstream_public_exposed_to_real_incidents: payer (powerless/trapped) — bears the tail risk of the fidelity gap",
+      "incident_investigators: observer (institutional/analytical) — documents but cannot revise the standard"
+    ],
+    "logic_rationale": "Extraction (0.42 at interval end, rising from 0.28) tracks the growing divergence between the compliance proxy (drill completion) and the underlying competence it claims to certify — a Goodhart-style drift where the metric substitutes for the goal it was meant to measure. Suppression (0.38, mild) reflects the mandatory nature of the drill regime and the limited channels for contesting fidelity standards, but this is not a high-coercion constraint: participants are not trapped in an obviously exploitative arrangement, they are trapped inside a proxy that looks adequate until it fails. Theater ratio (0.40, rising from 0.20) captures the increasing share of drill activity oriented toward passing the certified metric rather than building transferable skill — a slow institutional drift toward performance as fidelity investment lags compliance requirements. Accessibility collapse (0.45) is moderate: alternative approaches (higher-fidelity investment, hybrid real-incident exposure) remain conceptually available but are foreclosed in practice by cost and regulatory lock-in to the existing standard. Resistance (0.50) is real — incident investigators and some operators do push back on fidelity adequacy — but has not yet forced standard revision.",
+    "directionality_logic": "Regulatory compliance officers and simulator vendors sit near the beneficiary end: the reading's sufficiency claim is precisely what makes their function/product adequate by definition, low or no exit cost to them if fidelity gaps surface elsewhere. Training leadership benefits from the compliance metric it is evaluated on while bearing some administrative burden — a mixed beneficiary/agenda_setter position, constrained exit because career and budget structures are built around the existing drill regime. Frontline operators and the downstream public sit near the target end: they bear the consequence of any real fidelity shortfall while having no standing to redefine what counts as adequate exercise. The public's powerless/trapped position is the sharpest asymmetry — they receive no certification, no drill, no voice, only the tail-risk outcome.",
+    "perspectival_gap": "From the regulatory/training seats, this looks like a functioning rope: a real coordination problem (verifying competence without real disasters) solved by an auditable mechanism. From the frontline-operator and public seats, the same structure can look like a tangled rope or worse: coordination on paper, but the enforcement of a proxy standard that has decoupled from what it certifies, with the decoupling cost landing on people who didn't design the standard and can't revise it. The engine's per-seat computation should reflect this: agenda_setter and beneficiary seats classify closer to rope/coordination; payer seats closer to tangled_rope/snare given low exit and the growing extraction trend.",
+    "mandatrophy_analysis": "The founding problem — verifying competence at scale without relying on real catastrophe — remains genuinely live; simulation-based verification is not obsolete machinery. What has drifted is the sufficiency claim layered on top: the founding problem was 'verify competence,' and the arrangement has substituted 'verify drill completion' as though the two were identical. This is not mandatrophy in the classic sense (mandate fully dead, arrangement purely inertial) — it is a live coordination function with an accumulating extraction layer riding on it, which is why tangled_rope rather than piton or snare is the structurally accurate claim.",
+    "kernel_context": "This story instantiates the simulation_sufficiency_reading of the exercise_as_competence_maintenance kernel: it holds that simulated catastrophe IS genuine exercise of the competence kernel, with fidelity (not real-stakes activation) as the operative variable determining retention. Sibling readings — lived_catastrophe_necessity_reading (only real catastrophe exercises the kernel; simulation is mere rehearsal) and hybrid_decay_reading (simulation exercises procedural competence but not judgment-under-stakes, a two-component kernel) — are separate constraints with their own ε, victim sets, and stakeholder structures, linked via network.affects_constraints. This reading's victim set is deliberately narrow: only those harmed by INADEQUATE FIDELITY, not by the absence of real-stakes exposure per se, since this reading denies that real-stakes exposure is a separate requirement at all."
+  },
+  "omegas": [
+    {
+      "id": "fidelity_ceiling_ambiguity",
+      "question": "Is there a fidelity ceiling beyond which simulation genuinely becomes equivalent to real catastrophe exercise for competence-retention purposes, or does simulation asymptotically approach but never reach equivalence regardless of investment?",
+      "resolution_mechanism": "Longitudinal comparison of operator performance in real incidents against documented drill fidelity levels, controlling for incident type and operator tenure; convergence of high-fidelity-drill performance with real-incident performance would support the sufficiency reading's core premise.",
+      "impact": "If a fidelity ceiling exists at which simulation genuinely equals real exercise, this reading is vindicated as structurally correct and the extraction found here is remediable purely by fidelity investment (making this closer to a genuine rope with fixable friction). If no such ceiling exists, this reading's foundational premise is wrong and the arrangement is better described by the hybrid_decay_reading or lived_catastrophe_necessity_reading, reclassifying the persistent extraction as irreducible rather than a fidelity-investment problem.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether simulation fidelity can in principle reach parity with real-catastrophe exercise for competence retention."
+    },
+    {
+      "id": "committer_framing_alternative",
+      "question": "Is the correct unit of analysis 'the drill mandate as administered' (this story's framing) or 'the underlying claim about what constitutes genuine exercise of a competence kernel' (a framing shared across all three sibling readings, which would treat this story's tangled_rope classification as itself downstream of a contested epistemic premise rather than a free-standing structural fact)?",
+      "resolution_mechanism": "Compare classification outcomes if the story were authored around the contested epistemic claim itself (is simulated activation ontologically the same kind of event as real activation) versus around the administrative arrangement (how drills are mandated and certified). If the two framings produce different claimed types, the disagreement is located in the definition of 'genuine exercise,' not in the administrative facts.",
+      "impact": "If the epistemic-claim framing dominates, this story's tangled_rope reading is better understood as an artifact of accepting the sufficiency premise as a background assumption; under the epistemic framing the constraint could shift toward snare (extraction dressed as a settled competence claim) if the sufficiency premise is judged false, or toward rope if judged true.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alternative framings of the kernel dispute produce different classification pressure; this omega documents which framing was chosen and why."
+    },
+    {
+      "id": "compliance_proxy_drift_trajectory",
+      "question": "Is the observed rise in theater_ratio and base_extractiveness over the measured interval a stable equilibrium drift (proxy substitution settling at a tolerable level) or an accelerating trend that will eventually force standard revision via accumulated incident evidence?",
+      "resolution_mechanism": "Extend the measurement series and track whether incident-investigation findings begin to visibly move the regulatory standard, or whether the drift plateaus without triggering revision.",
+      "impact": "An accelerating, unaddressed trend would support reclassification toward snare over time (T17-style extraction accumulation on a mountain-adjacent coordination claim); a plateauing trend supports the tangled_rope reading as a stable, if imperfect, equilibrium.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the compliance-proxy drift is stabilizing or accelerating."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "exercise_as_competence_maintenance__lived_catastrophe_necessity_reading",
+      "exercise_as_competence_maintenance__hybrid_decay_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the exercise_as_competence_maintenance kernel, decomposed per the ε-invariance principle: measuring 'exercise-based competence maintenance' by the sufficiency-of-simulation observable yields a different ε (0.42, moderate, rising) than measuring it by the real-stakes-necessity observable (expected much higher for lived_catastrophe_necessity_reading, since under that reading nearly all drill-certified competence claims are false) or the two-component observable (hybrid_decay_reading, expected intermediate, since procedural competence is genuinely exercised while judgment-under-stakes is not). Each reading gets its own file, own stakeholders, own victim set; this file's victim set is narrowly the fidelity-gap-harmed, not the broader real-stakes-gap-harmed set that the lived_catastrophe_necessity_reading would name."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "lived_catastrophe_necessity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_decay_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulated_activation_is_genuine_kernel_exercise",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "fidelity_is_the_sole_retention_determinant",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_war_civil_defense_drill_paradigm",
+    "drift_state": {
+      "moment": "contemporary_high_fidelity_simulator_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

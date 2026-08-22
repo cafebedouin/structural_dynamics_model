@@ -1,0 +1,414 @@
+{
+  "header": {
+    "constraint_id": "fair_use_statutory_exception__narrow_defense_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_fair_use_narrow_defense",
+    "story_uid": "da0b380d-33fe-4df7-aa4a-bd557eba0bc9"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.68,
+    "theater_ratio": 0.29,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fair Use as Narrow Affirmative Defense (Copyright-as-Property Reading)",
+    "topic_domain": "intellectual_property/legal_interpretation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "copyright_holders",
+      "professional_licensing_markets"
+    ],
+    "victims": [
+      "reusers_without_market_access",
+      "transformative_creators_under_market_threat"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "copyright_holders",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "situation": "Own exclusive rights to creative works and control licensing decisions. Shape fair use doctrine through litigation strategy, expert testimony, and statutory advocacy. Benefit directly from narrow fair use because it expands licensing demand. Can exit the constraint entirely (they own the copyrights); their directionality (d ≈ 0.08) reflects full beneficiary status."
+    },
+    {
+      "name": "educational_institutions",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Use copyrighted materials extensively for teaching, research, and library functions. Face escalating licensing costs and copyright claims even for uses (like course-pack copying) that were once tolerated. Benefit from access to published works but are constrained by licensing agreements and fear of infringement liability. Cannot exit without abandoning educational mission."
+    },
+    {
+      "name": "reusers_without_market_access",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "Include academic researchers, student creators, remix artists, and low-income reusers who want to build on copyrighted material but cannot afford licensing. Suppressed by legal uncertainty, litigation risk, and inability to mount a fair use defense. Identity as creators, scholars, or cultural producers is fused with the ability to engage with existing copyrighted works; exit means abandoning the field. Directionality override (d ≈ 0.92) reflects near-total target status."
+    },
+    {
+      "name": "transformative_creators_under_market_threat",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Make parodies, critiques, transformative remixes, and derivative art that build on copyrighted originals. Under the narrow reading, their work is fair use only if it does not compete with any market the original copyright holder might develop. If the derivative work is successful, that success is used as evidence of market substitution and unfairness. Face a paradox: prove the work is transformative (valuable) without proving it competes (harmful)."
+    },
+    {
+      "name": "commercial_reusers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Include search engines, data aggregators, AI training companies, and software firms that build services or products using copyrighted content. Under the narrow reading, commercial nature is often determinative against fair use, regardless of transformativeness or public benefit. Many can afford licensing and are channeled into licensing markets. Those that cannot (e.g., training data for AI models not explicitly licensed) face high litigation risk."
+    },
+    {
+      "name": "courts_applying_fair_use",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Apply the statutory four-factor test to infringement disputes. Under the narrow reading, they weight commercial use heavily, treat market harm broadly (including hypothetical licensing markets), and often presume copyright holders' framing of market value without requiring empirical evidence. Sit between copyright holders (who frame cases to support narrow fair use) and reusers (who argue for broader exceptions)."
+    },
+    {
+      "name": "public_domain_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue for shorter copyright terms, broader fair use, and a robust public domain where works can be freely reused. Excluded from the doctrine's framing because they contest the underlying premise (that market value preservation should be the primary goal). Must persuade legislators to change the statute rather than courts to reinterpret it under current doctrine."
+    },
+    {
+      "name": "library_preservation_institutions",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Preserve digital and physical collections for posterity, including copyrighted works. Face legal uncertainty about preservation copying, format-shifting, and archival access. Benefit from copyright-protected works in their collections but are suppressed by the narrow reading's restriction on preservation uses not explicitly licensed. Cannot exit without abandoning their preservation mission."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a licensing marketplace where copyright holders can control and monetize reuse of their creative works. Users negotiate terms or seek permission; publishers invest in creation and distribution knowing they own exclusive rights. The system coordinates who can use what, at what cost, and under what conditions, solving the collective-action problem of how to fund creative work while permitting some derivative uses.",
+    "transfer_function": "Transfers the right to copy, distribute, display, or perform copyrighted material from copyright holders to licensees, typically for a fee. Under the narrow fair use reading, the copyright holder's permission is required for most uses except those with zero market harm to their licensing demand. The constraint channels reusers into licensing markets or into suppression (non-use).",
+    "absent_voices": "Transformative reusers, educational institutions, researchers, library systems, and creative communities that depend on access to existing works without per-use licensing are structurally excluded from the doctrine's framing. They must prove their case defensively (that their use is fair) rather than affirmatively (that their use should be permitted). Public-domain advocates who argue copyright terms are too long and fair use too narrow are excluded from the statutory interpretation; they must change the law through legislation, not through doctrine.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this narrow fair use doctrine were replaced by a broader or transformative-centered doctrine, the licensing market would contract sharply. Uses currently requiring licenses (or suppressed due to legal uncertainty) would become permissible without fees. Copyright holders would lose licensing revenue or be forced to develop new business models. Reusers, educators, and transformative creators could build derivative works without permission. The allocation of control over secondary markets and cultural production would shift dramatically toward reusers.",
+    "founding_problem": "Early copyright doctrine protected copyright holders from rampant unauthorized copying but risked blocking legitimate reuse, commentary, and scholarship. Fair use was enacted as a safety valve to allow uses that served public purposes (criticism, education, parody) without requiring permission or payment.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Copyright holders argue the founding problem persists: digital copying is effortless and copyright enforcement must remain strict to preserve incentives for creation. Opposing scholars, librarians, technologists, and some judges argue the founding problem has been solved and inverted: copyright is now so strictly enforced that fair use no longer functions as a meaningful check on copyright monopoly. Legislative and academic testimony from outside the copyright-holder set supports the inverted-problem reading. Economic studies show that current fair use doctrine rarely permits reuse even when social benefit exceeds private cost to copyright holders."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.81
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Fair use is a statutory exception to copyright infringement, enacted as an affirmative defense. This constraint models ONE READING of fair use: the narrow-defense reading, which treats copyright primarily as property and fair use as a narrow exception that must not erode the copyright holder's market value. Under this reading, commercial uses are disfavored, transformative value is underweighted in the four-factor test, and the burden falls on the defendant to prove no market harm. The constraint's operation is substantially extractive: most unauthorized uses require licensing or face infringement liability; reusers without market access or legal resources are suppressed; and the doctrine preserves the copyright holder's control over derivative and secondary markets. This reading coexists with two sibling readings (transformative-right reading, market-licensing reading) that instantiate structurally different constraints with different ε values and victim structures. The claim and metrics are intentionally independent: claimed as tangled_rope (coordination + extraction), authored as highly extractive (0.81) and increasingly so over time.",
+    "key_agents": [
+      "copyright_holders: agenda-setting beneficiaries (institutional power); shape doctrine, control licensing, benefit from narrow fair use",
+      "educational_institutions: dual-positioned payers and minor beneficiaries (organized power); constrained exit; face escalating licensing demands",
+      "reusers_without_market_access: powerless victims (identity_locked exit); suppressedly excluded from reuse unless they can bear litigation costs",
+      "transformative_creators: moderate-power payers (constrained exit); face doctrine that treats success as evidence of unfairness",
+      "courts_applying_fair_use: institutional observers (analytical power); apply the four-factor test under this reading's framework"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.62 to 0.81 over the interval (t0 to t40) as the doctrine's application hardened, licensing markets expanded, and courts increasingly treated commercial use and market substitution as determinative. The theater ratio stays low (0.12 to 0.29) because the constraint's core function—routing reuses into licensing markets—is genuinely operational, not theatrical; the performative element is the court's framing of narrow fair use as a balance when it increasingly favors copyright holders. Suppression is moderate-high (0.54 to 0.68) and rising because reusers face three suppressive forces: (1) legal uncertainty—fair use claims are expensive to litigate and outcomes are unpredictable under the narrow reading; (2) technical suppression—DRM and contractual lock-in prevent reuse even where fair use might apply; (3) market suppression—reusers without market access cannot afford licensing and cannot mount a credible fair use defense because commercial nature is presumptively unfair. Accessibility collapse is high (0.72): alternatives (seeking permission, waiting for public domain, building on non-copyrighted materials) are real but limited; the constraint effectively narrows the design space for derivative works.",
+    "perspectival_gap": "The agenda-setter (copyright holders) sees narrow fair use as legitimate copyright protection; the constraint enforces their property right and preserves the licensing market. Powerless reusers see it as a tool of exclusion and a brake on cultural production. Courts sit in the middle but tend to adopt the agenda-setter's framing because copyright holders shape litigation, control precedent-setting cases, and frame the doctrine as property protection. The engine should compute markedly different types from the agenda-setter's seat (rope-like: coordination benefit) versus the powerless reuser's seat (snare-like: pure extraction).",
+    "directionality_logic": "Copyright holders (institutional power, arbitrage exit): d near 0.0 (full beneficiary). They control the rule-making, collect licensing fees, and can exit the constraint at any time (they own the copyrights). Educational institutions (organized power, constrained exit): d near 0.45 (nearly symmetric). They benefit from copyright-protected works but face escalating licensing demands and reduced teaching flexibility. Powerless reusers (powerless, identity_locked exit): d near 0.95 (near-full target). They cannot afford licensing, cannot mount a legal defense, and cannot avoid the constraint by exiting the field (their identity as creators/educators/researchers depends on engaging with copyrighted material). Transformative creators (moderate power, constrained exit): d near 0.75 (high target). They bear the cost of uncertain doctrine and the risk that their success will be used against them.",
+    "mandatrophy_analysis": "The founding problem was copyright-holder monopoly suppressing legitimate reuse. The narrow fair use doctrine was meant to preserve space for commentary, scholarship, and cultural response. However, the doctrine has inverted: it now protects copyright holders' monopoly by construing fair use so narrowly that most reuse requires licensing. The founding problem (too-broad copyright) has been replaced by a new problem (fair use too narrow to function as a meaningful check on copyright monopoly). This is classic mandatrophy: the remedy has become the disease. The constraint persists because copyright holders have captured the doctrine's evolution and courts apply it accordingly. The high suppression (0.68) and rising extractiveness (0.62→0.81) are symptoms of mandatrophy: the doctrine no longer balances but instead preserves market value, which was the original problem it was meant to address.",
+    "kernel_context": "This constraint is the narrow-defense reading of the fair_use_statutory_exception kernel. It instantiates a reading where copyright is treated as property, fair use is an affirmative defense (burden on defendant), and market value preservation is the primary goal. Sibling readings: (1) transformative_right_reading — fair use exists to enable cultural production and innovation; courts must facilitate transformative reuse. (2) market_licensing_reading — fair use applies only where no licensing market exists; any use that could be licensed infringes. This narrow reading coexists with (but influences) the transformative reading: as courts adopt the narrow framing, the space for transformative fair use contracts, changing the incentive structure for creators. The reading forecloses the strong public-domain reading (copyright as limited monopoly) but coexists with market-licensing reading (a sibling that pushes narrower still)."
+  },
+  "omegas": [
+    {
+      "id": "market_harm_epistemic_burden",
+      "question": "Who bears the burden of proving market harm or its absence? Under the narrow reading, defendants must prove no market harm; under alternative readings, plaintiffs must prove actual harm.",
+      "resolution_mechanism": "Compare litigation outcomes and settlement patterns in jurisdictions that reverse the burden: if reuse increases and licensing markets contract, the burden itself was suppressive; if reuse stays constant, the burden was evidentiary only.",
+      "impact": "Reversing the burden would shift d for reusers downward (less suppressed) and shift the constraint from tangled_rope toward rope or away from snare. Classification would change per seat.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the burden of proof itself is a suppressive mechanism or merely a legal formalism."
+    },
+    {
+      "id": "hypothetical_licensing_market_boundary",
+      "question": "How broad is the 'licensing market' the doctrine must preserve? Does it include markets that might theoretically exist if the copyright holder chose to develop them, or only markets currently active?",
+      "resolution_mechanism": "Examine statutory amendments or court decisions that define licensing market scope; compare to economic evidence of actual licensing revenue in each sector.",
+      "impact": "A broad reading (hypothetical markets count) expands the constraint's extractiveness; a narrow reading (only active markets) shrinks it. The reading shapes whether transformative uses qualify as fair use.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether market preservation includes hypothetical or only actual licensing markets."
+    },
+    {
+      "id": "transformative_vs_substitution_ambiguity",
+      "question": "Can a use be both transformative AND substitutional? If a parody is successful, does success prove market substitution (unfair) or cultural value (fair)?",
+      "resolution_mechanism": "Track court decisions on transformative uses that compete with original works (parodies, song covers, fan works). If courts increasingly treat success as evidence of unfairness, the doctrine has shifted toward pure extraction.",
+      "impact": "If transformativeness and commercial success are treated as contradictory, reusers face a paradox: prove your work adds value AND prove it doesn't compete. Resolving this would shift d for transformative creators.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether success of a transformative work counts for or against fair use."
+    },
+    {
+      "id": "identity_lock_mechanism_suppression",
+      "question": "Is the measured suppression (0.68) structural (licensing costs, legal risk) or partially internalized (reusers accept the doctrine as legitimate and self-censor)?",
+      "resolution_mechanism": "Post-doctrinal-shift analysis: if fair use doctrine were significantly broadened, would reuse surge (indicating internalized suppression is reversible) or stay flat (indicating structural barriers dominate)?",
+      "impact": "If suppression is internalized, changing the doctrine alone will not free reuse; creators have fused their identity with copyright-owner expectations. If suppression is structural, broadening doctrine would release suppressed reuse quickly.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's suppressive force is structural or internalized in reuser identities."
+    },
+    {
+      "id": "kernel_reading_conflict_transformative_vs_narrow",
+      "question": "This reading treats copyright as property and fair use as narrow exception. The transformative reading treats fair use as a positive right to enable cultural production. Can these readings coexist in a single legal framework, or do they foreclose each other?",
+      "resolution_mechanism": "Examine whether courts can apply both framings in different cases, or whether precedent in one reading undercuts the other. Check whether any single party holds both positions (indicating coexistence) or parties divide cleanly by reading (indicating foreclosure or influence).",
+      "impact": "If the readings foreclose each other, one must eventually dominate; if they coexist, both remain live options and the constraint-space has structural ambiguity. If one influences the other (as hypothesized), expanding the narrow reading contracts the transformative reading's domain.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the narrow and transformative readings of fair use can coexist within a single legal framework or whether they are mutually foreclosing."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "fair_use_statutory_exception__transformative_right_reading",
+      "fair_use_statutory_exception__market_licensing_reading",
+      "copyright_term_extension__extraction_side",
+      "digital_millennium_copyright_act__circumvention_prohibition"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the fair_use_statutory_exception kernel. The narrow-defense reading instantiates high extractiveness (0.81), treating copyright as property and fair use as narrow exception. The transformative-right reading instantiates lower extractiveness (projected 0.35-0.45), treating fair use as enabling cultural production. The market-licensing reading instantiates highest extractiveness (projected 0.88+), requiring licensing for any use that could substitute for a licensed use. All three share the same statutory text (17 U.S.C. § 107) but produce different constraints through interpretive framing. Network edges: (1) narrow-defense reading influences transformative reading by contracting the space where transformative uses qualify; (2) narrow-defense reading influences market-licensing by providing doctrinal leverage for market-preservation arguments; (3) all three affect downstream constraints on term extension and DMCA circumvention (broad copyright doctrine amplifies both)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "gain_flow": "copyright_holders",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "transformative_right_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "market_licensing_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "copyright_as_property_analogue",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "market_value_preservation_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "commercial_use_presumptive_unfairness",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "copyright_as_exclusive_property_right",
+    "drift_state": {
+      "moment": "contemporary_digital_abundance_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "fair_use_statutory_exception__transformative_right_reading",
+      "copyright_term_extension__extraction_side"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

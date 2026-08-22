@@ -1,0 +1,532 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_proxy_sufficiency__hybrid_degradation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-13",
+    "status": "ACTIVE",
+    "story_uid": "6c1b33c5-d53b-4270-8bbd-4ea52ae8818e"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation Competence Maintenance with Tacit Knowledge Degradation",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "certification_training_industry"
+    ],
+    "victims": [
+      "long_term_safety_margins",
+      "next_generation_operators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "certification_training_industry",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Designs, operates, and certifies simulation-based training programs. Sets curriculum standards, manages the fidelity/cost tradeoff (lower-fidelity simulations are cheaper to operate and easier to standardize across sites), and collects recurring revenue from ongoing recertification requirements. Defines what counts as 'competence maintained' through procedural metrics (checklist completion, scenario response time) that simulations can reliably produce."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set and enforce training and recertification requirements. Have delegated competence assessment to the training industry and simulator fidelity to operational feasibility reviews. Accept simulation as sufficient proxy for catastrophe-equivalent learning because it meets cost, scheduling, and political feasibility constraints that real-world catastrophe training cannot satisfy. Do not continuously audit whether tacit knowledge and stress-response capacity are actually maintained."
+    },
+    {
+      "name": "current_generation_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pass certification-required training, maintain procedural competence through simulations, and operate safely in routine conditions. They benefit from accessible, repeatable training and the cost avoidance of catastrophe-equivalent stress. They bear the latent cost: tacit knowledge and stress-response pathways are not being reinforced in the way genuine catastrophe would reinforce them, but they operate before the degradation becomes visible."
+    },
+    {
+      "name": "next_generation_operators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Inherit a system that certifies them as competent based on simulation-derived procedural performance. They are trained on the same simulations as their predecessors but receive no historical narrative, no mentored immersion in prior catastrophe handling, and no intergenerational transmission of tacit knowledge about failure modes that only manifest under stress. Their professional identity is constituted through the certification system; they cannot reject it and remain in the field. When novel stress arrives, they have procedural competence but degraded tacit-knowledge capacity compared to a prior generation trained through actual catastrophe exposure."
+    },
+    {
+      "name": "industry_outsiders",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Workers in adjacent industries or the public at large who depend on the safety of the system but have no voice in training adequacy, simulator fidelity requirements, or the decision to treat simulation as sufficient proxy. They cannot audit the system's tacit-knowledge depth and bear the tail risk of catastrophe when hidden degradation intersects with real stress."
+    },
+    {
+      "name": "independent_safety_researchers",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study organizational learning, high-reliability operations, and simulator fidelity in research contexts separate from the operational and training systems. Can observe and document generational degradation in tacit knowledge and stress-response capacity but lack enforcement authority to change training standards or simulator requirements. Their findings are available but not integrated into certification processes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the operational necessity of maintaining competence in low-frequency, high-consequence domains where real catastrophes are rare enough that direct learning from them is statistically unreliable as a training method. Simulation allows repeated, controlled practice of critical scenarios without requiring actual catastrophes. Coordinates across organizations and decades by standardizing what 'competence' means (procedural performance on defined scenarios) and what maintains it (recertification on the same scenarios).",
+    "transfer_function": "Shifts the cost and risk of training from direct catastrophe exposure to recurring simulation operations. Money flows from operators and their employers to the training industry. Safety margins — the system's capacity to absorb stresses beyond the designed envelope — flow toward the operators and training system (by avoiding costly catastrophes) but also away from long-term organizational resilience (by not reinforcing tacit knowledge and stress-response pathways that only real catastrophe teaches). Knowledge flows in one direction: from prior generations (who experienced real catastrophes) to current operators (who experience only simulation), with degradation at each transfer.",
+    "absent_voices": "Workers in downstream industries and the public whose safety depends on the system but who are not in the room where simulator fidelity standards are set. Long-term safety researchers and operators with experience in actual catastrophe-response (now retired or deceased) would argue for higher simulator fidelity and intergenerational knowledge transmission, but their input has been structurally excluded by the shift from experience-based to credential-based competence assessment. Next-generation operators themselves do not have standing to question whether their training adequately prepared them until catastrophe arrives.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If simulation-based training disappeared, operators would either revert to learning primarily through minor incidents and mentored experience, which would be slower but would reinforce tacit knowledge continuously, or catastrophes would increase in frequency until tacit-knowledge capacity was regenerated through direct exposure — either way, the system would rearrange toward a different balance of procedural vs. tacit learning. The training industry's business model would collapse. Certification processes would shift to experience-based standards rather than simulation-scenario standards.",
+    "founding_problem": "High-consequence, low-frequency operational domains (nuclear plants, aircraft carrier maneuvers, pandemic response) cannot rely on operators learning primarily from actual catastrophes: catastrophes are rare, costly, and teach under extreme stress. Direct catastrophe-based training is infeasible (you cannot stage a real pandemic to train pandemic response). Simulation was developed to provide safe, repeatable, scalable practice of critical scenarios so operators could maintain competence without depending on actual catastrophes.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The infeasibility of direct catastrophe-based training is universally attested: operational managers, safety researchers, and regulatory authorities all agree you cannot stage real catastrophes for training. The contested question (documented in independent research and operator testimony from other high-reliability domains) is whether simulation alone is sufficient or whether it maintains only procedural competence while degrading tacit knowledge and stress-response pathways. The certification industry and regulators attest simulation is sufficient based on procedural metrics; safety researchers and intergenerational operator accounts attest the founding problem has shifted — it is no longer 'how do we train without catastrophes' but 'how do we maintain tacit knowledge and adaptive capacity when we eliminate catastrophe exposure.'"
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.67,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.57,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.71,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "projected"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.64
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.61
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.64
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.64
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.65
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.44
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.78
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.68
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "tacit_knowledge_measurability",
+      "question": "Is the degradation of tacit knowledge and stress-response capacity measurable before catastrophe occurs, or does it remain latent until high-consequence stress arrives?",
+      "resolution_mechanism": "Longitudinal study of operator performance in adversarial simulations (surprise scenarios, resource-constrained conditions, high-fidelity stress) comparing generations trained through simulation vs. prior generations with catastrophe exposure. Measure anomaly recognition, improvisation quality, and decision speed under uncertainty — metrics that correlate with tacit-knowledge depth but are not in standard certification curricula.",
+      "impact": "If measurable pre-catastrophe, the degradation is a known externality that could trigger higher simulator fidelity requirements and intergenerational knowledge-transfer programs; if latent, the extraction persists invisible until catastrophe exposes it, at which point the harm is already done.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Latency of tacit-knowledge degradation signals."
+    },
+    {
+      "id": "simulator_fidelity_sufficiency_boundary",
+      "question": "Is there a threshold of simulator fidelity (physiological stress, temporal pressure, genuine uncertainty, irreversible consequence simulation) beyond which simulation becomes equivalent to catastrophe-level learning, or is direct catastrophe exposure irreplaceable?",
+      "resolution_mechanism": "Design-of-experiments with simulators at progressively higher fidelity/stress levels and measure whether operators trained at high-fidelity simulations show stress-response pathways and tacit-knowledge retention comparable to operators with actual catastrophe experience. Compare metrics across domains (aviation post-high-fidelity simulator adoption; nuclear post-simulator-based training; pandemic response in jurisdictions with vs. without pre-pandemic drills).",
+      "impact": "If a threshold exists, the constraint becomes 'simulation above fidelity threshold' rather than 'simulation per se,' and regulatory leverage to raise simulator fidelity becomes available; if no threshold exists, tacit-knowledge degradation is inherent to simulation-based training and requires structural redesign (intergenerational knowledge-transfer programs, periodic low-consequence real-system challenges, mentor-based apprenticeship alongside simulation).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether simulation fidelity has an upper bound or whether catastrophe-learning is categorically distinct."
+    },
+    {
+      "id": "identity_lock_and_professional_exit",
+      "question": "For next-generation operators whose entire career identity is constituted through the simulation-based certification system, is it possible to exit the system and maintain professional standing, or is identity_locked the structural condition?",
+      "resolution_mechanism": "Qualitative interviews with operators attempting to challenge simulator-based certification or advocate for intergenerational knowledge transfer; observe whether they can do so while remaining professionally credible. Track career consequences for operators who publicly question simulator sufficiency.",
+      "impact": "If operators are identity_locked, the system suppresses internal dissent from the generation most vulnerable to latent degradation; if exit and critique remain available, operators can pressure for higher-fidelity training or knowledge-transfer programs from within professional standing.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Professional identity fusion with certification system as a suppression mechanism."
+    },
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint instantiates the 'hybrid_degradation_reading' of the catastrophe_proxy_sufficiency kernel. Alternative readings foreclose, coexist with, or influence this reading; the degradation claim itself depends on foundational axioms about whether tacit knowledge is irreplaceable.",
+      "resolution_mechanism": "Comparative analysis of the four sibling readings (catastrophe_necessity_reading, simulation_as_proxy_catastrophe_reading, simulation_fidelity_threshold) to map reading_relations (forecloses/coexists_with/influences) and identify the axioms (empirically_contingent vs. deontological) grounding each. The hybrid_degradation_reading presupposes empirical claims about knowledge decay that a simulation_as_proxy reading would deny; the catastrophe_necessity reading presupposes that only direct exposure teaches. Different axioms, different empirical presuppositions, different vulnerability to evidence.",
+      "impact": "If a sibling reading forecloses this one (e.g. simulation_as_proxy_catastrophe with sufficient fidelity forecloses degradation claims), the constraint classification should shift; if readings coexist, the reading choice depends on institutional framing and incentives, not fact. If influences, one reading changes the operating environment for others without resolving the disagreement.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading under-determination: the hybrid_degradation claim is one live reading among contested alternatives grounded in different axioms."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Simulation-based training maintains procedural competence in high-consequence, low-frequency operational domains by providing safe, repeatable practice of critical scenarios. The system coordinates learning without catastrophes and generates revenue for the training industry. The constraint instantiates the 'hybrid_degradation_reading' of the contested 'catastrophe_proxy_sufficiency' kernel: simulation solves the operational coordination problem (avoiding catastrophe-dependent learning) but at a hidden cost—tacit knowledge and stress-response capacity that were historically maintained through actual catastrophe exposure degrade over generational timescales. Current operators pass certification and operate safely; next-generation operators inherit degraded adaptive capacity despite passing the same tests. The extraction is distributed (long-term safety margins, next-generation competence) rather than concentrated, and the degradation is latent—visible only when novel stress arrives or in retrospective analysis of generational knowledge loss. The claim (tangled rope) and metrics (high theater, rising suppression requirement) are independent authored facts: the constraint claims coordination with extraction, and the metrics document the extraction's increasing reliance on enforcement (suppression) and performative competence (theater).",
+    "key_agents": [
+      "certification_training_industry: institutional agenda-setter; designs curricula, sets fidelity standards, operates simulators, collects recertification revenue; benefits from the simulationization of competence",
+      "regulatory_authorities: institutional agenda-setter; sets recertification frequency, delegates competence assessment to training industry, enforces simulator-based training without continuous audit of tacit-knowledge retention",
+      "current_generation_operators: organized beneficiary/payer; benefit from accessible training and catastrophe avoidance; bear latent cost of degraded intergenerational knowledge transmission",
+      "next_generation_operators: powerless victim; identity_locked in the certification system; inherit procedural competence but degraded tacit knowledge and stress-response capacity; cannot challenge the system without exiting the profession",
+      "industry_outsiders (public, downstream workers): powerless, trapped; depend on system safety; excluded from certification-adequacy decisions; bear tail risk when degradation intersects real stress",
+      "independent_safety_researchers: moderate-power observers; can document degradation but lack enforcement authority to mandate higher-fidelity training or knowledge-transfer programs"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.42 (early simulation era, training industry young, prior generation with catastrophe experience still operational) to 0.68 (simulation era mature, prior generation retired or deceased, knowledge transmission gaps accumulate across multiple generational handoffs). Theater rises from 0.28 to 0.58 as the share of training activity devoted to compliance-auditable procedural competence grows relative to tacit-knowledge reinforcement—what is teachable and testable in a simulator expands, what requires mentorship and real-uncertainty navigation shrinks. Suppression requirement rises from 0.52 to 0.72 as the system must increasingly defend simulator-based certification against growing evidence and argument from safety researchers and experienced operators that tacit knowledge is degrading. The leveled coercion grid shows individual-level accessibility collapse rising (operators have fewer alternatives to simulation-based certification as it becomes universal and identity-fused), organizational-level suppression stable (training organizations actively suppress external audits of knowledge depth), and class-level resistance rising (operator communities, professional associations, and safety researchers increasingly advocate for knowledge-transfer programs and higher-fidelity training). The measurement series samples the constraint's operation from the early simulation-dominance phase (t=0, prior-generation knowledge still fresh) through a mature phase (t=40, generational handoffs have accumulated knowledge loss, suppression required to maintain the system's legitimacy).",
+    "directionality_logic": "The certification training industry is the structural beneficiary: it sets the standards that justify recurring training revenue, maintains control over what counts as 'competence,' and expands its market reach as simulation becomes mandatory. Directionality approaches full-beneficiary (d near 0.0) because the industry collects directly and can reshape the market through standard-setting. Regulatory authorities are agenda-setters with institutional power and arbitrage options (they could require higher-fidelity simulators, mandate intergenerational knowledge programs, audit tacit-knowledge retention), so directionality is near-symmetric (d ≈ 0.4-0.5)—they benefit from administrative simplification but lose if catastrophe exposes degradation. Current operators benefit from accessible training and catastrophe avoidance but bear hidden costs; directionality near-symmetric (d ≈ 0.5). Next-generation operators are the true victims: they are identity_locked (exiting the profession means losing professional standing), they inherit procedural competence but degraded tacit knowledge, they have no power to reshape training standards, and they discover the degradation only under real stress. Directionality approaches full-target (d near 1.0) because suppression is internalized (they cannot question the system without career risk) and alternatives are foreclosed (every operator must pass certification; every certification is simulation-based). Industry outsiders and downstream workers bear the tail risk but have no voice; directionality is full-target (d = 1.0), trapped, but their exclusion keeps them analytically separate.",
+    "perspectival_gap": "The certification training industry perspective: simulation is a genuine coordination solution that replaces dangerous catastrophe-dependent learning with safe, repeatable practice; current procedural competence is validated by decades of operational safety; concerns about tacit-knowledge degradation are speculative and lack operational proof. The next-generation operator perspective (suppressed by identity_lock and professional norms): they inherit the system as given, pass certification, operate safely in routine conditions, and have no standing to question whether their tacit-knowledge capacity is degraded until novel stress arrives; at that point it is too late. The independent researcher perspective: systematic evidence of generational tacit-knowledge degradation exists (operator interviews, knowledge-transfer program outcomes, comparative studies of pre- and post-simulator-era cohorts), but regulatory authorities do not mandate its measurement or its remediation. The engine computes these divergences from the structural data: beneficiary with institutional power and arbitrage options (training industry) experiences the constraint as coordination; victim with identity_lock and powerlessness (next-generation operators) experiences it as extraction; the gap between beneficiary and victim directionalities is the seat divergence the engine measures.",
+    "mandatrophy_analysis": "The founding problem—how to maintain competence in low-frequency, high-consequence domains without depending on catastrophes—remains live. The founding solution—simulation-based training—solves it operationally (procedural competence is maintained, catastrophes are avoided). But the solution's hidden mandate—that simulation maintains NOT ONLY procedural competence but ALSO tacit knowledge and stress-response capacity—has become contested and possibly expired. Regulators and the training industry assume the hidden mandate is satisfied because procedural metrics look healthy; safety researchers and experienced operators attest it is degrading. The constraint avoids explicit mandatrophy (the system does maintain procedural competence) but harbors latent mandatrophy: the system solves the stated problem while creating a new problem (intergenerational knowledge loss) that only appears when real stress arrives. This hidden-mandate structure is exactly where tangled ropes live—genuine coordination with asymmetric extraction where the beneficiary sets the standards for what counts as success and the victim has no standing to challenge the standard until harm is visible.",
+    "kernel_context": "This constraint instantiates the 'hybrid_degradation_reading' of the contested 'catastrophe_proxy_sufficiency' kernel. The kernel is the stabilized commitment that 'simulation can serve as a proxy for direct catastrophe exposure in maintaining operator competence'—this commitment grounds regulatory standards, training industry business models, and operator certification worldwide. The reading_id 'hybrid_degradation_reading' specifies a particular interpretation: simulation maintains procedural competence (thus solving the founding coordination problem) but tacit knowledge and stress-response capacity degrade over generational timescales (thus creating a hidden extraction mechanism). This reading coexists with three sibling readings: (1) 'catastrophe_necessity_reading' denies simulation sufficiency categorically; (2) 'simulation_as_proxy_catastrophe_reading' claims simulation above a fidelity threshold becomes equivalent; (3) 'simulation_fidelity_threshold' places sufficiency as technology-dependent. All four readings accept the kernel (simulation can substitute for catastrophe) but differ on WHAT simulation must do and WHETHER current simulation does it. The hybrid_degradation reading's foundational axiom is that tacit knowledge is empirically contingent on direct stress exposure and degrades measurably without it—a claim that coheres with independent research but is suppressed in regulatory and industry framing where 'competence' is operationalized as procedural performance on simulator scenarios."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "catastrophe_necessity_reading",
+      "simulation_as_proxy_catastrophe_reading",
+      "simulation_fidelity_threshold"
+    ],
+    "dual_formulation_note": "This constraint is part of the catastrophe_proxy_sufficiency kernel family (4 readings). All readings share a common referent—the standing arrangement where simulation substitutes for direct catastrophe exposure in training—but differ on structural assessment: this reading (hybrid_degradation) claims tacit-knowledge decay, catastrophe_necessity denies simulation sufficiency, simulation_as_proxy claims high-fidelity simulation is equivalent, simulation_fidelity_threshold places a technology boundary. Each reading is a separate constraint story with its own ε, beneficiary/victim structure, and classification. Network edges link siblings: this reading influences (creates downstream pressure on) the simulation_as_proxy reading by establishing empirical counter-evidence; it coexists with catastrophe_necessity (both readings are live in safety communities) and simulation_fidelity_threshold (orthogonal axes: necessity vs. threshold are different questions)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "gain_flow": "certification_training_industry",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "simulation_as_competence_maintenance",
+    "drift_state": {
+      "moment": "contemporary_generational_succession_phase",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_necessity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "simulation_as_proxy_catastrophe_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "simulation_fidelity_threshold",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "tacit_knowledge_irreplaceable_by_procedure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "generational_knowledge_transmission_requires_direct_stress",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

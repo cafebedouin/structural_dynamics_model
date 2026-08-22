@@ -1,0 +1,329 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__expansive_shield_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "0339b240-c8b9-4d55-bc2a-e10526004573"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.62,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Beta Designation as Comprehensive, Indefinite, Universal Liability Waiver",
+    "topic_domain": "technology_law/software_liability/consumer_protection",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "software_vendors",
+      "vendor_legal_departments",
+      "venture_investors"
+    ],
+    "victims": [
+      "beta_program_users",
+      "downstream_data_dependents",
+      "small_business_integrators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_vendors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Draft the terms-of-service clause that labels a release 'beta' and asserts that this label alone waives all liability for defects, for as long as the vendor chooses to keep the label attached, across every use case the software is put to — from casual note-taking apps to embedded control software. The vendor decides when (if ever) beta status ends and bears no obligation to disclose known defect classes beyond the label itself."
+    },
+    {
+      "name": "vendor_legal_departments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Draft and litigate the beta clause as boilerplate across product lines; treat the designation as a durable liability firewall rather than a testing-phase disclosure, and defend it in court as applying regardless of how long the product has carried the label or what it is used for."
+    },
+    {
+      "name": "venture_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit indirectly: portfolio companies can ship faster and monetize earlier because the beta label absorbs downstream liability risk that would otherwise require insurance reserves or slower QA cycles, improving reported margins and valuation multiples."
+    },
+    {
+      "name": "beta_program_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Install or are defaulted into 'beta' features embedded in products they already depend on. They bear data loss, financial loss, or functional failure caused by defects, with no recourse because the beta label — regardless of how long it has persisted or what the software actually does — is read by the vendor as a complete waiver. Exit means abandoning the underlying product entirely, which is often not a real option given switching costs and network effects."
+    },
+    {
+      "name": "downstream_data_dependents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Never agreed to any terms; they are third parties whose records, transactions, or communications pass through a labeled-beta system chosen by someone else. When the beta software fails, the harm reaches them with no contractual relationship to invoke and no visibility into the label at all."
+    },
+    {
+      "name": "small_business_integrators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Build products or workflows on top of vendor APIs and SDKs that carry a permanent beta tag on core, load-bearing functionality. They cannot negotiate the clause, cannot get vendor indemnification, and often cannot afford to re-platform once integrated — the beta label functions as a standing risk transfer they absorbed unknowingly at integration time."
+    },
+    {
+      "name": "consumer_protection_regulators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Rarely intervene because the beta label is treated by courts and by the regulators' own precedent as a disclosed-risk category rather than a defect concealment; they are structurally absent from the negotiation of what 'beta' actually means in each product's terms of service."
+    },
+    {
+      "name": "product_liability_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate individual disputes and, under this reading, tend to enforce the beta clause as written — a complete, indefinite, context-general waiver — absent an explicit statutory carve-out, effectively ratifying the vendor's framing case by case."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In its narrowest true form, a beta label lets a vendor solicit real-world testing feedback while signaling to users that defects are more likely than in a finished release — a genuine, low-cost disclosure mechanism that helps both sides calibrate expectations during an actual testing phase.",
+    "transfer_function": "Under this reading, the label is stretched from a disclosure mechanism into a permanent risk-transfer instrument: it moves the cost of every defect, discovered at any time, in any context of use, from the vendor who controls code quality and release timing onto the user, integrator, or bystander who has no comparable control and often no comparable awareness.",
+    "absent_voices": "Beta program users rarely read the terms of service closely enough to understand the label has no expiration; downstream data dependents never see the label at all; consumer protection regulators are excluded from the case-by-case adjudication that has let the expansive reading calcify into default practice.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expansive shield reading vanished, vendors would need to either fix defects promptly, insure against them, time-bound the 'beta' status meaningfully, or price the residual risk into their product — all of which would shift substantial cost back onto the party that controls the code. Release cadences, QA investment, and insurance markets for software defects would all reorganize.",
+    "founding_problem": "Early beta programs solved a real problem: vendors needed a way to ship pre-release software to willing testers with clear, mutual understanding that defects were expected and testing was temporary, without full production-liability exposure for a genuinely experimental artifact.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Vendors and their legal departments attest the founding problem persists in whatever form the label is applied. Independent voices outside the beneficiary set — consumer protection litigators, academic software-liability scholars, and several state attorneys general in unfair-practices complaints — attest that the founding problem (genuine testing-phase risk-sharing) has been decoupled from its original justification and that 'beta' now frequently labels stable, monetized, indefinitely-maintained production features."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.81
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the expansive shield reading of the beta designation kernel: the claim that labeling a software feature or product 'beta' constitutes a comprehensive liability waiver, that this waiver has no temporal limit (a feature can remain 'beta' for years while in full production use), and that it applies uniformly regardless of software context (from a note-taking app to a payment-processing API). Under this reading the label has drifted from a testing-phase disclosure into a standing risk-transfer instrument: vendors externalize essentially all defect costs onto users, downstream third parties, and integrators, while retaining unilateral control over when — if ever — the label is removed. This is a distinct constraint from the narrow_warning_reading (which time-bounds the waiver and preserves base liability) and from the severity_carve_out_reading (which forbids the designation for critical systems entirely) — the three readings have materially different ε, different victim sets, and different enforceability, and are linked here only through network.affects_constraints, not merged into one story.",
+    "logic_rationale": "Extractiveness is authored high (0.81 at interval end) because, under this reading, defect costs that would otherwise sit with the party controlling code quality are moved wholesale onto users and third parties, with no severity or duration limit narrowing the transfer. Suppression is moderate (0.62): there is no direct coercive enforcement comparable to a debt collector, but courts enforcing the clause as written, the absence of a practical alternative to accepting terms of service, and switching costs on integrated products all function as suppressive mechanisms. Theater ratio climbs across the interval (0.20 to 0.44) reflecting a growing gap between the label's original testing-disclosure function and its increasing use to badge stable, monetized, indefinitely-maintained features — the label increasingly performs risk-transfer while performing less and less actual testing-phase signaling.",
+    "directionality_logic": "Software vendors and their legal departments are the clear structural beneficiaries: they draft the clause, control when beta status ends, and collect the benefit of externalized defect costs — d sits near the full-beneficiary end, especially given their arbitrage-grade exit (they can relabel, re-time, or restructure the clause at will). Venture investors benefit indirectly through faster monetization and lower reserve requirements. Beta program users, downstream data dependents, and small business integrators are targets: they bear costs they did not price in, cannot negotiate the clause, and in the case of downstream dependents never even see it — d sits near the full-target end, amplified by trapped or constrained exit.",
+    "perspectival_gap": "From the vendor's seat, the beta label is a legitimate, disclosed risk-sharing mechanism consistent with how software has always been tested — a rope. From the trapped user's or unwitting third party's seat, the same clause functions as an open-ended, unilaterally-controlled cost transfer with no exit — a tangled rope shading toward snare. The engine should register this divergence directly from the power/exit/beneficiary structure; the claimed_type of tangled_rope reflects that a genuine (if attenuated) coordination function — communicating that a feature is less mature — persists alongside the asymmetric extraction, which is what distinguishes this reading from a pure snare.",
+    "mandatrophy_analysis": "The founding problem (genuine testing-phase disclosure) is not dead in the abstract — some products really are in active testing — but under this reading the arrangement has been stretched to cover cases where the founding problem no longer applies: stable, revenue-generating, long-running features still carrying the label. This is precisely the mandatrophy pattern the classification should catch: a coordination mechanism (testing disclosure) is being used, by inertia or design, to cover an extraction mechanism (permanent liability transfer) that has outlived any genuine testing rationale. Tangled rope, rather than snare, is claimed because a residual coordination function is real for at least some labeled products, even as the label's expansive application substantially outruns it.",
+    "kernel_context": "This constraint is the expansive_shield_reading of the beta_designation_doctrine kernel. Sibling readings (separate constraint stories, not part of this one): narrow_warning_reading holds that the beta label is a time-bounded disclosure that must correspond to a genuine testing phase and preserves base product liability once that phase ends or is exceeded; severity_carve_out_reading holds that the designation is categorically unavailable for life-safety, financial, or other critical systems regardless of duration or disclosure quality. This reading, by contrast, asserts no temporal or severity boundary at all — the label functions as a comprehensive waiver across every duration and every context of use, which is what produces this reading's substantially higher ε and its broader victim set relative to the siblings."
+  },
+  "omegas": [
+    {
+      "id": "beta_kernel_reading_indeterminacy",
+      "question": "Which reading of the beta designation kernel actually governs a given dispute: the expansive shield reading (no temporal or severity limit), the narrow warning reading (time-bounded, base liability preserved), or the severity carve-out reading (categorically unavailable for critical systems)?",
+      "resolution_mechanism": "Jurisdiction-by-jurisdiction case law tracking, statutory reform proposals, and terms-of-service audits comparing labeled duration against actual testing activity would show which reading courts and legislatures are converging toward.",
+      "impact": "If courts converge on the narrow_warning_reading or the severity_carve_out_reading, this story's extractiveness and victim set collapse substantially — the expansive shield reading would be a legally unsupported outlier rather than the operative doctrine this story assumes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which sibling reading of the beta designation kernel actually controls in practice is unresolved and jurisdiction-dependent."
+    },
+    {
+      "id": "duration_as_bad_faith_signal",
+      "question": "At what point does an indefinite beta label stop being a plausible testing-phase disclosure and become evidence of bad-faith mislabeling to avoid liability?",
+      "resolution_mechanism": "Empirical study of time-to-production-revenue versus time-in-beta-label across a sample of vendor products; a large gap between monetization and label removal would be strong evidence against the expansive reading's good-faith premise.",
+      "impact": "If the gap is systematically large across the industry, it supports treating the expansive reading as a snare-like pretext rather than a genuine (if overextended) coordination mechanism, which would push the classification away from tangled_rope toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether indefinite beta duration is itself diagnostic of extraction intent rather than genuine ongoing testing."
+    },
+    {
+      "id": "downstream_third_party_standing",
+      "question": "Do downstream data dependents who never agreed to any terms of service have any legal standing to challenge the beta waiver at all, under this reading?",
+      "resolution_mechanism": "Case law on third-party beneficiary and privity doctrine as applied to software terms of service; regulatory guidance on whether non-contracting parties harmed by labeled-beta failures have an independent cause of action.",
+      "impact": "If third parties have no standing whatsoever, the victim set for this reading is even more powerless than the stakeholder situations describe, since they cannot even initiate the dispute that would test the clause's enforceability.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether non-contracting third parties harmed by beta-labeled failures can challenge the waiver at all."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__narrow_warning_reading",
+      "beta_designation_doctrine__severity_carve_out_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the beta_designation_doctrine kernel. narrow_warning_reading treats the label as time-bounded and preserving base liability once the testing phase ends; severity_carve_out_reading forbids the label outright for critical systems. All three share the same underlying kernel text (a vendor's 'beta' designation) but instantiate structurally distinct constraints with different ε, different beneficiary/victim structures, and different enforceability. This story (expansive_shield_reading) has the highest ε and the broadest victim set of the three because it authors no temporal or severity limit on the waiver."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "genuine_testing_phase_disclosure",
+    "drift_state": {
+      "moment": "contemporary_saas_era",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_warning_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "severity_carve_out_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "label_alone_constitutes_full_waiver",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "waiver_duration_and_context_unbounded",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "software_vendors",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

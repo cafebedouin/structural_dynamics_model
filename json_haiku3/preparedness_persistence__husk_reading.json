@@ -1,0 +1,324 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__husk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "fb54dd7c-e232-4bd0-845d-79e412145b32"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.76,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.62,
+    "claimed_type": "piton",
+    "human_readable": "Preparedness Drill and Inspection Husk: Form Without Competence",
+    "topic_domain": "institutional/disaster_preparedness/commitment_systems",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "civil_protection_administration",
+      "institutional_legitimacy_narrative"
+    ],
+    "victims": [
+      "populations_at_flood_risk",
+      "junior_responders_trained_on_atrophied_procedures"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "civil_protection_administration",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Mandates and schedules drills, conducts inspections, certifies readiness. Reports compliance upward to elected officials. Maintains the ceremonial apparatus of preparedness: the calendar of exercises, the checklist regime, the annual inspection schedules. Faces no operational pressure to update the drills when real flood conditions change, because the drills serve legitimacy (are we prepared?) not competence (can we actually handle a flood). When a flood comes, the administration points to the drill record as evidence of due diligence."
+    },
+    {
+      "name": "agency_responders",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responders participate in scheduled drills and pass them: they practice on outdated maps, use equipment that has not actually been maintained between drills, execute procedures that were written for a different flood risk profile. The drill success validates their department's budget request and their own standing (they performed well). During actual floods, the procedures often fail because they were never tested against real conditions, only against the drill scenario. The responder is trapped: they cannot opt out of drills (it is a job requirement), and they internalize a sense of competence from drill performance that later proves false under real conditions."
+    },
+    {
+      "name": "junior_responders_trained_on_atrophied_procedures",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "New recruits learn the drill procedures as doctrine: this is how we do evacuations, this is the communication protocol, this is the shelter sequencing. They have no access to real-world flood data to test these procedures against. Their professional identity becomes bound to the drill: executing it well means they are competent. When a real flood comes and the procedures fail, they bear the operational and moral cost — they blame themselves for poor execution when the procedures themselves are the problem. The identity lock is complete: 'I am a trained responder in the system' means accepting the drill procedures as legitimate, even after they fail."
+    },
+    {
+      "name": "populations_at_flood_risk",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "They are told the administration runs drills and passes inspections, therefore they are protected. The visibility of the drill machinery (the sirens go off, traffic stops, shelter signs are tested) creates a false sense of security. When an actual flood arrives and the response fails — evacuation routes are wrong, shelters are unprepared, communication breaks down — the population discovers the drills were theater. They are trapped both before (cannot evacuate a flood by individual choice alone) and after (cannot sue or demand change while the disaster is happening; the time for institutional learning is in the gap between floods)."
+    },
+    {
+      "name": "institutional_legitimacy_narrative",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The doctrine that 'a state that prepares is a capable state' is vindicated by the existence of the apparatus. The drill calendar, inspection checklist, and certified readiness are proof of the doctrine's truth. The narrative persists independent of whether actual competence exists — the apparatus maintains itself as evidence of the narrative."
+    },
+    {
+      "name": "budget_allocation_committees",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "They allocate funds to disaster preparedness based on the completion of drills and inspections. The visible apparatus — audited schedules, certified staff, passed exercises — justifies budget allocations without requiring independent assessment of actual competence. The constraint allows them to claim credit for preparedness while avoiding the cost of building real competence: testing procedures against actual climate and terrain data, maintaining equipment in constant readiness, training for conditions that have changed since the last flood."
+    },
+    {
+      "name": "rival_preparedness_frameworks",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Alternative approaches — continuous simulation against current climate models, real-time equipment maintenance, scenario planning with actual flood-risk data — are structurally excluded from the institutional apparatus. Proposing them means challenging the legitimacy of the drill framework, which triggers resistance from the administration and budget committees. The exclusion is not violent; it is structural: the alternative framework would require admitting the current drills are inadequate, which the institution cannot afford."
+    },
+    {
+      "name": "peer_jurisdictions",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Other jurisdictions run similar drill and inspection regimes. The constraint is self-reinforcing across jurisdictions: each jurisdiction can point to the others' drills as evidence that the framework is standard and therefore adequate. No jurisdiction has leverage to exit unilaterally; all are trapped in the ceremonial equilibrium. Real innovations (climate-responsive planning, equipment maintenance networks, cross-jurisdiction coordination) fail to scale because they require coordinated exit from the drill framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Historically solved: maintaining institutional memory of flood response procedures across electoral cycles and administrative turnovers. Drills trained new cohorts, inspections kept equipment provisioned, the apparatus ensured continuity of response capability even as staff changed.",
+    "transfer_function": "Transfers resources (budget, time, attention) from populations and junior responders to the administrative apparatus that manages the drills and from actual competence-building to legitimacy-building. The flood-risk population pays by bearing undetected incompetence; junior responders pay by learning outdated procedures and internalizing false confidence.",
+    "absent_voices": "Climate scientists and hydrologists who have updated flood-risk models are not consulted in drill design. Equipment engineers who could assess maintenance needs are not in the chain. Populations in flood zones who have experienced failed evacuations are rarely included in procedure revision. The excluded are structurally prevented from speaking: the drill framework treats preparedness as a solved problem, so contrary evidence is filtered out as noise.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the drill framework vanished, the administration would face immediate pressure to build actual competence: updating procedures against current data, testing equipment under realistic conditions, training responders on new flood scenarios. The vacuum would be filled by alternative frameworks (continuous simulation, climate-responsive planning, maintenance networks). Populations would stop relying on the visible apparatus and would begin demanding transparency about actual readiness. The institutional narrative would shift from 'we prepare ceremonially' to 'we must build real competence or admit defeat.'",
+    "founding_problem": "Early twentieth-century floods caught administrations unprepared; no institutional memory, no trained responders, no equipment caches. The drill framework was built to solve this: regular practice, staff training, equipment inspection, institutional continuity across changes in personnel.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Climate scientists attest that modern flood risks are different from historical floods in magnitude and timing; historical procedures are no longer adequate. Responders who have experienced real floods attest that drills do not prepare them for actual conditions. Peer jurisdictions that have updated their frameworks (climate-responsive scenario planning, maintenance-first approaches) report higher readiness than drill-based frameworks achieve. No voice from outside the administration confirms that the founding problem (loss of institutional memory) remains live — the claim that 'we need drills to remember' is now self-serving mythology."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.73
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.76
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.76
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A civil protection administration maintains a ceremonial apparatus of drills and inspections that reports high readiness while actual operational competence atrophies. The drills are performed on outdated flood-risk models and procedures that have not been validated against real conditions. Equipment is maintained nominally (passing inspection) but not actively tested. New responders are trained on the procedures as doctrine and internalize false confidence. Populations at flood risk are reassured by the visible apparatus but are not protected by actual competence. This reading instantiates preparedness as a Piton: atrophied function mistaken for a Mountain (natural disaster preparedness) or a Rope (genuine coordination). The constraint persists not because participants benefit from real preparedness but because they benefit from the appearance of preparedness: administrators get legitimacy, responders get validated self-image, committees get budget justification, and the institutional narrative stays intact. When a flood comes, the deficit between ceremonial readiness and actual competence is revealed, but the apparatus survives because it serves a function independent of flood response — it serves institutional legitimacy.",
+    "key_agents": [
+      "civil_protection_administration: Agenda-setter (institutional, constrained exit) — designs, schedules, and certifies the apparatus; no operational pressure to update",
+      "agency_responders: Mixed beneficiary/payer (moderate power, constrained exit) — benefit from validated identity and budget security; pay by learning atrophied procedures",
+      "junior_responders: Victim/payer (powerless, identity-locked) — trained on outdated procedures; false competence becomes internalized identity",
+      "populations_at_flood_risk: Victims (powerless, trapped) — misled by visible apparatus; bear actual flood risk",
+      "institutional_legitimacy_narrative: Non-agent beneficiary (analytical) — vindicated by the existence of the apparatus independent of actual competence",
+      "peer_jurisdictions: Observers (institutional, analytical) — trapped in the same ceremonial equilibrium"
+    ],
+    "logic_rationale": "Theater ratio is very high (0.76) because the apparatus is mostly performative: drills are scheduled and executed, inspections are completed and recorded, reports are filed — but these activities do not substantially improve actual flood response capacity. As climate models change and flood risks shift, the procedures become increasingly disconnected from reality, yet the drilling apparatus persists unchanged. The theater rises as the gap widens between what the drills claim to test and what actual conditions would demand. Base extractiveness (0.58) is moderate-high because the apparatus extracts resources (time, budget, personnel attention) from actual competence-building and transfers them to legitimacy-building. Suppression is moderate (0.42) because the constraint is not maintained by overt coercion — it is maintained by the lack of salient alternatives: everyone is trapped in the ceremonial equilibrium (peer jurisdictions run the same drills, so exiting looks like admitting failure). The temporal series shows theater and extractiveness both rising and then plateauing: theater rises as the deficit between ceremony and reality grows, then stabilizes at a high level once the apparatus has fully shifted to legitimacy function; extractiveness rises similarly, then plateaus because the institutional benefit (legitimacy, budget, identity) reaches equilibrium. Measurements are one shared grid across all metrics at every time point.",
+    "perspectival_gap": "The administration and responders see genuine preparedness (the drills are real, the equipment is inspected, the procedures are documented) and compute the constraint as Rope (honest coordination). The populations at flood risk, if they could perceive the actual procedure-reality gap, would see it as Snare (coercive theater that leaves them at risk). Junior responders compute it as Rope until they face a real flood and discover the procedures fail; then they recompute it as Piton (the form persists but the function has atrophied). The committer frame captures this divergence: this reading (husk_reading) instantiates the 'form persists without function' perspective, while the competence_reading instantiates the 'procedures are live knowledge' perspective. The engine computes per-seat classifications from the structural data; the authored claim (Piton) reflects this reading's assessment.",
+    "directionality_logic": "The civil protection administration has low directionality (near beneficiary end, ~0.2) — they set the apparatus and collect legitimacy from it; they have institutional power and can choose to update or maintain drills. Junior responders have high directionality (near target end, ~0.85) — they are powerless, identity-locked, and forced to internalize the procedures as competence even as they atrophy. Populations at flood risk have very high directionality (~0.95) — they are powerless, trapped, and bear the actual risk while told they are protected. Peer jurisdictions appear as observers (analytical exit) rather than co-victims because they are institutional actors with the power to update (they do not, by choice, because institutional and budgetary pressures keep them in equilibrium). The directionality divergence is the core structural fact: those with power to change the apparatus benefit from its persistence as ceremony; those without power bear the cost of its actual incompetence.",
+    "mandatrophy_analysis": "This constraint exemplifies mandatrophy: the founding mandate (maintain institutional memory of procedures across personnel changes) was real when procedures were stable across time (early 20th century, before climate change accelerated flood risk profiles). That mandate is now dead — procedures must be continuously updated, not preserved, because the flood risk landscape is changing faster than the update cycle of the drill apparatus. The constraint persists not because the mandate is live but because the apparatus now serves a different function (institutional legitimacy) that nobody wants to admit. The Piton classification captures this: the real work (actual competence) has atrophied, but the ceremonial work persists because it serves unspoken stakeholder interests (administrators get legitimacy, committees get cover, responders get validated identity). The mandatrophy is resolved (acknowledged in the founding_problem_status: dead and in the commentary) — the constraint is now officially serving a function different from its founding purpose.",
+    "kernel_context": "This constraint instantiates the husk_reading of the preparedness_persistence kernel. The kernel is the commitment to 'institutional readiness': what it means for an administration to be prepared for disasters, and how that preparedness is demonstrated and maintained. The husk_reading asserts that drills and inspections are memorial performance — form persists while operational competence atrophies. The sibling readings are: competence_reading (drills and inspections are live exercised knowledge, practice maintains readiness) and hybrid_reading (preparedness is stratified: some components remain competent, others are ritualized). The husk_reading COEXISTS WITH the competence_reading: different administrations and different observers hold these readings simultaneously, and the dispute is not logically resolvable within a single commitment framework — it depends on what data you attend to (ceremony vs. performance under real conditions) and what you believe preparedness requires (procedures or competence)."
+  },
+  "omegas": [
+    {
+      "id": "theater_vs_competence_boundary",
+      "question": "At what point does a drill become pure theater rather than live practice? Where is the boundary between ceremonial rehearsal and genuine skill maintenance?",
+      "resolution_mechanism": "Trace a real flood event: measure the correlation between drill performance (did the administration pass the last inspection?) and actual response performance (did the procedures work?). A near-zero correlation indicates theater; a high correlation indicates genuine practice.",
+      "impact": "A demonstrated low correlation reclassifies the constraint from Rope (coordination function) to Piton (atrophied form). High correlation would support the competence_reading instead.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether drills predict actual response success or only administrative compliance."
+    },
+    {
+      "id": "identity_lock_mechanism_interpersonal",
+      "question": "For junior responders, is the internalized false competence structural (economic: 'I cannot admit the procedures are wrong without destroying my career') or internalized (cognitive: 'I genuinely believe the procedures are correct because I was trained on them, and retraining would mean admitting I was wrong')?",
+      "resolution_mechanism": "Post-flood interview data: responders who experience procedure failure — do they blame themselves (internalized), blame the training (structural), or blame the apparatus (system-level)? Track whether responders who leave the profession shed the false confidence (internalized) or retain it (both mechanisms).",
+      "impact": "If primarily internalized, the suppression persists even after exit from the apparatus, and the victim cost is higher. If primarily structural, the victim cost is bounded by exit. This modulates the effective extraction the junior-responder seat computes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether junior-responder suppression is structural or internalized."
+    },
+    {
+      "id": "alternative_frameworks_exclusion_mechanism",
+      "question": "Are rival preparedness frameworks (climate-responsive scenario planning, continuous equipment maintenance, cross-jurisdiction coordination) excluded by institutional inability to switch, or by structural design of the drill apparatus itself?",
+      "resolution_mechanism": "Attempt to adopt an alternative framework in one jurisdiction: measure the institutional resistance (budget, regulatory, legitimacy) that blocks the switch. Compare jurisdictions that have attempted switches with those that have not.",
+      "impact": "If exclusion is institutional (path dependence, vested interests), the constraint remains Piton but with a potential transition path. If exclusion is structural (the drill apparatus actively suppresses alternatives), the constraint is closer to Snare (coercive foreclosure of better options).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the drill apparatus excludes alternatives by institutional inertia or structural coercion."
+    },
+    {
+      "id": "kernel_reading_committer_frame",
+      "question": "This constraint is one reading of a contested kernel: preparedness_persistence. The husk_reading asserts 'form persists while function atrophies.' The competence_reading asserts 'procedures are live knowledge.' Which reading is correct, or are both tenable depending on which data you attend to?",
+      "resolution_mechanism": "The readings differ on what constitutes evidence of readiness (ceremony + documentation vs. performance under real conditions) and what preparedness requires (procedures vs. competence). This is a conceptual boundary, not an empirical gap: the readings co-instantiate the kernel; resolving which is 'correct' requires choosing a framework for what preparedness means.",
+      "impact": "If the husk_reading is adopted, the constraint is Piton and mandatrophy is resolved. If the competence_reading is adopted, the constraint is Rope and the founding problem is live. The hybrid_reading splits the difference (some components competent, some ritualized). The engine computes per-seat classifications; the committer frame explains which reading animates this story.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer ambiguity: which reading of the preparedness_persistence kernel is structurally true, or do both coexist as frames for the same empirical facts?"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__competence_reading",
+      "preparedness_persistence__hybrid_reading"
+    ],
+    "dual_formulation_note": "The preparedness_persistence kernel is contested across three readings: husk_reading (this story, Piton), competence_reading (Rope), hybrid_reading (mixed). Each reading instantiates a different constraint with a different epsilon, beneficiary structure, and type. The readings share a referent (the drill and inspection apparatus) but diverge on what the apparatus accomplishes (theater vs. practice; atrophied vs. live). This story is the husk_reading (form without function). The competence_reading asserts the same apparatus is genuine coordination. The hybrid_reading asserts the apparatus is partially atrophied in some components and live in others. The three stories are linked via network.affects_constraints because each reading's viability influences the others — evidence that the husk_reading is structurally true undermines the competence_reading, and evidence of hybrid operation (some competent, some ritualized) moves the classification toward the hybrid_reading."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "form_persists_without_function",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "legitimacy_via_ceremony_not_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "preparedness_via_continuous_practice",
+    "drift_state": {
+      "moment": "contemporary_accelerated_climate_risk",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "civil_protection_administration",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

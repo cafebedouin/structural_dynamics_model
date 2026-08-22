@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "211e400a-a20b-41c8-9556-f665d4200182"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Health Intervention Proportionality Constraint (Balanced Reading)",
+    "topic_domain": "public_health/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "population_at_measurable_risk",
+      "healthcare_system"
+    ],
+    "victims": [
+      "vaccine_hesitant_individuals",
+      "religious_objectors",
+      "individuals_with_contraindications"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Implements intervention policies (vaccination mandates, quarantine orders) calibrated to disease threat level. Conducts epidemiological assessment, sets proportionality thresholds, and enforces compliance through administrative and legal mechanisms. Balances population health against individual liberty claims by disease-specific risk metrics."
+    },
+    {
+      "name": "population_at_measurable_risk",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from herd immunity thresholds reached through interventions; disease transmission is reduced proportionally to intervention coverage. Their risk reduction is the coordination function the constraint serves. Heterogeneous: infants and immunocompromised benefit most; healthy adults benefit less directly but still gain protection from disease circulation suppression."
+    },
+    {
+      "name": "vaccine_hesitant_individuals",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the costs of mandates (bodily autonomy constraint, medical risk from vaccines themselves) while retaining some benefit from herd immunity if threshold is reached without them. Their exit options are constrained: they can refuse and face employment loss, school exclusion, or fines; they cannot easily relocate to escape mandatory vaccination jurisdictions without major life disruption."
+    },
+    {
+      "name": "religious_objectors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Object to interventions on grounds of sincere religious belief (divine providence, bodily temple doctrine). Their exit is identity-locked: departing the belief system is not a real option; they bear the constraint's costs (exclusion, coercion, legal penalties) because their identity framework makes acceptance impossible. Some jurisdictions offer religious exemptions, but these are conditional and subject to challenge."
+    },
+    {
+      "name": "individuals_with_contraindications",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Have documented medical reasons for non-participation (severe allergies, immunological conditions, prior adverse reactions). They cannot refuse and remain safe; they cannot participate and remain safe. The constraint creates a bind: mandatory participation poses medical harm; exclusion exposes them to disease risk. Medical exemptions exist in principle but are narrowly defined and difficult to obtain; they depend on individual clinician judgment and institutional policy."
+    },
+    {
+      "name": "healthcare_system",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Benefits from reduced disease burden, predictable patient flow, and prevention-focused resource allocation. The constraint enables planning: systems can staff and stock for reduced infectious disease load rather than pandemic surge. Public trust in mandatory intervention also depends on proportionality credibility; aggressive mandates on low-threat diseases erode the healthcare system's legitimacy for high-threat scenarios."
+    },
+    {
+      "name": "disease_surveillance_experts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Monitor and assess threat levels using standardized metrics: transmissibility (R-value), case-fatality rate, hospitalization burden, variants. They produce the epidemiological basis for proportionality judgments. Their authority is central to the constraint's legitimacy: if threat assessment appears captured by political actors or disconnected from evidence, the proportionality reading itself becomes contestable."
+    },
+    {
+      "name": "judicial_review_authority",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reviews whether implemented interventions meet proportionality standards: do restrictions fit the declared threat? Do exemptions follow from the proportionality logic or undermine it? Their role is to police the constraint's internal consistency and prevent drift from proportionality into unrestrained coercion."
+    },
+    {
+      "name": "bodily_autonomy_absolutists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold that no public health benefit justifies bodily intervention without consent. They are excluded from the constraint-setting process because the proportionality reading explicitly rejects their premise: legitimate intervention does not require absolute consent, only that intervention severity be proportional to threat. If included, they would contest the core claim of the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Matches intervention severity (vaccination mandates, isolation, movement restriction) to disease threat level (transmissibility, case-fatality rate, hospitalization burden, variants). Solves the coordination problem of preventing disease transmission at population scale while respecting individual liberty to a degree proportional to threat. Both population harm and individual autonomy matter; they are weighted by disease characteristics (high-threat diseases justify aggressive intervention and limited exemptions; low-threat diseases justify minimal intervention and broad exemptions).",
+    "transfer_function": "Moves bodily autonomy costs (medical procedures, occupational exclusion, movement restriction, medical exemption gatekeeping) from the general population and from beneficiaries (those protected by herd immunity) to identified groups (vaccine-hesitant individuals, religious objectors, individuals with contraindications). The transfer is conditional on threat level: it is supposed to scale with threat magnitude. For high-threat diseases, the transfer is justified by proportionality; for low-threat diseases, the transfer is unjustified and represents extraction.",
+    "absent_voices": "Bodily autonomy absolutists are structurally excluded from the proportionality framework because their core claim (informed consent is non-negotiable regardless of benefit) contradicts proportionality's premise (some threat levels justify coercive intervention). Anti-vaccination advocates are typically present but their claims are filtered through threat assessment: their objections gain force if threat is low or exaggerated, but are overridden if threat is high. Individuals who distrust public health institutions are present but marginalized because the constraint's legitimacy depends on institutional credibility for threat assessment. If included as full voices, they would argue that proportionality is a false balance and that threat assessment is captured.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If proportionality constraint disappeared, authorities would lack a limiting principle on intervention severity. The world would reorganize around either bodily autonomy absolutism (no state medical mandate regardless of threat level) or public health primacy (any intervention justified by any measurable disease risk). Either shift substantially alters disease epidemiology, autonomy distribution, and the institutional authority of public health.",
+    "founding_problem": "Disease threats vary across orders of magnitude: measles R-value ~12-18, case-fatality ~0.1-0.2%; influenza R-value ~1.3, case-fatality ~0.1%; COVID variants R-value 4-18, case-fatality 0.5-2%; endemic pathogens endemic. Early public health responses treated high-threat and low-threat diseases identically, applying the same apparatus (quarantine, isolation, vaccination mandates) regardless of proportionality. This generated both genuine epidemiological success (eradication of high-threat pathogens, elimination of childhood diseases) and unjustified autonomy violations (mandatory vaccination for low-risk conditions, broad quarantine powers used for non-epidemiological purposes). Autonomy advocates objected to all mandates; public health authorities resisted constraints on their power. The proportionality reading emerged as a framework to calibrate intervention: severity should match threat, exemptions should reflect that match, and authorities should be limited by the principle that more severe threats justify more severe intervention.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Epidemiologists and public health officials attest the founding problem is live: disease threats vary and decisions about intervention scope must account for that variation; they invoke proportionality as a guiding principle in outbreak response. Medical ethicists and constitutional law scholars corroborate: proportionality is a recognized principle in bioethics and constitutional rights review (rights-limiting measures must be necessary and proportional to the legitimate aim across democratic legal systems). Judicial decisions in multiple jurisdictions explicitly reference proportionality as a legitimacy standard (Germany's proportionality review of COVID measures; US courts reviewing vaccine mandates under rational basis review that implicitly applies proportionality logic; Canadian courts applying Oakes test proportionality to public health measures). Bodily autonomy advocates and religious objectors attest that unjustified interventions persist: exemption rules are overly restrictive, mandates persist on low-threat pathogens, and threat assessment appears to be influenced by institutional inertia rather than current evidence. Outside the public health authority, independent medical bodies (AMA, WHO) and civil rights organizations affirm that proportionality is a real constraint on legitimate intervention, not merely that it should be but that it is in fact applied as a limiting principle in actual policy and that violations of proportionality are grounds for legal challenge."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The proportionality reading of legitimate health intervention holds that state authority to mandate medical procedures (vaccination, isolation, quarantine) is legitimate only when intervention severity is proportional to disease threat. Threat is measured by transmissibility, case-fatality rate, hospitalization burden, and variants; legitimacy requires that autonomy costs scale with threat magnitude. This reading rejects bodily autonomy absolutism (which denies any legitimate mandate regardless of threat) and public health primacy (which permits any intervention justified by any measurable risk). The proportionality reading is contested: public health authorities claim they already apply it and accuse critics of misrepresenting threat levels; autonomy advocates claim proportionality is a mask for unjustified coercion; public health primacy proponents argue proportionality ties their hands when disease burden is severe. This JSON instantiates ONLY the proportionality reading as a self-contained constraint with its own ε, beneficiary/victim structure, and type classification. The sibling readings (bodily_autonomy_primary, public_health_primary) are separate constraint stories in the corpus, linked via network.affects_constraints.",
+    "key_agents": [
+      "Public health authority: institutional agenda-setter; calibrates intervention severity to threat; collects legitimacy from proportionality standard",
+      "Population at measurable risk: beneficiary (herd immunity protection); organized, mobile exit",
+      "Vaccine-hesitant individuals: payer (autonomy constraint, medical procedures); moderate power; constrained exit",
+      "Religious objectors: payer (autonomy constraint); identity-locked, cannot exit belief framework",
+      "Individuals with medical contraindications: payer (trapped bind: intervention or disease risk); powerless, trapped exit",
+      "Healthcare system: beneficiary (reduced disease burden, planning confidence); institutional",
+      "Disease surveillance experts: observer; institutional authority for threat assessment",
+      "Judicial review: observer; polices proportionality standard",
+      "Bodily autonomy absolutists: excluded; their core claim contradicts proportionality premise"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.42 at interval end) and conditional: the constraint extracts bodily autonomy from identified groups, but the extraction is justified by threat level. At t=0 (baseline, low-threat disease scenario) extractiveness is low (0.28) because proportionality limits what can be demanded; at t=10-15 (high-threat scenario) extractiveness rises (0.42-0.45) because threat justifies more aggressive intervention; by t=25 (threat trajectory declining or controlled) extractiveness plateaus at the maintained level (0.42) because the intervention architecture persists even as acute threat recedes. Suppression requirement follows threat: it is minimal when threat is low (proportionality allows refusal) and higher when threat is severe (enforcement machinery engages to reach herd immunity threshold). Theater ratio is low throughout (0.12-0.24) because the constraint's function is genuinely coordination (disease prevention) rather than performance — the function is real even when criticized. Resistance is substantial (0.58) because three distinct groups contest the constraint: bodily autonomy absolutists reject any mandate; religious objectors refuse on grounds of conscience; and public health primacy advocates argue proportionality is too restrictive. The constraint faces real resistance because its core premise (proportionality matters) is not universally accepted. Accessibility collapse is moderate (0.61): alternatives (exit to low-intervention jurisdictions, medical exemptions, religious exemptions) exist in principle but are constrained in practice; once the constraint's proportionality logic is understood, individuals see the conditional structure and some accept it as legitimate if threat is high. The measurement series models disease threat trajectory: low (t=0-5, endemic disease phase), rising (t=5-15, outbreak phase), then stabilizing (t=15-25, either controlled or chronic phase). Extractiveness and suppression track threat; theater is low and stable because the function is genuine throughout.",
+    "directionality_logic": "The public health authority is the structural beneficiary and agenda-setter (d near beneficiary/controller end): they set threat assessment standards, deploy intervention apparatus, and collect legitimacy from proportionality framing. Population at risk are beneficiaries (d low, near beneficiary end): they gain herd immunity protection proportional to intervention coverage. Vaccine-hesitant individuals and religious objectors are targets (d high, near target end): they bear autonomy costs that scale with threat but whom they cannot refuse without accepting disease risk or social exclusion. Individuals with contraindications are extreme targets (d highest): they are trapped — they cannot safely participate and cannot safely refuse. The constraint distributes directionality heterogeneously by disease threat: for low-threat diseases, hesitant individuals appear as targets (extracting their autonomy) while for high-threat diseases their target status is justified by threat magnitude. Healthcare system is beneficiary (d low): it benefits from disease control and planning confidence. Judicial review and surveillance experts are analytical observers (d = 0.5 by default, pure analytical position). Bodily autonomy absolutists are excluded rather than positioned: they reject the constraint's premise, so their d is not computed within this reading — they would appear as targets in a bodily_autonomy_primary constraint story.",
+    "perspectival_gap": "The seats compute dramatically different types from the same constraint. From the public health authority's seat (beneficiary, institutional power, analytical exit): this is a rope — genuine coordination with minimal coercive overhead, calibrated to threat, consensual where threat is high and exemptions where threat is low. From the hesitant individual's seat (target, moderate power, constrained exit): this is a snare — the proportionality language is a cover for autonomy extraction that they cannot refuse; the conditional structure is not experienced as legitimate calibration but as arbitrary coercion by those who set threat thresholds they do not trust. From the individual with contraindications' seat (target, powerless, trapped exit): this is pure extraction — they bear full autonomy cost and full disease risk regardless of the constraint's intention; proportionality is meaningless to someone who cannot participate. From the judicial review seat (observer, institutional power, analytical exit): this is tangled rope — genuine coordination function (disease prevention) combined with asymmetric extraction (hesitant individuals and objectors pay), requiring active enforcement, balanced by threat-proportional limits. The engine computes per-seat classification; the claimed type (tangled_rope) represents the analytical observer's assessment. This divergence is the measurement the constraint story exists to capture: the same arrangement produces different structural classifications from different seats precisely because the constraint's legitimacy depends on proportionality, which is contested and not equally believed.",
+    "mandatrophy_analysis": "The founding problem (calibrating intervention severity to disease threat, preventing unjustified autonomy violations) is live: outbreaks still occur, threat varies by pathogen, and the risk of both under-intervention (allowing preventable disease) and over-intervention (imposing unjustified autonomy costs) is real. The constraint shows no mandatrophy: the proportionality standard is actively applied, threat assessments are regularly updated, and both high-threat and low-threat diseases receive differentiated intervention postures. However, a contestation emerges: different parties disagree on whether proportionality is actually being applied. Public health authorities cite exemptions, staged mandates, and threat-responsive policy as evidence of proportionality compliance. Autonomy advocates and religious objectors cite over-broad exemption restrictions, persistent mandates on low-threat conditions, and lack of individualized threat assessment as evidence of drift into pure extraction. Judicial review (in some jurisdictions) has found some interventions disproportionate and struck down policies that violated proportionality. The constraint is tangled rope, not piton, because the function (disease prevention) is real and the proportionality limit is genuinely operative — it constrains what authorities can do and generates resistance when violated. The constraint is not rope because the extraction is not purely consensual: hesitant individuals and objectors do not accept proportionality as a legitimate limit; they view any mandate as unjustified. The theater ratio (0.22) indicates some performative element (authorities may emphasize proportionality language to increase legitimacy even when threat assessment is not fully objective), but theater is not the primary function — the function is real coordination and the performance is secondary.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel: legitimate_health_intervention. The kernel is the fundamental commitment that public authority to mandate medical procedures can be legitimate under some conditions. Three readings decompose this: (1) bodily_autonomy_primary: legitimacy requires informed consent; state coercion violates bodily integrity regardless of public benefit. (2) proportionality_reading (this story): legitimacy requires proportionality between intervention severity and threat level; both population harm and individual autonomy matter but are weighted by disease characteristics. (3) public_health_primary: legitimacy derives from measurable reduction in population-level morbidity/mortality; individual refusal is externality imposition. These readings coexist in contemporary public health discourse. They share the kernel (a commitment to legitimate state power over bodies) but instantiate it differently. The proportionality reading is distinctive: it accepts that state intervention can be legitimate (rejecting bodily autonomy absolutism) AND that individual liberty matters (rejecting public health totalitarianism). Proportionality is the balancing principle: threat level determines intervention scope. Other jurisdictions and legal traditions take different readings: the U.S. historical default is bodily autonomy with narrow public health exceptions (Jacobson v. Massachusetts); some European jurisdictions apply strict proportionality review; some public health establishments operationalize public health primacy (intervention justified by any measurable risk). Each reading has its own ε value: bodily_autonomy_primary has low ε (extractiveness is per-se illegitimate if any coercion is present); public_health_primary has high ε (extractiveness is proportional to threat reduction achieved, no autonomy penalty); proportionality_reading has moderate ε conditional on threat (0.28 for low-threat diseases, 0.42-0.45 for high-threat diseases, scaling with threat level)."
+  },
+  "omegas": [
+    {
+      "id": "threat_assessment_capture",
+      "question": "Is threat assessment genuinely independent and evidence-based, or is it captured by political actors, economic interests, or institutional inertia?",
+      "resolution_mechanism": "Comparative analysis of threat assessment across jurisdictions and pathogens: do jurisdictions with institutionally independent public health agencies assess threat differently than those with direct political control? Do historical threat assessments track actual disease burden (case count, hospitalization, mortality) or do they diverge in predictable directions (over-assessment of politically salient threats, under-assessment of endemic threats)? Post-pandemic review of how threat was assessed during COVID outbreak escalation vs. de-escalation: did assessment follow epidemiological evidence or political timeline?",
+      "impact": "If threat assessment is captured, proportionality is compromised: the constraint becomes extraction hiding under threat language. If threat assessment is independent, proportionality is legitimate: the constraint genuinely calibrates to real threat. This resolves whether the constraint is tangled rope (coordination + genuine proportionality limit) or snare (threat exaggeration as cover for autonomy extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportionality is applied based on objective threat or captured by political interests."
+    },
+    {
+      "id": "autonomy_absolutism_vs_proportionality_framing",
+      "question": "Is proportionality a genuine framework for balancing population harm and individual liberty, or is it a rhetorical cover that bodily autonomy absolutists reject as fundamentally illegitimate?",
+      "resolution_mechanism": "Phenomenological study of how different parties experience the constraint: do people who accept proportionality actually believe autonomy costs are justified by threat magnitude, or do they comply despite disbelieving proportionality? Do people who reject proportionality do so because they accept bodily autonomy absolutism, or because they distrust threat assessment and believe proportionality is a false balance? Can any intervention severity be sufficiently proportional to be accepted by autonomy absolutists, or is the framework itself rejected regardless of threat level?",
+      "impact": "If proportionality is a genuine balancing framework widely accepted as legitimate, the constraint is tangled rope from most seats. If proportionality is a rhetorical frame that autonomy absolutists reject on principle and that hesitant individuals reject as false balance, the constraint is snare from those seats regardless of actual threat level. This resolves whether seat divergence is about different legitimate perspectives on the same constraint or about different parties rejecting the constraint's basic premise.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether proportionality is accepted as a legitimate balancing framework or rejected as illegitimate autonomy violation."
+    },
+    {
+      "id": "internalized_vs_structural_suppression",
+      "question": "Is the measured suppression primarily structural (external barriers like occupational exclusion) or internalized (individuals believing proportionality is legitimate and resisting is selfish)?",
+      "resolution_mechanism": "Post-enforcement trajectory analysis: among individuals who complied with mandates during enforcement, do compliance rates remain high after enforcement mechanisms are removed? If compliance drops sharply, suppression was structural. If compliance persists, suppression is internalized. Longitudinal studies tracking belief change: do individuals shift toward accepting proportionality framing as legitimate over time, or do they remain skeptical but compliant under coercion?",
+      "impact": "If suppression is internalized, the constraint may become more stable long-term (beliefs persist after external enforcement ends) but at the cost of genuine autonomy reduction. If suppression is structural, enforcement must be continuously maintained to prevent exit; reduction of enforcement capacity will break the constraint quickly. This affects the constraint's lifecycle and the scope of true resistance.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural coercion or internalized belief."
+    },
+    {
+      "id": "reading_indeterminacy_proportionality_vs_autonomy",
+      "question": "Can the same medical intervention be described as legitimate proportionality by one reading and illegitimate autonomy violation by another reading, with no fact about the world deciding between them?",
+      "resolution_mechanism": "Meta-level framing analysis: is the dispute about facts (threat level, intervention effectiveness, autonomy cost) that could be resolved empirically, or about the normative framework (is proportionality a legitimate principle at all) that is irreducible? If all parties agreed on threat level and autonomy cost, would they still disagree about legitimacy? If yes, the dispute is conceptual, not empirical.",
+      "impact": "If proportionality is a legitimate reading that coexists with bodily autonomy absolutism, both readings remain valid. If the readings foreclose each other (one rules out the other's core premise), then one reading will be classified as foreclosed by the engine and the constraint will bifurcate into incompatible interpretations. This affects whether the kernel (legitimate_health_intervention) admits multiple readings or whether only one can be truly legitimate.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the proportionality and bodily autonomy readings are genuinely coexistent or logically incompatible."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimate_health_intervention__bodily_autonomy_primary",
+      "legitimate_health_intervention__public_health_primary"
+    ],
+    "dual_formulation_note": "The legitimate_health_intervention kernel decomposes into three structurally distinct constraints: bodily_autonomy_primary (no state mandate is legitimate regardless of threat), proportionality_reading (this story: legitimacy requires proportional severity), public_health_primary (any measurable benefit justifies mandate). These are not alternative measurements of the same constraint — they have different ε values, different beneficiary/victim structures, and different legitimacy premises. The proportionality reading coexists with bodily autonomy reading (both held by different parties; neither rules out the other within a single party's framework) and influences the public health reading (proportionality constraints public health authority's mandate scope). Each reading should be generated as a separate constraint story with its own ε and classification; they are linked by network.affects_constraints to indicate the kernel family."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "proportionality_principle_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "threat_level_scales_autonomy_cost",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "evidence_based_threat_responsive_intervention",
+    "drift_state": {
+      "moment": "contemporary_post_pandemic",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ],
+  "gain_flow": "public_health_authority",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

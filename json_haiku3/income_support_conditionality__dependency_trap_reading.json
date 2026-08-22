@@ -1,0 +1,336 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "fab78950-a81e-4c97-b4b1-58da008f033d"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support as Dependency Trap (Dependency Reading)",
+    "topic_domain": "political_economy/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "ubi_recipients",
+      "taxpayers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ubi_recipients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional income support that removes immediate survival pressure but creates structural disincentive to skill development, labor force participation, or career advancement. Over time, skill atrophy sets in, re-entry cost rises, and the recipient's identity fuses with the recipient role itself — they become defined by dependence rather than capability. Exit would require rejecting the support and entering a labor market where their skills have degraded and where they no longer see themselves as capable workers. The identity_locked exit reflects the psychological/identity barrier, not merely economic constraint."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund unconditional income support through taxation. From the dependency-trap reading, they are victims because the transfers fund non-productive idleness rather than enabling labor-market participation or skill development. They cannot opt out of taxation without leaving the jurisdiction. Their organized power allows collective advocacy but not individual exit."
+    },
+    {
+      "name": "policymakers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design, fund, and administer unconditional income support programs. They set the transfer amount, eligibility criteria, and enforcement rules. Within this reading, policymakers either misunderstand the incentive effects of unconditional support, or benefit from maintaining a dependent constituency that provides political control and predictable voting blocs."
+    },
+    {
+      "name": "employers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Benefit indirectly from a workforce whose outside options are constrained by skill atrophy and identity fusion with the recipient role. Lower bargaining power from workers unable or unwilling to re-enter labor markets, fearing their skills have degraded beyond recovery, makes wage suppression and working-condition degradation easier to enforce. They have high mobility and can relocate to other jurisdictions or labor-cost regimes."
+    },
+    {
+      "name": "labor_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study incentive effects and behavioral responses to unconditional income support. The dependency-trap reading cites labor economics literature on reduced work incentives, skill degradation, and long-term earnings penalties as empirical evidence for the reading's claims. This is an analytical seat, not collecting from or bearing direct cost of the constraint."
+    },
+    {
+      "name": "alternative_reading_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Proponents of freedom-floor and wage-subsidy readings are structurally excluded from this reading's kernel interpretation. They would argue that UBI decommodifies labor, enables labor refusal, or functions as employer subsidy, but the dependency-trap reading's institutional framing does not admit these alternative interpretations as legitimate within its framework. They are excluded not from the policy debate, but from this particular reading's structural picture."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "None. This reading presents unconditional income support as a failure to solve a coordination problem rather than as a solution to one. The constraint is presented as a transfer mechanism that persists by creating structural dependency, not by coordinating legitimate collective action.",
+    "transfer_function": "Moves tax revenue from organized labor and employers to individuals selected by unconditional eligibility criteria (typically non-means-tested, non-employment-contingent). From the dependency-trap reading's perspective, the transfer narrows the behavioral space of recipients (work becomes less attractive) and concentrates the constraint's burden on powerless recipients while diffusing funding cost across taxpayers.",
+    "absent_voices": "Advocates of freedom-floor and wage-subsidy readings (alternative interpretations of the same income-support kernel) are absent from this reading's framing. They would argue UBI serves different functions — enabling labor refusal, subsidizing low-wage employment, improving bargaining position — but this reading does not engage those interpretations as legitimate structural possibilities. Their absence is structural, not accidental; the dependency-trap reading excludes them from its frame.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support disappeared, recipients would be forced to re-enter labor markets (skill-degraded, but no longer identity-locked to dependency); taxpayers would reallocate resources to other uses; employers would face renewed worker bargaining power; labor-force participation would restructure. The arrangement is not natural law — it is a deliberate policy choice whose removal would trigger economic and behavioral reorganization.",
+    "founding_problem": "Poverty and economic insecurity in wealthy societies where production sufficiency exists but distribution is unequal. Unconditional income support (UBI, negative income tax) was designed to address this problem without means-testing stigma, work-requirement verification overhead, or paternalistic conditions on how recipients spend transfers.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The dependency-trap reading cites longitudinal labor economics research documenting reduced work incentives, skill degradation trajectories, and long-term earnings penalties in unconditional-transfer recipients (Mulligan, Blanchard, and others). However, advocates of freedom-floor and wage-subsidy readings dispute whether these outcomes represent failure or constitute the intended effect (labor decommodification, worker bargaining improvement, employer subsidy continuation). The founding problem's status — whether it is being solved or the mechanism is creating new problems — is itself the contested kernel. No external corroborating source fully validates either reading's claim; the dispute remains unresolved."
+  },
+  "omegas": [
+    {
+      "id": "causation_vs_selection",
+      "question": "Do unconditional transfers CAUSE reduced work incentives and skill atrophy, or do they REVEAL pre-existing employment barriers and capability constraints?",
+      "resolution_mechanism": "Experimental variation in transfer amount and conditionality across similar populations; longitudinal tracking of skill development, labor-market attachment, and earnings trajectories; comparison with conditioned and means-tested programs.",
+      "impact": "If causal: the dependency-trap reading's snare classification stands; the constraint operates by removing work incentives. If selection effect: the constraint's extractiveness lies elsewhere (in labor-market barriers themselves); the reading misdiagnoses the mechanism.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether dependency is caused by the constraint or revealed by it."
+    },
+    {
+      "id": "identity_fusion_mechanism",
+      "question": "Is the identity fusion (recipient defined by dependence) intrinsic to unconditional support, or does it arise from surrounding stigma, institutional design, and social perception?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if recipients spontaneously re-enter work and rebuild identity when support ends, fusion was partly internalized. Cross-national comparison of identity outcomes in high-status vs. stigmatized UBI programs; ethnographic study of recipient self-perception.",
+      "impact": "If internalized: the constraint's effective suppression is higher than the structural measure; recipient carries the constraint after exit. If externally maintained: the extractiveness is in the institutional framing, not the transfer itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity fusion is structural or internalized."
+    },
+    {
+      "id": "kernel_framing_contest",
+      "question": "Is unconditional income support fundamentally a dependency trap (this reading), freedom-enabling floor (sibling), or employer-subsidizing wage suppression (third sibling)? Which structural facts would prove one reading correct?",
+      "resolution_mechanism": "Examine labor-market outcomes: (A) work incentives fall, recipients spiral into idleness → dependency-trap. (B) workers refuse bad jobs, improve bargaining position → freedom-floor. (C) employers suppress wages while UBI maintains subsistence → wage-subsidy. Requires long-term, large-scale field data comparing UBI rollout outcomes.",
+      "impact": "The kernel contest determines which reading's ε is correct (0.72 vs. 0.15–0.35 vs. 0.65) and which classification (snare vs. rope vs. snare/tangled_rope). The constraint family remains unresolved until empirical labor-market patterns adjudicate.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which reading of the income-support kernel is structurally accurate."
+    },
+    {
+      "id": "taxpayer_extraction_mechanism",
+      "question": "Are taxpayers genuine victims (funding non-productive idleness) or beneficiaries of macro effects (demand stimulus, employment opportunities) that outweigh marginal tax cost?",
+      "resolution_mechanism": "Macroeconomic accounting of multiplier effects, labor-force participation response, and net revenue impact. If transfers trigger demand stimulus that increases tax base and employment offsetting marginal cost, victim designation shifts.",
+      "impact": "Shifts taxpayers from victim to potential beneficiary set, refactoring the constraint's structure and reducing extractiveness from the macro-accounting perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether taxpayers bear net cost or benefit from macro effects of unconditional transfers."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.72,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "projected"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the DEPENDENCY-TRAP reading of the contested income-support kernel: unconditional income support (typically Universal Basic Income or negative-income-tax style transfers) is presented as creating structural dependency through reduced work incentives, skill degradation, and long-term earnings penalties. The reading frames recipients as victims trapped in idleness whose skills atrophy and whose identity fuses with the dependent role, making exit progressively costlier. Taxpayers are also victims from this reading's perspective: they fund transfers that maintain idleness rather than enabling labor-market participation or skill development. This reading COEXISTS with two sibling readings: the FREEDOM-FLOOR reading (UBI decommodifies labor, enabling refusal of coercive work and improved bargaining) and the WAGE-SUBSIDY reading (UBI functions as implicit employer subsidy, allowing wage suppression while maintaining worker subsistence). All three readings interpret the same kernel (unconditional income support) but instantiate different constraints with different ε values, beneficiary/victim structures, and types. This file generates ONLY the dependency-trap reading as a clean snare; the other readings are separate constraint stories linked via network.affects_constraints.",
+    "key_agents": [
+      "ubi_recipients: powerless, trapped in idleness and identity fusion with the dependent role; skill atrophy raises re-entry cost progressively",
+      "taxpayers: organized, funding transfers that (in this reading) maintain non-productive dependency rather than building human capital",
+      "policymakers: institutional agenda-setter, designing and administering the program; may benefit from controlling a dependent constituency",
+      "employers: powerful, indirect beneficiary from weakened worker bargaining position and reduced labor-market competition",
+      "labor economists: analytical observer, whose research on reduced work incentives and earnings penalties informs the reading's empirical claims",
+      "alternative-reading advocates: excluded, would dispute the reading's framing and offer freedom-floor or wage-subsidy interpretations"
+    ],
+    "logic_rationale": "The dependency-trap reading measures HIGH extractiveness (0.72 at interval end) because the constraint operates by reducing work incentives and making non-participation structurally attractive relative to labor-market entry. The measured increase from 0.58 to 0.72 over 25 years models the accumulation of skill degradation and identity fusion: early recipients may retain re-entry capability, but long-term exposure makes exit progressively costlier. Suppression is substantial (0.68) because the constraint persists by making recipients psychologically and materially dependent — not by external coercion alone, but through internalized belief that they cannot compete in labor markets and that their identity is constituted by the dependent role. Theater is moderate (0.41): some enforcement machinery (eligibility verification, means testing where it exists) is performative, but much serves the genuine function of maintaining recipient rolls and measuring program reach. Accessibility_collapse is moderate (0.62): alternatives (labor-market entry, skill development) theoretically exist but become progressively inaccessible as skills degrade and identity fuses with dependency. Resistance is substantial (0.58) because recipients often resist the dependency-trap framing (asserting that UBI enables choice, not traps them), and advocates of alternative readings actively contest this reading's claims. The measurement series tracks ACCUMULATING extraction over 25 years, modeling how a voluntary-entry program develops long-term dependency: initial extractiveness is moderate, but compounds as behavioral change (reduced work-seeking) becomes crystallized identity and skill depreciation becomes irreversible.",
+    "perspectival_gap": "From the recipients' seat (powerless, identity-locked), the constraint may feel liberating initially (survival pressure removed) but progressively restrictive (re-entry cost rising, identity fusion deepening). From policymakers' seat, the constraint may appear benign (poverty relief achieved) or beneficial (reliable constituency maintained). From taxpayers' seat, the constraint appears as resource diversion to non-productive idleness. From employers' seat, it appears as beneficial (reduced worker bargaining power). These divergent perceptions arise from the structural asymmetry of the constraint: recipients bear the long-term extraction (skill loss, identity fusion), taxpayers bear funding extraction, employers gain indirect benefit. The engine computes per-seat classification from this structural data; the dependency-trap reading claims the constraint operates as snare for the victim seats.",
+    "directionality_logic": "UBI recipients: high d (near 1.0, target). They bear the extraction directly through incentive suppression and long-term harm (skill atrophy, identity fusion). Their exit is identity_locked (psychological/identity barrier, not merely economic). Taxpayers: high d (0.7–0.9, substantial target). They fund the constraint and receive no identifiable benefit within this reading (contrasting with freedom-floor reading where they benefit from macroeconomic effects). Their exit is constrained (cannot opt out of taxation without leaving the jurisdiction). Policymakers: low d (0.2–0.3, beneficiary). They design and control the program, potentially benefiting from maintaining a dependent constituency. Their exit is arbitrage (could switch policy frameworks without personal cost). Employers: very low d (0.1–0.2, beneficiary). They gain indirect benefit from weakened worker bargaining and reduced labor-market competition. Their exit is arbitrage. The directionality-derived effective extraction χ is high for powerless victims (recipients, d≈1.0) and moderate for organized victims (taxpayers, d≈0.75), amplified by the constraint's national scope and the victims' limited arbitrage options.",
+    "mandatrophy_analysis": "The dependency-trap reading faces mandatrophy risk: the founding problem (poverty and insecurity) may be solved (poverty rates fall, material security improves) while the constraint (reduction of work incentives, skill degradation, long-term dependency) persists or worsens. This reading argues that the constraint's persistence is DETRIMENTAL regardless of poverty reduction because it trades immediate material security for long-term human-capital loss and identity fusion. The mandatrophy mismatch emerges when the founding problem's solution (poverty relief achieved) diverges from the constraint's function (now maintaining dependency rather than enabling transition). This reading would declare mandatrophy_resolved=true if evidence shows that recipients systematically fail to re-enter labor markets even when support is reduced or benefits expire — if the founding problem is solved but the constraint persists as pure dependency maintenance, mandatrophy is the diagnosis. The freedom-floor and wage-subsidy readings would dispute this diagnosis, claiming that the founding problem remains live or that the constraint serves different functions than the dependency trap claims.",
+    "kernel_context": "This constraint instantiates the DEPENDENCY-TRAP READING of the contested income-support kernel (income_support_conditionality). The kernel is a persisting arrangement — unconditional income support — that different parties read through different frameworks: (1) DEPENDENCY-TRAP READING (this file): UBI creates structural dependency via reduced work incentives and long-term skill degradation. Recipients are victims of identity fusion and skill atrophy; taxpayers fund non-productive idleness. Type: Snare. ε≈0.72. (2) FREEDOM-FLOOR READING (sibling constraint): UBI decommodifies labor, enabling refusal of coercive work and improved worker bargaining position. Recipients are beneficiaries of expanded choice and freedom; taxpayers fund positive freedom expansion. Type: Rope or Tangled Rope (coordination benefit with extraction). ε≈0.15–0.35. (3) WAGE-SUBSIDY READING (third sibling constraint): UBI functions as implicit employer subsidy, allowing employers to suppress wages while UBI maintains worker subsistence. Both recipients and employers are beneficiaries; workers are victims of wage suppression. Type: Snare or Tangled Rope. ε≈0.65. These readings coexist across different policy communities, research traditions, and political ideologies. The kernel contest is unresolved because the three readings predict different labor-market outcomes from the same income-support mechanism. Only long-term empirical observation of actual labor-force participation, skill trajectories, and wage outcomes can adjudicate which reading's structural claims are accurate. Until that evidence consolidates, all three readings remain live and should be authored as separate constraint stories in the corpus."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_conditionality__freedom_floor_reading",
+      "income_support_conditionality__wage_subsidy_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested income-support kernel. The dependency-trap reading, freedom-floor reading, and wage-subsidy reading are structurally distinct constraints arising from the same underlying arrangement (unconditional income support). They coexist because different parties and research traditions interpret the same mechanism through different frames, yielding different ε values, victim/beneficiary sets, and types. The kernel contest is unresolved: only long-term empirical labor-market outcomes can adjudicate which reading's claims are accurate. All three should be authored as separate constraint stories, linked via network.affects_constraints, with explicit omega variables documenting the reading contest in each."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.74
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "poverty_relief_mandate",
+    "drift_state": {
+      "moment": "contemporary_long_term_dependency_visible",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "wage_subsidy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_transfers_reduce_work_incentives",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "skill_atrophy_from_nonparticipation_is_irreversible",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "income_support_conditionality__kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

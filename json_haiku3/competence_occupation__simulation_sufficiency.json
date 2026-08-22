@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "5f123096-a667-40f1-9347-2f947ccea92e",
+    "created_at": "2026-06-12T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Sufficiency Competence Occupation Model",
+    "topic_domain": "organizational/safety",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_training_industry",
+      "regulatory_compliance_apparatus"
+    ],
+    "victims": [
+      "operational_crews",
+      "safety_culture_practitioners"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "simulation_training_industry",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Designs, operates, and maintains simulation equipment and curricula. Collects revenue from training contracts and certifications. Frames competence occupation as measurable through simulator performance metrics and drill completion records. Defends simulation-sufficiency as the legitimate pathway to regulatory sign-off and operational readiness."
+    },
+    {
+      "name": "regulatory_compliance_apparatus",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Certifies operational readiness through documented simulator performance and training completion records. Simplifies compliance verification by treating training records as a proxy for actual competence. Reduces liability exposure by shifting accountability from the regulator's competence assessment to the operator's documented training compliance."
+    },
+    {
+      "name": "operational_crews",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must pass simulator drills and maintain training records to retain certification. Bear the cognitive and temporal cost of repeated simulator cycles that may not map to actual operational conditions. Cannot exit the constraint without losing employment; cannot challenge simulation-sufficiency doctrine without professional retaliation."
+    },
+    {
+      "name": "safety_culture_practitioners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Work within high-reliability organizations to cultivate competence through integrated practice (simulation, real-world feedback, procedural audits, team learning). Experience simulation-sufficiency doctrine as constraining the diversity of mechanisms they deploy. Identity-locked: their professional identity is constituted through commitment to authentic competence cultivation; accepting simulation-sufficiency as complete requires abandoning core professional commitments."
+    },
+    {
+      "name": "incident_survivors_and_families",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Would testify, if present, that simulator drill records failed to predict or prevent operational failures. Their absence from training-design and competence-certification processes is structural; they have no seat at the table where simulation-sufficiency is defended."
+    },
+    {
+      "name": "hybrid_training_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Conduct empirical research into competence maintenance mechanisms. Observe that measured skill decay correlates weakly with simulator performance but correlates strongly with multi-mechanism exercise (simulation + line audit + procedural reinforcement). Their research is often deferred or funded by the simulation industry, creating epistemic conflicts of interest."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a scalable, measurable, repeatable framework for operator certification and competence assessment: simulators offer controlled conditions for testing decision-making under stress, uniform curriculum coverage, and documented evidence trails for compliance auditing.",
+    "transfer_function": "Moves revenue from high-reliability organizations to simulation vendors; moves regulatory certification authority from regulator-conducted assessments to operator-generated training records; moves operational crews' cognitive and temporal resources into simulator cycles rather than integrated real-world feedback mechanisms.",
+    "absent_voices": "Crews whose skill degraded despite simulator drill compliance; families of incident victims whose operators passed all simulator certifications; researchers whose findings contradict simulation-sufficiency but whose funding depends on simulation industry patronage.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If simulation-sufficiency doctrine vanished, high-reliability organizations would rebalance competence maintenance toward integrated multi-mechanism exercise (line audits, procedural reinforcement, authentic crisis response scenarios, real-time feedback from operational incidents). Simulator vendors would face contract renegotiation. Regulatory frameworks would demand direct competence verification rather than training-record proxies. Operational crews would experience different certification pathways and evaluation criteria.",
+    "founding_problem": "In the 1970s-1990s, high-reliability organizations struggled with the cost and safety risk of conducting live-scenario training on critical infrastructure. Simulators offered a way to exercise decision-making under stress without live risk.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The simulation industry attests the problem is live and simulators remain essential. Operational crews and safety practitioners report that simulators address the original problem (cost/safety of live training) but have been reframed as sufficient for occupying the competence kernel — a boundary shift the founding problem does not warrant. Empirical research from outside the simulation industry documents weak correlation between simulator performance and real-world competence decay; this corroboration is sparse and often defunded."
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.71
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Does the competence kernel require simulated exercise alone, or does authentic catastrophic risk constitute an irreducible element of competence occupation?",
+      "resolution_mechanism": "Empirical comparison of skill-decay trajectories between crews trained solely via simulation and crews with authentic incident exposure (blinded to training method). Post-incident performance analysis revealing whether simulator-trained crews demonstrate competence or degradation.",
+      "impact": "If authentic risk is necessary, this reading forecloses to real_incident_necessity and the simulation-sufficiency doctrine becomes a false natural law disguising extraction. If simulation is sufficient, this reading holds and the hybrid_occupation reading becomes over-constrained.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the competence kernel's occupancy conditions are indifferent to incident authenticity."
+    },
+    {
+      "id": "measurement_coupling_ambiguity",
+      "question": "Are the training metrics (simulator performance, drill completion, certification records) actual measures of competence occupation, or are they substitutes that satisfy compliance apparatus requirements while masking underlying skill decay?",
+      "resolution_mechanism": "Track operational crews through incident scenarios (real or high-fidelity simulated with authentic consequences). Measure correlation between metric pass/fail and actual incident response performance, skill retention post-incident, and team learning velocity.",
+      "impact": "If correlation is strong, the metrics legitimately occupy the competence kernel. If weak or inverse, the metrics are theater and the constraint is pure extraction disguised as coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether training metrics proxy for authentic competence or constitute performative substitution."
+    },
+    {
+      "id": "suppression_mechanism_boundary",
+      "question": "Is suppression of alternative competence-maintenance mechanisms (hybrid training, line audits, procedural reinforcement) structural (the simulation paradigm genuinely works better) or internalized (crews and practitioners have absorbed the doctrine and abandoned experimentation)?",
+      "resolution_mechanism": "Post-regulatory-change trajectory: if suppression persists after the simulation-sufficiency doctrine is formally abandoned, reclassify as partially internalized. If suppression dissipates, reclassify as structural.",
+      "impact": "If internalized, crews and practitioners carry the suppression with them even after exiting; the constraint's effective suppression is higher than the documented measure suggests. If structural, the suppression reflects the paradigm's actual scope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured suppression is structural or internalized in the competence-maintenance community."
+    },
+    {
+      "id": "identity_lock_depth",
+      "question": "For safety practitioners identity-locked to the constraint, what specific mechanism binds them? Is it career-path dependence on simulator-certified credentials, relational identity (self-concept constituted through participation in simulation-based training), ideological identity (worldview treating authentic competence as measurement-equivalent to compliance), or institutional identity (the practitioner's organization has become synonymous with simulation delivery)?",
+      "resolution_mechanism": "Narrative interviews with practitioners who have left or attempted to leave simulation-sufficiency frameworks; tracking of career trajectories and identity shifts among exiters; documentation of explicit ideological commitments and how they change or persist post-exit.",
+      "impact": "If lock is primarily career-path dependence, exit barriers are economic and removable. If relational, ideological, or institutional, exit requires identity reconstruction and is far more costly; the constraint's effective suppression on this group is higher than the base measure.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The specific identity-fusion mechanism binding safety practitioners to simulation-sufficiency doctrine."
+    },
+    {
+      "id": "regulatory_capture_asymmetry",
+      "question": "To what extent does the regulatory compliance apparatus benefit from simulation-sufficiency independently of genuine competence outcomes, creating perverse incentive alignment with the simulation industry?",
+      "resolution_mechanism": "Institutional analysis: do regulators face penalties for competence failures (incidents post-certification) proportional to their tolerance for simulation-only training? If penalties are low or indirect, capture is probable. If high and direct, capture is less likely despite aligned interests.",
+      "impact": "If regulatory capture is strong, the apparatus's framing of simulation-sufficiency as legitimating strategy amplifies extraction. If weak, the apparatus's participation in the constraint is less extractive and more coordinative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulatory-apparatus alignment with simulation-sufficiency reflects genuine coordination interest or institutional capture."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Simulation-sufficiency doctrine holds that competence occupation and skill-decay prevention can be achieved through repeated simulator-based drills, provided frequency and fidelity are optimized. This reading treats the competence kernel as occupiable through measurable training compliance — drill completion, performance metrics, certification records. The simulation industry and regulatory compliance apparatus benefit by reducing competence assessment to documented training evidence. Operational crews and safety practitioners pay through constrained exit options (professional retaliation for questioning the doctrine) and identity-lock (practitioners' professional identity is constituted through authentic competence cultivation, making simulation-sufficiency doctrine incoherent with their commitments). The constraint is CLAIMED as tangled_rope (real coordination function: simulators do provide scalable, repeatable training venues; real asymmetric extraction: doctrine overreaches beyond founding problem to substitute for integrated competence maintenance). The authored metrics describe substantial extraction (0.68) and high theater (0.58), indicating the constraint's function has drifted from cost-reduction in live training toward validation of compliance apparatus and revenue capture for the simulation industry.",
+    "key_agents": [
+      "simulation_training_industry: primary beneficiary, agenda-setter; controls curriculum design, certification criteria, and validation standards",
+      "regulatory_compliance_apparatus: beneficiary with agenda-setter secondary role; simplifies oversight by accepting training records as competence proxy",
+      "operational_crews: payers with constrained exit; bear temporal/cognitive cost of simulator cycles and professional risk of questioning sufficiency doctrine",
+      "safety_culture_practitioners: payers with identity_locked exit; professional identity depends on authentic competence cultivation incompatible with simulation-sufficiency framing",
+      "incident_survivors_and_families: excluded; would disconfirm sufficiency doctrine if seated"
+    ],
+    "logic_rationale": "Extractiveness rises over the interval (0.45→0.68) as the constraint's scope expands: initial justification as live-training-cost-reduction gives way to justification-by-optimization, shifting the constraint from coordinating a specific safety function toward validating an entire epistemic apparatus. Theater rises sharply (0.35→0.58), indicating a growing share of drill activity is devoted to generating compliance records rather than maintaining authentic competence. Suppression requirement rises (0.52→0.71) as industry, regulator, and institutional actors invest in defending simulation-sufficiency against empirical challenges and practitioner resistance. Accessibility_collapse is moderate (0.62) because alternative mechanisms (hybrid training, line audits) remain conceptually available but are practically suppressed through funding, credentialing, and professional norms. Resistance is moderate (0.55) because operational crews and practitioners understand the constraint but lack coordinated institutional power to challenge it. The shared time grid ensures every metric is authored at every time point; projected values (t=25-35) assume continued enforcement at the interval-end level as the doctrine ossifies.",
+    "directionality_logic": "The simulation_training_industry (institutional power, arbitrage exit) benefits by capturing training contracts and validation authority — directionality near 0.0 (full beneficiary). The regulatory_compliance_apparatus (institutional power, arbitrage exit) benefits by reducing assessment burden and liability exposure — directionality near 0.15 (beneficiary with modest overhead). Operational_crews (moderate power, constrained exit, biographical time_horizon) pay the cost of repetitive simulator cycles and constrain their careers around certification pathways — directionality near 0.75 (substantial target). Safety_culture_practitioners (moderate power, identity_locked exit, biographical time_horizon) bear the identity-coherence cost of accepting simulation-sufficiency as complete — directionality near 0.80 (substantial target with internalized suppression component). The identity-lock on practitioners derives from the mismatch between their professional commitments (authentic competence cultivation across multi-mechanism integration) and the constraint's framing (competence as measurement-equivalent to compliance); exiting the constraint requires identity reconstruction, which the constraint's institutional embedding makes structurally difficult.",
+    "perspectival_gap": "From the simulation_industry and regulator seats, simulation-sufficiency is genuine coordination: cost-reduction, scalability, reproducibility, audit trails. From the operational_crew and safety_practitioner seats, the same structure operates as enforced extraction disguised as optimization. The engine computes this divergence from the structural data: the beneficiary seats have low directionality (they collect rents), the payer seats have high directionality (they bear constrained costs). The claimed_type (tangled_rope) reflects the structural ambiguity: there IS a real coordination function (simulators do solve the foundational cost/safety problem from the 1970s), but the constraint has drifted toward asymmetric extraction (doctrine expansion beyond its founding warrant, suppression of alternative mechanisms, conversion of simulators from tools into validators of compliance). The metrics show both: extractiveness and theater rise over time, indicating extraction layering on coordination rather than pure coordination replacement.",
+    "mandatrophy_analysis": "The founding_problem (live-training cost and safety risk) was authentic and solved by simulators. The founding_problem_status is CONTESTED: the industry attests the problem is live (crews still need to exercise decision-making under stress without live risk), while practitioners attest the problem is substantially solved and the constraint has been repurposed as compliance validation. The disappearance_verdict is WORLD_REARRANGES: if simulation-sufficiency doctrine vanished, organizations would rebalance competence maintenance mechanisms, crews would experience different certification pathways, and vendors would face contract renegotiation. The mismatch (status=contested + verdict=world_rearranges) indicates mandatrophy: the founding problem no longer justifies the constraint's current scope and beneficiary alignment. The constraint persists because it serves the simulation industry and regulator, not because the founding problem demands it. Theater_ratio (0.58) corroborates: more than half of drill activity is devoted to generating compliance records rather than authentic competence cultivation, indicating performative maintenance of the doctrine.",
+    "kernel_context": "This constraint is the SIMULATION_SUFFICIENCY reading of the competence_occupation kernel. It holds that simulated exercise alone is sufficient to occupy the competence kernel and prevent skill decay. Sibling readings are: (1) REAL_INCIDENT_NECESSITY: only authentic catastrophic incidents provide the irreducible conditions to occupy the competence kernel; (2) HYBRID_OCCUPATION: competence occupation requires continuous multi-mechanism exercise without consensus on optimal configuration. The simulation_sufficiency reading treats competence as a measurable output of training compliance; the real_incident_necessity reading treats competence as dependent on authentic risk exposure; the hybrid_occupation reading treats competence as emergent from integrated multi-mechanism exercise. These readings differ on the STRUCTURAL NATURE of the competence kernel: whether it is indifferent to measurement method (simulation_sufficiency), whether it requires authentic catastrophic conditions (real_incident_necessity), or whether it requires diverse reinforcement mechanisms (hybrid_occupation). The readings coexist in contemporary safety discourse: the simulation industry and regulators advocate simulation_sufficiency; operational crews and safety practitioners argue for hybrid_occupation; incident-analysis researchers often infer real_incident_necessity from failure post-mortems."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__real_incident_necessity",
+      "competence_occupation__hybrid_occupation"
+    ],
+    "dual_formulation_note": "The competence_occupation kernel decomposes into three structurally distinct constraints (readings) based on which conditions are SUFFICIENT to occupy the kernel. Each reading instantiates a different constraint with different ε values, beneficiary/victim structures, and time horizons. Simulation_sufficiency treats measurement-equivalence as sufficient; real_incident_necessity treats incident authenticity as necessary; hybrid_occupation treats integrated multi-mechanism exercise as necessary. Each reading is ε-invariant (OQ-26): measuring one via another reading's observables yields a different ε and different type classification. The three stories are linked via network.affects_constraints to enable contamination-path and family-level analysis; they are SEPARATE constraints not alternative framings of a single constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    }
+  ],
+  "gain_flow": "simulation_training_industry",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "measurement_exhaustiveness_thesis",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "fidelity_substitution_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "simulator_cost_reduction_paradigm",
+    "drift_state": {
+      "moment": "post_regulatory_expansion_era",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "competence_occupation"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

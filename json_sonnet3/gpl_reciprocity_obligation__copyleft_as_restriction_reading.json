@@ -1,0 +1,286 @@
+{
+  "header": {
+    "constraint_id": "gpl_reciprocity_obligation__copyleft_as_restriction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "3f502112-61d5-4c6d-8ad6-a131e12a80c6"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Reciprocity Obligation, read as a restriction on proprietary business models",
+    "topic_domain": "software_licensing_intellectual_property_open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_vendors_using_dual_licensing",
+      "gpl_enforcement_organizations"
+    ],
+    "victims": [
+      "commons_contributors_seeking_commercial_integration",
+      "small_startups_needing_proprietary_extensions",
+      "embedded_systems_manufacturers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "commons_contributors_seeking_commercial_integration",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Contributed code under GPL expecting to build a business around it, but discover that any derivative work incorporating proprietary components must itself be released under GPL. They cannot integrate the commons code into a closed product without either open-sourcing the whole stack or negotiating a separate commercial license from the copyright holder. Their exit is to fork under a permissive license or abandon the integration."
+    },
+    {
+      "name": "small_startups_needing_proprietary_extensions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Want to build a proprietary product on top of a GPL library because it is the best or only available implementation. The license forces a choice: release the entire product under GPL (destroying the proprietary business model), pay for a rarely-offered commercial license, or engage in costly reimplementation. Limited capital means limited ability to negotiate or reimplement."
+    },
+    {
+      "name": "proprietary_software_vendors_using_dual_licensing",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold the copyright to a GPL-licensed codebase and dual-license it, selling proprietary licenses to companies that cannot comply with GPL's reciprocity terms. The viral clause manufactures the very commercial demand for their paid exception, turning what looks like community licensing into a captive sales funnel they alone control."
+    },
+    {
+      "name": "gpl_enforcement_organizations",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Audit compliance, threaten litigation against violators, and negotiate settlements that sometimes include payment to the enforcing organization or mandated code release. They administer and interpret the viral clause, deciding which violations to pursue and how aggressively, without bearing the commercial cost the clause imposes on downstream integrators."
+    },
+    {
+      "name": "embedded_systems_manufacturers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Ship devices containing GPL components (often a Linux kernel or GPL toolchain) alongside proprietary firmware and drivers. Compliance requires disclosure and offer of source in ways that expose trade secrets or invite reverse engineering of adjacent proprietary logic. Many operate in a gray-compliance zone, absorbing legal risk rather than fully complying or fully avoiding GPL code."
+    },
+    {
+      "name": "permissive_license_alternatives",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "MIT/BSD/Apache-licensed projects exist as an alternative that imposes no reciprocity obligation and permits proprietary integration freely. They compete for contributor attention and adoption but are structurally outside this constraint's story except as the exit route the viral clause is designed to make less attractive by comparison."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The reciprocity clause does solve a real coordination problem for a specific class of actor: it lets a copyright holder monetize a codebase by making the free version commercially unusable for closed integration, creating a paid exception as the release valve. Read this way, the coordination being solved is the vendor's revenue problem, not the commons' preservation problem.",
+    "transfer_function": "Moves optionality and negotiating leverage from downstream integrators (who must either open-source their whole product or pay) to the upstream copyright holder or license-enforcing body, who converts the compliance threat into commercial license revenue or litigation settlements.",
+    "absent_voices": "Downstream engineers and product managers at small firms who never contributed to license drafting and have no seat in FSF or enforcement-body governance would object that the clause functions as a tax on integration rather than a freedom-preserving mechanism; they are not present in licensing-body deliberations and mostly encounter the constraint only at contract-review or audit time.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the reciprocity obligation vanished, dual-licensing vendors would lose their commercial license revenue stream and enforcement organizations would lose their leverage, while startups and embedded manufacturers would gain free integration rights — a real reallocation. Whether the 'world rearranges' or 'world stays roughly the same' depends on which reading's ontology you accept: from this restriction reading, the business-constraining function would disappear and previously blocked proprietary products would ship; from the commons-preservation reading, disappearance would mean enclosure. The two readings disagree about which state is the baseline.",
+    "founding_problem": "The GPL was drafted to prevent proprietary vendors from taking freely-contributed code, modifying it, and redistributing it as closed, non-reciprocal proprietary software — the 'free-rider capture' problem of early free software.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Free Software Foundation historical writing and license text attest the founding problem (proprietary capture of commons code) as still live. Independent software-licensing economists and startup founders outside the FSF and outside dual-licensing vendors attest that the mechanism has, in a substantial share of commercial cases, shifted from preventing capture to manufacturing a toll-gate that specific copyright-holding vendors monetize — this restriction reading treats that shifted-function reading as the operative one for the arrangement's business-model effect."
+  },
+  "interval": {
+    "start": 1991,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the contested GPL reciprocity kernel: the reading that treats the viral licensing clause primarily as a constraint on business models, prohibiting proprietary integration of GPL-licensed code without triggering full-source disclosure obligations. Under this reading, the clause's practical effect — regardless of its stated free-software rationale — is to foreclose closed-source commercialization paths for downstream integrators while creating a monetizable toll-gate for the copyright holder, who can sell commercial licenses as an exception to the reciprocity requirement. This is NOT a claim that copyleft is bad or that the freedom-preserving reading is wrong; it is a separate, structurally distinct constraint occupying the same kernel, authored with its own beneficiary/victim structure and its own epsilon.",
+    "key_agents": [
+      "commons_contributors_seeking_commercial_integration: primary target (moderate/constrained) — bears the reciprocity cost when seeking to commercialize",
+      "small_startups_needing_proprietary_extensions: primary target (powerless/trapped) — least able to absorb the compliance-or-pay choice",
+      "proprietary_software_vendors_using_dual_licensing: primary beneficiary (powerful/arbitrage) — monetizes the compliance gap via paid exceptions",
+      "gpl_enforcement_organizations: agenda-setter (institutional/arbitrage) — administers and enforces the clause",
+      "embedded_systems_manufacturers: secondary target (moderate/constrained) — absorbs compliance risk in hardware contexts",
+      "permissive_license_alternatives: excluded comparator — the exit route the clause is designed to make relatively less attractive"
+    ],
+    "logic_rationale": "Extraction is moderate (0.42 at interval end) because the clause does not extract direct rents from most users — it extracts optionality and forecloses specific business models, which is a real but bounded cost. Suppression (0.38) reflects the enforcement infrastructure (SFC/FSF compliance actions, litigation threats) that gives the clause teeth beyond voluntary compliance; this has grown over the measured interval as enforcement organizations professionalized (e.g., BusyBox litigation era, Software Freedom Conservancy). Theater ratio stays low (0.18) because enforcement activity is substantially functional — real settlements and real code releases occur, not merely performative audits. Accessibility collapse (0.45) is moderate: permissive alternatives exist for many use cases, so the constraint does not universally foreclose all paths, only closed-integration paths specifically. Resistance (0.55) reflects real, organized pushback from industry consortia and standards bodies favoring permissive licensing precisely because of this restriction effect.",
+    "directionality_logic": "Proprietary vendors using dual-licensing sit at the beneficiary end: they hold copyright, control the commercial-exception price, and have arbitrage-grade exit (they can always choose not to comply and instead monetize). Enforcement organizations administer and partly benefit through settlement leverage. Commons contributors seeking commercialization, small startups, and embedded manufacturers sit toward the target end: they face a binary choice engineered by the license terms, with constrained or trapped exit depending on capital and technical alternatives. This directionality is specific to THIS reading — the freedom-preserving reading would assign the same enforcement organizations to a coordination-protecting role rather than a toll-collecting one, which is exactly why these are different constraints sharing one kernel.",
+    "mandatrophy_analysis": "The founding problem (preventing proprietary capture of commons contributions) is genuinely contested as live vs. dead in this reading: it remains live for genuinely community-governed projects with diffuse contributor bases, but for single-copyright-holder dual-licensed projects, the mechanism has drifted into a monetization structure whose primary present-day function is generating commercial license revenue rather than protecting a commons that, in these cases, barely exists as a multi-stakeholder entity. Classifying this reading as tangled_rope rather than snare captures that a genuine coordination function (preventing pure free-riding) coexists with the asymmetric extraction (toll-gating commercialization) — collapsing it to snare would erase the real coordination story; collapsing it to rope would erase the real victims.",
+    "kernel_context": "This constraint is the 'copyleft_as_restriction' reading of the shared gpl_reciprocity_obligation kernel. Two sibling readings exist as separate constraint stories: copyleft_as_freedom_reading (the clause as a mechanism preserving user freedoms against proprietary capture) and copyleft_as_commons_reading (the clause as institutional technology preventing commons enclosure). All three readings share the same license text and the same reciprocity clause as their kernel, but assign different beneficiary/victim structures and different epsilon values because they take different standing arrangements as the referent under contest. This reading's referent is the arrangement's effect on commercial integration options; it does not average over or borrow from the other readings' referents."
+  },
+  "omegas": [
+    {
+      "id": "reciprocity_clause_reading_indeterminacy",
+      "question": "Is the GPL reciprocity clause's dominant real-world function today (2024) preventing commons enclosure, preserving user freedom, or constraining proprietary business models via a monetizable toll-gate? These are the three declared readings of the same kernel, and the license text itself is compatible with all three framings.",
+      "resolution_mechanism": "Empirical audit of dual-licensing revenue structures across a large sample of GPL-licensed commercial codebases, cross-referenced with contributor governance structure (single-copyright-holder vs. diffuse foundation-governed) to determine which reading's structural predictions hold in which project types.",
+      "impact": "If dual-licensing revenue dominates in single-copyright-holder projects while diffuse commons-governed projects show negligible commercial toll-gating, that would support treating this restriction reading as accurate primarily for a subset of GPL deployments, not the whole population — narrowing this constraint's scope rather than falsifying it.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the restriction reading is the dominant structural fact across GPL deployments or a subset phenomenon specific to dual-licensed, single-holder codebases."
+    },
+    {
+      "id": "sibling_reading_foreclosure_or_coexistence",
+      "question": "Does authoring the restriction reading (beneficiary = proprietary vendors, victim = commons contributors) logically foreclose the commons-preservation reading (same clause, opposite beneficiary/victim assignment) for a SPECIFIC project, or can both readings coexist as true descriptions of the same license text applied to different projects?",
+      "resolution_mechanism": "Case-by-case governance analysis: single-copyright-holder dual-licensed projects and diffuse-foundation multi-contributor projects are structurally different populations even though both use GPL text; determine whether the two readings partition cleanly by governance structure or genuinely overlap on the same projects.",
+      "impact": "If the readings partition cleanly by project governance type, they are not really in tension — they are readings of different sub-populations wearing the same license label, which would argue for further kernel decomposition rather than treating this as pure interpretive disagreement.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the restriction and commons-preservation readings apply to disjoint project populations or genuinely contest the same cases."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_reciprocity_obligation__copyleft_as_freedom_reading",
+      "gpl_reciprocity_obligation__copyleft_as_commons_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the gpl_reciprocity_obligation kernel. copyleft_as_freedom_reading treats the same clause as beneficiary=downstream users/victim=proprietary capturers (near-inverse beneficiary structure); copyleft_as_commons_reading treats it as beneficiary=commons-as-institution/victim=would-be enclosers. This story (copyleft_as_restriction_reading) inverts both: beneficiary=proprietary dual-licensing vendors, victim=commons contributors and integrators seeking commercialization. All three share the identical license text as their kernel but diverge in ε, beneficiary/victim sets, and claimed_type because each reads a different standing arrangement as the referent under contest."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "single_copyright_holder_commercial_toll_model",
+    "drift_state": {
+      "moment": "post_saas_cloud_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "copyleft_as_freedom_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyleft_as_commons_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reciprocity_clause_functions_as_commercial_toll_gate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "business_model_foreclosure_is_the_operative_cost",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

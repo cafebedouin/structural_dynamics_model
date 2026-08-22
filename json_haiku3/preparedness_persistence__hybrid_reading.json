@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "15d31b65-0c4a-4381-bb54-004d6f9d4bbc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.45,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.71,
+    "claimed_type": "piton",
+    "human_readable": "Stratified Disaster Preparedness: Competent Engineering / Ritualized Evacuation",
+    "topic_domain": "institutional/disaster-preparedness/commitment-systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_administrators",
+      "compliance_auditors"
+    ],
+    "victims": [
+      "frontline_emergency_responders",
+      "evacuation_dependent_populations"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "institutional_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Maintain and enforce the dual-track preparedness mandate: technical inspection standards (engineering-grounded, expensive, continuous) and evacuation drills (annually scheduled, performative, cheaper). They benefit from the constraint by achieving compliance status without the full cost of maintaining operational evacuation capability year-round. They set the audit criteria that distinguish 'sufficient inspection' from 'redundant drill'."
+    },
+    {
+      "name": "engineering_inspection_teams",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Conduct structural and safety inspections on buildings and systems. They benefit from consistent funding and authority to certify safety; their expertise remains current through active technical work. They experience the constraint as enabling their function, not constraining it — they are the competent track."
+    },
+    {
+      "name": "frontline_emergency_responders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Conduct and enforce evacuation drills, maintain readiness, and respond to actual emergencies. They bear the cost of the stratification: they know from annual drills what people will actually do (panic, confusion, poor route knowledge), yet the constraint treats the drill as sufficient certification of preparedness. Their local knowledge of failure modes is not fed back to improve the standing plan."
+    },
+    {
+      "name": "evacuation_dependent_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live or work in buildings and neighborhoods subject to evacuation protocols. They participate in annual drills that are often treated as theater (compliance exercise, not operational rehearsal). Their actual evacuation knowledge degrades between drills; they have no input into whether drills match real hazard scenarios or reflect actual building use patterns."
+    },
+    {
+      "name": "compliance_auditors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Verify that institutions conduct required inspections and drills and meet documentation standards. They benefit from the constraint's codification: clear, auditable categories (inspection yes/no, drill conducted yes/no) that are easy to verify without needing to assess operational readiness directly. They set the pass/fail criteria that keep the two tracks separate."
+    },
+    {
+      "name": "building_occupants_at_risk",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are the actual human substrate affected by evacuation success or failure but are not represented in preparedness planning or audit processes. They do not attend planning meetings, do not voice concerns about drill design, and do not validate whether their own mobility, language, or disability needs are accommodated in the evacuation plan."
+    },
+    {
+      "name": "disaster_simulation_researchers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study how people actually behave under evacuation stress (through simulation, historical disaster analysis). They observe that annual drills do not reliably predict real evacuation outcomes; actual crises show systematic failures in route knowledge, decision-making, and coordination that match-day drill participation does not prevent. Their research documents the gap between the two preparedness tracks."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Operates dual preparedness mechanisms: (1) continuous technical inspection to prevent structural hazards, and (2) periodic behavioral rehearsal (drills) to maintain population evacuation knowledge. The separation solves a genuine coordination problem: continuous operational evacuation readiness is expensive; technical expertise is scarce; different knowledge-maintenance mechanisms suit each domain. The dual track allows technical specialists to maintain safety infrastructure while distributing behavioral rehearsal responsibility to building managers and local responders.",
+    "transfer_function": "Moves compliance-status authority and institutional legitimacy from continuous operational readiness demonstration to categorical certification (engineering inspected, drill conducted). Administrators and auditors collect compliance status and authority to certify 'preparedness maintained'; responders and occupants transfer the capability to demonstrate real evacuation readiness on demand — the behavioral knowledge-maintenance burden is outsourced to annual theater rather than continuous practice.",
+    "absent_voices": "Occupants at immediate evacuation risk, people with disabilities whose evacuation needs are not drill-reflected, vulnerable populations (children, elderly, medically dependent) whose specific needs require modified plans. Disaster-simulation researchers and responders themselves are only partially voiced (their expertise is heard in technical inspection; their observations about drill-to-real-evacuation divergence is not integrated into policy). These actors would testify that annual drills do not maintain their evacuation capability and that stratified preparedness leaves behavioral risks unaddressed.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this stratified constraint dissolved and preparedness re-integrated, institutions would face a choice: either invest in continuous behavioral-readiness verification (expensive, labor-intensive, politically unpopular), or abandon the pretense that behavioral preparedness is maintained (accept documented gaps in occupant knowledge, lower disaster-readiness expectations). The current arrangement persists because it allows administrators to claim preparedness is 'maintained' while avoiding the cost of continuous behavioral verification.",
+    "founding_problem": "Large-scale disasters reveal two classes of failure: (1) structural hazards (buildings collapse, exits are blocked, design flaws trap people), and (2) behavioral failures (occupants panic, lack route knowledge, miscommunicate). These require different expertise and different intervention — structural engineers address design; behavioral specialists address knowledge and decision-making. Early 20th-century disaster response recognized the need for both.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Structural engineers and building safety inspectors attest that continuous technical inspection prevents the structural-hazard class of failures effectively. Disaster-simulation researchers, historical disaster analysis, and responder testimony attest that the behavioral-failure class persists and that annual drills do NOT reliably prevent it — real evacuations still show decision paralysis, route confusion, and vulnerability patterns that match-day drill participation does not predict. The founding problem (both failure classes are real) is live; the institutional split response to it is contested."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.45,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models a hybrid-reading of preparedness persistence where disaster-preparedness infrastructure is stratified into two divergent tracks: engineering inspection (competence-maintaining, expensive, continuous) and evacuation drills (ritualized, annual, theater-heavy). The hybrid reading asserts that this stratification is neither pure natural law (the competence_reading) nor pure atrophy (the husk_reading), but a sustainable administrative compromise where some subsystems remain functionally competent while others have slid into performative maintenance. The constraint's persistence depends on institutional enforcement that keeps the two tracks separate — administrators benefit from this separation because it allows them to maintain compliance status while avoiding the full cost of continuous operational readiness. Responders and occupants bear the cost of the divergence: they know the dual-track system leaves gaps in actual evacuation capability, yet audit processes treat the separation as legitimate.",
+    "key_agents": [
+      "Institutional administrators: set the dual-track policy, benefit from compliance status without full-cost readiness",
+      "Engineering inspection teams: maintain live technical knowledge, remain genuinely competent",
+      "Frontline responders: conduct drills, maintain readiness, observe failure modes the system does not act on",
+      "Evacuation-dependent populations: evacuate under annual protocols that do not track their actual capability",
+      "Compliance auditors: certify the two tracks separately, benefit from codified pass/fail criteria",
+      "Building occupants at risk: excluded from preparedness planning, actual evacuation capability degrading between drills",
+      "Disaster researchers: observe that annual drills do not predict real-evacuation behavior"
+    ],
+    "logic_rationale": "The constraint is claimed as piton because extractiveness is moderate (0.58 at endpoint) and theater is high (0.62 average), yet the arrangement persists without concentrated beneficiary actively maintaining it — administrators benefit because it solves their compliance problem, not because they continuously invest to keep drills operational. Engineering inspection remains genuinely competent (it is the Mountain-like component), while evacuation drills are increasingly performative (the Piton component). The stratification itself is the administrative genius: keep technical standards strict enough that structural failures are rare, but allow behavioral-readiness standards to slide into annual theater. Suppression is moderate (0.45 average) because the enforcement burden is light — the two tracks enforce themselves (engineers care about their competence; drills happen because regulations require them) without heavy top-down coercion. Resistance is high (0.71) because responders and occupants continuously observe the gap between the performance (drill) and the outcome (actual evacuation capability). The measurement series shows gradual extraction creep (extractiveness rising from 0.48 to 0.61 then dropping to 0.58 at t=40, suggesting a mid-interval spike in enforcement/administrative attention, then slight relaxation). Theater rises from 0.55 to 0.65 (more performative over time) then slightly recovers to 0.62 — suggesting awareness of excessive ritualization. Suppression requirement stays low and flat, indicating the separation between the tracks is self-maintaining: no party is forced hard; they simply operate in separate institutional silos.",
+    "perspectival_gap": "The institutional administrator seat perceives this as a reasonable compromise: technical risks are mitigated by continuous engineering inspection; behavioral risks are addressed by annual population rehearsal; together they provide coverage without requiring continuous expensive operational evacuation readiness. The responder seat perceives the same structure as abdication: the annual drill does not update their operational readiness, does not address the specific occupant base they serve, and does not reflect the failure modes they observe in real emergencies. The occupant seat perceives it as abstract: drills happen, compliance exists, but their own evacuation knowledge degrades annually and they have no say in whether the plan reflects their actual capabilities. From the auditor seat, the constraint is successful: two clear audit lines, simple pass/fail criteria, low verification cost. From the researcher seat, the constraint is partially falsifying: it produces documented divergence between drill outcomes and real-evacuation behavior. The engine computes these divergences from the power/exit/beneficiary/victim structure; the hybrid reading asserts that no single perspective captures the whole — the constraint is genuinely mixed (competence + ritual) because it services multiple incompatible institutional logics simultaneously.",
+    "directionality_logic": "Institutional administrators and compliance auditors are structural beneficiaries (d near 0.2–0.3): they collect compliance status and organizational stability without bearing the cost of continuous evacuation readiness. Engineering teams are near-beneficiaries (d near 0.3–0.4): they benefit from continuous work and authority to certify safety, but their competence is genuine — the constraint does not extract from them, it enables their function. Responders are mid-target (d near 0.6): they bear the cost of maintaining dual protocols and conducting theater drills, but they also benefit from the engineering competence (they are more confident that buildings are structurally sound) and from the institutional mandate to exist (their jobs depend on the preparedness apparatus). Evacuation-dependent populations are full targets (d near 0.85–0.95): they are trapped in the geography, excluded from planning, and their actual evacuation capability is treated as a second-order problem (the constraint assumes occupants will be ready because a drill happened annually; it does not assume administrators will maintain responder or occupant competence continuously). The directionality spread is broad, reflecting the hybrid nature: this is not a constraint that extracts uniformly, but one that creates asymmetric benefits and costs that administrative separation makes invisible.",
+    "mandatrophy_analysis": "The constraint avoids simple mandatrophy because the founding problem (two independent failure modes) is genuinely live and the mandate to maintain both is live. However, the hybrid reading identifies incipient mandatrophy in the behavioral-readiness track: the founding problem (people do not know how to evacuate) persists, but the institutional commitment to solving it (continuous behavioral readiness) has atrophied and been replaced by annual theater. The engineering track remains vital — inspections are continuous, their results drive real changes in buildings. The behavioral track has become a memorial exercise that performs the appearance of maintenance without updating occupant knowledge. The constraint's persistence is propped by the asymmetry: because the engineering track works, administrators can claim 'preparedness is maintained' and justify scaling back the behavioral track. The husk_reading (preparedness is all theater) and the competence_reading (preparedness is fully live) are both structurally false for this constraint; the hybrid reading captures the true asymmetry: some parts live, some parts ossified, same institutional shell.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'preparedness_persistence.' The kernel is the commitment to maintaining disaster preparedness through dual mechanisms (technical inspection and behavioral rehearsal). The COMPETENCE_READING holds that both mechanisms remain operationally live — drills are practiced knowledge, inspections are active safety work, and the constraint maintains real preparedness. The HUSK_READING holds that preparedness has become largely memorial — drills are theater, inspections are formality, and the constraint persists through institutional inertia despite atrophied actual capability. The HYBRID_READING (this constraint) holds that preparedness is stratified: the engineering component remains genuinely competent (live technical oversight of structural safety), while the behavioral component has largely shifted to ritualized annual performance. The two are kept separate by administrative choice, not by structural necessity. The kernel's framing is 'preparedness is maintained through dual tracked mechanisms'; the readings diverge on whether those mechanisms remain operationally vital or have atrophied into performance. The readings do not foreclose each other — different administrators or different building-systems might genuinely instantiate the competence or husk reading — but they coexist as competing interpretations of the same institutional structure. This reading serves the diagnostic role of identifying which parts of preparedness have remained live and which have slid into theater, without resolving the contest between the competence and husk readings."
+  },
+  "omegas": [
+    {
+      "id": "behavioral_readiness_measurement_gap",
+      "question": "Are annual evacuation drills a reliable measure of actual occupant evacuation capability, or does occupant knowledge and muscle memory degrade substantially between drills in ways the drill performance does not capture?",
+      "resolution_mechanism": "Longitudinal study of occupant evacuation knowledge at multiple time points between drills (t=0 months post-drill, t=3, t=6, t=9, t=12 months pre-drill); comparison of drill performance vs. real-emergency outcomes (historical disaster data); simulation studies testing occupant behavior under actual hazard vs. drill conditions.",
+      "impact": "If behavioral readiness degrades substantially between drills and annual performance does not predict real-evacuation outcomes, the behavioral-readiness component is indefensible as a preparedness mechanism — it is pure theater masking a real gap. If drills maintain capability reliably, the hybrid reading should be revised to competence_reading. The gap directly determines whether the behavioral track is piton or rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether drills maintain real evacuation readiness or have become decoupled from actual capability."
+    },
+    {
+      "id": "stratification_as_administrative_necessity_vs_choice",
+      "question": "Is the separation between technical and behavioral preparedness tracks structurally necessary (two genuinely independent modes of failure requiring different expertise), or is it an administrative choice that obscures and enables the slide of the behavioral track into theater?",
+      "resolution_mechanism": "Comparative analysis of disaster-response systems that do NOT separate the tracks (jurisdictions that mandate continuous behavioral-readiness verification, not annual drills); examination of whether technical inspection and behavioral rehearsal could be integrated into a single continuous cycle; case studies of institutions that have re-integrated the tracks after prior separation.",
+      "impact": "If the separation is necessary, the hybrid reading is justified as an honest reflection of different intervention modes. If it is administrative choice, the separation serves to hide the behavioral-track degradation and justify reduced investment — the constraint would be better classified as a snare (cover story for extraction of institutional resources from preparedness). This determination affects whether mandatrophy has begun (the behavioral mandate is being abandoned while administrators claim preparedness is still live).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the two-track structure is inherent to preparedness or an administrative convenience that obscures extraction."
+    },
+    {
+      "id": "extraction_to_administrators_vs_shared_benefit",
+      "question": "Do administrators and auditors benefit from the constraint's persistence in extractive terms (they would lose status/authority/resources if preparedness were integrated and continuously verified), or do they benefit from a coordination function that distributes real preparedness work efficiently?",
+      "resolution_mechanism": "Budget tracking of preparedness resources allocated to engineering vs. behavioral components over time; administrative testimony about why the two-track model persists and what would change if integrated; analysis of whether administrators actively defend the separation against reform proposals.",
+      "impact": "If administrators benefit extractively (they collect compliance status and authority while reducing their cost of maintaining preparedness), the constraint is snare-adjacent and mandatrophy is active — they benefit from the behavioral track remaining theater. If the two-track model is genuinely cost-efficient and reflects real preparation choices, the extraction is moderate and justifiable. The answer determines whether this is piton (inert performance) or tangled_rope (real coordination, some extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's persistence serves administrative extraction or genuine preparedness coordination."
+    },
+    {
+      "id": "reading_equivalence_hypothesis",
+      "question": "Are the competence_reading, husk_reading, and hybrid_reading fundamentally different claims about the same constraint, or are they reading-dependent artifacts produced by different measurement frames (what counts as 'competent', what counts as 'real preparedness')?",
+      "resolution_mechanism": "Clarify what observable fact would satisfy each reading. Competence: both tracks remain operationally vital (real drills, real inspections). Husk: both tracks are primarily performative (theater drills, perfunctory inspections). Hybrid: technical track live, behavioral track theater. These are empirically distinct (the measurements should show different patterns for each). If measurements cannot distinguish them, the readings are artifacts of framing, not facts about the constraint.",
+      "impact": "If the readings are genuinely empirically distinct (measurable differences in drill outcomes, inspection effectiveness, occupant knowledge retention), then the hybrid reading is a factual finding that some systems are competent and some are ritual. If the readings are all plausible framings of the same data, the choice among them is interpretive and the committer frame is active. The answer affects whether the constraint has a discoverable type or whether type depends on reading.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings represent empirically distinct states or interpretive framings of equivalent data."
+    },
+    {
+      "id": "occupant_identity_lock_mechanism",
+      "question": "For evacuation-dependent populations, is exit from the constraint identity-locked (they cannot leave the building/neighborhood because their life/work is there), structurally constrained (they could leave but at high cost), or trapped (they cannot leave under any circumstance)?",
+      "resolution_mechanism": "Qualitative research with occupants about exit possibilities (could you move, what would it cost, what keeps you); economic analysis of moving costs relative to income; mapping of alternative housing/work options; ethnographic documentation of relocation patterns after major disasters.",
+      "impact": "If identity-locked (home/life fused with the location), the suppression is internalized — even after the constraint's enforcement is removed, occupants carry the immobilization with them. If constrained/trapped, the suppression is structural and external. The classification affects whether the constraint remains extractive after exit, and whether occupants are truly excluded or complicit in the constraint's persistence through their own unwillingness to leave.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism and permanence of occupant immobility in the constraint."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__competence_reading",
+      "preparedness_persistence__husk_reading"
+    ],
+    "dual_formulation_note": "This is one reading of the 'preparedness_persistence' kernel. The competence_reading instantiates preparedness as fully operationally vital across both tracks. The husk_reading instantiates preparedness as largely memorial performance. The hybrid_reading (this constraint) identifies empirical stratification: engineering inspection remains live and competent; evacuation drills have largely become ritualized. The three readings are linked by shared kernel identity but diverge on the factual question of which preparedness mechanisms remain operationally vital. All three are empirically falsifiable — they make measurable claims about drill outcomes, inspector effectiveness, and occupant knowledge retention — though the readings emphasize different measurement protocols."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "preparedness_stratification_is_empirical",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "behavioral_readiness_degradation_is_detectable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "dual_track_live_preparedness",
+    "drift_state": {
+      "moment": "contemporary_institutional_audit_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "institutional_administrators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

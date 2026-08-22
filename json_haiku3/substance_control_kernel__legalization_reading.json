@@ -1,0 +1,387 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "73b97423-6f57-4ff5-b028-265cc102def7",
+    "created_at": "2026-06-11T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Substance Legalization with Externality Regulation",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "substance_users",
+      "legal_distribution_industry",
+      "state_as_tax_collector",
+      "criminal_justice_diversion_beneficiaries"
+    ],
+    "victims": [
+      "third_parties_exposed_to_externalities",
+      "dependent_populations_in_high_exposure_zones"
+    ],
+    "vindicated_propositions": [
+      "individual_autonomy_primacy",
+      "state_harm_prevention_mandate",
+      "externality_internalization_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "substance_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Can purchase and consume substances legally without criminal penalty, incarceration risk, or felony record. Under legalization reading, their autonomy over their own body is vindicated as a foundational liberty claim. They pay taxes/fees on purchases but avoid criminal system involvement. Exit option is legality itself — if enforcement returned to prohibition, they would face sudden recriminalization."
+    },
+    {
+      "name": "legal_distribution_industry",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Licensed retailers, cultivators, manufacturers, and testing labs operate openly and profitably. They collect rents from a legalized market, operate within regulatory frameworks they help shape, and coordinate with state licensing. Their beneficiary position is tied to the sustained legalization regime — a return to prohibition would eliminate their legitimate operation entirely."
+    },
+    {
+      "name": "state_as_tax_collector",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Collects excise taxes, licensing fees, and sales tax from the legalized market. Sets regulatory rules (potency caps, labeling, age restrictions, packaging) and enforces them. Redeploys enforcement resources from criminalization to externality management and tax collection. The state both governs the constraint and benefits from tax revenue — an ambiguous position that under legalization reading is theoretically justified by capturing externality costs."
+    },
+    {
+      "name": "criminal_justice_diversion_beneficiaries",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Communities historically targeted by drug criminalization (low-income, racial minorities) experience reduced incarceration, reduced felony records, reduced police presence in their neighborhoods, and reduced destabilization of families and employment. Legalization reading frames this as correcting an injustice; their beneficiary position is precarious because it depends on continued non-recriminalization and on equitable regulatory design."
+    },
+    {
+      "name": "third_parties_exposed_to_externalities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bear costs of secondhand smoke, fetal exposure, impaired driving incidents, and public consumption. Under legalization reading, they are the primary justification for state intervention: the state steps in to regulate and internalize these externalities (age restrictions, consumption location bans, impaired driving enforcement, prenatal exposure liability). Their victim status is asymmetric: they did not choose the exposure, and their exit options are constrained (cannot move entire neighborhoods, cannot prevent fetal exposure to partners' use)."
+    },
+    {
+      "name": "dependent_populations_in_high_exposure_zones",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Children, pregnant people, and other vulnerable groups in high-substance-use environments face concentrated secondhand/fetal exposure, normalization pressures, and limited geographic mobility. Under legalization reading, they are theoretically protected by regulatory restrictions on sales to minors, prenatal liability rules, and consumption location bans — but enforcement and design equity are contestable. Their position is deeply asymmetric: victim status without choice and without exit."
+    },
+    {
+      "name": "black_market_operators",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Lose market share, revenue, and operational capacity as legalized alternatives undercut their prices and remove legal risk from customers. Some operators persist in gray zones (unlicensed high-potency products, untaxed sales) or in geographic areas where legalization is incomplete. Their payer status is structural: legalization directly attacks their revenue model and replaces it with a legal alternative."
+    },
+    {
+      "name": "harm_reduction_advocates",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Observe legalization reading skeptically: they argue it prioritizes market access over health infrastructure and that externality regulation may prove insufficient to protect vulnerable populations. They see the constraint as a policy choice that reflects one normative frame (liberty) over another (health mitigation). Their observational position allows them to document divergence between legalization's stated externality-protection mechanism and actual regulatory enforcement."
+    },
+    {
+      "name": "prohibition_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are structurally excluded from the legalization reading's policy framework: they argue substance use is inherently harmful and should be criminalized regardless of externality. Their exclusion is not accidental — the legalization reading's core premise (individual liberty primacy, state intervention only on externality) forecloses their premise (state should prohibit based on intrinsic harm). They remain active in political opposition but are outside the constraint's legitimacy structure."
+    },
+    {
+      "name": "regulatory_enforcement_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce age restrictions, potency limits, labeling rules, consumption location bans, and impaired driving statutes. Under legalization reading, their role is narrow: protect third parties from externalities, not punish autonomous use. Enforcement intensity and equity across communities become contested — the constraint's structural claim (state acts as externality arbiter) is separate from whether enforcement actually does this."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a legal market channel for substance distribution under potency, labeling, and age-restriction controls; redirects state enforcement from criminalization to externality management (secondhand exposure, impaired driving, prenatal harm). Solves the collective-action problem of preventing criminal-market expansion and unregulated product harm while preserving user autonomy.",
+    "transfer_function": "Moves tax revenue and licensing fees from substance purchases to the state; moves enforcement resources from criminal prosecution to regulatory monitoring; moves market share from black-market suppliers to licensed distributors. Individual users transfer some autonomy constraint (age, location, potency disclosure) in exchange for legal status and criminal-system exit.",
+    "absent_voices": "Individuals in heavily affected communities who experience secondhand exposure and lack exit options (geographic mobility, family relocation) — they are structurally excluded because legalization's regulatory design is authored by policy makers and industry, not by those bearing the externality concentration. Harm-reduction practitioners argue the framework omits health infrastructure they see as essential.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If legalization framework disappeared and recriminalization returned, the legal distribution industry would collapse, users would face recriminalization, tax revenue would evaporate, incarceration would resume, and enforcement resources would shift back to criminal prosecution — the entire political economy would reorganize around punishment rather than regulation.",
+    "founding_problem": "Mass incarceration for substance possession (disproportionately affecting low-income and racial-minority communities) without corresponding reduction in substance use; criminal markets operating with unregulated products and violence; criminal records destabilizing employment and families; state resources consumed by prosecution rather than harm reduction.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Incarceration data, criminology research, and community testimony from jurisdictions with legalization confirm that mass criminalization persisted without reducing use. Legalization jurisdictions (Colorado, Portugal, Canada) provide external corroboration that the founding problem — unnecessary incarceration — is soluble by legal framework change. Harm-reduction and criminal-justice reform advocates outside the beneficiary set corroborate the problem statement but dispute the legalization reading's adequacy as a solution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.22,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the LEGALIZATION READING of the substance-control kernel. Under this reading, substance use is framed as an individual liberty issue; state intervention is justified only to prevent third-party externalities (secondhand exposure, impaired driving, fetal harm) and to capture externality costs through taxation and regulation. Users are removed from the victim set by the reading's core premise (autonomy primacy); third parties enter the victim set as bearers of externality costs. The legal distribution industry emerges as a new beneficiary; the black market becomes the loser. The state transitions from criminalizer to tax collector and externality regulator — a structural shift in its role within the constraint.",
+    "key_agents": [
+      "substance_users: primary beneficiary (exiting victim set under liberty framing)",
+      "legal_distribution_industry: new beneficiary (capturing market from prohibition regime)",
+      "state_as_tax_collector: agenda-setter and secondary beneficiary (collecting externality tax and licensing revenue)",
+      "third_parties_exposed_to_externalities: primary victim (externality bearers under legalization regulation)",
+      "dependent_populations_in_high_exposure_zones: deepest victim (powerless, trapped exposure concentration)",
+      "black_market_operators: payer (losing market viability to legal alternative)",
+      "prohibition_advocates: excluded (their normative premise is foreclosed by legalization's liberty-priority frame)",
+      "harm_reduction_advocates: observer (skeptical of whether externality regulation protects adequately)"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.38 at interval end, rising from 0.28) because the constraint transfers wealth and autonomy. Users gain legal status and criminal-system exit (beneficiary flow), but third parties bear new concentrated externality costs that were previously socialized as criminal harms (victim flow). The legal industry captures rents from market monopoly (beneficiary flow). The state's position is ambiguous: it benefits from tax revenue but theoretically acts as externality arbiter. Extractiveness rises over the interval as implementation reveals gaps between regulatory design and enforcement equity — the constraint's functional performance degrades relative to its stated purpose (protecting third parties while preserving user autonomy). Suppression is low (0.22) because legalization reading's core premise is liberty, not coercion; enforcement targets specific harms (age limits, impaired driving) rather than the status of use itself. Theater ratio is low (0.18) because regulatory enforcement is relatively functional — there is less performative activity than in pure prohibition regimes where enforcement defends moral doctrine. The rise in theater over the interval reflects growing regulatory theater around potency caps and marketing restrictions that may exceed what externality reduction requires. Accessibility collapse is moderate (0.45) because alternatives persist: users could shift to unregulated products or jurisdictions; third parties could advocate for tighter restrictions. Resistance is elevated (0.58) because prohibition advocates remain active, harm-reduction practitioners contest regulatory design adequacy, and third-party constituencies challenge whether externality internalization is genuinely occurring.",
+    "perspectival_gap": "A user's seat computes the constraint as enabling (low d, high subsidy); a third-party exposed to secondhand smoke computes it as imposed (high d, high extraction). The agenda-setter (state) computes from mixed motivations (revenue collection, externality management, political pressure from multiple constituencies). An observer seat (harm-reduction practitioner or prohibition advocate) computes the constraint's type divergence from its stated purpose as evidence of drift — theater rising, externality regulation proving selective or unequally enforced. The metrics model this divergence: as theater rises and extractiveness rises (despite rhetoric of liberty and harm reduction), the computed per-seat types should diverge. The claim (rope) and the metrics (rising extraction, rising theater) should diverge, generating the engine's delta signal.",
+    "directionality_logic": "Under the legalization reading's frame, users transition from victims (of criminalization) to beneficiaries (of liberty vindication). This is not a metric shift — it is a frame shift. The ENGINE computes directionality from structural data (power, exit options, beneficiary/victim declarations); the reading declares users as beneficiaries and authorizes the lower-d computation. Third parties enter the victim set because the reading's externality focus explicitly names them as the constraint's target bearers — they have trapped exit options (cannot move neighborhoods, cannot prevent fetal exposure to partners' use) and face concentrated costs (secondhand exposure, normalization pressure). The legal industry is beneficiary by market rent; the state is ambiguously both agenda-setter and rent collector. Prohibition advocates are excluded because the reading's core axiom (individual liberty primacy) logically forecloses their axiom (state should protect through prohibition regardless of externality). Their structural exclusion is not a power imbalance — it is incompatibility of premises.",
+    "mandatrophy_analysis": "Legalization reading does NOT resolve mandatrophy; it relocates it. The founding problem (mass incarceration) is live and solvable via decriminalization. But the regulatory promise (protect third parties via externality internalization) may outlive its functional justification as enforcement equity diverges from stated purpose. Mandatrophy could emerge if the state maintains potency caps, consumption location bans, and licensing restrictions ostensibly for third-party protection but actually for revenue and control — then the constraint's founding problem (correcting criminalization injustice) becomes dead, but the regulatory architecture persists. The omega variables on enforcement equity and regulatory capture track this divergence.",
+    "kernel_context": "This constraint is the LEGALIZATION READING of the substance-control kernel (contested across three readings: prohibition_reading, harm_reduction_reading, legalization_reading). The legalization reading prioritizes individual liberty and frames state intervention as limited to third-party externality prevention. It FORECLOSES the prohibition reading (whose core premise — state should criminalize based on intrinsic harmfulness — directly contradicts liberty priority). It COEXISTS WITH the harm-reduction reading (both accept legalization, but harm-reduction prioritizes health infrastructure over market access and disputes whether externality regulation is sufficient for vulnerable populations). The structural delta: users exit the victim set (reframed as autonomous agents), third parties enter the victim set (reframed as externality bearers), legal industry emerges as new beneficiary, black market collapses or persists in gray areas."
+  },
+  "omegas": [
+    {
+      "id": "regulatory_capture_trajectory",
+      "question": "Will the legalization regime's stated externality-protection purpose persist, or will it drift toward maximizing state tax revenue and controlling user behavior independent of externality?",
+      "resolution_mechanism": "Monitor enforcement equity across communities (do potency caps and location restrictions apply equally or concentrate on low-income areas?), compare regulatory strictness to empirically measured externality costs, audit licensing decisions for capture by incumbent industry players.",
+      "impact": "If regulatory capture occurs (enforcement becomes decoupled from externality minimization), the constraint reclassifies from rope toward snare — the theater ratio will rise, extractiveness will rise, and the foundational mandate will become dead (correcting injustice) while the architecture persists (capturing value).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Will legalization's externality-protection mechanism persist or drift toward revenue maximization?"
+    },
+    {
+      "id": "third_party_externality_internalization_adequacy",
+      "question": "Does the regulatory architecture actually internalize third-party externality costs, or does it redistribute them to spatially concentrated vulnerable populations?",
+      "resolution_mechanism": "Compare secondhand exposure rates, prenatal exposure rates, and normalization effects pre- and post-legalization in equitably regulated zones versus capture-affected zones; assess whether dependent populations in high-exposure zones experience protective effect or concentration of harm.",
+      "impact": "If internalization fails and harm concentrates on trapped populations, the victim set persists despite legal status shift, and externality regulation becomes performative (theater increases); the constraint reclassifies as snare from vulnerable-population seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Are third-party externalities genuinely internalized or redistributed to vulnerable populations?"
+    },
+    {
+      "id": "reading_premise_stability_liberty_primacy",
+      "question": "Will the legalization reading's foundational axiom — individual liberty primacy in substance use — withstand political and public-health pressure, or will it be overridden by harm-maximization concerns?",
+      "resolution_mechanism": "Monitor policy drift: do new regulations begin to restrict use beyond externality prevention (e.g., mandatory abstinence programs, medicalization of use, restrictions on potency for non-externality reasons)? Does legislative intent shift toward prohibition-adjacent justifications?",
+      "impact": "If liberty primacy is overridden, the reading's axiom_status changes from holdable to overridden, and the legalization reading converges toward harm-reduction reading (health-maximization dominance). The structural divergence between readings collapses, making the sibling relationship foreclosure-adjacent.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Will the legalization reading's liberty-primacy axiom withstand political pressure or be overridden?"
+    },
+    {
+      "id": "committer_frame_reading_incompatibility",
+      "question": "Is the legalization reading's normative frame (liberty + externality regulation) internally coherent, or does it collapse under the structural reality that third parties cannot consent to externality and exit options are bounded?",
+      "resolution_mechanism": "Philosophical analysis of whether third-party protection via regulation can be justified under liberty-primacy axioms when exit is trapped; empirical study of whether regulatory design actually preserves third-party choice or simply shifts coercion from users to third parties.",
+      "impact": "If the frame is incoherent, the reading becomes untenable, and substance control relocates entirely to harm-reduction and prohibition frames (legalization reading forecloses itself). If coherent, the reading persists but requires strong externality-protection enforcement to vindicate its premise.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Is the legalization reading's normative frame internally coherent under its own liberty axiom?"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_kernel__prohibition_reading",
+      "substance_control_kernel__harm_reduction_reading",
+      "criminal_incarceration_externality",
+      "secondhand_exposure_regulation"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the substance-control kernel, instantiating the legalization frame (individual liberty, externality prevention). Sibling readings (prohibition_reading, harm_reduction_reading) have different ε values, different beneficiary/victim structures, and different claimed types because they answer the founding-problem question differently. The network links all readings; structural comparison requires reading all three stories and observing where ε, beneficiaries, and type diverge."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "gain_flow": "state_as_tax_collector",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "individual_liberty_primacy_with_third_party_protection",
+    "drift_state": {
+      "moment": "contemporary_regulatory_implementation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_liberty_primacy_in_use_choice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_intervention_limited_to_externality_prevention",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "substance_control_kernel__prohibition_reading",
+      "substance_control_kernel__harm_reduction_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

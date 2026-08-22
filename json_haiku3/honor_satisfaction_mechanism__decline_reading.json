@@ -1,0 +1,550 @@
+{
+  "header": {
+    "constraint_id": "honor_satisfaction_mechanism__decline_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_honor_satisfaction_mechanism__decline_reading",
+    "story_uid": "51d37239-6763-4e2c-8abf-381061f7a9ed"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.71,
+    "claimed_type": "piton",
+    "human_readable": "Honor Satisfaction via Dueling (Decline Reading)",
+    "topic_domain": "social/legal/normative",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aristocratic_honor_claimants",
+      "dueling_seconds_and_surgeons"
+    ],
+    "victims": [
+      "duelists_at_risk",
+      "honor_bound_conscripts"
+    ],
+    "vindicated_propositions": [
+      "honor_is_public_property",
+      "satisfaction_requires_blood_witness"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "aristocratic_honor_claimants",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Maintain social standing through willingness to duel in response to insult. Honor is a currency of aristocratic position, and dueling is the mechanism through which slurs on honor are answered. They set the frame that insult requires blood response, organize seconds, and adjudicate satisfaction. Their identity and social access depend on being known as willing to defend honor by this method."
+    },
+    {
+      "name": "duelists_at_risk",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Participate as principals in duels, bearing the mortality and injury risk. Many are aristocratic men whose social position depends on willingness to duel; others are military officers or professionals whose career standing is threatened by a reputation for cowardice if they refuse. They both set the frame and suffer from it. Exit requires rejecting honor-through-blood as conceptually valid, which means accepting social death in their own community."
+    },
+    {
+      "name": "dueling_seconds_and_surgeons",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Attend duels as seconds (arranging logistics, choosing weapons, determining satisfaction), manage the encounter, or provide medical care. They receive fees, prestige, and employment from the practice. Their professional identity becomes bound to dueling expertise. They have exit options (other medical work, other professions) but operate within a legal/moral framework that treats dueling as a normal social function requiring specialized skill."
+    },
+    {
+      "name": "honor_bound_conscripts",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Military officers and lower-ranking duelists (merchants, lawyers, professionals gaining social standing) who feel compelled by the honor standard even if not born into aristocracy. They have fewer alternatives than aristocrats and face sharper career or social penalties for declining a challenge. They absorb the mortality risk while reaping less honor benefit than those born into the system."
+    },
+    {
+      "name": "state_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Initially tolerate dueling (early period) as a way to manage aristocratic violence outside state courts; later criminalize it as enforcement capacity grows and state monopoly on violence is consolidated. They are caught between the honor frame's legitimacy (widely held) and their need to monopolize legitimate violence. Over the interval, state enforcement against dueling increases, making continued participation illegal and socially costly."
+    },
+    {
+      "name": "bourgeois_emerging_class",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Rise as an economic power without claim to honor through dueling. They face pressure to adopt dueling to claim aristocratic status, or to reject it as barbaric and assert a new honor frame based on economic and intellectual accomplishment. They are excluded from the original frame but press against its boundaries, creating a legitimacy crisis in the honor standard itself."
+    },
+    {
+      "name": "medical_establishment",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Increasingly professionalizes and codifies its own honor system (medical ethics, do-no-harm principle) that conflicts with the duty to serve as dueling surgeons. This creates an internal contradiction: surgeons are asked to provide medical care specifically to enable violence. Over time, medical professional norms come to treat dueling participation as a violation of professional ethics."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a rule-governed mechanism for resolving honor insults through ritualized combat: both parties accept the outcome (death, injury, or unmarked survival) as binding satisfaction, ending the dispute without vendetta escalation.",
+    "transfer_function": "Transfers mortality and injury risk to the duelists (equal theoretical exposure, unequal practical by class and skill). Transfers prestige and status to those willing to defend honor by blood. Transfers fees and professional prestige to seconds and surgeons. Over time, transfers legal liability and social stigma to participants.",
+    "absent_voices": "Bourgeois merchants and professionals who reject the honor frame entirely (absent from the decision-making; they cannot prevent others from dueling but their lack of voice is a silence in favor of the frame). Women whose reputation could be defended by male relatives' duels but who could not duel themselves (excluded from the mechanism but subject to its logic). Medical professionals who oppose dueling on ethical grounds (excluded from the agenda-setting, though some are compelled to participate).",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If dueling vanished entirely by 1900, would the world rearrange? Contested: state authorities and bourgeois observers say no (alternatives exist; other honor mechanisms suffice); the honor-bound minority says yes (blood witness is irreplaceable, honor cannot be satisfied otherwise). The constraint does not fully vanish by 1900; it persists at fringe frequency, suggesting neither camp wins cleanly — the practice declines but doesn't disappear, and the verdict of rearrangement remains undecided.",
+    "founding_problem": "Early aristocratic societies lacked a neutral third party to adjudicate honor disputes; feudal patrons were interested parties; honor insults had no legitimate remedy outside vendetta. Dueling provided a procedure both parties could accept as neutral and binding: equal risk, witnessed outcome, guaranteed closure.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "State authorities and legal historians attest that by 1850–1900, state courts provide legal remedy and honor preservation is possible through reputation and professional standing — the original problem is solved. The honor-defending minority attests the problem persists (blood satisfaction is irreplaceable), but this testimony comes from the beneficiary set (those defending the frame itself). Outside observers (bourgeois writers, medical professionals, legal reformers, state prosecutors) consistently attest that the founding problem is obsolete, while duelists persist due to identity-lock and institutional inertia, not because the problem remains unresolved."
+  },
+  "interval": {
+    "start": 1600,
+    "end": 1900
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1600,
+      "value": 0.82,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1700,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1600,
+      "value": 0.25,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1700,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1600,
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1700,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1600,
+    "tn": 1900,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1600,
+        "value": 0.88
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1900,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1600,
+        "value": 0.92
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1900,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1600,
+        "value": 0.85
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1900,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1600,
+        "value": 0.91
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1900,
+        "value": 0.36
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1600,
+        "value": 0.82
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1900,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1600,
+        "value": 0.78
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1900,
+        "value": 0.44
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1600,
+        "value": 0.84
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1900,
+        "value": 0.51
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1600,
+        "value": 0.79
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1900,
+        "value": 0.47
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1600,
+        "value": 0.31
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1900,
+        "value": 0.74
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1600,
+        "value": 0.28
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1900,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1600,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1900,
+        "value": 0.76
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1600,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1900,
+        "value": 0.71
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1600,
+        "value": 0.18
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1900,
+        "value": 0.69
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1600,
+        "value": 0.22
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1900,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1600,
+        "value": 0.14
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1900,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1600,
+        "value": 0.16
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1900,
+        "value": 0.71
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Dueling persisted across 1600–1900 but at sharply declining frequency and rising social cost. This reading instantiates the decline hypothesis: the honor-satisfaction-through-blood constraint remained conceptually available and continued to govern elite male reputation, but the cost of participating — legal punishment, professional censure, medical ethics conflicts, social shame in emerging bourgeois circles — rose steadily. Duelists still fought, but fewer did, and those who did bore increasing stigma. By 1900, dueling was fringe, illegal in most jurisdictions, and treated as an archaic irrelevance by the public discourse — yet the frame that honor requires blood satisfaction never fully disappeared; it persisted at the edges, defended by a shrinking honor-bound minority. This reading emphasizes the persistence-despite-decline pattern, distinct from the contraction reading (which holds dueling became categorically unthinkable) and the composite reading (which treats multiple distinct mechanisms as the real story).",
+    "key_agents": [
+      "aristocratic_honor_claimants: The frame-setters; over the interval, their numbers, authority, and social reach contract, but the frame survives.",
+      "duelists_at_risk: Caught in identity-lock; exit requires rejecting honor-through-blood as binding, which most cannot do despite mounting costs.",
+      "state_authorities: Enforce criminalization; their monopoly on violence tightens, making dueling increasingly costly and legally risky.",
+      "bourgeois_emerging_class: Challenge the frame by proposing alternate honor mechanisms (professional prestige, economic achievement); their pressure erodes the frame's universality.",
+      "medical_establishment: Initially complicit (surgeons attend duels); increasingly withdraw as professional ethics crystallize around do-no-harm principles, raising transaction costs."
+    ],
+    "logic_rationale": "The decline reading models dueling as a constraint whose epsilon declines from 0.82 (1600: fully integrated into elite life, low-cost participation, state tolerance) to 0.68 (1900: criminalized, socially costly, fringe participation). Theater ratio rises from 0.25 to 0.58, indicating that by 1900 a growing share of remaining dueling is performative — defending honor symbolically rather than functionally settling disputes. The coercion grid shows the classic piton pattern: accessibility alternatives collapse initially (1600: dueling IS the honor solution, no alternative frame exists) but gradually open (1900: state courts, professional reputation, economic standing all offer alternate honor paths), yet the constraint persists because it remains identity-fused for a shrinking but stubborn minority. Suppression_requirement (state enforcement) rises from 0.35 to 0.72, capturing the state's growing active effort to eliminate the practice. Resistance rises from 0.16 to 0.71, showing the constraint increasingly faces active opposition (legal scholars, medical professionals, bourgeois moralists, state authorities). The shared measurement grid ensures every metric is authored at every time point: no metric-specific grids, no backfill.",
+    "perspectival_gap": "The aristocratic honor-claimants' seat and the state-authorities' seat should diverge sharply. From the aristocratic seat, dueling is a legitimate satisfaction mechanism for genuine disputes; it persists because honor demands persist and no alternative is felt to be equivalent (identity-lock drives this perception). From the state seat, dueling is an illegitimate monopoly on violence that the state must suppress to consolidate its own enforcement authority. By 1900, a third seat (bourgeois emerging class) has crystallized, viewing dueling as barbaric and unnecessary — an honor frame based on economic and intellectual achievement is felt to be superior. The engine computes per-seat types from this structural data: the aristocratic seat perceives rope (coordination of honor disputes); the state seat perceives snare (constraint on its own authority, requiring suppression); the bourgeois seat perceives scaffold (a declining institution that should sunset). The decline reading authorizes all three perceptions as computationally coherent.",
+    "directionality_logic": "Aristocratic honor-claimants are beneficiaries (they control the frame, set the standards, receive prestige for defending it) but increasingly face costs (legal risk, reputation damage in bourgeois circles) — their d starts near 0.2 (strong beneficiary position) and drifts toward 0.4 by 1900 (ambiguous position: benefit from status, cost from criminalization and stigma). Duelists are identity-locked victims (the frame binds them; exit is psychologically and socially impossible, not merely constrained) — their d stays high (0.75–0.85) across the interval, as the cost of participation rises without their power to exit. State authorities are neither beneficiary nor victim; they are the constraint's enforcer and opponent — their d is analytical (0.5, observer position) until criminalization hardens, at which point they are de facto targets of the honor frame's claims. The rise in suppression_requirement and the rise in state resistance both indicate growing structural conflict.",
+    "mandatrophy_analysis": "The founding problem (honor disputes without neutral arbiter) appears dead by 1900: state courts provide legal remedy, professional reputation systems provide alternative status, bourgeois economic standing provides another honor frame. Yet the constraint persists, fringe but observable, because the honor-bound minority still holds the original frame as binding. This is the piton signature: the mandate is obsolete, but institutional inertia (identity-lock, professional interest from seconds/surgeons, aristocratic prestige investment) keeps the structure alive through performative maintenance. The theater_ratio rise (0.25 to 0.58) attests this: by 1900, much dueling activity is theatrical honor-defense rather than functional dispute settlement. Mandatrophy is the coherent reading: the constraint satisfies the piton gates (high extraction, high suppression, rising theater, no beneficiary powerful enough to defend it against state and bourgeois pressure, yet it persists). If the founding problem were live, the constraint would be tangled_rope or snare; the fact that it persists at fringe frequency despite being unneeded is what makes it piton.",
+    "kernel_context": "This constraint is the DECLINE_READING of the contested kernel 'honor_satisfaction_mechanism'. The kernel is: across roughly 1600–1900, how did dueling as an honor-satisfaction practice change? Three readings compete: (1) DECLINE_READING (this one): dueling persisted at declining frequency, remaining available conceptually but increasingly costly and fringe; (2) CONTRACTION_READING: dueling became categorically unthinkable, a cognitive impossibility for most people (not merely illegal, but no longer entertainable as a legitimate dispute-resolution mechanism); (3) COMPOSITE_READING: multiple distinct mechanisms operated simultaneously (state monopoly enforcement, bourgeois norm-shifting, insurance markets, category-level cognitive drift), and no single reading captures the causal story. Each reading has a different epsilon: this reading locates epsilon at the persistence threshold (0.68 by 1900, still extractive but fringe); the contraction reading locates epsilon at zero (the frame is dead, not alive at the edges); the composite reading treats epsilon as a mixture of separable mechanisms. The decline reading is committed to: (a) honor-through-blood remained a live norm for the identity-locked minority; (b) the practice contracted in frequency and concentration, not in conceptual availability; (c) the mechanism by which dueling declined is cost-accumulation (legal, social, professional) rather than categorical rejection."
+  },
+  "omegas": [
+    {
+      "id": "identity_lock_vs_rational_cost_calculus",
+      "question": "For the duelists who continued to participate despite rising legal/social costs, was the constraint's persistence driven by identity-fusion (honor as identity, exit as self-annihilation) or by rational calculation that legal risk and social harm were acceptable prices for honor maintenance?",
+      "resolution_mechanism": "Correspondence, memoirs, and courtroom testimony from duelists in the late period (1850–1900) that directly addresses their reasoning. Post-exit interviews (where available) with those who abandoned dueling after its primary costs crystallized.",
+      "impact": "If identity-locked, the constraint's effective suppression is structural-plus-internalized (the agent carries the suppression even after removal from the coercive environment); if rational cost-acceptance, the suppression is purely structural (state enforcement + social shame). Identity-lock would support the piton classification more strongly; rational cost-acceptance would suggest the constraint might tip into full snare if state enforcement were removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dueling persistence after high cost reflects identity-fusion or cost-tolerance."
+    },
+    {
+      "id": "functional_replacement_vs_symbolic_persistence",
+      "question": "When state courts, professional reputation, and bourgeois economic honor all became available as alternate dispute-resolution and status mechanisms, did they functionally replace dueling's coordination role, or did dueling persist because it offered something structurally irreplaceable (ritual witness, blood-price, irrefutable closure)?",
+      "resolution_mechanism": "Comparative analysis: (a) disputes that would have been settled by dueling in 1650, compared with their resolution method in 1850 (court, mediation, reputation sanction, ignore-and-move); (b) honor narratives in late-period literature and correspondence contrasting dueling honor with economic/professional honor.",
+      "impact": "If replacement is functional (state courts settle disputes adequately; bourgeois honor substitutes psychologically), the founding problem is genuinely dead and the piton classification is secure. If dueling offered something irreplaceable (ritual closure, blood-witness necessity), then a residual coordination function survived and the constraint might be better classified as a rope or tangled_rope that contracted but didn't lose function — the terminal type would be unclear.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether dueling's decline was functional replacement or symbolic retention of unique meaning."
+    },
+    {
+      "id": "kernel_reading_boundary",
+      "question": "This reading asserts that dueling persisted as a fringe practice at declining frequency until ~1900. The contraction reading asserts it became categorically unthinkable. How do we distinguish between 'rare but conceptually available' (decline reading) and 'dead as a cultural category, with only historical residue' (contraction reading)?",
+      "resolution_mechanism": "Observable distinction: in societies where dueling persisted longest (Germany, Italy), did dueling participants in 1890 understand themselves as defending a live honor norm or as executing an archaic ritual they knew was dying? Did new duelists emerge, or only legacy honor-practitioners? Did the practice adapt and persist in mutated forms (clubs, ceremonies, symbolic challenges without lethal intent) or simply wind down without transformation?",
+      "impact": "If participants in late dueling understood the norm as live and binding (not archaic), the decline reading holds and epsilon at 1900 should be >0.6. If they understood it as archaic role-play or ritual obligation divorced from genuine honor claims, the contraction reading's epsilon ≈ 0 is more appropriate. This is the core distinction between the two sibling readings: both observe decline in frequency; they differ on cognitive status (live or dead).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Epistemic status of the honor-through-blood norm in the fringe population: live or archaic?"
+    },
+    {
+      "id": "suppression_as_cause_vs_symptom",
+      "question": "Did state criminalization and enforcement suppress dueling (causally drive its decline from below), or did dueling decline for other reasons (bourgeois norm-shift, alternative honor mechanisms) and criminalization was merely symptomatic — enforcement that targets an already-dying practice?",
+      "resolution_mechanism": "Natural experiment: comparative analysis of jurisdictions with early vs. late criminalization. If dueling declined as sharply in late-criminalizing jurisdictions as in early ones, suppression is symptom; if early-criminalizing jurisdictions show faster decline, suppression is cause.",
+      "impact": "If suppression is cause, then the rising suppression_requirement in the measurements series (0.35 to 0.72) is doing real causal work in the decline. If suppression is symptom, then suppression_requirement is a consequence of decline, not its driver, and the real mechanism lies elsewhere (bourgeois norm-shift, alternative honor mechanisms, insurance markets). This affects how we attribute the decline and the classification of the constraint's relationship to state authority.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether state enforcement caused dueling's decline or merely responded to it."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "honor_satisfaction_mechanism__contraction_reading",
+      "honor_satisfaction_mechanism__composite_reading"
+    ],
+    "dual_formulation_note": "The honor_satisfaction_mechanism kernel spawns three constraint stories, each a different reading: decline_reading (this file) treats dueling as persisting at declining frequency under mounting costs, remaining conceptually available to the identity-locked minority; contraction_reading treats it as becoming categorically unthinkable; composite_reading treats multiple simultaneous mechanisms (state monopoly, bourgeois norm-shift, insurance, cognitive drift) as the real story. Each has its own epsilon, stakeholder structure, and type. They are linked by network.affects_constraints and distinguished by omega variables routing the kernel contest to the committer layer (cs_structure.reading_relations and axioms)."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "honor_requires_blood_witness",
+    "drift_state": {
+      "moment": "industrial_bourgeois_era_1850_onward",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "contraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "composite_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "honor_persists_as_live_category",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "practice_decline_not_cognitive_death",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ],
+  "gain_flow": "aristocratic_honor_claimants",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "piton",
+    "downstream_of": [
+      "honor_satisfaction_mechanism__contraction_reading",
+      "honor_satisfaction_mechanism__composite_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

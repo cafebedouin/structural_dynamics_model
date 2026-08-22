@@ -1,0 +1,339 @@
+{
+  "header": {
+    "constraint_id": "commerce_clause_scope__broad_effects_test",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_commerce_clause_scope__broad_effects_test",
+    "story_uid": "b187caf1-8349-4f9a-ba78-bdd61661dbf3",
+    "created_at": "2026-06-12T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.64,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Commerce Clause Broad Effects Test (Federal Regulatory Scope)",
+    "topic_domain": "constitutional/federalism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "federal_regulatory_agencies",
+      "national_interest_advocacy_groups",
+      "civil_rights_enforcement_coalitions"
+    ],
+    "victims": [
+      "state_legislative_autonomy",
+      "local_economic_experimentation",
+      "non_interstate_economic_actors"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "aggregation_doctrine_empirical_threshold",
+      "question": "At what cumulative national economic impact does intrastate activity cross the 'substantially affects' threshold? Is there a principled, measurable boundary, or is the standard inherently indeterminate?",
+      "resolution_mechanism": "Comparative constitutional law analysis: jurisdictions with explicit economic-impact thresholds (EU subsidiarity tests, Swiss canton-federal balancing) versus the doctrinal record of U.S. cases (Wickard, Gonzales, Morrison) to assess whether a stable, predictable threshold exists across domains.",
+      "impact": "If a threshold is identifiable and consistently applied, the broad effects test becomes constraining on federal power (narrower extractiveness, higher accessibility to state challenge). If the threshold is fundamentally indeterminate (case-by-case, result-oriented), federal power is effectively unbounded by the Commerce Clause text (higher extractiveness, victim set is nearly all intrastate activity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the 'substantially affects' standard is determinate or result-oriented."
+    },
+    {
+      "id": "reading_kernel_decomposition",
+      "question": "Is this constraint one reading of the Commerce Clause kernel, or is it a substantive constitutional claim about federal power that stands independent of textual interpretation?",
+      "resolution_mechanism": "This omega documents the committer-frame structure: the broad effects test is INSTANTIATED as a reading of the fixed-text kernel 'Commerce among the several States' — the reading interprets 'substantially affects interstate commerce' as embracing aggregated intrastate effects. Sibling readings (narrow_originalist, intermediate_channels) interpret the same kernel text differently. The three readings are not three separate constitutional claims about federal power; they are three competing interpretations of ONE constitutional text (the kernel).",
+      "impact": "The constraint is a kernel reading, not a free-standing doctrine. Its classification is assessment of THIS READING's structural impact on state sovereignty, not a general assessment of federal commerce power. Alternative readings of the same kernel would have different extractiveness, different victim sets, and different classifications. The engine computes per-seat type differences from the structural asymmetries; authority-grounding differences between readings are recorded in cs_structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Constraint identity as a kernel reading versus a free-standing doctrine."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression of state autonomy structural (legal doctrine bars state action; federal preemption removes de facto state options) or internalized (states anticipate federal override and self-censor, even where federal action is uncertain)?",
+      "resolution_mechanism": "Post-doctrinal-shift measurement: if federal appellate courts explicitly narrow the aggregation doctrine (e.g., via limiting Lopez/Morrison principles or textualist reinterpretation), do states significantly expand their legislative agendas in previously self-censored domains? Or does suppression persist due to institutional path-dependence and risk-averse state administrative cultures?",
+      "impact": "If suppression is primarily structural (legal barriers), remedying the doctrine's text resolves it. If suppression is primarily internalized (states have internalized the federal power model as legitimate constraint on their authority), the actual suppression persists after doctrinal change — the victim set experiences the constraint as internalized norm rather than external legal rule.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression of state legislative autonomy."
+    },
+    {
+      "id": "sibling_reading_foreclosure_scope",
+      "question": "Does the broad effects test FORECLOSE the narrow originalist reading, or do the two coexist as competing interpretive frameworks held by different judicial factions?",
+      "resolution_mechanism": "Appellate jurisprudence and circuit splits: if courts systematically reject originalist Commerce Clause arguments on the merits (rather than on procedural standing/justiciability grounds), and originalist scholarship is engaged as a legitimate alternative framework (even if rejected), the readings coexist. If originalist arguments are treated as foreclosed by settled precedent and not entertained on the merits, the broad effects test has displaced the originalist reading within the authoritative institutional framework (the judiciary).",
+      "impact": "Coexistence implies both readings remain active in different seats (judiciary vs. legal academy, federal vs. state) — the kernel has multiple simultaneous readings and neither is dominant everywhere. Foreclosure implies the broad effects test has become the institutional authority's canonical reading, and the narrow originalist reading survives only outside the institutional framework. Foreclosure would be reflected in the engine's computation as axis dominance (federal institutional seat, high power, subsumes lower-power originalist seats).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Logical relationship between broad effects and narrow originalist readings."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.64,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The Commerce Clause broad effects test is one reading of a contested constitutional kernel. This reading interprets the constitutional text 'Congress shall have power to regulate commerce among the several states' as extending to any intrastate economic activity that substantially affects interstate commerce in the aggregate. Under this interpretation, the federal regulatory domain encompasses virtually all economic activity once aggregated national effects are demonstrated. This reading benefits federal regulatory agencies, national interest coalitions, and civil rights enforcement constituencies by enabling uniform national policies across domains from labor rights to environmental protection. It extracts from state legislative autonomy and local economic experimentation by subordinating state police powers to federal preemption whenever federal agencies can establish aggregate economic effects. This constraint story instantiates THIS READING ONLY — it does not adjudicate between the broad effects test, the narrow originalist reading, or the intermediate-channels reading; it assesses the structural impact of the broad effects reading on federalism as a constraint on federal power.",
+    "key_agents": [
+      "federal_regulatory_agencies: institutional beneficiary (expanded jurisdiction, uniform national authority)",
+      "states_as_legislatures: victim (constrained autonomy, preempted police powers, self-censorship)",
+      "national_advocacy_coalitions: beneficiary (uniform policy across jurisdictions enables national coordination)",
+      "local_economic_actors: victim (subject to federal regulation via aggregation even when activity is local)",
+      "judiciary_federal_appellate: agenda_setter (interprets the kernel text; current doctrine favors the broad reading)",
+      "originalist_scholarship_community: excluded (articulates the narrow reading but has no institutional authority to enforce it)"
+    ],
+    "logic_rationale": "Extractiveness is high (0.78) because the broad effects test grants federal regulatory power over activities that would otherwise be reserved to the states under the Tenth Amendment. The extraction is real: the test extracts state sovereignty by subsuming intrastate activity into federal jurisdiction whenever cumulative economic effects can be demonstrated. The measurement series traces extraction accumulation from Wickard (agricultural production, 1942, nominally intrastate but regulated as 'substantially affecting' interstate commerce) through Gonzales v. Raich (medical marijuana, 2005, purely intrastate activity regulated under aggregation). Suppression is moderate-to-high (0.64) because the doctrine actively constrains state experimentation: states cannot credibly maintain that an economic activity is insulated from federal regulation if federal regulators can construct an aggregation argument. Theater ratio rises over the interval (0.18 → 0.41) because the interpretive machinery of the test becomes increasingly detached from its coordination function: early applications of 'substantially affects' involved genuine interstate commerce channels (Wickard — wheat could cross state lines; Heart of Atlanta — racial discrimination in interstate commerce). Later applications extend to purely local activity via aggregation (Gonzales — individual intrastate cannabis cultivation has no channel to interstate commerce; the federal claim rests entirely on aggregated national demand). Theater rises as the test's coordination rationale (unifying interstate commerce rules) is succeeded by its extractive function (expanding federal jurisdiction). Accessibility collapse is high (0.72) because once federal courts adopt the broad effects test as the operative doctrine, states face near-total foreclosure of autonomy: challenging federal regulation requires arguing the regulated activity has NO national economic effects — a nearly impossible burden after decades of administrative agency fact-finding. Resistance is moderate (0.58) because state governments and federalism advocates actively resist the doctrine, but resistance is constrained by judicial supremacy and the difficulty of amending the Constitution.",
+    "directionality_logic": "Federal regulatory agencies are structural beneficiaries (d → 0.0): they collect expanded jurisdiction and power to regulate without the political friction of state-by-state negotiation. Their exit from this arrangement is not available without constitutional amendment. States as collective legislative actors are structural targets (d → 1.0): they bear the cost of subordinated autonomy and preempted police powers. Individually mobile states might escape via internal regulatory choice (opt for federal compliance, preempt the field locally), but this is false exit — it still leaves them subject to federal jurisdiction. The federal judiciary (especially the Supreme Court) is the agenda-setter (d → 0.5 to favorable to beneficiary): it established and maintains the broad effects doctrine through interpretation. National advocacy coalitions are secondary beneficiaries (d → 0.1 to 0.2): they benefit from uniform national policy but do not set the agenda; their power is dependent on federal regulatory institutions. Local economic actors are secondary targets (d → 0.8): they experience regulation but do not set policy; they lack the state-level political power to resist. The originalist scholarly community is excluded (role=observer): they articulate alternative readings but have no institutional authority to enforce them. The analytical measure reflects this structure: the federal seat experiences the constraint as coordination (unifying national commerce rules, enabling civil rights enforcement nationwide) while the state seat experiences it as extraction (subjection to federal override whenever aggregation can be demonstrated).",
+    "perspectival_gap": "From the federal institutional seat (agencies, courts), the broad effects test solves a genuine coordination problem: without it, interstate commerce regulation fractures across state lines, creating races-to-the-bottom for labor standards, environmental rules, and civil rights protections. National interest coalitions (labor unions, civil rights groups, environmental organizations) perceive the test as enabling nationwide coordination on issues that individual state action cannot solve. From the state legislative seat, the same test operates as a mechanism of federal extraction: it removes from state hands the power to experiment with local economic regulation, even when the activity is genuinely local and the claimed interstate effects are attenuated. From the local economic actor's seat (a small manufacturer, a local agricultural operation), the constraint appears as pure extraction with performative justification: the federal government claims its jurisdiction over local activity rests on aggregated national effects, but the local actor experiences it as unilateral federal override of local regulatory choice. The engine computes these seat-specific divergences from the structural data (beneficiary/victim declarations, power atoms, exit options) — the authored claim (tangled_rope: genuine coordination + asymmetric extraction) reflects this perspectival gap.",
+    "mandatrophy_analysis": "Mandatrophy — a constraint whose founding mandate has outlived its function — is plausible here but contested. The founding mandate of the Commerce Clause power is to prevent states from erecting barriers to interstate commerce and to enable uniform national commercial rules. Under the broad effects test, the doctrine now extends far beyond this original mandate: it reaches wholly intrastate, non-commercial activity (Gonzales — marijuana cultivation for personal medical use) via aggregation logic. The test persists because it serves new mandates unrelated to interstate commerce coordination: federal civil rights enforcement, labor regulation, environmental protection. The classification as Tangled Rope rather than Piton reflects that the constraint retains a real coordination function (national commerce does benefit from uniform federal rules, civil rights enforcement does benefit from federal authority) alongside its extractive operation. If the founding mandate were completely dead (if no one credibly argued the test coordinates interstate commerce anymore, only that it enables federal power expansion), the type would shift to Piton. The measurement series shows the theater_ratio rising, which is a Piton symptom, but the underlying extractiveness also rises — in Piton, extractiveness typically plateaus or declines as the constraint becomes pure performance. Here, extractiveness rises because the test is BOTH coordinating (new mandates) and extracting (federal power growth). This places it firmly in Tangled Rope territory: both functions active, both measurable.",
+    "kernel_context": "This constraint instantiates the BROAD EFFECTS TEST reading of the Commerce Clause kernel (the constitutional text 'Congress shall have power to regulate commerce among the several states'). The broad effects test interprets 'substantially affects interstate commerce' to include any intrastate economic activity whose national aggregate effects are deemed substantial by federal courts. Sibling readings: (1) NARROW ORIGINALIST — interprets 'commerce' as trade crossing state lines and 'regulate' as 'make regular' (facilitate), limiting federal power to removing state barriers and ensuring uniform rules. (2) INTERMEDIATE CHANNELS — interprets the clause to extend to (a) channels of interstate commerce, (b) instrumentalities and persons in interstate commerce, and (c) activities substantially affecting interstate commerce, but with limiting principles: non-economic activity requires a jurisdictional element, aggregation applies only to economic activity, attenuated causal chains are excluded. The broad effects reading extends federal power most broadly; the originalist reading constrains it most tightly; the intermediate reading occupies the middle ground with explicit limiting principles. The readings coexist as live positions in current federalism jurisprudence, with the broad effects test dominant in federal appellate courts and the originalist and intermediate readings articulated in dissents and scholarly critique."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "commerce_clause_scope__narrow_originalist",
+      "commerce_clause_scope__intermediate_channels",
+      "interstate_commerce_channels_doctrine",
+      "state_police_power_preemption"
+    ],
+    "dual_formulation_note": "This constraint is one reading (broad effects test) of the commerce_clause_scope kernel. The narrow_originalist and intermediate_channels constraints are sibling readings of the same kernel, each with its own ε, beneficiary/victim structure, and classification. All three readings are linked via network.affects_constraints to document the constraint family. The broad effects test is the upstream reading (institutional authority — federal courts adopt it as the operative doctrine); it influences the intermediate_channels reading (creates structural pressure to adopt limiting principles) and forecloses the narrow originalist reading (at the institutional appellate level, originalist arguments are not entertained on the merits). In the scholarly/political sphere, all three remain live."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "federal_regulatory_agencies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Federal agencies (EPA, NLRB, OSHA, HHS, DOJ Civil Rights Division) gain expanded jurisdiction over economic activities previously thought to be intrastate and non-regulable. The broad effects test allows them to assert authority over any activity with demonstrated or claimed national economic aggregate effects. They set the agenda through rulemaking, enforcement, and interpretation of the doctrine. Their mandate expands with the doctrine, and they collect the institutional power and budgetary expansion that comes with jurisdiction growth."
+    },
+    {
+      "name": "national_interest_advocacy_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Labor unions, environmental organizations, civil rights coalitions, and consumer advocacy groups benefit from the broad effects test because it enables federal-level uniform policy they cannot achieve through state-by-state negotiation. They lobby federal agencies and support litigation that extends the doctrine. They do not set the agenda (federal agencies do) but they are aligned beneficiaries."
+    },
+    {
+      "name": "civil_rights_enforcement_coalitions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Civil rights enforcement depends on federal authority to override state and local discrimination. The broad effects test (applied in Heart of Atlanta, Katzenbach v. McClung) enables federal reach into local economic activity (hotels, restaurants) to enforce civil rights. Coalitions seeking national non-discrimination norms benefit from this federal power."
+    },
+    {
+      "name": "state_legislatures",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "State legislatures experience the broad effects test as loss of autonomy over intrastate economic regulation. They cannot credibly maintain that local economic activities fall outside federal jurisdiction because the doctrine permits federal courts to aggregate national effects and assert authority. They bear the cost of preemption, regulatory duplication where federal and state rules clash, and the frustration of their own police powers. Their exit options are: (1) anticipate federal preemption and regulate only in complementary domains (constrained by federal regulatory landscape), (2) litigate to narrow the doctrine (difficult, requires Supreme Court willingness to overturn precedent), (3) opt for federal-floor regulation while state-level experimentation remains legally risky. States cannot exit the federal system; the constraint is binding."
+    },
+    {
+      "name": "state_executive_agencies",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "State environmental, labor, and health agencies experience dual positioning: they must enforce federal regulations under preemption (cost of compliance, loss of independent authority) but also benefit where federal regulation sets a floor that prevents races-to-the-bottom. States like California that want stronger environmental rules can use federal authority as a political tool, but states that want looser rules experience it as a constraint. On balance, state executive agencies are partially captured by federal regulatory frameworks and experience loss of policy autonomy."
+    },
+    {
+      "name": "local_economic_actors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Small manufacturers, local agricultural operations, family businesses, and local service providers experience the broad effects test as subjection to federal regulation even when their activity is wholly local. Once federal courts adopt the broad effects test, these actors cannot argue their activity is beyond federal reach — the doctrine permits federal regulators to assert jurisdiction via aggregation. Their exit options are: (1) comply with federal regulation in addition to any state/local rules, (2) exit the regulated sector, (3) litigate to challenge federal jurisdiction (expensive, low success rate under current doctrine). They are trapped within the federal regulatory system."
+    },
+    {
+      "name": "federalism_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Federalism advocates (originalist scholars, conservative judges, states' rights organizations) oppose the broad effects test as violating the constitutional division of powers. They seek to narrow the doctrine through litigation (Lopez, Morrison, NFIB v. Sebelius) and scholarship. They bear the cost of institutional subordination: their preferred reading of the Commerce Clause is not the operative doctrine, and they must litigate uphill against precedent and institutional inertia. Their exit is constrained by judicial supremacy and the difficulty of constitutional amendment."
+    },
+    {
+      "name": "federal_judiciary_appellate",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Federal appellate courts (especially the Supreme Court) established and maintain the broad effects doctrine through interpretation of the Commerce Clause. They set the agenda by deciding which constitutional readings are legitimate. Current doctrine (post-1942 Wickard through current period) favors the broad effects test, though some justices (Thomas, Gorsuch in Lopez dissent) advocate for the narrower originalist reading. The judiciary's agenda-setting power is substantial but not absolute — it is constrained by precedent, constitutional amendment possibility, and political pressure."
+    },
+    {
+      "name": "originalist_judges",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Originalist judges dissent from the broad effects test and articulate alternative readings of the Commerce Clause. They occupy a minority position on the Supreme Court and in the federal judiciary. They have institutional authority to write dissenting opinions but not to set the operative doctrine. They observe the constraint from an analytical position outside the dominant institutional framework."
+    },
+    {
+      "name": "originalist_legal_scholarship",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Legal scholars articulating originalist and federalism-constraining readings of the Commerce Clause are excluded from the institutional framework that applies the doctrine. They write about the narrow originalist reading and the limitations of the broad effects test, but federal courts do not adopt their arguments as operative doctrine. They would reshape the constraint if they had institutional authority, but they operate outside the judicial system."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The broad effects test solves the coordination problem of regulating interstate commerce: without federal power to reach intrastate activity that aggregates to national economic effects, states could erect barriers to interstate commerce, enact discriminatory local rules, or create races-to-the-bottom in labor standards, environmental protection, and civil rights. The doctrine enables uniform national regulation across domains where local fragmentation creates inefficiency or harm. It also enables federal enforcement of national civil rights norms (anti-discrimination, labor rights) that cut across state lines.",
+    "transfer_function": "The doctrine transfers regulatory authority from state legislatures and local jurisdictions to the federal government (agencies, Congress, courts). It moves the power to decide what intrastate economic activities can be regulated, setting rules that bind all states. It transfers the power to enforce uniform national norms across jurisdictions. In civil rights domains, it transfers power from state authorities that might tolerate discrimination to federal authorities mandated to enforce non-discrimination.",
+    "absent_voices": "State legislatures and local governments are structured to be victims rather than participants in the doctrine's development. Their voices appear in litigation (state attorneys general defending state regulations) but they cannot set the agenda. Originalist and federalism advocates are excluded from institutional authority to enforce their reading of the Commerce Clause, though they publish critiques. States that would prefer looser regulation (and would be regulated more stringently) have no structural voice in the judiciary's interpretation of the doctrine.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the broad effects test disappeared overnight (replaced by the narrow originalist reading or a genuine limiting principle), the regulatory landscape would fundamentally rearrange. Federal agencies would lose jurisdiction over activities lacking a clear channel to interstate commerce. Environmental, labor, and civil rights enforcement would revert to state control, creating regulatory fragmentation and races-to-the-bottom in protective standards. States would regain autonomy to experiment with local economic rules. National interest coalitions would need to negotiate state-by-state instead of lobbying federal agencies. The world would not revert to an alternative stable equilibrium — it would face a period of regulatory uncertainty and the need to rebuild federal/state cooperation structures around explicit interstate commerce channels rather than aggregation doctrine.",
+    "founding_problem": "The founding problem was the Articles of Confederation: states erected tariff barriers against each other's commerce, engaging in mutual economic warfare. The Commerce Clause was designed to give Congress power to prevent state barriers to interstate trade and to establish uniform national commercial rules. Early applications (Gibbons v. Ogden, 1824) enforced this mandate by striking down state barriers to interstate navigation and commerce.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Federal regulatory agencies, national interest coalitions, and federal courts attest that the founding problem remains live: states could still erect local barriers and fragment national commerce if federal authority did not extend to aggregate intrastate effects. Federalism advocates and originalist scholars (sources outside the benefiting parties) attest that the founding problem is substantially solved: explicit state tariff barriers are constitutionally prohibited under dormant Commerce Clause doctrine, and federal power to regulate interstate commerce channels is uncontested. They argue the broad effects test exceeds the founding mandate by reaching wholly intrastate activity unrelated to interstate commerce. Neutral analysts (constitutional historians, legal scholars) confirm that the founding problem concerned state barriers to interstate trade, not the regulation of intrastate activity, and note that the test has substantially expanded beyond the founding rationale."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_originalist",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "intermediate_channels",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "aggregation_doctrine_intrastate_reach",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "federal_police_power_via_commerce",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "enumerated_federal_powers_doctrine",
+    "drift_state": {
+      "moment": "contemporary_administrative_state",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "federal_regulatory_agencies",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "commerce_clause_scope__narrow_originalist",
+      "state_police_power_preemption"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

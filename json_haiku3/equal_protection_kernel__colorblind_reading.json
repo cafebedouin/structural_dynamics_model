@@ -1,0 +1,433 @@
+{
+  "header": {
+    "constraint_id": "equal_protection_kernel__colorblind_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_equal_protection_kernel__colorblind_reading",
+    "story_uid": "f0d132c3-5a80-4c5c-b42a-1a8289f6dfcd"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.29,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.74,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Equal Protection Clause — Colorblind Reading",
+    "topic_domain": "constitutional/civil_rights/education_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "majority_applicant_pools",
+      "color_blindness_doctrine_advocates"
+    ],
+    "victims": [
+      "historically_excluded_racial_groups",
+      "affirmative_action_beneficiaries"
+    ],
+    "vindicated_propositions": [
+      "formal_equality_doctrine",
+      "constitutional_color_blindness"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "supreme_court_colorblind_majority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The US Supreme Court faction that sets constitutional doctrine through opinions declaring race-conscious admissions violate equal protection per se. They interpret the Fourteenth Amendment's text as mandating formal race-neutrality in all state action. They enforce this doctrine through case decisions that invalidate university admissions programs that consider race."
+    },
+    {
+      "name": "majority_applicant_pools",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Applicant pools that benefit from race-neutral admissions criteria where their demographic group holds higher average test scores under standardized measures. They gain admission slots that would have gone to race-conscious affirmative action beneficiaries. They frame the colorblind rule as fairness and meritocracy."
+    },
+    {
+      "name": "historically_excluded_racial_groups",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Black, Latino, Native American, and other historically excluded groups lose access to remedial admissions pathways that had partially compensated for documented educational disparities and historical discrimination. They pay through reduced admission rates to selective institutions, lower lifetime earnings, and foreclosed intergenerational wealth accumulation. Exit from this constraint would require either leaving the jurisdiction or convincing the Court to overturn doctrine — both are structurally unavailable."
+    },
+    {
+      "name": "affirmative_action_beneficiaries",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individual applicants from historically excluded groups who would have been admitted under race-conscious criteria and are now rejected under colorblind criteria. They carry the direct cost of the constraint. They can apply to alternative institutions or retake standardized tests, but these options are constrained by geography, resources, and test-score ceilings."
+    },
+    {
+      "name": "remedial_reading_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Legal scholars, civil rights organizations, and minority-party judges and legislators who hold the remedial reading (race-conscious action to remedy documented historical exclusion is constitutionally permitted). They are excluded from the decision-making apparatus that interprets the Constitution: the majority Court has settled doctrine against them. Their only structural exit is a constitutional amendment or a shift in Court composition."
+    },
+    {
+      "name": "antisubordination_reading_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Legal scholars and advocates who hold the antisubordination reading (the clause forbids caste-like subordination, not classification per se; race-conscious action to dismantle hierarchy is permitted). They are similarly excluded from the authoritative doctrine-setting apparatus. Their structural situation mirrors the remedial advocates: no voice in the Court, no exit except through composition change."
+    },
+    {
+      "name": "university_administrators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Public university officials who must enforce the colorblind doctrine or face litigation and loss of accreditation. They comply with the constraint because legal liability makes refusal structurally unavailable. They bear the cost of restructuring admissions machinery; some also benefit if the doctrine aligns with institutional preferences, but most are primarily constrained enforcers."
+    },
+    {
+      "name": "standardized_testing_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The SAT and ACT testing apparatus benefits from colorblind doctrine because standardized test scores become the dominant admissions criterion. Test-score distributions correlate with race due to socioeconomic and educational disparities, so the colorblind rule amplifies the role of tests without naming race explicitly. The industry gains market share and cultural authority as the 'objective' measure of merit."
+    },
+    {
+      "name": "color_blindness_doctrine_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Legal scholars, think tanks, and civil rights organizations that endorse colorblind constitutionalism as the correct reading of equal protection. They are vindicated by the doctrine's adoption and hold positions of institutional influence. They collect ideological authority and set the terms of constitutional debate."
+    },
+    {
+      "name": "observer_seat",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "An analytical observer position that witnesses the constraint's operation across all seats and the divergence between the colorblind reading's formal logic and its distributional effects on historically excluded groups."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a uniform, race-neutral rule for all admissions decisions across all public institutions under a single constitutional standard. Solves the coordination problem of what uniform principle should govern equal protection in a diverse society — provides a single, formally symmetrical answer applicable regardless of context or history.",
+    "transfer_function": "Moves selective-institution admission slots from historically excluded racial groups and affirmative action beneficiaries to applicant pools whose demographic groups hold higher average standardized test scores. Transfers ideological authority from remedial and antisubordination readings to colorblind doctrine advocates and their institutional allies.",
+    "absent_voices": "Historically excluded racial groups have no seat at the Supreme Court; affirmative action beneficiaries are not parties to constitutional interpretation; descendants of enslaved people who would name reparative obligations do not appear in formal proceedings. Remedial and antisubordination reading advocates are institutionally excluded from authoritative doctrine-setting.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the colorblind doctrine disappeared (Court reversal, constitutional amendment, or reinterpretation), universities would immediately re-adopt race-conscious admissions criteria where legally permitted; student demographics at selective institutions would shift; the standardized testing industry's dominance would decline; institutional resources would flow differently across racial groups; ideological authority would reallocate from colorblind advocates to remedial advocates. The entire machinery of formal equal protection as currently instantiated would reorganize.",
+    "founding_problem": "What principle should govern equal protection in a diverse society with competing interpretations of 'equal'? How can the state treat citizens of different races without violating constitutional neutrality? The founding problem names a genuine structural ambiguity: does equal protection require the state to be blind to race, or does it require the state to correct racial subordination?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Supreme Court colorblind majority attests the founding problem is answered by the constitutional text: equal protection means formal race-neutrality. Remedial and antisubordination advocates atttest the founding problem remains live and unresolved: formal neutrality can entrench subordination. Empirical evidence from educational attainment disparities, wealth gaps, and educational segregation post-colorblind doctrine adoption supports the 'live problem' attestation from outside the benefiting parties (independent demographers, economists, civil rights organizations not subject to Court authority)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.21,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.29,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The colorblind reading of the Equal Protection Clause interprets the Fourteenth Amendment as mandating categorical color-blindness: the state may not use racial classifications in any context, regardless of purpose. This reading is one of three competing interpretations of the same kernel (the Equal Protection Clause). The colorblind reading has become dominant US constitutional doctrine through Supreme Court decisions (especially after 2007). The structural delta is stark: historically excluded groups lose remedial pathways; all race-conscious state action is per se unconstitutional; the state has no obligation to address effects of past discrimination. This is authored as TANGLED ROPE: it coordinates a single uniform principle across jurisdictions (coordination function — formal equality for all), but it asymmetrically extracts from historically excluded groups while benefiting majority applicant pools and standardized testing industries. The coordination and extraction components are inseparable under this reading's own logic: the extracted benefit (lower admission competition for majority pools) IS the coordination mechanism (formal equality applied uniformly). The constraint's persistence requires active enforcement: universities must reject or dismantle race-conscious admissions programs through judicial invalidation and litigation threat, not through participant preference.",
+    "key_agents": [
+      "Supreme Court colorblind majority: institutional power, agenda-setter for doctrine, enforces the reading through case law",
+      "Historically excluded racial groups: powerless, trapped, bear generational extractive cost through reduced selective-institution access",
+      "Affirmative action beneficiaries: moderate power, constrained exit, direct victims of the constraint",
+      "Majority applicant pools: organized power, beneficiaries via reduced admission competition",
+      "Remedial and antisubordination reading advocates: institutional power, excluded from doctrine-setting, structurally unable to exit",
+      "University administrators: institutional power, constrained enforcers of the doctrine, pay compliance costs",
+      "Standardized testing industry: organized power, beneficiaries through amplified test-score dominance"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.42 (when the reading was one contested doctrine among several) to 0.68 (when it became dominant and binding on all public institutions). The rise tracks the doctrine's consolidation: as it moved from contested to settled, the cost to historically excluded groups hardened. Suppression requirement rises even more sharply (0.35 to 0.72) because maintaining the constraint's dominance requires actively suppressing alternative readings through case law precedent, rejecting briefs from remedial advocates, and blocking legislative workarounds. Theater ratio stays moderate (0.29): the doctrine is not pure performance — the coordination function (formal equality) is real and institutional. But a growing share of the constraint's enforcement activity (especially post-2007) targets the suppression of remedial admissions, not the coordination of uniform principle. The measurement series track the constraint's operation across its 35-year interval, with t0-t10 being a period of contestation and increasing consolidation, t10-t25 the period of doctrine-establishment hardening, and t25-t35 plateau under dominant doctrine.",
+    "directionality_logic": "Beneficiaries are majority_applicant_pools and color_blindness_doctrine_advocates. Victims are historically_excluded_racial_groups and affirmative_action_beneficiaries. Majority applicants benefit through admission slots freed by colorblind admissions; doctrine advocates benefit through ideological authority and vindication of their constitutional reading. Historically excluded groups lose remedial pathways and suffer generational accumulation of educational/economic disadvantage. Affirmative action beneficiaries lose individual admission chances. The constraint's power derives from institutional authority (Supreme Court) enforcing doctrine through case law, not from voluntary coordination among equal parties.",
+    "perspectival_gap": "The Supreme Court seat experiences the constraint as principled constitutional interpretation yielding uniform fairness; the historically excluded groups' seats experience it as coordinated extraction using formal equality as cover. University administrators sit asymmetrically: they must enforce the doctrine (high d, near target), but they also benefit from reduced litigation risk under a settled constitutional rule (partial d downward). This gap between 'principled interpretation' and 'coordinated extraction' is the core structural divergence: from the agenda-setter's seat the constraint is coordination; from the payer's seat it is extraction. The engine computes per-seat classifications that reflect this divergence.",
+    "mandatrophy_analysis": "The colorblind reading presents itself as transcending race by forbidding racial classification entirely. This framing obscures a core structural fact: the constraint's persistence depends on suppressing alternative readings (remedial and antisubordination) whose advocates would reject the colorblind framing as precisely the problem — they would argue the constraint uses 'colorblindness' as a mandate to ignore subordination. The mandatrophy question: Has the founding problem (what principle governs equal protection?) actually been solved by colorblind doctrine, or has the constraint simply redefined the problem out of existence by forbidding the very category (race-conscious action) that alternative readings argue is necessary to solve it? The R5 mismatch surfaces this: founding_problem_status=contested (the parties dispute whether the problem is solved) + disappearance_verdict=world_rearranges (people organized around race-conscious alternatives would immediately challenge the constraint if they could). This mismatch signals mandatrophy: the constraint persists not because the founding problem is solved, but because the dominant reading suppresses the question of whether it is solved.",
+    "kernel_context": "This constraint instantiates the colorblind reading of the contested equal_protection_kernel. The kernel is the Fourteenth Amendment's Equal Protection Clause, which all three readings (colorblind, remedial, antisubordination) claim to interpret. Each reading instantiates a different constraint with different beneficiary/victim structures, different extractiveness profiles, and different classifications. The colorblind reading claims the clause mandates categorical color-blindness; the remedial reading claims it permits race-conscious action narrowly tailored to remedy documented historical exclusion; the antisubordination reading claims it targets caste-like subordination, permitting action that dismantles hierarchy. These are NOT alternative measurements of the same constraint — they are structurally distinct constraints derived from competing readings of the same kernel. The colorblind reading forecloses the remedial reading within its own framework (if color-blindness is categorically mandated, remedial race-consciousness is categorically forbidden), but the two readings coexist in the broader legal and political discourse, held by different parties. The colorblind reading influences the antisubordination reading by narrowing the practical space for implementing antisubordination doctrine."
+  },
+  "omegas": [
+    {
+      "id": "colorblind_vs_constructed_reading",
+      "question": "Is the colorblind reading a natural law reading of the constitutional text (the text mandates color-blindness and the reading discovers it), or a constructed reading that selects one interpretive frame from multiple defensible frames the text admits?",
+      "resolution_mechanism": "Originalist textual analysis by independent scholars comparing the Fourteenth Amendment's drafting history and linguistic ambiguity against competing readings' textual justifications. A constructed reading would show multiple defensible framings in the historical record; a natural law reading would show the text unambiguously mandating color-blindness.",
+      "impact": "If constructed (which is the likely finding), the constraint is a Tangled Rope with false-summit-mountain risk: it appears as settled constitutional principle but depends on suppressing alternative readings. If natural law (unlikely), the constraint genuinely approaches Mountain status and the extraction profile would be incidental rather than structural.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the colorblind reading is textually mandated or institutionally chosen."
+    },
+    {
+      "id": "formal_vs_substantive_equality",
+      "question": "Does the Fourteenth Amendment's 'equal protection' refer to formal equality (identical treatment) or substantive equality (equivalent opportunity and outcome), and is this question resolvable from the text or does it reflect an irreducible choice?",
+      "resolution_mechanism": "Comparative constitutional law: examine equal protection analogues in other democracies' constitutions and their interpretations. If diverse democracies with similar texts adopt different principles, the question is not text-resolvable; if convergence exists, formal equality may be discoverable from text.",
+      "impact": "If the question is text-resolvable to formal equality, colorblind doctrine is principled and the constraint is pure coordination. If text-irreducible, colorblind doctrine is one choice among defensible alternatives and the constraint is Tangled Rope. If text points toward substantive equality, colorblind doctrine contradicts the text and is false doctrine.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether equal protection is a question the constitutional text answers or leaves open."
+    },
+    {
+      "id": "historical_discrimination_persistence",
+      "question": "Do documented effects of historical discrimination (wealth gaps, educational attainment disparities, health disparities between racial groups) persist materially into the contemporary period as barriers to contemporary equal opportunity, or have they been substantially remedied?",
+      "resolution_mechanism": "Empirical analysis of wealth, educational, health, and criminal-justice metrics by racial group over time. If gaps persist and worsen after colorblind doctrine adoption, historical discrimination effects are live. If gaps narrow or close, historical discrimination is materially remedied.",
+      "impact": "If live and worsening, colorblind doctrine fails to address a material equality problem and functions as Tangled Rope covering extraction. If remedied or stable, colorblind doctrine may be correct as coordinating equal protection in a post-discrimination society.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether historical discrimination's effects remain material barriers to contemporary opportunity."
+    },
+    {
+      "id": "remedy_vs_entrenching_hierarchy",
+      "question": "Do race-conscious admissions policies at selective institutions materially remedy historical exclusion and reduce group-level inequality, or do they entrench existing hierarchies by admitting token members of excluded groups while leaving systemic barriers intact?",
+      "resolution_mechanism": "Longitudinal study of post-graduation outcomes, career trajectories, wealth accumulation, and intergenerational mobility for affirmative action beneficiaries versus traditional pathways. Assess whether race-conscious admissions materially improve group outcomes or primarily circulate individuals while leaving group-level structures unchanged.",
+      "impact": "If remedial policies genuinely improve group outcomes, the colorblind reading prevents a functional remedy, strengthening Tangled Rope classification. If remedial policies are primarily circulating individuals and not changing group structures, colorblind doctrine's restriction is less clearly extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether race-conscious admissions policies functionally remedy historical exclusion or entrench hierarchies."
+    },
+    {
+      "id": "colorblindness_as_subordination_mechanism",
+      "question": "Can a state policy that is formally neutral as to race nevertheless function as a mechanism for perpetuating racial subordination by ignoring group-level disparities and refusing to address them?",
+      "resolution_mechanism": "Structural analysis comparing colorblind policies' outcomes to antisubordination criteria (caste-like stratification, hierarchy-entrenching effects). If colorblind admissions maintain or increase group-level hierarchy despite formal neutrality, the policy violates antisubordination principles even if it satisfies formal equality.",
+      "impact": "If colorblindness perpetuates subordination, colorblind doctrine contradicts antisubordination reading and the constraint functions as institutionalized hierarchy protection. If colorblindness avoids subordination, the readings remain genuinely contested.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether formal race-neutrality can itself function as a subordination mechanism."
+    },
+    {
+      "id": "suppression_of_alternative_readings_necessity",
+      "question": "Does the colorblind reading's dominance require active institutional suppression of remedial and antisubordination readings through case law precedent and judicial gatekeeping, or would it hold through voluntary adoption if presented fairly?",
+      "resolution_mechanism": "Counterfactual analysis: if the Supreme Court had not foreclosed remedial and antisubordination readings through precedent (e.g., if it had permitted the Fourteenth Amendment to remain genuinely contestable), would colorblind doctrine persist through natural adoption or would it lose dominance? Historical record of brief-gatekeeping and cert petitions refusing to hear cases from alternative-reading advocates provides structural evidence.",
+      "impact": "If suppression is necessary, the constraint's persistence depends on coercive institutional gatekeeping and is Tangled Rope. If colorblindness would win fair competition, it approaches purer coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether colorblind doctrine's dominance is active-suppression-dependent."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "equal_protection_kernel__remedial_reading",
+      "equal_protection_kernel__antisubordination_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a three-reading kernel (equal_protection_kernel). All three readings share the same constitutional text (Fourteenth Amendment, Equal Protection Clause) but interpret it differently, yielding different beneficiary/victim structures, different extractiveness profiles, and different classifications. The colorblind reading forecloses remedial and coexists with (or influences) antisubordination within the broader legal discourse. Each reading is a separate constraint story with its own ε, its own stakeholders, and its own classification computed per-seat by the engine. The three stories are linked via network.affects_constraints to establish the constraint family and enable contamination analysis."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "constitutional_color_blindness",
+    "reading_relations": [
+      {
+        "sibling_id": "remedial_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "antisubordination_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_race_classification_categorically_impermissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "formal_equality_sufficient_for_constitutional_compliance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "drift_state": {
+      "moment": "contemporary_post_2007",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "gain_flow": "majority_applicant_pools",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "equal_protection_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

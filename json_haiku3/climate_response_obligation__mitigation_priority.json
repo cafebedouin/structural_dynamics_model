@@ -1,0 +1,411 @@
+{
+  "header": {
+    "constraint_id": "climate_response_obligation__mitigation_priority",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "f6f2c743-cc9d-4091-872c-4ea0ffb289f3"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.73,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rapid Decarbonization Obligation: Mitigation Priority Reading",
+    "topic_domain": "climate_policy/political_economy/intergenerational_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "future_generations",
+      "climate_vulnerable_populations"
+    ],
+    "victims": [
+      "current_generation_workers",
+      "fossil_fuel_capital",
+      "global_north_transition_costs"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Inherit a climate system shaped by current mitigation policy choices. Cannot participate in today's decisions; their welfare depends entirely on actions taken now to minimize warming. Benefit from rapid decarbonization through reduced climate catastrophe risk, but face implementation costs they did not incur and cannot influence."
+    },
+    {
+      "name": "climate_vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face immediate climate risks (sea-level rise, drought, extreme weather) that are already occurring. Benefit from mitigation that slows further warming. Disproportionately located in Global South and low-income regions; have minimal historical responsibility for cumulative emissions but suffer primary harm."
+    },
+    {
+      "name": "current_generation_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear immediate transition costs: job displacement in fossil fuel industries, retraining expenses, wage pressures during sectoral shift, higher energy costs during infrastructure transition. Their exit options are constrained by labor market immobility, geographic dependence on fossil fuel economies, and credential lock-in. They bear costs on behalf of future generations they will not directly benefit from."
+    },
+    {
+      "name": "fossil_fuel_capital",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Faces stranded assets: reserves that cannot be extracted under rapid decarbonization; infrastructure (pipelines, refineries, power plants) rendered economically obsolete; market valuation collapse. The mitigation constraint forces a write-down of asset value without compensation and limits the exit window to liquidate holdings at full price. Capital can lobby and litigate but cannot fully escape the constraint once policy is enacted."
+    },
+    {
+      "name": "global_north_economies",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Bear disproportionate mitigation costs because: (1) they have higher per-capita emissions to reduce, (2) they have capital to finance transition but lack motivation to self-impose costs, (3) historical responsibility for cumulative atmospheric CO2 creates a climate-justice claim for them to lead mitigation. They face coordinated pressure from vulnerable populations and future-focused movements but have the institutional power to delay or water down commitments."
+    },
+    {
+      "name": "climate_advocacy_movements",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Articulates the mitigation-priority reading: that intergenerational justice requires preventing harm through rapid decarbonization rather than accepting warming and adapting. Sets the normative frame, mobilizes constituencies, organizes pressure campaigns, litigates in domestic and international venues. Does NOT directly set policy but shapes the constraint's legitimacy narrative and political feasibility."
+    },
+    {
+      "name": "national_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enact and enforce mitigation policy: carbon taxes, emissions trading systems, fossil fuel phase-outs, renewable subsidies, grid decarbonization mandates. Face cross-pressures: accountability to future generations (and vulnerable present populations), pressure from fossil capital, and domestic worker/industry resistance. Their exit is constrained by international treaties, market dynamics, and the scientific consensus that deep decarbonization is necessary."
+    },
+    {
+      "name": "international_climate_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "IPCC, UNFCCC, regional bodies coordinate scientific consensus and frame policy targets (1.5°C, net-zero 2050). They do not enforce but legitimize the mitigation-priority reading through authority-grounding in climate science. Their role is to transform climate physics into intergenerational justice narratives that become binding political commitments."
+    },
+    {
+      "name": "adaptation_advocacy",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argues that rapid mitigation is economically infeasible and that resources should prioritize adaptation to warming that is already locked in. Would contest the mitigation-priority framing if seated in climate policy design; currently marginalized in high-stakes forums where the mitigation reading dominates but holds significant influence in some developing-nation governments and business sectors."
+    },
+    {
+      "name": "degrowth_critics",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argues that mitigation within growth frameworks is impossible; that only material reduction (degrowth) can meet planetary boundaries. Their reading is excluded from mainstream climate policy because it challenges the growth assumption central to current economic frameworks. Present in academic and activist spaces but not in governmental climate commissions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a genuine collective-action problem: no single nation has incentive to bear unilateral decarbonization costs if others free-ride on reduced atmospheric CO2; rapid global mitigation requires coordination to (1) distribute costs fairly across emitters, (2) provide capital to developing nations for clean energy transition, (3) enforce commitments through market and regulatory mechanisms, (4) shift investment away from fossil infrastructure toward renewable systems. Without coordination, each actor defaults to delayed action.",
+    "transfer_function": "Transfers costs from future generations and climate-vulnerable populations (primary beneficiaries, currently voiceless) to current-generation workers, fossil fuel capital, and Global North governments (primary payers). The transfer operates through: carbon pricing (money to green funds), stranded-asset losses (capital write-downs), labor-market disruption (worker retraining costs), energy-cost increases (consumer burden), and opportunity costs (foregone fossil fuel revenues).",
+    "absent_voices": "Future generations cannot participate in climate policy design; their interests are represented through proxy advocates (climate movements, youth strikes, IPCC scientific consensus) but lack direct voice. Fossil fuel workers in developing nations face double extraction (cost of transition plus loss of revenue that funded development). Adaptation-priority advocates are sidelined in mitigation-dominated forums despite holding legitimate empirical claims about feasibility and cost-effectiveness in high-warming scenarios. Degrowth advocates are entirely absent from mainstream policy design, relegated to academic and activist spaces.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mitigation obligation vanished, current policy would revert to incremental carbon reduction or adaptation-focused investment; fossil fuel extraction would continue at higher rates; stranded assets would be recovered; worker displacement would be delayed by decades; future generations would inherit a warmer climate with compounding lock-in costs (e.g., thawing permafrost, tipping points). The constraint's disappearance would reorganize the global energy system, financial markets, and intergenerational risk allocation entirely.",
+    "founding_problem": "The founding problem of the mitigation-priority reading is: atmospheric CO2 accumulation from 150+ years of fossil-fuel-powered industrialization creates committed warming (lock-in even if emissions stop today) and non-linear climate tipping points; preventing the worst outcomes requires rapidly reducing emissions to zero while the climate system still responds to emissions cuts, rather than waiting and later adapting to unavoidable warming.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "IPCC scientific consensus (independent from fossil interests, funded by governments) attests the founding problem is live and worsening: each year of delay reduces the feasibility window and increases future costs. Climate-vulnerable nations attest through negotiating positions at UNFCCC that rapid mitigation is their survival interest. Fossil fuel industry disputes the framing (argues adaptation is cheaper, mitigation is premature) but does not dispute the underlying physics — they dispute the normative weight given to future harm. Independent economic analyses from outside the benefiting parties (Stern Review, NGFS climate scenarios) corroborate that unmitigated warming imposes far larger costs than rapid decarbonization, validating the founding problem's urgency."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71,
+      "basis": "projected"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mitigation_vs_adaptation_boundary",
+      "question": "Is rapid decarbonization empirically necessary to prevent catastrophic tipping points, or is high-cost mitigation offsetable by future adaptation technologies?",
+      "resolution_mechanism": "Empirical observation: (1) detection of triggering mechanisms for Amazon dieback, ice-sheet collapse, or permafrost runaway — events that would confirm lock-in and justify prevention over adaptation; (2) technological breakthrough in carbon removal at scale (<$100/ton) — would suggest adaptation-heavy strategies are viable; (3) 10-year delay in peak warming — would validate adaptation-priority hypothesis.",
+      "impact": "If tipping points are empirically imminent and irreversible, mitigation is categorically non-negotiable and the constraint is structural necessity, not extraction. If adaptation technologies mature faster than expected, the mitigation reading becomes a cost-inefficient choice and the constraint shifts toward snare (unjustified extraction masquerading as necessity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rapid mitigation is empirically necessary or strategically chosen given available alternatives."
+    },
+    {
+      "id": "intergenerational_justice_grounding",
+      "question": "Does intergenerational justice specifically require preventing harm through mitigation, or is it equally satisfied by adaptation that keeps living standards stable across generations?",
+      "resolution_mechanism": "Philosophical and legal analysis: (1) do intergenerational justice frameworks ground obligations in outcome-minimization (harm prevention) or in fair-process distribution (intergenerational cost-sharing); (2) what do constitutional courts and international bodies declare when asked to adjudicate intergenerational rights — do they mandate mitigation or permit adaptation-only strategies?",
+      "impact": "If justice requires harm prevention specifically, the mitigation-priority reading is grounded in an irreducible normative commitment. If justice permits adaptation-focused strategies that distribute costs fairly, the mitigation reading becomes one option among several, not a categorical imperative.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "What philosophical axioms ground the intergenerational justice frame."
+    },
+    {
+      "id": "beneficiary_discounting_and_voicelessness",
+      "question": "Does the powerlessness of future generations create a bias in mitigation policy that extracts from current payers beyond what a hypothetical intergenerational negotiation would yield?",
+      "resolution_mechanism": "Counterfactual analysis: (1) what terms would future generations (if represented) negotiate for current burden-sharing — would they accept higher present costs to avoid their own lock-in, or choose lower present costs and higher adaptation burdens; (2) discount-rate sensitivity: as discount rates rise (prioritizing present welfare), does mitigation remain justified by future-benefit calculus, or does it become extraction disguised as altruism?",
+      "impact": "If future generations would rationally choose mitigation even in a fair negotiation, the constraint is genuine coordination. If they would choose lower present mitigation and higher future adaptation (to preserve current living standards), then current mitigation policy may extract from current payers on behalf of a voiceless beneficiary who never consented.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether voicelessness of beneficiaries creates extraction bias in mitigation obligations."
+    },
+    {
+      "id": "reading_contest_on_referent",
+      "question": "This constraint is one reading of a contested kernel (climate_response_obligation). The three readings (mitigation_priority, adaptation_priority, degrowth_reading) each assess the SAME referent — the standing climate response arrangement — but evaluate its extractiveness through different normative lenses. Mitigation-priority reading: ε=0.68 because rapid decarbonization extracts from current workers/capital while benefiting future generations (an asymmetry the reading endorses as justice). Adaptation-priority reading would assess: same arrangement, lower ε (adaptation is cheaper near-term, less burdensome). Degrowth reading would assess: same arrangement, higher ε (materialist logic shows mitigation within growth is an extractive illusion; true decarbonization requires degrowth). Which reading's assessment of this standing arrangement is structurally sound?",
+      "resolution_mechanism": "Each reading's ε derives from its own normative framework (justice, efficiency, ecological limits). The readings are not competing empirical claims — they are different commitments to which normative dimension matters most. No single omega resolves this; the question marks the irreducible contest.",
+      "impact": "This omega documents that THIS constraint (mitigation_priority) is one reading of a kernel, not a universal fact. The ε=0.68 is valid WITHIN the mitigation-priority normative frame (intergenerational justice is primary; extraction is justified). Sibling readings would author different ε values for the same standing arrangement. The constraint family emerges from this irreducible reading contest.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The mitigation-priority reading is one normative commitment among contested alternatives; its ε is reading-indexed."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The mitigation-priority reading of the climate response obligation asserts that intergenerational justice requires rapid decarbonization to prevent future harm, even at substantial cost to current workers, fossil capital, and Global North economies. The standing arrangement under assessment is the global response to climate change — the set of policies, investments, and regulatory frameworks that determine emissions reductions and climate adaptation. This constraint evaluates that arrangement through the lens of mitigation-priority normative commitments: that future generations are primary beneficiaries (their welfare depends on warming prevention), that current generations are payers (they bear transition costs), and that the Global North bears disproportionate burdens due to historical responsibility. The constraint is CLAIMED as tangled_rope (real coordination problem solved, but asymmetric extraction from payers) while authored metrics reflect substantial extractiveness (0.68), high suppression (0.71), and moderate theater (0.42) — indicating active enforcement machinery defending the obligation against alternatives.",
+    "key_agents": [
+      "Future generations: primary beneficiary, voiceless, trapped in consequence of current emissions policy",
+      "Climate-vulnerable populations (Global South): immediate beneficiary, constrained, bears costs of both mitigation and adaptation failure",
+      "Current-generation workers (fossil fuel dependent): primary payer, constrained by labor-market immobility, bears transition cost asymmetrically",
+      "Fossil fuel capital: powerful payer, faces stranded assets, constrained exit due to policy lock-in",
+      "Global North governments: institutional agenda-setter, bears pressure from all seats, faces cost-shifting tension",
+      "Climate advocacy movements: organized agenda-setter, articulates intergenerational justice frame, mobilizes political pressure",
+      "Adaptation-priority and degrowth advocates: excluded from dominant policy forums, hold contested alternative readings"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.48 (early interval, mitigation optional and marginal) to 0.68 (mature interval, mitigation mandatory and locked-in), plateauing as policy crystallizes and becomes path-dependent. This rise tracks the constraint's hardening from aspirational commitment (Paris Agreement early years) to enforcement regime (carbon pricing, phase-outs, grid mandates, stranded-asset litigation). Suppression is initially lower (0.54) because fossil interests can still lobby and delay; it rises to 0.71 as the mitigation frame becomes institutionalized in courts, regulatory bodies, and investment mandates — alternative readings (adaptation, degrowth) are increasingly sidelined rather than openly debated. Theater is moderate throughout (0.25–0.42) because genuine coordination benefits exist (global emissions reduction is a real collective-action problem), but a growing share of enforcement energy goes toward suppressing fossil alternatives rather than solving the underlying climate coordination itself — the ratio rises from 0.25 (mostly functional) to 0.42 (substantial performative maintenance of the mitigation-only frame against alternatives). The time-series plateaus around t=25 as the constraint matures into institutional form: extractiveness stabilizes because payers are locked in, suppression stabilizes because alternatives are normatively marginalized, theater stabilizes because the mitigation frame is now the unquestioned default.",
+    "perspectival_gap": "The agenda-setter seats (advocacy movements, national governments, international bodies) experience the constraint as legitimate collective action solving a genuine coordination problem — future generations depend on mitigation, vulnerable populations need prevention, the global North has historical responsibility to lead. The payer seats (current workers, fossil capital) experience it as extraction imposed without their negotiation or consent: workers face job loss for a benefit they will not directly consume; fossil capital faces value destruction without compensation; Global North governments face unilateral burden while emerging economies argue for development rights. The beneficiary seats (future generations, vulnerable populations) experience voicelessness — they cannot negotiate terms, only receive what current majorities decide to give them. This perspectival divergence is structural, not eliminable by better communication: the mitigation-priority frame genuinely excludes the adaptation and degrowth readings from high-stakes forums, and workers/capital genuinely bear costs that future beneficiaries cannot reciprocate.",
+    "directionality_logic": "Future generations and vulnerable populations are full beneficiaries (d ≈ 0.0 in the mitigation frame) — they receive substantial welfare improvement (reduced catastrophic warming), bear no decision-making costs, and have trapped exit (cannot decline the benefit). Current workers are targets (d ≈ 0.8–0.9) — they pay through job loss and retraining burdens, have constrained exit (cannot easily retrain or relocate), and the constraint's benefits accrue to voiceless future agents they cannot negotiate with. Fossil capital is a high-d target (d ≈ 0.85) — it bears stranded-asset costs, has constrained exit (cannot accelerate extraction enough to recover assets before phase-out), and cannot fully exit the jurisdiction where mitigation policy applies. Global North governments sit near middle (d ≈ 0.55–0.65) — they benefit from reduced climate risk and moral-leadership legitimacy, but pay through political cost (worker discontent), investment burden, and comparative disadvantage if other nations delay. Advocacy movements have near-zero directionality (d ≈ 0.05) — they benefit from policy alignment without bearing transition costs. The engine derives these d values from beneficiary/victim declarations and exit options; the divergence produces per-seat classifications that should show tangled-rope for beneficiary seats (real coordination with side benefits) and snare-approaching for victim seats (extraction with minimal coordination benefit).",
+    "mandatrophy_analysis": "The mitigation-priority reading runs a mandatrophy risk: if the founding problem (need for rapid decarbonization) becomes obsolete while the constraint persists, the arrangement would shift from justified extraction (current payers bear costs for real future benefit) to zombie extraction (the constraint persists from institutional inertia, not because the founding coordination problem is live). Scenarios triggering this risk: (1) carbon-removal technology breakthrough making rapid emission cuts unnecessary — then the mitigation obligation becomes an artifact; (2) observed climate tipping points causing adaptation-focused response (spending shifts from prevention to resilience) — the mandate for preventing harm is retroactively invalidated; (3) political shift toward degrowth, making mitigation-within-growth obsolete as a frame — the constraint's legitimacy dissolves in favor of the degrowth reading. Current status: founding problem is CONTESTED (not unanimously live, not universally dead), which is why the mitigation reading itself is contested. The constraint avoids classical mandatrophy because the founding problem's urgency is still disputed; a consensus shift (either toward adaptation being sufficient or toward degrowth being necessary) would flip the status to 'dead' and activate mandatrophy signals.",
+    "kernel_context": "This constraint instantiates the mitigation-priority reading of the climate_response_obligation kernel. The kernel is contested across three readings: (1) mitigation_priority (THIS reading): rapid decarbonization prevents future harm, justifying current costs as intergenerational justice; (2) adaptation_priority: 2–3°C warming is inevitable and locked-in; mitigation is too costly; invest in resilience instead; (3) degrowth_reading: mitigation within growth is structurally impossible; only material reduction can meet planetary boundaries. Each reading assesses the same standing arrangement (global climate response policy) but anchors extractiveness to different normative commitments. Mitigation-priority prioritizes harm prevention and intergenerational justice; adaptation-priority prioritizes near-term efficiency; degrowth-priority prioritizes ecological stability. The readings coexist in contemporary discourse as live alternative positions held by different policy communities, research traditions, and political movements — none logically forecloses the others, but each creates structural pressure on the others (e.g., IPCC consensus for mitigation marginalizes adaptation and degrowth advocates in policy forums)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_response_obligation__adaptation_priority",
+      "climate_response_obligation__degrowth_reading"
+    ],
+    "dual_formulation_note": "The climate_response_obligation kernel decomposes into three structurally distinct constraints corresponding to three contested readings: mitigation_priority (prevent future harm through rapid decarbonization, ε=0.68), adaptation_priority (accept warming, invest in resilience, ε estimated lower ~0.35–0.45), degrowth_reading (reduce material throughput, ε estimated higher ~0.75–0.82). Each reading has different beneficiary/victim structures, different founding problems, and different normative grounds. The readings are linked via network.affects_constraints to show family membership; they are separate stories because their ε values differ structurally (not just observationally) based on which normative frame is primary. No single constraint can model the contest; the constraint family preserves the irreducible pluralism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ],
+  "gain_flow": "climate_advocacy_movements",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "adaptation_priority",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "degrowth_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_prevention_through_mitigation_primary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "intergenerational_justice_requires_minimizing_warming",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "precaution_and_obligation_to_future",
+    "drift_state": {
+      "moment": "contemporary_climate_emergency_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "climate_response_obligation__adaptation_priority",
+      "climate_response_obligation__degrowth_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

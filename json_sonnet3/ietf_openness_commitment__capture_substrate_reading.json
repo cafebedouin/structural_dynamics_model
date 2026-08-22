@@ -1,0 +1,334 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__capture_substrate_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "e12065d2-c38e-4a28-981b-71a547ad45a5"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IETF Openness Commitment — Capture Substrate Reading",
+    "topic_domain": "technology_governance/internet_standards/institutional_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_platform_operators",
+      "major_browser_vendors",
+      "well_resourced_standards_delegations"
+    ],
+    "victims": [
+      "small_implementers",
+      "independent_developers",
+      "end_users_of_proprietary_extensions"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "large_platform_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Send large, well-funded delegations to working groups, author the reference implementations that de facto define ambiguous spec language, and can afford to sit through years of rough-consensus process. Ships proprietary extensions ahead of ratification, then leverages market share to have those extensions retroactively treated as the practical standard. Can walk away from any single working group and still shape the outcome through implementation dominance."
+    },
+    {
+      "name": "major_browser_vendors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Co-chair working groups, control editor pens on key drafts, and use engineering headcount to out-participate smaller stakeholders in mailing-list volume and interim meetings, where rough consensus is read from who is still in the room at the end. Their extensions become normative through deployment before the RFC is final."
+    },
+    {
+      "name": "well_resourced_standards_delegations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Corporate standards teams paid to attend every meeting, track every draft, and file comments at volume. Their persistence advantage lets them steer specification language toward interfaces that favor their existing infrastructure, without needing to win an up-or-down vote — attrition of opposing volunteers does the work."
+    },
+    {
+      "name": "small_implementers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build products against the nominal open standard but discover interoperability gaps only closed by implementing the dominant vendor's undocumented or late-published extensions. Cannot staff standing delegations or attend every interim call, so their objections arrive after rough consensus has already formed around the resourced parties' preferred text. Exit means noncompliance with the de facto standard, which means losing customers."
+    },
+    {
+      "name": "independent_developers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Volunteer or lightly-funded participants who join working groups on their own time. Their technical objections are procedurally welcome but practically outlasted: the process rewards whoever can keep showing up, and they cannot match institutional attendance over multi-year standardization cycles. Their names appear in the RFC acknowledgments; the substantive interface choices do not reflect their input."
+    },
+    {
+      "name": "end_users_of_proprietary_extensions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Use products built on the extended, non-portable protocol variants without knowing the underlying specification has forked from the nominal open standard. Bear switching costs and lock-in effects created by extensions marketed as compliant with the open standard. Have no seat in the standards process at all."
+    },
+    {
+      "name": "ietf_secretariat",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers the rough-consensus process, publishes RFCs, and defends the legitimacy of the procedure itself. Has no mechanism to weigh participation by resource level rather than by presence, and no enforcement power over post-ratification extension behavior by vendors who shipped ahead of the spec."
+    },
+    {
+      "name": "smaller_national_and_regional_isps",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Would want interoperability guarantees strong enough to prevent vendor lock-in on infrastructure equipment, but rarely have delegations in the room where interface details are actually settled. Their interests are represented, if at all, secondhand through industry associations dominated by the same large vendors."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Genuinely solves the problem of needing a shared, documented interface so that independently built implementations of a network protocol can interoperate without bilateral negotiation between every pair of vendors.",
+    "transfer_function": "Moves de facto standard-setting authority from the nominal open, rough-consensus process to whichever parties can sustain the longest, best-staffed presence in working groups and ship extensions fastest — and moves switching costs and compatibility risk onto implementers and users who adopt the nominal standard in good faith.",
+    "absent_voices": "Smaller ISPs, end users, and volunteer developers rarely have a seat proportional to their stake; their objections, when raised, arrive after resourced parties have already achieved rough consensus through attrition. Public comment periods exist procedurally but do not reweight influence toward the underrepresented.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "The large platform operators would say the open process would be replaced by ad hoc bilateral agreements or a closed consortium model — arguably worse for openness. Small implementers and independent developers would say removing the current process's capture dynamics (without removing the process itself) would restore genuine rough consensus and they would gain a proportionate voice they currently lack. The dispute is over whether the capture is intrinsic to the process or an add-on distortion of it.",
+    "founding_problem": "Early internet protocol fragmentation threatened basic interoperability — competing vendors each building incompatible network stacks would have balkanized the network before it could achieve scale.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Large platform operators and browser vendors attest the founding problem remains live and that their participation is exactly the technical contribution the process was designed to solicit. Independent researchers studying standards-body capture (documented in academic STS literature on IETF/W3C participation asymmetry) and smaller-ISP industry associations attest that the interoperability problem is largely solved at the base-protocol layer and that ongoing struggle is now chiefly over extension-layer control, which the original founding problem does not justify."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story reads the IETF's openness commitment — rough consensus, running code, open participation — as a coordination substrate that has been structurally captured: the same procedural openness that once neutralized vendor gatekeeping now functions as the medium through which resource advantage is encoded into technical outcomes. Large platform operators and browser vendors do not need to break the rules; sustained attendance, editor-pen control, and pre-ratification shipping of extensions let them win rough consensus through attrition and fait accompli, while small implementers and end users absorb the resulting interoperability gaps and lock-in. This is the capture_substrate_reading of the ietf_openness_commitment kernel — a sibling commons_stewardship_reading treats the same process as public infrastructure with negligible extraction, and a sibling legitimacy_erosion_reading treats the rough-consensus mechanism itself, rather than its capture, as the contested object. All three share the same kernel (the openness commitment) but author different epsilon, different beneficiary/victim structures, and different classifications from it.",
+    "key_agents": [
+      "large_platform_operators: Primary beneficiary (institutional/arbitrage) — shapes specification language through sustained presence and pre-ratification extension shipping",
+      "major_browser_vendors: Co-beneficiary and agenda-setter (institutional/arbitrage) — controls editor pens and interim-meeting cadence",
+      "small_implementers: Primary target (powerless/constrained) — bears interoperability gaps closed only by adopting dominant vendors' extensions",
+      "independent_developers: Secondary target (powerless/trapped) — outlasted procedurally despite formal welcome",
+      "end_users_of_proprietary_extensions: Diffuse target (powerless/trapped) — bears lock-in costs with no standards-process seat at all",
+      "ietf_secretariat: Analytical/administering observer (institutional/analytical) — defends process legitimacy but has no lever over post-ratification vendor extension behavior"
+    ],
+    "logic_rationale": "Extractiveness is authored at a moderate 0.58 (rising from 0.34) because the coordination function is genuinely real — a documented shared interface is worth having — but is increasingly ridden by resource-based extraction: the same working-group seat is open to all in form and closed to most in practice. Suppression sits at 0.52 because exclusion here operates less through explicit coercion than through attrition economics (whoever can staff the meetings wins), which is real suppression but structurally softer than an outright exclusionary rule. Theater ratio rises to 0.44 reflecting the growing gap between the process's stated openness (public mailing lists, published minutes, comment periods) and its actual capacity to reweight influence toward underrepresented stakeholders — public participation increasingly documents decisions already settled elsewhere.",
+    "directionality_logic": "Large platform operators and major browser vendors are coded as structural beneficiaries with arbitrage-grade exit: they can walk from any specific working group and still shape outcomes through deployed market share, so directionality sits near the full-beneficiary end even though they are formally 'just participants.' Small implementers, independent developers, and end users are coded as targets: constrained-to-trapped exit options mean they cannot avoid the extension-layer costs the substrate produces even when they recognize them. The ietf_secretariat is analytical/institutional but structurally distinct from the vendor beneficiaries — it administers the substrate without capturing its rents, which is why it is not listed as a beneficiary despite institutional power.",
+    "perspectival_gap": "From the large platform operator seat, this reads as legitimate technical leadership rewarded by sustained investment in the commons — the engine should compute something closer to rope or scaffold from that structural position given their exit options. From the small-implementer and end-user seats, the same substrate computes as extractive: real costs, no proportionate voice, exit blocked by lock-in. The tangled_rope claim is authored because both a genuine coordination function (interoperability) and asymmetric extraction (resource-weighted capture of extension-layer decisions) are simultaneously present and load-bearing — removing either the coordination story or the extraction would misdescribe the structure.",
+    "mandatrophy_analysis": "The founding problem (protocol fragmentation) is genuinely dead at the base-protocol layer for mature protocols, but the process's mandate has migrated to extension-layer governance without an equivalent reckoning — this is a mandatrophy-adjacent pattern where the original coordination justification is quietly reused to legitimate a different, more extractive activity (extension-layer gatekeeping) than the one it was built to solve. Classifying as tangled_rope rather than snare preserves the fact that base-layer interoperability coordination is real and worth crediting, while the victims and enforcement requirement flag the extension-layer capture as a distinct, additional extractive layer riding on top of it.",
+    "kernel_context": "This is the capture_substrate_reading of the ietf_openness_commitment kernel. It reads the standards process's openness as the vector through which resource advantage becomes encoded gatekeeping — the constraint under contest is the current, resource-skewed operation of rough consensus, not an idealized alternative. Sibling readings: commons_stewardship_reading treats the same kernel as public infrastructure with negligible extraction (mountain/rope-flavored, near-zero epsilon by that reading's own lights); legitimacy_erosion_reading treats the rough-consensus mechanism's vulnerability to capture, independent of whether capture has actually occurred, as the contested object (a more conceptual/procedural-integrity framing). All three share the founding text and institutional lineage of the IETF but author distinct epsilon and distinct victim/beneficiary sets, per the epsilon-invariance principle."
+  },
+  "omegas": [
+    {
+      "id": "capture_intrinsic_or_incidental",
+      "question": "Is resource-weighted capture of the extension layer an intrinsic property of rough-consensus process design, or an incidental distortion introduced by scale and commercial stakes that a reformed process could correct?",
+      "resolution_mechanism": "Comparative study of standards bodies with different participation-weighting rules (e.g., W3C's formal member-organization structure vs. IETF's individual-participation model) against measured extension-layer capture rates, controlling for market concentration in the covered technology.",
+      "impact": "If intrinsic, the tangled_rope classification is stable and structural reform must change the coordination mechanism itself; if incidental, targeted reforms (funded travel for underrepresented implementers, weighted comment periods) could shift the constraint back toward rope without abandoning rough consensus.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether capture is a design-intrinsic feature of rough consensus or a correctable distortion."
+    },
+    {
+      "id": "kernel_reading_disagreement_locus",
+      "question": "This constraint is one reading (capture_substrate_reading) of the shared ietf_openness_commitment kernel; the commons_stewardship_reading and legitimacy_erosion_reading are separate constraints instantiating the same kernel differently. Where exactly does the disagreement between readings live — in the facts about who currently benefits, in the normative weight given to procedural openness versus outcome equity, or in whether 'capture' versus 'legitimate technical leadership' is even a fact-of-the-matter question?",
+      "resolution_mechanism": "Structured elicitation across the three reading-communities (documented in STS and internet-governance literature) asking each to identify which specific claims (empirical vs. normative vs. definitional) they would revise if shown counter-evidence; map disagreement to claim-type.",
+      "impact": "If the disagreement is chiefly empirical (about actual influence distribution), it is resolvable by participation-weighted outcome audits. If chiefly normative (about what counts as legitimate influence), no audit resolves it and the three readings persist as genuinely coexisting framings, which is the expectation this story's cs_structure.reading_relations encodes.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Locating whether the kernel's sibling readings disagree on facts, values, or definitions."
+    },
+    {
+      "id": "extension_ratification_lag_measurement",
+      "question": "What is the actual time lag between a dominant vendor shipping a proprietary extension and that extension either being ratified into the formal standard or displaced by an alternative, and does that lag correlate with vendor market share at time of shipping?",
+      "resolution_mechanism": "Empirical audit of RFC history against product-release timelines for a sample of contested extensions (e.g., HTTP/2 push, various WebRTC extensions), correlating lag and outcome with the shipping vendor's market position.",
+      "impact": "A strong correlation between market share and successful post-hoc ratification would sharpen the extractiveness measurement and support raising it further in a future revision; a weak correlation would suggest the current 0.58 authored value overstates capture relative to genuinely merit-based adoption.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether market share predicts extension ratification success, which would corroborate or undercut the capture-substrate claim."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "ietf_openness_commitment__commons_stewardship_reading",
+      "ietf_openness_commitment__legitimacy_erosion_reading"
+    ],
+    "dual_formulation_note": "This story is one of three constraints instantiating the shared ietf_openness_commitment kernel, decomposed per the epsilon-invariance principle: commons_stewardship_reading authors the same standards process as low-extraction public infrastructure (near-mountain/rope, epsilon low by that reading's lights); legitimacy_erosion_reading authors the rough-consensus mechanism's vulnerability to capture as the contested object independent of whether capture is presently occurring (a more procedural/conceptual framing, likely scaffold or piton-adjacent depending on remedial mechanisms in place); this capture_substrate_reading authors moderate-to-substantial extraction (0.58) flowing specifically from resource-asymmetric participation translating into extension-layer gatekeeping, classified as tangled_rope. All three share the founding text, institutional lineage, and procedural kernel of the IETF but diverge in beneficiary/victim structure and epsilon, and are linked here rather than merged into one story with a measurement parameter."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "rough_consensus_running_code_egalitarian_participation",
+    "drift_state": {
+      "moment": "post_platform_consolidation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "commons_stewardship_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legitimacy_erosion_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "formal_openness_insufficient_absent_resource_parity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "sustained_participation_capacity_functions_as_de_facto_authority",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "large_platform_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

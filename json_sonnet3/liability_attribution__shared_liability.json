@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__shared_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "f0d3b412-91d5-4351-98a4-41b95ebf2b13"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.47,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Value-Chain Joint Liability Apportionment Regime",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "insurance_and_indemnification_industry",
+      "large_integrated_platform_firms",
+      "regulatory_agencies_seeking_coverage"
+    ],
+    "victims": [
+      "model_developers",
+      "downstream_deployers",
+      "injured_end_users"
+    ],
+    "vindicated_propositions": [
+      "causal_contribution_apportionment_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "model_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build and train the underlying models, retaining architectural knowledge no downstream party can fully audit. Under shared liability they face open-ended exposure proportional to a contested 'causal contribution' finding, decided case by case, and must now carry contractual indemnification clauses and liability insurance premiums that scale with how opaque their systems remain to the parties they sell to."
+    },
+    {
+      "name": "downstream_deployers",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Configure, fine-tune, and put the model into a specific operational context, exercising real control over deployment decisions but limited visibility into the base model's internals. They negotiate contractual risk allocation with developers and often win favorable indemnification terms because they hold the contracting leverage at the point of sale, while still bearing liability for their own deployment choices."
+    },
+    {
+      "name": "injured_end_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Suffer concrete harm from a system's output or failure and must now litigate a two-or-more-party causal apportionment fight to be made whole, since no single party is designated as the clear defendant. They bear the delay, discovery cost, and evidentiary burden of proving which upstream or downstream actor's contribution and control caused the harm."
+    },
+    {
+      "name": "insurance_and_indemnification_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Underwrites the liability exposure created by apportionment uncertainty, pricing policies on both developer and deployer books. The very ambiguity that burdens the other parties is the raw material of this seat's revenue: more uncertainty about causal shares means more demand for indemnification products and higher premiums."
+    },
+    {
+      "name": "large_integrated_platform_firms",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate as both developer and deployer under one corporate roof, capturing the coordination benefit of internal risk allocation (no arm's-length contract needed) while smaller single-role firms must negotiate indemnification terms externally at a disadvantage. Their scale lets them absorb litigation cost that would sink a smaller developer or deployer."
+    },
+    {
+      "name": "regulatory_agencies_seeking_coverage",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adopted the shared-liability framework because it lets them avoid picking a single politically costly loser (developers or deployers) and instead defers hard allocation questions to case-by-case adjudication and private contract. They gain the appearance of comprehensive coverage without having to specify a bright-line rule."
+    },
+    {
+      "name": "small_independent_developers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Lack the scale to self-insure or to negotiate favorable indemnification terms with larger deployers, and are rarely consulted when the apportionment standards or model liability legislation is drafted. They would argue for a bright-line developer-liability-capped regime but are not represented in the standard-setting bodies that produced the joint framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Distributes the cost of AI-caused harm across every party that materially contributed to or controlled the harmful outcome, rather than forcing courts to pick one dispositive cause in a multi-actor causal chain where responsibility is genuinely distributed.",
+    "transfer_function": "Moves litigation risk, insurance premiums, and indemnification-negotiation cost from injured end users (who would otherwise have to prove which single party is liable) onto developers and deployers jointly, and moves risk-pricing revenue to the insurance and indemnification industry that prices the resulting uncertainty.",
+    "absent_voices": "Small independent developers and individual end users are rarely present when apportionment standards, model liability legislation, or safe-harbor contractual templates are drafted; large integrated firms and insurers dominate the standard-setting process and shape the causal-contribution tests to their own risk profile.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If joint liability apportionment disappeared, courts would revert to single-defendant doctrines (either strict developer liability or strict deployer liability per the sibling readings), indemnification markets built around apportionment uncertainty would collapse or reprice sharply, and large integrated firms would lose the internal-allocation advantage that comes from spanning both roles under one liability regime.",
+    "founding_problem": "AI system failures often result from a genuine combination of upstream model defects and downstream deployment/configuration choices, and neither pure developer liability nor pure deployer liability accurately tracked causal responsibility in multi-actor harm chains.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Some plaintiff-side litigators and academic tort scholars outside the regulated industries corroborate that genuinely mixed-causation harms exist and need apportionment; but small developers and consumer advocates argue the 'causal contribution' standard as currently operationalized has drifted from tracking actual causation toward tracking which party has the contracting leverage to shift cost onto the other, which is not attested by any party outside the developers, deployers, and insurers who negotiate the allocation."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.47
+    }
+  ],
+  "commentary": {
+    "narrative_context": "As AI systems moved from research artifacts to deployed commercial infrastructure, courts and legislators faced harm scenarios where neither the model developer nor the deploying organization was the sole proximate cause: a foundation model with a latent defect combined with a deployer's negligent fine-tuning or misuse-enabling configuration. The shared-liability reading of the liability_attribution kernel resolves this by apportioning responsibility across the value chain according to causal contribution and control, rather than assigning liability categorically to one role. This produces a genuine coordination function (multi-actor harms get multi-actor remedies) but the apportionment standard itself becomes a site of extraction: large integrated firms and the insurance industry that prices apportionment uncertainty benefit from the ambiguity, while small developers, resource-constrained deployers, and injured end users bear the coordination cost of a fact-intensive, expensive, unpredictable allocation process.",
+    "key_agents": [
+      "model_developers: primary target, retain architectural opacity, bear open-ended contribution-proportional exposure",
+      "downstream_deployers: dual-positioned, exercise deployment control and negotiate contractual risk-shifting from a position of relative leverage",
+      "injured_end_users: primary target, bear the evidentiary and delay cost of proving apportionment in a system they did not build or configure",
+      "insurance_and_indemnification_industry: structural beneficiary, monetizes the very uncertainty the regime creates",
+      "large_integrated_platform_firms: structural beneficiary via internal role-spanning that avoids arm's-length contracting friction",
+      "regulatory_agencies_seeking_coverage: beneficiary of political cover, avoids the harder single-party allocation choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58) reflects a middle position between the sibling readings: it is lower than a pure-target regime would show for either developers or deployers alone, because responsibility genuinely is shared, but it rises over the measured interval as apportionment litigation matures into a predictable cost center that indemnification markets learn to price and pass through disproportionately to less-resourced parties. Suppression (0.47) is moderate — no party is forcibly denied recourse, but the fact-intensive causal-contribution standard functions as a de facto barrier for parties who cannot afford protracted multi-party litigation. Theater ratio (0.32) captures that a meaningful share of apportionment activity is genuine causal fact-finding, but a growing share is defensive documentation and indemnification-clause drafting whose real function is risk-shifting rather than harm prevention.",
+    "directionality_logic": "Developers and deployers are both declared victims because the joint framework's expected structural delta places both parties in the payer role — this is the reading's defining feature relative to its siblings. Injured end users are also victims: shared liability, intended to help them by covering multi-actor harms, in practice imposes a heavier proof burden than a single clear defendant would. Insurers, integrated platform firms, and regulators are beneficiaries because ambiguity itself is their resource: insurers price it, integrated firms internalize it away, and regulators are spared a politically costly single-target rule.",
+    "mandatrophy_analysis": "The founding problem — genuinely mixed-causation harm — remains partly live (contested status), which prevents outright dismissal of the regime as pure extraction. But the corroboration record shows the operationalized 'causal contribution' standard has drifted toward tracking contracting leverage rather than actual causation, which is the seam the tangled_rope classification is built to hold open: real coordination function, real asymmetric extraction, both present simultaneously, requiring active enforcement (courts, contract law, insurance underwriting) to sustain.",
+    "perspectival_gap": "From the regulatory agency and insurance seats, shared liability looks like a sophisticated, comprehensive coordination mechanism that finally matches legal responsibility to the multi-actor reality of AI harm. From the small developer and injured end-user seats, the same apportionment machinery looks like a mechanism that converts a hard allocation question into an expensive, leverage-driven negotiation that structurally favors whichever party can afford the litigation and insurance markets built around it.",
+    "kernel_context": "This story instantiates the shared_liability reading of the liability_attribution kernel. Two sibling readings exist as separate constraints: developer_liability (developers bear primary liability as creators of the underlying capability) and deployer_liability (deployers bear primary liability via deployment context control). Unlike those readings, shared_liability places BOTH developers and deployers in the victim set simultaneously, and introduces a third structural feature neither sibling has: an insurance/indemnification market that monetizes apportionment uncertainty itself. The ε referent here is the standing joint-liability arrangement as currently operationalized, not an idealized bright-line-free apportionment regime."
+  },
+  "omegas": [
+    {
+      "id": "causal_contribution_standard_capture",
+      "question": "Has the 'causal contribution and control' apportionment standard, as applied in practice, come to track actual causal responsibility, or has it drifted toward tracking which party holds superior contracting leverage at the point of sale?",
+      "resolution_mechanism": "Longitudinal analysis of apportionment outcomes and contractual indemnification terms across a sample of adjudicated and settled AI harm cases, comparing outcomes to independent technical assessments of actual causal contribution.",
+      "impact": "If the standard tracks leverage rather than causation, the shared_liability reading is closer to a snare wearing a tangled_rope's coordination story; if it tracks genuine causal contribution, the tangled_rope classification is well-grounded.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether apportionment outcomes track causation or contracting leverage."
+    },
+    {
+      "id": "kernel_reading_selection_pressure",
+      "question": "Is the shared_liability reading itself durable, or does it function as a transitional compromise that will collapse toward one of the sibling readings (developer_liability or deployer_liability) once enough case law and legislative clarity accumulates?",
+      "resolution_mechanism": "Track whether jurisdictions adopting shared_liability frameworks show convergence toward de facto primary-party rules over a 10-15 year horizon, versus stable multi-party apportionment persisting as the equilibrium.",
+      "impact": "If shared_liability is transitional, it more closely resembles a scaffold whose true justification is providing time for causal-attribution technology and case law to mature, not a steady-state coordination mechanism.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether shared liability is a stable equilibrium or a transitional compromise between the sibling readings."
+    },
+    {
+      "id": "insurance_market_extraction_share",
+      "question": "What share of the premium revenue collected by the indemnification/insurance industry reflects genuine risk-pooling value versus rent extracted from the apportionment ambiguity that the industry has an interest in preserving?",
+      "resolution_mechanism": "Compare loss ratios and premium growth in AI liability insurance products against the growth rate of apportionment litigation complexity and settlement unpredictability over the same period.",
+      "impact": "A high extraction share would strengthen the case that insurers are a structural beneficiary with an active interest in preserving ambiguity rather than a neutral risk-pooling intermediary.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether insurance premiums reflect genuine risk-pooling or rent extraction from preserved ambiguity."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__developer_liability",
+      "liability_attribution__deployer_liability"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the liability_attribution kernel. developer_liability and deployer_liability each place a single role-category in the primary-liability position; shared_liability instead places both developers and deployers in the victim set jointly, introduces coordination costs, and creates an insurance/indemnification market absent from either single-party reading. All three share the same underlying contested kernel (who bears liability for AI-caused harm along the value chain) but instantiate structurally distinct constraints with distinct beneficiary/victim sets and distinct epsilon values — they are linked, not merged."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "deployer_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liability_should_track_causal_contribution_not_role_category",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "multi_actor_harm_requires_multi_actor_remedy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "mixed_causation_multi_actor_harm_model",
+    "drift_state": {
+      "moment": "post_indemnification_market_maturation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

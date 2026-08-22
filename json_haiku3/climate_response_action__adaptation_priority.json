@@ -1,0 +1,596 @@
+{
+  "header": {
+    "constraint_id": "climate_response_action__adaptation_priority",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "9c54a30b-4579-4620-92b5-074f84932863"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Climate Adaptation-Priority Response Framework",
+    "topic_domain": "climate_policy/political_economy/intergenerational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_income_nations",
+      "adaptive_infrastructure_contractors",
+      "climate_finance_intermediaries"
+    ],
+    "victims": [
+      "low_income_nations",
+      "climate_vulnerable_populations",
+      "future_generations_under_warming"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_income_nations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set climate policy toward adaptation as primary response, framing inevitable warming as requiring infrastructure and financial instruments. Control multilateral development bank boards and climate finance channels. Benefit from positioning adaptation finance as requiring technological solutions (dams, coastal barriers, insurance products) in which they have supply and service advantages. Avoid the domestic emissions reductions and economic restructuring that mitigation or degrowth would mandate."
+    },
+    {
+      "name": "low_income_nations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Must adapt to climatic impacts on agricultural systems, freshwater, and coastal settlements with limited fiscal capacity. Expected to raise $350B annually (the financing gap) from domestic budgets or concessional loans when high-income nations contributed to atmospheric CO2 and promised climate finance never materializes at the scale committed. Adaptation investments crowd out health, education, and poverty reduction. Warming accepted as inevitable under this reading means they bear adaptation costs while mitigation (which would reduce future warming) is deferred."
+    },
+    {
+      "name": "climate_vulnerable_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Indigenous communities, subsistence farmers, small-island dwellers, coastal poor. Adaptation infrastructure is designed at national or regional scales; protection disparities emerge between wealthy urban centers and rural/informal settlements. Identity is geographically rooted (small-island nationality, pastoral livelihoods). Cannot exit because exit means abandoning livelihoods, ancestral lands, and cultural identity. Carry the costs of adaptation failures (climate migration, displacement, livelihood collapse) while high-income nations' adaptation preserves comfortable living standards."
+    },
+    {
+      "name": "adaptive_infrastructure_contractors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "International engineering firms, construction companies, and technology vendors (coastal barrier manufacturers, flood management systems, precision agriculture suppliers). Adaptation spending creates a $540B+ annual market. Benefit from contracts for resilience infrastructure, climate-proof buildings, and water management systems. Operate globally; project-by-project mobility means they absorb no long-term risk of adaptation failure in any given jurisdiction."
+    },
+    {
+      "name": "climate_finance_intermediaries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Multilateral Development Banks, bilateral aid agencies, green investment funds, carbon credit traders. Channel adaptation finance and collect administrative fees, intermediation margins, and interest on concessional loans. Adaptation-priority framing sustains their institutional role and budget justification. Growth of adaptation finance expands their mandate and fiscal base. Operate at arm's length from outcomes (if adaptation fails, the borrowing nation is blamed; if adaptation succeeds, the intermediary claims credit)."
+    },
+    {
+      "name": "future_generations_under_warming",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Born into a higher-warming world because this reading accepts temperature rise as inevitable and defers emissions reductions. Adaptation can slow some impacts but cannot prevent: sea-level rise exceeding protection timescales, ecosystem collapse, agricultural productivity decline, and compound extremes. They inherit depleted natural systems (aquifer depletion through adaptation irrigation, forest cleared for adaptive agriculture) and a climate baseline requiring continuous, expensive adaptation to maintain 1990s-baseline human welfare. Cannot exit because they have no pre-warming world to return to."
+    },
+    {
+      "name": "mitigation_priority_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Scientific bodies (IPCC, climate research institutions), some environmental movements, and nations committed to net-zero-by-2050 targets. Would argue that accepting temperature rise as inevitable is self-fulfilling and forecloses the emissions-reduction pathway that would minimize adaptation need. Excluded from high-income policy boards where adaptation-priority framing is established as operational doctrine; their input is solicited on technical questions ('how high can we go?') but not on strategic direction ('should we accept warming as inevitable?')."
+    },
+    {
+      "name": "degrowth_transformation_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Academics, policy networks, and movements arguing that climate response requires structural economic contraction in high-income nations and resource-use reduction globally. Would argue that adaptation-priority and mitigation-priority are both high-consumption framings: both assume capacity to invest billions in infrastructure. Excluded from high-income policy boards; their analysis appears in journal articles and NGO reports but does not shape state-level climate policy."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structure: how adaptation-priority framing solves the coordination problem of resource allocation (who pays, who decides, who benefits) by naturalizing temperature rise and converting climate response into a finance and infrastructure question rather than a production/consumption question. Observes that the arrangement is enforced through control of multilateral development bank voting, climate finance channel design, and the exclusion of alternative framings from policy boards."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates global climate response resources to adaptation infrastructure and capacity-building: coordinating investment in flood management, drought-resistant agriculture, cooling systems, and insurance mechanisms. Establishes a framework for channeling climate finance through multilateral institutions with standardized project criteria, reducing transaction costs and enabling large-scale investment.",
+    "transfer_function": "Moves capital and labor from high-income-nation treasuries and private capital markets toward infrastructure contracts in vulnerable regions, channeled through multilateral development banks and bilateral aid agencies. Moves debt from vulnerable nations to international creditors (in the form of concessional loans for adaptation). Moves management authority over adaptation priorities from vulnerable nations to international technical committees dominated by high-income nations and their contractors.",
+    "absent_voices": "Mitigation-priority advocates and degrowth voices are structurally excluded. Mitigation advocates argue the framework forecloses emissions-reduction investment; degrowth advocates argue it presumes indefinite capital availability and avoids the consumption-reduction question. Both would change the policy architecture fundamentally; their exclusion is maintained through control of UNFCCC negotiating delegations, IPCC Working Group II framing (adaptation) vs. Working Group III (mitigation) compartmentalization, and multilateral development bank governance where voting power is proportional to capital contributions (high-income-nation-weighted).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If adaptation-priority framing and its enforcement disappeared, climate response would shift toward mitigation and emissions reduction (competing reading) or degrowth restructuring (alternative reading). The $540B annual adaptation finance would reorient toward renewable energy infrastructure, demand-side reduction, or industrial transformation in high-income nations. Vulnerable nations would face climate impacts without the adaptive infrastructure this reading funds, but also without debt obligations from concessional loans. The institutional landscape of multilateral development banks and bilateral climate finance would reorganize around different policy priorities.",
+    "founding_problem": "Atmospheric CO2 concentration is rising; warming of 1.1°C above pre-industrial has already locked in further warming to ~1.5°C; unilateral mitigation efforts are insufficient to prevent 2°C+ warming on current trajectories. Vulnerable nations and populations face imminent climate impacts (flood, drought, hurricane intensification) regardless of mitigation success. Adaptation infrastructure can reduce mortality and livelihood disruption from those inevitable impacts.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Climate research institutions (IPCC, NOAA, UK Met Office) and vulnerable-nation governments attest the founding problem is live: warming is locked in and impacts are arriving. High-income-nation governments attest adaptation is therefore necessary. Mitigation advocates and degrowth researchers attest the problem is mis-stated: the claim 'warming is inevitable' treats the current emissions trajectory as fixed when it is policy-determined; accepting inevitability is a choice, not a scientific finding. Independent researchers (Romm, Holz, climate modelers at GFDAE/Princeton) corroborate: on current policy, warming approaches 3°C and adaptation alone cannot protect vulnerable populations at that scale."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the adaptation-priority reading of the climate response kernel. It describes a policy framework that treats temperature rise as inevitable, prioritizes capital-intensive adaptive infrastructure, and channels climate response through multilateral finance institutions. The reading is not authored as a claim about climate physics (warming is factually locked in) but as a policy choice: acceptance of that warming as the operational baseline, combined with prioritization of adaptation spending over emissions reductions. This reading produces a tangled-rope structure because it solves a genuine coordination problem (allocating global adaptation resources) while extracting asymmetrically from vulnerable nations, which bear adaptation costs without having caused the emissions and face debt obligations from concessional finance. The enforcement is active because the policy framework must exclude competing framings (mitigation-priority, degrowth) from high-income policy boards and multilateral governance to remain operational.",
+    "key_agents": [
+      "High-income nations: set policy toward adaptation, control multilateral boards, benefit from infrastructure contracting",
+      "Low-income nations: face adaptation burden with limited fiscal capacity, trapped into concessional debt, excluded from policy-setting",
+      "Climate-vulnerable populations: identity-locked to place, bear protection disparities, carry costs of adaptation failure",
+      "Infrastructure contractors & finance intermediaries: benefit from $540B+ adaptation market, operate at arm's length from outcomes",
+      "Future generations: inherit higher-warming baseline and depleted adaptive capacity (aquifer depletion, forest clearance)",
+      "Mitigation and degrowth advocates: structurally excluded from policy boards, their objections not integrated into framework"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.42 to 0.68 over the interval because the financing gap ($350B annually) hardens as vulnerable nations accumulate adaptation debt and the pattern of unmet commitments becomes structural rather than accidental. Theater ratio remains low (0.12→0.28) because the adaptation projects are functionally real — dams and irrigation systems serve genuine needs — but the share of effort devoted to maintaining the policy framework (keeping mitigation off the agenda, excluding alternative framings, managing debt service) grows as resistance mounts. Suppression is moderate-to-high (0.48→0.62) because the framework relies on controlling multilateral governance structures and UNFCCC negotiation delegations; vulnerable nations cannot exit or change terms, but mitigation advocates retain scientific credibility and some institutional platforms (IPCC, universities), so suppression never reaches the near-total that a snare would require. The time grid is one shared set of time points (0, 5, 10, 15, 20, 25, 30, 40) where every metric is authored for consistency.",
+    "perspectival_gap": "Payers and beneficiaries experience this constraint in opposite modal registers. From high-income nations' and contractors' positions, adaptation-priority is a solution: it allocates responsibility (vulnerable nations adapt), distributes capital (through finance channels they control), and creates markets (infrastructure contracts). From low-income and vulnerable-population seats, the same structure is coercive: it forecloses alternative framings (mitigation, degrowth), locks them into debt, and offers protection that is unequal (wealthy cities protected, rural settlements underprotected). The engine computes this divergence from power/exit_options/directionality; the authored claim does not adjudicate it.",
+    "directionality_logic": "High-income nations are beneficiaries with institutional power and arbitrage exit (they can shift policy, change allocation, move capital). Low-income nations are victims with powerless position and trapped exit (they cannot change terms, cannot exit climate vulnerability, cannot shift to alternative responses without high-income cooperation). Climate-vulnerable populations are trapped identity-locked victims: geographic rootedness and livelihood dependence make exit tantamount to losing identity. Contractors and finance intermediaries are beneficiaries with powerful position and mobile exit (project completion ends their obligation; they operate globally). Future generations are powerless, civilizationally time-horizoned, trapped victims with universal scope — the most asymmetric position. Directionality for high-income institutional actors derives toward 0.1–0.3 (beneficiary damping); for low-income institutional actors toward 0.7–0.9 (target amplification); for powerless individuals toward 0.85+ (trapped identity-locked target maximum).",
+    "mandatrophy_analysis": "The adaptation-priority framework solves a genuine coordination problem: how to allocate finite global resources for climate response and establish legitimate decision-making authority. The mandatrophy risk is that the founding problem (climate impacts are arriving; adaptation is necessary) is conflated with a policy choice (accept warming as inevitable; prioritize adaptation over mitigation). If mitigation becomes technically feasible at lower cost than adaptation, or if political will for emissions reduction emerges, the policy framework persists anyway because the institutional infrastructure (multilateral development banks, adaptation finance channels, contractor relationships) is now lock-in. The framework prevents mandatrophy resolution by excluding the framings that would detect the shift (mitigation advocates cannot reach policy tables; if they could, they would argue that emissions reduction now costs less than adaptation and should be prioritized). The theater ratio rising from 0.12 to 0.28 marks the increasing share of effort devoted to maintaining the framework rather than functional adaptation.",
+    "kernel_context": "This constraint is the adaptation-priority reading of the climate_response_action kernel. It instantiates one policy choice from the contested set: {adaptation_priority, mitigation_priority, degrowth_transformation}. The adaptation-priority reading treats temperature rise as inevitable given current policy trajectories and prioritizes capital-intensive infrastructure response. Sibling reading mitigation_priority treats emissions reduction as the primary lever and prioritizes technology and carbon markets. Sibling reading degrowth_transformation treats structural economic contraction as necessary and prioritizes reduced resource throughput. Each reading holds a different set of axioms about what climate response requires and who should bear costs. Each reading produces different constraint types, beneficiary/victim structures, and directionality profiles. The sibling readings are separate constraint stories, not variations within this one."
+  },
+  "omegas": [
+    {
+      "id": "inevitability_vs_policy_choice",
+      "question": "Is temperature rise above 2°C an inevitable physical fact given current atmosphere composition, or a policy-choice consequence of accepting current emissions trajectories?",
+      "resolution_mechanism": "Distinguish between: (a) locked-in warming from past emissions (irreversible on decadal timescales), and (b) additional warming from future emissions (reversible by policy change). The adaptation-priority reading conflates these, treating (a)+(b) as (a)—inevitable. If policy shifts sufficiently to reduce (b) to near-zero, adaptation is still necessary for (a), but the frame of 'accepting inevitability' becomes visible as a choice rather than a constraint.",
+      "impact": "If resolved as policy-choice: the constraint shifts from mountain-like (fixed reality) toward tangled_rope or snare (enforced arrangement). Mitigation-priority framing would enter policy boards. If resolved as inevitable: the constraint's tangled_rope classification is confirmed (genuine coordination need for adaptation, but asymmetric extraction from vulnerable regions).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether 'inevitable warming' is physics or policy."
+    },
+    {
+      "id": "adaptation_sufficiency_boundary",
+      "question": "At what warming threshold does adaptation become technically or economically infeasible at the scale required to protect vulnerable populations?",
+      "resolution_mechanism": "Climate impact modeling: coral ecosystem collapse (1.5°C threshold), agricultural productivity decline (2-3°C), compound extremes frequency (3-4°C+). Adaptation cost projections at different warming levels. Field trials in adaptation-prioritizing regions: can infrastructure sustain livelihoods at 3°C+, or does adaptation fail and populations face displacement regardless?",
+      "impact": "If adaptation remains feasible to 3°C+: the adaptation-priority frame holds and vulnerable populations bear adaptation costs indefinitely. If adaptation fails at 2.5°C: the frame becomes a zombie — the founding problem (protect vulnerable populations) cannot be solved by the prescribed solution (adaptation infrastructure), and the constraint shifts toward piton (maintained for institutional inertia, not function). If adaptation fails early, mitigation or degrowth framings enter via failure-driven policy revision.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Physical and economic limits of adaptive capacity."
+    },
+    {
+      "id": "financing_gap_closure",
+      "question": "Will the $350B annual financing gap (actual vs. committed climate finance) close, or harden as a structural feature of the arrangement?",
+      "resolution_mechanism": "Track multilateral development bank disbursements, bilateral climate finance flows, and vulnerable-nation domestic adaptation spending against the UNFCCC/Paris Agreement commitments. If gap remains ~$350B for 5+ years, the gap is structural (enforcement: high-income nations are not paying). If gap narrows to <$100B, the coordination function is improving.",
+      "impact": "Structural financing gap (gap remains) → the arrangement is extractive by design: vulnerable nations are expected to fund most adaptation themselves while high-income nations retain adaptation finance control and intermediation. Closure (gap narrows) → the coordination function improves and the tangled_rope classification persists but with lower asymmetry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the financing gap is incidental or structural."
+    },
+    {
+      "id": "competing_reading_exclusion_mechanism",
+      "question": "Is the exclusion of mitigation-priority and degrowth-reading advocates from high-income policy boards maintained by structural institutions (voting power, funding control) or by discursive suppression (they are heard but not heeded)?",
+      "resolution_mechanism": "Audit high-income climate policy boards (national delegations, multilateral development bank governance, UNFCCC negotiation committees) for representation of mitigation and degrowth advocates. If they are absent or token: structural exclusion. If present and active but outvoted: discursive suppression. Monitor whether research funding for mitigation or degrowth policy reaches policy-shaping platforms.",
+      "impact": "Structural exclusion → the adaptation-priority framework's enforcement is active and institutional; changing policy would require governance reform. Discursive suppression → the framework is vulnerable to intellectual-shift events (consensus change, crisis-triggered re-evaluation). High-income nation capacity to suppress competing framings is the mechanism that maintains adaptation-priority as policy. If suppression breaks, the frame is contestable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Exclusion is institutional or rhetorical."
+    },
+    {
+      "id": "north_south_power_asymmetry_stability",
+      "question": "Is the North-South power asymmetry in climate finance governance (high-income nations control multilateral boards, set adaptation criteria) maintained indefinitely, or do emerging economies and coalition-building by vulnerable nations gradually shift power?",
+      "resolution_mechanism": "Monitor voting reforms in multilateral development banks, emerging economies' creation of alternative financing vehicles (New Development Bank, AIIB), and vulnerable-nation coalition strength in UNFCCC negotiations. If alternative finance grows faster than multilateral development bank funding, power is shifting.",
+      "impact": "If asymmetry persists: extraction remains structural and adaptation-priority framing persists under high-income control. If power shifts: vulnerable nations gain agenda-setting capacity and can reframe climate response (prioritize mitigation differently, demand emissions reductions from high-income nations, shift adaptation toward community-led solutions). A shift would destabilize the reading and pull toward mitigation or degrowth framings.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether North-South power asymmetry in climate governance is stable or shifting."
+    },
+    {
+      "id": "kernel_foreclosure_scope",
+      "question": "Does the adaptation-priority reading foreclose mitigation-priority and degrowth-transformation readings within any single policy framework, or do the readings coexist as competing live positions?",
+      "resolution_mechanism": "Examine whether a high-income nation could simultaneously pursue adaptation-priority AND mitigation-priority (yes: they can build renewables and adaptation simultaneously). Whether adaptation-priority is compatible with degrowth (no: adaptation assumes capital availability; degrowth requires contraction). If adaptation-priority forecloses degrowth but coexists with mitigation-priority, the reading_relations should be: forecloses=[degrowth], coexists_with=[mitigation].",
+      "impact": "If adaptation-priority forecloses degrowth: degrowth is outside the policy space under this framework. Degrowth advocates are truly excluded. If adaptation-priority and mitigation coexist: policy disputes are about funding allocation, not frame choice.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical structure of the kernel dispute."
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.81
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.61
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.74
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.31
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.44
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.54
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.41
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.67
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.74
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.79
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.81
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.68
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.22
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_response_action__mitigation_priority",
+      "climate_response_action__degrowth_transformation"
+    ],
+    "dual_formulation_note": "This constraint is part of the climate_response_action kernel family decomposed into three distinct readings. Each reading holds different axioms about climate response requirements and produces different beneficiary/victim structures. ε values differ substantially across readings because each reading measures the standing arrangement under contest from its own epistemic vantage: adaptation-priority reading measures the current multilateral-finance-led adaptation framework (high ε from vulnerable-nation perspective, low from high-income-nation perspective); mitigation-priority reading measures emissions-reduction investment frameworks; degrowth-transformation reading measures growth-dependent economic structures. The three readings are not variations of a single constraint; they are competing framings of what climate response means. They are linked via network.affects_constraints because upstream framings (what counts as 'climate response') constrain downstream policy options."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "gain_flow": "high_income_nations",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "mitigation_priority",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "degrowth_transformation",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "temperature_rise_inevitable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "capital_intensive_adaptation_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "multilateral_finance_allocation_legitimate",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "inevitable_warming_requiring_adaptive_capital",
+    "drift_state": {
+      "moment": "contemporary_2026",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

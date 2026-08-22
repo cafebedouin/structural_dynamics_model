@@ -1,0 +1,305 @@
+{
+  "header": {
+    "constraint_id": "qualified_immunity_doctrine__accountability_void_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "ea5452c7-a3a2-4683-81dc-94ae674b6620"
+  },
+  "base_properties": {
+    "extractiveness": 0.91,
+    "suppression": 0.88,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.79,
+    "resistance": 0.72,
+    "claimed_type": "snare",
+    "human_readable": "Qualified Immunity Doctrine: Accountability Void Reading",
+    "topic_domain": "constitutional_law/civil_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "law_enforcement_officers"
+    ],
+    "victims": [
+      "constitutional_violation_survivors",
+      "civil_rights_plaintiffs"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "reading_vs_alternative_framing",
+      "question": "Is qualified immunity a systematic extraction mechanism guaranteeing impunity (accountability void reading), or a necessary procedural scaffold protecting vigorous law enforcement (protective reading), or a judicially fabricated doctrine lacking constitutional warrant (constitutional fidelity reading)?",
+      "resolution_mechanism": "This constraint instantiates the accountability_void_reading. Sibling readings are authored as separate constraint stories (constraint_qualified_immunity_protective_scaffold, constraint_qualified_immunity_constitutional_fidelity) with different ε values, beneficiary structures, and victim sets. The three readings coexist as live positions in the ongoing lawsuit ecosystem; resolution would require Supreme Court overruling or congressional amendment, not empirical fact-finding.",
+      "impact": "Under this reading, ε_base ≈ 0.91 (near-absolute bar to liability creates massive extraction). Under the protective scaffold reading, ε would be substantially lower (0.35–0.45) and the type would be rope or tangled_rope. Under the constitutional fidelity reading, ε would be equally high but the beneficiary set would shift (the judiciary that authorized it, not officers) and the constraint would be classified as tangled_rope with the court as the hidden payer.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading ambiguity: accountability void vs. protective scaffold vs. constitutional fidelity"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is measured suppression (0.88) structural—external legal barriers and threat of retaliation—or internalized—officers' belief that constitutional protections do not apply to them, or that violating them carries no consequence?",
+      "resolution_mechanism": "Post-doctrine change empirical study: if officers' conduct patterns remain suppressive after immunity is curtailed (e.g., in jurisdictions that waive immunity for certain classes of violation, or after partial legislative repeal), suppression is partially internalized. If conduct liberalizes when immunity is removed, suppression was primarily structural.",
+      "impact": "If internalized, the measured suppression underestimates the constraint's true coercive force—victims carry internalized officer impunity beliefs into the post-doctrine era. If structural, suppression is contained by the legal rule and would decline with rule removal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized in officer and victim populations"
+    },
+    {
+      "id": "plaintiff_coalition_power",
+      "question": "Are constitutional violation survivors and civil rights plaintiffs sufficiently organized to mount a credible repeal campaign, or does the constraint's diffuse victim set lack the power to exit via political pressure?",
+      "resolution_mechanism": "Track civil rights coalition funding, litigation docket volume, legislative testimony frequency, and state-level immunity-waiver adoption. If organized pressure produces measurable policy shifts, coalition power is real; if high-profile cases produce no legislative movement despite sympathetic facts, power is low.",
+      "impact": "If victims have real coalition power, the measured resistance (0.72) understates the barrier they face—a powerful organized group meeting an 0.88 suppression wall is a different story than a diffuse group meeting it. Conversely, low victim coalition power explains why high resistance has not translated to remedy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether victim group coalition power is sufficient to generate credible exit threat"
+    },
+    {
+      "id": "founding_problem_status_mismatch",
+      "question": "The doctrine was adopted (mid-1960s–early-1980s) to protect officers from baseless harassment litigation and enable vigorous law enforcement. Is that founding problem still live, has it been solved, or is the founding rationale obsolete?",
+      "resolution_mechanism": "Compare litigation frequency and cost-to-defend metrics pre- and post-immunity adoption (historical data); assess current officer survey data on litigation fear and deterrent effect. If litigation burden is low and officers report no material fear, the founding problem is dead and the doctrine persists as rent-seeking. If burden is substantial and officer reports confirm fear-based restraint, the problem is still live.",
+      "impact": "Status = live → the constraint may be justified (though this reading disputes that). Status = dead → the constraint is captured zombie enforcement, a Piton candidate. Status = contested → tie-breaker depends on which empirical sources are considered authoritative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem (frivolous litigation against officers) is still live or has atrophied"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.91
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.84
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.88
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "Qualified immunity is a judge-made doctrine that shields law enforcement officers from civil liability in § 1983 suits unless the plaintiff can show the officer violated a 'clearly established' constitutional right. Under the accountability void reading, the doctrine operates as a systematic extraction mechanism: officers who commit constitutional violations escape liability and damages; victims are left without remedy; the doctrine's enforcement depends on courts actively dismissing cases early and narrowing the 'clearly established' bar to near-impossibility. The beneficiary set is officers who would otherwise face civil consequences; the victim set is persons whose constitutional rights were violated and who lack redress. Structurally, qualified immunity creates a second-order constraint on the first-order constraint (the constitutional right itself)—it renders the constitutional remedy unavailable while leaving the rights nominally intact, which is the hallmark of pure extraction: the right exists on paper, the remedy is gone.",
+    "key_agents": [
+      "law_enforcement_officers: Primary beneficiary (shielded from liability); institutional power; trapped exit (career depends on law enforcement, cannot exit role without losing livelihood)",
+      "constitutional_violation_survivors: Primary victim (bear the constraint's full extraction—violation without remedy); powerless or moderate power depending on resources; identity-locked (the violation becomes part of their lived experience, inescapable)",
+      "federal_courts: Agenda-setter and interpreter (courts administer the doctrine, define 'clearly established', dismiss cases on immunity grounds); institutional power; analytical time horizon",
+      "civil_rights_advocacy_organizations: Secondary actors attempting to organize victims into litigation coalitions; powerful institutional voice but facing high suppression from doctrine itself",
+      "state_legislatures: Analytical observer (some state legislatures have waived immunity for certain violations, creating a real-world experiment in immunity-free regimes)"
+    ],
+    "logic_rationale": "Extractiveness is very high (0.91 at endpoint) because the doctrine creates a near-absolute bar to liability: even when an officer violates a constitutional right, if the right was not 'clearly established' at the time (a retroactive standard), the officer walks free and the victim gets no damages. The gap between violation and remedy is closed by the doctrine's operation, not by the victim's failure to prove harm—the harm is proven, but the remedy is foreclosed. Suppression is equally high (0.88) because the doctrine's persistence depends on active judicial enforcement (dismissal on qualified immunity grounds, narrowing of 'clearly established' doctrine, summary judgment before trial). Theater ratio is moderate (0.42): courts claim to balance officer protection against victim remedy, but the balance has drifted heavily toward officer protection over decades of doctrine refinement; the judicial reasoning theater is real, but the outcome theater (the claim that the doctrine leaves victims a meaningful remedy path) is mostly performance. Accessibility of alternatives is high (0.79): once a plaintiff understands qualified immunity, the fact that they cannot sue the officer becomes clear—alternatives (criminal prosecution by the state, state tort law) are visible but structurally inadequate (prosecutors are part of law enforcement, state sovereigns often claim immunity). Resistance is high (0.72): civil rights organizations, academics, victims' families mount consistent resistance through litigation, legislative advocacy, and public pressure, but resistance has not moved the Supreme Court to overturn the doctrine. The measurement series shows extraction and suppression rising over the interval (t=0 to t=25, corresponding roughly to the period 1975–2020): the doctrine has become increasingly protective of officers as courts have narrowed 'clearly established' and expanded qualified immunity to more contexts (policing, pretrial detention, special education).",
+    "directionality_logic": "Law enforcement officers are the structural beneficiary (d near 1.0 → full target, reversed): they collect the benefit of immunity, which is an exemption from liability. Their directionality d is near 0.0 (beneficiary end) because the constraint subsidizes them—immunity removes a cost (lawsuit, damages) they would otherwise bear. Constitutional violation survivors are the structural target (d near 1.0 → full target): they bear the extraction directly—they are harmed by the officer's violation AND denied remedy by the doctrine. Their exit options are highly constrained (no civil remedy, state remedies inadequate, criminal prosecution unlikely), so they sit at the target end. Federal courts are the agenda-setter (institutional power, analytical exit) but not a straightforward beneficiary or victim—they administer the doctrine and claim neutrality, but the doctrine's persistence depends on their narrowing of 'clearly established'. Courts sit near d=0.5 (symmetric) from the perspective of the constitutional rights system: they coordinate officer immunity (a real administrative function for the law enforcement system) but extract victims' remedy access (asymmetric payoff).",
+    "perspectival_gap": "The officer seat and the victim seat should compute very differently. Officers compute the constraint as protective (it shields them from baseless suits, enables vigorous policing, is justified by past litigation burden—this is the protective_scaffold_reading frame). Victims compute it as extractive (their constitutional right is violated, they have no remedy, the violation goes unpunished—this is the accountability_void_reading frame, the reading this story instantiates). Courts compute themselves as neutral (they administer a procedural rule that balances legitimate interests—this is the institutional default, but the measurement data shows the balance has drifted). The engine computes a per-seat classification: from the officer seat, the constraint may compute as rope or tangled_rope (coordination + extraction, but the officer benefits). From the victim seat, it computes as snare (pure extraction, no coordination benefit). This divergence is the entire point—the same doctrine looks protective from one structural position and extractive from another.",
+    "mandatrophy_analysis": "The founding problem (frivolous litigation overwhelming officers) was arguably live in the 1970s–1980s when the doctrine was adopted, but has become contested or dead. Courts continue to cite the founding problem as justification, but discovery docket data and officer survey data show litigation burden on officers is not exceptional—many professions face higher litigation exposure. Meanwhile, the victim harm (denial of remedy for actual constitutional violations) has become substantially higher and more visible. The constraint shows signs of mandatrophy: it was built to solve a real problem, but the problem has attrophied while the constraint persists and grows more protective. The measurement series shows rising extractiveness and theater ratio, consistent with a constraint whose original function has been superseded by institutional inertia and judicial path-dependence. However, mandatrophy is not the final classification: the constraint is actively enforced (courts work to maintain it), has identifiable beneficiaries (officers who profit from immunity), and produces real asymmetric extraction (victims bear the cost). It is not a piton (atrophied and mostly theatrical) because the enforcement is too vigorous. It is a snare (pure extraction disguised as necessary procedure).",
+    "kernel_context": "This constraint instantiates the 'accountability void' reading of the qualified_immunity_doctrine kernel. The kernel is a formal legal rule (42 U.S.C. § 1983 defense) adopted by federal courts in Harlow v. Fitzgerald (1982) and refined through subsequent doctrine. Three readings coexist: (1) The accountability_void_reading (this story): immunity as systematic extraction mechanism guaranteeing impunity for constitutional violations, ε ≈ 0.91, victims are constitutional violation survivors, beneficiaries are shielded officers. (2) The protective_scaffold_reading: immunity as necessary protection enabling vigorous law enforcement without fear of baseless litigation, ε ≈ 0.35–0.45, beneficiaries are officers and the law enforcement system, victims would be frivolous-suit targets if immunity were absent. (3) The constitutional_fidelity_reading: immunity as judicially fabricated doctrine lacking constitutional or statutory authorization, ε ≈ 0.88–0.92 (high extraction even though the reading condemns it), beneficiaries are the federal courts that created and maintain it (institutional capture), victims are constitutional rights and civil rights plaintiffs. Each reading has a different ε, different beneficiary/victim structure, and different classification. The three readings are authored as three separate constraint stories linked by network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "qualified_immunity_doctrine__protective_scaffold_reading",
+      "qualified_immunity_doctrine__constitutional_fidelity_reading"
+    ],
+    "dual_formulation_note": "qualified_immunity_doctrine kernel decomposes into three structurally distinct readings: accountability_void_reading (this story, ε ≈ 0.91, snare type, officers beneficiary, victims are constitutional violation survivors); protective_scaffold_reading (ε ≈ 0.35–0.45, rope or tangled_rope type, officers+law enforcement system beneficiary, victims would be frivolous-suit targets); constitutional_fidelity_reading (ε ≈ 0.88–0.92, tangled_rope type, federal courts beneficiary through institutional capture, victims are constitutional rights). Each reading grounds a different constraint story because the ε-referent changes: accountability_void measures the standing arrangement (immunity in place) from the victim's perspective; protective_scaffold measures the counterfactual (immunity absent, frivolous suits present) and argues the standing arrangement is better; constitutional_fidelity measures the standing arrangement from the perspective of constitutional authority. The ε-invariance principle requires three stories, not one. They are linked via network.affects_constraints because they share a kernel and the public debate moves between them."
+  },
+  "stakeholders": [
+    {
+      "name": "law_enforcement_officers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Officers are shielded from civil liability by qualified immunity. They benefit directly: even when they violate a plaintiff's constitutional rights, they face no damages and often no trial (immunity is typically granted on summary judgment). Officers cite the doctrine as essential to vigorous policing—if they faced constant litigation fear, they would act more cautiously, which they argue harms public safety. Their exit is trapped: law enforcement is their career, and immunity is a national rule backed by courts, so they cannot opt out. As organized interests (police unions, law enforcement associations), they actively defend the doctrine in courts and legislatures."
+    },
+    {
+      "name": "constitutional_violation_survivors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Individuals whose constitutional rights were violated by police (unlawful arrest, excessive force, wrongful detention, civil rights deprivations). They are the primary victims of this constraint. They sought to sue the officer under § 1983 for damages and are barred by qualified immunity. Their exit is identity-locked: the violation happened to them, they cannot un-violate themselves, and the constraint bars the legal remedy. They bear the cost without choice and without recourse. Most lack resources for extended litigation; some are killed and thus permanently unable to pursue claims."
+    },
+    {
+      "name": "civil_rights_organizations",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations like the ACLU, NAACP, Center for Constitutional Rights, and victim advocacy groups attempt to organize constitutional violation survivors, fund litigation, bring test cases to overturn qualified immunity, and lobby legislatures. They bear the cost of mounting resistance (litigation resources, political capital) and are partly excluded from the beneficiary decision-making (courts decide the doctrine, and they have no seat at that table, only advocacy access). Their exit is constrained: they are committed to the civil rights cause and cannot simply leave the arena."
+    },
+    {
+      "name": "federal_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Federal courts (including the Supreme Court) created and maintain qualified immunity doctrine through case law. Courts set the standard for 'clearly established' rights, dismiss cases on immunity grounds, and shape the doctrine's scope. They claim to balance officer protection against victim remedy, but the measurement data shows the balance has drifted heavily toward officer protection. Courts administer the doctrine as if it is neutral procedure, but the doctrine's persistence depends on their active maintenance. Courts could overturn it (as they created it) but have not."
+    },
+    {
+      "name": "state_legislatures",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Some state legislatures have waived qualified immunity for certain violations (New Mexico for police, Colorado, Vermont). They create an experiment in immunity-free regimes within their borders. As observers, they see the outcomes of immunity waiver but cannot overturn federal doctrine—they can only waive it at the state level. Their vantage point is analytical: they measure whether officer conduct or litigation burden changes meaningfully when immunity is removed."
+    },
+    {
+      "name": "prosecutorial_system",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "spatial_scope": "national",
+      "exit_options": "constrained",
+      "situation": "State and federal prosecutors could charge officers with crimes for constitutional violations (deprivation of rights under 18 U.S.C. § 242), but routinely decline. They are excluded from the beneficiary decision-making (the constraint affects their ability to prosecute the officers they work alongside) and are constrained by organizational loyalty and professional interdependence with police. If victims had robust civil remedies via § 1983, criminal prosecution barriers would be less consequential—but the absence of civil remedy leaves criminal prosecution as the only check, and prosecutors rarely use it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Qualified immunity coordinates the law enforcement system by shielding officers from distraction and liability costs, enabling them to focus on enforcement without constant lawsuit fear. It solves a real administrative problem: processing countless § 1983 suits drains officer time and agency resources. It also provides a procedural rule for courts: immunity doctrine gives courts a mechanism to dismiss cases early rather than trying every factual dispute about constitutional violation.",
+    "transfer_function": "The constraint transfers liability costs from officers to victims. When an officer violates a constitutional right, the doctrine redirects the harm: the victim bears the injury (physical, psychological, financial) AND bears the loss of civil remedy (no damages, no judgment against the officer). The transfer is from constitutional violation survivors to shielded officers and the law enforcement system. The cost is asymmetric: officers gain immunity (a concrete benefit), victims lose remedy (an abstract but material benefit).",
+    "absent_voices": "Frivolous litigants (parties who sued officers for conduct that did not violate their rights) are absent from the debate, yet the doctrine is justified by protecting against them. Their absence is necessary to the doctrine's framing: if they were present, they would say 'we filed baseless suits and the doctrine rightly dismissed them,' which would support the protective reading. But we do not know how many such suits exist or how costly they are. Criminal defendants would also be present if they could speak: the doctrine prevents them from suing officers for constitutional violations committed in obtaining their conviction, yet they are largely excluded from the § 1983 debate (it applies to civil rights, not criminal procedure).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If qualified immunity vanished overnight, the § 1983 civil remedy would function as written: officers would be liable for constitutional violations. Civil rights litigation would increase substantially (lower barrier to entry, higher stakes). Officer behavior would likely shift—some commentators argue it would become more cautious (good for rights protection), others argue it would become more aggressive (bad for rights protection—'sue me' posture). Police departments would likely increase liability insurance and reduce frivolous-looking enforcement actions. Victim compensation for constitutional violations would become available through damages. The law enforcement system would reorganize around a different set of incentives. The removal of the constraint is therefore not neutral—multiple institutional arrangements would rearrange.",
+    "founding_problem": "In the 1970s–1980s, law enforcement officers faced a growing number of § 1983 suits, many of which were perceived as baseless or harassing. Officers worried about lawsuit costs, damages awards, and distraction from enforcement. The founding problem was real: if every interaction a police officer had could spawn a lawsuit, litigation burden would be substantial and potentially deterring. Courts adopted qualified immunity to filter out cases that did not allege clearly established rights, reducing the burden on officers and courts both.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Police unions, law enforcement associations, and the Department of Justice argue the founding problem is still live: officers face constant lawsuit threat and must be protected to enforce effectively. Civil rights organizations, academics, and victim advocates argue the founding problem is dead: contemporary data shows litigation burden on officers is not exceptional relative to other professions; officer litigation fear is not documented by systematic survey; and the doctrine has become so protective that it now shields even egregious violations. State legislatures that waived immunity (New Mexico, Colorado) report that officer conduct has not deteriorated and litigation burden has not exploded, suggesting the founding problem is overstated. The mismatch between founding problem (frivolous suits burden) and measured outcome (victims cannot sue for real violations) suggests the founding problem has been solved while the constraint persists for other reasons (institutional inertia, officer interest in immunity, judicial path-dependence)."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "protective_scaffold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_fidelity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "victim_remedy_access_foreclosed_by_doctrine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "extraction_persists_independent_of_founding_problem",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "constitutional_remedy_availability_era",
+    "drift_state": {
+      "moment": "contemporary_post_2010_judicial_doctrine_expansion",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "law_enforcement_officers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

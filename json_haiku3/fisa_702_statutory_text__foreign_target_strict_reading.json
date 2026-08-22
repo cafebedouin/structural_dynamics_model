@@ -1,0 +1,315 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__foreign_target_strict_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "3f3557bf-b6fa-4321-9c6b-051ff8536562"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.7,
+    "claimed_type": "rope",
+    "human_readable": "FISA 702 Foreign Target Strict Reading: Statutory Minimization Constraint",
+    "topic_domain": "constitutional/national_security/surveillance_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fourth_amendment_rights_holders"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "fourth_amendment_rights_holders",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "U.S. persons whose communications are incidentally collected during foreign intelligence surveillance. Under this reading, they retain Fourth Amendment protections; their communications are minimized (deleted rather than merely restricted), and the government cannot query the 702 database for domestic law enforcement purposes without individualized warrant. Their benefit is protection from warrantless domestic surveillance use of incidentally collected data."
+    },
+    {
+      "name": "fbi_domestic_investigative_offices",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Structurally prohibited from querying the 702 collection database for domestic criminal investigations under this reading. They bear the cost of building separate investigative cases through conventional warrants or other Title III means rather than accessing incidentally collected communications. The constraint cuts off a shortcut to case development."
+    },
+    {
+      "name": "nsa_foreign_intelligence_operations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Administers the collection and retention of foreign target communications under Section 702 authority. Under this reading, operates under a strict interpretation of foreign-target-only collection: they must design collection filters and retention policies to exclude U.S. persons as primary targets, minimize incidental U.S. person data, and enforce deletion timelines. They maintain the technical infrastructure and compliance procedures."
+    },
+    {
+      "name": "surveillance_oversight_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The Foreign Intelligence Surveillance Court reviews and certifies the government's targeting and minimization procedures. Under this reading, they evaluate whether the procedures genuinely enforce foreign-targeting-only collection and verify that U.S. person data minimization is deletion-based rather than access-restricted. They can reject certifications and order remedies."
+    },
+    {
+      "name": "foreign_intelligence_targets",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-U.S. person entities abroad whose communications are the intended collection target. They are excluded from the domestic rights framework; this reading does not constrain their collection. However, foreign intelligence partners and adversaries would object to the interpretation that narrowly reads foreign targeting as excluding incidental U.S. person queries, because it limits the intelligence value of the collection."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor and litigate statutory interpretation and Fourth Amendment implications. Under this reading, they argue that the statutory minimization requirement and the foreign-target-only restriction are minimal protections, not maximum ones—that Fourth Amendment warrant requirements should supersede the statutory floor. They provide external corroboration for the rights-centered interpretation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables foreign intelligence collection (a genuine coordination problem in national security: multiple agencies need centralized access to communications signals) while creating a constraint mechanism to protect U.S. persons from warrantless domestic surveillance. The constraint solves the problem of separating foreign intelligence collection (where warrant requirements are relaxed) from domestic law enforcement (where Fourth Amendment protections apply).",
+    "transfer_function": "Moves investigative opportunity away from the FBI's domestic offices (they cannot query the 702 database for domestic purposes without individualized warrant) and toward the NSA's foreign intelligence operations (they control the collection, retention, and access policies under court-certified procedures). The constraint transfers the power to determine what U.S. person communications are retained and accessible away from domestic law enforcement to foreign intelligence officials subject to Foreign Intelligence Surveillance Court oversight.",
+    "absent_voices": "Foreign governments and foreign intelligence operations that would benefit from less-restrictive incidental collection and downstream querying; foreign intelligence targets whose communications are the intended collection target (they do not participate in U.S. domestic framework). Their position is structurally excluded by design—the reading enacts their exclusion.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the foreign-target-strict-reading constraint disappeared and the statutory text were replaced with incidental-collection-reading (permitting FBI queries for domestic purposes), the landscape of U.S. person surveillance would shift: incidentally collected communications would become a warrantless investigative resource for domestic crimes, the incentive structure for targeting foreign communications would expand to include secondary benefits for domestic law enforcement, and the Fourth Amendment's traditional requirement of individualized warrant for U.S. person surveillance would be substantially eroded. Civil liberties litigation and international relations would reorganize around the new baseline of warrantless domestic access.",
+    "founding_problem": "Post-9/11 foreign intelligence agencies required rapid access to communications of non-U.S. persons abroad for counterterrorism and counterproliferation; simultaneously, Fourth Amendment protections required warrant-based access to U.S. person communications even for foreign intelligence purposes. The statutory foreign-targeting requirement solved the coordination problem by authorizing a separate collection authority for foreign-target communications, with minimization procedures to protect incidentally collected U.S. persons.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The NSA and executive branch cite ongoing foreign intelligence threats and the necessity of rapid access to foreign communications. The Foreign Intelligence Surveillance Court certifies the foreign-targeting requirement's operational necessity in published opinions. Civil liberties advocates and academic commentators contest that the foreign-targeting statutory floor is sufficient: they argue the Fourth Amendment independent of the statute requires warrant-based access to any U.S. person communications, even incidentally collected ones. Congressional testimony from both positions (Intelligence Committee vs. Judiciary Committee records) attests the disagreement. No single party's corroboration of the founding problem dominates."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.33,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the foreign_target_strict_reading of the contested FISA Section 702 statutory kernel. The strict reading interprets the statute's 'foreign target' language as creating a genuine coordination mechanism that protects Fourth Amendment rights-holders: foreign intelligence collection is authorized for communications where both the sender and the primary investigative interest are non-U.S. persons abroad; incidentally collected U.S. person communications must be minimized (deleted rather than merely restricted in access) and are inaccessible for FBI domestic criminal investigations without individualized warrant. Under this reading, U.S. persons retain Fourth Amendment protections and are not victims of the constraint—they are beneficiaries of the minimization obligation. The constraint's extractiveness is low because the coordination function (enabling foreign intelligence) is genuine and the protection mechanism is real, though contested. The measurement series shows slow creep in extractiveness and suppression over the interval, reflecting the documented gap between statutory minimum procedures and actual implementation practice (increased queries, broader interpretation, delayed minimization).",
+    "key_agents": [
+      "Fourth Amendment rights-holders (U.S. persons): benefit from minimization-as-deletion obligation and exclusion from FBI domestic query use; trapped and powerless relative to government authority",
+      "NSA foreign intelligence operations: agenda-setter; administers collection and retention policies, certifies foreign-targeting filters and minimization timelines",
+      "FBI domestic investigative offices: payer; prohibited from querying 702 database for domestic purposes; must build cases through conventional warrant-based means or Title III authority",
+      "Foreign Intelligence Surveillance Court: observer; reviews and certifies targeting and minimization procedures; can reject certifications and order remedies",
+      "Civil liberties advocates: observer; monitor implementation and litigate Fourth Amendment questions; provide external corroboration for rights-centered reading"
+    ],
+    "logic_rationale": "Extractiveness is low (0.15–0.25) because the reading posits that the statutory minimization requirement and foreign-targeting constraint serve a real coordination purpose (separating foreign intelligence collection from domestic surveillance) while genuinely protecting Fourth Amendment rights. Suppression is moderate-low (0.25–0.33) because the constraint operates through statutory text and court certification, not raw coercion—U.S. persons cannot violate the minimization obligation (they are not the regulated parties; the government is), but NSA and FBI operate under procedural compliance burdens. Theater ratio is very low (0.10–0.18) because the constraint's coordination function is substantive: foreign intelligence collection genuinely requires different authority than domestic law enforcement. The slow upward drift in all three metrics reflects the documented implementation gap—actual practice diverges from the statutory minimum through: (1) broader interpretation of 'foreign intelligence purpose' to include broader domestic implications, (2) delayed deletion of incidental U.S. person data, (3) increased FBI queries (though formally prohibited for domestic crimes, increasing for intelligence purposes). The gap is structural drift, not theater—the metrics capture the constraint weakening under operational pressure.",
+    "perspectival_gap": "The NSA and the FBI experience this constraint very differently. From NSA's seat (foreign intelligence focused, global scope), the constraint is enabling—it provides clear statutory authority for collection that would otherwise require individual warrants for each target. From FBI's seat (domestic law enforcement centered), the constraint is restrictive—it categorically prohibits access to a database that would otherwise be a warrantless investigative shortcut. A U.S. person incidentally collected experiences it as protective (their communications are deleted, not retained for domestic use), but that protection is contingent on NSA compliance, which the metrics show is degrading. The engine computes these divergences from the power/exit/scope data: NSA (institutional power, mobile exit, global scope, agenda-setter role) sits at low d; FBI (institutional power, constrained exit due to statutory prohibition, national scope, payer role) sits at higher d; U.S. persons (powerless, trapped, national scope, beneficiary role) sit at low d, protected by design—their directionality is derived from their Fourth Amendment-holder status and the statutory minimization obligation.",
+    "directionality_logic": "U.S. persons retain Fourth Amendment protections under this reading; they are not extracted from—they are the beneficiaries of the minimization obligation. Their directionality is low (near-beneficiary end) because the constraint protects them from warrantless domestic surveillance use. NSA has moderate directionality (beneficiary-side): it gains foreign intelligence collection authority and control of the minimization procedures, though it bears compliance costs. FBI has higher directionality (payer-side): the statutory foreign-targeting restriction and the categorical prohibition on domestic-crime queries constrain its investigative options. The FBI's exit options are 'constrained' rather than 'trapped'—Congress could repeal the 702 statute or amend it, and courts could interpret it differently, but absent statutory change, the domestic-crime prohibition is binding. The measurement series shows FBI's effective extraction rising (extractiveness creeping up) as the implementation gap widens—actual practice permits more FBI access than the strict reading's statutory text authorizes.",
+    "mandatrophy_analysis": "The constraint exhibits the structural signature of potential mandatrophy. The founding problem (post-9/11 foreign intelligence urgency) was live at inception (2007); by the measurement interval's end (circa 2025), the terrorist threat landscape has evolved, and the necessity of the 702 foreign-targeting constraint is contested. Civil liberties advocates argue the problem is 'dead'—that terrorism is no longer an existential threat justifying warrantless surveillance—while intelligence agencies argue it remains 'live.' The statutory language treats the problem as live (no sunset clause), but the constraint's theater ratio creeping upward suggests the coordination function is becoming decoupled from the extraction mechanism: the procedure of obtaining a Foreign Intelligence Surveillance Court certification for foreign-targeting is increasingly performative, while the actual use of the database for both foreign intelligence and (illegally but increasingly) domestic purposes continues. This is the mandatrophy pattern: a coordination mechanism (foreign/domestic separation) whose primary function has atrophied (the boundary is eroding in practice) but which persists due to institutional inertia and the benefits to NSA/FBI of maintaining the authority. The corrective would be either genuine judicial enforcement of the strict reading (deletion, not access restriction; no domestic queries) or statutory amendment. Neither is occurring; the constraint is maintained theatrically while the boundary erodes.",
+    "kernel_context": "This constraint is the foreign_target_strict_reading of the contested fisa_702_statutory_text kernel. The kernel is the statutory language of Section 702 of the Foreign Intelligence Surveillance Act, which authorizes collection of communications of non-U.S. persons abroad under certain certifications. The sibling readings are: (1) incidental_collection_reading—permits retention and warrantless query of incidentally collected U.S. person communications when justified by foreign intelligence purpose (higher extractiveness, looser protection); (2) constitutional_floor_reading—regardless of statutory interpretation, the Fourth Amendment requires probable cause warrant for any government search of U.S. person communications content; 702 queries constitute searches triggering warrant requirement independent of foreign/domestic distinction (lower extractiveness, stricter protection, potentially forecloses 702 authority as written). This reading occupies a middle position: it honors the statutory text's foreign-targeting restriction while treating it as genuine protection for U.S. persons (Fourth Amendment beneficiaries) rather than merely a compliance procedure. The contest is over what the statutory language commits the government to do and whether that commitment matches the Fourth Amendment floor."
+  },
+  "omegas": [
+    {
+      "id": "incidental_collection_boundary_definition",
+      "question": "What scope of query justification falls within 'foreign intelligence purpose' versus domestic law enforcement, and where is the boundary enforceable?",
+      "resolution_mechanism": "Judicial review of specific query cases; Foreign Intelligence Surveillance Court published opinions clarifying the limits of 'foreign intelligence purpose' and whether queries serving dual purposes (foreign intelligence + domestic benefit) cross the boundary; congressional amendment specifying permissible query categories.",
+      "impact": "If the boundary is enforced narrowly (only queries with primary foreign intelligence nexus permitted), the constraint maintains low extractiveness; if 'foreign intelligence purpose' is interpreted broadly to include any connection to foreign intelligence, extractiveness rises as FBI access expands under the foreign-intelligence framing.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The enforceability and scope of the foreign-intelligence-purpose boundary."
+    },
+    {
+      "id": "minimization_deletion_vs_access_restriction",
+      "question": "Does the statutory minimization requirement mandate deletion of incidental U.S. person data, or does it permit retention with access restrictions?",
+      "resolution_mechanism": "Statutory text interpretation by courts; Foreign Intelligence Surveillance Court review of NSA minimization procedures; congressional amendment clarifying minimization as deletion vs. access control; compliance audits measuring actual deletion timelines.",
+      "impact": "If minimization means deletion, the constraint achieves genuine Fourth Amendment protection (no retained data for domestic use). If minimization means access restriction, retained data remains available for derivative use or reinterpretation, and extractiveness rises as the protection weakens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether minimization is operationalized as deletion or access control."
+    },
+    {
+      "id": "fourth_amendment_warrant_requirement_override",
+      "question": "Does the statutory Section 702 authority override the Fourth Amendment's warrant requirement for U.S. person communications, or does the Fourth Amendment apply independent of the statute?",
+      "resolution_mechanism": "Supreme Court decision on 702 constitutionality; Foreign Intelligence Surveillance Court ruling on the constitutional floor; congressional amendment explicitly addressing Fourth Amendment compliance.",
+      "impact": "If the Fourth Amendment applies independently, the strict reading's low extractiveness is correct—U.S. persons retain warrant-based protections. If Section 702 authority overrides warrant requirements by legislative design, extractiveness rises and U.S. persons become victims rather than beneficiaries.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether statutory foreign-targeting authority can override Fourth Amendment protections or merely complements them."
+    },
+    {
+      "id": "foreign_target_definition_creep",
+      "question": "How broadly is 'foreign target' defined by NSA certification, and does the certification process permit expansion without statutory amendment?",
+      "resolution_mechanism": "Foreign Intelligence Surveillance Court review of targeting certifications over time; Freedom of Information Act disclosure of certification language and internal guidance; congressional oversight of definition breadth.",
+      "impact": "If 'foreign target' definition remains narrow (non-U.S. person with clear foreign intelligence nexus), the constraint preserves the foreign/domestic boundary. If the definition expands to include anyone with any connection to a foreign entity, the boundary erodes and extractiveness rises as incidental collection of U.S. persons increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the foreign-target definition remains stable or expands through administrative interpretation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__constitutional_floor_reading"
+    ],
+    "dual_formulation_note": "The FISA Section 702 statutory kernel decomposes into three structurally distinct constraint stories: (1) foreign_target_strict_reading (this file)—interprets the statute as creating genuine foreign/domestic separation and Fourth Amendment protection, with ε≈0.15; (2) incidental_collection_reading—interprets the statute as permitting retention and warrantless query of incidentally collected U.S. person communications, with ε≈0.60; (3) constitutional_floor_reading—Fourth Amendment warrant requirement applies independent of statute, with ε≈0.05 for U.S. persons (full protection) or ε≈0.70 for foreign intelligence operations (severe constraint). The three readings share a single kernel (the statutory text) but instantiate different ε values, beneficiary/victim structures, and claim types because they embody different legal and normative frameworks for interpreting the statute and its constitutional implications. The contest is not empirical (what does the statute say) but interpretive (what does it mean and what constraints does it create). The network edges record the conceptual influences: the strict reading influences both siblings by establishing a baseline; the constitutional floor reading forecloses the incidental reading if courts adopt the Fourth Amendment priority."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "incidental_collection_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_floor_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "foreign_targeting_statutory_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "incidental_us_person_deletion_requirement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "statutory_foreign_targeting_with_deletion_minimization",
+    "drift_state": {
+      "moment": "contemporary_implementation_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

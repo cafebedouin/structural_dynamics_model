@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_for_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "93e42cd0-8491-46a3-b0c1-5892c01e67cd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expected-Value Risk Acceptability Framework for Energy Systems",
+    "topic_domain": "energy_policy/risk_assessment/public_safety",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_operators",
+      "energy_consumers_baseline_electricity"
+    ],
+    "victims": [
+      "waste_repository_host_communities",
+      "climate_externality_bearers_global"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and operate nuclear reactors under the expected-value framework. They calculate annual expected costs (operations, insurance, waste management, decommissioning) against climate benefits (avoided coal emissions, stable baseload power). When the framework shows positive net present value, they license and expand; when negative, they retire reactors. They directly influence the parameters that operationalize 'acceptability': discount rates, consequence valuations for rare events, and the boundary between 'engineered solution' and 'unacceptable hazard.'"
+    },
+    {
+      "name": "energy_consumers_baseline_electricity",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive low-cost zero-carbon electricity when nuclear is licensed and operational under expected-value acceptability. They benefit from the climate benefit term in the calculation (avoided coal emissions). They also bear diffuse tail risk: statistical probability of harm is small (priced into the expected-value calculation) but non-zero. If a rare event occurs (reactor accident, waste release), they may experience acute health or property impacts. The framework prices their exposure as expected cost; they experience it as non-probabilistic presence."
+    },
+    {
+      "name": "waste_repository_host_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Host centralized or distributed waste repositories (spent fuel, vitrified waste, other long-lived isotopes) on the premise that the expected-value framework has deemed them acceptable and engineered solutions are adequate. They are geographically immobilized: their livelihood, property, and generations depend on the site. They carry the repository hazard non-probabilistically: whether or not failure occurs, they live with active confinement systems. The framework weights the risk of their community's harm as probability × consequence, a small annual expected cost. They live with the consequence."
+    },
+    {
+      "name": "climate_externality_bearers_global",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Benefit from avoided coal-plant emissions (the climate-benefit term) when nuclear is licensed under expected-value favorability. They also bear climate risks themselves from residual energy-sector emissions. The framework treats the climate benefit as a monetized value (dollars per ton of CO2 avoided) that offsets nuclear waste risk in the calculation. They are diffusely exposed to climate hazard and cannot exit; they are also statistically unlikely to experience direct nuclear hazard but cannot opt out of the electricity system."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administer and enforce the expected-value framework. They set the discount rates, consequence valuations, and probability thresholds that determine whether a reactor is licensed or a waste repository approved. They are answerable to legislatures and public comment, but the expected-value method constrains what inputs are valid: tail-risk concerns are acknowledged but weighted as expected cost. They do not operate reactors or host waste; their role is to enforce the framework's legitimacy and constrain alternatives."
+    },
+    {
+      "name": "tail_risk_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold the position that low-probability high-consequence events should dominate risk calculus; that irreversibility, intergenerational burden, and non-probabilistic presence of hazard outweigh expected-value optimization. They argue for banning nuclear energy or establishing absolute safety thresholds (e.g., 'no waste repositories,' 'reactor failure probability <10^-6 per year'). They participate in public comment and litigation but are structurally excluded from the expected-value framework: their perspective is not a valid input to the calculation. They can object, but the framework does not compute their objection as a decision constraint."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provide empirical estimates of climate damages and coal-emissions costs that feed the framework's benefit term. They estimate cost per ton of CO2, long-term temperature trajectory, and avoided-coal-emissions crediting. They do not set the framework or weight the risks; their role is to supply the climate-science input. The framework's treatment of these inputs as a monetized benefit variable determines how much their evidence amplifies nuclear's acceptability."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a quantitative decision procedure for comparing energy systems under risk and uncertainty: converts multidimensional hazards (reactor accident probability, waste longevity, coal-emissions consequences, renewable intermittency) into a single commensurable metric (annual expected cost in dollars or net present value) so energy policy can optimize across competing sources and scales.",
+    "transfer_function": "Moves the rare-event tail risk of nuclear failures and waste-repository breaches from the statistical accounting of the expected-value calculation into the lived, non-probabilistic experience of powerless host communities. Simultaneously moves the climate benefit (avoided coal emissions, statistical reduction in future climate damage) into the current-generation national energy policy calculation. Both movements are rendered as expected-value terms, making both invisible in their actual asymmetry: beneficiaries collect current electricity and carbon avoidance; bearers live with the presence of hazard for generations.",
+    "absent_voices": "Host communities and environmental-justice advocates who would object to centralized waste disposal on the grounds that non-probabilistic coexistence with rare-event hazard is intolerable regardless of expected value. Tail-risk theorists who argue that irreversibility and intergenerational burden cannot be optimized away in a monetary calculation. These voices are present in public comment and testimony but are structurally excluded from the expected-value framework: their concerns are acknowledged and probability-weighted, but the framework does not grant them decision-relevance beyond their statistical contribution. This is suppression without coercion—it is algorithmic exclusion.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expected-value framework and its enforcement machinery disappeared, energy licensing would revert to negotiated hazard thresholds, absolute prohibitions on certain failure modes (e.g., repositories must not exist, or must meet impossibly stringent conditions), or comparative-risk standards that do not mechanically downgrade tail events. Nuclear capacity would likely contract substantially. Waste disposition policy would shift from 'engineered solution optimized for cost-effectiveness' to 'categorical judgment'—'we will not create this hazard' or 'we will manage it only under conditions we deem intolerable.' The energy system would reorganize, most likely toward renewable investment, demand reduction, and climate-mitigation alternatives that do not require intergenerational waste management.",
+    "founding_problem": "Mid-20th-century energy expansion required decision procedures for comparing nuclear's novel hazards against established energy sources (coal pollution, renewable intermittency) and against each other. Probabilistic risk analysis and expected-value optimization emerged as methods to quantify and compare incommensurable risks on a single scale, making energy policy mathematically tractable.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Nuclear operators and regulatory economists attest the founding problem is live: energy systems require quantitative comparison and optimization under uncertainty; the expected-value method is the standard analytical tool. Climate scientists attest the founding problem is real but is evolving: the original concern was comparing baseline hazards (coal vs. nuclear). The contemporary problem is comparing catastrophic planetary-scale hazards (climate tipping points) against baseline hazards; this requires intergenerational and absolute-risk considerations that expected-value optimization may not adequately capture. Environmental justice advocates and host communities attest that the founding problem was never about optimizing hazard distribution in the abstract; it was a political device to find a decision procedure that would *permit* nuclear expansion despite opposition. The framework was designed for that task, not for genuine risk comparison; the founding problem was manufactured."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint embodies one reading of the contested kernel 'acceptable_risk_for_energy': the expected-value-dominant reading. Under this reading, annual expected costs and climate benefits determine whether a nuclear system is acceptable; rare events are weighted by probability × consequence in a unified optimization calculus. This reading vindicates probabilistic risk analysis as a legitimate policy framework and treats nuclear waste disposal as a solvable engineering problem once the expected-value math is favorable. Nuclear operators, regulators, and cost-benefit economists inhabit this reading; they structure licensing, financing, and waste policy around it. The sibling readings—catastrophic_tail_dominant and comparative_risk_dominant—contest this framework's legitimacy and its treatment of tail risk and intergenerational burden. This story generates the constraint AS THIS READING SEES IT: extraction arises because the framework's procedure for making tail risks invisible transfers concentrated hazard to powerless host communities while distributing diffuse climate benefits across energy consumers. The framework itself is the mechanism of suppression: exclusion from the decision algorithm is a suppression of voice, not coercion, so suppression is moderate. Theater is present but not dominant: the framework makes real contribution to energy optimization; it is not pure performance. The measurement series shows extractiveness rising early (as climate and waste costs are better quantified) then plateauing once the framework's parameters stabilize.",
+    "key_agents": [
+      "nuclear_operators: set framework parameters, benefit from acceptability verdicts",
+      "regulatory_authorities: enforce the framework, delegate cost-benefit authority",
+      "waste_repository_host_communities: bear concentrated non-probabilistic hazard, excluded from decision procedure",
+      "energy_consumers: benefit from low-cost zero-carbon electricity, bear diffuse risk priced as expected cost",
+      "tail_risk_advocates: hold competing reading, structurally excluded from framework"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.58) because the framework systematically downgrades the salience of low-probability high-consequence events—the mathematical procedure itself is the extraction mechanism. A waste repository failure with 0.1% annual probability and catastrophic consequence gets weighted as 0.001 × high consequence, yielding a small expected annual cost that can be optimized away against competing benefits. The host community experiences the non-probabilistic reality: they live with the hazard whether or not it occurs. Suppression is moderate (0.42) because the framework's exclusion of tail-risk perspectives is not enforced by law or violence—it is enforced by the decision algorithm itself: you cannot appeal to irreversibility or intergenerational burden within the expected-value calculation. You can object, but your objection is not a valid input to the framework. Resistance is high (0.72) because environmental justice movements, some regulatory bodies, and host communities actively resist the framework's application to their communities. Theater is moderate (0.28): the framework makes genuine contributions to energy optimization and risk quantification; it is not pure performance. But a growing portion of its maintenance consists of rationalizing why tail events need not be central to policy, which is performative—it serves the operators' interest in continued licensing more than it serves decision-making accuracy. The measurement series shows extractiveness rising in the first 25 periods as climate damages are better monetized (increasing the framework's apparent justification) and then stabilizing as the framework's parameters settle.",
+    "perspectival_gap": "The operator and regulator seats should compute as beneficiaries of a rope or weak tangled_rope (genuine coordination, manageable extraction). The host-community and climate-bearer seats should compute as victims of a snare or strong tangled_rope (the framework is enforced against their interests, suppression of alternative framings is active). The energy-consumer seat sits in between: they benefit from the electricity and from the framework's cost-efficiency, but are exposed to tail risk that the framework renders invisible. The engine's per-seat computation should reveal this divergence from the structural data: beneficiaries at institutional power with arbitrage exit vs. victims at powerless power with trapped exit, mediated by a framework that is called coordination by some and called capture by others.",
+    "directionality_logic": "Nuclear operators and regulators are beneficiaries (d near 0.0): they collect licensing authority, operational margins, and the ability to externalize rare-event risk. Waste-host communities and climate-externality bearers are victims (d near 1.0): they bear concentrated or diffuse hazard and are excluded from the decision procedure. Energy consumers sit symmetric-to-moderate-beneficiary (d near 0.25–0.35): they benefit from cheap electricity and climate benefits, but carry diffuse risk exposure that the framework prices down. The framework itself operates as the agent that structures directionality: by defining 'acceptable' as 'expected value favorable,' it systematically migrates tail risk from the calculation into the lived experience of the powerless. The directionality override would not be needed here; the structural data (beneficiary/victim declarations, power atoms, exit options) derive the right d values.",
+    "mandatrophy_analysis": "The founding problem was genuine: mid-20th-century energy expansion required a decision procedure for comparing incommensurable risks. Probabilistic risk analysis and expected-value optimization were real solutions to that coordination problem. The mandatrophy question: does the founding problem still exist, or has it been superseded? Climate science has shifted the problem: the founding concern was comparing *baseline hazards* (coal pollution vs. reactor failure). The contemporary problem is comparing *climate-catastrophe hazard* (planetary-scale, high-consequence, low-probability in real-time timescale, intergenerational) against baseline hazards. The expected-value framework's treatment of climate as a monetized benefit variable and nuclear waste as a probabilistic cost makes *sense* in the old problem (comparing energy sources for steady-state operation). It makes *less* sense in the new problem (comparing hazards at scales where tail events dominate and where intergenerational equity matters). The constraint has not become pure extraction—the coordination function is real—but the framework has become partially obsolete. A tangled_rope classification (genuine coordination + asymmetric extraction via framework design) captures this better than snare (pure extraction) or rope (pure coordination). The theater ratio's moderate-low and plateauing trajectory suggests the framework is performing maintenance on a solution that no longer fully fits the problem.",
+    "kernel_context": "This constraint instantiates the expected_value_dominant reading of the contested kernel acceptable_risk_for_energy. The kernel admits three readings: (1) expected_value_dominant (this file): annual expected costs determine acceptability; (2) catastrophic_tail_dominant: low-probability high-consequence events dominate and justify prohibition or absolute safety thresholds; (3) comparative_risk_dominant: nuclear risk is acceptable only relative to coal/climate alternatives, with no absolute threshold. The readings differ structurally in what counts as a valid input to the risk calculus, who bears the burden of proof, and whether intergenerational or irreversibility concerns are decision-relevant. This reading treats these concerns as valid but secondary (probability-weighted). The sibling readings grant them primary or foreclosing status."
+  },
+  "omegas": [
+    {
+      "id": "tail_risk_weighting_legitimacy",
+      "question": "Is the expected-value weighting of tail events (probability × consequence) the correct way to represent decision-relevant risk, or does it systematically obscure catastrophic scenarios that should be decision-dominant?",
+      "resolution_mechanism": "Empirical observation of real rare events (reactor failures, repository breaches, climate tipping points) and comparison between expected-value predictions and actual consequences; theoretical analysis of whether mathematical expectation is the right decision criterion for irreversible or intergenerational hazards.",
+      "impact": "If expected-value weighting is incorrect or incomplete, the entire extractiveness assessment shifts: the constraint becomes snare (pure extraction via illegitimate framework) rather than tangled_rope (coordinated with extractive side effect). The founding problem is not actually solved; it is masked.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether expected-value weighting is appropriate for long-tail, irreversible, or intergenerational risks."
+    },
+    {
+      "id": "intergenerational_commensurability",
+      "question": "Is climate externality (avoided coal emissions) commensurable with nuclear waste burden when the benefits accrue in the current generation and the costs extend across centuries?",
+      "resolution_mechanism": "Ethical and empirical analysis of intergenerational discounting; time-horizon studies on actual long-term repository stewardship costs and climate damage across generations; examination of whether current-generation beneficiaries should be permitted to impose future-generation costs on the same scale.",
+      "impact": "If the costs and benefits are incommensurable across generations, the framework is illegitimate as a decision procedure for intergenerational hazards. Extractiveness increases (the framework transfers all future-generation risk to the present-generation benefit calculation). The constraint becomes snare rather than tangled_rope.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether expected-value optimization is legitimate across generational boundaries."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_cognitive",
+      "question": "Is the suppression of tail-risk framing structural (the algorithm mechanically excludes low-probability perspectives) or cognitive (decision-makers believe tail risks are adequately captured in the expected-value metric)?",
+      "resolution_mechanism": "Interviews and historical analysis of regulatory decision-making; examination of whether tail-risk advocates are excluded by the framework design or by the decision-makers' judgment that tail-risk concerns are already internalized; comparison between frameworks that explicitly include tail-risk inputs vs. those that do not.",
+      "impact": "If suppression is purely structural, the constraint's persistence depends entirely on defending the expected-value method against alternative frameworks. If suppression is partly cognitive (decision-makers genuinely believe tails are handled), the framework's vulnerability to evidence shifts: empirical demonstration that tails are *not* adequately captured undermines both the structure and the belief. The remediation path changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tail-risk suppression is enforced by the algorithm or by belief."
+    },
+    {
+      "id": "kernel_reading_substitutability",
+      "question": "Can policy adopt a hybrid approach that preserves expected-value optimization for baseline-hazard comparison while introducing tail-risk dominance for intergenerational or irreversibility questions? Or does allowing tail-risk salience automatically foreclose the expected-value reading?",
+      "resolution_mechanism": "Policy design experimentation: frameworks that weight both expected value and tail-risk criteria; empirical observation of whether such frameworks are stable or collapse toward one reading or the other under political pressure.",
+      "impact": "If hybrid frameworks are stable, the readings coexist_with rather than foreclose; if they collapse, they foreclose. This affects whether the constraint is a contested kernel with live alternatives or a foreclosure in disguise.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the expected-value and tail-risk readings are logically compatible or mutually exclusive."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_for_energy__catastrophic_tail_dominant",
+      "acceptable_risk_for_energy__comparative_risk_dominant"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel acceptable_risk_for_energy. Three structurally distinct constraints emerge from the kernel depending on which reading is adopted: expected_value_dominant (this file), catastrophic_tail_dominant, and comparative_risk_dominant. The readings differ in what counts as a valid decision input, how tail events are weighted, and whether intergenerational or absolute-risk considerations override optimization. The network links record this kinship: all three constrain energy policy, but they do so from incompatible epistemic positions. The expected-value reading influences the other two by setting the baseline framework that tail-risk and comparative-risk readings must contest or reframe."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "comparative_risk_dominant",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "expected_value_decision_criterion_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "tail_events_are_appropriately_probability_weighted",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "probabilistic_risk_analysis_framework",
+    "drift_state": {
+      "moment": "contemporary_climate_crisis_epoch",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "nuclear_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

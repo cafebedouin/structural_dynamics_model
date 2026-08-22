@@ -1,0 +1,405 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "5954ce1b-7810-4691-ad01-2c850dad77c3",
+    "created_at": "2026-06-12T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Harm Reduction Authority (Decriminalization + Services)",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_authorities",
+      "harm_reduction_practitioners",
+      "users_accessing_services"
+    ],
+    "victims": [
+      "neighboring_communities",
+      "disease_transmission_vectors",
+      "enforcement_transition_workers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_public_health_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets and administers harm reduction policy: authorizes decriminalization, funds and licenses consumption sites, medication-assisted treatment, needle exchange, disease screening. Operates under public health mandate rather than criminal enforcement. Derives institutional autonomy, budget authority, and professional legitimacy from reframing drug use as an epidemiology problem. Can point to declining disease transmission and overdose death rates as evidence of efficacy. Political sustainability depends on health outcomes and political coalition support."
+    },
+    {
+      "name": "users_accessing_services",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Exit criminal victim status through decriminalization; access non-judgmental services without penalty for possession or use. Receive sterile injection supplies, overdose reversal medication, medical monitoring, addiction treatment, housing support. Remain subject to health harms (overdose, infection, organ damage) and social harms (housing instability, family disruption) that services mitigate but do not eliminate. Choice set is bounded by service location, hours, and state funding contingency. Can discontinue services or continue use at personal risk, but cannot change the underlying drug policy framework."
+    },
+    {
+      "name": "harm_reduction_practitioners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate consumption sites, needle exchange, medication-assisted treatment, and coordination programs under state authorization. Professional employment, legitimacy, and advancement depend on state continuation of the model and political support. Acquire status as public health professionals rather than law enforcement auxiliaries. Constrained by performance metrics (disease reduction, non-overdose rates) and by political vulnerability — a shift to prohibition or legalization would displace the professional domain."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Claim epidemiological territory over drug-use management: shift budget authority from criminal enforcement to public health services, shift performance metrics from arrest rates to morbidity/mortality reduction, shift institutional autonomy to disease-focused decision-making. Can shift framing between treatments and enforcement depending on political climate (escalate or relax services based on political pressure). Political legitimacy rides on measurable health outcomes and on managing neighborhood externalities."
+    },
+    {
+      "name": "neighboring_communities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear neighborhood-level harms: open-air drug markets often persist or relocate near consumption sites; visible injection in parks and public spaces; used needles in outdoor areas; increased property crime (theft to fund continued use); noise and social disorder. Services reduce these harms relative to prohibition (no arrest-and-release cycling, some site supervision and sanitation) but do not eliminate them. Exit options are constrained by housing tenure (renters and homeowners cannot easily relocate) and by economic resources (relocating is costly). Can organize politically to restrict site placement or demand community mitigation investments."
+    },
+    {
+      "name": "enforcement_transition_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Police and correction officers whose enforcement volume and institutional legitimacy traditionally depended on drug arrests and prosecutions. Harm reduction reduces this dependency — lower arrest volumes, fewer prosecutions, smaller jail/prison populations for drug offenses. Experience this as loss of professional legitimacy, career advancement opportunities, and union negotiating leverage. Can professionalize into social work partnerships (police social work teams, deflection programs) or resist and advocate for enforcement escalation. Constrained by union contracts and by institutional path-dependency."
+    },
+    {
+      "name": "prohibition_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Political and moral constituencies (conservative lawmakers, law-and-order advocates, some community organizations) who view drug use as a behavior that should be deterred through criminal penalty, not accommodated through services. Excluded from policy authority in harm reduction jurisdictions. Would reframe the constraint as enabling addiction, undermining personal responsibility, failing to address the root problem (user behavior change), and shifting costs to neighborhoods and taxpayers. Their objections are heard in legislative testimony but do not block implementation where harm reduction coalitions have institutional support and health data."
+    },
+    {
+      "name": "treatment_provider_sector",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Addiction treatment providers (residential, outpatient, medication-assisted treatment programs, recovery housing) receive referrals and co-managed cases from harm reduction sites. Benefit from expanded user engagement through low-barrier pathway and continuous relationship. Face tension with the harm reduction model: harm reduction's low-barrier philosophy (accepting ongoing use, not requiring abstinence as precondition) can conflict with abstinence-based treatment ideology and program models. Constrained by funding model — insurance reimbursement and government contracts may penalize overlap with harm reduction or may require abstinence-focused outcomes that harm reduction sites cannot guarantee."
+    },
+    {
+      "name": "disease_transmission_vectors",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The epidemiological reality of bloodborne pathogen transmission (HCV, HIV, HBV) and respiratory pathogen spread in crowded spaces. Not an agent but a class of harms the constraint is engineered to manage through needle provision, vaccination, isolation protocols, and ventilation. Authoring this entity as a 'payer' names the primary harm the constraint is designed to address: disease transmission is what the services directly target."
+    },
+    {
+      "name": "legalization_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Political constituencies and economists who argue that full legalization and regulated commercial supply would achieve harm reduction goals better than state-managed services: eliminating black markets, ensuring product quality, enabling taxation, and removing the state's gatekeeping power over supply. Excluded from policy authority in harm reduction jurisdictions. Would argue that the constraint is a half-measure maintaining state control while appearing progressive, and that it fails to address the root cause (criminalization of supply). Their objections are heard but do not displace the constraint unless political support shifts."
+    },
+    {
+      "name": "international_drug_enforcement_regimes",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "UN Drug Control conventions and signatory enforcement systems (International Narcotics Control Board) that define permissible drug policy. Harm reduction's acceptance of continued use can be read as inconsistent with treaty language on 'eradication' and 'elimination of non-medical use.' Some treaty systems allow interpretation of harm reduction as consistent with 'adequate safeguards'; others treat it as non-compliant. Jurisdictions adopting harm reduction either reinterpret treaties (Canada, Switzerland, Netherlands) or formally reserve. Structurally trapped — cannot unilaterally change international regime, but face diplomatic pressure and compliance questions."
+    },
+    {
+      "name": "third_party_infectious_disease_risk",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The epidemiological risk of bloodborne and respiratory pathogen circulation in the general population through disease transmission vectors. Not an agent but a class of harms the constraint manages at the population level through disease prevention infrastructure. The services directly target this risk."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Takes the full constraint structure as the analytical object: state authorization + service infrastructure + disease management mechanisms + community externalities + political sustainability conditions. Tracks how the harm reduction reading distinguishes itself structurally from prohibition (decriminalization vs. enforcement escalation) and legalization (state-managed vs. market-regulated supply), and how these three readings compete for institutional dominance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of infectious disease prevention and overdose mortality management among a dispersed user population that prohibition-enforcement alone cannot reach: provides vector control (needle provision, vaccination, medical monitoring) and keeps users in contact with health systems rather than driven underground.",
+    "transfer_function": "Moves public health budget and institutional authority from criminal enforcement to public health services; moves legitimacy of drug use from criminal frame to disease frame; moves enforcement labor from police/courts to social workers/nurses; moves disease burden (and disease reduction) from communities to public health accounting.",
+    "absent_voices": "Prohibition advocates and law-and-order constituencies are structurally excluded — they would argue for enforcement escalation and reject the premise that continued use can be 'managed' rather than eliminated. International drug control regimes are diplomatically sidelined. Some sections of affected communities are isolated from policy input — marginalized neighborhoods bearing neighborhood-level harms have less institutional voice than public health authority and harm reduction practitioners.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If decriminalization and service infrastructure vanished, users would return to criminal victim status (arrest, incarceration, criminal record); disease transmission would accelerate (no sterile supplies, no vaccination access); overdose death rates would rise sharply; police enforcement would intensify; the epidemiological knowledge of disease circulation would revert to criminal-system silence. The world would materially rearrange toward prohibition.",
+    "founding_problem": "High rates of infectious disease (HCV, HIV transmission) and overdose mortality among people who use drugs, driven by injection without sterile supplies and lack of overdose reversal capacity; enforcement-led prohibition paradoxically increased harms by driving use underground and away from health systems.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public health authorities, independent epidemiologists, and harm reduction researchers from outside benefiting-party seats attest that disease transmission and overdose mortality remain live problems and that service-based mitigation is evidence-supported. Prohibition advocates attest the founding problem differently (they frame the 'real problem' as addiction itself, not as disease transmission), but the specific health harms this reading addresses are documented by health systems and verified by follow-up studies in sites like Switzerland, Canada, and Australia."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates a harm reduction reading of contested state drug policy authority. The state authorizes continued use (decriminalization) while deploying public health infrastructure (supervised consumption sites, medication-assisted treatment, disease screening) to minimize health harms and disease transmission. This reading is structurally distinct from prohibition (which criminalizes use to deter behavior) and legalization (which permits regulated commercial supply). The harm reduction reading accepts use as a persistent fact and optimizes around disease and death minimization rather than enforcement or commercial control. Users exit criminal victim status but remain subject to health harms the services mitigate. Neighboring communities bear neighborhood-level harms (open-air markets, visible use, property crime). Third parties face disease transmission risk that services directly manage. The arrangement requires active enforcement — to exclude dealers, prevent open-air commercial competition with user-sourced supply, and maintain service-site boundaries.",
+    "key_agents": [
+      "state_public_health_authority: Institutional agenda-setter; frames drug use as disease/epidemiology problem; authoritizes and funds services; derives institutional autonomy and professional legitimacy from disease-reduction framing",
+      "users_accessing_services: Powerless beneficiary/payer; exit criminal victim status; remain subject to health harms; access non-punitive care; choice set bounded by service availability and political contingency",
+      "harm_reduction_practitioners: Organized beneficiary; professional employment and legitimacy depend on state continuation; constrained by performance metrics (disease reduction, non-overdose outcomes)",
+      "neighboring_communities: Moderate-power payer; bear neighborhood harms (open-air markets, visible use, crime); exit options constrained by housing tenure and relocation cost",
+      "enforcement_transition_workers: Moderate-power payer; experience loss of traditional enforcement-volume-dependent legitimacy and advancement; can professionalize (police social work partnerships) or resist",
+      "prohibition_advocates: Powerful excluded party; would reframe as enabling addiction and failing to address root cause; jurisdiction-dependent power (strong in prohibition-aligned regions, weak where harm reduction has institutional support)"
+    ],
+    "logic_rationale": "Extractiveness at 0.58 reflects an asymmetric arrangement: public health authority and harm reduction practitioners benefit institutionally and professionally; users benefit from decriminalization and services but remain subject to substantial health harms; neighboring communities bear diffuse costs (disorder, crime, disease risk) while disease transmission control is treated as a public health good (not costed to communities). The arrangement is NOT pure extraction because genuine coordination is present — the disease prevention problem is real and services solve it. It is NOT pure coordination because the framing as 'disease management' rather than 'behavior control' privileges one institutional reading and excludes prohibition/legalization framings. Suppression is moderate-low (0.22) — the constraint's enforcement is primarily boundary maintenance (keeping drug commerce off the street, maintaining site perimeters) rather than behavior suppression; users can decline services or continue use, and are not forced into treatment. Theater is low (0.18): the services have documented real function (disease reduction, overdose prevention), though some performance metrics are performatively emphasized (recovery rates, abstinence benchmarks that are not structurally necessary to the harm reduction goal). The temporal series shows extractiveness rising from 0.48 to peak at 0.59 (time 15) then stabilizing at 0.58, driven by political consolidation of the model — initial skepticism (prohibition advocates' resistance) decreases over time as health data accumulates and the institutional model hardens. Suppression falls monotonically as the constraint normalizes and becomes less politically contested.",
+    "perspectival_gap": "The state_public_health_authority and harm_reduction_practitioners will compute as beneficiaries with low directionality (d near 0.2) — they derive institutional benefit, set the agenda, face no exit pressure. Users will compute as targets with moderate-to-high directionality (d around 0.6–0.75) — they exit criminal jeopardy but remain subject to health harms and service dependency. Neighboring communities will compute with directionality around 0.65 — they bear diffuse costs, have constrained exit (housing/relocation), and do not set policy. From the beneficiary seats the arrangement is genuine coordination with some regrettable externalities (neighborhood harms). From the user and community seats, the same structure operates as a transfer of institutional authority and budget from enforcement to public health while neighborhood-level costs persist. The engine computes this divergence from power, exit, and spatial scope — users' local spatial scope and identity-locked or constrained exit produce higher d; authority's institutional power and analytical spatial scope produce lower d.",
+    "directionality_logic": "Beneficiaries: state_public_health_authority (institutional power, analytical spatial scope, arbitrage exit → d ≈ 0.15–0.25); harm_reduction_practitioners (organized power, national scope, constrained exit → d ≈ 0.25–0.35); users_accessing_services (powerless, local scope, constrained exit, but exit is political contingency on funding rather than structural lock → d ≈ 0.55–0.65, moderate target). Victims (payers): neighboring_communities (moderate power, local scope, constrained exit → d ≈ 0.60–0.70); enforcement_transition_workers (moderate power, local scope, constrained exit → d ≈ 0.50–0.60). The disease transmission vectors and third-party risk are non-agents but the beneficiary/victim structure reflects the directionality: public health authority collects the institutional benefit of disease control; users collect decriminalization (a real benefit, worth substantial d reduction); neighborhoods pay the externality. No directionality override is needed; the derivation chain (beneficiary status + exit options + power + scope) captures the asymmetry.",
+    "mandatrophy_analysis": "The founding problem (high disease transmission and overdose mortality in unsupervised populations) is live — the epidemiological facts are attested by independent health researchers and death registries in multiple jurisdictions. The constraint is not mandatrophic because the founding problem persists and the arrangement has not atrophied into performance. The threat is political rather than functional: if prohibition advocates or legalization advocates gain jurisdiction, the constraint could be replaced (prohibition would shift to criminalization; legalization would shift to commercial regulation). The contest between these three readings is live in legislatures and courts, not yet resolved into theater. The harm reduction reading sustains itself through measurable health outcomes (declining HCV transmission, stable or rising overdose-reversal rates), which feed political legitimacy. If political support shifts to prohibition or legalization, the mandatrophy clock would reset — the constraint would become a vestigial institutional form maintained by inertia rather than by either policy effectiveness or political mandate.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'substance_control_authority' — the state's authority over drug use. The kernel is a stabilized commitment embedded in drug policy law and administrative architecture; three readings instantiate different constraints from the same kernel: (1) harm_reduction_reading (THIS constraint): decriminalize use + deploy services to minimize health harms; users exit criminal victim status but remain subject to disease/overdose risk; third parties manage disease transmission. (2) prohibition_reading: criminalize use/possession to deter behavior and prevent drug-related crime; users remain criminal victims; enforcement intensity is the primary mechanism. (3) legalization_reading: permit regulated commercial drug supply to eliminate black markets and ensure product safety; shift from state management to market regulation; commercial operators replace public health authority as the primary control structure. The harm reduction reading influences both siblings — it raises the empirical bar for prohibition (you must overcome the evidence that services reduce disease transmission) and creates institutional competition with legalization (if harm reduction is showing results, the legalization case loses momentum, though it can argue the results would be better with full commercial regulation). Prohibition forecloses harm reduction only if paired with criminalization-of-assistance; a jurisdiction that decriminalizes use but refuses services would be a distinct reading (decriminalization without coordination), not this constraint. Legalization coexists with harm reduction in some framings (legalized supply + harm reduction services) but structurally forecloses the state-managed service model (a legal market does not require state-run consumption sites)."
+  },
+  "omegas": [
+    {
+      "id": "disease_transmission_causal_attribution",
+      "question": "What proportion of the measured disease reduction (HCV/HIV transmission decline, overdose death reduction) is caused by needle provision and medication-assisted treatment specifically, versus caused by other confounders (aging of the user cohort, medical advances in treatment, macroeconomic factors reducing new initiation)?",
+      "resolution_mechanism": "Randomized controlled trials or instrumental variable analysis isolating the causal effect of service availability from secular trends. Comparison of jurisdictions with identical secular conditions but different service deployment.",
+      "impact": "If services are causally central to disease reduction, the constraint's efficacy claim is strengthened and prohibition arguments weaken. If disease reduction is primarily driven by confounders, the constraint's functional justification erodes and political support depends more on decriminalization ideology than on health outcomes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of measured disease reduction to the harm reduction services versus other factors."
+    },
+    {
+      "id": "neighborhood_externality_acceptability_boundary",
+      "question": "What level of neighborhood harm (visible use, open-air markets, property crime, disease risk in local environment) is politically acceptable as a trade-off for user decriminalization and health improvement? Where is the acceptability threshold, and who decides?",
+      "resolution_mechanism": "Public opinion surveys and political economy analysis tracking where harm reduction support collapses; observational study of neighborhood composition and political opposition to sites; historical analysis of site placement decisions and neighborhood consent.",
+      "impact": "If neighborhood harms are bounded below a political threshold, the constraint is sustainable. If harms are perceived as excessive, prohibition advocates can mobilize on neighborhood protection grounds and displace the constraint. The reading may bifurcate: harm reduction continues in low-density areas but is replaced by prohibition in dense urban communities.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political acceptability boundary for neighborhood externalities from harm reduction sites."
+    },
+    {
+      "id": "state_funding_contingency_and_political_reversibility",
+      "question": "If political coalitions shift and funding for harm reduction is withdrawn, how quickly does the constraint collapse and what is the transition path back to prohibition?",
+      "resolution_mechanism": "Historical cases of policy reversal (e.g., Canada's Safe Supply program reversals); modeling of institutional lock-in and budget dependency; interviews with practitioners about continuity requirements.",
+      "impact": "If the constraint has high institutional lock-in and practitioner employment dependence, reversal would face organizational resistance and would be costly. If funding is contingent and institutional investment is shallow, reversal could be rapid and users would have minimal protection. This is partly distinct from mandatrophy — the constraint may functionally persist but be politically fragile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Political reversibility of the harm reduction reading due to funding contingency."
+    },
+    {
+      "id": "legalization_foreclosure_or_coexistence",
+      "question": "Is the harm reduction reading structurally foreclosed by legalization, or can they coexist in a hybrid model (legal supply + harm reduction services for continued harms)?",
+      "resolution_mechanism": "Examination of jurisdictions that have legalized (cannabis legalization in Canada, heroin-assisted treatment in Switzerland alongside decriminalization) — do harm reduction services persist, expand, or decline after legalization? What is the institutional relationship?",
+      "impact": "If legalization forecloses harm reduction (commercial supply replaces state services), the constraint's sustainability depends on preventing legalization, which is a vulnerability to political shift. If they coexist, harm reduction has a longer structural shelf life. The reading_relations classification (forecloses vs. coexists_with) may be empirically resolvable through natural experiments.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether legalization reading forecloses or coexists with harm reduction."
+    },
+    {
+      "id": "framing_as_disease_versus_behavior_control",
+      "question": "Is the characterization of drug use as a 'disease/epidemiology problem' rather than a 'behavior control problem' a genuine epistemic reframing or a rhetorical reframing that obscures continued state control? Does the disease frame make different structural choices than a behavior-control frame, or is it functionally equivalent with different labeling?",
+      "resolution_mechanism": "Comparative analysis of prohibition-frame decision-making (enforcement targets, arrest criteria, punishment structure) versus disease-frame decision-making (service eligibility, clinical protocols, outcomes metrics). If the decision structures differ (disease frame triggers different institutional rules), the framing is structurally consequential; if decision-making is observably identical, the framing is rhetorical.",
+      "impact": "If the disease frame is structurally consequential, users genuinely experience a different constraint. If it is rhetorical, the constraint is a relabeling of control that deepens extraction (users believe they are being treated, but are actually being managed under a new authority). This is a conceptual omega about whether the reading is a genuine alternative or a renewed form of the same control structure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the disease framing is structurally distinct from a behavior-control frame or rhetorical relabeling."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__prohibition_reading",
+      "substance_control_authority__legalization_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'substance_control_authority'. The prohibition_reading and legalization_reading are sibling constraints instantiating different structural arrangements from the same kernel commitment. All three readings share the referent (state authority over drug use) but instantiate different ε values, victim sets, and mechanisms. The harm reduction reading is influenced by both siblings: prohibition creates a political background condition (the threat of enforcement escalation); legalization creates institutional competition (if commercial supply emerges, state-managed services may be displaced). Neither completely forecloses harm reduction, but legalization reduces its institutional scope."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.28
+    }
+  ],
+  "gain_flow": "public_health_authorities",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "continued_use_is_structural_fact",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "services_are_primary_control_mechanism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "decriminalized_use_with_public_health_infrastructure",
+    "drift_state": {
+      "moment": "contemporary_legalization_pressure",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

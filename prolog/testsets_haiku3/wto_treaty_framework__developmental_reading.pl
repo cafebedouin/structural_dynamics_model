@@ -1,0 +1,368 @@
+% ============================================================================
+% CONSTRAINT STORY: wto_treaty_framework__developmental_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-11
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_wto_treaty_framework__developmental_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: wto_treaty_framework__developmental_reading
+ *   human_readable: WTO Treaty Framework — Developmental Reading (S&D + Policy Space)
+ *   domain: international_trade_law/development_economics
+ *
+ * SUMMARY:
+ *   The WTO treaty framework is a contested kernel grounding its legitimacy
+ *   in fixed text (the Uruguay Round Accords, 1995) interpreted through two
+ *   structurally distinct readings. The developmental reading instantiates a
+ *   constraint that preserves tariff flexibility, subsidy authority, and
+ *   compulsory licensing for developing countries as permanent structural
+ *   accommodations, not temporary exceptions. It reads the Special and
+ *   Differential (S&D) provisions and Article 27.2 (public health exceptions
+ *   to IP) as equal-status commitments recognizing asymmetric starting
+ *   conditions. This reading benefits Global South states and domestic infant
+ *   industries by permitting policy space; it extracts from multinational IP
+ *   holders (via compulsory licensing and mandatory technology transfer) and
+ *   Northern export competitors (via retained tariff barriers). The
+ *   constraint is classified as Tangled Rope because it simultaneously
+ *   coordinates market integration (all states follow binding tariff
+ *   schedules and dispute settlement) while asymmetrically extracting from IP
+ *   holders and Northern exporters for the benefit of
+ *   developmentally-positioned Global South actors. The claim/metric
+ *   independence rule is observed: the constraint is CLAIMED as tangled_rope
+ *   (genuine coordination + asymmetric extraction) and the metrics are
+ *   authored to describe that claim honestly — mid-range extractiveness (0.38
+ *   at interval end), low suppression (0.22, because the constraint operates
+ *   through negotiated treaty language rather than coercive enforcement), and
+ *   modest theater (0.18, indicating the policy-space justification is
+ *   substantially functional, though increasingly contested).
+ *
+ * KEY AGENTS:
+ *   - Global South states: primary beneficiaries; set and administer developmental policy space (tariffs, subsidies, compulsory licensing)
+ *   - Multinational IP holders: primary payers; bear extraction via compulsory licensing and technology transfer obligations
+ *   - Northern export competitors: secondary payers; face retained tariff barriers in Global South markets
+ *   - Domestic infant industries: beneficiaries; protected by tariffs and subsidies, identity-locked to policy space
+ *   - Global South consumers: mixed position (payers for tariff-inflated goods, beneficiaries of cheap medicines via compulsory licensing)
+ *   - WTO Secretariat: observer; administers dispute settlement but lacks independent enforcement power
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(wto_treaty_framework__developmental_reading, 0.38).
+domain_priors:suppression_score(wto_treaty_framework__developmental_reading, 0.22).
+domain_priors:theater_ratio(wto_treaty_framework__developmental_reading, 0.18).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(wto_treaty_framework__developmental_reading, extractiveness, 0.38).
+narrative_ontology:constraint_metric(wto_treaty_framework__developmental_reading, suppression_requirement, 0.22).
+narrative_ontology:constraint_metric(wto_treaty_framework__developmental_reading, theater_ratio, 0.18).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(wto_treaty_framework__developmental_reading, accessibility_collapse, 0.45).
+narrative_ontology:constraint_metric(wto_treaty_framework__developmental_reading, resistance, 0.52).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(wto_treaty_framework__developmental_reading, tangled_rope).
+narrative_ontology:human_readable(wto_treaty_framework__developmental_reading, "WTO Treaty Framework — Developmental Reading (S&D + Policy Space)").
+narrative_ontology:topic_domain(wto_treaty_framework__developmental_reading, "international_trade_law/development_economics").
+
+domain_priors:requires_active_enforcement(wto_treaty_framework__developmental_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(wto_treaty_framework__developmental_reading, '53411fc0-f350-4168-933d-1e8a5bdf7d2c').
+narrative_ontology:cs_kernel_codification('53411fc0-f350-4168-933d-1e8a5bdf7d2c', fixed_text).
+narrative_ontology:cs_authority_grounding('53411fc0-f350-4168-933d-1e8a5bdf7d2c', extraction).
+narrative_ontology:cs_interpretation_layer_present('53411fc0-f350-4168-933d-1e8a5bdf7d2c').
+narrative_ontology:cs_reading_relation('53411fc0-f350-4168-933d-1e8a5bdf7d2c', wto_treaty_framework__market_access_reading, coexists_with).
+narrative_ontology:cs_axiom('53411fc0-f350-4168-933d-1e8a5bdf7d2c', foundational, asymmetric_conditions_justify_permanent_policy_space).
+narrative_ontology:cs_axiom_status(asymmetric_conditions_justify_permanent_policy_space, holdable).
+narrative_ontology:cs_axiom_grounding('53411fc0-f350-4168-933d-1e8a5bdf7d2c', asymmetric_conditions_justify_permanent_policy_space, empirically_contingent).
+narrative_ontology:cs_axiom('53411fc0-f350-4168-933d-1e8a5bdf7d2c', foundational, development_requires_infant_industry_protection).
+narrative_ontology:cs_axiom_status(development_requires_infant_industry_protection, holdable).
+narrative_ontology:cs_axiom_grounding('53411fc0-f350-4168-933d-1e8a5bdf7d2c', development_requires_infant_industry_protection, instrumental).
+narrative_ontology:cs_axiom('53411fc0-f350-4168-933d-1e8a5bdf7d2c', secondary, compulsory_licensing_legitimate_for_public_health_and_development).
+narrative_ontology:cs_axiom_status(compulsory_licensing_legitimate_for_public_health_and_development, holdable).
+narrative_ontology:cs_axiom_grounding('53411fc0-f350-4168-933d-1e8a5bdf7d2c', compulsory_licensing_legitimate_for_public_health_and_development, deontological).
+narrative_ontology:cs_reference_frame('53411fc0-f350-4168-933d-1e8a5bdf7d2c', asymmetric_development_conditions).
+narrative_ontology:cs_drift_state('53411fc0-f350-4168-933d-1e8a5bdf7d2c', post_2008_financial_crisis_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('53411fc0-f350-4168-933d-1e8a5bdf7d2c', '').
+narrative_ontology:cs_kernel_id(wto_treaty_framework__developmental_reading, wto_treaty_framework).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(wto_treaty_framework__developmental_reading, global_south_states).
+narrative_ontology:constraint_beneficiary(wto_treaty_framework__developmental_reading, domestic_infant_industries).
+narrative_ontology:constraint_beneficiary(wto_treaty_framework__developmental_reading, technology_seekers).
+narrative_ontology:constraint_victim(wto_treaty_framework__developmental_reading, multinational_ip_holders).
+narrative_ontology:constraint_victim(wto_treaty_framework__developmental_reading, northern_export_competitors).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(wto_treaty_framework__developmental_reading, global_south_consumers).
+narrative_ontology:constraint_victim(wto_treaty_framework__developmental_reading, global_south_consumers).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Collectively negotiate and set the treaty framework's developmental provisions. They defend tariff flexibility, subsidy authority, and compulsory licensing as equal-status treaty rights, not temporary exceptions. They administer domestic policy space — setting tariff schedules within negotiated bands, directing industrial subsidies to infant industries, licensing foreign pharmaceutical and agricultural technology for domestic use. They coordinate in negotiating blocks (BRICS, African Union, Least Developed Countries group) to defend against Northern pressure to phase out S&D provisions. Their power is collective and constrained: they cannot withdraw from the WTO system without losing market access, but together they can block consensus decisions and threaten alternative trade arrangements.
+narrative_ontology:constraint_stakeholder(wto_treaty_framework__developmental_reading, global_south_states, agenda_setter,
+    organized, generational, constrained, global).
+narrative_ontology:stakeholder_secondary_role(wto_treaty_framework__developmental_reading, global_south_states, beneficiary).
+
+% Bear the core extraction via compulsory licensing and mandatory technology transfer. When a Global South government issues a compulsory license for a pharmaceutical (e.g., India's production of generic AIDS drugs), or mandates technology transfer as a condition of market access (e.g., automotive joint-venture requirements in China), multinational IP holders lose licensing revenue and proprietary technical control. They argue these obligations breach reciprocal IP protection norms and extract rents from their R&D investment. Their exit options include: restricting licensing to Northern markets only, withdrawing production from Global South entirely, jurisdictional arbitrage (shifting high-value production to IP-friendly jurisdictions), or challenging compulsory licenses through dispute settlement and bilateral trade negotiations.
+narrative_ontology:constraint_stakeholder(wto_treaty_framework__developmental_reading, multinational_ip_holders, payer,
+    institutional, biographical, mobile, global).
+
+% Face retained tariff barriers, local content requirements, and subsidy-protected infant industries in Global South markets. Northern exporters of textiles, steel, automobiles, and agricultural products cannot freely compete in markets that use tariff policy space to protect domestic producers. They can exit by: (1) lobbying their governments for retaliatory tariffs on Global South exports; (2) pursuing bilateral trade deals with symmetric liberalization schedules (e.g., US free-trade agreements with Chile, Australia with lower S&D provisions); (3) lobbying for WTO dispute rulings that strike down tariffs as inconsistent with treaty obligations. Their power is institutional (backed by Northern governments) and their mobility is real but constrained by MFN rules that prevent full bilateral bypass.
+narrative_ontology:constraint_stakeholder(wto_treaty_framework__developmental_reading, northern_export_competitors, payer,
+    institutional, generational, mobile, global).
+
+% Exist within the protected tariff and subsidy space that the developmental reading preserves. Automobile manufacturing in India, generic pharmaceuticals in India/Brazil, electronics assembly in Vietnam — these industries would collapse within 5–10 years if tariff barriers were eliminated and multinational competitors freely entered. They are identity-locked: their entire business model depends on the policy space being maintained. Their threat of collapse constrains Global South governments to defend S&D provisions even when other sectors might prefer liberalization.
+narrative_ontology:constraint_stakeholder(wto_treaty_framework__developmental_reading, domestic_infant_industries, beneficiary,
+    moderate, generational, identity_locked, national).
+
+% Pay higher prices for tariff-protected goods (tariff-inflated costs on rice, sugar, automobiles, textiles) and for products from subsidized infant industries that face lower Northern competition. They benefit from compulsory licensing and price controls: generic medicines are cheaper, agricultural biotechnology is accessible via licensing rather than prohibitive patented seeds. Overall incidence is unclear: do the benefits of cheaper medicines and technology outweigh the costs of tariff-inflated staple goods? They are trapped within national markets, unable to exit to cheaper foreign alternatives when tariffs block imports. They have no voice in trade negotiations, which are dominated by governments and corporations.
+narrative_ontology:constraint_stakeholder(wto_treaty_framework__developmental_reading, global_south_consumers, payer,
+    powerless, biographical, trapped, national).
+narrative_ontology:stakeholder_secondary_role(wto_treaty_framework__developmental_reading, global_south_consumers, beneficiary).
+
+% Represent Northern governments and multinational corporations in WTO negotiations and dispute settlement. They interpret the treaty through the market_access_reading: S&D should be temporary and phased out as countries develop; IP enforcement should be harmonized globally; tariff barriers should be negotiated downward; technology transfer obligations should be struck down as violations of IP rights. They can exit the treaty system by: (1) withdrawing from WTO (e.g., Trump administration's threats); (2) pursuing bilateral deals with stronger IP enforcement; (3) using dispute settlement to erode S&D protections through cumulative rulings. Their power is substantial — they control dispute settlement in practice (Northern judges dominate WTO appellate panels) — but they are constrained by their own domestic constituencies and by MFN obligations that prevent full bilateral discrimination.
+narrative_ontology:constraint_stakeholder(wto_treaty_framework__developmental_reading, northern_states_trade_bodies, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Administers the treaty: publishes trade statistics, facilitates negotiations, compiles dispute filings. It produces technical analysis (studies on S&D effectiveness, impact assessments of compulsory licensing) that both readings cite to support their positions. The Secretariat has no enforcement power independent of member states — it cannot impose a reading, only document outcomes. It serves as the analytical seat: observing the dispute between developmental and market_access readings, providing data, but remaining formally neutral.
+narrative_ontology:constraint_stakeholder(wto_treaty_framework__developmental_reading, wto_secretariat, observer,
+    institutional, generational, analytical, global).
+
+% Would argue that public health crises (pandemics, antiretroviral access, vaccination equity) demand aggressive compulsory licensing and technology transfer as humanitarian obligations, not trade disputes. They were largely excluded from WTO treaty negotiations (which were dominated by trade ministries) and remain excluded from formal negotiation seats. They exist in parallel institutional networks (WHO, Médecins Sans Frontières, UNITAID) that advocate for public health exceptions to IP. During COVID-19, some public health advocates pushed for TRIPS waivers to permit vaccine technology transfer — a direct invocation of the developmental_reading's policy space for public health, but the formal dispute was not decided in their favor. Their absence from trade negotiation tables shapes what provisions get crystallized as legitimate treaty commitments.
+narrative_ontology:constraint_stakeholder(wto_treaty_framework__developmental_reading, public_health_advocates, excluded,
+    organized, biographical, constrained, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(wto_treaty_framework__developmental_reading, multinational_ip_holders).
+narrative_ontology:fixing_cost_class(wto_treaty_framework__developmental_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The WTO treaty establishes binding rules for bilateral and multilateral trade that simultaneously: (1) create predictable market access via most-favored-nation (MFN) and national-treatment (NT) commitments, enabling businesses to plan long-term supply chains without arbitrary tariff changes; (2) preserve policy space for countries at different development stages to use tariffs, subsidies, and compulsory licensing to build domestic industrial capacity and accumulate capital; (3) balance intellectual property protection with public health and technology access. The coordination solves the core problem of integrating economies at vastly different income and capability levels into a common rule system. Without policy space, forced uniform liberalization would collapse infant industries and reinforce technological dependence (19th-century British imperialism template). Without rules, bilateral cartels and trade wars would fragment the system. The developmental reading coordinates on preserving permanent policy space; the market_access_reading coordinates on phasing it out toward universal liberalization.
+% TRANSFER_FUNCTION: Moves tariff revenue from Northern exporters to Global South governments (tariff barriers reduce Northern market access); redirects patent licensing revenue from multinational IP holders to generic manufacturers and price-controlled public health systems in Global South (compulsory licensing extracts licensing value); redistributes industrial output from Northern competitors to Global South infant industries (subsidies and tariff protection give protected producers market share); transfers technology from Northern IP holders to Global South firms (mandatory technology transfer agreements, compulsory licensing for agricultural biotechnology and pharmaceuticals). The developmental reading frames these as corrective redistributions addressing structural asymmetry in capital, technology, and industrial capacity; the market_access_reading frames them as violations of reciprocal obligation and IP rights.
+% ABSENT_VOICES: Subsistence-agriculture farmers in Global South markets would object: agricultural tariffs inflate their input costs (fertilizer, seeds) and push them toward dependence on protected domestic producers. Post-industrial service workers in Northern economies would object: protected manufacturing jobs in Global South displace Northern manufacturing employment. Future Global South innovators would object: compulsory licensing and technology dependence may reduce incentives for indigenous innovation and lock countries into transferred technology rather than building indigenous R&D capacity. Global South consumers would object to tariff-inflated staple prices, though they benefit from compulsory licensing of medicines. Northern academics and development theorists who dispute whether protection actually enables development (rent-seeking vs. capability-building) would object to both the developmental reading's claim that protection is development-serving AND the market_access reading's claim that development is already complete.
+% DISAPPEARANCE_RATIONALE: If the developmental reading's policy space — retained tariff flexibility, subsidy authority, compulsory licensing rights — disappeared overnight and were replaced by the market_access reading's symmetric liberalization, the organizational structure of Global South economies would rearrange fundamentally. Within 5–10 years: infant industries collapse under Northern competition; tariff revenue evaporates; compulsory licensing authority is eliminated; Global South states lose bargaining power in subsequent negotiations. Multinational IP holders gain immediate patent enforceability and licensing revenue recovery. Northern exporters gain market access. The distribution of value shifts dramatically from Global South states and domestic firms toward Northern corporations. Global South consumers lose medicine price controls and face unemployment as protected industries collapse, though they might benefit from cheaper imported goods. The political coalitions defending policy space dissolve as the institutional arrangement that made it viable disappears.
+% FOUNDING_PROBLEM: Post-WWII trade integration faced a structural paradox: economies at vastly different development levels (Northern countries with accumulated industrial capital and technology, Global South countries rebuilding from colonialism with pre-industrial bases and labor-intensive comparative advantage) could not all adopt the same rules without (1) forcing the poor to accept liberal markets that would prevent capital accumulation, preserving permanent technological dependence (replicating colonial patterns), or (2) rejecting common rules and fragmenting into bilateral cartels. The developmental reading's founding problem: how to create a multilateral trade system that permits countries at different development stages to industrialize and accumulate technology without falling into permanent inferior positions. The answer it encoded: preserve policy space (tariffs, subsidies, compulsory licensing) as a permanent feature of the treaty, justified by ongoing structural asymmetry in capital, technology, and institutional capacity, not as a temporary exception.
+% FOUNDING_PROBLEM_CORROBORATION: Developmental economists (Hirschman, Gerschenkron, Sen, Rodrik, Chang) and Global South governments and development agencies (India, China, Vietnam, UNCTAD) attest the founding problem is still live: per-capita income gaps between Global North and Global South remain wide (North ~$60k PPP, South ~$15k PPP average), manufacturing capacity is concentrated in the North and East Asia, technology adoption lags are persistent, and structural barriers to capital accumulation and technology catch-up remain. They point to countries that deployed the policy space (South Korea, Taiwan, Vietnam) and achieved development success as evidence. Northern governments, multinational corporations, and Northern-aligned economists (World Bank mainstream view, IMF) attest the founding problem has been substantially solved: Global South GDP growth rates exceed Northern growth, manufacturing has shifted to Global South, technology transfer occurs via FDI and licensing agreements, and ongoing S&D is now rent-seeking theatre for entrenched elites rather than development necessity. They cite protected industries that failed to develop (inefficient, uncompetitive, dependent on continued subsidy) and note that competitive Global South firms (Indian IT, Bangladesh textiles) succeeded WITHOUT protection. Independent economic analysis remains divided: some econometric studies document that protection in early development stages is growth-enhancing (supports the live-problem reading); others document that protection entrenches inefficiency and reduces long-term growth (supports the solved-problem reading). No external corroborator unanimously attests one reading or the other.
+narrative_ontology:disappearance_verdict(wto_treaty_framework__developmental_reading, world_rearranges).
+narrative_ontology:founding_problem_status(wto_treaty_framework__developmental_reading, contested).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(wto_treaty_framework__developmental_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku3', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
+narrative_ontology:story_seed(wto_treaty_framework__developmental_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(wto_treaty_framework__developmental_reading, 0.38, 'claude-haiku-4-5-20251001', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(wto_treaty_framework__developmental_reading_tests).
+:- end_tests(wto_treaty_framework__developmental_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is moderate (0.38) because the developmental reading redistributes substantial value (tariff revenue, IP rents, market access) from Northern actors to Global South actors, but the redistribution is negotiated and rule-based rather than coercive or clandestine. Suppression is low (0.22) because enforcement depends on treaty commitment and dispute settlement, not on military or police coercion — the constraint is 'active enforcement' but through institutional channels rather than brute force. Theater_ratio is modest (0.18) because the policy-space justification is substantively rooted in development theory and persistent empirical gaps, though increasingly contested by Northern actors who frame it as rent-seeking pretense. The measurement series from 1995–2025 shows extractiveness and suppression both rising slowly (WTO jurisprudence gradually narrows policy space through dispute rulings; compulsory licensing is increasingly contested and litigated; Northern pressure for IP harmonization intensifies) but theater_ratio rising faster, indicating the functional justification is weakening relative to the performative dimension (WTO panels increasingly cite development success in Global South as evidence that S&D is no longer necessary, but policy space remains politically defended). The shared time grid ensures every metric is authored at every examined point.
+ *
+ * PERSPECTIVAL GAP:
+ *   From the Global South state seat, the constraint is genuine coordination solving a structural problem: without preserved policy space, capital accumulation and technological catch-up are impossible against Northern incumbency. From the multinational IP holder seat, the same constraint is extractive rent-seeking: the compulsory licensing and technology transfer obligations are wealth transfers from R&D investors to benefit Global South firms that would otherwise license technology or pay market prices. From the WTO Secretariat observer seat, the constraint is increasingly incoherent: the founding problem (asymmetric development) has been partially addressed (Global South GDP growth, rising manufacturing capacity), yet the policy-space preservation provisions are defended as permanent rights rather than temporary deviations, creating a mismatch between stated justification and actual operation. The engine computes these divergences from the structural data: Global South states hold agenda-setter power and benefit (low d); multinational IP holders are institutional victims (high d); the WTO Secretariat observes but does not collect from or bear costs (d near 0.5, analytical). This per-seat divergence is the measurement the framework exists to detect.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Global South states: primary beneficiary, organized, generational horizon, constrained exit (tied to WTO system but can negotiate or exit). d near 0.2 (low — constraint subsidizes policy autonomy). Multinational IP holders: primary victim, institutional, biographical horizon, mobile exit (can shift production/licensing). d near 0.8 (high — constraint extracts IP value). Northern export competitors: secondary victim, institutional, generational horizon, arbitrage exit (bilateral deals, retaliation). d near 0.75 (high). Domestic infant industries: beneficiary but identity-locked (business model depends on protection). d near 0.15 (beneficiary, but trapped exit raises effective d slightly — they cannot easily exit even if the constraint became disadvantageous, because they have no alternative market). Global South consumers: mixed — payers for tariff-inflated goods, beneficiaries of price controls and compulsory licensing. d near 0.5 (symmetric, but powerless status and trapped exit move this slightly toward target, to ~0.55). WTO Secretariat: observer, analytical. d = 0.5 (neither benefits nor bears costs; administers).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The developmental reading does NOT exhibit mandatrophy: the founding problem (asymmetric starting positions in industrial capacity and capital access) remains substantially live, as documented by persistent per-capita income gaps, technology adoption lags, and documented infant-industry infant mortality (industries that collapse when protection is removed). The treaty language (S&D provisions, Article 27.2 public health exceptions, compulsory licensing authority) remains deployed for its original purpose: enabling Global South states to accumulate capital and technology capacity without forced deindustrialization. Mandatrophy would be present if the founding problem had been solved (Global South achieved development parity) AND the policy-space provisions persisted purely for rent extraction — but the empirical case is that (1) the founding problem is contested (Northern actors argue development has succeeded; Global South actors argue structural barriers persist); (2) the provisions ARE still deployed functionally for development purposes (India's generic drug industry, compulsory licensing during COVID-19 pandemic, ongoing infant-industry protection in Vietnam, Bangladesh). The contestation maps to the kernel structure: the market_access_reading argues the founding problem is solved and S&D is now theatre; the developmental_reading argues it persists and S&D is still functional. This dispute is not mandatrophy; it is the kernel contest itself. The rising theater_ratio (0.08 to 0.18) does suggest a secondary erosion: the performative dimension of S&D (countries invoking it rhetorically in negotiations) is rising faster than the functional dimension (actual reliance on policy space for industrialization), which could become a mandatrophy precursor if the trend continues to 0.40+.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    development_trajectory_foreclosure,
+    'Does the developmental reading''s preserved policy space for compulsory licensing and tariff protection actually enable long-term technology catch-up, or does it create rent-seeking cartels and lock-in to low-value-added manufacturing, foreclosing the possibility of indigenous innovation?',
+    'Historical analysis of countries that deployed the policy space (India, Brazil, Vietnam, South Korea) to distinguish outcomes where protection enabled subsequent indigenous R&D and technological leadership (South Korea, Taiwan) versus outcomes where protection entrenched dependent manufacturing without R&D capacity (parts of Sub-Saharan Africa). Counterfactual analysis: what would these countries'' trajectories have been under symmetric liberalization?',
+    'If protection enables indigenous innovation, the developmental reading''s extraction from IP holders is development-serving and the constraint is legitimately classified as tangled_rope with justified asymmetry. If protection entrench dependency, the extraction is predatory rent-seeking and the constraint should be reclassified as snare-to-Global-South-consumers (protection benefits elites, harms mass consumers via higher prices). This is also a kernel domain: a ''development-enabling'' reading of S&D versus a ''dependency-enabling'' reading.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(development_trajectory_foreclosure, empirical, 'Whether preserved policy space enables catch-up or entrenches rent-seeking').
+
+omega_variable(
+    asymmetry_legitimacy_boundary,
+    'At what point (if any) do Global South states cease to have legitimate claim to asymmetric policy space on grounds of development? Is asymmetry a permanent right (Global South''s own axiom) or a temporary transition (market_access_reading''s axiom)? Where would the transition threshold be — per-capita income level, manufacturing export share, patent filings, or some other metric?',
+    'Explicit renegotiation of WTO treaty text to set quantitative thresholds for S&D phase-out, or dispute settlement ruling that addresses ''graduation'' criteria. Analysis of de facto phase-out through dispute settlement jurisprudence: how many Global South countries have had S&D claims rejected as ''too developed''?',
+    'This is the foundational contest between the two readings. If asymmetry is permanent, the developmental reading''s extraction is justified and should be defended as equal-status commitment (the claim/type mapping holds). If asymmetry has a threshold, the developmental_reading should decay toward market_access_reading at that threshold, and currently both readings coexist because the boundary is unresolved. The engine''s computation of per-seat types may diverge from the claimed_type at the boundary: a wealthy Global South state (e.g., Singapore or Chile GDP/capita approaching Northern levels) that still invokes S&D might compute as snare_to_self (rent-seeking) rather than tangled_rope, even under developmental_reading framing.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(asymmetry_legitimacy_boundary, conceptual, 'Whether asymmetric policy space is a permanent development right or a temporary transition phase').
+
+omega_variable(
+    suppression_mechanism_internalization,
+    'Is the low measured suppression (0.22) accurate, or is there an internalized dimension: Global South states have internalized the treaty''s IP enforcement norms to the point that they enforce patent rights against their own populations even where compulsory licensing is technically available? Are they voluntarily restricting their own policy space?',
+    'Comparative analysis of compulsory licensing usage: has it increased, decreased, or stayed flat since 1995? How often do Global South states invoke Article 27.2 public health exceptions versus how often do they enforce multinational IP holder patents? Post-exit analysis: countries that have threatened to withdraw from WTO dispute over S&D — do they subsequently expand compulsory licensing use?',
+    'If suppression is substantially internalized, the effective suppression is higher than measured (state machinery is suppressing its own policy space autonomy even when technically available). This would suggest the constraint has moved toward snare territory (extraction persists through normative capture, not overt coercion). If suppression is genuinely structural only (enforcement via dispute settlement against states that use compulsory licensing), then the low measurement stands and the tangled_rope classification holds.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether treaty-norms suppression is structural or internalized').
+
+omega_variable(
+    reading_coexistence_stability,
+    'The developmental_reading and market_access_reading coexist as live positions held by different state coalitions. Is this coexistence stable indefinitely, or is one reading foreclosing the other through time? Given that Northern states hold more institutional power in dispute settlement and have stronger enforcement capacity, will market_access_reading gradually displace developmental_reading through cumulative jurisprudence?',
+    'Analysis of WTO dispute settlement rulings 1995–2025: has jurisprudence on S&D claims trended toward accepting or rejecting the developmental_reading? Trend analysis of compulsory licensing rulings, infant-industry protection upheld vs. struck down. Negotiation analysis: in successive WTO rounds, has the developmental_reading''s baseline become weaker or held steady?',
+    'If market_access_reading is foreclosing (displacing) developmental_reading through dispute jurisprudence, the sibling relation should be reclassified from coexists_with to forecloses (narrow the relation type). This would be a kernel-level falsification event: one reading is being eliminated as a live option. If coexistence is stable, the current reading_relations declaration stands. Foreclosure would indicate a hidden asymmetry in the kernel''s authority structure (Northern states'' dispute settlement power > Global South''s treaty negotiation power), making the kernel framework itself extractive.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(reading_coexistence_stability, empirical, 'Whether reading coexistence is stable or trending toward foreclosure').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(wto_treaty_framework__developmental_reading, 1995, 2025).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(wto__tr_t1995, wto_treaty_framework__developmental_reading, theater_ratio, 1995, 0.08).
+narrative_ontology:measurement(wto__tr_t2002, wto_treaty_framework__developmental_reading, theater_ratio, 2002, 0.11).
+narrative_ontology:measurement(wto__tr_t2008, wto_treaty_framework__developmental_reading, theater_ratio, 2008, 0.14).
+narrative_ontology:measurement(wto__tr_t2015, wto_treaty_framework__developmental_reading, theater_ratio, 2015, 0.17).
+narrative_ontology:measurement(wto__tr_t2020, wto_treaty_framework__developmental_reading, theater_ratio, 2020, 0.18).
+narrative_ontology:measurement(wto__tr_t2025, wto_treaty_framework__developmental_reading, theater_ratio, 2025, 0.18).
+
+% Extraction over time
+narrative_ontology:measurement(wto__be_t1995, wto_treaty_framework__developmental_reading, base_extractiveness, 1995, 0.28).
+narrative_ontology:measurement(wto__be_t2002, wto_treaty_framework__developmental_reading, base_extractiveness, 2002, 0.33).
+narrative_ontology:measurement(wto__be_t2008, wto_treaty_framework__developmental_reading, base_extractiveness, 2008, 0.36).
+narrative_ontology:measurement(wto__be_t2015, wto_treaty_framework__developmental_reading, base_extractiveness, 2015, 0.37).
+narrative_ontology:measurement(wto__be_t2020, wto_treaty_framework__developmental_reading, base_extractiveness, 2020, 0.38).
+narrative_ontology:measurement(wto__be_t2025, wto_treaty_framework__developmental_reading, base_extractiveness, 2025, 0.38).
+
+% Suppression requirement over time
+narrative_ontology:measurement(wto__su_t1995, wto_treaty_framework__developmental_reading, suppression_requirement, 1995, 0.15).
+narrative_ontology:measurement(wto__su_t2002, wto_treaty_framework__developmental_reading, suppression_requirement, 2002, 0.18).
+narrative_ontology:measurement(wto__su_t2008, wto_treaty_framework__developmental_reading, suppression_requirement, 2008, 0.2).
+narrative_ontology:measurement(wto__su_t2015, wto_treaty_framework__developmental_reading, suppression_requirement, 2015, 0.21).
+narrative_ontology:measurement(wto__su_t2020, wto_treaty_framework__developmental_reading, suppression_requirement, 2020, 0.22).
+narrative_ontology:measurement(wto__su_t2025, wto_treaty_framework__developmental_reading, suppression_requirement, 2025, 0.22).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(wto_treaty_framework__developmental_reading, resource_allocation).
+narrative_ontology:boltzmann_floor_override(wto_treaty_framework__developmental_reading, 0.12).
+narrative_ontology:affects_constraint(wto_treaty_framework__developmental_reading, wto_treaty_framework__market_access_reading).
+narrative_ontology:affects_constraint(wto_treaty_framework__developmental_reading, compulsory_licensing_regime__global_health).
+narrative_ontology:affects_constraint(wto_treaty_framework__developmental_reading, infant_industry_protection__structural_dependence).
+narrative_ontology:affects_constraint(wto_treaty_framework__developmental_reading, multinational_ip_enforcement__northern_reading).
+
+% DUAL FORMULATION NOTE:
+% The WTO treaty framework is a contested kernel with two structurally distinct readings, each generating a different constraint. The developmental_reading (this story) preserves permanent policy space for Global South development via retained tariff authority, subsidy space, and compulsory licensing obligations on IP holders. The market_access_reading (sibling constraint) emphasizes symmetric non-discrimination and interprets S&D as temporary transitions toward universal liberalization. These are NOT two views of the same constraint—they instantiate different constraints from the same kernel text. Each reading has different beneficiaries (developmental: Global South states; market_access: multinational IP holders and Northern exporters), different extractiveness (developmental: moderate IP extraction; market_access: near-zero), and different policy implications. The dual_formulation relationship is coexistence: both readings remain live policy options held by different state coalitions, embedded in simultaneous WTO negotiations and dispute rulings that apply one reading or the other depending on which parties control the proceeding. ε-invariance is maintained: each story names a distinct referent (the treaty's policy-space provisions in developmental reading; the treaty's non-discrimination commitments in market_access reading) and each has a stable, reading-indexed ε. The network edges track structural influence: the market_access_reading undermines the developmental_reading through dispute settlement; compulsory_licensing_regime__global_health is a downstream policy constraint that depends on the developmental_reading's IP exemptions; infant_industry_protection stories depend on preserved tariff policy space; multinational_ip_enforcement stories directly oppose developmental_reading's extraction.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(wto_treaty_framework__developmental_reading, organized, 0.28).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

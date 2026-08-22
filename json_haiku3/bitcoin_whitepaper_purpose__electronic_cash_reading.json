@@ -1,0 +1,330 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__electronic_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "da76fe6c-bce3-4ab2-9140-05c2e7557264",
+    "created_at": "2026-06-12T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.74,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Whitepaper Electronic Cash Telos: Low-Fee Daily Transaction Requirement",
+    "topic_domain": "monetary/distributed_systems/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "payment_processors",
+      "high_frequency_merchants",
+      "low_value_transactors"
+    ],
+    "victims": [
+      "node_operators",
+      "full_archive_maintainers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "payment_processors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Extract transaction fees and settlement volume by operating full nodes and coordinating payment routing. Benefit from expanded on-chain capacity and lower per-transaction fees that make Bitcoin economically competitive with traditional payment networks. Their throughput target (transactions-per-second) rises with on-chain capacity expansion."
+    },
+    {
+      "name": "high_frequency_merchants",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate retail/e-commerce accepting Bitcoin as payment. Benefit from low per-transaction fees and fast settlement that make Bitcoin viable as a daily payment instrument rather than a store of value. Can exit to legacy payment networks if Bitcoin fees rise above their margin tolerance."
+    },
+    {
+      "name": "low_value_transactors",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Users in jurisdictions with restricted banking access sending small remittances or making everyday purchases. Depend on Bitcoin's stated purpose as everyday cash to make micropayments economically viable. Cannot absorb high per-transaction fees; their use case disappears if fees rise above transaction value."
+    },
+    {
+      "name": "node_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Run full archive nodes for the Bitcoin network. Bear escalating storage and bandwidth costs as on-chain transaction volume expands. The electronic-cash reading pushes capacity beyond what many volunteer node operators can sustain; their exit is running a pruned node (losing full-validation capability) or shutting down."
+    },
+    {
+      "name": "full_archive_maintainers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Large mining pools and institutional nodes committed to maintaining full blockchain history for regulatory or operational compliance. Face mandatory infrastructure scaling (storage, bandwidth, compute) with no ability to downgrade; trapped in this role by the reading's capacity-expansion logic."
+    },
+    {
+      "name": "satoshi_nakamoto",
+      "role": "agenda_setter",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The whitepaper author, disappeared since 2011. The electronic-cash reading asserts the whitepaper text and title as binding authority, in Satoshi's documented intent. Satoshi cannot enforce or defend this reading; the reading's enforcement depends on later participants who invoke the whitepaper as authority."
+    },
+    {
+      "name": "protocol_governance_coalitions",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Mining pools, exchange operators, wallet developers, and node operator coalitions who collectively decide whether to adopt block-size increase hard-forks or other capacity-expansion changes. In the electronic-cash reading, these coalitions enforce the requirement to expand on-chain capacity; their consensus and coordination are what makes the reading operational rather than textual."
+    },
+    {
+      "name": "store_of_value_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Holders, miners, and developers prioritizing decentralization and full-node verifiability as binding constraints (the sibling store-of-value reading). Would argue for small block sizes, strict fee discipline, and second-layer solutions. Systematically out of the conversation when the electronic-cash reading dominates governance."
+    },
+    {
+      "name": "cryptocurrency_regulations_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Regulators in major jurisdictions observe Bitcoin's actual transaction pattern and fee structure to determine whether it is functionally a currency (subject to money transmission rules) or a commodity (subject to different regulation). The electronic-cash reading's stated purpose affects their classification; actual low fees bolster the currency reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a decentralized payment settlement system where participants collectively maintain transaction history and validate new transactions, solving the double-spend problem without a trusted central authority. The electronic-cash reading specifically prioritizes low per-transaction overhead so everyday payments are feasible.",
+    "transfer_function": "Moves transaction fees from transactors (users sending payments) to miners (who collect block rewards and fees). Under the electronic-cash reading, fees are minimized to expand transactor reach; under the store-of-value reading, fees are allowed to rise as on-chain capacity scarcity increases. The reading determines the fee-settlement relationship.",
+    "absent_voices": "Store-of-value advocates and decentralization-maximalists are structurally excluded from governance when the electronic-cash reading dominates; they would argue for small blocks and high fees to preserve full-node accessibility. Regulatory authorities observe from outside but do not control the protocol.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the electronic-cash telos constraint vanished (i.e., if the reading were formally abandoned and the store-of-value reading adopted), the protocol would shift: block sizes would remain capped, fees would rise with adoption, merchant adoption would slow or reverse, and micropayment use cases would migrate to second-layer solutions (Lightning Network). The world rearranges because the constraint binds actual protocol parameters and adoption incentives.",
+    "founding_problem": "Early digital currency systems required trusted intermediaries; the whitepaper solved peer-to-peer electronic cash without a central authority, making low-overhead everyday payments technically possible for the first time.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The electronic-cash reading asserts the founding problem is still live: unbanked populations and merchants in restricted jurisdictions still need low-fee payment rails. The store-of-value reading attests the founding problem is solved (Bitcoin is now established; decentralization and verification are the new constraints). Nakamoto's 2011 disappearance eliminated the originating authority's voice; later corroboration comes from payment processor operators (supporting electronic cash) and node operator testimony (supporting store of value as the binding constraint post-founding)."
+  },
+  "interval": {
+    "start": 2009,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Bitcoin's whitepaper (2008) is titled 'Bitcoin: A Peer-to-Peer Electronic Cash System' and explicitly states the design goal is 'everyday transactional use' with 'low fees.' The electronic-cash reading treats this title and purpose statement as binding authority, requiring the protocol to expand on-chain transaction capacity (larger blocks, higher throughput) to keep per-transaction fees low enough for micropayments. This reading benefits payment processors, merchants, and low-income transactors; it imposes costs on node operators who must scale storage and bandwidth. The sibling store-of-value reading treats decentralization and full-node verifiability as the binding constraints, willing to accept high fees and second-layer solutions to preserve the decentralized property. These readings coexist as live positions in different governance coalitions. Satoshi Nakamoto's disappearance in 2011 eliminated the authoritative interpreter, leaving the whitepaper text as contested kernel. This constraint story instantiates ONLY the electronic-cash reading; the store-of-value reading is a separate constraint (different ε, different beneficiary/victim structure, different type).",
+    "key_agents": [
+      "payment_processors: benefit from capacity expansion and lower fees; organized power, mobile exit",
+      "low_value_transactors: depend on micropayment viability; powerless, constrained exit",
+      "node_operators: bear storage/bandwidth costs of capacity expansion; moderate power, mobile exit",
+      "protocol_governance_coalitions: set protocol parameters via hard-fork consensus; organized power, mobile exit",
+      "store_of_value_advocates: excluded from the conversation when electronic-cash reading dominates"
+    ],
+    "logic_rationale": "Extractiveness starts low (0.15 in 2009 when Bitcoin was experimental) and rises to 0.62 by 2025 as the protocol's actual operation diverges from the stated everyday-cash goal. The constraint is extractive because it imposes storage/bandwidth costs on node operators without their consent (they must validate the larger blocks or exit); it is not pure extraction because a genuine coordination function (low-fee payments) exists and genuinely benefits some participants. Suppression rises from 0.22 to 0.71 because enforcing capacity expansion requires overriding store-of-value advocates' preference for small blocks — this enforcement is structural (hard-fork consensus rules) not coercive, but it does suppress the alternative reading's adoption path. Theater rises from 0.08 to 0.48 because the constraint's justification increasingly relies on the whitepaper's textual authority (the 'cash' telos) rather than demonstrable economic viability for everyday payments; actual transaction patterns show Bitcoin remains a store of value, not everyday cash, yet the reading's enforcement machinery continues as if the founding problem persists. The measurement series on a single time grid tracks this divergence across the protocol's operational history. Accessibility collapse is low (0.42) because the alternative — full-node verifiability and small blocks — remains coherent and adopted by significant coalitions; the constraint does not collapse alternatives, it suppresses them via governance competition.",
+    "perspectival_gap": "The electronic-cash reading and the store-of-value reading compute to different types from the SAME protocol constraint, depending on which reading's assertions drive the classification. From the payment-processor and low-transactor seats, the constraint is rope or tangled rope (coordination with manageable extraction). From the node-operator and store-of-value-advocate seats, the constraint is snare (extraction of node resources justified by a purpose that is not operationally real). The engine computes per-seat classifications from power + exit + beneficiary/victim; the perceptual gap emerges because the two readings place different agents in the beneficiary and victim roles. The protocol constraint is the same; the reading determines which seat experiences it as coordination vs. extraction.",
+    "directionality_logic": "Payment processors (organized, mobile exit) are beneficiaries — they collect transaction fees and routing volume under the expanded-capacity reading; d near 0.1. Low-value transactors (powerless, constrained exit) are nominal beneficiaries but face structural trapping in the micropayment use case; d near 0.25 (subsidy from the reading, but identity-locked to the payment channel). Node operators (moderate power, mobile exit) are victims — they bear mandatory scaling costs; d near 0.75 (high target). Store-of-value advocates (powerful, mobile exit) are excluded rather than victimized; their exit is adopting the sibling reading or migrating to other protocols, so they are out of the beneficiary/victim structure entirely. Protocol governance coalitions function as agenda-setters; their d is not computed on the extraction axis but on the agenda-setting / enforcement axis. The store-of-value reading would flip many d values: node operators would move to beneficiary (their decentralization preference is honored), low-value transactors would become victims (high fees lock them out).",
+    "mandatrophy_analysis": "The electronic-cash reading's mandate is 'low-fee everyday transaction support.' The mandatrophy question is whether Bitcoin has become a constraint that persists past its founding problem. Empirically: Bitcoin's actual use pattern is store-of-value (hodling, long-term holdings, volatility-driven speculation); everyday transaction volume is marginal relative to transaction capacity. The founding problem (need for everyday cash) remains contested: advocates say unbanked populations and restricted jurisdictions still need it; store-of-value advocates say this was solved and decentralization is now the binding constraint. The theater_ratio rising from 0.08 to 0.48 indicates the constraint's enforcement machinery is increasingly performative: the whitepaper's 'cash' title is invoked as justification, but actual governance decisions (block-size debates, scaling disputes) are resolved by power (mining hash rate, developer consensus) not by reference to the founding problem's solution. A mandatrophy resolution would occur if the protocol formally abandoned the electronic-cash reading and adopted the store-of-value reading, or if Bitcoin's transaction pattern shifted decisively toward everyday payments. Neither has occurred as of 2025.",
+    "kernel_context": "This constraint instantiates the electronic-cash reading of the contested bitcoin_whitepaper_purpose kernel. The kernel is the whitepaper text and its title ('Bitcoin: A Peer-to-Peer Electronic Cash System'); the readings assign priority to different portions and interpretations. The electronic-cash reading prioritizes the title and stated goal of 'everyday transactional use with low fees' — this is what's binding; the store-of-value reading prioritizes 'decentralization' and 'full-node verifiability' as binding, treating the cash telos as one goal among several but not as a controlling constraint when trade-offs arise. Satoshi Nakamoto's 2011 disappearance (the nakamoto_oracle_opacity reading) is a third constraint in the family: it asserts the absence of authoritative interpretation as itself a structural fact, leaving the kernel as contested substrate. This story does not decide the contest; it instantiates one reading's claims and lets the engine compute its structural type from the authored data."
+  },
+  "omegas": [
+    {
+      "id": "satoshi_intent_binding",
+      "question": "Is Satoshi Nakamoto's documented authorial intent (the whitepaper title and stated purpose) binding on the protocol, or is the protocol's binding authority established by its actual participants' consensus?",
+      "resolution_mechanism": "Examine governance history: did protocol decisions explicitly invoke Satoshi's intent as a deciding factor, or did consensus emerge from current stakeholders' interests independent of the founder's documented goals?",
+      "impact": "If Satoshi's intent is binding, the electronic-cash reading is a constraint the protocol MUST honor. If binding authority is current-participant consensus, the reading's legitimacy depends on active agreement, and the constraint is only as stable as the coalition maintaining it.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the whitepaper's authority is textual and fixed or emergent from participant consensus."
+    },
+    {
+      "id": "everyday_cash_viability",
+      "question": "Is everyday Bitcoin payment use economically viable under the electronic-cash reading's low-fee requirement, or does the constraint's enforcement machinery persist despite the founding problem being unresolved in practice?",
+      "resolution_mechanism": "Compare actual transaction volumes and patterns (store-of-value vs. payment use) against the threshold where the reading's stated purpose would be operationally real. Survey merchant adoption and user behavior in target jurisdictions (unbanked, restricted).",
+      "impact": "If viable, the constraint is coordination with real beneficiaries. If not viable, the constraint is performative and the theater_ratio's rise indicates degradation toward piton-hood despite active enforcement machinery.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the stated purpose of everyday cash is achievable or has become theater."
+    },
+    {
+      "id": "reading_coexistence_stability",
+      "question": "Can the electronic-cash reading and the store-of-value reading coexist indefinitely in the same protocol, or do they structurally foreclose one another under sustained disagreement about block-size and fee policy?",
+      "resolution_mechanism": "Trace governance disputes over block-size hard-forks and protocol capacity decisions. Observe whether both readings can maintain active coalitions or whether one gradually captures protocol governance.",
+      "impact": "If coexistence is stable, both constraints remain live and the protocol exhibits perceptual divergence (different seats see it as rope vs. snare). If one reading forecloses the other via governance capture, the protocol migrates to a single-reading constraint with unified type classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether two incompatible readings of the kernel can remain simultaneously operative."
+    },
+    {
+      "id": "node_operator_suppression_mechanism",
+      "question": "Is the suppression of store-of-value advocates and small-block advocates structural (they lack the hash power / developer consensus to impose their reading) or internalized (they accept the electronic-cash reading as legitimate despite disagreeing)?",
+      "resolution_mechanism": "Survey participant statements, fork attempts, and governance votes: do suppressed parties treat the electronic-cash reading as legitimate but suboptimal, or as illegitimate and imposed?",
+      "impact": "If structural, the suppression persists as long as the coalition balance holds. If internalized, the reading has acquired legitimacy and would be harder to displace. The post-exit trajectory of participants who formally abandon Bitcoin for store-of-value alternatives would signal which mechanism dominates.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression of the store-of-value reading is external power imbalance or internalized acceptance."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__store_of_value_reading",
+      "bitcoin_whitepaper_purpose__nakamoto_oracle_opacity"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the bitcoin_whitepaper_purpose kernel. The store-of-value reading (bitcoin_whitepaper_purpose__store_of_value_reading) treats decentralization and full-node verifiability as binding, yielding different beneficiaries (node operators, decentralization maximalists) and victims (merchants, micropayment users). The nakamoto_oracle_opacity constraint names the absence of authoritative interpretation as a structural fact. All three constraints share the same underlying Bitcoin protocol but attribute binding authority to different portions of the whitepaper and different interpretive traditions. The electronic-cash reading influences the store-of-value reading by setting on-chain capacity and fee parameters; the two readings coexist as live governance positions."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "store_of_value_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "whitepaper_title_cash_telos_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "low_fees_enable_micropayments",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "everyday_cash_system",
+    "drift_state": {
+      "moment": "contemporary_2025",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "payment_processors",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_kernel__symbolic_archive_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "584dbf6f-d8ef-4fa4-981a-b11de76a569c"
+  },
+  "base_properties": {
+    "extractiveness": 0.02,
+    "suppression": 0.03,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.05,
+    "resistance": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "Sacrifice Law as Cultural-Historical Archive (Symbolic Archive Reading)",
+    "topic_domain": "religious_law/halakhic_authority/commitment_system",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "jewish_collective_memory",
+      "diaspora_identity_continuity",
+      "secular_and_liberal_jewish_communities",
+      "academic_and_cultural_historians"
+    ],
+    "vindicated_propositions": [
+      "textual_continuity_without_coercive_obligation",
+      "identity_preservation_through_voluntary_study"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "omegas": [
+    {
+      "id": "archive_vs_dormant_obligation",
+      "question": "Is sacrifice law genuinely a closed cultural-historical archive, or is it a dormant binding obligation that this reading merely treats as archival for interpretive convenience?",
+      "resolution_mechanism": "Comparative textual analysis of how the reading's own community treats related dormant mitzvot (e.g., jubilee, kingship laws) — consistent archival treatment across all suspended-performance mitzvot would support the archive reading; selective archival treatment applied only where performance is currently impossible would suggest motivated reasoning.",
+      "impact": "If the archive framing is selectively applied only to sacrifice law (versus other dormant obligations treated as live-but-suspended), this reading would be better understood as a rationalization that lowers psychological stakes rather than a structurally distinct halakhic position.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the archive framing is a principled hermeneutic or a convenience rationalization."
+    },
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "Which of the four readings of the sacrifice_obligation_kernel does a given study community actually hold, and can communities hold more than one simultaneously (e.g., liturgically performing messianic_suspension language while privately treating the material as archival)?",
+      "resolution_mechanism": "Ethnographic/textual survey of liturgical practice versus stated theological commitment across denominations; look for internal inconsistency between prayer-book language (which often assumes messianic restoration) and study-hall framing (which may be archival).",
+      "impact": "If communities hold multiple readings simultaneously without resolving the tension, the kernel is genuinely distributed/ambiguous rather than cleanly partitioned into four discrete camps, and this story's ε=0.02 applies only to the subset of practice that is purely archival.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the four kernel readings are held as discrete positions or blended in practice."
+    },
+    {
+      "id": "beneficiary_coercion_boundary",
+      "question": "Does the identity-preservation benefit this reading produces for the Jewish collective ever curdle into informal social pressure to study or affirm the material, even without halakhic backing?",
+      "resolution_mechanism": "Survey communities that adopt the archive framing for evidence of social (non-halakhic) pressure to participate in study — e.g., communal expectation, exclusion of non-participants from certain cultural or educational settings.",
+      "impact": "If informal social suppression exists despite the absence of halakhic obligation, the true suppression score is higher than the near-zero value authored here, and the constraint would need a companion social-pressure story rather than being folded into this one (ε-invariance).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether non-halakhic identity benefit ever produces informal coercive pressure."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 160,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 160,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the symbolic_archive_reading of the sacrifice_obligation_kernel: the position, held within parts of the modern (particularly liberal, secular-cultural, and academically oriented) Jewish study community, that the corpus of sacrifice law (korbanot) — its texts, structures, and interpretive tradition — functions as a cultural-historical archive rather than as an active or dormant halakhic obligation. On this reading, engaging with the material (through study, commemoration, or liturgical recitation of the relevant texts) is valuable because it preserves collective memory, textual literacy, and continuity with the pre-Temple tradition, not because doing so discharges, exercises, or maintains readiness toward any binding commandment. Crucially, this reading denies that there is a live obligation in the first place — there is nothing to violate by non-study, nothing to be punished for, and no claim of readiness being maintained for a future performance. This is structurally distinct from its three sibling readings, which either treat study as active fulfillment (study_as_exercise_reading), treat study as preparatory to a still-binding future performance (performance_only_reading), or treat the obligation as divinely suspended but intact, with study maintaining operational readiness for restoration (messianic_suspension_reading). Those are separate constraints, authored separately, linked here via network.affects_constraints per the ε-invariance principle — this story's ε is stable and low precisely because, on this reading's own terms, there is no obligation-shaped structure generating extraction.",
+    "key_agents": [
+      "Study community adherents to the archival reading — engage voluntarily, bear no halakhic risk, benefit through identity/continuity",
+      "Jewish collective memory / diaspora identity continuity — the diffuse, non-actor beneficiary of preserved textual tradition",
+      "Rabbinic authorities holding sibling readings (messianic_suspension, study_as_exercise, performance_only) — structurally excluded from this reading's own framework, since they would dispute its core premise that no obligation exists",
+      "Academic and cultural historians — observers/secondary beneficiaries who use the archival framing as an entry point into the textual corpus without adjudicating halakhic status"
+    ],
+    "logic_rationale": "Extractiveness is authored near zero (0.02-0.05 across the interval) because the defining structural feature of this reading is the ABSENCE of a binding obligation: there is no mitzvah being under- or over-performed, no punishment structure, no debt owed. Suppression is similarly near-zero because study is voluntary and non-study carries no halakhic consequence under this reading's own premises. Theater ratio is modest (0.10-0.15) reflecting that some communal/liturgical performance of study-as-commemoration persists (e.g., recitation of korbanot passages in daily liturgy) even under an archival self-understanding, but this is honest ritual practice, not enforcement theater standing in for a decayed coercive function. Accessibility collapse and resistance are both authored low: alternatives to studying the material remain fully open (one can simply not engage with korbanot texts without consequence), and there is little active resistance to the archival framing from within the communities that hold it, precisely because it makes no demand.",
+    "directionality_logic": "There are no victims under this reading because there is no extraction to bear — the beneficiary/victim asymmetry that the Tangled Rope and Snare gates require simply does not exist here. Jewish collective memory and identity-continuity are named as beneficiaries in the diffuse, non-actor sense (a value preserved, not a party collecting rents), consistent with treating cultural continuity as a genuine collective good rather than a captured resource. Study community adherents are direct human beneficiaries who participate freely; they are directionally close to full-beneficiary status (low d) because engagement is voluntary, low-cost, and reversible at will — there is no trapped or identity-locked exit position generated by this reading, unlike readings where non-performance carries theological stakes.",
+    "mandatrophy_analysis": "This reading is the clearest case in the kernel family of a constraint whose founding problem (preserving continuity with Temple-era practice and textual tradition after the Temple's destruction) remains genuinely live, while explicitly declining to claim that the ORIGINAL obligation itself remains live. This prevents a specific mislabeling: without the archive reading available as a distinct structural position, an observer might either (a) collapse this practice into 'quietly making a weak halakhic claim' and then flag it as extractive for producing guilt without formal backing, or (b) dismiss the practice's genuine value because it makes no binding claim. By authoring the archive reading as its own ε-invariant constraint with a stable near-zero ε, the classification correctly identifies non-coercive cultural preservation as structurally different from dormant-obligation or active-obligation readings, even though all four readings share surface vocabulary ('study of sacrifice law').",
+    "kernel_context": "This constraint instantiates the symbolic_archive_reading of the sacrifice_obligation_kernel. The kernel is the contested question of what studying/engaging with sacrifice law (korbanot) means in the post-Temple era. Three sibling readings are authored as separate constraints: study_as_exercise_reading (study itself fulfills the mitzvah), performance_only_reading (only physical performance fulfills it; study is merely preparatory to a still-binding duty), and messianic_suspension_reading (the obligation is divinely suspended, not transformed, with study maintaining readiness for messianic restoration). This reading is structurally distinguished by denying that any binding obligation exists at all to be exercised, prepared for, or held in suspension — it treats the entire corpus as a cultural-historical archive whose value is preservation of memory and identity, not discharge of a halakhic duty. This is the reading with the lowest ε in the family by a wide margin, precisely because it is the only one that denies the underlying obligation-shaped structure the other three readings all share in some form."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "post_temple_textual_preservation_practice",
+    "drift_state": {
+      "moment": "contemporary_liberal_and_secular_jewish_study",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "messianic_suspension_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "performance_only_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "study_as_exercise_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "no_binding_obligation_survives_temple_destruction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "textual_engagement_value_is_memorial_not_juridical",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_obligation_kernel__study_as_exercise_reading",
+      "sacrifice_obligation_kernel__performance_only_reading",
+      "sacrifice_obligation_kernel__messianic_suspension_reading"
+    ],
+    "dual_formulation_note": "This story is one of four decomposed readings of the sacrifice_obligation_kernel, split per the epsilon-invariance principle because the natural-language label 'study of sacrifice law' covers structurally distinct claims with widely different epsilon values. This reading (symbolic_archive_reading) authors the lowest epsilon in the family (near 0.02-0.05) because it denies any binding obligation exists. study_as_exercise_reading and performance_only_reading both retain an obligation-shaped structure (differing on whether study itself discharges it), and messianic_suspension_reading retains a fully intact but divinely paused obligation. All four are linked bidirectionally via affects_constraints; each carries its own claimed_type, stakeholders, and omega set."
+  },
+  "stakeholders": [
+    {
+      "name": "study_community_adherents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Engage with sacrifice law texts as part of ongoing Torah study or cultural education, treating the material as historically and culturally significant rather than as a live legal demand on their conduct. They can begin, pause, or stop this study at any time without believing they have incurred any halakhic liability, and often frame it as continuous with broader historical and literary study rather than religious obligation-discharge."
+    },
+    {
+      "name": "jewish_collective_memory",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "A non-actor collective good: the continuity of textual tradition, communal identity, and historical self-understanding that is sustained when the sacrifice-law corpus continues to be read, taught, and transmitted, independent of whether any individual reader treats the material as legally binding."
+    },
+    {
+      "name": "rabbinic_authorities_of_sibling_readings",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Rabbinic figures and institutions who hold the messianic_suspension or performance_only readings would dispute this reading's core premise that no obligation exists; they are not part of the archival reading's own community and are structurally excluded from its framework, though they remain active voices within the wider kernel contest represented by the sibling constraints."
+    },
+    {
+      "name": "academic_and_cultural_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the same texts as historical and literary artifacts, using the archival framing as a neutral entry point that lets them engage the material without adjudicating its halakhic status, and often cite the endurance of study practice as evidence of the corpus's continuing cultural significance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared, low-cost mechanism for transmitting a body of textual tradition and communal memory across generations, without requiring participants to accept a binding legal claim as the price of engagement — this widens who can participate (including secular and liberal Jews who would not accept the obligation-claim readings) while still sustaining continuity of the underlying corpus.",
+    "transfer_function": "No material transfer occurs between parties under this reading; what is 'moved' is intergenerational transmission of textual literacy and identity-continuity from past to present community, not a flow of value, obligation-discharge, or cost from one party to another.",
+    "absent_voices": "Rabbinic authorities holding the messianic_suspension_reading or performance_only_reading would object that this reading understates the theological stakes of the material and risks eroding belief in eventual Temple restoration; they are not part of the archival study community's internal conversation and their objection is represented structurally by the sibling constraints rather than as suppressed dissent within this one.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If the archival study practice ceased overnight, no binding obligation would be violated, no institution's authority would be undermined, and no material transfer would stop, because none exists under this reading's own terms. Some loss of cultural transmission and continuity would occur, but no party's arrangements (income, status, legal standing) depend on this reading being practiced, distinguishing it sharply from constraints where disappearance would force structural rearrangement.",
+    "founding_problem": "After the destruction of the Second Temple, sacrifice could no longer be physically performed; the archival reading emerged (or was retrospectively adopted by parts of the community) to give continued textual engagement with the sacrifice-law corpus a meaningful, non-obligation-dependent rationale — preserving memory and identity rather than claiming ongoing legal force.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Academic historians of Jewish liturgy and identity (a source outside the study community that benefits from this reading) corroborate that cultural-memory transmission through textual study is a documented and ongoing function independent of halakhic framing; this corroboration comes from outside the beneficiary community itself, satisfying the R5 requirement for non-self-asserted attestation."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "header": {
+    "constraint_id": "stone_land_use_rule__behavioral_competence",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "e0bd69a9-9d47-4be9-b5ee-ddab5e645191"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.28,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Tsunami Stone as Binding Land-Use Prohibition (Behavioral-Competence Reading)",
+    "topic_domain": "disaster_anthropology/land_use_governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "hillside_settlement_households",
+      "future_generations_of_villagers",
+      "coastal_lowland_ecosystem_users"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "hillside_settlement_households",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Live above the stone's marked line, having accepted the steeper walk, thinner soil, and higher construction cost of hillside building. They receive the benefit of the rule daily as a background fact rather than a felt cost — the incline is a known price already paid, not an active grievance. When asked, they cite the stone and the practice of never building below it as the reason the village survived the most recent tsunami while lowland settlements elsewhere did not."
+    },
+    {
+      "name": "future_generations_of_villagers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Not yet born or too young to have chosen the settlement pattern; they inherit the land-use boundary as an ambient fact of where the village already is. They cannot consent to or renegotiate the rule, but they are the population the 78-year compliance record is ultimately protecting from a low-probability, high-consequence event they have no direct memory of."
+    },
+    {
+      "name": "coastal_lowland_ecosystem_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Farm, fish, and gather in the lowland zone below the stone during daily life, accepting that permanent dwellings are not built there even though the land is flatter and more convenient for structures. They pay the cost of longer commutes back to hillside homes each evening but benefit from the same protection the rule provides, since they are not sleeping in the inundation zone when a wave arrives at night."
+    },
+    {
+      "name": "village_elders_and_custodians",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Maintain and retell the stone's inscription, walk newcomers and children to the boundary, and socially sanction proposals to build below the line. Their authority over the village's land-use norms is bound up with being the carriers of the inscription's meaning; they do not extract material rent from enforcing it, but their role and identity are constituted by keeping the practice alive."
+    },
+    {
+      "name": "prospective_lowland_developers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Outside investors or younger residents occasionally propose flatter, cheaper construction in the marked zone for economic reasons — proximity to the harbor, lower building cost. They are not part of the informal deliberation that reaffirms the boundary each generation; their preference for lowland building is overridden by social consensus rather than negotiated with them directly."
+    },
+    {
+      "name": "disaster_anthropology_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study the stone as a rare case of intergenerational hazard memory that produced measurable behavioral compliance rather than symbolic commemoration alone. They compare settlement patterns against inundation maps and interview residents to assess whether the prohibition is still functionally observed or has degraded into ritual."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of hazard memory outliving the direct experience of the hazard: a single physical marker and an inherited daily practice of not building below it lets successive generations, who never witnessed the originating tsunami, coordinate settlement location without requiring each generation to independently rediscover or re-derive the safe elevation.",
+    "transfer_function": "Moves construction convenience and lowland economic advantage (flatter land, shorter commutes, cheaper building) away from all residents collectively, in exchange for reduced casualty risk during future tsunami events. No party extracts a rent from another party through this arrangement — the cost and the benefit land on largely the same population across time.",
+    "absent_voices": "Prospective lowland developers and residents attracted by lower building costs are not formal parties to the ongoing social reaffirmation of the boundary; the rule persists through diffuse community sanction rather than a body that would hear their case. Future generations, the largest beneficiary class, obviously cannot speak for themselves and are represented only by the elders' custodianship.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the stone and the practice of observing it vanished overnight, the strongest available evidence is regional: nearby villages that lost or ignored equivalent markers were resettled in the inundation zone within a generation and suffered severe casualties in subsequent tsunamis. Removing the marker here would very plausibly be followed, over one or two generations, by economically-motivated lowland construction and a reoccupation of the hazard zone — the settlement pattern is not a coincidence sitting on top of the stone, it is produced by it.",
+    "founding_problem": "In 1933 (and reinforced after 1960), a tsunami destroyed lowland dwellings and killed residents who had settled below a certain elevation; survivors erected a stone marking that line with an inscription instructing descendants never to build below it, to prevent the community from forgetting the hazard once living memory of the wave faded.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent disaster anthropologists and seismological hazard-mapping studies conducted decades after the marker's erection, with no stake in village land-use politics, corroborate that the marked elevation closely tracks the actual historical inundation line and that villages which retained comparable markers and settlement discipline suffered markedly lower casualties in the 2011 tsunami than nearby villages that had resettled the lowland zone. This corroboration comes from outside the village's own custodial class, which is the load-bearing evidence for treating the founding problem as still live rather than self-servingly claimed."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 78
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 13,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 26,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 39,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 52,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 65,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 78,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 13,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 26,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 39,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 52,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 65,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 78,
+      "value": 0.08,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the behavioral-competence reading of the tsunami-stone kernel: the marker is read as a live, functioning land-use prohibition whose behavioral force is measurable in the actual settlement pattern sustained over 78 years, not merely in the persistence of the physical object. Under this reading, villagers who build hillside homes are making a costly, observable choice — accepting steeper terrain and higher construction expense — in continuous deference to the inscription's instruction. This reading's ε is low because the arrangement functions as coordination with almost no identifiable extraction: no party profits from another party's compliance, and the cost of the constraint (foregone lowland convenience) is borne by the same population that receives its benefit (reduced casualty risk). The sibling reading (commemorative_husk) treats the same stone as having decayed into symbolic gesture without behavioral force; that is a structurally distinct claim with its own ε and is authored as a separate constraint linked via network.affects_constraints, per the ε-invariance principle — this file does not average across the two readings or hedge between them.",
+    "key_agents": [
+      "hillside_settlement_households: primary beneficiaries who bear the daily cost of compliance",
+      "future_generations_of_villagers: the ultimate beneficiary class, unable to consent",
+      "coastal_lowland_ecosystem_users: dual beneficiary/payer who use but do not sleep in the zone",
+      "village_elders_and_custodians: agenda-setters who maintain the practice without extracting rent",
+      "prospective_lowland_developers: excluded voice pressing for economically rational violation",
+      "disaster_anthropology_researchers: analytical observers assessing whether compliance is genuine"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.12) and essentially flat across the interval because, under this reading, the constraint's cost (accepting hillside terrain) and its benefit (reduced casualty risk) land on the same population across generations — there is no structural transfer from a payer class to a beneficiary class. Suppression is moderate (0.28), reflecting real social sanction against lowland building, but this sanction is diffuse community norm-enforcement rather than coercive apparatus; it is authored as non-zero because the excluded developer voice is genuinely overridden, not merely persuaded. Theater ratio is low and rises only slightly (0.03 to 0.08) — the practice remains substantially behavioral (actual settlement avoidance) rather than performative (ritual acknowledgment without practical effect), which is precisely the structural claim this reading makes and the commemorative_husk reading would contest.",
+    "perspectival_gap": "From the hillside households' seat, the constraint reads as an accepted, internalized cost of belonging to a place that survived — barely felt as a constraint at all after 78 years of continuous practice. From the excluded prospective-developer seat, the same arrangement reads as an unexamined social veto blocking economically rational land use with no formal recourse. The elders' agenda-setter seat experiences the constraint as identity-constitutive custodianship rather than either coordination or extraction in the ordinary sense — their exit option is coded identity_locked because relinquishing the marker's authority would dissolve their institutional role.",
+    "directionality_logic": "Beneficiaries (hillside households, future generations, lowland ecosystem users) are coded with low-to-symmetric directionality because the same populations bear the cost of the arrangement across their lifespans — there is no separate extraction-target class. No victims are declared under this reading precisely because behavioral competence implies the cost and benefit are borne jointly, which is the central structural claim distinguishing this reading from a reading in which the rule primarily burdens one group for another's gain.",
+    "mandatrophy_analysis": "The founding problem (hazard memory loss leading to reoccupation of the inundation zone) is authored as still live, corroborated by independent post-2011 casualty comparisons across villages with and without comparable markers — this is the evidence that prevents this reading from being classified as mandatrophy. A constraint whose founding problem had gone dead while the practice persisted by inertia would be the commemorative_husk reading's territory, not this one; the classification here depends on the behavioral record (actual non-construction below the line) rather than on the mere continued existence of the stone.",
+    "kernel_context": "This constraint instantiates the behavioral_competence reading of the stone_land_use_rule kernel — the claim that the tsunami stone functions as a live, behaviorally-enforced land-use prohibition whose 78-year compliance record constitutes genuine ongoing coordination with low extraction. The sibling reading, commemorative_husk, holds that the stone's original prohibitive force has decayed into symbolic commemoration without present behavioral effect (high theater_ratio, near-zero present coordination function). Both readings share the same physical kernel — the inscribed stone and its founding narrative — but diverge on whether daily spatial practice still tracks the marked boundary. This file authors only the behavioral_competence claim; the commemorative_husk claim is a separate story with its own ε, its own metrics, and its own stakeholder analysis, linked via network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "compliance_verification_method",
+      "question": "Is village-wide non-construction below the marked line actually verified against settlement records and hazard maps, or is the '78 years of compliance' claim itself partly a retrospective narrative construction by the custodial elders?",
+      "resolution_mechanism": "Cross-reference historical land registry and construction permit records (where they exist) against the marked elevation line, and compare against satellite/aerial imagery over the interval to establish an independent settlement-pattern timeline not mediated by elder testimony.",
+      "impact": "If independent record-keeping confirms sustained non-construction, the behavioral_competence reading is strongly supported. If the record shows drift toward lowland construction that the community narrative elides, this reading may itself be overstating present compliance and drifting toward the commemorative_husk pattern.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the sustained-compliance claim is independently verifiable or partly self-reported by the custodial class."
+    },
+    {
+      "id": "behavioral_vs_commemorative_boundary_location",
+      "question": "At what point would declining behavioral observance (e.g., a first permitted lowland structure, or a generation that no longer walks the boundary with children) tip this constraint from the behavioral_competence reading into the commemorative_husk reading?",
+      "resolution_mechanism": "Define and track a threshold set of observable practices (school ritual visits, actual construction permits issued below the line, elder succession continuity) and monitor for the first structural breach as a discrete event rather than assuming continuous gradual decay.",
+      "impact": "Without a defined threshold, the two sibling readings could both claim the same ambiguous transitional evidence, making the kernel's decomposition into two constraints appear arbitrary rather than structurally grounded.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The structural location of the boundary between the two sibling readings of the same kernel."
+    },
+    {
+      "id": "excluded_developer_coalition_potential",
+      "question": "Could prospective lowland developers, if organized, mount a legitimate economic-rights challenge to the informal land-use prohibition, and would that constitute the rule's first genuine adversarial contest rather than diffuse social consensus?",
+      "resolution_mechanism": "Track whether any formal legal or municipal challenge to the marked boundary's informal authority is ever filed, and whether local government incorporates the marker into zoning law (formalizing it) or allows economic pressure to erode it.",
+      "impact": "Formalization into zoning law would shift this from a purely informal-norm rope toward a state-backed constraint with different suppression dynamics; an eventual successful challenge would be the clearest evidence of behavioral competence declining.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether latent developer interest could ever organize into an active challenge to the informal prohibition."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "stone_land_use_rule__commemorative_husk"
+    ],
+    "dual_formulation_note": "This story and stone_land_use_rule__commemorative_husk decompose a single natural-language label ('the tsunami stone's authority') into two structurally distinct constraints per the ε-invariance principle. This file (behavioral_competence) authors low ε (0.12) on the claim that daily spatial practice still enforces the boundary. The sibling (commemorative_husk) would author substantially higher theater_ratio and a different classification on the claim that the marker's behavioral force has decayed to symbolic acknowledgment. They share the same physical kernel (the inscribed stone, the founding 1933/1960 tsunami narrative) but are evaluated by different observables (actual settlement pattern vs. ritual/commemorative activity) and therefore must be separate stories rather than one story with a measurement parameter."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "post_disaster_founding_inscription",
+    "drift_state": {
+      "moment": "contemporary_78_year_mark",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "commemorative_husk",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sustained_practice_constitutes_binding_prohibition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "settlement_pattern_is_the_evidence_of_compliance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

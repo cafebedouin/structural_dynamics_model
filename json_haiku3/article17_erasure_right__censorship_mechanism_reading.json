@@ -1,0 +1,359 @@
+{
+  "header": {
+    "constraint_id": "article17_erasure_right__censorship_mechanism_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "5f1b8419-38e7-4891-9164-bbc29f2c6f6e"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.79,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Article 17 Right to Erasure as Content Suppression Mechanism",
+    "topic_domain": "technology_governance/data_protection_law/competition_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "bad_faith_erasure_requesters",
+      "reputation_management_firms",
+      "political_actors_suppressing_critique"
+    ],
+    "victims": [
+      "archival_institutions",
+      "investigative_journalists",
+      "researchers",
+      "independent_media"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "bad_faith_erasure_requesters",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Individuals and organizations weaponizing Article 17 requests to suppress negative but truthful content about themselves: past misconduct, financial fraud, political statements, unflattering biographies. They file erasure requests claiming privacy harm when the actual harm is reputational. They benefit from selective removal of searchable records while maintaining deniability — the law provides the legitimacy, the request obscures the motive. Exit is costless: a rejected request carries no penalty; they can refile under different framing or jurisdiction-shop to sympathetic platforms."
+    },
+    {
+      "name": "reputation_management_firms",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Commercial services that file and manage erasure requests on behalf of clients (usually wealthy individuals and corporations). They have systematized the weaponization: maintain templates, track which platforms and appeal bodies are most permissive, optimize request language, provide compliance documentation. They extract revenue from suppression services, benefiting from the high compliance costs that platforms impose on themselves to avoid regulatory risk."
+    },
+    {
+      "name": "political_actors_suppressing_critique",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Governments, political parties, and officials using Article 17 as a tool to suppress criticism, journalistic investigations, and historical records of misconduct. They file erasure requests for content documenting human rights violations, corruption, or policy failures, framing them as privacy violations. They benefit from information asymmetry: they can suppress but citizens cannot easily suppress content about them. Their exit is constrained only by public pressure and cross-border enforcement limits."
+    },
+    {
+      "name": "archival_institutions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Libraries, web archives, historical societies that preserve records for scholarly and public use. They face escalating erasure requests for content in their collections, often with implicit or explicit threats of regulatory action or lawsuits if they don't comply. Compliance requires costly legal review of each request, technical infrastructure to track and execute removals, and the loss of irreplaceable primary sources. They bear the cost of suppression while having no power to defend their preservation mission — their only exit is withdrawing from EU jurisdiction or ceasing to preserve digital history."
+    },
+    {
+      "name": "investigative_journalists",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Reporters and media organizations that publish investigations, often supported by archived evidence and searchable historical records. They see erasure requests used to suppress their own published work after it becomes inconvenient to the subject. Their reporting becomes less discoverable, harder to corroborate, and vulnerable to denial ('that never happened because the records are gone'). They can litigate erasure decisions, but the cost is prohibitive for small outlets; larger outlets face reputational pressure and advertiser threats from powerful erasure requesters."
+    },
+    {
+      "name": "researchers_and_academics",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Scholars and data scientists studying digital culture, misinformation, political communication, and corruption. They depend on historical records, searchable archives, and the ability to cite sources for reproducible research. Erasure requests fragment the corpus: primary sources disappear, citations break, datasets become incomplete and unreliable. They cannot exit without abandoning EU-relevant research; they cannot negotiate with erasure requesters; their only option is adapting methodology to work around missing data."
+    },
+    {
+      "name": "independent_media_outlets",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Smaller news organizations, fact-checking sites, and citizen journalism platforms that cannot afford dedicated legal teams to defend erasure disputes. They receive erasure requests for investigative content and must choose: comply at the cost of silencing their own work, or resist at the risk of regulatory liability and platform pressure. Their identity is bound to their publication mission, so exiting the EU market means abandoning their geographic and linguistic audience."
+    },
+    {
+      "name": "eu_regulators_and_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "National data protection authorities and EU institutions that interpret and enforce Article 17. They receive complaints from erasure requesters (framing erasure as privacy protection) and from journalists/archivists (framing erasure as censorship). They adjudicate based on privacy-vs-speech balancing tests that favor privacy claimants when the request is strategically framed. They have the power to reshape enforcement but face lobbying pressure from both directions."
+    },
+    {
+      "name": "large_platforms",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Google, social media platforms, and content hosts that execute erasure requests by delisting or removing content from their indexes and services. They are the enforcement mechanism: they receive requests, evaluate them (at vast scale and with imperfect legal judgment), and implement removals. They benefit from treating erasure as a compliance burden (regulatory avoidance) rather than as a front-end design choice (which would require rethinking how they mediate access to information). Their compliance costs are high enough to deter challenging requests."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Article 17 solves a real coordination problem: individuals should have some right to prevent indefinite retention and searchability of their personal data by commercial entities, especially when the data is inaccurate, irrelevant, or their circumstances have changed. The coordination achieved is that platforms maintain and respect deletion procedures, individuals can request removal without negotiating per-platform, and data protection authorities can enforce the standard. This coordination function is genuine: without it, individuals would have no systematic recourse against data retention by powerful companies.",
+    "transfer_function": "The arrangement transfers suppressibility from platforms (who could sell your data indefinitely) to individuals (who can request deletion). But it also transfers from information preservationists and speakers (who cannot defend their own published or archived content from strategic erasure). In high-extraction mode, bad-faith requesters pay nothing to suppress truthful negative content; archivists and journalists bear all the cost (legal review, technical implementation, loss of sources, reputational damage from appearing complicit in suppression).",
+    "absent_voices": "Speakers and publishers — those whose own content is the target of erasure requests — are often absent from erasure request processes. They are rarely notified before removal; they have no standing to contest the request; many don't discover the suppression until researchers or readers notify them. Archivists and historians have even less voice: they are not stakeholders to individual erasure decisions and must litigate or lobby collectively to be heard. The excluded seat is the person or institution whose content is being erased.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Article 17's erasure right disappeared, searchable archives would stabilize, investigative journalism would become more discoverable and harder to suppress retroactively, and bad-faith erasure campaigns would require different mechanisms (direct threats, platform-by-platform takedown requests, legal intimidation without the privacy-rights framing). The world would rearrange: suppression would become visibly coercive rather than framed as privacy protection. The suppressed would know they were suppressed; the suppressor would be transparently acting. That transparency is itself why suppression would become harder.",
+    "founding_problem": "The founding problem was that commercial platforms retained personal data indefinitely, used it for profiling and ad-targeting without informed consent, and gave individuals no mechanism to request deletion. European data protection tradition held that individuals should have a right to control their own data; Article 17 instantiated that right, especially for accurate-but-unwanted data. The genuine founding problem was retention and surveillance, not searchability.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Data protection advocates and regulators attest the founding problem (uncontrolled data retention) is partly live: platforms still retain data, profiling is ongoing, individuals still lack power over their data ecology. Journalists, archivists, and researchers attest the original problem is substantially solved for the stated purpose (you can now delete your own data from major platforms) but the solution has been weaponized to suppress others' speech. No authoritative external source (legislative record, regulatory guidance, academic consensus) attests that suppression of published journalism or historical records was the founding problem Article 17 was meant to solve."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.76,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.79,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "privacy_speech_incommensurability",
+      "question": "Is there a principled boundary between legitimate privacy erasure (protecting personal data from profiling) and illegitimate speech suppression (hiding truthful public-interest content), or is the boundary observer-dependent?",
+      "resolution_mechanism": "Comparative jurisprudence: examine which courts/regulators have articulated stable tests distinguishing personal-data-deletion from content-suppression and whether those tests withstand bad-faith erasure campaigns. If no stable test exists, the distinction is conceptual rather than structural.",
+      "impact": "If the boundary is stable and enforceable, erasure suppression can be filtered at the request-evaluation stage; if it's observer-dependent, the constraint's extractiveness is structural and cannot be reformed without changing the underlying right. The reading hinges on this: if no boundary exists, Article 17 is structurally extractive when weaponized.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether personal privacy and public speech can be coherently separated under Article 17."
+    },
+    {
+      "id": "bad_faith_prevalence_and_detection",
+      "question": "What fraction of Article 17 erasure requests are submitted in good faith (personal privacy interest) versus bad faith (suppression objective)? How reliably can platforms or regulators distinguish them?",
+      "resolution_mechanism": "Empirical audit: audit published erasure decisions and request patterns; survey requesters about their motivations (transparent audit and post-removal interviews with journalists/subjects); track re-requests and jurisdiction-shopping as proxy for bad faith. Measure false-positive rate (rejecting legitimate privacy requests) and false-negative rate (approving suppression requests).",
+      "impact": "If bad faith dominates and is detectable, the constraint is primarily a suppression mechanism and classification as snare is stable. If good faith is dominant, the extraction measured here is a side effect rather than the primary function. If detection is impossible, erasure enforcement is uninformable and suppression is undefendable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The actual composition of erasure requests and the detectability of suppression intent."
+    },
+    {
+      "id": "reading_kernel_relationship",
+      "question": "Does the censorship_mechanism_reading foreclose the privacy_fundamental_reading, or do both readings coexist as defensible positions within different parties' frameworks?",
+      "resolution_mechanism": "Structural coherence test: can a single Article 17 framework simultaneously protect individual control over personal data AND prevent weaponization for content suppression? If yes, the readings coexist (both are true for different request types). If no, one reading's core premise rules out the other's. The resolution is about whether legitimate privacy deletions and bad-faith suppressions share the same causal mechanism (inextricably entangled) or can be separated by design (coherently separable).",
+      "impact": "If readings coexist, both are live positions and regulatory reform could amplify one reading or the other through design choices (narrowing erasure-eligible data, requiring speaker notification, giving archivists standing). If one forecloses the other, the kernel itself is fractured and no single Article 17 regime can satisfy both readings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Kernel reading relationship: whether censorship and privacy readings logically coexist or foreclose each other."
+    },
+    {
+      "id": "suppression_internalization_vs_structural",
+      "question": "When archivists and journalists comply with erasure requests and suppress their own content, is that suppression structural (they have no real choice, facing legal liability and platform pressure) or internalized (they accept the privacy argument and self-censor voluntarily)?",
+      "resolution_mechanism": "Post-compliance trajectory: interview archivists/journalists who complied; measure whether they comply again when legal threat is removed; compare removal rates before/after regulatory clarification that suppression requests should be rejected. If compliance drops when structural pressure is removed, the suppression is primarily structural; if it persists, partly internalized.",
+      "impact": "If structural, the suppression metric (0.79) reflects genuine coercion and the constraint is snare-classified. If internalized, the suppression is self-imposed and the constraint's effective power over the victims is lower than measured. Internalization also suggests that the reading's characterization of victims as unwilling pawns may be inaccurate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression compliance is structural coercion or internalized norm-following."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Article 17 of the GDPR (Right to be Forgotten) grants individuals the right to request deletion of their personal data under specified circumstances. This constraint instantiates the censorship_mechanism_reading: Article 17 as a weaponized right enabling suppression of truthful, published content by bad-faith requesters (individuals, reputation firms, political actors) who frame suppression as privacy protection. The reading's structural delta is that beneficiaries are suppressors (who shift the cost of erasure to archivists, journalists, and researchers), not privacy-vulnerable individuals, and victims are information preservationists, not corporations hoarding data. The founding problem (corporate data retention without consent) has been substantially solved for legitimate privacy cases; the remaining extraction flows from suppression weaponization. This reading coexists with the privacy_fundamental_reading (Article 17 as genuine individual data sovereignty) in the contested kernel — they are live positions held by different communities and neither forecloses the other in principle, though structural design choices can amplify one reading or the other. The censorship_mechanism_reading does not deny that personal privacy interests exist; it asserts that Article 17 as currently enforced enables suppression indistinguishable from privacy protection and that the suppression harm exceeds the privacy benefit for information-dependent communities.",
+    "key_agents": [
+      "Bad-faith erasure requesters (individuals, firms, political actors): Primary beneficiaries. Suppress negative-but-truthful content by weaponizing privacy claims. Zero compliance cost, high speech-suppression benefit.",
+      "Reputation management firms: Organized beneficiaries. Systematize suppression as a commercial service.",
+      "Archivists and researchers: Primary victims. Bear the cost of legal review, technical implementation, and source loss.",
+      "Journalists and independent media: Primary victims. Suppression attacks their published work retroactively.",
+      "Large platforms (Google, Meta, etc.): Agenda-setters. Execute erasure requests; have the power to filter bad-faith requests but treat all erasure as compliance burden.",
+      "EU regulators: Observers. Adjudicate disputes; face pressure from both suppression-weaponizers and speakers."
+    ],
+    "logic_rationale": "Extractiveness is 0.68 at interval end, rising from 0.42 at start (t=0 to t=20): the measured trajectory shows acceleration as suppression weaponization becomes more sophisticated and normalized. Bad-faith requesters scale their operations (reputation firms, political campaigns), platforms internalize erasure as standard practice without distinguishing suppression from privacy, and victims' costs mount (legal defense, source loss, chilling effect on publication). Suppression is 0.79 (high) because the constraint's persistence depends on actively enforcing erasure against the resistance of journalists, archivists, and regulators who contest the requests. Theater ratio rises from 0.15 to 0.42: the constraint begins with legitimate privacy-deletion cases (low theater) but as bad-faith requests accumulate, a growing proportion of enforcement activity is ceremonial (defending suppression using privacy language, performing compliance without separating legitimate from weaponized requests). The accessibility_collapse (0.71) reflects that for bad-faith requesters and suppression beneficiaries, alternatives have largely collapsed: once Article 17 is established as a suppression lever, they have no incentive to exit — the arrangement is stable and low-cost for them. For victims, accessibility_collapse is lower: journalists can publish outside the EU, archivists can store offline, researchers can work with incomplete data — but each alternative is constrained by market realities and mission mandates. Resistance is 0.58 (moderate): archivists, journalists, and some regulators mount real resistance through litigation, media campaigns, and lobbying for regulatory clarification, but resistance is fragmented and resource-constrained relative to the scale of erasure requests.",
+    "perspectival_gap": "The constraint should exhibit strong seat divergence: (1) The agenda-setter (platforms) and suppressors (requesters) compute as benefiting from a legitimate coordination mechanism at their seats — they can frame erasure as routine privacy protection. (2) The victim seats (archivists, journalists) compute the same constraint as extractive coercion — they bear costs they did not choose and cannot defend against. (3) Regulators occupy an observer seat: they see both readings and face pressure from both, but have the structural power to reshape enforcement (e.g., by narrowing what counts as erasure-eligible personal data, requiring speaker notification, allowing archivists standing to contest requests). The engine should compute different per-seat classifications: the requester and platform seats might compute as rope or tangled-rope (beneficiaries coordinating with enforcement), while the victim seats compute snare (extraction with no meaningful benefit). This divergence is the signal the framework exists to capture: a constraint that looks coordinated from the beneficiary seat and extractive from the victim seat is exactly the structure false-consensus masking reveals.",
+    "directionality_logic": "Bad-faith requesters (powerful, arbitrage exit): d near 0.0 (full beneficiary). They impose costs externally and face no reciprocal cost; they can exit by simply not requesting again, which carries zero penalty. Suppression beneficiaries (political actors, reputation firms) similarly have high arbitrage exit and low directionality (d ~0.1-0.25): they use the mechanism and can abandon it without consequence. Archivists and researchers (moderate power, constrained exit, civilizational horizon): d near 0.8 (near-target). They cannot exit without abandoning their mission (identity-locked for some), they bear costs involuntarily, and they have no reciprocal benefit. Journalists (moderate power, constrained exit): d near 0.85. They are trapped between compliance and professional obligation; refusing to comply risks regulatory liability while complying silences their own work. Large platforms (institutional power, mobile exit): d is approximately 0.5 (symmetric). They benefit from the arrangement (compliance-as-policy reduces their liability exposure), but they also bear cost (legal review, technical infrastructure, reputational damage from suppression scandals). Regulatory observers have d near 0.5: they are not extracted from or benefited by the constraint directly; they are positioned to reshape it.",
+    "mandatrophy_analysis": "Article 17's founding problem (corporate data retention without consent) has been substantially solved: individuals can now delete their data, platforms have built deletion procedures, and regulators enforce the right. The founding problem was real and the right addresses it. However, the constraint's primary extractive function (measuring t=20 extractiveness 0.68, suppression 0.79, theater 0.42) is no longer solving the founding problem — it is enabling suppression of published content by bad-faith requesters. The mandatrophy is not complete: legitimate privacy deletions still happen (theater_ratio 0.42 means 42% of enforcement activity is performative; the remaining 58% likely includes real privacy cases). But the constraint persists and grows despite the founding problem's partial resolution, and the extraction comes from a weaponized use case (suppression) not the founding case (data sovereignty). This is mandatrophy in progress: the constraint has outlived its primary function and is now sustained by a secondary extraction function. The reading affirms mandatrophy_resolved: false (the constraint is not yet purely theatrical and the founding problem is not fully dead, only partially resolved and supplemented by suppression extraction).",
+    "kernel_context": "This constraint instantiates the censorship_mechanism_reading of the contested kernel article17_erasure_right. The kernel is the Article 17 right to erasure as codified in GDPR. Three readings exist: (1) privacy_fundamental_reading: Article 17 as individual data sovereignty, protecting people from indefinite corporate data retention. (2) competitive_moat_reading: Article 17 as incumbent protection, raising compliance costs that advantage large platforms with legal budgets over smaller competitors. (3) censorship_mechanism_reading (this one): Article 17 as content suppression enabled by bad-faith erasure requests, harming information preservation and investigative journalism. The readings share the same legal text and enforcement mechanism but instantiate different constraints because they identify different beneficiaries and different primary functions. The censorship_mechanism_reading does not deny that personal privacy interests exist — it asserts that Article 17, as enforced, enables suppression indistinguishable from privacy protection and that the suppression harm exceeds the privacy benefit for information-dependent communities. See the cs_structure section for the formal reading relationships and axioms."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "article17_erasure_right__privacy_fundamental_reading",
+      "article17_erasure_right__competitive_moat_reading"
+    ],
+    "dual_formulation_note": "Article 17 (Right to Erasure, GDPR) is a contested kernel instantiating multiple structurally distinct constraints. The censorship_mechanism_reading identifies bad-faith suppressors as beneficiaries and information preservationists as victims, measuring high extractiveness and suppression. The privacy_fundamental_reading identifies individuals as beneficiaries (gaining data control) and corporations as victims (losing data assets), measuring lower extractiveness. The competitive_moat_reading identifies large platforms as beneficiaries (compliance costs create barriers to entry) and small platforms as victims (disproportionate burden). Each reading uses the same legal text but has different ε, different beneficiary/victim sets, and different classifications. The three stories are linked: changes in regulatory interpretation or enforcement of one reading structurally affect the others (e.g., stricter suppression filtering reduces the censorship reading's extractiveness; stricter compliance requirements raise the competitive_moat reading's cost burden)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "gain_flow": "bad_faith_erasure_requesters",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "privacy_fundamental_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "competitive_moat_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "erasure_as_speech_suppression_enabled_by_privacy_framing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "bad_faith_weaponization_is_structural_not_anomalous",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "privacy_protection_via_data_control",
+    "drift_state": {
+      "moment": "contemporary_suppression_weaponization_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

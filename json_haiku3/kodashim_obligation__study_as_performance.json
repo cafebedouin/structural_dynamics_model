@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "kodashim_obligation__study_as_performance",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "e805ab01-1c65-4420-ab2d-c893ef9c6afe",
+    "created_at": "2026-06-12T14:23:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.0,
+    "suppression": 0.0,
+    "theater_ratio": 0.0,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Kodashim Study as Cosmic Performance",
+    "topic_domain": "religious/legal/textual",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "cosmic_order"
+    ],
+    "vindicated_propositions": [
+      "torah_study_sustains_creation",
+      "sacrificial_law_efficacy_independent_of_physical_temple"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "cosmic_order_beneficiary_status",
+      "question": "Is 'cosmic order' a real beneficiary whose interests the constraint serves, or is it a metaphysical claim that differs fundamentally from how beneficiaries are structured in non-religious constraints?",
+      "resolution_mechanism": "Distinguish whether the constraint's persistence depends on identifiable human beneficiaries who prefer cosmic-order framing as a cover story, or whether the constraint is genuinely grounded in irreducible metaphysical claims that are not human-interest-relative.",
+      "impact": "If cosmic order is metaphysically real (not reducible to human agents' interests), the mountain classification holds and extraction remains zero. If cosmic-order framing is a cover for human institutional interests, FSM triggers and reclassification occurs.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the beneficiary (cosmic order) is a genuine metaphysical entity or a human institution's legitimacy claim."
+    },
+    {
+      "id": "study_performance_equivalence",
+      "question": "Does studying sacrificial law genuinely ENACT the cosmic function of sacrifice, or does it merely SYMBOLIZE or SUBSTITUTE for it while the cosmic function goes unperformed?",
+      "resolution_mechanism": "Empirical: query whether Jewish mystical and halakhic authorities claim performance-equivalence or substitution-with-gap. Conceptual: if performance-equivalence is held universally within the authority structure, it is structurally internal to the reading; if contested within tradition, it generates a sibling reading.",
+      "impact": "If study is genuine enactment, extractiveness stays zero and the constraint remains mountain-classified. If study is acknowledged substitution-with-gap, a performance-deficit enters the constraint's operation and extractiveness rises.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether study performs sacrifice or substitutes for it."
+    },
+    {
+      "id": "reading_contention_within_tradition",
+      "question": "This reading coexists with two competing readings (study_as_archive and study_as_preparation) within Jewish legal tradition. Do the three readings occupy genuinely distinct positions held by different authoritative factions, or does one reading dominate the authority structure and the others represent minority dissent?",
+      "resolution_mechanism": "Historical and textual analysis: examine which reading(s) receive explicit endorsement from authoritative halakhic bodies across the post-Temple period (Talmudic, Medieval, and Modern eras). Map institutional capture: does any single reading control interpretive authority or resource allocation (publication, teaching, institutional legitimacy)?",
+      "impact": "If all three readings are held equally by different recognized authorities (true coexistence), the reading_relations remain coexists_with. If one reading captures institutional authority while the others persist as minority positions, the dominant reading's cs_structure should indicate that influence relations track institutional power, not logical force.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The institutional status of competing readings within Jewish legal tradition."
+    },
+    {
+      "id": "identity_lock_mechanism_for_scholars",
+      "question": "Does the obligation to study sacrificial law depend on structural coercion (external enforcement via community pressure, economic dependency on rabbinical credentials), on identity fusion (scholarly self-concept constituted through religious study), or on neither—genuine voluntary coordination around a shared cosmic commitment?",
+      "resolution_mechanism": "Qualitative: interview Jewish scholars on exit costs; historical: examine communities where study obligation was suspended or refused and what enabled exit without identity collapse; comparative: examine parallel obligations in non-religious scholarly traditions to test whether identity-lock is specific to religious framing.",
+      "impact": "If exit is structurally trapped or identity-locked despite zero extractiveness measurement, the constraint carries suppression not captured by the base metric. If exit is genuinely open (scholars can cease study without social or identity consequence), the mountain classification holds with low suppression. If identity-lock is discovered, the omega documents internalized suppression despite structural openness.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the study obligation is enforced structurally, internalized identitarily, or voluntarily coordinated."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.0,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates one reading of the kodashim obligation—the contested Jewish legal requirement to study sacrificial law despite the Temple's destruction (70 CE) and continued absence. The study_as_performance reading holds that studying the legal corpus enacts the cosmic function of sacrifice itself: the performance is textual, not physical; the Temple's material absence is irrelevant to the law's spiritual efficacy. This reading coexists with study_as_archive (study preserves historical memory and identity without cosmic function claims) and study_as_preparation (study maintains technical knowledge for messianic restoration). The three readings share a kernel—the standing obligation to study kodashim—but instantiate structurally different constraints with different ε values, beneficiary structures, and persistence mechanisms. This story generates the study_as_performance constraint alone; its siblings are separate stories linked via network.affects_constraints.",
+    "key_agents": [
+      "Jewish scholars and communities: holders of the tradition, interpreters of binding obligation",
+      "Cosmic order: the beneficiary in this reading (metaphysical claim, not a human actor)",
+      "Torah and halakhic authority: the framework grounding the performance claim",
+      "Competing readings (study_as_archive, study_as_preparation): coexisting institutional positions within tradition"
+    ],
+    "logic_rationale": "Extractiveness is zero (0.0) under this reading's internal logic: study enacts sacrifice; the constraint generates no transfer from one human agent to another; no victim set exists because the beneficiary (cosmic order) is metaphysical rather than a human party capturing value. The reading's own coherence requires this zero value. Suppression is zero because the constraint is presented as a cosmic obligation, not a coercive arrangement. Theater ratio is zero because the performance claim asserts genuine efficacy, not theatrical maintenance. Accessibility collapse is very high (0.95) because once the cosmic-performance reading is understood, no meaningful alternative to 'study performs sacrifice' exists within that framework—the claim is internally self-reinforcing. Resistance is near-zero (0.05) because the reading faces logical opposition (the sibling readings contest it) but not structural resistance from actors bearing costs—there are no identified cost-bearers. The measurement series show stability across the interval because the reading's internal structure does not change over time; cosmic performance is a synchronic claim, not subject to drift or accumulation mechanics. All measurements are marked 'observed' because they reflect the logical structure of the reading itself, not empirical drift.",
+    "kernel_context": "This constraint is the study_as_performance reading of the kodashim obligation kernel. The kernel is the Jewish legal requirement to study sacrificial law despite the Temple's destruction. Three readings contest how to interpret this obligation: (1) study_as_archive—study preserves historical memory and cultural identity, carries no cosmic function claim, binds only communities choosing to maintain Jewish identity; (2) study_as_performance—studying sacrificial law enacts the cosmic function of sacrifice itself, binds all who acknowledge Torah's authority, Temple absence is irrelevant; (3) study_as_preparation—sacrificial law remains binding technical knowledge preserved for messianic restoration when performance resumes, binds the community to maintain competence for future action. Each reading has a different ε value (0.0 for performance, low-moderate for archive, moderate-low for preparation), different beneficiary structure (cosmic order vs. community identity vs. future readiness), and different institutional capture pattern. The study_as_performance reading is the most theologically ambitious and the most dependent on metaphysical claims; it is also the reading most vulnerable to FSM (false-summit-mountain) if 'cosmic order' is reframed as institutional interests using cosmic language. All three readings share formal dependence on the same text corpus; they diverge in how they interpret the text's binding force and efficacy.",
+    "directionality_logic": "Under this reading, there is no standard directionality calculation because there are no human seats in extraction relationship. The constraint's only named beneficiary is 'cosmic order,' which is not an agent carrying power atoms or exit options. The reading presents the obligation as cosmic law, not as a transfer mechanism between human parties. Therefore, the engine's standard directionality derivation (power + exit + beneficiary/victim declarations → d) does not apply. The constraint is mountain-classified on the basis of its claimed naturalness (cosmic performance is presented as an irreducible metaphysical fact) and its low extraction/suppression metrics. No directionality override is required because the constraint has no seats to differentiate.",
+    "perspectival_gap": "The perspective gap here is not between human seats but between the reading's internal theological claim and external skepticism: within the reading, cosmic order is the beneficiary and study is genuine performance; from an external skeptical position, cosmic order is a metaphysical claim rather than a beneficiary in the transfer sense, and study is symbolic rather than performative. The engine does not compute a per-seat type divergence because all human participants who accept the reading affirm the same structure—study performs sacrifice. Divergence emerges between this reading and its siblings (archive and preparation), not between human seats within this reading. That inter-reading divergence is routed through the network and the omega variables, not through directionality.",
+    "mandatrophy_analysis": "Mandatrophy—function outlived, structure persisted—is NOT present in this reading. The reading explicitly affirms the binding function of the obligation: study IS sacrifice; cosmic order IS sustained; the obligation is not decorative or inertial. The constraint's efficacy claim is ongoing and unconditional on Temple restoration. The study_as_preparation reading (a sibling) instantiates a different mandatrophy structure: preparation is necessary only until restoration occurs; if restoration becomes indefinitely deferred, preparation may accumulate as inertial obligation. This reading escapes that trap by decoupling efficacy from restoration. No mandatrophy omega is needed here."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.0
+  },
+  "network": {
+    "affects_constraints": [
+      "kodashim_obligation__study_as_archive",
+      "kodashim_obligation__study_as_preparation"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the kodashim obligation kernel. All three readings share the same standing obligation to study sacrificial law but interpret its binding force and efficacy differently. study_as_performance (this story) claims study enacts cosmic sacrifice; study_as_archive claims study preserves historical memory without cosmic function; study_as_preparation claims study maintains technical knowledge for future performance. Each reading instantiates a distinct constraint with different ε values, beneficiary structures, and type classifications. The three stories are linked via network.affects_constraints to form a constraint family."
+  },
+  "stakeholders": [
+    {
+      "name": "jewish_scholars",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Scholars and rabbinical authorities interpret and transmit the obligation to study sacrificial law. They affirm the performance reading as binding on anyone accepting Torah's authority. They set the curriculum, determine which texts are studied, and adjudicate disputes about proper understanding. The constraint's persistence depends on their teaching and interpretive authority."
+    },
+    {
+      "name": "jewish_communities",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Communities that affirm the performance reading benefit from participation in cosmic sacrifice through study. Their identity as Torah-observant communities depends partly on accepting binding obligations. Study is presented to them as a binding obligation, not as optional coordination. Exit from the obligation requires exit from the community or from acceptance of Torah authority."
+    },
+    {
+      "name": "cosmic_order",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The metaphysical beneficiary in this reading: cosmic order is sustained by study of sacrificial law. This is a non-agent entity included for theological completeness. The reading asserts that cosmic order genuinely depends on the study obligation; whether this claim is true or is a human institution's legitimacy framing is the subject of the primary omega variable."
+    },
+    {
+      "name": "competing_readings",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Scholars and communities holding the study_as_archive or study_as_preparation readings are excluded from this constraint's specific performance claim. They do not affirm that study enacts cosmic sacrifice; they would object that this reading overstates the obligation's metaphysical reach. Their positions are live within Jewish tradition but are not heard within the internal logic of the study_as_performance reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "No coordination problem solved in the standard sense: the reading presents study as an obligation grounded in cosmic necessity, not as a solution to a collective-action problem among human parties. If reframed, the implicit coordination is among the Jewish community to maintain binding relationship with Torah authority and cosmic order.",
+    "transfer_function": "No transfer from one human party to another. The constraint's operation is study → cosmic efficacy (text → metaphysical result), not study → human beneficiary gain. If forced into transfer language: time and intellectual effort → cosmic order's sustenance, mediated through scholarly and communal practice.",
+    "absent_voices": "Skeptical philosophers and secular scholars who deny the cosmic efficacy claim. Modern Jewish movements (Reform, Reconstructionist) that reframe the obligation as identity-maintenance rather than binding law. Archaeological and historical scholars who emphasize the Temple's material absence and argue the performance claim is unintelligible once materiality is centered.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Adherents of the performance reading believe cosmic order would be destabilized or unmoored from human participation if study ceased; skeptics argue cosmic order (if it exists) is independent of human study and would persist unchanged. The dispute is not tractable within empirical frameworks because it concerns metaphysical necessity.",
+    "founding_problem": "After the Temple's destruction (70 CE), the Jewish community faced a binding obligation to perform sacrifices that could not be physically enacted. The founding problem was theological and legal: how to maintain the obligation's binding force when performance became materially impossible. The performance reading solves this by decoupling efficacy from physicality—study performs sacrifice.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Medieval kabbalists (Luria and others) explicitly affirm the performance reading and argue study sustains cosmic order. Modern scholars of Jewish law (Shlomo Riskin, David Berger) attest to the reading's presence in authoritative halakhic tradition. Skeptics (secular scholars, historians of religion) attest that the problem was socially managed but may not have had a univocal solution—the reading coexists with alternatives rather than being universally adopted. No corroboration exists outside the benefiting parties (those committed to the performance reading) because those parties are the sole authorities within this tradition who affirm the reading's core claim."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "study_as_archive",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "study_as_preparation",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_enacts_sacrifice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "temple_absence_irrelevant_to_efficacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ],
+    "reference_frame": "torah_obligates_sacrificial_study_post_temple",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

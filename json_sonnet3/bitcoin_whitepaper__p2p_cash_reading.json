@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "82a317ab-0aa1-4ed5-a084-c28ac5b243d7"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.38,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin as Peer-to-Peer Electronic Cash (Small-Block, Low-Fee Reading)",
+    "topic_domain": "cryptocurrency_economics/monetary_systems/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "core_developer_coalition",
+      "large_holders_favoring_store_of_value",
+      "layer_two_infrastructure_operators"
+    ],
+    "victims": [
+      "low_value_transaction_users",
+      "remittance_senders_in_low_income_regions",
+      "merchants_seeking_direct_onchain_payment",
+      "unbanked_populations_targeted_by_original_whitepaper"
+    ],
+    "vindicated_propositions": [
+      "peer_to_peer_electronic_cash_thesis",
+      "censorship_resistant_payments_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "core_developer_coalition",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Controls the reference client's merged-pull-request process and de facto sets the block size and fee-market parameters that determine whether the network functions as cash or as settlement layer. Frames small blocks and rising fees as necessary for decentralization and node accessibility, a framing that also protects the value of their accumulated holdings and consulting/foundation revenue tied to the current architecture. Can propose changes but has resisted block size increases since 2015, making this seat both the arrangement's author and its chief beneficiary of stasis."
+    },
+    {
+      "name": "large_holders_favoring_store_of_value",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold large Bitcoin positions and benefit from a narrative that treats the asset as digital gold rather than as a spendable currency; low transaction throughput and rising fees reinforce scarcity-based valuation and discourage on-chain spending that could be read as sell pressure. Faces no cost from fee-market congestion since they transact rarely and hold custody directly."
+    },
+    {
+      "name": "layer_two_infrastructure_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate Lightning Network nodes, custodial wallets, and exchange-based off-chain settlement that exists precisely because on-chain small-value transactions became uneconomical. Their business model is downstream of base-layer congestion; a base-layer fee reduction achieved via block size increase would reduce demand for their services."
+    },
+    {
+      "name": "low_value_transaction_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Attempt to use Bitcoin for everyday purchases or small transfers as the whitepaper described, but face transaction fees that can exceed the value being sent during periods of network congestion. Effectively priced out of on-chain use, forced either to abandon Bitcoin as a payment medium or to route through custodial intermediaries that reintroduce the counterparty and censorship risk Bitcoin was built to eliminate."
+    },
+    {
+      "name": "remittance_senders_in_low_income_regions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Represent the population the original whitepaper's cash framing most directly targeted: people without reliable banking access sending small sums across borders. Fee volatility makes Bitcoin an unreliable remittance rail compared to alternatives, despite the original design intent, because the block size ceiling was held fixed while adoption grew demand for block space."
+    },
+    {
+      "name": "merchants_seeking_direct_onchain_payment",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Wanted to accept Bitcoin directly as payment for goods and services, consistent with the whitepaper's 'electronic cash' framing, but unpredictable confirmation times and fees force a choice between passing volatile costs to customers, adopting custodial payment processors, or abandoning on-chain acceptance entirely."
+    },
+    {
+      "name": "unbanked_populations_targeted_by_original_whitepaper",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Named as the intended beneficiaries of a censorship-resistant peer-to-peer payment system in the original design rationale, but have no seat in the governance process that sets block size and fee policy. Their interest in low-fee, high-throughput transacting is represented, if at all, secondhand by advocacy voices outside the core development process."
+    },
+    {
+      "name": "small_block_node_operators",
+      "role": "observer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Run full nodes on consumer-grade hardware and argue that larger blocks would raise the bandwidth and storage cost of validation, concentrating node operation among fewer, wealthier operators and undermining the censorship-resistance the payment-system reading itself depends on. Their position genuinely constrains the feasible design space even though it also preserves their own low-cost participation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a shared, censorship-resistant ledger that lets any two parties transact directly without a trusted third party, verified by a decentralized network of nodes that ordinary participants can run without specialized infrastructure.",
+    "transfer_function": "Moves transaction-processing capacity (block space) from being allocated by direct use-value (payments, remittances, commerce) toward being allocated by a fee auction that favors high-value transactions and off-chain settlement operators, transferring practical payment utility away from small transactors toward holders and layer-two intermediaries.",
+    "absent_voices": "The unbanked and remittance-dependent populations the whitepaper's abstract explicitly named as beneficiaries have no representation in the technical governance process (BIP review, mailing list consensus, mining pool signaling) that determines block size and fee policy; their interest in cheap, reliable small transactions is asserted by advocates but not held by anyone with commit access.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the current small-block, fee-market architecture disappeared and were replaced with a large-block low-fee design, layer-two infrastructure operators and holders invested in the scarcity narrative would see real value and business-model disruption; low-value transactors and remittance users would regain the payment utility the whitepaper described. Whether the 'world rearranges' depends entirely on which reading of the kernel one holds — this is the structural contest itself, not a side effect of it.",
+    "founding_problem": "The 2008 whitepaper was written to solve double-spending without a trusted third party so that direct electronic cash payments between parties could occur without a financial institution as intermediary, explicitly citing the cost and reversibility problems of the existing mediation-based payment system.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The whitepaper's own text and title ('Peer-to-Peer Electronic Cash System') corroborate the founding problem from outside any present beneficiary group — Satoshi Nakamoto is not a party to current fee-policy debates. Merchant-adoption advocates and academic payment-systems researchers external to core development corroborate that the problem (cheap, direct, intermediary-free payment) remains largely unsolved at current fee levels; core developers corroborate a revised reading in which store-of-value and settlement-layer framing supersede the original text, which is itself the live dispute."
+  },
+  "interval": {
+    "start": 2009,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the peer-to-peer electronic cash reading of the Bitcoin whitepaper kernel: Bitcoin as a censorship-resistant medium of exchange for direct transactions, prioritizing low fees and high transactional throughput, including via block size increases. Assessed by this reading's own lights, the standing arrangement — a small-block, fee-market architecture maintained since the 2017 block size wars — represents a departure from the founding design intent that concentrates payment utility among holders and layer-two operators while denying the low-value transactors and unbanked populations the whitepaper named as its purpose. This is NOT an assessment of the digital-gold reading's endorsed store-of-value arrangement (which would score near-zero extraction under its own lights) nor of the ossification reading's stability arrangement — those are separate constraints, authored separately, linked here via network edges.",
+    "key_agents": [
+      "core_developer_coalition: agenda_setter (institutional/arbitrage) — sets block size and fee policy via commit access",
+      "large_holders_favoring_store_of_value: beneficiary (organized/arbitrage) — benefits from scarcity narrative reinforced by low throughput",
+      "layer_two_infrastructure_operators: beneficiary (organized/mobile) — business model depends on base-layer congestion",
+      "low_value_transaction_users: payer (powerless/trapped) — priced out of on-chain use by fee markets",
+      "remittance_senders_in_low_income_regions: payer (powerless/trapped) — the whitepaper's named beneficiaries, now underserved",
+      "unbanked_populations_targeted_by_original_whitepaper: excluded — no seat in governance despite being the design's stated purpose"
+    ],
+    "logic_rationale": "Extractiveness rises sharply from near-zero (2009-2013, when the network was low-usage and low-fee, cash-like in practice) to a peak during the 2017 block size wars (0.58) when the small-block position was consolidated over community objection, then settles to a moderate-high plateau (0.52) as layer-two solutions absorbed some of the payment demand while base-layer fees remained volatile and periodically prohibitive for small transactions. Theater ratio tracks similarly: the block size debate itself became substantially performative after 2017 as the technical decision had effectively been made and further 'community consensus' discourse served to legitimize a settled outcome rather than genuinely deliberate it. Suppression (governance capture via commit access and mining pool concentration, not physical coercion) rose during the contested fork period and has plateaued.",
+    "directionality_logic": "Core developers and large holders sit at the beneficiary end: they retain control (agenda_setter) or capture upside (scarcity valuation) from the current architecture with maximal exit options (arbitrage — they can exit to other assets or influence policy directly). Low-value transactors, remittance senders, and merchants sit at the target end: trapped or constrained exit, no influence over the parameters that determine whether the system is usable for their purpose, and rising effective cost as fees escalate. Layer-two operators occupy a beneficiary position that is structurally dependent on base-layer dysfunction — their exit option (mobile) reflects that their business could relocate to other congested-base-layer models but not that they would welcome resolution of the underlying scarcity.",
+    "mandatrophy_analysis": "The tangled_rope classification (rather than snare) is warranted because a genuine coordination function persists — decentralized, trust-minimized settlement is real and valuable — but it now operates alongside an asymmetric transfer that the coordination story does not fully explain: block space scarcity was a deliberate policy choice defended as decentralization protection, and that same choice transfers value from small transactors to large holders and layer-two intermediaries. Classifying this as pure Mountain (a supposedly technically necessitated fee market) would launder a contested governance decision as physical law; classifying it as pure Snare would understate the genuine, non-manufactured contribution of decentralized settlement to censorship resistance for large-value and settlement-layer transactions.",
+    "kernel_context": "This story is the peer-to-peer cash reading (p2p_cash_reading) of the bitcoin_whitepaper kernel. It holds that Bitcoin's core legitimating purpose is direct electronic cash for everyday transactions, and evaluates the current small-block architecture as a departure from that purpose under this reading's own lights — the standing arrangement, not the low-fee arrangement this reading would prefer. The sibling digital_gold_reading treats the same standing arrangement as consistent with (indeed supportive of) Bitcoin's true purpose as a scarce store of value, and would author near-zero extraction for the identical fee-market facts. The sibling protocol_ossification_reading treats block size stability itself as the primary virtue, independent of payment-utility outcomes, and would score changes to the current parameters as the extractive move rather than their preservation. These are not three measurements of one constraint; they are three constraints sharing a founding text."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_indeterminacy",
+      "question": "Does the 2008 whitepaper's text and Satoshi's early public statements support the p2p-cash reading as the single controlling intent, or is the text genuinely ambiguous between cash, store-of-value, and stability-first readings such that no reading can claim exclusive textual authority?",
+      "resolution_mechanism": "Close textual analysis of the whitepaper alongside Satoshi's forum posts and emails (particularly 2008-2011 correspondence on scalability), cross-referenced against contemporaneous community understanding before the 2015-2017 block size debates hardened into competing camps.",
+      "impact": "If the text strongly and unambiguously supports the cash reading, the digital-gold and ossification readings bear a heavier burden to justify departure from founding intent, strengthening this reading's founding_problem_status claim of 'live but abandoned.' If the text is genuinely polysemous, all three readings have comparable textual claim and the dispute is irreducibly political rather than interpretive.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the whitepaper's original text privileges one reading over the sibling readings, or is genuinely underdetermined."
+    },
+    {
+      "id": "block_size_technical_necessity",
+      "question": "Was the block size ceiling maintained since 2015 a technically necessitated response to bandwidth/storage/decentralization constraints (mountain-like), or a discretionary policy choice defended with technical language (constructed constraint)?",
+      "resolution_mechanism": "Comparative analysis of large-block alternative chains (e.g., Bitcoin Cash, other high-throughput UTXO chains) for measured node decentralization outcomes versus theoretical predictions made during the 2017 debate; empirical bandwidth/storage cost trends versus consumer hardware cost trends over the interval.",
+      "impact": "If genuinely technically necessitated at the margin actually chosen, this reading's tangled_rope classification is more defensible as 'real constraint, real cost, real tradeoff.' If the specific ceiling chosen was discretionary and other technically viable ceilings existed that were rejected for reasons unrelated to decentralization, the extraction is more clearly a policy choice dressed as necessity, pushing the classification toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the specific block size limit reflects technical necessity or discretionary policy."
+    },
+    {
+      "id": "layer_two_substitutability",
+      "question": "Does the Lightning Network and other layer-two infrastructure fully substitute for base-layer small-value payment capability, such that the payer group's loss is fully mitigated, or does it introduce new custodial/liquidity/complexity costs that constitute a distinct and partial loss?",
+      "resolution_mechanism": "Usage and failure-mode data on Lightning Network channel liquidity, routing failures, and custodial-wallet adoption rates among populations described as unbanked or remittance-dependent.",
+      "impact": "If layer-two fully substitutes, the victim classification for low_value_transaction_users should be softened; if it does not (particularly for populations without reliable internet/smartphone access needed to manage channels), the victim designation and extraction assessment stand as authored.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether off-chain scaling solutions mitigate or merely relocate the harm to small transactors."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_gold_reading",
+      "protocol_ossification_reading"
+    ],
+    "dual_formulation_note": "Part of the bitcoin_whitepaper constraint family (3 readings of one kernel). p2p_cash_reading (this story) evaluates the standing small-block architecture as extractive relative to founding cash-payment intent (tangled_rope). digital_gold_reading evaluates the identical standing arrangement as consistent with store-of-value purpose (expected near-zero extraction, closer to rope/mountain). protocol_ossification_reading evaluates stability itself as the governing virtue and would score departures from current parameters, not their preservation, as the extractive move. Each reading authors its own epsilon over the same underlying facts; the divergence across the three files is the data, not an error to reconcile."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "whitepaper_cash_payment_intent",
+    "drift_state": {
+      "moment": "post_2017_block_size_settlement",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "protocol_ossification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "transactional_utility_is_primary_purpose",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "block_capacity_should_scale_with_transaction_demand",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

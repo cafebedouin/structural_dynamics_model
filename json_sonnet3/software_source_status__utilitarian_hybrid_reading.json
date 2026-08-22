@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__utilitarian_hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "44d9baf5-4337-4c01-887f-b92165754e9a"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.22,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.45,
+    "claimed_type": "rope",
+    "human_readable": "Software Source-Status Norm — Utilitarian/Hybrid Reading",
+    "topic_domain": "software_engineering/political_economy/intellectual_property",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "infrastructure_dependent_developers",
+      "specialized_proprietary_vendors",
+      "mixed_ecosystem_integrators"
+    ],
+    "victims": [
+      "software_freedom_absolutists",
+      "underfunded_maintainers_of_critical_open_infrastructure"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "infrastructure_dependent_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build on widely shared open infrastructure (compilers, OS kernels, protocol libraries) where openness lowers coordination cost and prevents lock-in. Under the hybrid reading, this is exactly the context where openness maximizes welfare, so they benefit from the norm treating infrastructure as presumptively open without having to fight an absolutist battle over every proprietary tool they also use."
+    },
+    {
+      "name": "specialized_proprietary_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sell narrowly-scoped, high-investment tools (CAD systems, scientific instrumentation software, niche compilers) where the hybrid reading's context-dependent logic legitimizes closed licensing as welfare-maximizing when open development would undersupply the specialized R&D investment needed. They benefit from a framework that does not treat their business model as inherently unjust."
+    },
+    {
+      "name": "mixed_ecosystem_integrators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Companies and teams that combine open infrastructure with proprietary specialized components. They benefit from a framework that legitimizes their hybrid stack without categorical guilt, but they also absorb the friction of managing licensing compliance across incompatible models and occasionally pay proprietary rents for components that could, in a different reading, have been open."
+    },
+    {
+      "name": "software_freedom_absolutists",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individuals and organizations (FSF-aligned developers, copyleft advocates) whose ethical commitment treats proprietary software as an injustice regardless of context. The utilitarian hybrid reading structurally denies them a categorical victory: it declares their claim one input to an aggregate calculation rather than a trump. They experience this as a cost — their moral framework is treated as one preference among several, not as the authoritative account of legitimacy — and cannot exit the disagreement without abandoning the commitment that constitutes their position."
+    },
+    {
+      "name": "underfunded_maintainers_of_critical_open_infrastructure",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Volunteer or thinly-funded maintainers of load-bearing open-source infrastructure (build tools, cryptographic libraries, parsers) that the hybrid reading praises as welfare-maximizing precisely because it is open and freely usable by proprietary vendors downstream. The aggregate-welfare framing that celebrates their infrastructure's openness provides no mechanism to compensate them; the same context-dependent optimization that licenses proprietary specialization elsewhere offers them no equivalent revenue model, and their labor subsidizes both open and closed downstream users without them having meaningful exit from maintaining code the ecosystem now depends on."
+    },
+    {
+      "name": "policy_and_procurement_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government agencies and large institutional procurers who must decide licensing policy for public software investment. They read the utilitarian hybrid framework as offering a workable decision procedure (case-by-case welfare assessment) rather than requiring commitment to either absolutist pole, and use it to justify mixed procurement portfolios."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a decision procedure for choosing licensing models per-context (open for infrastructure/coordination goods, proprietary permissible for specialized/high-fixed-cost goods) instead of requiring a single categorical rule across all software, reducing the coordination cost of litigating the open-vs-proprietary question domain-wide for every project.",
+    "transfer_function": "Distributes legitimacy rather than money directly: it moves normative authority away from absolutist claims (either 'all software must be free' or 'creators own their code unconditionally') toward case-by-case welfare assessment, which in practice tends to ratify existing market allocations — open infrastructure stays open and uncompensated, proprietary specialization stays proprietary and monetized, with no redistribution mechanism connecting the two.",
+    "absent_voices": "Underfunded open-infrastructure maintainers are structurally present as praised contributors but absent as parties whose compensation the welfare calculus would revisit; the hybrid framework has no seat at which their uncompensated labor is treated as a cost requiring correction rather than a positive externality to be celebrated. Software freedom absolutists are present in public debate but are treated as one interest group among several rather than as holders of a claim the calculus must satisfy.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the hybrid utilitarian framing vanished, procurement bodies and mixed-ecosystem firms would lose their ready justification for mixed portfolios and would face renewed pressure to pick a side (freedom imperative or property rights), likely triggering more litigation and ecosystem fragmentation — so for institutional actors the world rearranges. But for actual technical practice (which infrastructure gets built open, which specialized tools stay closed) the underlying market and coordination logic that produced today's mixed ecosystem would likely persist even without the framework's articulation, since the pattern predates the explicit utilitarian defense of it — hence contested rather than a clean verdict.",
+    "founding_problem": "The open-source/proprietary licensing debate had polarized into two mutually exclusive ethical camps (software freedom as moral absolute vs. property rights as moral absolute) that provided no workable guidance for the empirical reality that different kinds of software have different optimal licensing regimes depending on network effects, fixed-cost recovery needs, and coordination requirements.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Empirical software-economics researchers and large-scale procurement policy analysts (outside both the FSF tradition and proprietary-vendor trade associations) corroborate that mixed licensing outcomes correlate with the structural features the hybrid reading identifies (network effects favor open, high fixed-cost specialization favors closed). However, labor economists studying open-source maintainer sustainability corroborate a different, unresolved problem: the hybrid framework's celebration of open infrastructure as welfare-maximizing has not been matched by any corroborated mechanism that addresses maintainer compensation, suggesting the founding problem it claims to solve (categorical gridlock) is live-resolved while a problem it does not claim to solve (sustainability of the open commons) remains live and uncorroborated as solved by anyone, including the hybrid reading's own proponents."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the utilitarian/hybrid reading of the software-source-status kernel: the claim that licensing choice should be evaluated case-by-case for aggregate welfare, with openness favored for infrastructure/coordination goods and proprietary models justified for specialized, high-fixed-cost development. This is a genuinely distinct constraint from the freedom-imperative reading (which treats proprietary software as categorically unjust), the pragmatic-development reading (which treats openness as instrumentally superior for quality regardless of ethics), and the property-rights reading (which treats creator control as the default entitlement). The hybrid reading's structural signature is the absence of a categorical victim class — it produces winners and losers only relative to which context a given piece of software falls into, and it explicitly declines to rule out either pole as illegitimate. This story's ε (0.32) reflects that: real extraction exists (uncompensated open-infrastructure labor subsidizing both open and closed downstream users) but it is diffuse and non-categorical rather than the concentrated extraction a pure property-rights or pure freedom-imperative reading would identify.",
+    "key_agents": [
+      "infrastructure_dependent_developers: benefit from openness-favoring context logic",
+      "specialized_proprietary_vendors: benefit from legitimized closed licensing in narrow contexts",
+      "mixed_ecosystem_integrators: benefit from non-categorical legitimacy but pay integration/licensing friction",
+      "software_freedom_absolutists: bear the cost of having their categorical claim treated as one input among several",
+      "underfunded_maintainers_of_critical_open_infrastructure: bear uncompensated-labor cost with no correction mechanism",
+      "policy_and_procurement_bodies: analytical/observer seat applying the framework to procurement decisions"
+    ],
+    "logic_rationale": "Extractiveness is moderate-low (0.32) and suppression is low (0.22) because the hybrid reading imposes no exclusive licensing regime and no enforcement machinery forcing any project into open or closed status — the coordination function is a decision heuristic, not a mandate. Theater ratio starts low (0.15) and rises modestly (0.28) reflecting a real drift: as the hybrid framing has become dominant in procurement and industry discourse, some of its invocation has shifted from genuine context-sensitive analysis toward a rhetorical device used to avoid engaging with either absolutist critique. Accessibility collapse (0.35) is moderate: alternatives (picking one licensing philosophy categorically) remain fully available to any individual project, but the hybrid framing has become sufficiently entrenched in institutional procurement policy that a project or agency wanting to make a categorical ethical stand faces real friction. Resistance (0.45) is meaningful because software freedom absolutists actively and vocally contest the framework's legitimacy on principled grounds.",
+    "perspectival_gap": "Infrastructure developers and specialized vendors experience this as a genuine, low-friction rope: it lets them build and sell without ideological gatekeeping. Software freedom absolutists experience the identical structure as a subtle extraction of moral standing — their categorical claim is structurally demoted to a preference to be weighed, which they regard as already conceding the argument. Underfunded maintainers experience it as praise without payment: the same welfare calculus that celebrates their infrastructure's openness provides no mechanism to route value back to them, so from their seat the 'coordination' function functions as an extraction channel with the language of coordination.",
+    "directionality_logic": "Beneficiaries (infrastructure-dependent developers, specialized vendors, mixed integrators) are declared beneficiaries because the hybrid framework directly legitimizes and lowers friction for their existing practices. Victims are declared for two structurally distinct reasons: software freedom absolutists pay a status cost (their totalizing claim is downgraded to one input), which is identity-locked because their exit would require abandoning the commitment that constitutes their position; underfunded maintainers pay a material cost (uncompensated labor with no correction mechanism), and are trapped because the ecosystem's dependency on their infrastructure exists whether or not they are compensated, and stepping away risks breaking the dependent stack without altering the incentive structure that produced the situation.",
+    "mandatrophy_analysis": "The hybrid reading is structurally the LEAST mandatrophy-prone of the four kernel readings by design — it has no fixed mandate to outlive, since its content IS 'reassess per context.' But this flexibility is also its vulnerability: because it never commits to a fixed rule, it can be invoked post-hoc to justify whatever the market has already produced (rising theater_ratio captures this drift — a framework that started as genuine context-sensitive analysis increasingly gets cited to rationalize existing allocations rather than to actually re-derive them). The classification as rope (not tangled_rope) reflects that no active enforcement compels adoption of this reading; institutions and developers choose it because it is analytically convenient, not because they are coerced.",
+    "kernel_context": "This constraint instantiates the utilitarian_hybrid_reading of the software_source_status kernel: software licensing choices should be evaluated for aggregate welfare on a context-by-context basis, with open models favored for coordination/infrastructure goods and proprietary models justified for specialized high-fixed-cost goods. Three sibling readings of the same kernel are NOT represented in this file: the freedom_imperative_reading (proprietary software as categorical injustice), the pragmatic_development_reading (openness as instrumentally superior methodology, independent of ethics), and the property_rights_reading (creator entitlement to restrict as the default). Each sibling reading has, or would have, its own ε, its own beneficiary/victim structure, and its own classification — the freedom_imperative reading in particular would likely name proprietary vendors categorically as extractive parties, which this hybrid reading explicitly declines to do."
+  },
+  "omegas": [
+    {
+      "id": "welfare_calculus_neutrality",
+      "question": "Is the 'aggregate welfare' calculus genuinely neutral across contexts, or does its selection of which welfare effects count (efficiency, innovation incentive) systematically favor incumbent market allocations over redistributive alternatives (e.g., funded public infrastructure commons)?",
+      "resolution_mechanism": "Comparative institutional analysis: examine whether welfare calculations under this framework have ever recommended converting a currently-proprietary specialized tool to open, or only ever ratify existing open/closed splits along already-existing market lines.",
+      "impact": "If the calculus never recommends departures from existing market allocation, the hybrid reading functions less as genuine optimization and more as post-hoc legitimation of whatever the market already produced — which would push its computed type toward a milder tangled_rope (coordination cover for status-quo protection) rather than a clean rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the utilitarian calculus is a genuine optimization procedure or a legitimation device for existing market splits."
+    },
+    {
+      "id": "maintainer_compensation_gap",
+      "question": "Does the absence of a compensation mechanism for critical open-infrastructure maintainers reflect a genuine gap in the hybrid framework's welfare calculus (an oversight correctable within the framework) or a structural feature (the framework treats uncompensated open labor as a free input rather than a cost, by design)?",
+      "resolution_mechanism": "Track whether emerging mechanisms (Open Source Security Foundation funding, GitHub Sponsors, corporate foundation grants) that attempt to address maintainer sustainability are framed as corrections within the utilitarian hybrid logic, or as external interventions that the dominant welfare framing has resisted or been indifferent to.",
+      "impact": "If correctable within the framework, this constraint's extraction score should fall as compensation mechanisms mature. If structural, the framework's celebration of open infrastructure functions as a stable extraction channel and the extraction score is a floor, not a transient measurement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether maintainer non-compensation is a fixable gap or a structural feature of the hybrid welfare framing."
+    },
+    {
+      "id": "kernel_reading_selection_neutrality",
+      "question": "Is the choice to adjudicate software licensing via THIS reading (utilitarian/hybrid) itself neutral, or does the fact that this reading is currently dominant in industry and policy discourse (as opposed to the freedom-imperative or property-rights readings) reflect the structural power of incumbent mixed-ecosystem firms who benefit from non-categorical legitimacy?",
+      "resolution_mechanism": "Trace the institutional history of how the hybrid framing became dominant in procurement policy and industry discourse — was it adopted through open deliberation weighing all four kernel readings, or did it emerge because it was the reading most compatible with existing large-firm mixed-licensing business models?",
+      "impact": "If the hybrid reading's dominance reflects incumbent-firm structural power rather than open deliberative selection among readings, that would support classifying the SELECTION of this reading (as distinct from its internal content) as itself an instance of soft extraction — a separate, higher-order constraint about which reading gets to adjudicate.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the hybrid reading's real-world dominance among the four kernel readings is itself structurally neutral or favors incumbent mixed-ecosystem power."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__property_rights_reading"
+    ],
+    "dual_formulation_note": "This story is one of four sibling constraints decomposing the natural-language 'software source status' debate per the ε-invariance principle: the label 'should software be open or proprietary' conflates at least four structurally distinct normative claims with different beneficiary/victim structures and different ε. This utilitarian_hybrid_reading is deliberately the lowest-ε, most diffuse-extraction sibling because it declines to name a categorical victim class; the freedom_imperative_reading would author much higher ε for proprietary licensing (naming proprietary vendors and users locked into closed formats as victims), while the property_rights_reading would author near-zero ε for the same arrangement (treating restriction as a legitimate entitlement, naming unauthorized copiers as the violators instead). Each reading is generated as its own file with its own claimed_type and metrics; do not average across them."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "context_dependent_welfare_optimization",
+    "drift_state": {
+      "moment": "post_platform_saturation_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_imperative_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "pragmatic_development_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "property_rights_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "licensing_legitimacy_is_context_relative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "no_licensing_model_is_categorically_privileged",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate_low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

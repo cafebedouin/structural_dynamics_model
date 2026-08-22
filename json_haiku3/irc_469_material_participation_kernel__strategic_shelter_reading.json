@@ -1,0 +1,366 @@
+{
+  "header": {
+    "constraint_id": "irc_469_material_participation_kernel__strategic_shelter_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_irc_469_material_participation_kernel__strategic_shelter_reading",
+    "measurement_id_prefix": "irc469_shelter",
+    "story_uid": "e4608157-cfb1-4721-a00e-a844e3d8c7ab"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IRC §469 Material Participation via Permissive Hour-Counting (Strategic Shelter Reading)",
+    "topic_domain": "tax/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_income_taxpayers_with_passive_investments",
+      "tax_planning_professionals",
+      "passive_activity_loss_deduction_beneficiaries"
+    ],
+    "victims": [
+      "treasury",
+      "wage_earning_public"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_income_taxpayers_with_passive_investments",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Wealthy investors with real estate, partnership, or S-corp passive losses who structure their participation claims to cross material participation thresholds, thereby securing deductions that offset ordinary income and shelter substantial tax liability. Their exit includes legitimate business participation or accepting loss limitations; they choose the former through aggressive compliance at the boundary."
+    },
+    {
+      "name": "tax_planning_professionals",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "CPAs, tax attorneys, and investment advisors who design participation strategies, structure hour-counting arrangements, and elect grouping elections for clients. They benefit through fee-for-service tax planning and grow practices around boundary-straddling compliance. They set the operational norms of what counts as 'participation' by defining protocols clients follow."
+    },
+    {
+      "name": "passive_activity_loss_deduction_beneficiaries",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Investors in syndicated real estate, pass-through entities, and investment partnerships who rely on the permissive reading to qualify their losses as deductible. They depend on the tax deferral these deductions provide; their exit is limited to either accepting loss carryforwards or leaving the investment class entirely."
+    },
+    {
+      "name": "internal_revenue_service",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers and interprets the material participation standards; currently grants safe harbors and rebuttals that embody a permissive reading (grouping elections under Treas. Reg. §1.469-4(d), hours-of-service thresholds at 100/500 hours under §469(h)). Collects revenue foregone through deductions claimed under this reading; enforcement is limited by audit capacity and interpretive ambiguity."
+    },
+    {
+      "name": "treasury",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Bears the cost of foregone revenue from passive loss deductions claimed under the permissive reading. The effective tax base shrinks as higher-income taxpayers utilize grouping elections and hour-counting strategies; the burden shifts to remaining taxpayers or deficit accumulation."
+    },
+    {
+      "name": "wage_earning_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Wage earners and small-business owners who cannot structure passive losses and whose tax bills implicitly subsidize the deductions claimed by higher-income investors. Their exit is purely theoretical: pay the tax they owe or leave the taxed economy. The distributional cost falls invisibly on this seat."
+    },
+    {
+      "name": "strict_interpretation_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Tax scholars, academic commentators, and reform organizations arguing that the permissive reading exceeds Congressional intent and inflates passive loss claims. They publish criticism and propose legislative tightening but hold no enforcement authority; their exclusion from the interpretive process is what the permissive reading depends on."
+    },
+    {
+      "name": "congress",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legislated the passive activity loss limitation in 1986 (IRC §469) with stated intent to prevent high-income taxpayers from sheltering income. The permissive administrative reading and case law have substantially eroded that intent through interpretive drift; Congress has periodically considered but not enacted tighter restrictions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes clear, predictable thresholds (100 hours of participation, 500-hour safe harbor for rental real estate professionals, grouping elections) that enable passive investors to structure legitimate business participation claims without ambiguity. Reduces audit friction and planning uncertainty for multi-activity investors.",
+    "transfer_function": "Moves tax deductions (and deferred tax liability) from the federal treasury and the general wage-earning public to high-income passive investors and their tax advisors, who profit from the deduction-generation and fee-based tax planning the permissive standard enables.",
+    "absent_voices": "Low-income and wage-earning taxpayers who bear the implicit tax-base-contraction cost have no seat at the interpretation table; strict-reading advocates and academic critics publish their case but have no binding role in regulatory revision; Congress nominally controls the standard but lacks the interpretive authority to override settled Treasury guidance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the permissive reading evaporated and the strict gatekeeper reading replaced it, passive loss deductions would contract sharply (many currently claimed hours would not qualify), high-income investors' tax liability would spike, tax advisory practices would downsize or pivot, and federal revenue would jump—estimated at billions annually. The passive investment market would reorganize around entities that can sustain verifiable, substantial personal labor claims or that accept loss carryforwards.",
+    "founding_problem": "IRC §469 was enacted in 1986 to prevent high-income taxpayers from using passive losses to shelter earned and portfolio income. The coordination problem was: how to define 'material participation' clearly enough that taxpayers and administrators could determine eligibility without endless litigation, while maintaining the statute's protective intent?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Treasury and IRS interpret the statute permissively and assert the founding problem is solved via clear safe harbors and grouping elections—efficiency and certainty are achieved. Tax scholars and Congressional researchers (e.g., GAO reports, academic critiques in Tax Notes and Virginia Tax Review) attest the founding problem remains live: the permissive reading has eroded the statute's intent to limit shelter, high-income passive-loss claims have risen, and the original protective gate has been substantially breached. The divergence of corroboration marks the contested status."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The IRC §469 material participation standard, as administered by the Treasury and interpreted in case law, permits high-income investors to qualify passive activity losses for deduction through permissive hour-counting (the 100-hour threshold and 500-hour safe harbor for real estate professionals) and grouping elections (Treas. Reg. §1.469-4(d), allowing taxpayers to aggregate multiple activities for participation assessment). This reading instantiates a strategic-shelter interpretation: the permissive thresholds and grouping machinery enable systematic tax-loss deduction for wealth preservation by investors who structure light participation claims. The sibling strict-gatekeeper reading would require verifiable, substantial personal labor (higher participation bars, narrower grouping) and would dramatically constrain passive loss deductions. This constraint story models the strategic-shelter reading only—the permissive operational threshold that dominates current practice—as a tangled rope: genuine coordination (clear, predictable standards reduce audit friction), but with asymmetric extraction (deductions flow to high-income investors; costs shift to treasury and wage earners). The claim/metric divergence is authored intentionally: the constraint is claimed as a coordinating rope, but the metrics describe substantially extractive, actively enforced operation where the beneficiaries have engineered the permissive boundary precisely to capture deductions.",
+    "key_agents": [
+      "high_income_taxpayers_with_passive_investments: Primary beneficiary; structures participation claims and captures passive loss deductions",
+      "tax_planning_professionals: Primary beneficiary and agenda-setter; designs hour-counting and grouping strategies; sets operational norms",
+      "internal_revenue_service: Dual role (agenda-setter/payer); administers permissive safe harbors; foregoes revenue through deductions",
+      "treasury: Primary payer; bears the cost of foregone revenue from passive loss deductions",
+      "wage_earning_public: Powerless payer; implicitly subsidizes investor deductions through higher effective tax burden",
+      "strict_interpretation_advocates: Excluded; argue for tighter material participation standards but have no binding voice in interpretation"
+    ],
+    "logic_rationale": "Extractiveness climbs from 0.48 (1986 enactment, strict initial guidance) to 0.68 (present, entrenched permissive practice) as the interpretation drifts toward maximum-favorable-to-taxpayers boundaries. The 100-hour threshold and grouping elections were designed to reduce compliance friction, but they also lower the bar for claiming participation—a strategically advantageous shift. Suppression mirrors extractiveness (0.55→0.71): the constraint persists by active enforcement of the permissive boundary, blocking strict-interpretation challenges and Congressional tightening attempts. Theater rises from 0.25 to 0.42, indicating that an increasing share of enforcement activity defends the permissive interpretation (defeating challenges, issuing protective rulings) rather than auditing for genuineness of participation. The plateau after year 30 suggests the reading has stabilized in current practice; further drift would require Congressional intervention or a major interpretive reversal (low probability, hence flat end). The one shared time grid ensures all metrics are authored at each examined point: extractiveness and suppression show parallel acceleration; theater rises more slowly, indicating the coordination story (clear standards, predictable treatment) still supplies partial legitimacy alongside the extraction. This profile is consistent with a tangled-rope reading: real coordination benefit (business certainty, audit clarity) captured alongside asymmetric extraction (tax shelter for the wealthy).",
+    "directionality_logic": "High-income taxpayers with passive investments sit at d≈0.85 (full target of the deduction benefit, but constrained by audit and reporting requirements—not quite d=1.0). Tax professionals sit at d≈0.80 (primary capturer of fee value; beneficiary of the permissive reading's expansion). Treasury and wage earners sit at d≈0.95 and d≈1.0 respectively (pure payers, no countervailing benefit). The IRS occupies d≈0.60 (agenda-setter role, but caught between statutory mandate to enforce 'material participation' and Treasury interpretive guidance that loosens it—duality moderates directionality from pure payer). Strict advocates sit outside the directionality axis (excluded role, no structural integration). The asymmetry—beneficiaries at high d, payers at near-unity d—grounds the extraction claim and satisfies the tangled-rope gate (coordination benefit + asymmetric extraction + active enforcement).",
+    "perspectival_gap": "From the tax-planning professional seat, this is a genuine coordination mechanism: the 100-hour safe harbor eliminates guesswork and enables legitimate business participation claims with confidence. From the Treasury/wage-earner seat, the same mechanism is a permission structure for systematic tax-shelter engineering. The engine computes this divergence from the stakeholder roles and exit options: professionals have arbitrage exit (can shift to other tax strategies if this one closes), while wage earners have trapped exit (must pay the tax system they're burdened by). The perspectival gap is structural, not merely subjective—it flows from differential access to exit and benefit-capture.",
+    "mandatrophy_analysis": "The constraint resolves the mandate conflict by bifurcating interpretation: the statute's protective intent (prevent shelter) persists in the law's text, while the permissive reading (achieve coordination and clarity through generous safe harbors) persists in administrative practice. This is a classic mandatrophy signature: the founding problem (how to prevent shelter while maintaining clarity) has been 'solved' by abandoning the shelter-prevention branch of the mandate and keeping only the clarity branch. The legislative intent is dead (status=dead in founding_problem_status), but the constraint persists because the permissive reading generates coordination benefits that justify its continuation in administrators' eyes and because the beneficiaries have structural power to resist tightening. The theater-ratio climb (0.25→0.42) shows the shift: early enforcement (auditing genuineness) gives way to performative maintenance (defending the permissive interpretation against criticism). Mandatrophy is not declared as a resolved flag because the constraint could be tightened via Congressional action; instead, it is documented in the founding_problem_status=contested and the omega variables addressing interpretive stability.",
+    "kernel_context": "This constraint is the strategic-shelter reading of the IRC §469 material participation kernel. The kernel is the contested statutory language and regulatory safe harbors defining when a taxpayer 'materially participates' in a passive activity (IRC §469(h), Treas. Reg. §1.469-5(a)). The strategic-shelter reading interprets 'material participation' permissively: 100 hours of participation per activity, safe harbor for real estate professionals, grouping elections to aggregate activities—all interpreted to maximize qualifying opportunities and minimize compliance friction. The sibling strict-gatekeeper reading interprets the same kernel narrowly: material participation requires verifiable, substantial personal labor (higher hour thresholds, narrow safe harbors, restricted grouping), aligning with the statute's original protective intent. The readings coexist in contemporary practice (some courts, scholars, and Treasury guidance favor permissive; others argue for strict), but they are fundamentally incompatible within any single interpretive framework—a party cannot simultaneously advocate maximum-permissive and minimum-permissive standards for the same taxpayer. The engine will compute which reading dominates in actual administrative practice; this story models the strategic-shelter reading that currently dominates."
+  },
+  "omegas": [
+    {
+      "id": "material_participation_intent_vs_practice",
+      "question": "Has the permissive hour-counting and grouping-election reading drifted so far from Congressional intent that it constitutes a de facto repeal of the passive-loss-limitation protective function?",
+      "resolution_mechanism": "Congressional explicit amendment of §469 or comprehensive Treasury regulatory restatement that either (a) affirms the permissive reading as aligned with intent, or (b) reverses course and tightens participation standards. GAO studies quantifying the revenue cost of permissive interpretations relative to original cost estimates would inform the divergence.",
+      "impact": "If the reading has substantially repudiated intent, the constraint qualifies as mandatrophy (dead founding problem; constraint persists through beneficiary power, not legislative maintenance). This would argue for reclassification from tangled_rope toward snare (the coordination story is cover; extraction is the primary function). If the reading is consistent with a legitimate evolved interpretation, the tangled_rope classification holds and mandatrophy is contested rather than resolved.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the permissive reading constitutes interpretive drift or intentional evolution."
+    },
+    {
+      "id": "strict_gatekeeper_foreclosure",
+      "question": "Are the strategic-shelter reading and strict-gatekeeper reading genuinely incompatible (foreclosing one another) within a single legal framework, or do they represent a contested boundary that both readings' adherents must simply navigate?",
+      "resolution_mechanism": "Test case or comprehensive regulatory restatement in which the Treasury explicitly commits to ONE reading as the single binding interpretation. Absent that, the readings coexist (via different taxpayers choosing different strategies); presence of that commitment would signal foreclosure.",
+      "impact": "If foreclosed, the strict reading is eliminated from live legal options and the strategic reading dominates absolutely. If coexisting, both readings persist—the strategic reading captures most high-income taxpayers, while some strict-interpretation adherents continue to file conservatively. The structure of the reading_relations determines the engine's contention/resolution path.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the two readings are logically incompatible or pragmatically differentiated."
+    },
+    {
+      "id": "grouping_election_strategic_use",
+      "question": "Do taxpayers employ grouping elections primarily to reduce administrative burden (genuine coordination benefit), or primarily to inflate participation-hour aggregates and lower the effective participation bar (strategic extraction)?",
+      "resolution_mechanism": "Audit data showing the distribution of grouping-election usage across taxpayers: if low-income, small-business, and wage-and-salary taxpayers use grouping equally with high-income investors, the coordination hypothesis holds; if high-income investors disproportionately use grouping to aggregate borderline-participation activities, the strategic hypothesis holds.",
+      "impact": "Coordination primary: the theater_ratio should be lower and the constraint reclassifies toward genuine rope (coordination slightly exceeds extraction). Strategic primary: the theater_ratio accurately reflects performative defense of a permissive boundary, and the tangled_rope classification holds. The engine can detect this through audience analysis (who actually uses the grouping provision) if audit data surface.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether grouping elections serve coordination or strategic tax sheltering."
+    },
+    {
+      "id": "kernel_reading_coexistence_vs_foreclosure",
+      "question": "Is the strategic-shelter reading logically foreclosed by the strict-gatekeeper reading, or do they represent genuinely coexisting contested interpretations?",
+      "resolution_mechanism": "Structured comparison of the foundational axioms: if the axioms contradict directly (e.g., 'material participation requires substantial personal labor' vs. 'material participation can be achieved via 100-hour safe harbor'), test whether a single legal framework can hold both without internal contradiction. No framework can hold both simultaneously for the same taxpayer—so the relation is coexists_with (different parties hold different readings in different cases) rather than forecloses (one reading logically eliminates the other from any framework).",
+      "impact": "Coexists_with (current structure) means both readings persist as live options, and the constraint's classification is determined by which reading dominates in practice (strategic-shelter dominates, hence tangled_rope). If foreclosed, one reading would be eliminated; the strategic-shelter reading's dominance would be absolute, potentially strengthening the snare classification (no legitimate alternative interpretation survives).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical structure of the reading pair within the IRC §469 kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "irc_469_material_participation_kernel__strict_gatekeeper_reading"
+    ],
+    "dual_formulation_note": "The IRC §469 material participation kernel admits two structurally distinct constraint readings: strategic-shelter (permissive hour-counting and grouping, enabling passive-loss deductions for high-income investors) and strict-gatekeeper (verifiable substantial labor, protective intent preserved). These are sibling constraints, not two measurements of one constraint. The strategic-shelter reading (this story) models the permissive interpretation that dominates current practice; the strict-gatekeeper reading models the tighter standard that Congressional intent apparently endorsed. The ε values differ substantially: strategic-shelter exhibits high extractiveness (0.68), while strict-gatekeeper would show lower extractiveness (approaching a mountain of statutory intent if the tighter standard were in force). The kernel is the contested statutory language; the readings are the conflicting interpretive paths through that kernel. This story links to the sibling via network.affects_constraints and omega variables that document the reading-relation structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ],
+  "gain_flow": "high_income_taxpayers_with_passive_investments",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "irc_469_material_participation_kernel__strict_gatekeeper_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "strict_gatekeeper_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "material_participation_permissive_boundary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "grouping_election_interpretation_broad",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "permissive_objective_materiality_framework",
+    "drift_state": {
+      "moment": "contemporary_practice_2026",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

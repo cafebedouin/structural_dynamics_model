@@ -1,0 +1,294 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_findings__management_compliance_narrative",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "story_uid": "24b983b5-471a-4695-a14b-0b494358994a"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.61,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rogers Commission Compliance-Narrative Reading: Documented Risk Awareness Sufficient to Proceed",
+    "topic_domain": "organizational_safety/technology_governance/regulatory_compliance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "program_management",
+      "launch_schedule_stakeholders"
+    ],
+    "victims": [
+      "engineering_veto_authority",
+      "frontline_engineers",
+      "astronaut_crews"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "program_management",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Runs the launch decision process; requires that risk be 'documented and mitigated' rather than 'eliminated' before proceeding. Controls what counts as sufficient documentation, and can waive or reinterpret engineering objections that do not rise to a formally coded no-go criterion. Bears schedule and budget pressure from above and answers for program continuity, not for individual technical judgments."
+    },
+    {
+      "name": "launch_schedule_stakeholders",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Political sponsors, contractors, and mission planners whose funding and reputational continuity depend on maintaining launch cadence. They benefit whenever a compliance narrative lets a flight proceed rather than triggering a costly stand-down, and face no personal exposure when the mitigation-sufficiency judgment turns out wrong."
+    },
+    {
+      "name": "engineering_veto_authority",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Engineers and engineering management who can raise technical objections but, under this reading, cannot stop a launch once management judges the documented mitigation record adequate. Their concerns are absorbed into a paper trail rather than treated as binding; the constraint converts their authority into an input to management's narrative rather than a threshold management must clear."
+    },
+    {
+      "name": "frontline_engineers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individual engineers (e.g. Thiokol seal engineers) who raise specific technical warnings the night before flight. Their objections are logged, discussed, and then overridden through a management sign-off process; they have no formal channel to force a stand-down and career risk attaches to escalating further."
+    },
+    {
+      "name": "astronaut_crews",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the physical consequence of the launch decision. They have no visibility into or vote on whether the documented mitigation record was actually sufficient; the compliance process operates entirely upstream of their knowledge and consent."
+    },
+    {
+      "name": "safety_oversight_boards",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Post-hoc review bodies (including the Rogers Commission itself and later the CAIB) that examine whether the documented-mitigation standard was met in good faith or used as a rationalization vehicle. They can recommend structural changes to the decision process but do not control any individual launch decision in real time."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a workable decision procedure for proceeding under irreducible technical uncertainty: rather than requiring proof of zero risk (which no complex system can supply), it requires a documented record showing risks were identified and mitigations considered, allowing the program to continue operating.",
+    "transfer_function": "Moves de facto launch-stop authority from engineering (which under the sibling absolute-threshold reading would hold a hard veto) to program management, in exchange for a paper record of risk acknowledgment; the cost of an unresolved technical risk shifts from being borne by the schedule (a stand-down) to being borne by whoever is exposed if the risk materializes (crew, and secondarily the engineers whose warnings were overridden).",
+    "absent_voices": "Frontline engineers who raised specific, dated technical objections (the O-ring erosion history, cold-weather seal behavior) had their concerns entered into the documentation process but had no mechanism to convert 'documented objection' into 'stop.' Astronaut crews are entirely absent from the compliance determination despite bearing its full consequence.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this compliance-narrative reading were replaced by a hard engineering threshold, numerous flights that proceeded under 'documented and mitigated' risk records would instead have been grounded pending redesign; program cadence, contractor revenue timing, and the entire launch-decision org chart (who has stop authority) would restructure substantially.",
+    "founding_problem": "Complex, first-of-kind engineering systems generate continuous streams of technical anomalies that can never be fully resolved before flight; some decision procedure is needed to distinguish anomalies that must ground the program from anomalies that can be flown with, since a zero-tolerance standard would make flight operations impossible.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Program management and its sponsors attest the compliance process remains necessary and functioning as designed. The Rogers Commission itself, and later the Columbia Accident Investigation Board, attest from outside the benefiting management chain that the same 'documented and accepted' process was repeatedly used to normalize deviance — treating prior survived anomalies as evidence of acceptable risk rather than as warnings — which is corroboration that the founding problem persists but the compliance-narrative solution to it had substantially failed by the time of both accidents."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.57
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one specific reading of the contested Rogers Commission findings kernel: that the findings establish a compliance PROCESS, under which management may proceed with flight operations upon demonstrating documented risk awareness and mitigation efforts, rather than requiring proof of a resolved technical threshold or a quantified, informed-consent risk acceptance. Under this reading, program management retains launch authority; the coordination function is real (a workable decision procedure under irreducible uncertainty) but the process is also structurally extractive — it converts engineering objections into inputs to a management-authored narrative rather than binding constraints, and the documentation record itself becomes evidence of due diligence regardless of whether the underlying risk was actually mitigated. This reading is deliberately narrow: it does not describe the engineering-threshold reading (a hard technical gate) or the actuarial reading (formal probability quantification and informed acceptance); those are separate constraints with their own ε values, linked via network.affects_constraints.",
+    "key_agents": [
+      "program_management: agenda_setter (institutional/arbitrage) — controls what counts as sufficient documentation",
+      "launch_schedule_stakeholders: beneficiary (institutional/arbitrage) — gains program continuity without exposure",
+      "engineering_veto_authority: payer (organized/constrained) — objections absorbed into paper trail, not binding",
+      "frontline_engineers: payer (powerless/trapped) — raise specific warnings that are logged and overridden",
+      "astronaut_crews: payer (powerless/trapped) — bear the physical consequence with no visibility into the process",
+      "safety_oversight_boards: observer (institutional/analytical) — post-hoc review of whether the standard was met in good faith"
+    ],
+    "logic_rationale": "Extractiveness (0.62) reflects that the compliance-narrative reading channels a genuine coordination problem (deciding when to fly under irreducible uncertainty) through a structure that systematically favors program continuity over the engineering objections it formally consults but does not bind. Theater ratio is high and rising (0.30 to 0.61) because as the process matured across shuttle flights, documentation volume grew substantially while the substantive gating power of that documentation over launch decisions did not — precisely the 'normalization of deviance' pattern the Rogers Commission and later CAIB both identified. Suppression (0.58) is moderate: engineering objections are not silenced outright, they are procedurally absorbed and outvoted, which is a softer but real suppression mechanism. Accessibility collapse is moderate (0.50) — engineers could escalate outside the chain in principle, but doing so carried severe career cost, so the alternative was not fully closed but was heavily discouraged.",
+    "perspectival_gap": "From program management's seat, this looks like reasonable, responsible administration of a coordination problem no absolute standard could solve. From the engineering veto authority's and frontline engineers' seats, the same structure looks like extraction of their technical authority into a documentation exercise that management could route around. The engine should register this seat divergence: management (agenda_setter/beneficiary) computes closer to rope/tangled_rope-as-coordination; the payer seats compute the extraction component.",
+    "directionality_logic": "Program management and launch-schedule stakeholders sit near the beneficiary end: they retain decision authority and capture program continuity benefits without bearing the downside if a documented-but-unresolved risk materializes. Engineering veto authority, frontline engineers, and astronaut crews sit near the target end: their technical judgment and physical safety are the resource being spent to keep the program moving, and their exit options (constrained to trapped) reflect that escalating beyond documentation carried real professional or, for crews, mortal risk with no formal recourse.",
+    "mandatrophy_analysis": "The founding problem (deciding when a complex system with continuous anomalies is safe enough to fly) remains genuinely live — no engineering system can achieve zero anomalies. But this reading's specific SOLUTION (documented mitigation sufficiency as management's proceed criterion) is what both post-hoc bodies found had drifted from a genuine judgment procedure into a rationalization vehicle: prior survived flights with the same anomaly were repeatedly cited as evidence the anomaly was 'mitigated' rather than as escalating warnings. That is the mandatrophy signature — the mandate (safe decision-making under uncertainty) persists as live, but this particular embodiment of it had, by the accidents, substantially inverted into justifying continuation rather than gating it.",
+    "kernel_context": "This constraint instantiates the 'management_compliance_narrative' reading of the rogers_commission_findings kernel: the Commission's findings, read through management's own operating logic, establish that documented risk awareness and mitigation effort — not a resolved technical threshold, not a quantified informed-consent calculation — is the sufficient condition to proceed with flight. Two sibling readings of the same kernel are NOT part of this constraint: 'engineering_absolute_threshold' (flight must cease until technical redesign is certified — a hard gate with no management discretion) and 'actuarial_risk_acceptance' (flight is acceptable if failure probability is quantified and formally accepted by informed decision-makers — a probabilistic, not narrative, threshold). Each reading has its own ε, beneficiary/victim structure, and classification; they are linked here via network.affects_constraints and share the same kernel_id in their omega variables."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection_ambiguity",
+      "question": "The Rogers Commission findings do not themselves specify which of three structurally distinct decision procedures they mandate: a compliance-narrative process (this reading), an absolute engineering threshold, or a quantified actuarial acceptance standard. Which reading NASA's actual post-Rogers institutional practice adopted, and whether that adoption was itself a form of regulatory capture by program management, is not settled by the findings' text alone.",
+      "resolution_mechanism": "Comparative institutional analysis of NASA's actual Flight Readiness Review procedures pre- and post-Challenger, cross-referenced against CAIB's independent findings on Columbia, would show which reading actually governed practice at each point and whether management's compliance-narrative reading displaced a more binding engineering standard over time.",
+      "impact": "If institutional practice shows genuine progressive displacement of engineering veto power by management's documentation standard, this reading's extraction score should be treated as a lower bound; if practice shows the compliance process operated alongside a real, occasionally-exercised engineering stop authority, the extraction score here may overstate the reading's actual operation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which of three structurally distinct readings of the Rogers findings actually governed NASA practice, and when."
+    },
+    {
+      "id": "documentation_sufficiency_standard_drift",
+      "question": "Was the standard for 'sufficient' documented risk awareness fixed at the time of the Rogers Commission, or did it drift downward across subsequent flights as prior undamaged flights were cited as evidence that lower documentation thresholds were adequate?",
+      "resolution_mechanism": "Longitudinal comparison of Flight Readiness Review documentation rigor and content across the shuttle program's operational history, checking whether formal documentation requirements loosened, tightened, or stayed constant while theater_ratio (performative vs. substantive review activity) increased.",
+      "impact": "If the sufficiency bar itself drifted downward, this constraint should be understood as having undergone Goodhart-style substitution — the proxy (documentation exists) replacing the goal (risk is actually reduced) — which would support classifying later-period operation of this reading as closer to snare than tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the compliance documentation standard itself degraded over the program's operational history."
+    },
+    {
+      "id": "management_good_faith_vs_capture",
+      "question": "Is program management's use of the documented-mitigation standard a good-faith attempt to operationalize an intractable judgment problem, or a captured process that management (as beneficiary of continued launch cadence) shaped to systematically favor proceeding?",
+      "resolution_mechanism": "Internal communications discovery (as performed by both the Rogers Commission and CAIB) showing whether management actively sought out or suppressed dissenting technical opinion, and whether documentation requirements were applied symmetrically to go/no-go evidence.",
+      "impact": "Good faith would support treating this as a genuine, if imperfect, coordination mechanism (tangled_rope with real coordination function); capture would support reclassification toward snare, since the coordination story would be functioning primarily as cover for schedule-driven extraction of engineering authority.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the compliance process was administered in good faith or functioned as a captured extraction mechanism."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "rogers_commission_findings__engineering_absolute_threshold",
+      "rogers_commission_findings__actuarial_risk_acceptance"
+    ],
+    "dual_formulation_note": "This story is one of three constraints decomposed from the natural-language concept 'the Rogers Commission findings.' Each sibling reading has its own ε and classification: management_compliance_narrative (this story, tangled_rope, moderate-high extraction) authors a documentation-sufficiency standard that retains management launch authority; engineering_absolute_threshold authors a hard technical gate with no management discretion (expected lower extraction, closer to rope/mountain-adjacent given its coordination purity); actuarial_risk_acceptance authors a formal probability-quantification-and-informed-acceptance standard (expected intermediate extraction, contingent on who counts as 'informed'). Do not average these into one ε — each is a structurally distinct claim the Rogers findings' natural-language label conflates."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "engineering_absolute_threshold",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "actuarial_risk_acceptance",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "documented_mitigation_effort_is_sufficient_condition_to_proceed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "management_retains_final_launch_authority_over_engineering_veto",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_challenger_flight_readiness_review_baseline",
+    "drift_state": {
+      "moment": "pre_columbia_operational_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

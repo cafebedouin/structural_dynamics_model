@@ -1,0 +1,364 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__neutrality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_tcp_ip_interpretation__neutrality_reading",
+    "measurement_id_prefix": "tcp_ip_neutrality",
+    "story_uid": "9ddcef43-4f34-478c-9b6b-1ba8e1a58339"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TCP/IP End-to-End Non-Discrimination Principle (Neutrality Reading)",
+    "topic_domain": "technology_governance/internet_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "edge_innovators",
+      "content_creators",
+      "internet_users"
+    ],
+    "victims": [
+      "internet_service_providers",
+      "network_operators"
+    ],
+    "vindicated_propositions": [
+      "end_to_end_principle",
+      "open_internet_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "edge_innovators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Startup companies and developers building applications and services at the network edge (application layer). The non-discrimination principle protects their traffic from being degraded or blocked based on content type or application identity, allowing them to compete with established players on innovation merit rather than negotiation power with ISPs. They benefit from equal network access without paying gatekeeping fees beyond standard interconnection."
+    },
+    {
+      "name": "content_creators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Video platforms, news organizations, streaming services, and media producers. The neutrality principle prevents ISPs from throttling or blocking their content to favor competing services or to extract side payments. They operate on the assumption that their traffic reaches users at consistent quality determined by the application, not by ISP commercial relationships."
+    },
+    {
+      "name": "internet_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "End users consuming applications and content. They benefit from non-discriminatory access: the application they choose to use reaches them at the same network quality as any other, without the ISP steering them toward preferred services. They also pay indirectly when ISP costs are absorbed into subscription prices or when they subscribe to multiple services because neutral routing makes bundling unnecessary."
+    },
+    {
+      "name": "internet_service_providers",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Carriers operating the infrastructure that moves data end-to-end: broadband providers, mobile network operators. Under the neutrality reading, they are prohibited from prioritizing traffic based on its content, source, or commercial agreements beyond standard capacity pricing. They argue this constrains their ability to manage networks efficiently, monetize premium services, and incentivize infrastructure investment. They bear the cost of carrying all traffic equally while competing services capture the application-layer revenue."
+    },
+    {
+      "name": "network_operators",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Large institutional carriers managing backbone and last-mile infrastructure globally. The neutrality constraint prevents them from operating tiered services where premium payers receive priority, from zero-rating their own applications or partners' content, or from extracting payments from content providers for fast-lane delivery. Their revenue model is constrained to connectivity subscriptions, and their competitive position against tech giants is weakened because they cannot differentiate service based on commercial partnerships."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "National telecommunications regulators (FCC in US, BEREC in EU, national telecom commissions globally) enforcing net neutrality rules. They author and police the non-discrimination requirement, investigate violations, and adjudicate disputes between content and ISPs. Their enforcement machinery includes traffic monitoring, complaint resolution, and remedial authority over ISP conduct."
+    },
+    {
+      "name": "infrastructure_investors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Capital providers (private equity, institutional investors) funding network buildout. They would argue that constraining ISP revenue optimization reduces the financial incentive to invest in infrastructure, particularly in lower-margin rural and underserved markets. They are excluded from the immediate decision-making about net neutrality rules but lobby regulators and fund litigation contesting the neutrality reading."
+    },
+    {
+      "name": "dominant_platforms",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Major technology companies (Google, Meta, Amazon, Apple, Netflix) with large-scale content and application services. They observe and influence net neutrality policy from a complex position: they are beneficiaries of non-discrimination in principle (their traffic receives equal treatment), but they have market power to negotiate favorable terms with ISPs and can absorb content delivery costs through CDNs and direct peering arrangements. They publicly support neutrality while privately seeking exceptions for their own services."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a uniform rule that data packets are forwarded by ISPs based on destination address and network layer protocol, not on content, application type, or commercial relationships. This solves the collective action problem of application innovation: developers can deploy services at the network edge without needing to negotiate with every ISP globally for prioritization or access. The rule coordinates internet users' expectation that any application they install will reach them at consistent network quality.",
+    "transfer_function": "Transfers revenue opportunities from network operators to edge innovators and content providers. ISPs give up the ability to charge content providers for fast-lane access, to zero-rate partner content, to throttle competitors' traffic, and to operate tiered service tiers based on content type. This revenue loss is absorbed by ISPs as a regulatory cost; edge innovators capture the value of deployment freedom.",
+    "absent_voices": "Infrastructure investors and rural broadband providers are structurally excluded: they argue that constraining ISP revenue optimization undercuts the financial case for building networks in marginal markets. They would advocate for differentiated pricing, managed services, and content-specific prioritization to improve ROI. Their absence from the policymaking table reflects the power asymmetry between tech advocacy coalitions and investment communities in telecommunications policy.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the neutrality constraint vanished, ISPs would immediately begin negotiating fast-lane agreements with major content providers, zero-rating would spread, and edge developers would face new gatekeeping barriers. The internet would reorganize around ISP-negotiated service tiers rather than innovation at the edge. Application discovery and distribution would shift from user choice to ISP partnership leverage. Startups without ISP relationships would face degraded service or higher user acquisition costs.",
+    "founding_problem": "Early internet governance lacked a unified rule governing ISP conduct toward traffic. This created asymmetric incentives: ISPs could extract rents from content providers through prioritization threats, while edge innovation depended on unpredictable access quality. The founding problem was framed as: 'How do we prevent ISPs from degrading the internet to gatekeep innovation and extract monopoly rents from applications?'",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Edge innovators and public-interest advocates attest the founding problem is live: ISPs continue to seek ways to monetize content prioritization (evident in zero-rating, sponsored data plans, and 5G tiered-service announcements). ISP industry representatives attest the founding problem is solved: modern internet quality is excellent and competition works (relying on evidence of broadband speed improvements). Telecommunications economists from outside the carrier industry attest the founding problem is partially live: congestion management does require ISP discretion, but open-internet advocates argue the founding problem is about *discriminatory* extraction, not reasonable network management."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the 'neutrality reading' of the contested TCP/IP kernel. The neutrality reading interprets the end-to-end principle as imposing a normative requirement: ISPs must not discriminate among packets based on their content, source application, or commercial relationships beyond standard connectivity subscriptions. This reading benefits edge innovators and content creators by protecting their access to users; it extracts regulatory cost from ISPs by constraining their revenue optimization. The reading competes with two sibling readings: the 'prioritization reading' (TCP/IP permits differentiated quality-of-service as network management) and the 'zero-rating reading' (TCP/IP allows selective exemptions for sponsored content). All three are live positions held by different institutional coalitions. This story authorizes the neutrality reading's specific ε, beneficiary/victim structure, and enforcement requirements, independent of what the alternative readings would compute.",
+    "key_agents": [
+      "Edge innovators: moderate power, mobile exit — protected by non-discrimination rule from ISP gatekeeping",
+      "ISPs/Network operators: institutional power, trapped exit — constrained from prioritizing or zero-rating content",
+      "Internet users: powerless, constrained exit — benefit from non-discriminatory access but absorb cost indirectly",
+      "Regulatory authorities: institutional power, analytical seat — author and enforce the neutrality rule",
+      "Infrastructure investors: excluded from policy table but fund litigation against neutrality constraints",
+      "Dominant platforms: observer position — publicly support neutrality but privately negotiate exceptions"
+    ],
+    "logic_rationale": "Extractiveness is moderate-to-high (0.68 at interval end) because the neutrality reading imposes a real constraint on ISP conduct: it prevents them from monetizing content-based differentiation and from extracting payments from content providers. The constraint is not extraction in the piton sense (abandoned function) but rather a redistribution of revenue opportunities away from ISPs and toward edge innovators. Suppression is high (0.71) because the neutrality constraint requires active enforcement: regulators must monitor traffic, investigate complaints of discrimination, and sanction violations. ISPs have strong incentive to evade the rule (they profit from prioritization), so enforcement machinery must be robust. Theater ratio is moderate (0.42): some enforcement activity is genuine (detecting packet discrimination), but rising theater reflects the increasing sophistication of ISP workarounds (zero-rating presented as 'free services,' prioritization framed as 'network management,' congestion pricing masked as 'peak-hour rates'). The measurement series shows extractiveness and suppression both rising over the interval — the constraint's enforcement has intensified as ISPs have become more creative in their evasion tactics, requiring regulators to harden the rule and strengthen monitoring.",
+    "perspectival_gap": "From the edge-innovator and user seats, the neutrality reading is protective coordination: equal network access enables competition and choice. From the ISP seat, the same constraint is extractive regulation: it prevents them from monetizing their infrastructure and managing networks efficiently according to commercial demand. From the regulatory seat, the constraint is a mandate to prevent ISP market power from corrupting innovation incentives. The engine computes this divergence from the structural data: ISPs are the payers (constrained revenue, high suppression cost), innovators are the beneficiaries (protected access), and the power asymmetry is encoded in exit options (ISPs trapped, innovators mobile). The perspectival gap is NOT resolved by the author; it is the classification's job to measure.",
+    "directionality_logic": "ISPs carry high directionality toward the target end (d near 1.0): they bear the cost of the non-discrimination requirement through constrained revenue and high enforcement burden. The constraint actively suppresses their preferred revenue models. They have trapped exit: they cannot simply abandon the business or redefine their role. Edge innovators carry low directionality (d near 0.0): they receive protection from discrimination without running the constraint's infrastructure, and they have mobile exit (they can deploy services globally and choose where to operate). Internet users are near-symmetric: they benefit from non-discriminatory access but absorb ISP cost increases indirectly, and their exit is constrained (switching ISPs is difficult even if service quality degrades). Regulatory authorities carry analytical directionality (d = 0.5 by convention): they author the constraint but do not extract from it or bear its cost directly. Infrastructure investors are excluded (not seated in stakeholders[]): they would carry high target directionality if admitted (they bear the cost of constrained ISP revenue models), but their exclusion from decision-making is itself part of the constraint's enforcement.",
+    "mandatrophy_analysis": "The neutrality reading faces a mandatrophy challenge: the founding problem (ISPs extracting rents from content providers through prioritization threats) was acute in the 2010s when content distribution was fragmented and ISP leverage was high. The internet has evolved: dominant platforms now operate private peering networks and CDNs, ISP infrastructure quality has improved, and mobile broadband competition has increased in many markets. The founding problem is less live than it was, yet the neutrality constraint persists and its enforcement has intensified (rising suppression_requirement in measurements). This suggests the constraint may be drifting from coordination (solving a real problem) toward theater (maintaining regulatory authority regardless of whether the problem is still severe). The mandatrophy analysis does NOT conclude the constraint should be abandoned — protecting edge innovation remains important — but it flags that the rationale for enforcement intensity should be re-examined. The theater_ratio rise reflects this: regulators are spending more effort on sophisticated ISP workarounds than on genuine discrimination that threatens innovation.",
+    "kernel_context": "This constraint is the 'neutrality_reading' of the contested kernel 'tcp_ip_interpretation'. The kernel is the end-to-end principle embedded in TCP/IP architecture — a technical fact that all data packets are forwarded by routers based on destination address and protocol layer. The contest is over its normative interpretation: does it *require* ISPs to treat all traffic equally, or does it *permit* them to differentiate based on commercial relationships or network management? The neutrality reading instantiates the first interpretation (non-discrimination requirement); the prioritization_reading instantiates the second (differentiation is permitted); the zero_rating_reading instantiates a third (selective exemptions for sponsored content are compatible with the principle). This story generates ONLY the neutrality reading as a clean constraint with its own ε, beneficiary/victim structure, and enforcement requirements. The alternative readings are other files, other constraints, with their own ε values and classifications. The contest itself is routed to omega variables, not embedded in the constraint's metrics."
+  },
+  "omegas": [
+    {
+      "id": "prioritization_vs_nondiscrimination_reading",
+      "question": "Is the end-to-end principle structurally compatible with ISP differentiation based on content type or commercial relationships, or do these practices necessarily violate the principle's requirement that routing decisions depend only on destination address?",
+      "resolution_mechanism": "This is a sibling-reading question, not an empirical dispute. Resolution requires committing to a reading of the technical principle and its normative implications. The prioritization_reading interprets differentiation as network management consistent with the principle; the neutrality_reading interprets it as discrimination that violates the principle. No empirical fact resolves which reading is correct — the readings coexist because they commit to different normative framings of the same technical fact.",
+      "impact": "If prioritization is deemed compatible with end-to-end, regulatory authorities would shift from enforcement toward permitting tiered services, ISP revenue optimization would increase, and edge innovation incentives would weaken. If non-discrimination is deemed mandatory, enforcement intensity increases and ISP revenue remains constrained. The classification changes fundamentally: neutrality persists as a coordination mandate; prioritization becomes a matter of ISP commercial discretion.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading contest: is differentiation compatible with end-to-end architecture, or does it violate the principle?"
+    },
+    {
+      "id": "enforcement_sustainability",
+      "question": "Can regulators sustain the neutrality constraint's enforcement burden as ISP evasion tactics become more sophisticated and as dominant platforms absorb content distribution through private networks (peering, CDNs)?",
+      "resolution_mechanism": "Monitor the theater_ratio trajectory: if theater rises while measured discrimination stays flat, enforcement is increasingly performative rather than functional. If regulators successfully close workarounds and theater stabilizes, enforcement remains effective.",
+      "impact": "If enforcement becomes unsustainable, the neutrality constraint becomes a piton: maintained by regulatory theater rather than functional necessity. The classification would shift from tangled_rope (coordination + extraction) toward piton (performance of a rule whose function has attrophied). ISPs would de facto operate tiered services even under formal neutrality rules.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the neutrality constraint's enforcement machinery can track ISP innovation in evasion tactics."
+    },
+    {
+      "id": "structural_separability_of_management_and_discrimination",
+      "question": "Are network management functions (congestion handling, quality-of-service provisioning) structurally separable from content-based discrimination, or does managing network congestion inevitably require ISPs to prioritize some traffic over others based on its characteristics?",
+      "resolution_mechanism": "Technical analysis and controlled experiments: can ISPs implement congestion management using only destination-based, application-agnostic mechanisms (time-of-use pricing, capacity auctions, destination-based routing adjustment) without inspecting packet content or application type? Or does effective management require content inspection and application-layer decisions?",
+      "impact": "If separable, the neutrality reading is a clean non-discrimination requirement with room for technical network management. If inseparable, some degree of discrimination is necessary for network operation, and the neutrality reading must either permit management-based discrimination or accept network quality degradation as the cost of strict non-discrimination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether congestion management requires content-based discrimination or can be achieved through application-agnostic mechanisms."
+    },
+    {
+      "id": "zero_rating_compatibility",
+      "question": "Is zero-rating (exempting certain content from data caps or charges) compatible with the non-discrimination principle, or does it necessarily constitute unlawful discrimination?",
+      "resolution_mechanism": "This is partly a reading question (how do we define discrimination?) and partly empirical (what are the competitive effects of zero-rating?). Resolution requires both a normative interpretation of 'non-discrimination' and evidence about market effects.",
+      "impact": "The zero_rating_reading interprets selective exemptions as permitted; the neutrality_reading interprets them as discrimination. If zero-rating is deemed permitted, ISPs can legally exempt their own content and partners' content, recovering revenue and creating advantage for partnered services. If zero-rating is deemed discriminatory, ISPs face further revenue constraints and edge innovation benefits further. This directly determines whether the constraint classification holds.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading contest: is zero-rating compatible with non-discrimination, or does it necessarily violate the neutrality principle?"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is ISP compliance with the neutrality rule maintained by structural constraints (technical architecture, regulatory monitoring, costly violation penalties) or by internalized norms (ISPs accepting non-discrimination as legitimate)?",
+      "resolution_mechanism": "Post-compliance test: if enforcement were suspended (monitoring ceased, penalties removed), would ISPs continue non-discriminatory practices? High internalization would predict yes; low internalization would predict rapid reversion to prioritization.",
+      "impact": "If suppression is structural (external monitoring, penalties), the constraint's persistence depends on sustained regulatory effort. If internalization is high, the constraint is more stable and requires less enforcement theater. Low internalization + high regulatory fatigue predicts constraint decay toward piton classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether ISP compliance is structurally enforced or reflects internalized commitment to non-discrimination."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__prioritization_reading",
+      "tcp_ip_interpretation__zero_rating_reading"
+    ],
+    "dual_formulation_note": "The neutrality_reading is one of three structurally distinct interpretations of the TCP/IP end-to-end principle kernel. The three readings compete over whether ISPs may engage in content-based differentiation. They share a common technical referent (how TCP/IP routers forward packets) but commit to different normative frameworks for what routers *should* do. Each reading has its own ε, beneficiary/victim set, and enforcement requirements. The network edges model the kernel contest: the neutrality_reading influences both sibling readings (if neutrality is enforced strictly, it constrains the conditions under which prioritization and zero-rating can occur) but does not foreclose them (all three remain live institutional positions). Readers should examine all three stories to understand the full contested landscape around net neutrality policy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ],
+  "gain_flow": "internet_service_providers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "prioritization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "zero_rating_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "non_discrimination_requirement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "edge_innovation_protection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "open_internet_equal_access",
+    "drift_state": {
+      "moment": "contemporary_platform_concentration_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

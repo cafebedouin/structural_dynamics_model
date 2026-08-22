@@ -1,0 +1,382 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "db652261-839b-4511-a503-8cbe25af221d",
+    "created_at": "2026-06-12T14:23:47Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expected-Value Dominant Risk Framing for Energy Policy",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_industry",
+      "low_carbon_energy_advocates",
+      "quantitative_risk_modelers"
+    ],
+    "victims": [
+      "fossil_fuel_affected_communities",
+      "air_pollution_victims",
+      "mining_workers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The expected-value metric ranks nuclear pathways as dramatically safer than fossil pathways because rare accidents (Chernobyl, Fukushima) are probability-weighted into low statistical contribution to per-TWh mortality, while fossil fuel deaths (air pollution from combustion, mining accidents) accumulate annually and cumulatively at high rates. This metric structure makes nuclear expansion appear technically justified on safety grounds alone, independent of climate or economic arguments. Capital, regulatory approval, and political support flow to pathways that score well on this metric. The industry benefits directly from the metric's framing because it transforms what might be framed as 'rare catastrophic risk' (which would invoke precaution) into 'low expected value' (which appears to justify expansion)."
+    },
+    {
+      "name": "fossil_fuel_affected_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Coal-mining towns, oil-extraction regions, and areas downwind of refineries and coal plants bear the routine, annual mortality from occupational exposure and ambient air pollution. These communities face multiple mortality pathways: mining accidents, occupational disease, respiratory illness from emissions. Under the expected-value metric, their deaths are counted—often meticulously in the per-TWh calculation—but simultaneously rendered less politically urgent than rare catastrophic risks. Their exit is trapped because alternative livelihoods are scarce; transition away from extraction or fossil-dependent economies requires resources and time that policy does not provide. The metric makes their suffering visible to analysis while simultaneously legitimating policy choices that do not prioritize their protection."
+    },
+    {
+      "name": "air_pollution_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Populations exposed to chronic air pollution from fossil fuel combustion (particulate matter, sulfur dioxide, nitrogen oxides, ozone) suffer elevated cardiovascular and respiratory mortality and morbidity. These harms are distributed across large populations; any individual's probability of dying from pollution-related causes is small, but the population-level toll is large. The expected-value metric counts all these deaths in the per-TWh calculation for fossil pathways, which is why fossil pathways score poorly on the metric. However, the very mechanism that makes their suffering visible in numbers (mortality-per-unit-energy) also means they are averaged into a statistical sum. Their exit is constrained by inability to relocate or avoid ambient exposure; they cannot arbitrage."
+    },
+    {
+      "name": "mining_workers",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Coal and uranium miners face occupational mortality from accidents, silicosis, radon exposure, and other mining-specific harms. Their mortality is included in the per-TWh metric for both fossil and nuclear pathways—coal mining deaths weight coal's per-TWh score upward; uranium mining deaths weight nuclear's score slightly upward. However, the absolute number of mining deaths is smaller for uranium than coal, so the net effect is that mining workers' contribution to nuclear's score is modest. Their exit is constrained by economic dependence on extraction wages and geographic concentration in mining regions. As an observer role, they recognize they bear harm regardless of pathway but have little voice in setting the metric or the broader energy policy."
+    },
+    {
+      "name": "quantitative_risk_modelers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Risk analysts, engineers, and policy modelers set and maintain the expected-value metric. They define which harms count (operational deaths vs. lifecycle externalities), at what time horizons (annual vs. discounted present value), and with what probability distributions (empirical frequencies vs. expert judgment on unprecedented events). They defend the metric against critiques by noting its technical rigor and scientific foundation. They have arbitrage because their expertise is portable across framings; if the expected-value metric fell out of favor, they could adapt to alternative risk frameworks. But their professional standing and funding are invested in quantitative analysis, which gives them strong incentive to maintain the expected-value paradigm."
+    },
+    {
+      "name": "tail_risk_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers in catastrophic risk, low-probability high-consequence events, and precautionary approaches argue that acceptable risk should not minimize expected value but rather protect against tail outcomes, even at cost of higher expected harm. They point to climate tipping points, weapons-material proliferation, and unknown unknowns as reasons to weight catastrophic scenarios non-linearly. They are excluded from the metric's construction by institutional standards requiring quantification and probability assignment—their frameworks are characterized as 'unscientific' or 'unmeasurable' rather than as legitimate alternative approaches. Their constrained exit reflects that challenging the metric's authority requires institutional platforms (peer review, policy access) that are gatekept by the modeling community."
+    },
+    {
+      "name": "policy_makers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Government officials and regulators adopt the expected-value metric as their decision standard because it appears technical and objective, enabling them to defer controversial value choices (whose lives matter, what risks are acceptable) to mathematical optimization. The metric provides political cover: 'We are following the science' and 'The data shows nuclear is safer.' They benefit from this framing because it shields them from direct accountability for distributional choices (benefiting nuclear investors while harming fossil communities). Their constrained exit reflects that abandoning the metric would require alternative decision frameworks that are less mathematically defensible and more explicitly normative."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Climate researchers use the expected-value framework to argue that fossil fuels must be rapidly phased out because their per-TWh harm (including climate damages) exceeds all alternatives. The metric aligns climate advocacy with quantitative policy analysis, giving their work political salience and funding. They benefit from the metric's legitimacy. They have mobile exit because their expertise in climate science is useful in multiple policy contexts; if the expected-value metric fell out of favor, they could shift to alternative framings (tail risk from climate tipping points, option value of keeping multiple pathways open to adaptation)."
+    },
+    {
+      "name": "uncertainty_research_community",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Specialists in uncertainty quantification, Knightian uncertainty, and model risk observe that the expected-value metric requires probability estimates for unprecedented or rare events where historical data does not exist—nuclear incidents, climate tipping points—and that assigning probabilities to deep uncertainty is epistemically problematic. Their research suggests the metric's foundation is more assumption-dependent than its defenders acknowledge. They are observers because their critiques do not change how the metric is used; institutional actors continue applying expected-value analysis despite the epistemic concerns, which suggests the metric persists by institutional inertia rather than justified by evidence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a single quantitative standard (mortality-per-TWh) for comparing energy pathways so that policy trade-offs can be analyzed using a common metric rather than incommensurable narratives about safety, equity, and uncertainty.",
+    "transfer_function": "Moves policy priority and capital investment toward pathways (nuclear, renewables) that score well on expected-value mortality reduction, and away from fossil pathways (whose continuous, distributed mortality accumulates heavily in the metric). The losers are fossil-dependent communities whose harm becomes visible in the metric but less politically salient because it is routine rather than catastrophic.",
+    "absent_voices": "Tail-risk advocates, option-value preservationists, and communities bearing concentrated harm from fossil pathways are excluded from the metric's construction and defense. Tail-risk advocates would contest the probability discounting; option-value advocates would contest the assumed future availability of energy pathways; affected communities would contest whether per-TWh averaging erases their local, intergenerational burden.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expected-value framing disappeared, policy would reorganize around precautionary, tail-risk, and option-value framings. Nuclear projects would face higher approval barriers; fossil pathways would not be permitted to trade their distributed harms for lower expected-value scores; energy policy would diversify rather than converge on a single quantitative metric. The current capital and regulatory structure is built on expected-value rankings; removing the metric dissolves that rationale.",
+    "founding_problem": "Energy policy required a common language to compare pathways with different risk profiles: fossil fuels produce slow-accumulating, distributed mortality but no catastrophic low-probability events; nuclear produces negligible routine mortality but rare catastrophic risk. Expected-value analysis promises to make this trade-off technical and comparable.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Risk analysts and quantitative policy communities attest the founding problem remains live and that expected-value framing solves it. Climate scientists and low-carbon advocates affirm the need for a common metric to compare alternatives. Tail-risk advocates, uncertainty researchers, and affected communities contest that the problem is solved: they argue the metric smuggles in value choices (probability discounting, time-aggregation, boundary conditions) that determine the outcome before analysis begins, and that the metric obscures rather than solves the underlying incommensurability. Legislative testimony and independent risk studies from outside the modeling community support the contested verdict."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the EXPECTED-VALUE-DOMINANT reading of the contested kernel 'acceptable risk in energy policy.' Under this reading, acceptable risk is operationalized as minimizing aggregate expected harm across all energy pathways using mortality-per-TWh as the metric. Fossil fuel deaths (air pollution, mining) are counted annually and cumulatively; nuclear accidents are probability-weighted and therefore numerically suppressed. The reading does NOT assert that this is the only defensible framing—it asserts this is the specific technical and normative structure that has come to dominate policy analysis and capital allocation. The sibling readings (catastrophic-tail-dominant and option-value-preserving) are structurally distinct constraints with different ε values, different victim/beneficiary sets, and different classifications; they are NOT alternative perspectives on this constraint.",
+    "key_agents": [
+      "Nuclear industry: benefits from low expected-value scores for nuclear pathways; legitimacy of expansion depends on probability discounting",
+      "Fossil fuel affected communities: bear distributed annual mortality that accumulates heavily in the metric; economically dependent on extraction wages",
+      "Quantitative risk modelers: set and maintain the metric; professional authority invested in expected-value framework",
+      "Policy makers: adopt metric as decision rule; defer value choices to mathematical optimization",
+      "Tail-risk advocates: excluded from metric construction; would frame acceptable risk differently",
+      "Climate scientists: benefit from metric's alignment with decarbonization advocacy"
+    ],
+    "logic_rationale": "Extractiveness (0.68 at interval end) reflects the metric's structure: it systematically ranks pathways in ways that benefit nuclear and low-carbon advocates while disadvantaging fossil-dependent actors, and this ranking is maintained by institutional enforcement (suppression = 0.71). The extractiveness is not from an individual extractor but from the metric's systematic directionality—it makes certain outcomes appear inevitable through technical analysis. Theater rises from 0.25 to 0.42 over the interval as the metric becomes institutionalized and more of the enforcement effort defends the metric against critiques rather than calculating genuine harm reduction. Suppression is substantial and rising because tail-risk and precautionary objections must be actively discounted and excluded to maintain the framework's dominance; without this suppression the metric's authority would erode. Accessibility collapse is moderate (0.58) because alternatives do exist (tail-risk framing is live, option-value approaches exist) but require departure from quantitative policy consensus. Resistance is high (0.72) because the metric's value-laden structure generates sustained pushback from affected communities, uncertainty researchers, and precautionary advocates.",
+    "directionality_logic": "The nuclear industry and modeling institutions sit near d=0.0 (full beneficiary end): the metric's structure predetermines rankings favoring their positions. Fossil-affected communities sit near d=1.0 (full target end): their harm is made visible by the metric, but its structure simultaneously renders that harm less politically actionable because it is routine rather than catastrophic. Policy makers sit near d=0.2-0.3 (slight beneficiary, with some cost): they gain decision clarity from the metric but bear political cost when affected communities contest it. Tail-risk advocates sit near d=0.8 (strong target): their alternative frameworks are systematically excluded from authority. The engine derives d from these positions; the authored claim (tangled_rope) reflects that the metric coordinates policy analysis AND extracts by systematically favoring some positions over others through its structure.",
+    "perspectival_gap": "From the modeling community seat, the constraint is genuine coordination: establishing a common metric solves a real problem of comparing incommensurable pathways. From the affected-communities seat, the constraint is extraction: a metric was chosen that makes their harm visible but politically inert. From the tail-risk seat, the constraint is suppression: their alternative framings are excluded before analysis begins by the requirement to quantify probabilities. The engine computes per-seat classifications; the authored claim does not adjudicate whose perspective is 'correct'—it names the structural asymmetry.",
+    "mandatrophy_analysis": "The founding problem (comparison of energy pathways) remains live but contested. The expected-value metric addresses it by making trade-offs calculable. However, the metric smuggles in value choices (probability discounting, harm aggregation, boundary conditions) that determine outcomes before substantive analysis. Mandatrophy does not clearly apply here because the founding problem has not yet atrophied—the metric continues to be used in policy. What is present is increasing theater (defensive enforcement of the metric's legitimacy) and increasing suppression (exclusion of alternative framings). This pattern suggests the constraint is shifting toward snare-like operation: the metric persists not because it solves the founding problem better than alternatives, but because institutional actors benefit from the outcomes it produces.",
+    "kernel_context": "This story instantiates the EXPECTED-VALUE-DOMINANT reading of the kernel 'acceptable risk in energy policy.' The kernel is the contested commitment: what principle should govern acceptable risk across energy pathways? Three sibling readings represent live positions in policy discourse: (1) EXPECTED-VALUE-DOMINANT (this reading): acceptable risk = minimize aggregate expected harm per-TWh; (2) CATASTROPHIC-TAIL-DOMINANT: acceptable risk = protect against low-probability catastrophic outcomes even at cost of higher expected harm; (3) OPTION-VALUE-PRESERVING: acceptable risk = maintain multiple pathways to preserve flexibility under deep uncertainty. These are not views of a single constraint; they are three structurally distinct constraints with different ε values, different victim/beneficiary sets, and different classifications. The expected-value reading has come to dominate policy analysis and capital allocation, which is why it generates the most extraction and suppression in this ecosystem. The kernel context is that all three readings compete for authority to define acceptable risk; the expected-value reading's dominance is institutional, not epistemic."
+  },
+  "omegas": [
+    {
+      "id": "probability_quantification_epistemic_boundary",
+      "question": "Are the probability estimates used to discount rare nuclear and climate events epistemically grounded, or do they represent deep uncertainty where historical data does not exist and forecasting is not reliable?",
+      "resolution_mechanism": "Expert elicitation comparing nuclear historical event rate with climate modeling uncertainty; assessment of whether probability assignments reflect observed frequencies or represent bets on unprecedented scenarios.",
+      "impact": "If probabilities are epistemically grounded, the expected-value discounting is defensible. If they represent deep uncertainty, the metric's foundation is assumption-dependent and the constraint becomes more snare-like (persists by enforcing quantification rather than justified by it).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether rare-event probability discounting rests on empirical frequency or epistemic assumption."
+    },
+    {
+      "id": "harm_aggregation_temporal_boundary",
+      "question": "Should distributed, continuous annual mortality from fossil fuels be weighted equally with rare catastrophic mortality? Is there a principled way to aggregate harms across time horizons and populations?",
+      "resolution_mechanism": "Normative analysis from ethics and risk philosophy; comparison of metric outcomes under alternative aggregation rules (eg. equity-weighted, maximum-harm-to-most-vulnerable, precautionary floors).",
+      "impact": "If aggregation is arbitrary, the metric's outputs are determined by value choice, not technical analysis. Different aggregation rules would rerank pathways, changing beneficiary/victim sets and shifting d values for institutional actors.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether harm aggregation rules are technical or normative."
+    },
+    {
+      "id": "boundary_condition_hidden_value_choices",
+      "question": "Which harms count in the metric? Are occupational mining deaths counted? Lifecycle emissions? Supply-chain externalities? Climate damages discounted to present value? Coal-plant decommissioning? These boundary choices determine ranking outcomes before calculation.",
+      "resolution_mechanism": "Sensitivity analysis showing how alternative boundary definitions rerank pathways; stakeholder testimony on which boundaries are treated as fixed vs. negotiable.",
+      "impact": "Narrow boundaries (only direct operational mortality) favor nuclear. Broad boundaries (lifecycle, externalities, climate) may shift rankings. The constraint's extractiveness depends on boundary choices; changing boundaries would reclassify pathways and shift which actors benefit.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether metric boundaries are technical or normative."
+    },
+    {
+      "id": "tail_risk_suppression_mechanism",
+      "question": "Is the exclusion of tail-risk advocates and catastrophic-outcome framings from the metric's construction structural (the expected-value framework makes tail risks inexpressible) or institutional (deliberate choice to not engage alternative framings)?",
+      "resolution_mechanism": "Genealogy of metric adoption; analysis of whether tail-risk framings were considered and rejected or simply never entered the conversation.",
+      "impact": "If structural exclusion, the suppression is a feature of the framework itself. If institutional, the suppression is a choice enforced by those maintaining the metric. Both lead to high suppression; the distinction affects whether suppression is perceived as inevitable or changeable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Is tail-risk suppression structural to expected-value framing or institutional enforcement choice?"
+    },
+    {
+      "id": "reading_kernel_committer_structure",
+      "question": "Is the expected-value-dominant reading's persistence the result of its superior epistemic standing, or the result of institutional actors benefiting from its outcomes and maintaining it through authority enforcement?",
+      "resolution_mechanism": "Comparison with sibling readings' empirical performance and legitimacy; analysis of actor incentives and institutional lock-in; historical contingency: what if a different reading had achieved institutional adoption first?",
+      "impact": "If epistemic superiority, the reading is a mountain-like discovery. If institutional, it is a constructed arrangement sustained by power, making the constraint snare-like. This determines whether reclassification is warranted.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the expected-value reading is epistemically dominant or institutionally imposed."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.06
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_dominant",
+      "acceptable_risk_energy__option_value_preserving"
+    ],
+    "dual_formulation_note": "The 'acceptable risk in energy policy' kernel decomposes into three structurally distinct constraints with non-overlapping ε values and victim/beneficiary sets. EXPECTED-VALUE-DOMINANT (this file) dominates policy and capital allocation, systematically benefiting nuclear and disfavoring precaution. CATASTROPHIC-TAIL-DOMINANT (sibling) would elevate rare-event protection and constrain nuclear expansion; it coexists as a live alternative held by tail-risk researchers and environmental advocates. OPTION-VALUE-PRESERVING (sibling) maintains multiple pathways and resists rapid closure; it influences both other readings by creating political pressure for diversification. These three are not views of one constraint—they are three constraints with different ε, beneficiary/victim structure, and classification. They are linked because adoption of the expected-value reading systematically suppresses the alternatives at every institutional level where energy policy is set."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ],
+  "gain_flow": "nuclear_industry",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "option_value_preserving",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "expected_value_commensurability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "probability_quantification_epistemically_grounded",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "scientific_risk_optimization",
+    "drift_state": {
+      "moment": "contemporary_epistemic_challenge_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

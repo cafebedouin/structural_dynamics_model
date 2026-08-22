@@ -1,0 +1,567 @@
+{
+  "header": {
+    "constraint_id": "constitutional_interpretive_authority__parliamentary_supremacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_constitutional_interpretive_authority__parliamentary_supremacy_reading",
+    "story_uid": "d13630f4-31de-4193-9fdb-aa047ce4c7d6"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.79,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Parliamentary Supremacy in Constitutional Interpretation",
+    "topic_domain": "constitutional_law/political_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elected_legislature",
+      "majority_political_faction"
+    ],
+    "victims": [
+      "judicial_branch",
+      "constitutional_minorities",
+      "individual_rights_holders"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "elected_legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Exercises final interpretive authority over constitutional questions and legislative boundaries. Enacts laws without exposure to judicial nullification. Justifies supremacy through direct electoral accountability: legislatures claim their interpretation carries the mandate of the people in a way unelected courts cannot. Collects discretionary power over constitutional meaning directly."
+    },
+    {
+      "name": "judicial_branch",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Stripped of final interpretive authority and power to nullify parliamentary legislation. Can interpret statutes narrowly, but cannot void Acts on constitutional grounds. Bears the institutional cost of subordination to a coordinate branch. Their exit would require constitutional amendment or regime change; constrained to working within the supremacy framework."
+    },
+    {
+      "name": "constitutional_minorities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Have no veto point in the interpretive process once the legislature acts. Their constitutional claims (minority religious rights, non-majoritarian identity protections, speech claims against majoritarian suppression) depend entirely on legislative self-restraint or electoral vindication. Identity locked by citizenship in a polity whose fundamental law they cannot judicially contest; exit means permanent departure."
+    },
+    {
+      "name": "majority_political_faction",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Commands the legislature and benefits from interpretive supremacy when aligned with the governing coalition. Can enact constitutional interpretations into law without judicial review. When out of power, they lose the benefit but retain the structural right to supremacy if they regain the legislature; electoral mobility gives them exit to electoral contestation."
+    },
+    {
+      "name": "individual_rights_holders",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from parliamentarism when legislative majorities protect rights through self-restraint or fear of electoral sanction; suffer when majorities legislate against them. Their rights stand on legislative grace, not judicial-enforced constitutional limits. Constrained exit: cannot leave the jurisdiction without extraordinary cost; cannot mount a legal challenge that nullifies the legislation."
+    },
+    {
+      "name": "unelected_bureaucracy",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Implements parliamentary legislation and constitutional interpretation as handed down. Has no interpretive voice in the supremacy framework but navigates competing claims from legislature and courts in the interval before the supremacy rule settles disputes. Observes from the standpoint of administrative implementation."
+    },
+    {
+      "name": "extra_parliamentary_political_movements",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot contest parliamentary interpretation through judicial channels. Their access to constitutional contestation runs entirely through electoral mobilization or revolutionary change. Structurally excluded from the interpretive process; would argue for judicial checks but cannot raise that claim in the forum that would resolve it (constitutional courts are subordinated)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolves constitutional interpretive deadlock by vesting final authority in a single branch (the elected legislature) rather than allowing endless inter-branch contestation. One actor answers what the constitution means; that answer binds all others and ends the dispute.",
+    "transfer_function": "Transfers the power to define constitutional meaning from a coordinate inter-branch process (or judicial arbitration) to the elected legislature exclusively. Simultaneously transfers authority to override constitutional minority claims from a neutral veto point (the courts) to majoritarian political judgment. Moves the costs of constitutional uncertainty and interpretive contestation from legislatures (who had to seek judicial approval) to courts (who must accept legislative determinations) and to minorities (who lose veto power).",
+    "absent_voices": "Judicial interpreters (courts), constitutional minorities, advocates of rights-based constitutional floors, and extra-parliamentary movements have no voice in the core interpretive forum under this rule. They can petition the legislature, but the legislature judges its own constitutional claims. Extra-parliamentary actors cannot mount a constitutional challenge through courts because courts lack final authority. The supremacy rule itself forecloses their primary avenue for contestation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If parliamentary supremacy vanished — if judicial review of parliamentary acts were suddenly restored — constitutional authority would migrate to courts. Constitutional minorities would immediately gain a new veto point and would likely challenge legislation they had accepted under supremacy. Rights protections would shift from legislative self-restraint to judicially-enforced constitutional limits. The entire political equilibrium would reorganize around the new veto point. Legislatures would face constraints they had not faced; courts would face caseloads and political pressure they had escaped.",
+    "founding_problem": "The founding problem was inter-branch constitutional deadlock: if both legislature and courts claim final interpretive authority, who settles disputes? Parliamentary supremacy solved this by declaring the legislature supreme: it settles its own constitutional bounds, eliminating the deadlock.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Parliamentary supremacy advocates (legal theorists working in Westminster traditions, contemporary practitioners in UK, Australia, New Zealand) attest the problem is live: judicial supremacy systems face activist courts blocking popular legislation; inter-branch balance requires a tiebreaker. Judicial supremacy and coordinate construction advocates attest the problem is displaced: modern parliamentary systems have evolved procedural solutions (ombudspersons, constitutional conventions, legislative review committees, supermajority requirements for constitutional change) that prevent deadlock without concentrating power in the legislature. Empirical evidence is mixed: inter-branch deadlock occurs in some judicial-review systems but not others; parliamentary systems have experienced abuses of supremacy (majoritarian overreach) in others. No consensus corroboration from outside the competing factions; the dispute is structural to constitutional design. Both traditions can cite stable, functioning democratic systems on their side."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.75
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.79
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.77
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.73
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.64
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.59
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.7
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.64
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.6
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.64
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.46
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents one reading of how constitutional authority is distributed: the claim that an elected legislature possesses final interpretive authority over constitutional meaning and that no judicial body may void parliamentary acts. This is a kernel reading instantiating one pole of a contested constitutional question present across multiple democratic jurisdictions. The reading is doctrinally defended by Diceean legal theory, exemplified in traditional Westminster systems (UK, Australia, New Zealand), and continues to motivate resistance to supraconstitutional courts in some polities. The constraint is authored as a Tangled Rope: it coordinates a governance function (decisive resolution of constitutional meaning disputes) while extracting from those subject to parliamentary interpretive latitude without judicial remedy. The measurement series track the accretion of extractiveness over four decades as majoritarian legislatures increasingly exploit the supremacy to override minority constitutional claims, while suppression rises as alternative interpretive avenues (judicial appeal, constitutional challenge) are foreclosed.",
+    "key_agents": [
+      "Elected legislature (Institutional): The sole authority for constitutional interpretation; benefits from discretionary power; defends supremacy through electoral mandate.",
+      "Judicial branch (Institutional): Stripped of nullification power; constrained to narrow statutory interpretation; bears institutional subordination.",
+      "Constitutional minorities (Powerless-class): No veto point in interpretation; depend on legislative self-restraint or electoral redress; identity-locked by citizenship.",
+      "Majority political faction (Powerful): Commands interpretive supremacy when in legislative control; mobile exit through electoral contestation.",
+      "Individual rights holders (Moderate): Dual-positioned: benefit when majorities respect rights through self-restraint; suffer when majorities legislate against them.",
+      "Extra-parliamentary movements (Organized): Structurally excluded from judicial remedy; confined to electoral mobilization."
+    ],
+    "logic_rationale": "Extractiveness is measured at 0.68 at interval end, having risen from 0.45 at interval start. This rise models the observed pattern in parliamentary supremacy systems: the coordination function (decisive resolution of constitutional disputes) is genuine at the outset, but over decades, legislatures increasingly exercise interpretive discretion to override minority rights without judicial check. The majority faction benefits directly from this discretion. Suppression is high (0.71) because the veto points for contesting parliamentary constitutional interpretation are severely constrained: minorities cannot mount a judicial challenge, cannot appeal to a constitutional court, and are confined to electoral remedies against legislative majorities. Accessibility collapse is high (0.79) because once the supremacy rule is internalized, the alternatives to legislative interpretation vanish institutionally — courts cannot offer remedy, constitutional challenge is foreclosed. Theater ratio is moderate (0.42) because parliament maintains rhetorics of constitutional fidelity and self-restraint, but a growing share of interpretive activity (shown in the grid's rising stakes_inflation for individual and class levels) is protecting majoritarian policy rather than coordinating shared constitutional understanding. The coercion grid shows rising stakes_inflation at the individual level (0.38 to 0.48) as minorities face increasing costs for acting on constitutional claims; rising accessibility_collapse as alternatives foreclose; and remarkably flat resistance at the structural and organizational levels (systems defending the supremacy rule are stable), contrasting with declining individual resistance (minorities' unvoiced acceptance that judicial remedy is unavailable).",
+    "perspectival_gap": "The legislature's seat and the constitutional minority's seat should diverge sharply in their experienced types. From the legislative seat (institutional power, arbitrary exit options, national scope), the constraint appears as a Rope — a coordination mechanism that solves the genuine problem of constitutional deadlock while allowing self-interested legislatures to interpret their own bounds. From the constitutional minority's seat (powerless, identity-locked, confined to electoral remedy), the same structure is experienced as a Snare — extractive coercion with no veto point and no meaningful exit. The engine should compute this divergence from the structural data (beneficiary vs. victim, power differential, exit options) without author tuning. The judicial branch's seat is intermediate: it perceives Snare (coerced subordination), yet its institutional nature and generational time horizon grant it more resilience than individual minorities face.",
+    "directionality_logic": "The elected legislature enters the beneficiary set because it collects interpretive discretion — the power to define constitutional meaning without exposure to nullification. It bears no cost from the supremacy rule; it only benefits. The majority political faction collects this benefit when it holds the legislature; when out of power, it retains the right to supremacy if it regains legislative control (mobile exit to electoral contestation). The judicial branch is a clear payer: it loses interpretive authority and is constrained to narrow statutory reading; its exit options are extremely constrained — constitutional amendment or regime change are the only paths to restoration of judicial review. Constitutional minorities are victims: they lose veto power over majoritarian constitutional interpretation; they are identity-locked (cannot leave the polity without extraordinary cost); they are powerless (no independent electoral or institutional base). Individual rights holders are dual-positioned: they benefit when legislatures protect rights through self-restraint but suffer when majorities legislate against them; their directionality depends on which majority controls the legislature and what that majority's constitutional reading permits.",
+    "mandatrophy_analysis": "The founding problem (resolving constitutional deadlock through decisive supremacy) is declared 'contested' in status and 'world_rearranges' in disappearance verdict. This pairing creates a mandatrophy alert: the founding problem is no longer universally acknowledged as a genuine coordination gap. If the constraint disappeared — if judicial review were suddenly restored — the world would rearrange (majorities would lose unilateral interpretive authority; minorities would gain a veto; rights protections would shift from legislative grace to constitutional floors). This rearrangement suggests the constraint's function has shifted: it is no longer primarily solving inter-branch deadlock (arguably a solved problem in modern parliamentary procedure) but rather concentrating interpretive power in the majority for its own benefit. The measured rise in extractiveness (0.45 to 0.68) over the interval substantiates this drift: the coordination function is stable or declining, while the extraction function is rising. Theater ratio climbing (0.25 to 0.42) suggests that parliamentary constitutional discourse is increasingly performative — defending supremacy through rhetoric of judicial activism and tyranny of the bench, rather than engaging genuine coordination gaps. A true Rope (pure coordination) should show stable metrics; the Tangled Rope classification is correct: there is genuine coordination here, but it is increasingly weaponized for asymmetric extraction from powerless minorities.",
+    "kernel_context": "This constraint instantiates the parliamentary_supremacy_reading of the kernel constitutional_interpretive_authority. The kernel is a persisting constitutional commitment: how is final interpretive authority distributed among branches? This reading declares that the elected legislature possesses it exclusively; no court may nullify parliamentary acts on constitutional grounds. Sibling readings (not this constraint) include the judicial_supremacy_reading (courts possess final authority via constitutional rights guardianship) and the coordinate_construction_reading (no single branch is supreme; constitution is constructed through inter-branch dialogue). These readings do not merely disagree about facts; they rest on different core premises about the source of constitutional legitimacy: legislative supremacy rests on electoral mandate and legislative accountability; judicial supremacy rests on principled neutrality and rights protection; coordinate construction rests on institutional balance and contestation. From the parliamentary supremacy reading, judicial supremacy forecloses it (if courts are the final interpreters, legislatures are not); coordinate construction coexists with it within different institutional cultures but influences it (rising emphasis on inter-branch dialogue and legislative consensus has moderated pure parliamentary supremacy claims in some Westminster systems)."
+  },
+  "omegas": [
+    {
+      "id": "legitimacy_source_empirical_vs_normative",
+      "question": "Does the legitimacy of parliamentary interpretive supremacy rest empirically on electoral accountability producing better constitutional outcomes, or normatively on the claim that democracy requires it regardless of outcomes?",
+      "resolution_mechanism": "Comparative constitutional law evidence: (a) Do parliamentary supremacy systems demonstrably protect constitutional minorities better or worse than judicial-review systems? (b) Do legislators cite electoral accountability as justification, or do they invoke inherent democratic authority? (c) How do post-election behavior and rights protection track?",
+      "impact": "If empirically grounded, the constraint's persistence depends on showing that electoral remedy actually protects minorities; if normatively grounded, outcomes are irrelevant to legitimacy, and the constraint persists even when majorities systematically override minorities. This determines whether extractiveness is stable or accumulating.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether parliamentary supremacy legitimacy is consequentialist (electoral accountability works) or deontological (democracy requires it regardless of outcomes)."
+    },
+    {
+      "id": "structural_necessity_of_supremacy",
+      "question": "Is parliamentary supremacy structurally necessary to solve a genuine coordination problem (inter-branch deadlock, governance paralysis), or is it a mechanism for concentrating power that could be replaced by alternative dispute-resolution structures?",
+      "resolution_mechanism": "Natural experiments: jurisdictions that adopted judicial review or moved from supremacy to coordinate construction; examination of whether constitutional deadlock is empirically higher in supremacy systems vs. judicial-review systems; analysis of whether alternative mechanisms (supermajority requirements, constitutional conventions, citizen juries) can resolve interpretive disputes without single-branch supremacy.",
+      "impact": "If replacement mechanisms exist and prevent deadlock without concentrating power, the supremacy rule is pure extraction riding a solved coordination problem — reclassification to Snare. If alternative mechanisms fail and deadlock results, supremacy remains Tangled Rope. This omega addresses the most contestable claim: whether the founding problem (constitutional deadlock) is actually live in modern parliaments or has been displaced by procedural evolution.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether parliamentary supremacy is structurally indispensable or a contingent choice among viable alternatives."
+    },
+    {
+      "id": "electoral_mandate_as_constitutional_constraint",
+      "question": "Does an electoral mandate to govern (a legislative majority) constitute an implicit mandate to redefine constitutional meaning, or is the mandate limited to policy within existing constitutional boundaries?",
+      "resolution_mechanism": "Historical analysis of legislative campaign rhetoric and platforms: do electoral platforms explicitly contest constitutional interpretation, or do they campaign on policy? Analysis of whether legislators treat constitutional meaning as mandated by election results or as bound by prior constitutional settlement. Comparative study of how judicial supremacy systems vs. parliamentary supremacy systems frame the electoral mandate.",
+      "impact": "If the mandate is limited to policy, then parliamentary exercise of interpretive supremacy is extra-mandated and extractive (legislatures are overreaching the democratic instruction they received). If the mandate extends to constitutional meaning, then supremacy has stronger democratic grounding and is less extractive. This determines whether the majority_political_faction truly benefits from the supremacy or whether the benefit is primarily institutional (the office, not the electorate).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether electoral mandates authorise constitutional reinterpretation or are confined to policy governance within fixed constitutional boundaries."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the suppression of constitutional minority claims structural (law forecloses judicial remedy, institutional design prevents appeal) or internalized (minorities have internalized legislative supremacy as legitimate and do not mobilize for constitutional change)?",
+      "resolution_mechanism": "Post-regime-change evidence: if judicial review is suddenly restored, do suppressed minorities immediately mobilize legal challenges, or do they continue accepting supremacy (sign of internalization)? Comparative analysis of how quickly minority rights movements escalate from legislative petition to constitutional demands when new veto points open. Psychological/sociological evidence of identity-lock and normative acceptance.",
+      "impact": "If structural, the suppression will dissipate with institutional change; minorities will mount immediate legal challenges if courts regain authority. If internalized, suppression persists even after the mechanism is removed — minorities have incorporated parliamentary supremacy into their self-conception and may not perceive alternatives as available. Internalization would indicate the constraint's suppressive force is deeper and more durable than the measured suppression_requirement (0.71) suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the measured suppression reflects institutional barriers (structural) or absorbed legitimacy (internalized)."
+    },
+    {
+      "id": "kernel_reading_foreclosure_structure",
+      "question": "Does the parliamentary supremacy reading logically foreclose the judicial supremacy reading within a single constitutional framework, or can both be held (e.g., parliamentary supremacy for ordinary constitutional questions, judicial supremacy for fundamental rights)?",
+      "resolution_mechanism": "Logical analysis: is there a way to hold that legislatures are supreme on most questions but courts are supreme on a limited set of entrenched rights? If yes, the readings coexist (not foreclosed). If no (supremacy is indivisible), then one reading forecloses the other. Examination of hybrid systems (e.g., constitutional courts with limited veto power, legislative override of court decisions with supermajority requirements).",
+      "impact": "If the readings foreclose each other, the kernel cannot stably support both; the system must settle on one. If they coexist, the system might stabilize with partial supremacy or in a state of contestation. This determines the long-term stability of the parliamentary supremacy constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether parliamentary and judicial supremacy readings foreclose each other or can coexist in hybrid forms."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_interpretive_authority__judicial_supremacy_reading",
+      "constitutional_interpretive_authority__coordinate_construction_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel constitutional_interpretive_authority. Three constraint stories decompose the kernel: parliamentary_supremacy_reading (this file), judicial_supremacy_reading (alternate), and coordinate_construction_reading (alternate). Each reading instantiates a different authority distribution, different beneficiary/victim structure, and different ε value. The three stories share the kernel but differ in core premise (source of constitutional legitimacy), axioms (foundational normative claims), and reading_relations (how this reading relates to siblings). All three stories are linked via network.affects_constraints to enable kernel-level analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "coordinate_construction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legislative_supremacy_indivisible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "electoral_mandate_constitutional_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "parliamentary_constitutional_supremacy",
+    "drift_state": {
+      "moment": "contemporary_judicial_activism_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "elected_legislature",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate_to_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "constitutional_interpretive_authority__coordinate_construction_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

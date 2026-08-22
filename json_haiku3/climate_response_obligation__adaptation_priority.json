@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "climate_response_obligation__adaptation_priority",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_climate_response_obligation__adaptation_priority",
+    "story_uid": "ee33876b-afaa-439b-a0fe-658d182a4d9d",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Climate Adaptation Priority over Mitigation (2-3°C Warming Acceptance)",
+    "topic_domain": "climate_policy/political_economy/intergenerational_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_income_current_generation",
+      "fossil_fuel_capital",
+      "energy_intensive_industries"
+    ],
+    "victims": [
+      "future_generations",
+      "global_south_populations",
+      "climate_vulnerable_communities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_income_current_generation",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Wealthy nations and their current populations avoid the transition costs of rapid decarbonization (infrastructure replacement, employment disruption, energy price shocks) by accepting higher warming as 'inevitable' and planning only for adaptation. They retain economic advantages, consumption patterns, and financial security during their lifetime. Adaptation investment flows disproportionately to their own regions where wealth enables protective infrastructure."
+    },
+    {
+      "name": "fossil_fuel_capital",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Oil, gas, and coal industries gain extended operational runway by framing deep mitigation as economically impossible. Delayed transition means continued extraction, capital realization, and political influence. The adaptation frame does not disrupt incumbent energy systems; it treats warming as externality to be managed rather than cause to be eliminated."
+    },
+    {
+      "name": "energy_intensive_industries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Steel, cement, chemicals, aviation, and manufacturing industries avoid costly transformation of production processes. They argue adaptation is cheaper than retooling industrial capacity for zero-carbon pathways. They maintain profit margins and operational continuity."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Will inherit a climate 2-3°C warmer than pre-industrial baseline with compound harms: extreme weather, ecosystem collapse, crop failures, water scarcity, migration crises. They have no seat at the table where this constraint is set. They cannot exit the constraint or renegotiate it. They bear the adaptation costs that wealthy regions do not prevent."
+    },
+    {
+      "name": "global_south_populations",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bangladesh, sub-Saharan Africa, Pacific island nations, and other climate-vulnerable regions experience warming disproportionately: monsoon intensification, sea-level rise, drought, heat extremes. They have contributed least to cumulative emissions but face the greatest physical hazard. Adaptation funding promised by wealthy nations is chronically under-delivered. Their exit option is limited migration, often met with border restrictions."
+    },
+    {
+      "name": "climate_vulnerable_communities",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Indigenous communities, small-island states, subsistence farmers, and urban poor in climate frontlines carry disproportionate impacts: land loss, livelihood collapse, health crisis. They have minimal capacity to adapt individually and are often excluded from national climate policy forums. The adaptation frame that accepts 2-3°C warming treats them as a cost to be managed rather than injustice to be prevented."
+    },
+    {
+      "name": "adaptation_industry",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Emerging sector of consultants, engineers, and technology firms selling climate resilience solutions: seawalls, drought-resistant crops, climate-controlled infrastructure, disaster insurance, relocation services. They profit from accepting warming as inevitable and mobilizing adaptation capital. Mitigation would reduce their addressable market."
+    },
+    {
+      "name": "mitigation_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Climate scientists, environmental organizations, and justice advocates argue that 2-3°C is incompatible with stable civilization, that mitigation costs are lower than adaptation costs, and that accepting warming is intergenerational theft. They are excluded from decision-making forums where energy and economic policy is set. Their presence would fundamentally contest the adaptation-priority framing."
+    },
+    {
+      "name": "regulatory_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "National governments and international climate bodies (IPCC, UNFCCC) adjudicate climate response. The adaptation-priority reading is enforced through budgetary allocation to adaptation funds, carbon pricing that is too weak to drive decarbonization, and regulatory frameworks that treat warming as manageable risk rather than civilizational threat. They maintain this frame through institutional inertia and pressure from economic interests."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Organizes a climate response that protects near-term economic stability and avoids transition disruption for wealthy incumbent systems. Provides a decision rule for allocating scarce climate finance: toward adaptive infrastructure in capable regions rather than mitigation everywhere.",
+    "transfer_function": "Transfers the burden of unmitigated climate impacts (2-3°C warming harms) from the current generation of wealthy nations and fossil industries to future generations and climate-vulnerable populations. Also transfers adaptation costs from those who caused warming to those who must live with it.",
+    "absent_voices": "Future generations cannot attend policy forums. Global South representatives are structurally under-powered in climate negotiations. Indigenous communities and small-island states have minimal influence on energy and infrastructure decisions. Climate scientists' warnings about non-linear tipping points are filtered through economic feasibility frames that exclude them from the decisive forum.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the adaptation-priority frame disappeared and mitigation became the binding goal, capital allocation would shift dramatically: fossil subsidies would be redirected to renewable infrastructure, energy-intensive industries would face pressure to decarbonize on accelerated timelines, and stranded-asset risk would materialize for coal and oil reserves. Energy prices and industrial economics would reorganize. Wealthy nations could not defer transition costs.",
+    "founding_problem": "Early climate science created profound uncertainty about warming magnitude and timing; economic models suggested mitigation costs were unaffordably high; incumbent energy systems were locked in by capital stock and political influence. The adaptation-priority frame emerged as a way to manage this uncertainty and high-cost problem without disrupting economic arrangements.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding-problem status is 'dead' based on corroboration from outside the benefiting parties: (1) Renewable energy cost fell 85% 2010-2020, faster than 2015 projections; current cost-of-electricity studies show renewables cheaper than fossil in most markets (IRENA, Lazard). (2) Climate impact estimates have revised upward: IPCC AR6 (2021) shows that adaptation costs for 2-3°C warming would exceed mitigation costs for limiting to 1.5-2°C. (3) Insurance markets have repriced climate risk sharply upward: uninsurable risks emerging, stranded-asset recognitions driving capital reallocation. (4) Institutional investors and central banks (Bank for International Settlements, major pension funds) now treat the 'inevitability' of 2-3°C as contingent on policy choice, not physical lock-in. The founding problem's original justification (unaffordable mitigation, inevitable warming) has been substantially undermined by empirical developments. The constraint persists through institutional inertia and beneficiary power, not through continued validity of the original rationale."
+  },
+  "interval": {
+    "start": 2015,
+    "end": 2050
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2040,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2050,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2040,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2050,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2040,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2050,
+      "value": 0.72
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inevitability_claim_contestation",
+      "question": "Is 2-3°C warming genuinely inevitable given current policy trajectories, or is 'inevitability' a constructed frame that forecloses consideration of alternative pathways?",
+      "resolution_mechanism": "Counterfactual analysis: if major economies had committed to Paris Agreement targets in 2015, what warming trajectory would result? Compare against claimed-inevitable trajectory. Cost-benefit analysis of 1.5°C vs. 2-3°C decarbonization scenarios using updated renewable energy cost curves.",
+      "impact": "If alternative pathways to <2°C remain feasible at similar or lower cost than adaptation to 2-3°C, the 'inevitability' framing is revealed as a political choice masquerading as physics. This would reclassify the constraint from tangled_rope (genuine coordination problem) toward snare (cover story for extraction). If 2-3°C is genuinely inevitable given locked-in commitments, the adaptation-priority reading becomes more defensible as tragic optimization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether warming trajectory is locked-in physical necessity or contingent policy choice."
+    },
+    {
+      "id": "adaptation_cost_underestimation",
+      "question": "Are adaptation costs accurately priced in the adaptation-priority frame, or are tipping-point risks, ecosystem collapse, and migration crises systematically underestimated?",
+      "resolution_mechanism": "Systematic comparison of adaptation-cost models (used to justify adaptation priority) against peer-reviewed climate impact assessment. Track realized adaptation costs in climate-exposed regions (Pakistan floods 2022, Horn of Africa drought 2022-2023) against predicted costs. Monitor for uninsurable risks and cascade failures.",
+      "impact": "If adaptation costs for 2-3°C warming exceed the mitigation costs that would have prevented it, the entire economic case for adaptation priority collapses. The constraint would be revealed as extraction dressed in false economic reasoning. If adaptation costs prove manageable but are concentrated in poor regions unable to pay, the constraint remains extractive but the distributional mechanism becomes visible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adaptation-cost projections capture the full scope of harms and cascade failures."
+    },
+    {
+      "id": "intergenerational_moral_authority",
+      "question": "What moral authority does the current generation have to accept permanent climate change on behalf of future generations? Is this constraint's binding authority grounded in consent, power, or a framing that denies future generations standing?",
+      "resolution_mechanism": "Philosophical/normative analysis: does the current generation's lack of capacity to reverse climate change transfer into moral authority to impose it? Examine the constraint's legitimacy claims (efficiency, inevitability, best-of-bad-options) and test whether they would survive if future generations held veto power. Look for institutional mechanisms that would elevate future-generation interests into decision-making.",
+      "impact": "If future-generation interests are structurally excluded from the authority structure (as this analysis suggests they are), the constraint is sustained by power asymmetry rather than legitimate allocation — moving it from tangled_rope toward snare. If mechanisms for future-generation representation were built in, the legitimacy picture changes.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether the constraint's binding authority rests on consent or structural power asymmetry."
+    },
+    {
+      "id": "mitigation_cost_trajectory",
+      "question": "Are the cost projections that make adaptation-priority seem economical based on stable or outdated technology costs?",
+      "resolution_mechanism": "Track renewable energy, battery storage, heat pump, and carbon capture costs over time. Compare 2015 cost projections (when adaptation-priority frame solidified) against 2025 and projected 2035 costs. Reassess mitigation-cost models with updated inputs.",
+      "impact": "Renewable energy and storage costs have fallen 50-80% faster than projected in 2015. If this trajectory continues, the economic case for accepting warming instead of decarbonizing erodes. The constraint's factual foundation shifts from 'mitigation is too expensive' to 'we chose not to invest in rapidly-cheapening alternatives,' moving the frame from defensive economics to revealed preference for extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the economic models justifying adaptation-priority reflect current or obsolete technology costs."
+    },
+    {
+      "id": "reading_kernel_contestation",
+      "question": "This constraint is ONE reading of the contested kernel 'climate_response_obligation'. Which reading — adaptation_priority, mitigation_priority, or degrowth_reading — is the legitimacy-grounding reading that the others contest?",
+      "resolution_mechanism": "Examine institutional dominance: which reading is the default position of major economic and political actors? Which reading must make the affirmative case, and which reading is treated as the status quo? Which reading is harder to challenge without bearing the burden of proof?",
+      "impact": "This reading (adaptation_priority) currently occupies the institutionally-dominant position — it is the implicit default in energy policy, carbon pricing, and adaptation-finance allocation. Mitigation-priority and degrowth-priority must make affirmative cases against it. This structural dominance affects how the constraint's extraction is perceived: as inevitable management of a shared problem (adapting to warming) rather than as a choice to impose warming on others. If institutional balance shifted, the classification would reflect a different distribution of power and legitimacy.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this reading is institutionally dominant or contested."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The adaptation-priority reading frames climate response as a choice between expensive mitigation (rapid decarbonization with near-term economic transition costs) and inevitable warming requiring resilience investment. It accepts 2-3°C as the outcome of current policy trajectories and allocates resources to adaptive infrastructure, crop breeding, relocation services, and disaster management. The frame protects incumbent economic systems and current-generation wealth from transition costs while transferring climate impacts and adaptation burdens to future generations and climate-vulnerable populations. This constraint is ONE reading of the contested kernel 'climate_response_obligation'; the sibling readings (mitigation_priority, degrowth_reading) present structurally different beneficiary/victim sets and different treatments of inevitability.",
+    "key_agents": [
+      "high_income_current_generation: Avoids transition costs; benefits from climate acceptance frame",
+      "fossil_fuel_capital: Extended operational runway; delayed transition means continued profit",
+      "energy_intensive_industries: Avoid costly decarbonization of production processes",
+      "future_generations: Locked into 2-3°C warming; powerless to renegotiate; no seat at table",
+      "global_south_populations: Climate-vulnerable; contribute least to emissions; bear greatest physical hazard",
+      "climate_vulnerable_communities: Local impacts (land loss, livelihood collapse); structurally excluded",
+      "adaptation_industry: Profit from accepting warming; solutions-economy beneficiary",
+      "mitigation_advocates: Structurally excluded; dispute inevitability and cost assumptions",
+      "regulatory_institutions: Enforce adaptation-priority through budgetary allocation and carbon pricing that is too weak"
+    ],
+    "logic_rationale": "Extractiveness (0.68) reflects the asymmetric burden transfer: wealthy regions and industries collect the benefit of avoided transition costs while future generations and the Global South carry the cost of unmitigated warming impacts. Suppression (0.72) is high because the constraint requires actively excluding mitigation advocates' argument that warming is preventable at lower cost; mitigation-cost claims and tipping-point science must be suppressed from high-level policy forums where adaptation-priority is treated as the rational baseline. Theater ratio (0.42) is moderate-high: adaptation investment is real and necessary (theaters are built, seawalls constructed, crop research funded), but a growing share of the constraint's maintenance activity involves defending the 'inevitability' claim against increasingly challenging evidence that mitigation costs have fallen faster than warming-damage estimates have risen. Accessibility collapse (0.38) is relatively low because alternative response pathways remain intellectually and technically available; the constraint's persistence depends more on institutional power and economic interest than on the collapse of real alternatives. Resistance (0.58) is substantial: scientists, environmental advocates, and climate-vulnerable governments continue to contest the adaptation-priority frame despite institutional disadvantages. The measurement series shows extractiveness and suppression rising over 2015-2050 as climate impacts compound and the constraint must work harder to suppress growing evidence that prevention would have been cheaper.",
+    "perspectival_gap": "The beneficiary seats (high-income current generation, fossil capital, energy industries) perceive adaptation-priority as rational optimization under constraint — the best available policy given that mitigation is supposedly unaffordable. Regulatory institutions see it as balancing near-term economic stability with long-term resilience investment. The payer seats (future generations, Global South, vulnerable communities) experience the same constraint as imposed extraction: the constraint forecloses their capacity to inherit a stable climate and transfers costs to them that wealthier actors could have borne. Future generations cannot attend policy forums and have no voice; the Global South is under-represented in climate governance; climate scientists are excluded from energy-policy decision-making. The engine will compute different effective extraction (χ) for each seat from the structural data: beneficiary seats get low d (near 0.0), target seats get high d (near 1.0), and excluded/powerless seats show the paradox of high-impact constraints on actors with no power to negotiate them.",
+    "directionality_logic": "Beneficiaries (high_income_current_generation, fossil_fuel_capital, energy_intensive_industries) have institutional power and structured exit routes (arbitrage-grade mobility for capital; arbitrage for industries via adaptation-industry capture). They derive d values near 0.0 (full beneficiary). Victims (future_generations, global_south_populations, climate_vulnerable_communities) are powerless or organized-but-constrained, with exit options that are identity-locked or trapped. Future generations literally have zero choice: they inherit the constraint post-completion. Global South and vulnerable communities face trapped or severely constrained exit (migration is restricted; relocation requires capital). Their d values approach 1.0 (full target). Mitigation advocates are organized but excluded from the table where binding decisions are made — they are structurally over-d-valued (high power atom: organized) yet politically under-represented (low agenda-setting access). A directionality override could correct this: override their power_atom downward from 'organized' toward 'moderate' to reflect the political asymmetry, or leave it high but acknowledge the override captures institutional dominance, not seat-level power.",
+    "mandatrophy_analysis": "The founding problem (early climate uncertainty, high estimated mitigation costs, capital-stock lock-in) was real in 2015. By 2025, the problem conditions have substantially changed: technology costs have fallen faster than predicted; climate impacts are accelerating ahead of model projections; stranded-asset risk is materializing; renewable infrastructure is cost-competitive on levelized basis in most markets. The founding problem's status should be 'dead' or 'contested,' yet the adaptation-priority constraint persists — it is maintained by institutional inertia and by interests that benefit from continued fossil fuel operations. This is a mandatrophy signal: a constraint whose original rationale has eroded but whose beneficiaries have sufficient institutional power to keep it operating by suppressing alternative framings and locking in adaptation-infrastructure investment paths that become hard to reverse. The theater ratio rising from 0.22 to 0.42 over 2015-2050 reflects this: more energy spent defending the inevitability claim and less energy actually solving the coordination problem (which is now increasingly 'how do we transition infrastructure' rather than 'is transition possible').",
+    "kernel_context": "This constraint is one instantiation of the contested kernel 'climate_response_obligation' — a stabilized commitment grounded in (contested) economic models about mitigation cost and (contested) physics about warming inevitability. The kernel has three active readings: (1) adaptation_priority (this story): Accept 2-3°C warming as inevitable; invest in resilience. (2) mitigation_priority: Prevent future harm by rapid decarbonization; intergenerational justice requires minimizing warming. (3) degrowth_reading: Reduce material throughput to stay within planetary boundaries; sufficiency over efficiency. Each reading treats the same kernel (climate_response_obligation) differently: adaptation_priority grounds legitimacy in economic feasibility and physical inevitability; mitigation_priority grounds it in intergenerational justice and prevention ethics; degrowth_reading grounds it in planetary boundaries and sufficiency. The three readings have different beneficiary/victim structures and different treatments of whether warming is locked-in or preventable. This story authorizes the adaptation_priority reading. Its sibling readings are separate constraint stories with their own ε, stakeholder sets, and measurements."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_response_obligation__mitigation_priority",
+      "climate_response_obligation__degrowth_reading",
+      "fossil_fuel_capital_protection",
+      "intergenerational_equity_obligation",
+      "adaptation_finance_allocation"
+    ],
+    "dual_formulation_note": "This constraint is part of a constraint family under the kernel 'climate_response_obligation'. The family contains three readings: adaptation_priority (this story), mitigation_priority (separate file), and degrowth_reading (separate file). Each reading instantiates different structural relationships and different victim/beneficiary sets from the same kernel. They are linked by network.affects_constraints to show family membership and causal dependencies. The family decomposition is necessary because ε differs substantially across readings: adaptation_priority frames the standing arrangement (accepting 2-3°C warming) as the constraint with substantial extraction; mitigation_priority frames rapid decarbonization as coordination with lower extraction; degrowth_reading frames material-throughput reduction as coordination with different boundary conditions. The three readings cannot be folded into one story without violating ε-invariance."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "gain_flow": "fossil_fuel_capital",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "mitigation_priority",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "degrowth_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "warming_magnitude_economically_determined",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "current_generation_response_priority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "economic_feasibility_framework",
+    "drift_state": {
+      "moment": "contemporary_2025",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

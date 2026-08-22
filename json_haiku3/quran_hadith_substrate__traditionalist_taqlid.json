@@ -1,0 +1,398 @@
+{
+  "header": {
+    "constraint_id": "quran_hadith_substrate__traditionalist_taqlid",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "3ea0ae4d-893d-4c59-b28d-71311b5a36b9"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.79,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Classical Madhhab Authority via Taqlid (Traditionalist Reading)",
+    "topic_domain": "religious/legal/institutional",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "traditionalist_ulama",
+      "madhhab_institutions",
+      "conservative_mosque_hierarchies"
+    ],
+    "victims": [
+      "progressive_muslim_scholars",
+      "women_seeking_equal_rights",
+      "religious_minorities_under_dhimmi_framework",
+      "laity_seeking_direct_quranic_interpretation"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "traditionalist_ulama",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Senior scholars and jurisconsults within the four established madhhabs (Hanafi, Maliki, Shafi'i, Hanbali) who interpret, transmit, and enforce classical rulings. They maintain the interpretive apparatus, train students in madhhab methodology, issue fatwas, and adjudicate disputes within their framework. Their authority is grounded in the lineage of transmission from the founder-imam and the claim that ijma (consensus of classical scholars) has settled the law."
+    },
+    {
+      "name": "madhhab_institutions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Formal and informal institutional structures (seminaries, fatwa councils, Islamic university departments, mosque networks) that reproduce and enforce madhhab authority. They benefit from the taqlid obligation because it concentrates interpretive power within their hierarchy and channels resources (students, donations, political influence) to them. They carry centuries of institutional inertia and identity fusion with their madhhab."
+    },
+    {
+      "name": "conservative_mosque_hierarchies",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Mosque leadership structures and community religious authorities in conservative-leaning communities who benefit from clear, binding rulings. They need not deliberate on contested issues; they enforce the established madhhab position and derive legitimacy from representing 'authentic Islam' as preserved in the schools."
+    },
+    {
+      "name": "progressive_muslim_scholars",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Muslim intellectuals, theologians, and academics advocating contextual ijtihad, reinterpretation of classical rulings in light of contemporary ethics, and direct engagement with Quranic principles. They bear the cost of institutional marginalization: their fatwas are delegitimized as 'not madhhab-conform,' they face social and professional pressure, and their interpretations cannot gain traction in conservative communities or formal Islamic institutions. Their intellectual contributions are systematically suppressed by the taqlid framework."
+    },
+    {
+      "name": "women_seeking_equal_rights",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Women navigating classical Islamic family law (inheritance shares, marriage guardianship, divorce procedures, testimony weight) as enforced by traditionalist institutions. They bear the extraction through unequal legal status, restricted agency in marriage and divorce, and diminished inheritance rights preserved in classical rulings. Taqlid suppresses alternative readings of Quranic verses that would grant equal status. Their exit options are trapped by religious identity, family structure, and community consequence."
+    },
+    {
+      "name": "religious_minorities_under_dhimmi_framework",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Christians, Jews, Yazidis, and other non-Muslim minorities in contexts where classical madhhab rulings (the dhimmi system) remain institutionally enforced. They bear differentiated legal status, restricted property rights, and subordinate civic position as structured by classical jurisprudence. Taqlid forecloses reinterpretations that would grant equal citizenship or religious freedom; their exit is blocked by geography, family, and legal constraint."
+    },
+    {
+      "name": "laity_seeking_direct_quranic_interpretation",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Ordinary Muslims who might wish to understand Quranic principles directly and reason about contemporary applications but are told by conservative religious authorities that taqlid (following a madhhab) is a binding obligation, not optional. They bear the cost of intellectual dependence: their questions are redirected to madhhab rulings, direct Quranic study is discouraged as leading to heresy, and personal reasoning (ijtihad) is framed as presumptuous. Their agency is suppressed."
+    },
+    {
+      "name": "reformist_ijtihad_movement",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Institutional and intellectual structures (universities, reformist fatwa councils, progressive Islamic organizations) advocating contextual ijtihad and reinterpretation. They are structurally excluded from authority in traditionalist-dominated communities; their interpretations are delegitimized; and their capacity to shape Islamic law is systematically constrained by the institutional dominance of the madhhabs."
+    },
+    {
+      "name": "state_authorities_claiming_islamic_legitimacy",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Governments in Muslim-majority countries that selectively adopt classical rulings for family law and criminal codes while applying different legal frameworks in commercial and administrative law. They observe the traditionalist reading and must negotiate with it (often incorporating it into state law) while also pursuing modernization and sovereignty claims. Their stance on taqlid varies: some enforce it, others use it strategically, still others attempt hybrid compromises."
+    },
+    {
+      "name": "academic_islamic_studies_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars outside the traditional authority structure (historians, sociologists, comparative religionists) who study the constraint's operation empirically and document how taqlid suppresses alternative readings, how institutional mechanisms enforce it, and what the distributional consequences are for different stakeholder groups."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates Islamic jurisprudence across diverse contexts by anchoring interpretation to four established schools and their classical rulings: eliminates the chaos of unlimited individual ijtihad; provides settled law for contract, family, and criminal matters; enables community cohesion through shared normative framework; transmits legal knowledge reliably across generations.",
+    "transfer_function": "Transfers interpretive authority from the laity and from contemporary scholars to the classical madhhab establishments and their living representatives. It moves deference, legitimacy, and legal power upward through institutional hierarchies; moves compliance, constraint, and suppression of alternative voices downward to those obligated to follow without questioning.",
+    "absent_voices": "Progressive Muslim scholars advocating ijtihad, women's rights advocates seeking equal legal standing, religious minorities seeking full citizenship rather than dhimmi status, and Muslims seeking direct Quranic reasoning are structurally excluded from authority in the traditionalist reading. They would argue that ijma is not binding, that classical rulings have outdated ethical premises, and that taqlid suppresses human agency and justice. The traditionalist framework excludes them by fiat.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the taqlid obligation vanished, Islamic jurisprudence would fragment into competing methodologies (unconstrained ijtihad, reformed reinterpretations, contextual ethics); institutional power would disperse from the classical madhhab establishments to universities, think tanks, and civil-society scholars; women and minorities would gain interpretive space for equal-rights readings; traditional mosque hierarchies would lose their claims to settled, binding authority. The Islamic world would reorganize around competing legitimate interpretive methodologies rather than hierarchical submission to classical schools.",
+    "founding_problem": "Early Islamic jurisprudence faced fragmentation: scholars disagreed on methods, different regions developed divergent practices, and the lack of formal unity threatened the coherence of Islamic law. The madhhab system crystallized consensus around four major schools in the medieval period; taqlid was an institutional response to lock in a unified framework and prevent endless reinterpretation.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Progressive Muslim scholars and academic historians document that modern communication, literacy, and institutional capacity make the unity-by-constraint argument obsolete: Islamic law can be coherent and diverse simultaneously; other religious traditions maintain normative authority without suppressing interpretation; and contemporary taqlid enforcement persists not because fragmentation threatens Islam but because institutional power benefits from closure. Traditionalist authorities claim the founding problem is perennially live (chaos lurks if taqlid weakens), but corroboration from outside the benefiting parties contradicts this."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.79
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint embodies the traditionalist reading of the Quran-hadith substrate kernel: classical fiqh schools (madhhabs) represent authoritative consensus (ijma), and contemporary Muslims are obligated via taqlid to follow established rulings rather than engage in independent reasoning (ijtihad). This is ONE READING of a contested kernel; sibling readings (reformist ijtihad and state hybrid) instantiate different constraints from the same source commitment. The traditionalist reading suppresses alternative interpretations through institutional enforcement, maintains unequal legal status for women and religious minorities under classical frameworks, and concentrates interpretive authority in hierarchical institutions. The metrics reflect high extraction and suppression; the claimed type is tangled rope because the constraint solves a genuine coordination problem (settled law, predictable jurisprudence) while simultaneously extracting from those constrained by classical rulings they did not consent to and cannot challenge within the framework.",
+    "key_agents": [
+      "Traditionalist ulama: institutional beneficiaries who control the interpretive apparatus and derive authority from madhhab lineage",
+      "Madhhab institutions: establishment structures (seminaries, fatwa councils) that concentrate and reproduce authority; institutionally trapped in identity with their school",
+      "Progressive Muslim scholars: intellectual targets excluded from authority; efforts to reinterpret are delegitimized",
+      "Women under classical family law: powerless payers bearing unequal inheritance, guardianship, and divorce restrictions",
+      "Religious minorities under dhimmi framework: trapped payers under subordinate legal status with no exit",
+      "Laity seeking Quranic understanding: suppressed agents told taqlid is binding rather than optional"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68) because taqlid concentrates interpretive authority, prevents upward mobility of alternative scholarship, and enforces compliance with rulings that benefit institutional hierarchies. The measurements show gradual increase through the first 25 time points (institutional hardening in response to modernization pressures, more aggressive enforcement of taqlid), then plateau as digital media and global communication create countervailing pressure that cannot be fully suppressed but also cannot displace the institutional structures. Suppression is higher (0.79) than extractiveness because suppressing alternative readings is the active work the constraint must do: if ijtihad were permitted, the entire institutional hierarchy would lose legitimacy. Theater rises early (first 15 time points) as traditionalist authorities emphasize scholarly consensus and doctrinal legitimacy when challenged by reformist arguments, then stabilizes once the performance ceiling is reached. Accessibility collapse is moderately high (0.72) because educated Muslims can understand both the traditionalist and reformist readings, but institutional and social consequences suppress the ability to act on alternative understandings. Resistance is moderate (0.58) because reformist intellectual movements, women's rights advocates, and progressive institutions mount real counter-pressure, but the institutional entrenchment of the madhhabs and their control of mosque networks constrains how far that resistance can shift actual practice in traditionalist-majority communities.",
+    "perspectival_gap": "The payer and beneficiary seats compute radically different constraint types. From the traditionalist-ulama seat, the constraint is rope (coordination solving the unity problem, consensual participation in a shared framework). From the women's seat, it is snare (coercive extraction of unequal legal status with suppressed exits and no exit alternatives). From the progressive scholar seat, it is tangled rope tilting toward snare (coordination element present for those who benefit, extraction element dominant for those excluded and suppressed). The engine should flag this divergence as the defining feature of the constraint's operation: it is experienced as legitimate authority by institutional beneficiaries and as coercive suppression by victims.",
+    "directionality_logic": "The traditionalist ulama and madhhab institutions sit at the beneficiary end of directionality (d near 0.0): they collect authority, influence, prestige, and resources; their exits are abundant (they can reinterpret if they choose; they are not trapped, they are institutionally fused). Progressive scholars face high d (toward 1.0): they are targets of suppression, excluded from authority, face professional consequences for alternative readings. Women and minorities face the highest d (closest to 1.0): they are trapped (identity-locked to family, community, religion), constrained by legal disability, and powerless to change the rules affecting them. The laity face moderate-high d: they are told to be passive recipients of madhhab rulings, but they retain some agency to seek alternative sources or question privately. State authorities face complex d: they extract benefits (using madhhab authority to legitimize family law) but also constrain their own reforms (locked into classical frameworks when modernization pressure rises). The directionality override for traditionalist_ulama should be explicit (d ≈ 0.15) because they appear institutionally powerful but their identity fusion with the madhhab creates subtle trappedness; an override moves them toward the beneficiary end to reflect that their agency, while real, is wholly invested in defending the constraint.",
+    "mandatrophy_analysis": "The founding problem (preventing jurisprudential chaos through institutional unity) is categorized as DEAD by external corroboration: academic historians, reformist scholars outside the benefiting circle, and practical evidence show that Islamic jurisprudence can remain coherent while permitting interpretive diversity (as demonstrated by pluralist Islamic societies and communities where multiple madhabs coexist). Yet the taqlid obligation persists and is actively reinforced. This is a classic mandatrophy marker: the founding mandate has outlived its function; the constraint persists through institutional inertia and the concentration of benefits to the madhhab hierarchy, not through necessity. The theater_ratio rising early (0.25→0.42) reflects traditionalist authorities doubling down on rhetorical claims about ijma and doctrinal authenticity precisely when the empirical mandate dissolves—a signature piton-type behavior. However, the extraction metrics remain high (not dropping below 0.68), which keeps the classification as tangled rope rather than piton: unlike a pure piton, this constraint still actively extracts (unequal rights, suppressed agency) rather than merely performing; the theatrical component coexists with real enforced extraction, not as a replacement for it.",
+    "kernel_context": "This constraint is the traditionalist reading of the quran_hadith_substrate kernel. The kernel embodies the foundational Islamic commitment to Quranic guidance and hadith authority; the contest among readings concerns HOW CONTEMPORARY MUSLIMS ACCESS and APPLY these sources. The traditionalist reading declares that ijma (classical scholarly consensus) has settled the law via the madhhab schools, and taqlid (following a school) is binding. The reformist reading declares that ijtihad (contextual reasoning from principles) is mandated when classical rulings conflict with contemporary ethics. The state hybrid reading declares that political sovereignty permits selective adoption of classical rulings in some domains while applying reformist or secular frameworks in others. All three readings share the kernel commitment to Quranic-hadith authenticity; they differ radically on what that commitment requires in practice. The traditionalist reading's core premise—that ijma via madhhab represents a settled, binding interpretation—is challenged by reformist and hybrid readings but is not logically foreclosed by them; all three can coexist within different institutional or community contexts (hence coexists_with relation). However, the traditionalist reading materially forecloses the practical exercise of ijtihad within traditionalist-dominated communities by institutional suppression, even though it does not logically foreclose the reformist position itself."
+  },
+  "omegas": [
+    {
+      "id": "ijma_vs_contemporary_consensus",
+      "question": "Can ijma (consensus of classical scholars) bind contemporary Muslims who did not participate in that consensus and who inhabit different ethical and technological contexts? Or is ijma a historical agreement that retains moral weight but does not bind those with new evidence or reasoning?",
+      "resolution_mechanism": "Epistemological and jurisprudential analysis of consensus-binding across time; examination of whether ijma requires reaffirmation by each generation of scholars or binds perpetually; empirical study of how Muslim communities actually treat classical consensus (some accept it as binding, others treat it as authoritative but revisable).",
+      "impact": "If ijma must be reaffirmed per generation, taqlid becomes optional (each generation can ijtihad), and the constraint transitions from tangled_rope to scaffold. If ijma binds perpetually, taqlid remains structurally binding, and institutional extraction persists.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether consensus binds across generations or must be renewed."
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "Is the suppression of alternative readings maintained primarily through institutional barriers (fatwas delegitimizing reformist scholarship, institutions excluding reformists from authority, family consequences for questioning), or through internalized belief (Muslims believing taqlid is theologically mandatory, not just institutionally preferred)?",
+      "resolution_mechanism": "Post-institutional analysis: when institutional enforcement is removed (e.g., internet access to reformist scholarship, diaspora contexts with weak institutional hierarchy, secular legal codes displacing madhhab authority), does suppression persist? If suppression erodes, it was structural; if it persists, it has internalized roots.",
+      "impact": "If primarily structural, removing institutional enforcement could shift the constraint type toward rope or even mountain-natural-law status. If internalized, the constraint persists even without enforcement because targets have fused their understanding of Islam with the taqlid obligation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is institutional or internalized."
+    },
+    {
+      "id": "equal_rights_reading_foreclosure",
+      "question": "Is the exclusion of women's-rights and minority-rights readings from authority within traditionalist contexts a logical consequence of the taqlid principle itself, or a contingent institutional choice that traditionalist scholars could overcome without abandoning taqlid?",
+      "resolution_mechanism": "Jurisprudential analysis of whether taqlid-compliant reinterpretations of Quranic verses on women's inheritance, marriage agency, and dhimmi status are logically possible. Historical example: some madhhab scholars offered minority opinions on these issues; could those be elevated without violating taqlid methodology?",
+      "impact": "If equal-rights readings are logically possible within taqlid, the extraction directed at women and minorities is a contingent institutional choice, and mandatrophy could be resolved by internal reform. If they are foreclosed, the structural extraction is more deeply embedded.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether women's and minority rights can be secured within taqlid framework."
+    },
+    {
+      "id": "kernel_contest_foreclosure_status",
+      "question": "Within a single Islamic community or polity, can traditionalist taqlid, reformist ijtihad, and state hybrid readings coexist as live interpretive options, or does adopting one foreclose the others? Are these genuinely different readings of one kernel, or do they represent competing kernels?",
+      "resolution_mechanism": "Study of pluralist Islamic communities (diaspora communities, multicultural societies) where multiple readings are simultaneously practiced; analysis of whether theological coherence is preserved or whether communities fragment into separate traditions.",
+      "impact": "If coexistence is empirically sustainable and philosophically coherent, the readings are sibling relations and the coexists_with classification holds. If coexistence leads to practical fragmentation or theological incoherence, the readings may constitute separate kernels, and the network topology should be restructured.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether three readings coexist or separate into competing traditions."
+    },
+    {
+      "id": "natural_law_claim_false_summit_candidate",
+      "question": "Traditionalist authorities present taqlid as grounded in natural jurisprudential law (ijma is binding by divine decree, madhab consensus reflects immutable Islamic principles). Is this a genuine mountain-type natural law, or a false summit where institutional beneficiaries claim naturalness to resist scrutiny?",
+      "resolution_mechanism": "Comparative religious-law analysis: do similar authority-concentration mechanisms exist in other traditions (Catholicism, Rabbinical Judaism, Hindu jurisprudence)? Do they claim natural-law status? If taqlid is uniquely necessary for Islam while other traditions manage without it, the natural-law claim weakens. Empirical observation: when institutional enforcement is weakened, does the taqlid obligation persist as natural law, or does it erode?",
+      "impact": "If genuine mountain, the constraint should be reclassified; if false summit, it remains tangled_rope and mandatrophy persists. High likelihood of false-summit status given the institutional beneficiary structure and the finding that mandatrophy is present (founding problem dead but constraint persists).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether taqlid is natural law or institutional false summit."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "quran_hadith_substrate__reformist_ijtihad",
+      "quran_hadith_substrate__state_hybrid"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the quran_hadith_substrate kernel. The reformist ijtihad reading (constraint_id: quran_hadith_substrate__reformist_ijtihad) presents competing epistemology and beneficiary structure; the state_hybrid reading (constraint_id: quran_hadith_substrate__state_hybrid) describes institutional compromise. All three share the kernel commitment to Quranic-hadith guidance but diverge on whether ijma binds, whether ijtihad is permitted, and whether state authority can override doctrinal fidelity. The three stories are NOT competing measurements of one constraint—they are different constraints arising from different readings of the same kernel. Each has its own ε, its own beneficiary/victim structure, its own type classification. Decomposition follows the ε-invariance principle: a traditionalist reading computes ε for the taqlid obligation as high (extraction for modernists, suppressed alternatives); a reformist reading would compute ε for that same obligation differently (it would score the traditionalist impediment to ijtihad as extraction). The readings have different referents and different observer positions. Link all three via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "gain_flow": "madhhab_institutions",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "quran_hadith_substrate"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "reformist_ijtihad",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "state_hybrid",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ijma_binds_contemporaries",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "taqlid_obligatory_not_optional",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "classical_madhhab_consensus_locked",
+    "drift_state": {
+      "moment": "contemporary_pluralist_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

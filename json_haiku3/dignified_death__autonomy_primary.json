@@ -1,0 +1,362 @@
+{
+  "header": {
+    "constraint_id": "dignified_death__autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "26c96ebc-3995-4cd5-bf27-f964ade6d46e"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.74,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Autonomy-Primary Dignity Norm in End-of-Life Decision Authority",
+    "topic_domain": "bioethics/medical_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "terminally_suffering_autonomous_agent"
+    ],
+    "victims": [
+      "suffering_individual_denied_exit"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "terminally_suffering_autonomous_agent",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "A person facing terminal illness or unbearable suffering who retains decisional capacity. This reading affirms that their choice about timing and method of death expresses their dignity and self-determination. They receive recognition of their autonomous will as the authoritative voice on their own death. Their exit from the living state is framed as an exercise of autonomous choice, not a medical failure. Dignity is realized through being heard and obeyed."
+    },
+    {
+      "name": "suffering_individual_denied_exit",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "A person in terminal suffering or existential distress whose request to end their life is refused or delayed by legal prohibition, medical gatekeeping, or clinician objection. They are denied the exercise of self-determination and forced to continue living against their stated will. The constraint extracts from them: prolonged suffering, loss of autonomous agency, and the experience of their will being overridden by state or medical authority. They pay the cost in lost autonomy and endured pain."
+    },
+    {
+      "name": "medical_professionals",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Physicians, nurses, and other clinicians who must adjudicate eligibility, assess decisional capacity, and potentially provide or refuse assistance with death. In jurisdictions where the autonomy-primary reading is codified, they hold gatekeeping power: they diagnose terminal illness, assess competence, may require counseling periods, and in some regimes must participate in the act itself. They are constrained by the tension between their traditional commitment to preservation (duty to sustain life) and the autonomy norm (duty to respect patient choice). They also bear moral and legal liability—assisting in death exposes them to prosecution in prohibition regimes, while refusing assistance may expose them to negligence or abandonment claims in permissive regimes."
+    },
+    {
+      "name": "state_prohibition_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The state (legislature, courts, executive enforcement) in jurisdictions that prohibit physician-assisted death or medical aid in dying. They articulate and enforce the rule that neither individuals nor clinicians have authority to intentionally end a life. They defend the rule as protecting vulnerable persons, preserving the integrity of medical practice, or upholding a sanctity-of-life principle. They exercise enforcement through criminal law, licensing discipline, and prosecution. The autonomy-primary reading names this institutional actor as the primary external suppressor of individual autonomy."
+    },
+    {
+      "name": "disability_rights_advocates",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations and individuals articulating disability-justice and non-terminal-suffering critiques. They assert that the autonomy-primary frame conflates 'unbearable suffering' with disability stigma, and that extending death authority to non-terminal disabled persons under the autonomy norm amounts to coercive culling masked as choice. They are excluded from the core frame's beneficiary set (not centered in autonomy-primary rhetoric) and bear costs through policy that applies the autonomy principle to disabled-but-not-dying populations in ways they did not author. Their objections are structurally heard but not integrated into the frame's legitimacy chain."
+    },
+    {
+      "name": "surviving_family_members",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Partners, children, parents, and relatives of the suffering individual. They may support the autonomous choice to end life, creating no extraction from them. But the constraint extracts from families who do NOT want the death to occur: they cannot prevent it under autonomy-primary authority structures, cannot relitigate the terminal prognosis, and experience the loss through a frame that centers their loved one's autonomy rather than their own relational stake or objections. Their role is observer in the formal decision (the autonomous individual decides) but payer in the aftermath (they live with the consequence)."
+    },
+    {
+      "name": "religious_and_sanctity_communities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Faith traditions, theological movements, and sanctity-of-life constituencies that hold life's value to be non-negotiable and intentional killing—even of the suffering—to violate transcendent law. They are excluded from the autonomy-primary frame's authority structure: their objections are heard as external constraint on individual choice, not as internally legitimate voices. Permissive jurisdictions implement autonomy norms that override their doctrinal objections. They bear the cost of living in a legal regime they experience as fundamentally illegitimate."
+    },
+    {
+      "name": "relational_autonomy_theorists",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Bioethicists, legal scholars, and practitioners articulating relational-autonomy and distributed-authority readings. They argue autonomy-primary reading abstracts the person from their relational embeddedness and misses how death decisions are inherently shared, that genuine autonomy requires relational support structures, and that solo-individual authority produces its own coercion. They are excluded as an authoritative voice in pure autonomy-primary frameworks; their analysis informs alternative readings but does not reshape this one."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The bioethical and legal analytical community observing the constraint's operation across jurisdictions and monitoring how autonomy-primary authority is implemented, what safeguards emerge, and where the frame creates unexpected harms or gaps."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of who decides the timing and manner of death in cases of terminal suffering: the autonomy-primary frame assigns decision authority to the individual themselves, preventing ad hoc determinations by family, clinicians, or state, and establishing a single reliable answer to 'who gets to choose when I die?' This is a genuine coordination function—it removes ambiguity about legitimacy.",
+    "transfer_function": "Transfers authority and control from medical institutions, state prohibition, and collective/relational actors to the individual suffering person. The constraint moves decision-making power from clinician-centered (medical preservation) or state-centered (life as non-negotiable collective asset) regimes to individual-centered regimes. It also transfers the burden and finality of the choice onto the individual: they alone author and own the decision.",
+    "absent_voices": "Disability-rights constituencies who experience the autonomy frame as imposing a death-favorable inference on disabled suffering (conflating disability with unbearable, terminal suffering). Relational-autonomy theorists who would redistribute decision authority across the patient-family-clinician triad. Sanctity-of-life religious communities who would reject death authority altogether. These voices are structurally excluded from the autonomy-primary authority chain; they can object but cannot reshape the frame from inside it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the autonomy-primary dignity norm and its legal codification disappeared overnight, medical practice in permissive jurisdictions would revert to clinician-centered gatekeeping or state-centered prohibition. Suffering individuals would no longer have recognized authority to choose death. The entire institutional infrastructure of medical aid in dying (eligibility assessment, capacity evaluation, clinician participation protocols) would collapse. Individuals experiencing unbearable suffering would lose a formerly available exit and would need to pursue clandestine or violent means. The world reorganizes around the location of authority.",
+    "founding_problem": "Early medical practice centered death authority entirely in clinician judgment (Hippocratic prohibition) or state law (criminal prohibition). Suffering individuals had no recognized voice in decisions that affected their dying. The founding problem was: how should dignity be honored and agency recognized when a person faces terminal suffering and wishes to choose death? The autonomy-primary reading offers an answer: dignity resides in self-determination, so the individual must have final authority.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Patients and patient advocates corroborate that the founding problem persists—many experience medical gatekeeping and legal prohibition as violations of their dignity. Disability-rights advocates contest whether the 'founding problem' is correctly framed: they argue the problem is not a lack of death authority but inadequate palliative care, social support, and freedom from disability stigma. Relational-autonomy theorists contest whether solo individual authority is the right solution. Sanctity-of-life constituencies deny the founding problem's framing entirely, arguing dignity resides in life's value, not in exit authority. The founding problem is live and contested; external corroboration comes from patient testimony, not from beneficiaries alone."
+  },
+  "interval": {
+    "start": 1975,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.12,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.88,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.76,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.05,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.28,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomy_vs_sanctity_foreclosure",
+      "question": "Does the autonomy-primary axiom logically foreclose the sanctity-primary axiom within a single coherent legal/ethical framework, or can both be held as competing live positions?",
+      "resolution_mechanism": "Examine jurisdictions that attempt to hold both: does the legal/institutional attempt produce internal contradiction (forcing courts to apply incompatible rules) or does it produce stable coexistence via domain-splitting (autonomy in some cases, sanctity constraints in others)? If coexistence is stable, they coexist_with; if contradiction is irresolvable, one forecloses the other.",
+      "impact": "If forecloses, the reading relation shifts to forecloses and the axioms are structurally incompatible. If coexists_with, the framework is genuinely plural and both readings remain live even within single jurisdictions.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether autonomy-primary and sanctity-primary axioms logically foreclose each other or can coexist as competing frameworks."
+    },
+    {
+      "id": "unbearable_suffering_operationalization",
+      "question": "What criteria operationalize 'unbearable suffering' such that individual authority is triggered? Is 'unbearable' a subjective judgment (patient's own report) or objective assessment (clinician's diagnosis of pain/prognosis)?",
+      "resolution_mechanism": "Audit of medical aid in dying jurisdictions' statutory definitions and case law: does the operationalization privilege subjective report (high extraction from those denied exit) or objective criteria (higher suppression through medical gatekeeping)? Map the shift over time as regimes mature.",
+      "impact": "High dependence on subjective report amplifies individual autonomy but lowers suppression (more people gain exit). High dependence on objective criteria amplifies suppression (medical gatekeeping) and increases extraction from those denied exit via clinical judgment. The measured extractiveness and suppression are sensitive to this operationalization.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How 'unbearable suffering' is defined operationally, and whether the definition is subjective or objective."
+    },
+    {
+      "id": "relational_autonomy_alternative_framing",
+      "question": "If decision authority were distributed across patient-family-clinician triad with procedural safeguards (the relational-autonomy sibling), would the same individuals experience this as autonomy violation or as enhanced protection?",
+      "resolution_mechanism": "Empirical study comparing patient experience in solo-autonomy regimes vs. relational-autonomy regimes: do patients report greater dignity/autonomy in solo-authority, or do they report feeling unsupported/isolated? Post-decision regret and satisfaction data.",
+      "impact": "If patients in relational regimes report enhanced autonomy and dignity, the autonomy-primary reading may be misnamed—autonomy may not be what it claims to protect. If patients report enhanced support and sustained choice-ownership, the relational reading legitimacy increases. If patients in both regimes report similar outcomes, the reading difference is more about institutional power allocation than individual experience.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether patient autonomy experience differs between solo-authority and relational-distributed-authority regimes."
+    },
+    {
+      "id": "disability_stigma_conflation",
+      "question": "Does the autonomy-primary frame's expansion to non-terminal disabled suffering embed an implicit inference that disabled life is inherently 'unbearable,' creating a coercive context for disabled persons to exercise 'autonomy' toward death?",
+      "resolution_mechanism": "Track jurisdictions that extend autonomy to psychological suffering or disability-related suffering (not terminal): map rates of death requests among disabled vs. non-disabled, and measure qualitative reports from disabled deciders about whether social isolation, economic abandonment, or lack of accommodation constrained their choice.",
+      "impact": "If the inference is embedded and coercive, the autonomy-primary frame extracts from disabled suffering individuals not by denying exit but by creating structural pressure to exit. The measured extractiveness would need to account for this hidden extraction. The victim set would expand beyond those denied exit to include those whose exit is coerced by stigma.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether autonomy-primary frame's expansion to non-terminal suffering embeds coercive inference that disabled life is unbearable."
+    },
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint is ONE reading of the dignified_death kernel. The sibling readings autonomy_primary, relational_autonomy, and sanctity_primary each instantiate separate constraints with different ε values, beneficiary/victim structures, and types. The contest among readings is the dignified_death kernel dispute. Is the contest empirically resolvable (one reading is more consistent, grounded, or effective) or is it fundamentally incommensurable (different foundational premises about the nature of dignity)?",
+      "resolution_mechanism": "Systematic comparison across jurisdictions: (1) Empirical outcomes data—do autonomy-primary regimes produce the dignity outcomes they claim? Do sanctity regimes protect life effectively? Do relational regimes support genuine autonomy? (2) Longitudinal discourse analysis—do proponents of each reading attempt unified theoretical frameworks (subsumption of rivals) or explicitly acknowledge incommensurability? (3) Patient/family experience studies—which reading's implementation produces the fewest regrets and highest reported dignity?",
+      "impact": "If one reading is empirically superior, that reading's ε and type are stable while alternatives may require recalibration as losing ground. If readings remain incommensurable despite evidence, each reading's ε is stable relative to its own reference frame, but cross-reading comparison requires frame-fixing—there is no single 'correct' dignified_death constraint, only reading-indexed constraints that cannot be unified. The engine computes per-reading type; divergence among readings reflects genuine structural incommensurability in the kernel, not measurement error.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings are logically incommensurable or resolvable to a single superior framework."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint captures the autonomy-primary reading of the dignified_death kernel: the assertion that dignity resides fundamentally in self-determination, and that a suffering individual possesses final authority over the timing and method of their death. This reading has gained legal codification in multiple jurisdictions (Netherlands, Belgium, Switzerland, Canada, Spain, some US states) over the past 50 years. It instantiates a tangled rope: genuine coordination function (removes ambiguity about who decides) entangled with asymmetric extraction (those denied exit pay the cost of prolonged suffering against their will, and the constraint's persistence depends on suppressing alternative readings and gatekeeping authority). The reading is one of three contending approaches to dignity in end-of-life contexts; the others (sanctity_primary, relational_autonomy) operate as separate constraints with different victim sets and epsilon values. The autonomy-primary reading is live and expanding; the foundational problem (who decides when I die?) remains contested.",
+    "key_agents": [
+      "terminally_suffering_autonomous_agent — the beneficiary framed in autonomy-primary reading; experiences the constraint as recognizing their dignity through authority over death",
+      "suffering_individual_denied_exit — the victim; trapped in prolonged suffering when prohibition or gatekeeping denies their request to die",
+      "medical_professionals — agenda-setter with gatekeeping power; assess eligibility and capacity; caught between preservation duty and autonomy norm; constrained exit_options",
+      "state_prohibition_authority — agenda-setter in prohibition jurisdictions; articulates and enforces the rule that neither individuals nor clinicians have authority to intentionally end life",
+      "disability_rights_advocates — excluded voice; object to expansion to non-terminal disability; experience policy as coercive culling masked as choice",
+      "religious_and_sanctity_communities — excluded from autonomy-primary authority structure; live in legal regime they experience as fundamentally illegitimate",
+      "relational_autonomy_theorists — excluded analytical voice; argue for distributed decision authority across patient-family-clinician triad"
+    ],
+    "logic_rationale": "Base extractiveness (0.52) is moderate, not high, because the autonomy-primary reading does provide real coordination (who decides) and genuine dignity recognition for those whose will is honored. But extractiveness is substantial because those whose death request is denied pay an acute cost: prolonged suffering + loss of autonomous agency + the experience of their will being overridden. The spread between beneficiaries (recognized autonomy) and victims (denied autonomy) is structurally sharp. Suppression (0.71) is high because the constraint's persistence in prohibition jurisdictions depends on active suppression of individual exit attempts (legal barriers, clinician refusal, family opposition), and in permissive jurisdictions on gatekeeping authority (capacity assessment, eligibility criteria). Suppression is not as high as it would be for pure snare because the autonomy norm genuinely resonates with many patients and clinicians, creating compliance without pure coercion. Theater ratio (0.28) is moderate-low: the capacity assessment and safeguarding procedures are substantively real, not purely performative, but gatekeeping has a performative edge (the procedures often delay or deny requests in ways that look procedurally careful but operate as outcome-controlling). Accessibility collapse (0.62) reflects that once the autonomy-primary frame is understood, few alternatives remain available in permissive jurisdictions—but in prohibition jurisdictions alternatives persist (relational frames, sanctity frames, palliative-only approaches). Resistance (0.74) is high: powerful constituencies (disability rights, sanctity-of-life, medical preservation traditions) actively resist autonomy-primary expansion; legal challenges continue; and the empirical evidence about outcomes is hotly contested. The measurement series from 1975–2025 models the spreading codification of autonomy-primary norms: extractiveness has risen as the reading gains legal authority (suffering individuals' exit requests are more often honored, which would seem to reduce extraction, but gatekeeping and eligibility criteria have also tightened, creating the net modest rise). Suppression has fallen as prohibition has eroded in permissive jurisdictions, but remains high where prohibition is maintained. Theater has risen as institutional procedures have matured.",
+    "perspectival_gap": "From the autonomy-primary seat, the constraint is genuine coordination: 'who decides?' is answered clearly ('I do'), dignity is protected, and individual will is respected. From the sanctity-primary seat, the same structure is extraction: an illegitimate authority to kill is imposed, individual preference usurps transcendent law, and dignity is violated by death itself. From the relational-autonomy seat, both are incompletely framed: true autonomy requires relational support and distributed authority, solo individual choice is isolating, and the procedure lacks the oversight and relational embedding genuine autonomy requires. These perspectival gaps are not resolvable by better information; they rest on different foundational premises about what dignity is. The engine computes the per-seat type from the structural relationships, not from reconciling the perspectives.",
+    "directionality_logic": "The beneficiary/victim declarations follow from the autonomy-primary reading itself: the reading declares that autonomy resides in the individual, so individuals who exercise autonomous choice are beneficiaries and those denied choice are victims. The directionality flow is: beneficiary (autonomy honored) gets d near 0.0 (subsidy/protection), victim (autonomy denied) gets d near 1.0 (extraction/suppression). Medical gatekeepers and state authorities hold ambiguous d because they are simultaneously implementers of the autonomy norm (in permissive jurisdictions) and suppressors of it (in prohibition regimes). Disability-rights advocates are harmed by the misapplication of the frame to non-terminal suffering, creating extraction through coercive inference, so their d is high. The directionality is stable across the interval; what changes is the distribution of agents across the seats as more jurisdictions adopt autonomy-primary codification.",
+    "mandatrophy_analysis": "The constraint does not show mandatrophy (founding problem dead, function atrophied) in most jurisdictions. The founding problem (who decides?) remains live. The coordination function (clarifying authority, enabling choice) remains real. In prohibition jurisdictions, the autonomy-primary norm persists as a powerful discursive force even though it lacks legal codification—it is not theatrical or inert. In permissive jurisdictions, the norm is actively implemented through institutional procedures (capacity assessment, counseling, clinician coordination). However, a mandatrophy hypothesis is worth examining: in some permissive jurisdictions, the autonomy norm may have decoupled from the actual lived experience of individuals—the procedures may have become gatekeeping theater that frustrates the very autonomy they claim to protect. If individuals systematically experience gatekeeping delays and denials despite satisfying statutory criteria, the founding problem (who decides?) is functionally dead (individuals do not in fact decide) but the norm persists in rhetoric. This would be mandatrophy: the function has atrophied but the constraint persists through institutional inertia. The measurement of theater_ratio rising from 0.05 to 0.28 suggests growing performativity—capacity assessment and waiting periods that look procedurally careful but operate as outcome-controlling. This is not mandatrophy yet (the coordination function remains real), but it flags the risk.",
+    "kernel_context": "This constraint is the autonomy_primary reading of the dignified_death kernel. The kernel is a contested commitment: What does dignity mean in the context of terminal suffering and death? The autonomy-primary reading answers: dignity resides in self-determination; the individual has final authority. Two sibling readings instantiate competing answers: sanctity_primary (dignity resides in life's intrinsic value; intentional killing violates transcendent law) and relational_autonomy (dignity emerges from relational context; authority is distributed). These are three separate constraints, each with its own ε, beneficiary/victim structure, and type. They share the kernel (the reference question about dignity in death) but diverge fundamentally on the answer. The readings do not coexist peacefully—jurisdictions must choose one as legally authoritative, creating winners and losers. Where autonomy-primary is codified, sanctity and relational readings become excluded voices. The contest is live in legislatures, courts, and bioethical discourse."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "dignified_death__sanctity_primary",
+      "dignified_death__relational_autonomy"
+    ],
+    "dual_formulation_note": "The dignified_death kernel admits three structurally distinct readings, each instantiated as a separate constraint. autonomy_primary (this constraint) asserts dignity resides in individual self-determination; sanctity_primary asserts dignity resides in life's intrinsic value; relational_autonomy asserts dignity emerges from relational context and distributed authority. Each reading has different ε (autonomy_primary 0.52, sanctity_primary ~0.30, relational_autonomy ~0.42), different beneficiary/victim structures, different types. They do not coexist peacefully within single jurisdictions—legal codification of one reading displaces the others into excluded voices. The three constraints are linked by network.affects_constraints; the sibling readings are documented in cs_structure.reading_relations and cs_structure.axioms."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "state_prohibition_authority",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "relational_autonomy",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dignity_equals_self_determination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "individual_death_authority_supremacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "autonomous_individual_as_sole_authority",
+    "drift_state": {
+      "moment": "contemporary_medical_aid_in_dying_codification_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

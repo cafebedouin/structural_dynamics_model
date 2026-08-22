@@ -1,0 +1,383 @@
+{
+  "header": {
+    "constraint_id": "ai_risk_prioritization__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "abc6d102-8ad1-41fd-bdd6-6647d9ed20dc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Existential AI Risk Prioritization Frame",
+    "topic_domain": "technology/governance/risk assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "longtermist_x_risk_institutions",
+      "capability_control_advocates",
+      "alignment_research_funders"
+    ],
+    "victims": [
+      "near_term_justice_constituencies",
+      "algorithmic_bias_subjects",
+      "displaced_workers",
+      "future_generations"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "longtermist_x_risk_institutions",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets the research and funding priorities within AI safety and EA communities, framing existential misalignment as the canonical failure mode. Controls or influences major funding flows (billions annually from longtermist foundations). Defines what counts as legitimate AI risk research and enforces this framing through research agendas, hiring, conference selection, and grant allocation."
+    },
+    {
+      "name": "alignment_research_funders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Direct financial beneficiaries of the existential framing: billions in funding flow to alignment and capabilities research addressing AGI-level risks. Their portfolio value and institutional legitimacy depend on the existential framing remaining the authoritative one. They face no enforcement barrier to directing resources elsewhere but do so rarely because the existential frame is their primary comparative advantage in EA and tech governance circles."
+    },
+    {
+      "name": "capability_control_advocates",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from resource allocation toward AGI capability control, safety infrastructure, and international coordination frameworks. Include research organizations, policy advocates, and some national security establishments that frame AGI as the central governance challenge. Their institutional authority depends on the existential framing being credible and urgent."
+    },
+    {
+      "name": "near_term_justice_constituencies",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Subjects of algorithmic discrimination, bias in deployed systems, labor displacement from current AI applications. Pay in the form of deferred resources and attention: funding that could address current harms is redirected to long-term research; policy attention to immediate discriminatory systems is subordinated to existential governance. Their exit options are extremely constrained—they cannot opt out of deployed systems and lack resources to redirect funding flows."
+    },
+    {
+      "name": "algorithmic_bias_subjects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Harmed by bias in hiring algorithms, credit scoring, policing systems, and medical diagnostics operating today. Experience measurable discrimination. The existential framing recontextualizes their harm as a 'near-term distraction' from the primary risk. They lack institutional power to redirect resources or reframe the risk hierarchy and are geographically dispersed, limiting coalition formation."
+    },
+    {
+      "name": "displaced_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Losing employment to automation and algorithmic job displacement now. The existential framing treats their displacement as a minor feature of the long-term landscape rather than an urgent justice concern. Policy resources and research attention directed to AGI alignment are unavailable for retraining, transition support, or labor protections addressing current displacement. They have some coalition power through labor organizations but limited access to funding or governance architecture."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The canonical beneficiary in the existential framing. Cannot participate in current decision-making or contest resource allocation. Represented (often without deliberative input) by longtermist institutions that claim to steward their interests. Non-agent entity: included for narrative completeness as the abstract moral subject the constraint nominally protects."
+    },
+    {
+      "name": "near_term_ai_harms_researchers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers focused on algorithmic fairness, current AI bias, labor displacement, and near-term governance. Would contest the existential framing as misallocating resources and obscuring urgent harms. Excluded from agenda-setting in longtermist funding streams and EA community governance; their research is often characterized as short-termist or instrumentally motivated rather than addressing the 'real' risks."
+    },
+    {
+      "name": "capability_researchers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop frontier AI capabilities in industry and academic labs. Position themselves as observers of the existential risk debate, sometimes claiming neutrality while benefiting from the urgency framing (justifies aggressive capability advancement as necessary precursor to alignment research). Their interests are partially aligned with the existential framing (legitimates their work) but partially in tension (capability controls might restrict their research directions)."
+    },
+    {
+      "name": "developing_nation_stakeholders",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Would be substantially harmed by AGI-level existential risks but have minimal voice in defining the risk frame or allocating response resources. Also subject to near-term algorithmic harms (exported bias in credit, hiring, content moderation systems) but cannot redirect funding or governance attention. Excluded from both the longtermist institutions setting the existential frame and from the near-term justice constituencies that might contest it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates scientific and policy attention on AGI safety as a civilization-level problem; aligns research incentives toward long-horizon technical work rather than episodic responses to specific harms; concentrates expertise and resources on the constraint of misaligned superintelligence—a genuine coordination problem no single actor would solve independently.",
+    "transfer_function": "Redirects research funding, policy attention, and institutional legitimacy from near-term algorithmic justice and labor protection toward AGI alignment research and capability controls. Billions flow from longtermist philanthropies to x-risk research institutions; policy capacity is allocated to international AGI governance frameworks rather than algorithmic auditing and bias remediation; career paths and professional prestige flow to researchers working on existential timescales rather than near-term fairness.",
+    "absent_voices": "Subjects of current algorithmic discrimination, displaced workers in specific sectors, near-term AI harms researchers, developing nation stakeholders affected by exported algorithmic bias, and labor advocates focused on employment protection. These parties would contest the prioritization framework but are largely excluded from the institutions and funding networks that set the existential agenda. Their absence is structural, not accidental: the existential framing positions their concerns as instrumentally useful at best (for testing alignment properties) and distracting at worst.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the existential prioritization frame disappeared and resources reallocated to near-term harms, the world would substantially rearrange: funding flows to deployed-AI auditing and fairness work would increase; labor protections and retraining would expand; policy capacity would address current discrimination rather than AGI governance. The existential framing's beneficiaries (x-risk institutions, capability control advocates) argue the world would rearrange catastrophically—existential risks would go unaddressed, increasing extinction probability. The near-term justice constituencies argue the world would rearrange toward justice for present harms without materially decreasing AGI preparation. The contest is not whether disappearance matters (it clearly does) but whether the rearrangement is beneficial or catastrophic.",
+    "founding_problem": "Unaligned artificial general intelligence poses an extinction-level threat to humanity. As AI systems advance toward general reasoning, the difficulty of ensuring their goals align with human values increases. Current progress toward AGI, combined with inadequate alignment research capacity, creates an existential emergency requiring urgent resource concentration on alignment, capability control, and international coordination frameworks.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Attested by leading researchers in AGI safety, longtermist philosophers, and some AI capabilities researchers who accept the alignment frame. Contested by near-term AI harms researchers who argue the founding problem is misdiagnosed (AGI misalignment is speculative; near-term harms are measurable), by labor advocates who argue the founding problem is wrongly sequenced (near-term displacement is an urgent problem now), and by developing nation representatives who argue the frame privileges northern institutional interests over immediate global harms. External corroboration for the existential urgency comes from a subset of academic AI researchers and EA-aligned experts; external contestation comes from labor economists, civil rights organizations, and Global South governance advocates."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The existential AI risk reading frames AGI misalignment as an extinction-level threat requiring urgent resource concentration on alignment research, capability controls, and international coordination. This reading instantiates a specific allocation mechanism: longtermist institutions set research priorities and funding flows; near-term algorithmic justice concerns are recontextualized as secondary or distracting; the victim set extends to future generations (a non-agent abstraction represented by current beneficiary institutions). The constraint is CLAIMED as tangled_rope—genuine coordination on AGI safety plus asymmetric extraction from near-term justice constituencies. The authored metrics describe rising extractiveness (asymmetry between who is coordinated and who pays) and rising theater (enforcement activity increasingly directed at suppressing near-term framing rather than pure safety research). This is one reading of the contested kernel ai_risk_prioritization; the sibling reading ai_risk_prioritization__near_term_harms_reading instantiates the competing frame.",
+    "key_agents": [
+      "longtermist_x_risk_institutions (agenda-setter, organized power): defines research priorities, controls funding flows",
+      "alignment_research_funders (beneficiary, powerful): direct recipients of billions in directed funding",
+      "capability_control_advocates (beneficiary/agenda-setter, powerful institutional): shape policy and research direction toward AGI governance",
+      "near_term_justice_constituencies (payer, powerless/immediate horizon): subjects of current algorithmic harms, absorb resource opportunity cost",
+      "displaced_workers (payer, moderate power): experience job loss; policy attention redirected to long-term risks",
+      "near_term_ai_harms_researchers (excluded, moderate power): research agenda subordinated to existential framing",
+      "future_generations (abstract beneficiary, non-agent): represented but unable to participate in allocation decisions"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.42 to 0.68 over the interval as the existential framing consolidates institutional authority and funding flows concentrate. At t=0, the existential frame competes with near-term concerns; by t=15-25, it dominates longtermist institutions and EA governance; by t=35-40, it plateaus as the established orthodoxy, with remaining resistance absorbed into niche near-term research. Theater rises from 0.18 to 0.42 as enforcement increasingly focuses on maintaining the existential priority against contestation (suppressing near-term framing as short-termist, redefining fairness work as peripheral to the main problem) rather than on pure safety research. Suppression rises from 0.52 to 0.71 as the institutional apparatus actively excludes near-term voices from agenda-setting and funding. The constraint is tangled_rope, not pure snare: genuine coordination problem (AGI safety) plus real extraction (near-term justice constituencies bear the cost of redirected attention). Beneficiaries are organized and powerful (institutions, funders); victims are dispersed (near-term justice, displaced workers) or excluded (near-term researchers) or abstract (future generations), making coalition resistance difficult. The measurement series reveals a ratchet of suppression: once the existential frame dominates institutions, the active enforcement required to maintain it against alternative framings increases, suggesting the constraint's stability depends on continuous suppression rather than on universal acceptance of the underlying coordination problem.",
+    "perspectival_gap": "From the longtermist x-risk institutional seat, this is genuine coordination—the existential risk is real and urgent, and reallocating resources is the correct response to an unprecedented threat. From the near-term justice seat, this is extraction disguised as coordination—the allocation mechanism concentrates attention on speculative long-term risks while measurable harms are deferred, and the mechanism is sustained by institutional power and funding control, not by epistemic consensus. From the future generations seat (represented by longtermist institutions), this is stewardship of their interests; from the developing nation excluded seat, this is appropriation of future interests by northern institutional power. The engine computes directionality from the structural data: longtermist institutions are near-beneficiary (d ≈ 0.1-0.2); near-term constituencies are near-target (d ≈ 0.85-0.95); the gap emerges from power, exit options, and victim/beneficiary declarations, not from claimed framings.",
+    "directionality_logic": "Longtermist x-risk institutions (powerful, organized, mobile exit options) benefit from the existential framing—they control its instantiation and resource flows. Their directionality is low (beneficiary end of spectrum, d ≈ 0.15). Near-term justice constituencies (powerless, trapped exit options, immediate horizon) pay through deferred attention and resources. Their directionality is high (target end of spectrum, d ≈ 0.90). Capability control advocates sit slightly toward beneficiary (d ≈ 0.3-0.4): they benefit from the framing's policy authority but also bear some reputational risk if the existential prediction proves incorrect or if near-term harms go severely unaddressed. Near-term harms researchers are excluded, not victims—exclusion is structural, not extraction, though it is enforced (d ≈ 0.65). Future generations are the nominal beneficiaries but non-agents; their interests are mediated entirely through longtermist institutions, which creates a structural conflict of interest—the beneficiary (future generations) cannot contest their representation.",
+    "mandatrophy_analysis": "This constraint exhibits early mandatrophy dynamics. The founding problem (unaligned AGI extinction risk) was live when the existential frame emerged (2010s, responding to increasing AI capabilities). By 2026, the founding problem remains contested rather than solved (near-term researchers and Global South stakeholders dispute whether misalignment is the primary risk or a secondary concern relative to capability deployment and algorithmic harms). However, the constraint is increasingly maintained by institutional inertia and enforcement rather than by continued consensus that the problem is urgent and unsolved. The rising theater_ratio (from 0.18 to 0.42) signals that a growing share of enforcement activity is devoted to suppressing near-term framing and maintaining the existential priority against contestation, not to advancing safety research directly. The suppression_requirement rising from 0.52 to 0.71 indicates that active force is required to keep the framing dominant. The plateau of extractiveness at 0.68 after t=25 suggests the constraint has reached a stable institutional state—further consolidation requires diminishing returns. A mandatrophy verdict is not yet warranted (the founding problem remains genuinely contested), but the trajectory shows a constraint transitioning from coordination plus extraction toward pure enforcement of a minority frame. The engine will flag this as a stage-2 mandatrophy candidate if the divergence between founding_problem_status (contested) and the continued extraction widens further.",
+    "kernel_context": "This constraint instantiates the existential_risk_reading of the contested kernel ai_risk_prioritization. The sibling reading is near_term_harms_reading, which frames AI risk as primarily near-term—algorithmic discrimination, labor displacement, surveillance harms occurring now, requiring justice interventions and regulatory protections today. The two readings share the same kernel (the claim that AI systems carry risks) but disagree fundamentally on the risk hierarchy, victim set, and resource allocation. They coexist as live positions held by different institutional and advocacy communities (longtermist EA vs. civil rights/labor advocates). Neither forecloses the other logically—a party could coherently hold both 'AGI misalignment is a real long-term risk' and 'algorithmic justice is an urgent near-term concern requiring resources now.' The constraint is the existential reading: it instantiates the prioritization mechanism that subordinates near-term concerns to long-term AGI safety."
+  },
+  "omegas": [
+    {
+      "id": "agi_timescale_uncertainty",
+      "question": "How many years until transformative AGI capable of misalignment-induced extinction risk? Is it 5 years, 50 years, or 500 years?",
+      "resolution_mechanism": "Observable progress toward AGI; capability benchmarks; researcher consensus (though consensus itself is contested); concrete AGI arrival.",
+      "impact": "If AGI is 500+ years away, the existential framing radically misallocates resources and justifies near-term harms. If AGI is 5-10 years away, the existential prioritization is justified. If timescale remains fundamentally uncertain (best estimate 2025-2100 with wide credence spread), both framings retain validity claims.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Fundamental uncertainty about AGI arrival timeline drives all downstream resource allocation disputes."
+    },
+    {
+      "id": "alignment_problem_solvability",
+      "question": "Is AGI alignment a solvable technical problem amenable to research focus (existential reading assumes yes), or is it an unsolvable structural problem rooted in the incentive structures of AGI development (near-term reading suspects no)?",
+      "resolution_mechanism": "Failure or success of alignment research producing systems demonstrably safer than capability-first approaches; empirical test of alignment techniques on next-generation frontier systems.",
+      "impact": "If alignment is solvable, the existential frame's resource concentration is justified. If alignment is unsolvable or capability control is the only viable approach, the existential frame is catastrophically wrong and near-term harms research becomes the primary concern.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alignment research produces measurable safety improvements or merely the appearance thereof."
+    },
+    {
+      "id": "extinction_vs_misery_moral_weight",
+      "question": "If aggregate future suffering is lower under near-term justice policies + delayed AGI + eventual misaligned-AGI-induced extinction than under existential prioritization + near-term injustice + reduced extinction risk, which frame is correct?",
+      "resolution_mechanism": "Moral philosophy (no empirical resolution); stakeholder deliberation; comparison of suffering metrics across framings. This is irreducibly normative.",
+      "impact": "This omega cannot be resolved empirically—it depends on terminal values and moral uncertainty. Frames emphasizing extinction prevention weight future existence axiomatically; frames emphasizing present justice weight current suffering axiomatically. Resolution requires deliberation, not discovery.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Irreducible value disagreement between extinction prevention and present justice."
+    },
+    {
+      "id": "institutional_capture_vs_epistemic_leadership",
+      "question": "Is the dominance of the existential frame evidence of genuine epistemic leadership by x-risk researchers (who have correctly identified the primary risk), or evidence of institutional capture by longtermist institutions (who have concentrated resources and defined the risk hierarchy for institutional benefit)?",
+      "resolution_mechanism": "Audit of resource allocation decisions: do they track published safety research consensus or institutional preference? Analysis of which researchers succeed in funding (do near-term researchers get funded at proportional rates?). Measurement of alternative-frame research output given equal resources.",
+      "impact": "If epistemic leadership: the existential frame should remain dominant indefinitely. If institutional capture: removing institutional bottlenecks should produce equivalent safety research output with different risk hierarchy. This distinction affects the legitimacy of the extraction component of the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether frame dominance reflects truth or power."
+    },
+    {
+      "id": "representation_of_future_interests",
+      "question": "Can longtermist institutions legitimately represent the interests of future generations who cannot participate in current resource allocation? Is representation through institutional stewardship adequate, or is it a structural conflict of interest?",
+      "resolution_mechanism": "Governance innovation: mechanisms for future-stake representation in current allocation decisions; accountability structures for longtermist trustees; deliberative processes including near-term stakeholders in existential framing decisions.",
+      "impact": "If representation is adequate, future generations are genuine beneficiaries and the frame is valid coordination. If it is inadequate, the constraint exhibits structural victims (future generations) represented by their alleged beneficiaries, which is a snare signature.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether future interests can be legitimately represented by current institutions."
+    },
+    {
+      "id": "near_term_frame_sibling_reading_contest",
+      "question": "Is the near_term_harms_reading logically incompatible with this existential reading, mutually enabling, or structurally separable (both could be true simultaneously)?",
+      "resolution_mechanism": "Logical analysis: do the axioms of each reading contradict? Can both AGI misalignment and near-term algorithmic harm be primary risks? Empirical test: do resources directed to near-term justice reduce existential safety research effectiveness, or are they complementary?",
+      "impact": "If incompatible (forecloses): only one can be defended. If compatible (coexists): the allocation contest is empirical and empirically resolvable. If separable: the constraint is pure extraction (exists to subordinate one valid concern to another) rather than genuine coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between existential and near-term risk framings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_risk_prioritization__near_term_harms_reading",
+      "algorithmic_bias_regulatory_constraint",
+      "labor_displacement_policy_constraint"
+    ],
+    "dual_formulation_note": "This constraint is one reading (existential_risk_reading) of the contested kernel ai_risk_prioritization. The sibling reading ai_risk_prioritization__near_term_harms_reading instantiates the competing frame with different victim/beneficiary structure, timescale, and resource allocation. Both stories share the kernel (AI systems carry risks) but diverge fundamentally on risk hierarchy and enforcement mechanism. Network links track downstream effects: this reading (existential prioritization) influences and partially suppresses the near_term_harms and labor_displacement constraints by redirecting resources and policy attention."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "gain_flow": "longtermist_x_risk_institutions",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "near_term_harms_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "agi_misalignment_extinction_primary_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "alignment_research_primary_response_lever",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "frontier_ai_capability_unaligned_catastrophic_risk",
+    "drift_state": {
+      "moment": "contemporary_2024_2026",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

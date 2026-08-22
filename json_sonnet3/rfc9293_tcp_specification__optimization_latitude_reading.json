@@ -1,0 +1,254 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "f3a040d4-0680-47b4-a0b6-946f1e4791b8"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 — Semantic Contract with Implementation Latitude",
+    "topic_domain": "network_protocol_engineering/internet_standards",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "protocol_stack_implementers",
+      "network_operators",
+      "application_developers",
+      "internet_users"
+    ],
+    "vindicated_propositions": [
+      "behavioral_contract_sufficiency_doctrine",
+      "means_end_separability_in_protocol_design"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "protocol_stack_implementers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operating-system and network-stack vendors (Linux, BSD, Windows) implement TCP against the RFC 9293 semantic contract — reliable, ordered, byte-stream delivery with the defined state machine transitions — but are free to choose their own congestion control, retransmission timing, and buffer management internals. They ship BBR, CUBIC, or other algorithms as competitive differentiators without needing sign-off from any body, so long as the wire-visible interoperability contract holds."
+    },
+    {
+      "name": "network_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "ISPs and datacenter operators deploy whichever TCP variant best serves their traffic profile (e.g., DCTCP inside a datacenter, BBR on wide-area links) because the specification separates observable behavior from internal mechanism. They benefit directly from the latitude: performance tuning is a local decision, not a renegotiation of the standard."
+    },
+    {
+      "name": "application_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build software against the socket-level guarantee of an in-order, complete byte stream. They do not need to know or care which congestion control algorithm sits underneath; the abstraction the specification guarantees is exactly the one they consume, and switching underlying stacks costs them nothing structurally."
+    },
+    {
+      "name": "internet_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Experience faster page loads and video streams as vendors iterate on performance internals invisibly. They have no direct voice in protocol design and limited ability to choose their access provider's stack, but the latitude the specification grants is what lets performance improvements reach them without any renegotiation of interoperability they would need to understand or consent to."
+    },
+    {
+      "name": "ietf_tcpm_working_group",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Maintains and periodically revises the specification text, adjudicating which behavioral guarantees are load-bearing for interoperability versus which are implementation choices. Documents consensus about the semantic/mechanism boundary but does not enforce compliance directly; authority rests on voluntary adoption and rough consensus."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a single behavioral contract (reliable, ordered, flow-controlled byte-stream delivery over an unreliable network) that all implementations must honor at the wire, so that any two conforming stacks can interoperate regardless of internal design — solving the genuine coordination problem of letting heterogeneous vendors build independently while guaranteeing they can talk to each other.",
+    "transfer_function": "Moves almost nothing extractively: the specification transfers design freedom TO implementers (they are not required to match a reference implementation) while imposing a shared minimum behavioral floor on all of them. What is 'transferred' is coordination capacity — the ability to interoperate — not a rent from one party to another.",
+    "absent_voices": "End users and smaller application developers are not present in IETF working-group deliberations, but their interests (speed, reliability) are structurally aligned with the specification's outcome guarantees rather than opposed to them; there is no identifiable party who would object to the latitude itself, though some might contest specific boundary calls about what counts as 'semantic' versus 'implementation.'",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the behavioral contract vanished, implementers would lose the shared floor that lets independently built stacks interoperate; the internet would fragment into incompatible dialects requiring pairwise negotiation, and decades of accumulated performance innovation (which relies on the semantic/mechanism split to be deployable without renegotiating interoperability) would be jeopardized.",
+    "founding_problem": "Early internet protocol work needed a way for independently developed network stacks, built by different vendors on different hardware, to reliably exchange ordered byte streams over an unreliable, lossy packet network — while leaving room for the field to keep improving performance as hardware and network conditions changed.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the IETF standards body by decades of empirical measurement studies (e.g., academic Internet-measurement literature tracking congestion-control deployment) showing continued interoperability across heterogeneous stacks despite substantial internal algorithmic divergence (Reno-family, CUBIC, BBR, DCTCP) — independent evidence that the semantic/mechanism split continues to do the coordination work it was designed for."
+  },
+  "interval": {
+    "start": 1981,
+    "end": 2022
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1981,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1981,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the optimization_latitude reading of the RFC 9293 kernel: the specification is read as a behavioral contract (reliable byte-stream delivery, defined state-machine transitions) that binds only at the level of observable outcomes, leaving implementers free to choose internal mechanisms — retransmission timers, congestion-control algorithms, buffer strategies — so long as the wire-visible contract holds. Under this reading the coordination function is doing almost all the structural work: heterogeneous vendors converge on interoperability without converging on implementation, and that latitude is precisely what has allowed decades of performance innovation (Reno, CUBIC, BBR, DCTCP) to be deployed without renegotiating the standard. This is a Rope reading, not a Tangled Rope or Mountain: there is no identifiable victim class paying a structural cost through this arrangement, and no active enforcement mechanism coerces compliance — adoption is voluntary and self-interested because interoperability is a precondition for a stack's usefulness at all.",
+    "key_agents": [
+      "protocol_stack_implementers: organized/mobile — benefit from design freedom within the semantic floor",
+      "network_operators: organized/mobile — deploy variant algorithms suited to local traffic",
+      "application_developers: moderate/mobile — consume the stable byte-stream abstraction",
+      "internet_users: powerless/constrained — diffuse beneficiaries of invisible performance gains",
+      "ietf_tcpm_working_group: institutional/analytical — maintains the semantic/mechanism boundary"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.08) and essentially flat across four decades because this reading identifies no rent-collection structure: the specification's latitude provision does not transfer value from a payer class to a beneficiary class, it expands the design space available to everyone bound by the same outcome guarantee. Suppression is low (0.12) — compliance is not coerced by any enforcement body; a non-conforming stack simply fails to interoperate, which is a natural consequence of the coordination problem, not an imposed penalty. Theater ratio stays near zero because the working group's activity (revising boundary calls between semantic and implementation) is substantive standards work, not performative maintenance of a hollowed-out function. accessibility_collapse is moderate (0.4), not near-zero and not near-mountain-high: alternatives to TCP altogether (QUIC, raw UDP-based protocols) are real and increasingly used, so the constraint has not achieved total closure of the option space — but within the TCP-compatible world, once you commit to a conforming stack you cannot deviate from the observable contract without breaking interoperability, so accessibility isn't trivially open either. Resistance is low (0.15): implementers do not experience the semantic floor as an imposition worth fighting; disputes are occasional and technical (e.g., debates over what counts as observable behavior for algorithms like BBR that alter timing-sensitive semantics), not adversarial contests over extraction.",
+    "perspectival_gap": "Under this reading there is minimal seat divergence: the agenda-setting seat (implementers who both write and consume the spec via the IETF process) and the beneficiary seats (operators, developers, users) experience largely the same structure — voluntary coordination they opt into because it serves their own interoperability and performance goals. This is itself diagnostic: a reading with near-zero payer/beneficiary asymmetry and no coercive enforcement is the Rope signature. The sibling readings (strict_invariance, middlebox_realism) would show sharper divergence — strict_invariance because it treats deviation as illegitimate regardless of benefit, middlebox_realism because it introduces an unaccountable third party (deployed middlebox behavior) that neither implementers nor the spec authors control.",
+    "directionality_logic": "All named parties are coded as beneficiaries because, under this reading, the latitude provision structurally subsidizes everyone bound by it: implementers gain design freedom, operators gain deployment flexibility, developers gain a stable abstraction, and users gain invisible performance improvements — none of them pay a countervailing cost through this specific structural mechanism. There is no victim class to declare because the reading's own premise (means-end separability) is precisely the claim that no one is harmed by permitting variation in mechanism, so long as the outcome contract holds. If a coalition of implementers were shown to exploit ambiguity in 'observable behavior' to gain unfair competitive advantage while degrading others' interoperability, that would be evidence for a different constraint (arguably the middlebox_realism or a capture-flavored sibling), not evidence against this reading.",
+    "mandatrophy_analysis": "The founding problem (heterogeneous vendors needing to interoperate while retaining room to improve performance) is authored as still live and unambiguously served by the current arrangement — this is not a case of an atrophied mandate persisting on inertia. The specification continues to be revised (RFC 9293 itself supersedes RFC 793) precisely because the working group treats the semantic/mechanism boundary as a living, contestable line rather than a frozen relic, which is the opposite of mandatrophy. If a future measurement showed theater_ratio rising sharply (e.g., the working group producing revisions that only ratify vendor fait accompli without genuine functional re-examination), that would be the signal to revisit this classification.",
+    "kernel_context": "This is the optimization_latitude reading of the rfc9293_tcp_specification kernel. It reads the RFC as fixing a behavioral/semantic contract (reliable, ordered byte-stream delivery, defined connection state machine) while treating everything below that contract — congestion control, retransmission strategy, buffer management — as legitimate implementation latitude. The sibling strict_invariance_reading instead treats the entire state machine, including timing-sensitive and mechanism-adjacent details, as an invariant implementations must replicate exactly, denying that any meaningful means-end separation exists; that reading would author much higher accessibility_collapse and treat vendor divergence as a coordination failure rather than a feature. The sibling middlebox_realism_reading denies that specification text is the operative authority at all, holding instead that deployed middlebox behavior (NATs, firewalls, traffic-shaping boxes) is the de facto protocol that implementers must actually design against — under that reading the RFC's authority is subordinate to an unaccountable, undocumented population of network intermediaries, which would likely push the constraint toward tangled_rope or worse given the asymmetry between middlebox operators and endpoint implementers. This story authors none of that; it holds the specification-as-contract premise fixed and evaluates only the coordination/latitude structure that follows from it."
+  },
+  "omegas": [
+    {
+      "id": "semantic_mechanism_boundary_stability",
+      "question": "Is the line between 'observable semantic behavior' (which the spec fixes) and 'implementation mechanism' (which is left free) itself stable, or does it shift as new algorithms (e.g., BBR's departure from loss-based congestion signaling) reveal that some 'mechanism' choices actually alter externally observable behavior in ways the original drafters didn't anticipate?",
+      "resolution_mechanism": "Track IETF TCPM working-group deliberations and errata over algorithms that provoked boundary disputes (e.g., ECN, explicit congestion notification interactions with middleboxes, BBR fairness debates) to see whether the community treats these as clarifications of an already-fixed boundary or as genuine renegotiations of what counts as semantic versus mechanism.",
+      "impact": "If the boundary is genuinely unstable and periodically renegotiated under vendor pressure, this reading's Rope classification is more fragile than authored — repeated ad hoc boundary-shifting in favor of whichever vendor ships first would start to look like informal capture of the standards process, pushing toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the semantic/mechanism split this reading depends on is a stable structural fact or a continuously renegotiated boundary."
+    },
+    {
+      "id": "kernel_reading_selection_basis",
+      "question": "Among the three declared readings of the RFC 9293 kernel (optimization_latitude, strict_invariance, middlebox_realism), what determines which reading is operative for a given deployment context — is it a property of the deployment (e.g., datacenter-internal traffic favors optimization_latitude while public-internet traffic behind heavy NAT/middlebox infrastructure favors middlebox_realism), or is it a genuinely contested interpretive question with no fact of the matter?",
+      "resolution_mechanism": "Empirical survey of measurement studies (e.g., middlebox-ossification literature) correlating the applicability of each reading with deployment topology — if optimization_latitude describes datacenter/controlled-network contexts well but middlebox_realism dominates public-internet path behavior, the three readings may be less genuinely competing and more context-indexed.",
+      "impact": "If reading applicability is context-indexed rather than genuinely contested, this story's Rope classification would need a scope qualifier (e.g., valid within administratively controlled network segments) rather than standing as a general claim about RFC 9293's operation across the whole internet.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings are genuinely rival interpretations or are each accurate within different deployment contexts."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__strict_invariance_reading",
+      "rfc9293_tcp_specification__middlebox_realism_reading"
+    ],
+    "dual_formulation_note": "This story is one of three siblings decomposing the colloquial 'RFC 9293 / TCP specification authority' claim per the ε-invariance principle. optimization_latitude_reading authors low, stable ε (~0.08) reflecting a pure-coordination structure with design freedom subsidizing all bound parties. strict_invariance_reading is expected to author higher accessibility_collapse and treat implementation divergence as illegitimate, likely still landing near Rope or Mountain but with a starkly different resistance/accessibility profile. middlebox_realism_reading is expected to author substantially higher ε and suppression, since it locates real operative authority in an unaccountable population of deployed network intermediaries whose incentives are not aligned with either spec authors or endpoint implementers — that asymmetry is the candidate tangled_rope or snare shape in the family. All three share the same kernel text (RFC 9293) but diverge in what they take the kernel's authority to actually govern."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "behavioral_contract_with_mechanism_freedom",
+    "drift_state": {
+      "moment": "post_congestion_control_diversification_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "strict_invariance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "means_end_separability_holds",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "voluntary_conformance_suffices_for_interoperability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

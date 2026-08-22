@@ -1,0 +1,288 @@
+{
+  "header": {
+    "constraint_id": "basic_law_interpretive_boundary__parliamentary_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "f027ae6a-d6a4-40b0-ae71-c49afda232ab"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.42,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Knesset Parliamentary Sovereignty Reading of Basic Law Authority",
+    "topic_domain": "constitutional_law/comparative_constitutionalism",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "knesset_majority_coalition",
+      "sitting_executive_government"
+    ],
+    "victims": [
+      "minority_political_blocs",
+      "individual_rights_claimants"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disagreement_locus",
+      "question": "Is this constraint one reading of a contested kernel (the Basic Law interpretive boundary), or the settled structure of Israeli constitutional order?",
+      "resolution_mechanism": "Compare against the sibling readings (judicial_supremacy_reading, balanced_contestation_reading), each authored as separate constraints with their own epsilon and stakeholder structure; observe whether the Supreme Court's own jurisprudence (post-2023 reasonableness ruling era) treats the sovereignty premise as live, dead, or contested.",
+      "impact": "If the sovereignty reading is the operative one, judicial review functions as advisory-only and epsilon for majoritarian legislation stays near-zero except where international treaty obligations bind. If a sibling reading prevails structurally, this constraint's own metrics would need re-authoring as a different constraint entirely, not a reinterpretation of this one.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where the three sibling readings of the Basic Law interpretive boundary actually disagree, and which reading currently governs practice."
+    },
+    {
+      "id": "unwritten_constitution_ambiguity",
+      "question": "Because Israel has no single formal constitution — only a stack of Basic Laws passed by ordinary Knesset majority and layered with a court-invented 'constitutional revolution' doctrine (1995 onward) — is the sovereignty reading recovering an original design feature, or is it a majority coalition retroactively asserting a naturalized reading of an ambiguous kernel to insulate its own legislative program from review?",
+      "resolution_mechanism": "Trace the drafting history of the Basic Laws (1958-1992) for explicit textual commitment to either judicial supremacy or parliamentary sovereignty; examine whether the 2023 Basic Law amendments limiting reasonableness review were passed with the specific intent of foreclosing judicial constraint on the same governing coalition's other legislation.",
+      "impact": "If the sovereignty reading is a genuine long-standing design feature, near-zero epsilon is warranted for ordinary legislation. If it is a coalition-specific naturalization deployed to immunize contemporaneous legislative acts from review, epsilon for the enabling constitutional theory itself (distinct from any specific law) is substantially higher — this is a false-summit-adjacent concern even though beneficiaries are declared and FSM is not separately triggered for a rope claim.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether parliamentary sovereignty is original constitutional design or coalition-timed reading of an ambiguous, unwritten kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint authors the parliamentary sovereignty reading of the contested kernel governing the Basic Law interpretive boundary in Israel's constitutional order. Under this reading, the Knesset — as the elected sovereign body — retains ultimate authority to interpret, amend, and where necessary override judicial constraints on Basic Laws by ordinary majority vote. Judicial review under this reading functions in an advisory capacity: the Supreme Court's constitutional pronouncements carry persuasive but not binding force against a determined legislative majority. This reading gained practical salience with the 2023 Basic Law: The Judiciary (Amendment) curtailing reasonableness review of governmental decisions, passed amid the broader 2023 judicial reform controversy. The sovereignty reading is NOT the only defensible reading of the kernel — judicial_supremacy_reading and balanced_contestation_reading are separately authored sibling constraints instantiating structurally distinct claims about the same underlying textual and institutional ambiguity. This story does not describe or average over those siblings; it authors only the sovereignty reading's own epsilon, stakeholders, and classification.",
+    "key_agents": [
+      "knesset_majority_coalition: Primary beneficiary (institutional/arbitrage) — sets and administers the sovereignty reading through ordinary legislation",
+      "sitting_executive_government: Secondary beneficiary (institutional/arbitrage) — governs free of binding judicial constraint on reasonableness or proportionality",
+      "supreme_court_of_israel: Structurally demoted actor (institutional/constrained) — retains interpretive voice but no binding override power under this reading",
+      "minority_political_blocs: Primary target (organized/constrained) — lose the judicial backstop against majoritarian legislative action",
+      "individual_rights_claimants: Primary target (powerless/trapped) — lose an independent forum capable of binding invalidation of rights-infringing statutes",
+      "international_treaty_bodies: Secondary actor (institutional/analytical) — the one domain where this reading concedes non-majoritarian constraint",
+      "constitutional_law_scholars: Analytical observer — documents the sovereignty/supremacy/balanced contest across readings"
+    ],
+    "logic_rationale": "Extractiveness is authored low-moderate (0.28 at interval end) because, BY THIS READING'S OWN LIGHTS, the sovereignty arrangement is not extraction at all for ordinary majoritarian policy — it is the correct operation of democratic accountability. The nonzero value reflects the standing arrangement's actual operation as seen even sympathetically: a majority that can rewrite the rules governing its own review does extract some value from minorities and rights-claimants who lose an independent check, even under the reading's own framing that this is legitimate. Suppression is moderate (0.42) and rising modestly across the measured interval, tracking the 2023-era amendments that actively narrowed the scope of reasonableness review — this is a real, not merely rhetorical, curtailment of an existing check. Theater ratio stays low (0.20) because the arrangement is not performative; the Knesset's assertion of interpretive authority is functionally real, not a hollow ritual over a defunct process. Resistance is authored moderately high (0.55) because the reading is fiercely contested in practice — mass protests, cross-institutional pushback from the judiciary, and international commentary all constitute genuine resistance, which is precisely why this cannot be scored as mountain-like despite the reading's own claim to naturalness. Accessibility collapse is moderate (0.35), reflecting that alternative institutional arrangements (the sibling readings) remain live, contested, and actively argued in the same polity — alternatives have not collapsed the way they would under a genuine natural-law constraint.",
+    "perspectival_gap": "The engine should compute a real seat divergence here: from the knesset_majority_coalition and sitting_executive_government seats (institutional power, arbitrage exit — they can rewrite the very rule being contested), the arrangement should compute near mountain-adjacent or rope territory — a legitimate expression of democratic sovereignty they built and can always reconfigure. From the individual_rights_claimants seat (powerless, trapped — no alternative forum, no exit from the jurisdiction), the same structural arrangement should compute as substantially more extractive, because the loss of a binding external check removes their only structural counterweight to majoritarian legislative action. This divergence is exactly the kind of seat-relative computation the framework is built to surface, and it should not be reconciled away — the sovereignty reading is honestly authored as low-epsilon rope from its own vantage while the metrics simultaneously encode the real cost borne by minority and rights-claimant seats.",
+    "directionality_logic": "Beneficiaries (knesset_majority_coalition, sitting_executive_government) hold institutional power with arbitrage-grade exit from constraint — they are the body that writes and can rewrite the rule, so directionality should sit near the full-beneficiary end. Victims (minority_political_blocs, individual_rights_claimants) are declared because the sovereignty reading's structural effect, even on its own terms, is to remove a binding external check that previously constrained majoritarian action against them; minority_political_blocs retain organized power and constrained exit (they can still contest electorally and mobilize), while individual_rights_claimants are powerless and trapped (no electoral remedy is available to someone whose rights are infringed by a law the majority that infringed them also controls). The supreme_court_of_israel is not declared a victim in the beneficiary/victim sense — it does not bear a cost, it loses a function — so it is captured instead as an agenda_setter with a demoted role, reflecting the sovereignty reading's own framing that judicial pronouncements remain persuasive but non-binding.",
+    "mandatrophy_analysis": "The founding problem this reading answers — establishing which institution has final interpretive word over an unwritten, incrementally assembled constitutional order — remains genuinely live: Israel still lacks a single ratified constitution, and the Basic Laws are still passed and amended by ordinary majority under the same procedural rules used for regular legislation. This reading cannot be classified as mandatrophic (a mandate that has outlived its function) because the underlying institutional ambiguity it resolves has not been resolved by any other mechanism — no constitutional convention, no supermajority entrenchment requirement, no binding referendum process has settled the question independently. The sovereignty reading is a live contest position, not a residual fossil.",
+    "kernel_context": "This constraint instantiates the parliamentary_sovereignty_reading of the basic_law_interpretive_boundary kernel — the claim that the Knesset, as elected sovereign, holds final interpretive and amending authority over Basic Laws by ordinary majority, with judicial review functioning only in an advisory capacity. Two sibling readings of the same kernel are authored as separate constraints: judicial_supremacy_reading (the Supreme Court's invalidation of contradictory legislation is binding on the Knesset) and balanced_contestation_reading (both institutions hold legitimate but bounded authority, with the legislature's sovereignty constrained by international obligations and norms of judicial independence). This story does not describe, average, or hedge across those readings — it authors only the sovereignty reading's own epsilon (0.28, low-moderate, reflecting the reading's own framing that ordinary majoritarian policy involves minimal extraction) and its own stakeholder structure. Where this reading diverges most sharply from judicial_supremacy_reading is on whether judicial invalidation binds the Knesset at all; where it diverges from balanced_contestation_reading is on whether international obligations constitute a genuine external constraint or merely a diplomatic consideration the Knesset may weigh but is not bound by."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "balanced_contestation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "electoral_mandate_is_final_interpretive_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "judicial_review_is_advisory_not_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "international_treaty_obligation_binds_regardless_of_majority",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "unwritten_constitutional_order_1958_basic_laws",
+    "drift_state": {
+      "moment": "post_2023_judicial_reform_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "judicial_supremacy_reading",
+      "balanced_contestation_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three siblings decomposing the natural-language concept 'the Basic Law interpretive boundary' per the epsilon-invariance principle. judicial_supremacy_reading authors a substantially higher epsilon (binding judicial invalidation treated as an actively suppressed check under a sovereignty-maximizing majority) and a different beneficiary/victim structure (Supreme Court and rights-claimants as beneficiaries of a binding check; majority coalition as target of judicial constraint). balanced_contestation_reading authors an intermediate epsilon reflecting genuine bounded authority on both sides. All three share the same kernel_id (basic_law_interpretive_boundary) but instantiate structurally distinct constraints with distinct epsilon values, distinct stakeholder situations, and distinct classifications — they are linked here via affects_constraints rather than merged into one story with a measurement parameter."
+  },
+  "stakeholders": [
+    {
+      "name": "knesset_majority_coalition",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Holds the votes to pass, amend, or reinterpret Basic Laws by ordinary majority, and under this reading treats judicial pronouncements on the constitutionality of its legislation as persuasive but non-binding. Can rewrite the very rules that would otherwise constrain it, including rules governing judicial review itself, as demonstrated by the 2023 reasonableness-review amendment."
+    },
+    {
+      "name": "sitting_executive_government",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Governs without a binding proportionality or reasonableness check on many administrative and appointment decisions, since the reading treats judicial review of governmental action as advisory rather than authoritative once the legislature has acted to narrow that review's scope."
+    },
+    {
+      "name": "supreme_court_of_israel",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Continues to hear constitutional challenges and issue rulings on the compatibility of legislation with Basic Laws, but under this reading its invalidations carry persuasive rather than binding force against a determined Knesset majority. It retains institutional standing and can still shape public and legal discourse, but has no enforcement mechanism to compel Knesset compliance if the majority chooses to override or legislate around a ruling."
+    },
+    {
+      "name": "minority_political_blocs",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Retain electoral organizing capacity and parliamentary voice but, under this reading, lose the judiciary as a binding backstop against majoritarian legislative action that disadvantages their constituencies. Their remedy is confined to electoral politics and coalition-building rather than judicial appeal to a binding external check."
+    },
+    {
+      "name": "individual_rights_claimants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals or small groups whose rights are affected by specific legislation have, under this reading, no forum capable of binding invalidation of a rights-infringing statute if the same majority that passed it also controls the scope of judicial review. Emigration is the only meaningful exit, and even that does not remedy an already-suffered infringement."
+    },
+    {
+      "name": "international_treaty_bodies",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Bodies overseeing Israel's international treaty commitments are the one domain this reading concedes as a genuine external constraint on the Knesset — but they have no seat inside Israeli domestic constitutional practice and can only exert pressure through diplomatic, trade, or reputational channels rather than binding domestic legal force."
+    },
+    {
+      "name": "constitutional_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Document and analyze the ongoing contest among the three readings of the Basic Law interpretive boundary, comparing Israel's unwritten-constitution trajectory to other majoritarian and supremacy-model systems, without a direct stake in which reading prevails domestically."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a single, clear final decision-maker (the elected Knesset majority) for resolving disputes over the meaning and scope of Basic Laws, avoiding the paralysis that could result from an unelected judiciary and an elected legislature both claiming final interpretive authority over an unwritten constitutional order.",
+    "transfer_function": "Moves the practical capacity to constrain majoritarian legislative and executive action away from an independent judicial forum and concentrates it in the same electoral majority whose action might otherwise be constrained — a transfer of checking-power from courts and, indirectly, from minorities and individual rights-claimants, to the sitting parliamentary majority.",
+    "absent_voices": "Individual rights-claimants whose specific grievances would previously have found a forum in binding judicial review are not organized as a coalition and have no seat in the legislative process that redefines the scope of that review; their objection — that a majority should not be the sole judge of the limits on its own power — is voiced by opposition politicians and legal scholars but is not itself a party to the Knesset's ordinary lawmaking process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the sovereignty reading were abandoned overnight in favor of binding judicial supremacy, the Knesset would lose the ability to legislate around adverse constitutional rulings, the 2023-era amendments narrowing reasonableness review would likely be reversed or invalidated, and the practical balance of power between the legislature, executive, and judiciary in Israel would shift substantially toward the courts — a real institutional rearrangement, not a cosmetic one.",
+    "founding_problem": "Israel adopted Basic Laws incrementally from 1958 onward without ever ratifying a single formal constitution, leaving unresolved which institution — the elected Knesset or the appointed judiciary — holds final authority when a Basic Law's meaning is contested or when ordinary legislation appears to conflict with one.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Comparative constitutional law scholars outside the Knesset coalition and outside the Supreme Court itself (writing in international law journals and comparative constitutionalism literature) attest that the institutional-authority question remains genuinely unresolved in Israeli law, distinguishing it from settled constitutional democracies with a ratified founding document and explicit judicial review clause; this corroboration comes from a source with no direct stake in which domestic reading prevails."
+  },
+  "gain_flow": "knesset_majority_coalition",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

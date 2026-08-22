@@ -1,0 +1,296 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__strict_invariance_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "27426bad-7774-42d0-8588-49f23770ed03",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.08,
+    "theater_ratio": 0.02,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.12,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 TCP State Machine Invariance (Strict Interoperability Reading)",
+    "topic_domain": "network_protocol_engineering/internet_standards",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "interoperability_participants",
+      "application_developers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "interoperability_participants",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "situation": "Implementations (operating systems, network stacks, hypervisors) that build TCP to the RFC 9293 specification and benefit from the predictable behavior of every other implementation that does the same. They receive the coordination benefit: any application can run on any stack and behave identically, without reimplementing TCP logic."
+    },
+    {
+      "name": "application_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "situation": "Write applications that depend on TCP semantics without needing to model or handle each implementation's quirks. They write once, run everywhere; the invariant state machine is what makes that possible."
+    },
+    {
+      "name": "strict_spec_implementers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "situation": "Implement TCP strictly to RFC 9293 specifications. They bear the engineering cost of strict compliance (no optimizations outside the spec bounds, no shortcuts that break the invariant, extensive testing against the state machine). They also benefit from knowing that other implementers meet the same burden."
+    },
+    {
+      "name": "middlebox_operators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Operate network appliances (firewalls, proxies, traffic shapers) that observe or modify TCP flows in the middle of the network. The strict invariance reading treats any state-modifying middlebox action as a protocol violation. They are excluded from the coordination framework and would argue for latitude to adapt TCP behavior to local network conditions."
+    },
+    {
+      "name": "performance_optimizers",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "situation": "Implementers and researchers who prioritize performance improvements that deviate from the strict state machine (reordering state transitions, batching operations, non-standard timer behaviors). The strict reading treats these as violations. They would argue for a more permissive semantic boundary."
+    },
+    {
+      "name": "standards_body_ietf",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Maintains RFC 9293 and adjudicates interpretation disputes. Under the strict reading, the IETF's authority is to enforce the invariance mandate and resist pressure to loosen it. Under competing readings, the IETF's role is more permissive (endorsing optimization latitude or acknowledging middlebox reality)."
+    },
+    {
+      "name": "protocol_verification_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers using formal methods, testing frameworks, and monitoring to verify whether deployed TCP implementations match the RFC 9293 state machine. They measure the gap between specification and practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the global TCP interoperability problem: enables any endpoint to communicate reliably with any other endpoint using identical semantics without negotiation or reimplementation. The strict invariance guarantee is what makes the coordination possible — if implementations differ in state machine behavior, the reliable byte stream semantics diverge.",
+    "transfer_function": "Moves implementation engineering burden from each actor individually (each stack would need to handle quirks of every other stack) to the collective burden of maintaining strict specification compliance. No extraction of resources from one party to another; the transfer is of predictability and coordination cost.",
+    "absent_voices": "Middlebox operators and performance optimization communities are structurally excluded by the strict reading's zero-tolerance framing. They would argue that the specification should permit implementation latitude and acknowledge deployed reality. The reading does not give them a seat in the coordination framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strict invariance constraint disappeared (TCP implementations ceased treating RFC 9293 as binding), interoperability would fragment: implementations would optimize independently, middleboxes would modify state machines, and applications would need to detect and work around implementation-specific behaviors. The TCP ecosystem would reorganize around de-facto standards (what major implementations actually do) rather than a single written specification.",
+    "founding_problem": "Early TCP implementations diverged in state machine details, causing interoperability failures and necessitating per-pair workarounds. RFC 9293 (originally RFC 793) codified an invariant state machine to guarantee that all implementations behave identically, enabling applications to write once and run on any stack.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The strict reading attests the founding problem persists: any deviation from the state machine breaks the interoperability guarantee for edge-case scenarios. The middlebox-realism and optimization-latitude readings attest the problem is substantially solved (most applications work across most implementations) and the strict reading's zero-tolerance stance is an over-specification that ignores deployed reality. Protocol verification research from outside the standardization body documents divergences between RFC 9293 and actual implementations, supporting the contested reading."
+  },
+  "interval": {
+    "start": 1981,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1981,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1981,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.06
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.07
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1981,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.02
+    }
+  ],
+  "omegas": [
+    {
+      "id": "specification_vs_deployed_reality_divergence",
+      "question": "How much have actual TCP implementations diverged from the RFC 9293 state machine in deployed networks?",
+      "resolution_mechanism": "Protocol verification studies measuring implementation compliance via formal testing, state machine tracing on real deployments, and middlebox modification discovery.",
+      "impact": "If divergence is high, the strict reading's premise (implementations must replicate the state machine exactly) is falsified by reality, and the constraint shifts from pure Rope toward Piton (specification maintained theatrically while practice deviates). If divergence is low, the strict reading's coordination framing holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The empirical gap between RFC 9293 specification and deployed TCP behavior."
+    },
+    {
+      "id": "kernel_reading_contestation_extent",
+      "question": "Which reading of the RFC 9293 kernel commands the IETF's actual enforcement authority and resource allocation?",
+      "resolution_mechanism": "Document review of IETF working group charters, standards-track discussions, and implementation guidance. Interview or observational study of standards body decision-making on TCP errata and clarifications.",
+      "impact": "If the strict invariance reading commands the authority, the constraint persists as pure Rope with the IETF as enforcer. If the middlebox-realism or optimization-latitude readings increasingly command resources, the constraint shifts toward Piton (the strict reading becomes a vestigial, unenforced ideal). This determines whether the three readings describe a live contest or a settled hierarchy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which reading of the TCP specification kernel controls actual standards body authority."
+    },
+    {
+      "id": "semantic_vs_syntactic_invariance_boundary",
+      "question": "Is the RFC 9293 invariant best understood as a syntactic state machine (implementers must follow the exact state transitions) or as a semantic boundary (implementers must produce identical byte-stream behavior, with state machine as one possible implementation path)?",
+      "resolution_mechanism": "Formal analysis of RFC 9293 language and intent (historical RFC drafts, IETF meeting minutes, TCP implementer interviews). Experimental deployment of performance optimizations that preserve semantics but violate syntax, measuring interoperability impact.",
+      "impact": "If syntactic: the strict reading holds and deviations are violations. If semantic: performance optimizations that preserve behavior are allowable, the optimization-latitude reading gains ground, and the constraint becomes less zero-tolerance. The boundary defines what counts as a breach.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the TCP specification's invariance is syntactic or semantic."
+    },
+    {
+      "id": "middlebox_modification_legitimacy",
+      "question": "Under what conditions, if any, is middlebox modification of TCP state machine justified by network conditions (congestion, path asymmetry, security threats)?",
+      "resolution_mechanism": "Case study analysis of deployed middlebox modifications (traffic shaping, connection rate limiting, payload inspection, window adjustment) and their impact on end-to-end reliability. Regulatory or institutional analysis of whether network operators have legitimate authority to modify transit flows.",
+      "impact": "The strict reading treats all middlebox modification as violation. If legitimate conditions exist, the reading becomes one position in a trade-off (interoperability guarantee vs. operational necessity) rather than an absolute rule. This affects whether the constraint type is Rope (pure coordination) or Tangled Rope (coordination with extractive enforcement).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The legitimacy of middlebox modification in the TCP stack."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 specifies a deterministic TCP state machine that all implementations must replicate to guarantee global interoperability. This story instantiates the strict_invariance_reading: the specification is a binding invariant that implementers must follow exactly, and any deviation (whether by optimization, middlebox modification, or performance trade-off) is a protocol breach. This reading contrasts with two sibling readings: the optimization_latitude_reading (which treats RFC 9293 as specifying outcomes and permitting implementation latitude for performance), and the middlebox_realism_reading (which treats the specification as aspirational and acknowledges that deployed TCP is shaped by middlebox population and path conditions). The strict reading is instantiated as pure Rope — a genuine coordination function with no extractiveness, benefiting all participants equally via the guarantee of interoperable behavior. The constraint's persistence is entirely voluntary; implementations adopt it because interoperability is more valuable than marginal optimization gains.",
+    "key_agents": [
+      "interoperability_participants: institutional implementers (OS vendors, network stack designers) that adopt RFC 9293 strictly and benefit from knowing every other implementation does the same",
+      "application_developers: beneficiaries who write once and deploy everywhere, relying on the state machine invariance to deliver identical semantics",
+      "strict_spec_implementers: institutional payers who bear the engineering cost of strict compliance (testing, validation, rejection of optimizations that break invariance)",
+      "middlebox_operators: excluded parties (network appliances that modify TCP state) whose operational needs are not accommodated by the strict reading",
+      "performance_optimizers: excluded researchers and implementers who prioritize improvements outside the state machine bounds",
+      "standards_body_ietf: agenda setter; enforces the interpretation and adjusts the specification when needed",
+      "protocol_verification_community: observers who measure compliance and gap"
+    ],
+    "logic_rationale": "The extractiveness is near-zero (0.05 at interval end) because the coordination function is purely additive — no party gains at another's expense. The benefit distribution is universal and symmetric: the predictability of interoperability is worth more to every participant than whatever marginal optimization each forgoes. Suppression is minimal (0.08) because there is no coercive enforcement machinery required; the invariance is self-enforcing via network effects (any implementation that deviates finds itself incompatible with the rest). Theater is negligible (0.02) because the specification function is real and actively maintained — there is no performative gap. Accessibility collapse is high (0.78) because once the benefits of interoperability are understood, the alternative (not following the specification) becomes unattractive; the constraint is what the ecosystem converges on voluntarily. Resistance is low (0.12) because the strict reading aligns with the interests of most participants, though excluded parties (middlebox operators, performance researchers) constitute a real opposing pressure.",
+    "kernel_context": "This constraint is one reading (strict_invariance_reading) of the contested kernel rfc9293_tcp_specification. The kernel is a formal text: RFC 9293's state machine specification and accompanying semantics. The strict reading interprets it as a binding invariant that implementations must replicate exactly. Sibling readings: optimization_latitude_reading treats RFC 9293 as specifying outcomes (reliable byte stream) with latitude for performance optimization within semantic bounds; middlebox_realism_reading treats RFC 9293 as aspirational and acknowledges that deployed TCP is path-dependent and shaped by middlebox population. The contest is over what RFC 9293 authorizes: zero-tolerance invariance, permissive semantics, or acknowledgment of operational reality.",
+    "directionality_logic": "All beneficiaries (interoperability_participants, application_developers) derive d near 0.0 (full beneficiaries) because they receive the pure coordination benefit without bearing extraction cost. The strict_spec_implementers are technically payers (they bear engineering cost to maintain compliance) but also beneficiaries (they benefit from knowing the cost is shared by all competitors), so they sit at d≈0.35 (slightly beneficiary-tilted because the coordination benefit exceeds the compliance burden). Excluded parties (middleboxes, optimizers) are outside the directionality derivation because they are not participants in the constraint as authored; they would have high d if they were forced into compliance, but the strict reading leaves them out of scope. The IETF as agenda_setter has directionality near 0.5 (symmetric) because it bears the cost of maintaining the standard while receiving the benefit of a functioning global coordination mechanism.",
+    "mandatrophy_analysis": "The founding problem (TCP implementation divergence causing interoperability failures) was live at RFC 793's publication (1981) and remains contested today. The strict reading asserts it is still live: any deviation threatens interoperability in edge cases. The optimization-latitude and middlebox-realism readings assert it is substantially dead: most applications work across most implementations most of the time, and the strict invariance is an over-specification. The measurement series shows negligible extractiveness growth over the 1981-2024 interval, stable suppression, and stable low theater — consistent with a Rope that has not degraded into Piton. The constraint persists because the coordination benefit remains real, not because of inertia or theatrical maintenance. The contested founding-problem status is the signal: whether the founding problem is live or dead determines whether the constraint is active (Rope) or zombie (Piton masked as Rope)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_middlebox_modification__optimization_latitude_reading",
+      "tcp_performance_optimization__middlebox_realism_reading"
+    ],
+    "dual_formulation_note": "The RFC 9293 TCP specification kernel decomposes into three structurally distinct constraint stories corresponding to three readings: strict_invariance_reading (this story: pure Rope, zero-tolerance invariance), optimization_latitude_reading (Tangled Rope: coordination via semantic bounds with latitude for performance optimization, extracts engineering cost from strict implementers), and middlebox_realism_reading (Piton: specification maintained but increasingly overridden by deployed reality, middlebox modification and path-dependence are the actual constraint). Each reading has different beneficiary/victim structure, different claimed_type, and different ε. They share the same kernel (RFC 9293 text) but instantiate different constraints from it. The three stories are linked via network.affects_constraints to model that challenge to one reading (e.g., empirical evidence of widespread implementation divergence) affects the viability of the others."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "strict_state_machine_invariance",
+    "drift_state": {
+      "moment": "contemporary_deployed_reality",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "optimization_latitude_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_machine_syntactic_invariance_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "interoperability_necessitates_zero_tolerance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

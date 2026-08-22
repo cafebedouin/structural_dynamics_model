@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "coercion_legitimacy_boundary__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "0f8a6223-29a0-40de-b559-02ded4e159bd"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality Reading: Severity-Scaled Coercion Legitimacy Boundary",
+    "topic_domain": "Public Health Policy / Medical Ethics / Constitutional Law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_populations",
+      "school_age_children",
+      "public_health_departments",
+      "general_population_via_herd_immunity"
+    ],
+    "victims": [
+      "vaccine_hesitant_parents",
+      "religious_exemption_seekers",
+      "low_severity_disease_mandate_targets",
+      "misclassified_moderate_risk_populations"
+    ],
+    "vindicated_propositions": [
+      "proportionality_doctrine_in_public_health_law",
+      "least_restrictive_means_standard"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_departments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Determines which pathogens cross the severity/transmissibility threshold that justifies mandates, using R0 estimates, case fatality rates, and outbreak modeling. Administers the case-by-case adjudication machinery — measles triggers school exclusion and mandate enforcement, seasonal flu does not. Bears reputational and legal costs when the threshold-drawing is challenged in court."
+    },
+    {
+      "name": "immunocompromised_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Cannot be vaccinated themselves and depend entirely on herd immunity thresholds being met in their community. Benefit directly when high-R0 diseases like measles trigger mandates for others; have no personal exit from the risk if mandates are relaxed or the threshold is drawn too permissively."
+    },
+    {
+      "name": "school_age_children",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Attend schools where mandate enforcement is concentrated; benefit from reduced outbreak risk but also bear the direct compliance burden (or exclusion from schooling) when their guardians resist. Have no independent voice in the threshold-setting process despite being the population most directly regulated."
+    },
+    {
+      "name": "vaccine_hesitant_parents",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Face school exclusion, fines, or loss of childcare access when refusing mandated vaccines for high-severity diseases. Argue the same coercive apparatus could be turned toward diseases they consider genuinely low-risk, and that the threshold itself is drawn by the same institution that benefits from broad compliance. Can relocate to jurisdictions with looser exemption rules, but at real cost to schooling and employment continuity."
+    },
+    {
+      "name": "religious_exemption_seekers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Hold sincere objections that predate the severity-scaling framework and do not vary with R0 or case fatality rate. The proportionality reading offers them no principled accommodation — their objection is categorical, but the regime only recognizes severity-scaled exceptions, so they are treated as noncompliant rather than as holding a different premise entirely."
+    },
+    {
+      "name": "low_severity_disease_mandate_targets",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "In jurisdictions or outbreak contexts where officials misjudge a pathogen's severity upward (e.g., early pandemic uncertainty, novel variant panic), face mandate-level coercion for what later proves to be a flu-like threat. Their situation reveals the reading's core vulnerability: the threshold is drawn prospectively under uncertainty, and misclassification imposes real costs before correction."
+    },
+    {
+      "name": "flu_vaccine_refusers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Refuse seasonal influenza vaccination without consequence under this reading, since flu's R0 and typical case fatality rate fall below the mandate threshold. Their autonomy is fully preserved here — the reading's central claim is validated by their unimpeded exit."
+    },
+    {
+      "name": "courts_and_legislatures",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate challenges to specific mandate decisions, applying proportionality and least-restrictive-means tests to determine whether a given pathogen's severity profile justified the coercion imposed. Their rulings retroactively validate or invalidate the threshold-drawing, but do not participate in the initial epidemiological determination."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Calibrates the level of permissible state coercion to the actual epidemiological stakes of a given pathogen, so that mandates track genuine collective-action failure (high transmissibility, high severity, free-rider herd-immunity problems) rather than applying uniformly regardless of threat level.",
+    "transfer_function": "Moves compliance burden (vaccination, exclusion risk, fines) onto individuals objecting to specific mandates, calibrated by disease severity, while relieving individuals of that burden entirely for low-severity pathogens like seasonal flu — the transfer is intermittent and threshold-gated rather than continuous.",
+    "absent_voices": "Religious and categorical objectors are structurally unheard by this framework: their objection does not vary with severity, so the proportionality apparatus has no slot for it. They appear only as noncompliant cases, not as holders of a coherent competing premise. Populations in low-information or under-resourced jurisdictions rarely participate in the epidemiological threshold-setting process at all.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Public health departments and immunocompromised populations would say the world rearranges catastrophically — herd immunity thresholds collapse for high-R0 diseases and outbreak risk rises sharply. Vaccine-hesitant parents and religious objectors would say very little changes for them personally, since the coercive apparatus specifically targeting them would vanish; they read its disappearance as restoration of autonomy, not disruption. The verdict genuinely differs by stakeholder position, which is why it is authored as contested rather than resolved.",
+    "founding_problem": "Uniform vaccine mandate policy (either mandate everything or coerce nothing) failed to track the actual variance in collective-action severity across pathogens — treating measles and seasonal flu identically either over-coerced for low-stakes diseases or under-protected against high-stakes ones. The proportionality reading was built to calibrate coercion to actual epidemiological risk.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Epidemiologists and constitutional scholars outside the public health administrative apparatus (e.g., legal scholars writing on Jacobson v. Massachusetts's proportionality legacy) corroborate that severity-scaling is a coherent and independently defensible doctrine, not merely a post-hoc justification invented by health departments to preserve mandate authority. However, civil liberties organizations dispute that the threshold-drawing process is neutral, arguing the same institutions that benefit from compliance also control the severity determination — no fully independent arbiter exists outside the public health apparatus itself for the initial classification, only for after-the-fact judicial review."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the proportionality reading of the coercion legitimacy boundary kernel: coercion legitimacy is not a fixed yes/no (as in the public_health_primary and bodily_autonomy_primary readings) but scales continuously with a pathogen's severity and transmission dynamics. Measles (R0 ~12-18, meaningful case fatality, no effective treatment) clears the threshold for mandate-backed coercion; seasonal influenza (R0 ~1.3, low case fatality in healthy populations, treatable) does not. The reading's structural signature is a variable victim set: whoever is regulated depends entirely on which pathogen is under discussion, and the coercion apparatus itself is genuinely inactive for low-severity diseases (flu_vaccine_refusers face zero enforcement) while genuinely active for high-severity ones (vaccine_hesitant_parents face real exclusion machinery for measles).",
+    "key_agents": [
+      "public_health_departments: sets the severity/transmissibility threshold and administers case-by-case mandate decisions",
+      "immunocompromised_populations and school_age_children: structural beneficiaries who depend on the threshold being met for high-R0 diseases",
+      "vaccine_hesitant_parents and religious_exemption_seekers: bear the coercive costs when their objected-to pathogen clears the threshold",
+      "flu_vaccine_refusers: the reading's control case — autonomy preserved because the pathogen falls below threshold",
+      "courts_and_legislatures: analytical/adjudicative seat reviewing whether a given threshold determination was proportionate"
+    ],
+    "logic_rationale": "Extractiveness (0.42) sits meaningfully below either the public_health_primary reading (which would authorize coercion regardless of severity, producing higher ε) and the bodily_autonomy_primary reading (which would authorize none, producing near-zero ε for any coercive act at all). The moderate value reflects that this reading's coercion is real but genuinely gated — it activates only above a severity threshold, and deactivates below it. Suppression (0.48) is likewise moderate: enforcement exists but only for a subset of diseases, and even within that subset, exemption processes exist. Theater ratio (0.28) is modest and rising slightly — some jurisdictions maintain enforcement infrastructure (school exclusion registries, compliance tracking) for diseases whose actual outbreak risk has declined, a mild proxy-goal drift worth watching but not yet dominant.",
+    "perspectival_gap": "Public health departments and immunocompromised populations experience the same measles mandate as legitimate, calibrated coordination — the threshold-drawing process is exactly the mechanism that protects them. Vaccine-hesitant parents facing that same mandate experience it as coercion whose 'proportionality' justification is authored by the institution that benefits from compliance. Religious exemption seekers experience it as a category error: the entire severity-scaling apparatus is non-responsive to a categorical objection, so from their seat the reading looks like a more sophisticated version of the public_health_primary reading wearing moderation's clothing.",
+    "directionality_logic": "Beneficiaries (immunocompromised populations, school-age children generally, public health departments as administrators) sit toward the low end of directionality because the arrangement subsidizes their safety without imposing symmetric cost on them. Victims (vaccine_hesitant_parents, religious_exemption_seekers, low_severity_disease_mandate_targets) sit toward the high end because the same structure that protects the beneficiaries extracts compliance or imposes exclusion costs on them. Flu_vaccine_refusers are a genuine low-d case — the reading imposes essentially no cost on them, which is the reading's own evidence for its coherence as calibrated rather than blanket coercion.",
+    "mandatrophy_analysis": "The proportionality reading resists the mandatrophy risk that afflicts both blanket readings: public_health_primary risks perpetuating coercive machinery even after a pathogen's threat recedes (mandate outlives function), while bodily_autonomy_primary risks under-responding to a genuinely escalating threat (no machinery exists to activate when needed). By tying legitimacy to a re-measurable severity/transmissibility profile, this reading is structurally self-correcting — as a disease's R0 or case fatality rate changes (through evolution, treatment advances, or vaccination coverage itself), the threshold determination should in principle re-fire and deactivate the coercion. The founding_problem_status is authored as contested precisely because whether this self-correction actually occurs in practice (versus threshold-creep, where administrators keep diseases 'above threshold' after risk has genuinely declined) is the live empirical question — the rising theater_ratio and suppression_requirement trend in the measurements is the diagnostic signal for exactly this risk.",
+    "kernel_context": "This constraint instantiates the proportionality_reading of the coercion_legitimacy_boundary kernel — the reading holding that coercion legitimacy is a continuous function of a pathogen's severity and transmission dynamics rather than a categorical yes (public_health_primary) or categorical no (bodily_autonomy_primary). The sibling readings are NOT contained in this file: public_health_primary would author near-uniform high coercion authorization across all pathogens (collapsing the measles/flu distinction this reading depends on), and bodily_autonomy_primary would author near-zero legitimate coercion regardless of severity (treating the measles mandate as no more justified than a flu mandate). This reading's distinguishing structural claim — that the victim set changes depending on which pathogen is being discussed — has no analog in either sibling, where the victim set is either 'everyone subject to any mandate' or 'no one, because no mandate is legitimate.'"
+  },
+  "omegas": [
+    {
+      "id": "threshold_drawing_neutrality",
+      "question": "Is the severity/transmissibility threshold that separates 'mandate-justified' from 'not mandate-justified' pathogens drawn by a neutral epidemiological process, or does the same institution that benefits from broad compliance (public health departments) also control where the line falls?",
+      "resolution_mechanism": "Compare threshold determinations made by independent epidemiological bodies (e.g., academic modeling consortiums with no enforcement authority) against determinations made by the enforcing public health departments themselves, across multiple pathogens and time periods, for systematic divergence.",
+      "impact": "If independent and enforcing-body thresholds converge consistently, the proportionality reading is well-grounded as genuinely calibrated. If enforcing bodies systematically draw the threshold to capture more pathogens than independent epidemiology would justify, the reading functions as a legitimation layer over what is structurally closer to the public_health_primary reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the severity threshold is epidemiologically neutral or institutionally self-serving."
+    },
+    {
+      "id": "categorical_objection_incommensurability",
+      "question": "Can a severity-scaled coercion framework ever be extended to accommodate categorical (non-severity-contingent) objections like religious exemption, or is the incommensurability between scaled and categorical premises irreducible?",
+      "resolution_mechanism": "Legal and philosophical analysis of whether proportionality frameworks in other domains (e.g., just war theory, self-defense law) have successfully integrated categorical exceptions without collapsing the scaling logic; compare to public health mandate case law on religious exemptions.",
+      "impact": "If integration is possible, the proportionality reading could evolve a principled accommodation and reduce the extraction currently borne by religious_exemption_seekers. If genuinely incommensurable, this reading structurally cannot address a whole class of objectors regardless of how well-calibrated its severity thresholds become — a permanent residual extraction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether severity-scaling and categorical objection are reconcilable within one framework."
+    },
+    {
+      "id": "threshold_creep_under_novel_pathogens",
+      "question": "Under genuine uncertainty (a novel pathogen with unknown R0 and case fatality rate), does the proportionality framework systematically err toward over-classifying threat level (precautionary bias) in a way that imposes measles-level coercion on flu-level actual risk, and does correction happen promptly once better data arrives?",
+      "resolution_mechanism": "Track historical cases of early-pandemic severity estimation (e.g., initial case fatality rate estimates versus later-revised estimates) against the corresponding mandate intensity imposed during the high-uncertainty window and how quickly mandates were relaxed as estimates were revised downward.",
+      "impact": "If correction lags substantially behind data revision, the low_severity_disease_mandate_targets stakeholder group is not a rare edge case but a structurally recurring one every time a novel pathogen emerges — meaningfully raising the reading's real-world extractiveness above the measles/flu steady-state baseline authored here.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether severity misclassification under novel-pathogen uncertainty self-corrects promptly or persists."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_primary",
+      "bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "This constraint is the proportionality reading of the coercion_legitimacy_boundary kernel. It shares a network edge with public_health_primary (which this reading partially constrains by denying blanket coercion authority) and bodily_autonomy_primary (which this reading partially constrains by denying blanket exemption). The three readings differ in victim set and ε: public_health_primary would show higher ε (coercion applies regardless of severity), bodily_autonomy_primary would show near-zero ε (no coercion is authorized), and this reading sits between them with a variable, pathogen-contingent victim set. Each is authored as a separate file per the ε-invariance principle; this file does not average or blend their positions."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "jacobson_proportionality_baseline",
+    "drift_state": {
+      "moment": "post_pandemic_polarization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "severity_gated_coercion_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "transmission_dynamics_are_the_relevant_empirical_input",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
