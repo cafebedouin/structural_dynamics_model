@@ -285,7 +285,13 @@ def _submit_batch(jsonl_bytes, n, model, poll_interval):
         dl.raise_for_status()
         for line in dl.text.splitlines():
             if line.strip():
-                out.append(_batch_row_to_result(json.loads(line), model))
+                try:
+                    out.append(_batch_row_to_result(json.loads(line), model))
+                except json.JSONDecodeError as e:
+                    # A malformed output row (witnessed 2026-08-22, batch 2 of kimi2: "Unterminated
+                    # string") must cost ONE story, not the whole batch: the caller's missing-key
+                    # sweep re-queues it. Crashing here after the batch was paid for is the worst case.
+                    print(f"  batch output row unparseable ({e}); skipping: {line[:80]!r}")
     return out
 
 
@@ -350,7 +356,15 @@ def download_batch_results(batch_id, model):
         raise SystemExit(f"batch {batch_id} status={b.get('status')} has no output_file_id yet.")
     dl = requests.get(f"{BASE_URL}/files/{ofid}/content", headers=_headers(), timeout=HTTP_TIMEOUT)
     dl.raise_for_status()
-    return [_batch_row_to_result(json.loads(l), model) for l in dl.text.splitlines() if l.strip()]
+    out = []
+    for l in dl.text.splitlines():
+        if not l.strip():
+            continue
+        try:
+            out.append(_batch_row_to_result(json.loads(l), model))
+        except json.JSONDecodeError as e:
+            print(f"  batch output row unparseable ({e}); skipping: {l[:80]!r}")
+    return out
 
 
 def build_id_map(seeds):
